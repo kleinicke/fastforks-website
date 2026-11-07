@@ -1,0 +1,5969 @@
+{
+	"source": {
+		"repo": "https://github.com/kleinicke/fastforks",
+		"commit": "a55e747e",
+		"reference_gpu": "RTX 5060 Ti 16 GB"
+	},
+	"totals": {
+		"models": 174,
+		"tasks": 8,
+		"commercial": 142,
+		"vs_original": {
+			"models": 168,
+			"median": 3.2,
+			"max": 9.7
+		}
+	},
+	"tasks": [
+		{
+			"id": "stereo",
+			"title": "Stereo",
+			"input": "994x1482",
+			"accuracy_metric": "ETH3D bad > 1 px (%)",
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "las2-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#liteanystereo-v2",
+					"note": "14.3 ms"
+				},
+				{
+					"label": "Most accurate",
+					"id": "bridgedepth-sf",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#bridgedepth",
+					"note": "348.4 ms, error 1.24"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "las2-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#liteanystereo-v2",
+					"note": "14.3 ms"
+				},
+				{
+					"label": "Most accurate commercially usable",
+					"id": "c-foundationstereo-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#c-foundationstereo",
+					"note": "1362.1 ms, error 1.24"
+				}
+			],
+			"models": [
+				{
+					"id": "las2-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#liteanystereo-v2",
+					"commercial": "yes",
+					"accuracy": "4.10 ?",
+					"original_ms": 43.5,
+					"original_size": "994x1482",
+					"portable_ms": 46.9,
+					"kernels_ms": 14.3,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"peak_mib": 320
+				},
+				{
+					"id": "las2-m",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#liteanystereo-v2",
+					"commercial": "yes",
+					"accuracy": "2.98 ?",
+					"original_ms": 52.4,
+					"original_size": "994x1482",
+					"portable_ms": 54.1,
+					"kernels_ms": 18.3,
+					"speedup": 2.9,
+					"speedup_vs": "original",
+					"peak_mib": 329
+				},
+				{
+					"id": "hitnet-eth3d",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#hitnet",
+					"commercial": "yes",
+					"accuracy": "0.93 †",
+					"original_ms": 182.2,
+					"original_size": "994x1482",
+					"portable_ms": 67.8,
+					"kernels_ms": 23.2,
+					"speedup": 7.9,
+					"speedup_vs": "original",
+					"peak_mib": 647
+				},
+				{
+					"id": "coex-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#coex",
+					"commercial": "yes",
+					"accuracy": "33.46",
+					"original_ms": 60,
+					"original_size": "994x1482",
+					"portable_ms": 49.9,
+					"kernels_ms": 23.5,
+					"speedup": 2.6,
+					"speedup_vs": "original",
+					"peak_mib": 495
+				},
+				{
+					"id": "las2-l",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#liteanystereo-v2",
+					"commercial": "yes",
+					"accuracy": "2.24 ?",
+					"original_ms": 90.8,
+					"original_size": "994x1482",
+					"portable_ms": 80.3,
+					"kernels_ms": 29.9,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"peak_mib": 397
+				},
+				{
+					"id": "fast-acvnet-generalization",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "6.51",
+					"original_ms": 60.6,
+					"original_size": "994x1482",
+					"portable_ms": 54.7,
+					"kernels_ms": 38.2,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 739
+				},
+				{
+					"id": "fast-acvnet-kitti12",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "19.06",
+					"original_ms": 60.6,
+					"original_size": "994x1482",
+					"portable_ms": 54.7,
+					"kernels_ms": 38.2,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 739
+				},
+				{
+					"id": "fast-acvnet-kitti15",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "17.59",
+					"original_ms": 60.6,
+					"original_size": "994x1482",
+					"portable_ms": 54.7,
+					"kernels_ms": 38.2,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 739
+				},
+				{
+					"id": "fast-acvnet-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "8.43",
+					"original_ms": 60.6,
+					"original_size": "994x1482",
+					"portable_ms": 54.7,
+					"kernels_ms": 38.2,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 739
+				},
+				{
+					"id": "fast-acvnet-plus-generalization",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "6.20",
+					"original_ms": 80.9,
+					"original_size": "994x1482",
+					"portable_ms": 70.6,
+					"kernels_ms": 46.4,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 790
+				},
+				{
+					"id": "fast-acvnet-plus-kitti12",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "21.62",
+					"original_ms": 80.9,
+					"original_size": "994x1482",
+					"portable_ms": 70.6,
+					"kernels_ms": 46.4,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 790
+				},
+				{
+					"id": "fast-acvnet-plus-kitti15",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "21.63",
+					"original_ms": 80.9,
+					"original_size": "994x1482",
+					"portable_ms": 70.6,
+					"kernels_ms": 46.4,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 790
+				},
+				{
+					"id": "fast-acvnet-plus-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#fast-acvnet",
+					"commercial": "yes",
+					"accuracy": "12.62",
+					"original_ms": 80.9,
+					"original_size": "994x1482",
+					"portable_ms": 70.6,
+					"kernels_ms": 46.4,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 790
+				},
+				{
+					"id": "hitnet-middlebury-d400",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#hitnet",
+					"commercial": "yes",
+					"accuracy": "7.07",
+					"original_ms": 483.1,
+					"original_size": "994x1482",
+					"portable_ms": 176,
+					"kernels_ms": 52.7,
+					"speedup": 9.2,
+					"speedup_vs": "original",
+					"peak_mib": 1263
+				},
+				{
+					"id": "las2-h",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#liteanystereo-v2",
+					"commercial": "yes",
+					"accuracy": "2.14 ?",
+					"original_ms": 134.9,
+					"original_size": "994x1482",
+					"portable_ms": 122.8,
+					"kernels_ms": 53.3,
+					"speedup": 2.5,
+					"speedup_vs": "original",
+					"peak_mib": 1021
+				},
+				{
+					"id": "aanet-plus-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#aanet",
+					"commercial": "yes",
+					"accuracy": "18.50",
+					"original_ms": 194.2,
+					"original_size": "994x1482",
+					"portable_ms": 159.2,
+					"kernels_ms": 88.9,
+					"speedup": 2.2,
+					"speedup_vs": "original",
+					"peak_mib": 813
+				},
+				{
+					"id": "rt-monster-plusplus-mix-all",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#rt-monster",
+					"commercial": "no",
+					"accuracy": "2.05 ?",
+					"original_ms": 251.4,
+					"original_size": "994x1482",
+					"portable_ms": 113.4,
+					"kernels_ms": 94.1,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 2704
+				},
+				{
+					"id": "aanet-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#aanet",
+					"commercial": "yes",
+					"accuracy": "14.64",
+					"original_ms": 178,
+					"original_size": "994x1482",
+					"portable_ms": 139.8,
+					"kernels_ms": 100.8,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 536
+				},
+				{
+					"id": "s2m2-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#s2m2",
+					"commercial": "no",
+					"accuracy": "1.10 ?",
+					"original_ms": 350.2,
+					"original_size": "994x1482",
+					"portable_ms": 348.4,
+					"kernels_ms": 113.5,
+					"speedup": 3.1,
+					"speedup_vs": "original",
+					"peak_mib": 686
+				},
+				{
+					"id": "c-fast-foundationstereo",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#c-foundationstereo",
+					"commercial": "yes",
+					"accuracy": "2.20",
+					"original_ms": 527.1,
+					"original_size": "994x1482",
+					"portable_ms": 329.8,
+					"kernels_ms": 134.9,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 1196
+				},
+				{
+					"id": "fast-foundationstereo",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#c-foundationstereo",
+					"commercial": "no",
+					"accuracy": "1.72",
+					"original_ms": 527.2,
+					"original_size": "994x1482",
+					"portable_ms": 330,
+					"kernels_ms": 135,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 1196
+				},
+				{
+					"id": "nmrf-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#nmrf",
+					"commercial": "yes",
+					"accuracy": "3.81",
+					"original_ms": 312.6,
+					"original_size": "994x1482",
+					"portable_ms": 216.4,
+					"kernels_ms": 195.7,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 1022
+				},
+				{
+					"id": "dlnr-middlebury",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#dlnr",
+					"commercial": "yes",
+					"accuracy": "34.38",
+					"original_ms": 597.7,
+					"original_size": "994x1482",
+					"portable_ms": 398.2,
+					"kernels_ms": 213.9,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 1236
+				},
+				{
+					"id": "dlnr-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#dlnr",
+					"commercial": "yes",
+					"accuracy": "30.27",
+					"original_ms": 597.7,
+					"original_size": "994x1482",
+					"portable_ms": 398.2,
+					"kernels_ms": 213.9,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 1236
+				},
+				{
+					"id": "cas-gwcnet-c-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#cas-gwcnet",
+					"commercial": "yes",
+					"accuracy": "7.85",
+					"original_ms": 389.1,
+					"original_size": "994x1482",
+					"portable_ms": 327,
+					"kernels_ms": 225.4,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 1725
+				},
+				{
+					"id": "crestereo-eth3d",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#crestereo",
+					"commercial": "yes",
+					"accuracy": "1.39 †",
+					"original_ms": 1597.4,
+					"original_size": "994x1482",
+					"portable_ms": 731.8,
+					"kernels_ms": 228.9,
+					"speedup": 7,
+					"speedup_vs": "original",
+					"peak_mib": 644
+				},
+				{
+					"id": "psmnet-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#psmnet",
+					"commercial": "yes",
+					"accuracy": "15.13",
+					"original_ms": 607.8,
+					"original_size": "994x1482",
+					"portable_ms": 340,
+					"kernels_ms": 231.8,
+					"speedup": 2.6,
+					"speedup_vs": "original",
+					"peak_mib": 1786
+				},
+				{
+					"id": "gwcnet-g-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#gwcnet",
+					"commercial": "yes",
+					"accuracy": "9.59",
+					"original_ms": 352.4,
+					"original_size": "994x1482",
+					"portable_ms": 344.2,
+					"kernels_ms": 238.1,
+					"speedup": 1.5,
+					"speedup_vs": "original",
+					"peak_mib": 1799
+				},
+				{
+					"id": "s2m2-m",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#s2m2",
+					"commercial": "no",
+					"accuracy": "0.95 ?",
+					"original_ms": 666.2,
+					"original_size": "994x1482",
+					"portable_ms": 670.4,
+					"kernels_ms": 247.9,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 876
+				},
+				{
+					"id": "gwcnet-gc-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#gwcnet",
+					"commercial": "yes",
+					"accuracy": "10.96",
+					"original_ms": 364.8,
+					"original_size": "994x1482",
+					"portable_ms": 352.9,
+					"kernels_ms": 257.3,
+					"speedup": 1.4,
+					"speedup_vs": "original",
+					"peak_mib": 1768
+				},
+				{
+					"id": "raft-stereo-eth3d",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#raft-stereo",
+					"commercial": "yes",
+					"accuracy": "2.61 ?",
+					"original_ms": 1036.7,
+					"original_size": "994x1482",
+					"portable_ms": 745.6,
+					"kernels_ms": 272.8,
+					"speedup": 3.8,
+					"speedup_vs": "original",
+					"peak_mib": 765
+				},
+				{
+					"id": "raft-stereo-middlebury",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#raft-stereo",
+					"commercial": "yes",
+					"accuracy": "2.79",
+					"original_ms": 1036.7,
+					"original_size": "994x1482",
+					"portable_ms": 745.6,
+					"kernels_ms": 272.8,
+					"speedup": 3.8,
+					"speedup_vs": "original",
+					"peak_mib": 765
+				},
+				{
+					"id": "raft-stereo-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#raft-stereo",
+					"commercial": "yes",
+					"accuracy": "2.60",
+					"original_ms": 1036.7,
+					"original_size": "994x1482",
+					"portable_ms": 745.6,
+					"kernels_ms": 272.8,
+					"speedup": 3.8,
+					"speedup_vs": "original",
+					"peak_mib": 765
+				},
+				{
+					"id": "waft-stereo-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#waft-stereo",
+					"commercial": "yes",
+					"accuracy": "0.95 ?",
+					"original_ms": 689.3,
+					"original_size": "994x1482",
+					"portable_ms": 689,
+					"kernels_ms": 283.8,
+					"speedup": 2.4,
+					"speedup_vs": "original",
+					"peak_mib": 1113
+				},
+				{
+					"id": "igev-stereo-eth3d",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev-stereo",
+					"commercial": "yes",
+					"accuracy": "0.56 ?",
+					"original_ms": 941.3,
+					"original_size": "994x1482",
+					"portable_ms": 763.5,
+					"kernels_ms": 288.2,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1113
+				},
+				{
+					"id": "igev-stereo-kitti12",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev-stereo",
+					"commercial": "yes",
+					"accuracy": "26.02",
+					"original_ms": 941.3,
+					"original_size": "994x1482",
+					"portable_ms": 763.5,
+					"kernels_ms": 288.2,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1113
+				},
+				{
+					"id": "igev-stereo-kitti15",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev-stereo",
+					"commercial": "yes",
+					"accuracy": "24.63",
+					"original_ms": 941.3,
+					"original_size": "994x1482",
+					"portable_ms": 763.5,
+					"kernels_ms": 288.2,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1113
+				},
+				{
+					"id": "igev-stereo-middlebury",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev-stereo",
+					"commercial": "yes",
+					"accuracy": "19.80 ?",
+					"original_ms": 941.3,
+					"original_size": "994x1482",
+					"portable_ms": 763.5,
+					"kernels_ms": 288.2,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1113
+				},
+				{
+					"id": "igev-stereo-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev-stereo",
+					"commercial": "yes",
+					"accuracy": "4.04",
+					"original_ms": 941.3,
+					"original_size": "994x1482",
+					"portable_ms": 763.5,
+					"kernels_ms": 288.2,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1113
+				},
+				{
+					"id": "bridgedepth-sf",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#bridgedepth",
+					"commercial": "no",
+					"accuracy": "1.24",
+					"original_ms": 459.9,
+					"original_size": "994x1482",
+					"portable_ms": 436.9,
+					"kernels_ms": 348.4,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 2310
+				},
+				{
+					"id": "selective-igev-eth3d-finetune",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#selective-igev",
+					"commercial": "yes",
+					"accuracy": "0.32 †",
+					"original_ms": 1455,
+					"original_size": "994x1482",
+					"portable_ms": 998.4,
+					"kernels_ms": 348.8,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1109
+				},
+				{
+					"id": "selective-igev-eth3d-train",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#selective-igev",
+					"commercial": "yes",
+					"accuracy": "0.78 †",
+					"original_ms": 1455,
+					"original_size": "994x1482",
+					"portable_ms": 998.4,
+					"kernels_ms": 348.8,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1109
+				},
+				{
+					"id": "selective-igev-kitti12",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#selective-igev",
+					"commercial": "yes",
+					"accuracy": "24.07",
+					"original_ms": 1455,
+					"original_size": "994x1482",
+					"portable_ms": 998.4,
+					"kernels_ms": 348.8,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1109
+				},
+				{
+					"id": "selective-igev-kitti15",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#selective-igev",
+					"commercial": "yes",
+					"accuracy": "24.26",
+					"original_ms": 1455,
+					"original_size": "994x1482",
+					"portable_ms": 998.4,
+					"kernels_ms": 348.8,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1109
+				},
+				{
+					"id": "selective-igev-middlebury-finetune",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#selective-igev",
+					"commercial": "yes",
+					"accuracy": "24.24",
+					"original_ms": 1455,
+					"original_size": "994x1482",
+					"portable_ms": 998.4,
+					"kernels_ms": 348.8,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1109
+				},
+				{
+					"id": "selective-igev-middlebury-train",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#selective-igev",
+					"commercial": "yes",
+					"accuracy": "10.25",
+					"original_ms": 1455,
+					"original_size": "994x1482",
+					"portable_ms": 998.4,
+					"kernels_ms": 348.8,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1109
+				},
+				{
+					"id": "selective-igev-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#selective-igev",
+					"commercial": "yes",
+					"accuracy": "6.06",
+					"original_ms": 1455,
+					"original_size": "994x1482",
+					"portable_ms": 998.4,
+					"kernels_ms": 348.8,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1109
+				},
+				{
+					"id": "bridgedepth-rvc-pretrain",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#bridgedepth",
+					"commercial": "no",
+					"accuracy": "1.22 ?",
+					"original_ms": 470.1,
+					"original_size": "994x1482",
+					"portable_ms": 441.6,
+					"kernels_ms": 353.6,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 2361
+				},
+				{
+					"id": "cas-gwcnet-gc-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#cas-gwcnet",
+					"commercial": "yes",
+					"accuracy": "8.09",
+					"original_ms": 566.7,
+					"original_size": "994x1482",
+					"portable_ms": 471.6,
+					"kernels_ms": 357.5,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 2272
+				},
+				{
+					"id": "s2m2-l",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#s2m2",
+					"commercial": "no",
+					"accuracy": "0.82 ?",
+					"original_ms": 1004.7,
+					"original_size": "994x1482",
+					"portable_ms": 1015.3,
+					"kernels_ms": 375.8,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 1249
+				},
+				{
+					"id": "waft-stereo-b",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#waft-stereo",
+					"commercial": "no",
+					"accuracy": "0.74 ?",
+					"original_ms": 1139.5,
+					"original_size": "994x1482",
+					"portable_ms": 1137.2,
+					"kernels_ms": 392.9,
+					"speedup": 2.9,
+					"speedup_vs": "original",
+					"peak_mib": 1907
+				},
+				{
+					"id": "igev-plusplus-eth3d",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev",
+					"commercial": "yes",
+					"accuracy": "0.50 †",
+					"original_ms": 1277.9,
+					"original_size": "994x1482",
+					"portable_ms": 1080.6,
+					"kernels_ms": 393,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1389
+				},
+				{
+					"id": "igev-plusplus-kitti12",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev",
+					"commercial": "yes",
+					"accuracy": "26.78",
+					"original_ms": 1277.9,
+					"original_size": "994x1482",
+					"portable_ms": 1080.6,
+					"kernels_ms": 393,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1389
+				},
+				{
+					"id": "igev-plusplus-kitti15",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev",
+					"commercial": "yes",
+					"accuracy": "25.50",
+					"original_ms": 1277.9,
+					"original_size": "994x1482",
+					"portable_ms": 1080.6,
+					"kernels_ms": 393,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1389
+				},
+				{
+					"id": "igev-plusplus-middlebury",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev",
+					"commercial": "yes",
+					"accuracy": "18.46 ?",
+					"original_ms": 1277.9,
+					"original_size": "994x1482",
+					"portable_ms": 1080.6,
+					"kernels_ms": 393,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1389
+				},
+				{
+					"id": "igev-plusplus-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#igev",
+					"commercial": "yes",
+					"accuracy": "4.66",
+					"original_ms": 1277.9,
+					"original_size": "994x1482",
+					"portable_ms": 1080.6,
+					"kernels_ms": 393,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 1389
+				},
+				{
+					"id": "great-igev-eth3d",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#great-igev",
+					"commercial": "yes",
+					"accuracy": "0.49 †",
+					"original_ms": 1458.3,
+					"original_size": "994x1482",
+					"portable_ms": 1084.7,
+					"kernels_ms": 393.1,
+					"speedup": 3.7,
+					"speedup_vs": "original",
+					"peak_mib": 1192
+				},
+				{
+					"id": "great-igev-kitti",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#great-igev",
+					"commercial": "yes",
+					"accuracy": "23.36",
+					"original_ms": 1458.3,
+					"original_size": "994x1482",
+					"portable_ms": 1084.7,
+					"kernels_ms": 393.1,
+					"speedup": 3.7,
+					"speedup_vs": "original",
+					"peak_mib": 1192
+				},
+				{
+					"id": "great-igev-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#great-igev",
+					"commercial": "yes",
+					"accuracy": "4.44",
+					"original_ms": 1458.3,
+					"original_size": "994x1482",
+					"portable_ms": 1084.7,
+					"kernels_ms": 393.1,
+					"speedup": 3.7,
+					"speedup_vs": "original",
+					"peak_mib": 1192
+				},
+				{
+					"id": "cfnet-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#cfnet",
+					"commercial": "yes",
+					"accuracy": "5.60",
+					"original_ms": 545.4,
+					"original_size": "994x1482",
+					"portable_ms": 484.3,
+					"kernels_ms": 400.7,
+					"speedup": 1.4,
+					"speedup_vs": "original",
+					"peak_mib": 3662
+				},
+				{
+					"id": "mocha-v2-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#mocha-stereo",
+					"commercial": "yes",
+					"accuracy": "3.82",
+					"original_ms": 1295.1,
+					"original_size": "994x1482",
+					"portable_ms": 1033.5,
+					"kernels_ms": 448.1,
+					"speedup": 2.9,
+					"speedup_vs": "original",
+					"peak_mib": 1587
+				},
+				{
+					"id": "mocha-v1-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#mocha-stereo",
+					"commercial": "yes",
+					"accuracy": "4.35",
+					"original_ms": 1456.2,
+					"original_size": "994x1482",
+					"portable_ms": 1057.2,
+					"kernels_ms": 455.5,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"peak_mib": 1588
+				},
+				{
+					"id": "great-igev-middlebury",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#great-igev",
+					"commercial": "yes",
+					"accuracy": "27.53 ?",
+					"original_ms": null,
+					"original_size": null,
+					"portable_ms": 1785.3,
+					"kernels_ms": 578.8,
+					"speedup": 3.1,
+					"speedup_vs": "portable",
+					"peak_mib": 1553
+				},
+				{
+					"id": "defom-stereo-vitl-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#defom-stereo",
+					"commercial": "no",
+					"accuracy": "2.44",
+					"original_ms": 2815.8,
+					"original_size": "994x1482",
+					"portable_ms": 1530.9,
+					"kernels_ms": 658.7,
+					"speedup": 4.3,
+					"speedup_vs": "original",
+					"peak_mib": 3154
+				},
+				{
+					"id": "monster-mix-all",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#monster",
+					"commercial": "no",
+					"accuracy": "1.25 †",
+					"original_ms": 4275,
+					"original_size": "994x1482",
+					"portable_ms": 1585.2,
+					"kernels_ms": 667.6,
+					"speedup": 6.4,
+					"speedup_vs": "original",
+					"peak_mib": 2356
+				},
+				{
+					"id": "monster-sceneflow",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#monster",
+					"commercial": "no",
+					"accuracy": "1.34",
+					"original_ms": 4275,
+					"original_size": "994x1482",
+					"portable_ms": 1585.2,
+					"kernels_ms": 667.6,
+					"speedup": 6.4,
+					"speedup_vs": "original",
+					"peak_mib": 2356
+				},
+				{
+					"id": "s2m2-xl",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#s2m2",
+					"commercial": "no",
+					"accuracy": "0.52 ?",
+					"original_ms": 1796.1,
+					"original_size": "994x1482",
+					"portable_ms": 1814.7,
+					"kernels_ms": 681.9,
+					"speedup": 2.6,
+					"speedup_vs": "original",
+					"peak_mib": 2092
+				},
+				{
+					"id": "monster-plusplus-mix-all",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#monster",
+					"commercial": "no",
+					"accuracy": "1.08 ?",
+					"original_ms": 4334.5,
+					"original_size": "994x1482",
+					"portable_ms": 1632.6,
+					"kernels_ms": 697.9,
+					"speedup": 6.2,
+					"speedup_vs": "original",
+					"peak_mib": 2438
+				},
+				{
+					"id": "foundationstereo-vit-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#foundationstereo",
+					"commercial": "no",
+					"accuracy": "1.10 ?",
+					"original_ms": 3608.6,
+					"original_size": "994x1482",
+					"portable_ms": 2513.8,
+					"kernels_ms": 1120.2,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"peak_mib": 2169
+				},
+				{
+					"id": "c-foundationstereo-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#c-foundationstereo",
+					"commercial": "yes",
+					"accuracy": "1.24",
+					"original_ms": 3873.9,
+					"original_size": "994x1482",
+					"portable_ms": 3646.4,
+					"kernels_ms": 1362.1,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 3107
+				},
+				{
+					"id": "foundationstereo-vit-l",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/stereo.md#foundationstereo",
+					"commercial": "no",
+					"accuracy": "0.65 ?",
+					"original_ms": 4237,
+					"original_size": "994x1482",
+					"portable_ms": 2989.8,
+					"kernels_ms": 1513.1,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 2818
+				}
+			]
+		},
+		{
+			"id": "depth",
+			"title": "Monocular depth",
+			"input": "994x1482",
+			"accuracy_metric": "NYUv2 AbsRel (scale+shift aligned)",
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "depth-anything-v2-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-v2",
+					"note": "4.5 ms"
+				},
+				{
+					"label": "Most accurate",
+					"id": "unik3d-vitl",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#unik3d",
+					"note": "62.9 ms, error 0.0346"
+				},
+				{
+					"label": "Best trade-off",
+					"id": "da3mono-large",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-3",
+					"note": "14.6 ms, error 0.0402"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "depth-anything-v2-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-v2",
+					"note": "4.5 ms"
+				},
+				{
+					"label": "Most accurate commercially usable",
+					"id": "moge-3-vitl",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#moge",
+					"note": "214.0 ms, error 0.0356"
+				}
+			],
+			"models": [
+				{
+					"id": "depth-anything-v2-s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-v2",
+					"commercial": "yes",
+					"accuracy": "0.0509",
+					"original_ms": 41,
+					"original_size": "994x1482",
+					"portable_ms": 7.8,
+					"kernels_ms": 4.5,
+					"speedup": 9.1,
+					"speedup_vs": "original",
+					"peak_mib": 190
+				},
+				{
+					"id": "depth-anything-v2-b",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-v2",
+					"commercial": "no",
+					"accuracy": "0.0462",
+					"original_ms": 63.2,
+					"original_size": "994x1482",
+					"portable_ms": 18.8,
+					"kernels_ms": 10.5,
+					"speedup": 6,
+					"speedup_vs": "original",
+					"peak_mib": 387
+				},
+				{
+					"id": "da3mono-large",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-3",
+					"commercial": "yes",
+					"accuracy": "0.0402",
+					"original_ms": 85.2,
+					"original_size": "994x1482",
+					"portable_ms": 23.9,
+					"kernels_ms": 14.6,
+					"speedup": 5.8,
+					"speedup_vs": "original",
+					"peak_mib": 814
+				},
+				{
+					"id": "da3metric-large",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-3",
+					"commercial": "yes",
+					"accuracy": "0.0398",
+					"original_ms": 85.1,
+					"original_size": "994x1482",
+					"portable_ms": 24.1,
+					"kernels_ms": 14.7,
+					"speedup": 5.8,
+					"speedup_vs": "original",
+					"peak_mib": 811
+				},
+				{
+					"id": "da3-large-1.1",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-3",
+					"commercial": "no",
+					"accuracy": "0.0468",
+					"original_ms": 165.6,
+					"original_size": "994x1482",
+					"portable_ms": 37.4,
+					"kernels_ms": 17.1,
+					"speedup": 9.7,
+					"speedup_vs": "original",
+					"peak_mib": 985
+				},
+				{
+					"id": "moge-2-vits-normal",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#moge",
+					"commercial": "yes",
+					"accuracy": "0.0484",
+					"original_ms": 82.6,
+					"original_size": "994x1482",
+					"portable_ms": 64.2,
+					"kernels_ms": 29.7,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 884
+				},
+				{
+					"id": "depth-anything-v2-l",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-v2",
+					"commercial": "no",
+					"accuracy": "0.0439",
+					"original_ms": 140.2,
+					"original_size": "994x1482",
+					"portable_ms": 55.1,
+					"kernels_ms": 31.1,
+					"speedup": 4.5,
+					"speedup_vs": "original",
+					"peak_mib": 921
+				},
+				{
+					"id": "da3-giant-1.1",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-3",
+					"commercial": "no",
+					"accuracy": "0.0397",
+					"original_ms": 227.1,
+					"original_size": "994x1482",
+					"portable_ms": 81.8,
+					"kernels_ms": 44.2,
+					"speedup": 5.1,
+					"speedup_vs": "original",
+					"peak_mib": 2628
+				},
+				{
+					"id": "da3nested-giant-large-1.1",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-anything-3",
+					"commercial": "no",
+					"accuracy": "0.0387",
+					"original_ms": 308.2,
+					"original_size": "994x1482",
+					"portable_ms": 108,
+					"kernels_ms": 58.2,
+					"speedup": 5.3,
+					"speedup_vs": "original",
+					"peak_mib": 3271
+				},
+				{
+					"id": "unik3d-vitl",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#unik3d",
+					"commercial": "no",
+					"accuracy": "0.0346",
+					"original_ms": 133.7,
+					"original_size": "994x1482",
+					"portable_ms": 107.8,
+					"kernels_ms": 62.9,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 1166
+				},
+				{
+					"id": "midas-dpt-beit-large-512",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#midas-v31",
+					"commercial": "yes",
+					"accuracy": "0.0487",
+					"original_ms": 333.2,
+					"original_size": "994x1482",
+					"portable_ms": 78.8,
+					"kernels_ms": 63.9,
+					"speedup": 5.2,
+					"speedup_vs": "original",
+					"peak_mib": 1003
+				},
+				{
+					"id": "unidepth-v2-vitl14",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#unidepth-v2",
+					"commercial": "no",
+					"accuracy": "0.0355",
+					"original_ms": 132,
+					"original_size": "994x1482",
+					"portable_ms": 99.8,
+					"kernels_ms": 66.4,
+					"speedup": 2,
+					"speedup_vs": "original",
+					"peak_mib": 1211
+				},
+				{
+					"id": "moge-2-vitl-normal",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#moge",
+					"commercial": "yes",
+					"accuracy": "0.0357",
+					"original_ms": 170.7,
+					"original_size": "994x1482",
+					"portable_ms": 144.5,
+					"kernels_ms": 73.4,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"peak_mib": 1498
+				},
+				{
+					"id": "zoedepth-nk",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#zoedepth",
+					"commercial": "yes",
+					"accuracy": "0.0532",
+					"original_ms": 271.2,
+					"original_size": "994x1482",
+					"portable_ms": 124,
+					"kernels_ms": 88.9,
+					"speedup": 3.1,
+					"speedup_vs": "original",
+					"peak_mib": 1771
+				},
+				{
+					"id": "metric3d-vit-large",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#metric3d-v2",
+					"commercial": "yes",
+					"accuracy": "0.0546",
+					"original_ms": 438.5,
+					"original_size": "994x1482",
+					"portable_ms": 200.3,
+					"kernels_ms": 158.5,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 1516
+				},
+				{
+					"id": "moge-3-vitl",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#moge",
+					"commercial": "yes",
+					"accuracy": "0.0356",
+					"original_ms": null,
+					"original_size": null,
+					"portable_ms": 904.9,
+					"kernels_ms": 214,
+					"speedup": 4.2,
+					"speedup_vs": "portable",
+					"peak_mib": 1690
+				},
+				{
+					"id": "depth-pro",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#depth-pro",
+					"commercial": "no",
+					"accuracy": "0.0425",
+					"original_ms": 568.8,
+					"original_size": "994x1482",
+					"portable_ms": 518.4,
+					"kernels_ms": 270.9,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 3667
+				},
+				{
+					"id": "marigold-depth-v1-1",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/depth.md#marigold",
+					"commercial": "yes",
+					"accuracy": "0.0561",
+					"original_ms": 439.2,
+					"original_size": "994x1482",
+					"portable_ms": 408.1,
+					"kernels_ms": 383.2,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"peak_mib": 2583
+				}
+			]
+		},
+		{
+			"id": "classification",
+			"title": "Classification",
+			"input": "224x224",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "squeezenet1_1",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#squeezenet",
+					"note": "0.4 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "squeezenet1_1",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#squeezenet",
+					"note": "0.4 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "squeezenet1_1",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#squeezenet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 1.7,
+					"original_size": "224x224",
+					"portable_ms": 1.8,
+					"kernels_ms": 0.4,
+					"speedup": 4.8,
+					"speedup_vs": "original",
+					"peak_mib": 8
+				},
+				{
+					"id": "mobilenetv1_100",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#mobilenetv1",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 2.2,
+					"original_size": "224x224",
+					"portable_ms": 1.8,
+					"kernels_ms": 0.4,
+					"speedup": 5.9,
+					"speedup_vs": "original",
+					"peak_mib": 76
+				},
+				{
+					"id": "mobilenet_v2",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#mobilenetv2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 3.6,
+					"original_size": "224x224",
+					"portable_ms": 3,
+					"kernels_ms": 0.4,
+					"speedup": 8.2,
+					"speedup_vs": "original",
+					"peak_mib": 75
+				},
+				{
+					"id": "resnet18",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#resnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 1.9,
+					"original_size": "224x224",
+					"portable_ms": 1.5,
+					"kernels_ms": 0.5,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 90
+				},
+				{
+					"id": "mobilenet_v3_large",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#mobilenetv3",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 4.3,
+					"original_size": "224x224",
+					"portable_ms": 3.8,
+					"kernels_ms": 0.5,
+					"speedup": 7.9,
+					"speedup_vs": "original",
+					"peak_mib": 78
+				},
+				{
+					"id": "alexnet",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#alexnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 1.2,
+					"original_size": "224x224",
+					"portable_ms": 1,
+					"kernels_ms": 0.6,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 184
+				},
+				{
+					"id": "mobilenetv4_conv_medium",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#mobilenetv4",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 5.8,
+					"original_size": "224x224",
+					"portable_ms": 3.9,
+					"kernels_ms": 0.6,
+					"speedup": 9,
+					"speedup_vs": "original",
+					"peak_mib": 87
+				},
+				{
+					"id": "efficientnet_b0",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#efficientnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 5.6,
+					"original_size": "224x224",
+					"portable_ms": 5,
+					"kernels_ms": 0.8,
+					"speedup": 7.3,
+					"speedup_vs": "original",
+					"peak_mib": 78
+				},
+				{
+					"id": "shufflenet_v2_x1_0",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#shufflenetv2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 4.8,
+					"original_size": "224x224",
+					"portable_ms": 3.7,
+					"kernels_ms": 0.8,
+					"speedup": 6.1,
+					"speedup_vs": "original",
+					"peak_mib": 87
+				},
+				{
+					"id": "resnet50",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#resnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 4.7,
+					"original_size": "224x224",
+					"portable_ms": 3.1,
+					"kernels_ms": 0.8,
+					"speedup": 5.7,
+					"speedup_vs": "original",
+					"peak_mib": 116
+				},
+				{
+					"id": "efficientvit_b2",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#efficientvit-mit",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 10.7,
+					"original_size": "224x224",
+					"portable_ms": 11.9,
+					"kernels_ms": 1.1,
+					"speedup": 9.7,
+					"speedup_vs": "original",
+					"peak_mib": 120
+				},
+				{
+					"id": "densenet121",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#densenet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 10.7,
+					"original_size": "224x224",
+					"portable_ms": 9.4,
+					"kernels_ms": 1.3,
+					"speedup": 8.4,
+					"speedup_vs": "original",
+					"peak_mib": 83
+				},
+				{
+					"id": "inception_v3",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#inception-v3",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 7.9,
+					"original_size": "224x224",
+					"portable_ms": 5.2,
+					"kernels_ms": 1.3,
+					"speedup": 6.1,
+					"speedup_vs": "original",
+					"peak_mib": 150
+				},
+				{
+					"id": "fastvit_sa24",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#fastvit",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 11.9,
+					"original_size": "224x224",
+					"portable_ms": 6.9,
+					"kernels_ms": 1.4,
+					"speedup": 8.6,
+					"speedup_vs": "original",
+					"peak_mib": 112
+				},
+				{
+					"id": "vgg16",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#vgg",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 3.6,
+					"original_size": "224x224",
+					"portable_ms": 2,
+					"kernels_ms": 1.5,
+					"speedup": 2.4,
+					"speedup_vs": "original",
+					"peak_mib": 332
+				},
+				{
+					"id": "deit_base_patch16_224",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#deit",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 5.5,
+					"original_size": "224x224",
+					"portable_ms": 3,
+					"kernels_ms": 1.6,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 300
+				},
+				{
+					"id": "vit_base_patch16_224",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#vision-transformer",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 5.5,
+					"original_size": "224x224",
+					"portable_ms": 3,
+					"kernels_ms": 1.6,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"peak_mib": 300
+				},
+				{
+					"id": "resnet152",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#resnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 12.8,
+					"original_size": "224x224",
+					"portable_ms": 8.4,
+					"kernels_ms": 1.8,
+					"speedup": 7,
+					"speedup_vs": "original",
+					"peak_mib": 182
+				},
+				{
+					"id": "regnety_160",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#regnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 12.1,
+					"original_size": "224x224",
+					"portable_ms": 8.3,
+					"kernels_ms": 1.9,
+					"speedup": 6.5,
+					"speedup_vs": "original",
+					"peak_mib": 229
+				},
+				{
+					"id": "efficientnet_v2_s",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#efficientnetv2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 12.1,
+					"original_size": "224x224",
+					"portable_ms": 10.2,
+					"kernels_ms": 1.9,
+					"speedup": 6.4,
+					"speedup_vs": "original",
+					"peak_mib": 114
+				},
+				{
+					"id": "efficientnet_b4",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#efficientnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 11.1,
+					"original_size": "224x224",
+					"portable_ms": 10,
+					"kernels_ms": 2,
+					"speedup": 5.5,
+					"speedup_vs": "original",
+					"peak_mib": 111
+				},
+				{
+					"id": "swin_base_patch4_window7_224",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#swin-transformer",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 15,
+					"original_size": "224x224",
+					"portable_ms": 10.8,
+					"kernels_ms": 2.1,
+					"speedup": 7,
+					"speedup_vs": "original",
+					"peak_mib": 246
+				},
+				{
+					"id": "convnextv2_base",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#convnext-v2",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": 10.7,
+					"original_size": "224x224",
+					"portable_ms": 10.2,
+					"kernels_ms": 2.9,
+					"speedup": 3.7,
+					"speedup_vs": "original",
+					"peak_mib": 318
+				},
+				{
+					"id": "dinov2_vitl14_lc",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#dinov2-linear",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 10.8,
+					"original_size": "224x224",
+					"portable_ms": 5.4,
+					"kernels_ms": 4.9,
+					"speedup": 2.2,
+					"speedup_vs": "original",
+					"peak_mib": 890
+				},
+				{
+					"id": "vit_so400m_patch14_siglip_378",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#siglip-fine-tuned",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 25.8,
+					"original_size": "224x224",
+					"portable_ms": 13.1,
+					"kernels_ms": 12.8,
+					"speedup": 2,
+					"speedup_vs": "original",
+					"peak_mib": 1216
+				},
+				{
+					"id": "eva02_large_patch14_448",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/classification.md#eva-02",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 32.1,
+					"original_size": "224x224",
+					"portable_ms": 18,
+					"kernels_ms": 14.1,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"peak_mib": 1236
+				}
+			]
+		},
+		{
+			"id": "segmentation",
+			"title": "Segmentation",
+			"input": "1024x2048",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "segformer-b0-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#segformer",
+					"note": "3.5 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "hrnet-w48-fcn-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#mmseg-cnn-classics",
+					"note": "11.9 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "segformer-b0-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#segformer",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": 17.2,
+					"original_size": "1024x2048",
+					"portable_ms": 11.4,
+					"kernels_ms": 3.5,
+					"speedup": 5,
+					"speedup_vs": "original",
+					"peak_mib": 148
+				},
+				{
+					"id": "hrnet-w48-fcn-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#mmseg-cnn-classics",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 48.1,
+					"original_size": "1024x2048",
+					"portable_ms": 26.9,
+					"kernels_ms": 11.9,
+					"speedup": 4.1,
+					"speedup_vs": "original",
+					"peak_mib": 274
+				},
+				{
+					"id": "dinov2-s-linear-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#dinov2-linear",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 24.7,
+					"original_size": "1024x2048",
+					"portable_ms": 18.3,
+					"kernels_ms": 12.4,
+					"speedup": 2,
+					"speedup_vs": "original",
+					"peak_mib": 645
+				},
+				{
+					"id": "fcn-r101-d8-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#mmseg-cnn-classics",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 47,
+					"original_size": "1024x2048",
+					"portable_ms": 40.7,
+					"kernels_ms": 16.6,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 294
+				},
+				{
+					"id": "deeplabv3plus-r101-d8-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#mmseg-cnn-classics",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 53.4,
+					"original_size": "1024x2048",
+					"portable_ms": 47.1,
+					"kernels_ms": 18,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"peak_mib": 365
+				},
+				{
+					"id": "deeplabv3-r101-d8-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#mmseg-cnn-classics",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 54.8,
+					"original_size": "1024x2048",
+					"portable_ms": 47.9,
+					"kernels_ms": 20.1,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 362
+				},
+				{
+					"id": "dinov2-b-linear-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#dinov2-linear",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 40.1,
+					"original_size": "1024x2048",
+					"portable_ms": 33.3,
+					"kernels_ms": 22.6,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 771
+				},
+				{
+					"id": "pspnet-r101-d8-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#mmseg-cnn-classics",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 47.2,
+					"original_size": "1024x2048",
+					"portable_ms": 48.8,
+					"kernels_ms": 25,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 341
+				},
+				{
+					"id": "segformer-b5-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#segformer",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": 72,
+					"original_size": "1024x2048",
+					"portable_ms": 38.7,
+					"kernels_ms": 25.3,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 407
+				},
+				{
+					"id": "eomt-l-dinov2-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#eomt",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 63.7,
+					"original_size": "1024x2048",
+					"portable_ms": 50.8,
+					"kernels_ms": 35,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 1515
+				},
+				{
+					"id": "eomt-l-dinov3-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#eomt",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 72.1,
+					"original_size": "1024x2048",
+					"portable_ms": 54.6,
+					"kernels_ms": 38.8,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 1514
+				},
+				{
+					"id": "dinov2-l-linear-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#dinov2-linear",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 95.7,
+					"original_size": "1024x2048",
+					"portable_ms": 83.9,
+					"kernels_ms": 56.8,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 1189
+				},
+				{
+					"id": "mask2former-swinl-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#mask2former",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": 144.8,
+					"original_size": "1024x2048",
+					"portable_ms": 103.2,
+					"kernels_ms": 60.4,
+					"speedup": 2.4,
+					"speedup_vs": "original",
+					"peak_mib": 1164
+				},
+				{
+					"id": "sapiens-seg-0.3b-goliath",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#sapiens-segmentation",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": 173.2,
+					"original_size": "1024x2048",
+					"portable_ms": 131.9,
+					"kernels_ms": 92.6,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 1643
+				},
+				{
+					"id": "oneformer-swinl-ade20k",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#oneformer",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 205.1,
+					"original_size": "1024x2048",
+					"portable_ms": 139.1,
+					"kernels_ms": 100,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 2054
+				},
+				{
+					"id": "sapiens-seg-1b-goliath",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/segmentation.md#sapiens-segmentation",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": 354.4,
+					"original_size": "1024x2048",
+					"portable_ms": 275.1,
+					"kernels_ms": 185.2,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 3259
+				}
+			]
+		},
+		{
+			"id": "promptable_segmentation",
+			"title": "Promptable segmentation",
+			"input": "1024x1024",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "sam2.1-hiera-tiny",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-21-sam-21-image",
+					"note": "13.9 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "sam2.1-hiera-tiny",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-21-sam-21-image",
+					"note": "13.9 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "sam2.1-hiera-tiny",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-21-sam-21-image",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 38,
+					"original_size": "1024x1024",
+					"portable_ms": 16.6,
+					"kernels_ms": 13.9,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 316
+				},
+				{
+					"id": "sam2.1-hiera-small",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-21-sam-21-image",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 41.8,
+					"original_size": "1024x1024",
+					"portable_ms": 18.8,
+					"kernels_ms": 15.6,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 330
+				},
+				{
+					"id": "sam2.1-hiera-base-plus",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-21-sam-21-image",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 47.2,
+					"original_size": "1024x1024",
+					"portable_ms": 32,
+					"kernels_ms": 25.1,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 426
+				},
+				{
+					"id": "sam-vit-b",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-sam",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 98.2,
+					"original_size": "1024x1024",
+					"portable_ms": 48.3,
+					"kernels_ms": 37,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 377
+				},
+				{
+					"id": "sam2.1-hiera-large",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-21-sam-21-image",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 86.4,
+					"original_size": "1024x1024",
+					"portable_ms": 68,
+					"kernels_ms": 48.8,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 760
+				},
+				{
+					"id": "sam-vit-l",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-sam",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 197.2,
+					"original_size": "1024x1024",
+					"portable_ms": 115.7,
+					"kernels_ms": 81.5,
+					"speedup": 2.4,
+					"speedup_vs": "original",
+					"peak_mib": 831
+				},
+				{
+					"id": "sam3",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-3-sam-3-image",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 281,
+					"original_size": "1024x1024",
+					"portable_ms": 179.4,
+					"kernels_ms": 116.5,
+					"speedup": 2.4,
+					"speedup_vs": "original",
+					"peak_mib": 2019
+				},
+				{
+					"id": "sam-vit-h",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/promptable_segmentation.md#segment-anything-sam",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 306.5,
+					"original_size": "1024x1024",
+					"portable_ms": 214.5,
+					"kernels_ms": 143.1,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 1480
+				}
+			]
+		},
+		{
+			"id": "detection",
+			"title": "Detection",
+			"input": "800x1344",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "dfine-n-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#d-fine-hgnetv2-n--s--m--l--x",
+					"note": "2.7 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "dfine-n-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#d-fine-hgnetv2-n--s--m--l--x",
+					"note": "2.7 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "dfine-n-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#d-fine-hgnetv2-n--s--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 24.3,
+					"original_size": "800x1344",
+					"portable_ms": 10.3,
+					"kernels_ms": 2.7,
+					"speedup": 8.9,
+					"speedup_vs": "original",
+					"peak_mib": 124
+				},
+				{
+					"id": "dfine-s-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#d-fine-hgnetv2-n--s--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 25.7,
+					"original_size": "800x1344",
+					"portable_ms": 11.1,
+					"kernels_ms": 4,
+					"speedup": 6.4,
+					"speedup_vs": "original",
+					"peak_mib": 138
+				},
+				{
+					"id": "rtdetrv2-s-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#rt-detrv2-resnet-vd-s--m--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 14.1,
+					"original_size": "800x1344",
+					"portable_ms": 8,
+					"kernels_ms": 4.2,
+					"speedup": 3.4,
+					"speedup_vs": "original",
+					"peak_mib": 155
+				},
+				{
+					"id": "rtdetrv2-m-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#rt-detrv2-resnet-vd-s--m--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 17.1,
+					"original_size": "800x1344",
+					"portable_ms": 10.4,
+					"kernels_ms": 5.3,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"peak_mib": 177
+				},
+				{
+					"id": "rtdetrv2-ms-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#rt-detrv2-resnet-vd-s--m--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 22.5,
+					"original_size": "800x1344",
+					"portable_ms": 9.6,
+					"kernels_ms": 5.5,
+					"speedup": 4.1,
+					"speedup_vs": "original",
+					"peak_mib": 189
+				},
+				{
+					"id": "dfine-m-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#d-fine-hgnetv2-n--s--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 30.8,
+					"original_size": "800x1344",
+					"portable_ms": 13.5,
+					"kernels_ms": 6,
+					"speedup": 5.2,
+					"speedup_vs": "original",
+					"peak_mib": 156
+				},
+				{
+					"id": "rtdetrv2-l-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#rt-detrv2-resnet-vd-s--m--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 30.3,
+					"original_size": "800x1344",
+					"portable_ms": 12.1,
+					"kernels_ms": 6.6,
+					"speedup": 4.6,
+					"speedup_vs": "original",
+					"peak_mib": 200
+				},
+				{
+					"id": "dfine-l-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#d-fine-hgnetv2-n--s--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 37.1,
+					"original_size": "800x1344",
+					"portable_ms": 16.2,
+					"kernels_ms": 8.7,
+					"speedup": 4.3,
+					"speedup_vs": "original",
+					"peak_mib": 179
+				},
+				{
+					"id": "rtdetrv2-x-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#rt-detrv2-resnet-vd-s--m--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 36.3,
+					"original_size": "800x1344",
+					"portable_ms": 14.6,
+					"kernels_ms": 9.2,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 262
+				},
+				{
+					"id": "detr-r50-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#detr-resnet-50--resnet-101",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 55.5,
+					"original_size": "800x1344",
+					"portable_ms": 12.4,
+					"kernels_ms": 9.9,
+					"speedup": 5.6,
+					"speedup_vs": "original",
+					"peak_mib": 218
+				},
+				{
+					"id": "detr-r101-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#detr-resnet-50--resnet-101",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 78.9,
+					"original_size": "800x1344",
+					"portable_ms": 18.7,
+					"kernels_ms": 13.7,
+					"speedup": 5.8,
+					"speedup_vs": "original",
+					"peak_mib": 254
+				},
+				{
+					"id": "dfine-x-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#d-fine-hgnetv2-n--s--m--l--x",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 44.9,
+					"original_size": "800x1344",
+					"portable_ms": 18.5,
+					"kernels_ms": 14.1,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"peak_mib": 237
+				},
+				{
+					"id": "faster-rcnn-r50-fpn-3x-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#detectron2-mask--faster-r-cnn-r50-fpn",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 41.4,
+					"original_size": "800x1344",
+					"portable_ms": 22.8,
+					"kernels_ms": 19.5,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 391
+				},
+				{
+					"id": "mask-rcnn-r50-fpn-3x-coco",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/detection.md#detectron2-mask--faster-r-cnn-r50-fpn",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 43.5,
+					"original_size": "800x1344",
+					"portable_ms": 24.6,
+					"kernels_ms": 21,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 353
+				}
+			]
+		},
+		{
+			"id": "features",
+			"title": "Features",
+			"input": "224x224",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "dinov2-vits14-reg",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"note": "0.8 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "dinov2-vits14-reg",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"note": "0.8 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "dinov2-vits14-reg",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 4.1,
+					"original_size": "224x224",
+					"portable_ms": 3,
+					"kernels_ms": 0.8,
+					"speedup": 5,
+					"speedup_vs": "original",
+					"peak_mib": 112
+				},
+				{
+					"id": "dinov2-vits14",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 3.3,
+					"original_size": "224x224",
+					"portable_ms": 3,
+					"kernels_ms": 0.8,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 112
+				},
+				{
+					"id": "dinov3-vits16",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-vit",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 6.5,
+					"original_size": "224x224",
+					"portable_ms": 4.7,
+					"kernels_ms": 0.9,
+					"speedup": 7.2,
+					"speedup_vs": "original",
+					"peak_mib": 77
+				},
+				{
+					"id": "dinov3-convnext-tiny",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-convnext",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 3,
+					"original_size": "224x224",
+					"portable_ms": 3,
+					"kernels_ms": 1.2,
+					"speedup": 2.5,
+					"speedup_vs": "original",
+					"peak_mib": 86
+				},
+				{
+					"id": "dinov3-vitb16",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-vit",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 7,
+					"original_size": "224x224",
+					"portable_ms": 4.9,
+					"kernels_ms": 1.4,
+					"speedup": 5,
+					"speedup_vs": "original",
+					"peak_mib": 201
+				},
+				{
+					"id": "dinov2-vitb14",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 4.5,
+					"original_size": "224x224",
+					"portable_ms": 2.9,
+					"kernels_ms": 1.5,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"peak_mib": 237
+				},
+				{
+					"id": "dinov2-vitb14-reg",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 4.3,
+					"original_size": "224x224",
+					"portable_ms": 2.9,
+					"kernels_ms": 1.5,
+					"speedup": 2.9,
+					"speedup_vs": "original",
+					"peak_mib": 237
+				},
+				{
+					"id": "dinov3-convnext-small",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-convnext",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 6,
+					"original_size": "224x224",
+					"portable_ms": 5.4,
+					"kernels_ms": 2,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"peak_mib": 127
+				},
+				{
+					"id": "dinov3-convnext-base",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-convnext",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 7.4,
+					"original_size": "224x224",
+					"portable_ms": 5.7,
+					"kernels_ms": 2.2,
+					"speedup": 3.4,
+					"speedup_vs": "original",
+					"peak_mib": 200
+				},
+				{
+					"id": "dinov3-vitl16",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-vit",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 17.7,
+					"original_size": "224x224",
+					"portable_ms": 9.1,
+					"kernels_ms": 3.3,
+					"speedup": 5.4,
+					"speedup_vs": "original",
+					"peak_mib": 617
+				},
+				{
+					"id": "dinov3-convnext-large",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-convnext",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 9.6,
+					"original_size": "224x224",
+					"portable_ms": 5.4,
+					"kernels_ms": 3.6,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 441
+				},
+				{
+					"id": "dinov2-vitl14",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 9.8,
+					"original_size": "224x224",
+					"portable_ms": 6.1,
+					"kernels_ms": 4.6,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 655
+				},
+				{
+					"id": "dinov2-vitl14-reg",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 10.7,
+					"original_size": "224x224",
+					"portable_ms": 6.2,
+					"kernels_ms": 4.6,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"peak_mib": 655
+				},
+				{
+					"id": "dinov3-vith16plus",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov3-vit",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 25.9,
+					"original_size": "224x224",
+					"portable_ms": 13.3,
+					"kernels_ms": 9.3,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"peak_mib": 1644
+				},
+				{
+					"id": "dinov2-vitg14-reg",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 34.2,
+					"original_size": "224x224",
+					"portable_ms": 18.7,
+					"kernels_ms": 13,
+					"speedup": 2.6,
+					"speedup_vs": "original",
+					"peak_mib": 2222
+				},
+				{
+					"id": "dinov2-vitg14",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/features.md#dinov2",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 33.9,
+					"original_size": "224x224",
+					"portable_ms": 18.9,
+					"kernels_ms": 13.2,
+					"speedup": 2.6,
+					"speedup_vs": "original",
+					"peak_mib": 2246
+				}
+			]
+		},
+		{
+			"id": "multiview",
+			"title": "Multiview",
+			"input": "own input per model",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "patchmatchnet",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/multiview.md#patchmatchnet",
+					"note": "29.6 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "patchmatchnet",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/multiview.md#patchmatchnet",
+					"note": "29.6 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "patchmatchnet",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/multiview.md#patchmatchnet",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": 219.7,
+					"original_size": "1536x1024",
+					"portable_ms": 201.7,
+					"kernels_ms": 29.6,
+					"speedup": 7.4,
+					"speedup_vs": "original",
+					"peak_mib": 740
+				},
+				{
+					"id": "mvsanywhere",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/multiview.md#mvsanywhere",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": null,
+					"original_size": null,
+					"portable_ms": 93.2,
+					"kernels_ms": 35.6,
+					"speedup": 2.6,
+					"speedup_vs": "portable",
+					"peak_mib": 761
+				},
+				{
+					"id": "vggt-1b",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/multiview.md#vggt",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": null,
+					"original_size": null,
+					"portable_ms": 651.2,
+					"kernels_ms": 458.4,
+					"speedup": 1.4,
+					"speedup_vs": "portable",
+					"peak_mib": 3702
+				},
+				{
+					"id": "vggt-omega-1b-512",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/multiview.md#vggt-omega",
+					"commercial": "no",
+					"accuracy": null,
+					"original_ms": null,
+					"original_size": null,
+					"portable_ms": 725.7,
+					"kernels_ms": 464.4,
+					"speedup": 1.6,
+					"speedup_vs": "portable",
+					"peak_mib": 3422
+				},
+				{
+					"id": "mapanything-apache",
+					"doc": "https://github.com/kleinicke/fastforks/blob/main/docs/models/multiview.md#mapanything",
+					"commercial": "yes",
+					"accuracy": null,
+					"original_ms": null,
+					"original_size": null,
+					"portable_ms": 635.9,
+					"kernels_ms": 544,
+					"speedup": 1.2,
+					"speedup_vs": "portable",
+					"peak_mib": 3697
+				}
+			]
+		}
+	],
+	"devices": [
+		{
+			"slug": "rtx-5060-ti-16gb",
+			"name": "RTX 5060 Ti 16 GB",
+			"backend": "cuda",
+			"memory": "16 GB GDDR7",
+			"details": "Blackwell, sm_120",
+			"software": "Linux, torch 2.14.1+cu130, CUDA 12.8 kernels (13.0 for four stereo families), cuDNN 9.24",
+			"reference": true,
+			"page": "https://github.com/kleinicke/fastforks/blob/main/docs/benchmarks.md",
+			"measured": null,
+			"tasks": [
+				"stereo",
+				"depth",
+				"classification",
+				"segmentation",
+				"promptable_segmentation",
+				"detection",
+				"features",
+				"multiview"
+			],
+			"times": null
+		},
+		{
+			"slug": "apple-m1-pro-16gb",
+			"name": "Apple M1 Pro 16 GB",
+			"backend": "mps",
+			"memory": "16 GB unified",
+			"details": "16-core GPU",
+			"software": "macOS 27, torch 2.14",
+			"reference": false,
+			"page": "https://github.com/kleinicke/fastforks/blob/main/docs/devices/apple-m1-pro-16gb.md",
+			"measured": {
+				"from": "2026-11-06",
+				"to": "2026-11-07",
+				"rows": 422
+			},
+			"tasks": [
+				"stereo",
+				"depth",
+				"multiview",
+				"promptable_segmentation",
+				"segmentation",
+				"detection",
+				"classification",
+				"features"
+			],
+			"times": {
+				"alexnet": {
+					"task": "classification",
+					"portable": {
+						"ms": 3.045,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"convnextv2_base": {
+					"task": "classification",
+					"portable": {
+						"ms": 36.119,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"deit_base_patch16_224": {
+					"task": "classification",
+					"portable": {
+						"ms": 16.933,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"densenet121": {
+					"task": "classification",
+					"portable": {
+						"ms": 25.353,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2_vitl14_lc": {
+					"task": "classification",
+					"portable": {
+						"ms": 64.468,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"efficientnet_b0": {
+					"task": "classification",
+					"portable": {
+						"ms": 13.006,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"efficientnet_b4": {
+					"task": "classification",
+					"portable": {
+						"ms": 38.269,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"efficientnet_v2_s": {
+					"task": "classification",
+					"portable": {
+						"ms": 33.972,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"efficientvit_b2": {
+					"task": "classification",
+					"portable": {
+						"ms": 18.645,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"eva02_large_patch14_448": {
+					"task": "classification",
+					"portable": {
+						"ms": 234.809,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fastvit_sa24": {
+					"task": "classification",
+					"portable": {
+						"ms": 16.811,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"inception_v3": {
+					"task": "classification",
+					"portable": {
+						"ms": 17.401,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mobilenet_v2": {
+					"task": "classification",
+					"portable": {
+						"ms": 6.484,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mobilenet_v3_large": {
+					"task": "classification",
+					"portable": {
+						"ms": 8.54,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mobilenetv1_100": {
+					"task": "classification",
+					"portable": {
+						"ms": 4.289,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mobilenetv4_conv_medium": {
+					"task": "classification",
+					"portable": {
+						"ms": 9.581,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"regnety_160": {
+					"task": "classification",
+					"portable": {
+						"ms": 33.084,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"resnet152": {
+					"task": "classification",
+					"portable": {
+						"ms": 25.684,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"resnet18": {
+					"task": "classification",
+					"portable": {
+						"ms": 4.667,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"resnet50": {
+					"task": "classification",
+					"portable": {
+						"ms": 11.214,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"shufflenet_v2_x1_0": {
+					"task": "classification",
+					"portable": {
+						"ms": 6.327,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"squeezenet1_1": {
+					"task": "classification",
+					"portable": {
+						"ms": 3.72,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"swin_base_patch4_window7_224": {
+					"task": "classification",
+					"portable": {
+						"ms": 28.192,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"vgg16": {
+					"task": "classification",
+					"portable": {
+						"ms": 11.699,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"vit_base_patch16_224": {
+					"task": "classification",
+					"portable": {
+						"ms": 16.944,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"vit_so400m_patch14_siglip_378": {
+					"task": "classification",
+					"portable": {
+						"ms": 196.809,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"da3-giant-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 758.549,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"da3-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 326.737,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"da3metric-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 317.76,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"da3mono-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 271.95,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"da3nested-giant-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 1184.373,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"depth-anything-v2-b": {
+					"task": "depth",
+					"portable": {
+						"ms": 211.543,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"depth-anything-v2-l": {
+					"task": "depth",
+					"portable": {
+						"ms": 622.498,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"depth-anything-v2-s": {
+					"task": "depth",
+					"portable": {
+						"ms": 87.254,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"depth-pro": {
+					"task": "depth",
+					"portable": {
+						"ms": 5025.888,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"marigold-depth-v1-1": {
+					"task": "depth",
+					"portable": {
+						"ms": 2497.717,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"metric3d-vit-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 1822.346,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"midas-dpt-beit-large-512": {
+					"task": "depth",
+					"portable": {
+						"ms": 634.656,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"moge-2-vitl-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 1535.385,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 1453.64,
+						"dtype": "fp32"
+					}
+				},
+				"moge-2-vits-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 362.726,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 362.847,
+						"dtype": "fp32"
+					}
+				},
+				"moge-3-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 3947.573,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 2764.372,
+						"dtype": "fp32"
+					}
+				},
+				"unidepth-v2-vitl14": {
+					"task": "depth",
+					"portable": {
+						"ms": 1259.525,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"unik3d-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 1217.451,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"zoedepth-nk": {
+					"task": "depth",
+					"portable": {
+						"ms": 777.684,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"detr-r101-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 182.601,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"detr-r50-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 124.71,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"faster-rcnn-r50-fpn-3x-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 214.18,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mask-rcnn-r50-fpn-3x-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 221.978,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"rtdetrv2-l-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 82.568,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"rtdetrv2-m-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 55.265,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"rtdetrv2-ms-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 67.92,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"rtdetrv2-s-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 44.021,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"rtdetrv2-x-coco": {
+					"task": "detection",
+					"portable": {
+						"ms": 114.443,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vitb14": {
+					"task": "features",
+					"portable": {
+						"ms": 21.749,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vitb14-reg": {
+					"task": "features",
+					"portable": {
+						"ms": 42.773,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vitg14": {
+					"task": "features",
+					"portable": {
+						"ms": 192.539,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vitg14-reg": {
+					"task": "features",
+					"portable": {
+						"ms": 234.652,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vitl14": {
+					"task": "features",
+					"portable": {
+						"ms": 59.419,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vitl14-reg": {
+					"task": "features",
+					"portable": {
+						"ms": 86.287,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vits14": {
+					"task": "features",
+					"portable": {
+						"ms": 11.174,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-vits14-reg": {
+					"task": "features",
+					"portable": {
+						"ms": 22.145,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-convnext-base": {
+					"task": "features",
+					"portable": {
+						"status": "failed"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-convnext-large": {
+					"task": "features",
+					"portable": {
+						"status": "failed"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-convnext-small": {
+					"task": "features",
+					"portable": {
+						"ms": 21.733,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-convnext-tiny": {
+					"task": "features",
+					"portable": {
+						"status": "failed"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-vitb16": {
+					"task": "features",
+					"portable": {
+						"ms": 22.69,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-vith16plus": {
+					"task": "features",
+					"portable": {
+						"status": "failed"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-vitl16": {
+					"task": "features",
+					"portable": {
+						"status": "failed"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov3-vits16": {
+					"task": "features",
+					"portable": {
+						"status": "failed"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mapanything-apache": {
+					"task": "multiview",
+					"portable": {
+						"ms": 6369.19,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mvsanywhere": {
+					"task": "multiview",
+					"portable": {
+						"ms": 1050.642,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"patchmatchnet": {
+					"task": "multiview",
+					"portable": {
+						"ms": 1009.717,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"vggt-1b": {
+					"task": "multiview",
+					"portable": {
+						"ms": 7209.307,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 7015.547,
+						"dtype": "fp32"
+					}
+				},
+				"vggt-omega-1b-512": {
+					"task": "multiview",
+					"portable": {
+						"ms": 7241.942,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam-vit-b": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 630.824,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam-vit-h": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 2517.635,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam-vit-l": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 1373.421,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam2.1-hiera-base-plus": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 423.706,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam2.1-hiera-large": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 613.356,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam2.1-hiera-small": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 177.427,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam2.1-hiera-tiny": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 150.995,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sam3": {
+					"task": "promptable_segmentation",
+					"portable": {
+						"ms": 3619.606,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"deeplabv3-r101-d8-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 527.871,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"deeplabv3plus-r101-d8-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 430.161,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-b-linear-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 408.886,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-l-linear-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 1032.479,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dinov2-s-linear-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 223.978,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"eomt-l-dinov2-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 540.048,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"eomt-l-dinov3-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 574.509,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fcn-r101-d8-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 405.249,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"hrnet-w48-fcn-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 228.267,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"mask2former-swinl-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 909.488,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"oneformer-swinl-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 1126.75,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"pspnet-r101-d8-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 410.846,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sapiens-seg-0.3b-goliath": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 1517.056,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"sapiens-seg-1b-goliath": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 3112.873,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"segformer-b0-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 105.693,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"segformer-b5-ade20k": {
+					"task": "segmentation",
+					"portable": {
+						"ms": 427.695,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"aanet-plus-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 989.914,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 818.129,
+						"dtype": "fp16"
+					}
+				},
+				"aanet-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 911.633,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 630.844,
+						"dtype": "fp16"
+					}
+				},
+				"bridgedepth-rvc-pretrain": {
+					"task": "stereo",
+					"portable": {
+						"ms": 4375.027,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 3755.66,
+						"dtype": "fp16"
+					}
+				},
+				"bridgedepth-sf": {
+					"task": "stereo",
+					"portable": {
+						"ms": 4279.862,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 3693.197,
+						"dtype": "fp16"
+					}
+				},
+				"c-fast-foundationstereo": {
+					"task": "stereo",
+					"portable": {
+						"ms": 4881.287,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"c-foundationstereo-s": {
+					"task": "stereo",
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"cas-gwcnet-c-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 2488.525,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"cas-gwcnet-gc-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 2995.289,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"cfnet-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"ms": 2205.878,
+						"dtype": "fp16"
+					}
+				},
+				"coex-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 411.053,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"crestereo-eth3d": {
+					"task": "stereo",
+					"portable": {
+						"ms": 3745.86,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 3341.631,
+						"dtype": "fp16"
+					}
+				},
+				"defom-stereo-vitl-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11105.073,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 8223.701,
+						"dtype": "fp16"
+					}
+				},
+				"dlnr-middlebury": {
+					"task": "stereo",
+					"portable": {
+						"ms": 2142.85,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"dlnr-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 2142.551,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-generalization": {
+					"task": "stereo",
+					"portable": {
+						"ms": 944.392,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-kitti12": {
+					"task": "stereo",
+					"portable": {
+						"ms": 941.736,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-kitti15": {
+					"task": "stereo",
+					"portable": {
+						"ms": 942.79,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-plus-generalization": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1321.521,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-plus-kitti12": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1321.194,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-plus-kitti15": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1322.022,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-plus-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1321.658,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-acvnet-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 941.837,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"fast-foundationstereo": {
+					"task": "stereo",
+					"portable": {
+						"ms": 5194.654,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"foundationstereo-vit-l": {
+					"task": "stereo",
+					"portable": {
+						"ms": 25647.337,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 24480.347,
+						"dtype": "fp16"
+					}
+				},
+				"foundationstereo-vit-s": {
+					"task": "stereo",
+					"portable": {
+						"ms": 20584.041,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 19495.754,
+						"dtype": "fp16"
+					}
+				},
+				"great-igev-eth3d": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11458.615,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 9636.474,
+						"dtype": "fp16"
+					}
+				},
+				"great-igev-kitti": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11075.969,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 9634.329,
+						"dtype": "fp16"
+					}
+				},
+				"great-igev-middlebury": {
+					"task": "stereo",
+					"portable": {
+						"ms": 26930.306,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 25367.727,
+						"dtype": "fp16"
+					}
+				},
+				"great-igev-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11061.758,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 9861.251,
+						"dtype": "fp16"
+					}
+				},
+				"gwcnet-g-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 4340.146,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"gwcnet-gc-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 4461.437,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"hitnet-eth3d": {
+					"task": "stereo",
+					"portable": {
+						"ms": 483.938,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 136.13,
+						"dtype": "fp16"
+					}
+				},
+				"hitnet-middlebury-d400": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1154.721,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 439.835,
+						"dtype": "fp16"
+					}
+				},
+				"igev-plusplus-eth3d": {
+					"task": "stereo",
+					"portable": {
+						"ms": 8613.476,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 6138.884,
+						"dtype": "fp16"
+					}
+				},
+				"igev-plusplus-kitti12": {
+					"task": "stereo",
+					"portable": {
+						"ms": 8605.861,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 6123.702,
+						"dtype": "fp16"
+					}
+				},
+				"igev-plusplus-kitti15": {
+					"task": "stereo",
+					"portable": {
+						"ms": 8597.146,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 6125.285,
+						"dtype": "fp16"
+					}
+				},
+				"igev-plusplus-middlebury": {
+					"task": "stereo",
+					"portable": {
+						"ms": 8595.056,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 6129.964,
+						"dtype": "fp16"
+					}
+				},
+				"igev-plusplus-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 8602.462,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 6135.163,
+						"dtype": "fp16"
+					}
+				},
+				"igev-stereo-eth3d": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6406.788,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 3997.813,
+						"dtype": "fp16"
+					}
+				},
+				"igev-stereo-kitti12": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6410.957,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 4005.77,
+						"dtype": "fp16"
+					}
+				},
+				"igev-stereo-kitti15": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6406.717,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 4008.396,
+						"dtype": "fp16"
+					}
+				},
+				"igev-stereo-middlebury": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6407.638,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 4007.354,
+						"dtype": "fp16"
+					}
+				},
+				"igev-stereo-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6422.998,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 4000.74,
+						"dtype": "fp16"
+					}
+				},
+				"las2-h": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1271.34,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 733.875,
+						"dtype": "fp16"
+					}
+				},
+				"las2-l": {
+					"task": "stereo",
+					"portable": {
+						"ms": 575.636,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 518.949,
+						"dtype": "fp16"
+					}
+				},
+				"las2-m": {
+					"task": "stereo",
+					"portable": {
+						"ms": 299.559,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 281.17,
+						"dtype": "fp16"
+					}
+				},
+				"las2-s": {
+					"task": "stereo",
+					"portable": {
+						"ms": 244.853,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 198.411,
+						"dtype": "fp16"
+					}
+				},
+				"mocha-v1-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 7967.282,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 6693.339,
+						"dtype": "fp16"
+					}
+				},
+				"mocha-v2-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 7766.169,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 6500.826,
+						"dtype": "fp16"
+					}
+				},
+				"monster-mix-all": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11376.833,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 9646.052,
+						"dtype": "fp16"
+					}
+				},
+				"monster-plusplus-mix-all": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11875.781,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 10202.192,
+						"dtype": "fp16"
+					}
+				},
+				"monster-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11368.306,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 9642.315,
+						"dtype": "fp16"
+					}
+				},
+				"nmrf-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1560.442,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"ms": 1203.772,
+						"dtype": "fp16"
+					}
+				},
+				"psmnet-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 4615.163,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"raft-stereo-eth3d": {
+					"task": "stereo",
+					"portable": {
+						"ms": 3936.653,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 3638.299,
+						"dtype": "fp16"
+					}
+				},
+				"raft-stereo-middlebury": {
+					"task": "stereo",
+					"portable": {
+						"ms": 3939.636,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 3633.675,
+						"dtype": "fp16"
+					}
+				},
+				"raft-stereo-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 3937.505,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 3636.534,
+						"dtype": "fp16"
+					}
+				},
+				"rt-monster-plusplus-mix-all": {
+					"task": "stereo",
+					"portable": {
+						"ms": 663.259,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"s2m2-l": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6589.698,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"s2m2-m": {
+					"task": "stereo",
+					"portable": {
+						"ms": 3620.396,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"s2m2-s": {
+					"task": "stereo",
+					"portable": {
+						"ms": 1607.273,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"s2m2-xl": {
+					"task": "stereo",
+					"portable": {
+						"ms": 13398.109,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"selective-igev-eth3d-finetune": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6991.015,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5708.083,
+						"dtype": "fp16"
+					}
+				},
+				"selective-igev-eth3d-train": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6968.719,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5710.333,
+						"dtype": "fp16"
+					}
+				},
+				"selective-igev-kitti12": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6971.087,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5708.654,
+						"dtype": "fp16"
+					}
+				},
+				"selective-igev-kitti15": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6963.487,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5709.972,
+						"dtype": "fp16"
+					}
+				},
+				"selective-igev-middlebury-finetune": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6988.509,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5777.67,
+						"dtype": "fp16"
+					}
+				},
+				"selective-igev-middlebury-train": {
+					"task": "stereo",
+					"portable": {
+						"ms": 7205.972,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5737.848,
+						"dtype": "fp16"
+					}
+				},
+				"selective-igev-sceneflow": {
+					"task": "stereo",
+					"portable": {
+						"ms": 6968.142,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5709.633,
+						"dtype": "fp16"
+					}
+				},
+				"waft-stereo-b": {
+					"task": "stereo",
+					"portable": {
+						"ms": 11022.221,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				},
+				"waft-stereo-s": {
+					"task": "stereo",
+					"portable": {
+						"ms": 3360.392,
+						"dtype": "fp32"
+					},
+					"kernels": {
+						"status": "unsupported"
+					}
+				}
+			}
+		},
+		{
+			"slug": "l4-22gb",
+			"name": "NVIDIA L4",
+			"backend": "cuda",
+			"memory": "22 GB",
+			"details": "sm_89",
+			"software": "torch 2.14.1+cu130, cuda 13.0, driver 610.57.04",
+			"reference": false,
+			"page": "https://github.com/kleinicke/fastforks/blob/main/docs/devices/l4-22gb.md",
+			"measured": {
+				"from": "2026-11-07",
+				"to": "2026-11-07",
+				"rows": 36
+			},
+			"tasks": [
+				"depth"
+			],
+			"times": {
+				"da3-giant-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 89.042,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 70.984,
+						"dtype": "fp16"
+					}
+				},
+				"da3-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 41.995,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 24.012,
+						"dtype": "fp16"
+					}
+				},
+				"da3metric-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 23.358,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 20.052,
+						"dtype": "fp16"
+					}
+				},
+				"da3mono-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 22.614,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 20.539,
+						"dtype": "fp16"
+					}
+				},
+				"da3nested-giant-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 114.274,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 92.32,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-b": {
+					"task": "depth",
+					"portable": {
+						"ms": 19.016,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 15.919,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-l": {
+					"task": "depth",
+					"portable": {
+						"ms": 59.637,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 47.521,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-s": {
+					"task": "depth",
+					"portable": {
+						"ms": 9.253,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5.852,
+						"dtype": "fp16"
+					}
+				},
+				"depth-pro": {
+					"task": "depth",
+					"portable": {
+						"ms": 579.942,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 558.857,
+						"dtype": "fp16"
+					}
+				},
+				"marigold-depth-v1-1": {
+					"task": "depth",
+					"portable": {
+						"ms": 456.57,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 489.344,
+						"dtype": "fp16"
+					}
+				},
+				"metric3d-vit-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 218.199,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 193.245,
+						"dtype": "fp16"
+					}
+				},
+				"midas-dpt-beit-large-512": {
+					"task": "depth",
+					"portable": {
+						"ms": 91.743,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 91.485,
+						"dtype": "fp16"
+					}
+				},
+				"moge-2-vitl-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 155.081,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 112.583,
+						"dtype": "fp16"
+					}
+				},
+				"moge-2-vits-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 75.227,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 42.288,
+						"dtype": "fp16"
+					}
+				},
+				"moge-3-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 1215.686,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 302.495,
+						"dtype": "fp16"
+					}
+				},
+				"unidepth-v2-vitl14": {
+					"task": "depth",
+					"portable": {
+						"ms": 103.899,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 92.718,
+						"dtype": "fp16"
+					}
+				},
+				"unik3d-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 117.155,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 91.127,
+						"dtype": "fp16"
+					}
+				},
+				"zoedepth-nk": {
+					"task": "depth",
+					"portable": {
+						"ms": 145.817,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 115.787,
+						"dtype": "fp16"
+					}
+				}
+			}
+		},
+		{
+			"slug": "l40s-44gb",
+			"name": "NVIDIA L40S",
+			"backend": "cuda",
+			"memory": "44 GB",
+			"details": "sm_89",
+			"software": "torch 2.14.1+cu130, cuda 13.0, driver 610.57.04",
+			"reference": false,
+			"page": "https://github.com/kleinicke/fastforks/blob/main/docs/devices/l40s-44gb.md",
+			"measured": {
+				"from": "2026-11-07",
+				"to": "2026-11-07",
+				"rows": 36
+			},
+			"tasks": [
+				"depth"
+			],
+			"times": {
+				"da3-giant-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 30.823,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 22.623,
+						"dtype": "fp16"
+					}
+				},
+				"da3-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 17.506,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 8.552,
+						"dtype": "fp16"
+					}
+				},
+				"da3metric-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 8.016,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 7.9,
+						"dtype": "fp16"
+					}
+				},
+				"da3mono-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 7.799,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 7.478,
+						"dtype": "fp16"
+					}
+				},
+				"da3nested-giant-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 38.011,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 30.366,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-b": {
+					"task": "depth",
+					"portable": {
+						"ms": 5.39,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 4.86,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-l": {
+					"task": "depth",
+					"portable": {
+						"ms": 14.425,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 14.392,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-s": {
+					"task": "depth",
+					"portable": {
+						"ms": 3.747,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 2.693,
+						"dtype": "fp16"
+					}
+				},
+				"depth-pro": {
+					"task": "depth",
+					"portable": {
+						"ms": 150.951,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 132.284,
+						"dtype": "fp16"
+					}
+				},
+				"marigold-depth-v1-1": {
+					"task": "depth",
+					"portable": {
+						"ms": 140.318,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 148.484,
+						"dtype": "fp16"
+					}
+				},
+				"metric3d-vit-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 63.769,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 56.874,
+						"dtype": "fp16"
+					}
+				},
+				"midas-dpt-beit-large-512": {
+					"task": "depth",
+					"portable": {
+						"ms": 27.782,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 26.825,
+						"dtype": "fp16"
+					}
+				},
+				"moge-2-vitl-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 44.778,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 36.764,
+						"dtype": "fp16"
+					}
+				},
+				"moge-2-vits-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 24.948,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 14.977,
+						"dtype": "fp16"
+					}
+				},
+				"moge-3-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 390.984,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 95.765,
+						"dtype": "fp16"
+					}
+				},
+				"unidepth-v2-vitl14": {
+					"task": "depth",
+					"portable": {
+						"ms": 27.845,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 25.118,
+						"dtype": "fp16"
+					}
+				},
+				"unik3d-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 31.182,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 27.406,
+						"dtype": "fp16"
+					}
+				},
+				"zoedepth-nk": {
+					"task": "depth",
+					"portable": {
+						"ms": 45.674,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 32.131,
+						"dtype": "fp16"
+					}
+				}
+			}
+		},
+		{
+			"slug": "a10-22gb",
+			"name": "NVIDIA A10",
+			"backend": "cuda",
+			"memory": "22 GB",
+			"details": "sm_86",
+			"software": "torch 2.14.1+cu130, cuda 13.0, driver 610.57.04",
+			"reference": false,
+			"page": "https://github.com/kleinicke/fastforks/blob/main/docs/devices/a10-22gb.md",
+			"measured": {
+				"from": "2026-11-07",
+				"to": "2026-11-07",
+				"rows": 36
+			},
+			"tasks": [
+				"depth"
+			],
+			"times": {
+				"da3-giant-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 69.47,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 58.396,
+						"dtype": "fp16"
+					}
+				},
+				"da3-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 33.501,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 21.151,
+						"dtype": "fp16"
+					}
+				},
+				"da3metric-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 22.323,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 18.691,
+						"dtype": "fp16"
+					}
+				},
+				"da3mono-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 22.047,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 18.403,
+						"dtype": "fp16"
+					}
+				},
+				"da3nested-giant-large-1.1": {
+					"task": "depth",
+					"portable": {
+						"ms": 90.301,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 76.045,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-b": {
+					"task": "depth",
+					"portable": {
+						"ms": 16.212,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 13.398,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-l": {
+					"task": "depth",
+					"portable": {
+						"ms": 43.373,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 41.391,
+						"dtype": "fp16"
+					}
+				},
+				"depth-anything-v2-s": {
+					"task": "depth",
+					"portable": {
+						"ms": 7.988,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 5.455,
+						"dtype": "fp16"
+					}
+				},
+				"depth-pro": {
+					"task": "depth",
+					"portable": {
+						"ms": 375.415,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 347.052,
+						"dtype": "fp16"
+					}
+				},
+				"marigold-depth-v1-1": {
+					"task": "depth",
+					"portable": {
+						"ms": 341.312,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 422.829,
+						"dtype": "fp16"
+					}
+				},
+				"metric3d-vit-large": {
+					"task": "depth",
+					"portable": {
+						"ms": 174.567,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 165.513,
+						"dtype": "fp16"
+					}
+				},
+				"midas-dpt-beit-large-512": {
+					"task": "depth",
+					"portable": {
+						"ms": 73.08,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 74.089,
+						"dtype": "fp16"
+					}
+				},
+				"moge-2-vitl-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 119.756,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 90.413,
+						"dtype": "fp16"
+					}
+				},
+				"moge-2-vits-normal": {
+					"task": "depth",
+					"portable": {
+						"ms": 56.671,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 33.486,
+						"dtype": "fp16"
+					}
+				},
+				"moge-3-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 858.11,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 270.203,
+						"dtype": "fp16"
+					}
+				},
+				"unidepth-v2-vitl14": {
+					"task": "depth",
+					"portable": {
+						"ms": 78.789,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 75.731,
+						"dtype": "fp16"
+					}
+				},
+				"unik3d-vitl": {
+					"task": "depth",
+					"portable": {
+						"ms": 90.924,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 75.182,
+						"dtype": "fp16"
+					}
+				},
+				"zoedepth-nk": {
+					"task": "depth",
+					"portable": {
+						"ms": 127.606,
+						"dtype": "fp16"
+					},
+					"kernels": {
+						"ms": 92.913,
+						"dtype": "fp16"
+					}
+				}
+			}
+		}
+	],
+	"licences": {
+		"aanet-plus-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"aanet-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"bridgedepth-rvc-pretrain@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"bridgedepth-sf@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"c-fast-foundationstereo@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Open-Model-Agreement"
+		},
+		"c-foundationstereo-s@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Open-Model-License"
+		},
+		"cas-gwcnet-c-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"cas-gwcnet-gc-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"cfnet-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"coex-sceneflow@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "GPL-3.0-only",
+			"weights": "GPL-3.0-only (assumed from code)"
+		},
+		"crestereo-eth3d@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"defom-stereo-vitl-sceneflow@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"dlnr-middlebury@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"dlnr-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-generalization@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-kitti12@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-kitti15@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-plus-generalization@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-plus-kitti12@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-plus-kitti15@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-plus-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-acvnet-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"fast-foundationstereo@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+		},
+		"foundationstereo-vit-l@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "LicenseRef-NVIDIA-Source-Code-License-NC AND Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+		},
+		"foundationstereo-vit-s@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "LicenseRef-NVIDIA-Source-Code-License-NC AND Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+		},
+		"great-igev-eth3d@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"great-igev-kitti@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"great-igev-middlebury@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"great-igev-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"gwcnet-g-sceneflow@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"gwcnet-gc-sceneflow@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"hitnet-eth3d@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"hitnet-middlebury-d400@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"igev-plusplus-eth3d@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-plusplus-kitti12@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-plusplus-kitti15@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-plusplus-middlebury@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-plusplus-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-stereo-eth3d@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-stereo-kitti12@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-stereo-kitti15@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-stereo-middlebury@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"igev-stereo-sceneflow@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"las2-h@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT"
+		},
+		"las2-l@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT"
+		},
+		"las2-m@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT"
+		},
+		"las2-s@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT"
+		},
+		"mocha-v1-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"mocha-v2-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"monster-mix-all@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0"
+		},
+		"monster-plusplus-mix-all@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0"
+		},
+		"monster-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0"
+		},
+		"nmrf-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"psmnet-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"raft-stereo-eth3d@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"raft-stereo-middlebury@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"raft-stereo-sceneflow@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"rt-monster-plusplus-mix-all@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial"
+		},
+		"s2m2-l@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "CC-BY-NC-4.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"s2m2-m@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "CC-BY-NC-4.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"s2m2-s@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "CC-BY-NC-4.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"s2m2-xl@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "CC-BY-NC-4.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"selective-igev-eth3d-finetune@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"selective-igev-eth3d-train@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"selective-igev-kitti12@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"selective-igev-kitti15@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"selective-igev-middlebury-finetune@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"selective-igev-middlebury-train@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"selective-igev-sceneflow@1": {
+			"task": "stereo",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"waft-stereo-b@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"waft-stereo-s@1": {
+			"task": "stereo",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause"
+		},
+		"da3-giant-1.1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"da3-large-1.1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"da3metric-large@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"da3mono-large@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"da3nested-giant-large-1.1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"depth-anything-v2-b@1": {
+			"task": "depth",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"depth-anything-v2-l@1": {
+			"task": "depth",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"depth-anything-v2-s@1": {
+			"task": "depth",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"depth-pro@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "LicenseRef-Apple-Sample-Code",
+			"weights": "LicenseRef-research-only"
+		},
+		"marigold-depth-v1-1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-CreativeML-OpenRAIL-PlusPlus-M"
+		},
+		"metric3d-vit-large@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "BSD-2-Clause",
+			"weights": "BSD-2-Clause (assumed from code)"
+		},
+		"midas-dpt-beit-large-512@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"moge-2-vitl-normal@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT"
+		},
+		"moge-2-vits-normal@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT"
+		},
+		"moge-3-vitl@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT"
+		},
+		"unidepth-v2-vitl14@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "CC-BY-NC-4.0",
+			"weights": "CC-BY-NC-4.0 (assumed from code)"
+		},
+		"unik3d-vitl@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "CC-BY-NC-SA-4.0",
+			"weights": "CC-BY-NC-SA-4.0 (assumed from code)"
+		},
+		"zoedepth-nk@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"alexnet.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"convnextv2_base.fcmae_ft_in22k_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"deit_base_patch16_224.fb_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"densenet121.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"dinov2_vitl14_lc@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"efficientnet_b0.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"efficientnet_b4.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"efficientnet_v2_s.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"efficientvit_b2.r288_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"eva02_large_patch14_448.mim_m38m_ft_in22k_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "MIT"
+		},
+		"fastvit_sa24.apple_dist_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-Apple-Sample-Code"
+		},
+		"inception_v3.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"mobilenet_v2.tv2_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"mobilenet_v3_large.tv2_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"mobilenetv1_100.ra4_e3600_r224_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"mobilenetv4_conv_medium.e500_r256_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"regnety_160.tv2_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"resnet152.tv2_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"resnet18.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"resnet50.tv2_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"shufflenet_v2_x1_0.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"squeezenet1_1.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"swin_base_patch4_window7_224.ms_in22k_ft_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "MIT"
+		},
+		"vgg16.tv_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)"
+		},
+		"vit_base_patch16_224.augreg2_in21k_ft_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"vit_so400m_patch14_siglip_378.webli_ft_in1k@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"deeplabv3-r101-d8-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"deeplabv3plus-r101-d8-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-b-linear-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-l-linear-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-s-linear-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"eomt-l-dinov2-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "MIT"
+		},
+		"eomt-l-dinov3-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "MIT AND LicenseRef-DINOv3-License"
+		},
+		"fcn-r101-d8-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"hrnet-w48-fcn-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"mask2former-swinl-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"oneformer-swinl-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "MIT"
+		},
+		"pspnet-r101-d8-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sapiens-seg-0.3b-goliath@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "CC-BY-NC-4.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"sapiens-seg-1b-goliath@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "CC-BY-NC-4.0",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"segformer-b0-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+		},
+		"segformer-b5-ade20k@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+		},
+		"sam-vit-b@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sam-vit-h@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sam-vit-l@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sam2.1-hiera-base-plus@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sam2.1-hiera-large@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sam2.1-hiera-small@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sam2.1-hiera-tiny@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"sam3@1": {
+			"task": "promptable_segmentation",
+			"tier": "stable",
+			"code": "LicenseRef-SAM-License AND Apache-2.0",
+			"weights": "LicenseRef-SAM-License"
+		},
+		"detr-r101-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"detr-r50-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dfine-l-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dfine-m-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dfine-n-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dfine-s-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dfine-x-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"faster-rcnn-r50-fpn-3x-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-SA-3.0"
+		},
+		"mask-rcnn-r50-fpn-3x-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-SA-3.0"
+		},
+		"rtdetrv2-l-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"rtdetrv2-m-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"rtdetrv2-ms-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"rtdetrv2-s-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"rtdetrv2-x-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)"
+		},
+		"dinov2-vitb14@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-vitb14-reg@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-vitg14@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-vitg14-reg@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-vitl14@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-vitl14-reg@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-vits14@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov2-vits14-reg@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"dinov3-convnext-base@1": {
+			"task": "features",
+			"tier": "experimental",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"dinov3-convnext-large@1": {
+			"task": "features",
+			"tier": "experimental",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"dinov3-convnext-small@1": {
+			"task": "features",
+			"tier": "experimental",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"dinov3-convnext-tiny@1": {
+			"task": "features",
+			"tier": "experimental",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"dinov3-vitb16@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"dinov3-vith16plus@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"dinov3-vitl16@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"dinov3-vits16@1": {
+			"task": "features",
+			"tier": "stable",
+			"code": "LicenseRef-DINOv3-License",
+			"weights": "LicenseRef-DINOv3-License"
+		},
+		"mapanything-apache@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0"
+		},
+		"mvsanywhere@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial AND CC-BY-NC-SA-4.0",
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-SA-4.0 (assumed from code)"
+		},
+		"patchmatchnet@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)"
+		},
+		"vggt-1b@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "LicenseRef-VGGT",
+			"weights": "CC-BY-NC-4.0"
+		},
+		"vggt-omega-1b-512@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "LicenseRef-FAIR-Noncommercial-Research",
+			"weights": "LicenseRef-FAIR-Noncommercial-Research"
+		}
+	}
+}

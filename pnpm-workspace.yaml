@@ -1,0 +1,4 @@
+# Vite+ bundles its own Vite build; every package that asks for vite or vitest gets the Vite+ copies.
+overrides:
+  vite@*: npm:@voidzero-dev/vite-plus-core@1.5.0 # match the vite-plus version
+  vitest@*: 5.1.0 # match `vp toolchain vitest`
