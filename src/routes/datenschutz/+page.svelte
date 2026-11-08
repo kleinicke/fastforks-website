@@ -6,7 +6,7 @@
 	const doc = {
 		title: 'Datenschutzerklärung',
 		description:
-			'Was beim Besuch von fastforks.dev verarbeitet wird: keine Cookies, kein Tracking. Privacy policy of fastforks.dev.'
+			'Was beim Besuch von fastforks.dev verarbeitet wird: keine Cookies, selbst gehostetes Plausible Analytics. Privacy policy of fastforks.dev.'
 	};
 </script>
 
@@ -18,9 +18,10 @@
 
 	<h2 id="ueberblick">Datenschutz auf einen Blick</h2>
 	<p>
-		fastforks.dev setzt keine Cookies, verwendet keine Analyse- oder Tracking-Werkzeuge, lädt keine Inhalte
-		von Drittanbietern (Schriften, Skripte, Videos) nach und hat weder Nutzerkonten noch Kontaktformulare.
-		Beim Abruf der Seiten verarbeitet der Hostinganbieter technisch notwendige Verbindungsdaten.
+		fastforks.dev setzt keine Cookies, lädt keine Inhalte von Drittanbietern (Schriften, Skripte, Videos)
+		nach und hat weder Nutzerkonten noch Kontaktformulare. Für eine datensparsame Reichweitenmessung wird
+		eine selbst gehostete Plausible-Analytics-Instanz eingesetzt. Beim Abruf der Seiten verarbeitet der
+		Hostinganbieter außerdem technisch notwendige Verbindungsdaten.
 	</p>
 	<p>Diese Erklärung gilt für fastforks.dev und www.fastforks.dev.</p>
 
@@ -47,9 +48,34 @@
 		<a href={CF_PRIVACY}>Datenschutzhinweise von Cloudflare ↗</a>.
 	</p>
 
-	<h2 id="speicher">Keine Cookies, kein Tracking</h2>
+	<h2 id="plausible">Selbst gehostetes Plausible Analytics</h2>
 	<p>
-		Die Website setzt keine Cookies und keine Analyse-, Werbe- oder Tracking-Dienste ein. Damit die
+		Auf fastforks.dev wird zur statistischen Auswertung der Nutzung Plausible Analytics über die vom
+		Websitebetreiber betriebene Instanz analytics.re4vive.com eingesetzt. Zweck ist es zu verstehen, welche
+		Seiten und Modelle genutzt werden und wie Besucher auf die Website gelangen, damit Inhalte und Technik
+		verbessert werden können. Verarbeitet werden dabei insbesondere die aufgerufene Seite und der Hostname,
+		Referrer und Kampagnenparameter (soweit vorhanden), Browser, Betriebssystem und Gerätetyp sowie die
+		ungefähre geografische Region.
+	</p>
+	<p>
+		Plausible setzt keine Cookies und verwendet für die Reichweitenmessung weder Browser-Cache noch Local
+		Storage. IP-Adresse und User-Agent werden bei der Anfrage technisch übermittelt und kurzzeitig zur Bildung
+		einer täglich wechselnden Kennung verarbeitet; die Rohwerte werden nicht dauerhaft gespeichert. Durch den
+		täglichen Wechsel lässt sich die Kennung nicht über mehrere Tage hinweg zur Erstellung eines dauerhaften
+		Nutzerprofils verwenden.
+	</p>
+	<p>
+		Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Das berechtigte Interesse besteht in einer
+		datensparsamen, aggregierten Reichweitenmessung und der Verbesserung des Angebots. Die aggregierten
+		Statistikdaten werden nur so lange gespeichert, wie sie für diese Zwecke erforderlich sind, und
+		anschließend gelöscht. Eine Zusammenführung mit anderen Datenbeständen, Werbung oder ein Verkauf der Daten
+		findet nicht statt. Sie können der Verarbeitung nach Art. 21 DSGVO widersprechen; Browser-Erweiterungen,
+		die Analyse-Skripte blockieren, verhindern die Erfassung ebenfalls.
+	</p>
+
+	<h2 id="speicher">Keine Cookies, keine Werbung</h2>
+	<p>
+		Die Website setzt keine Cookies und keine Werbe- oder Marketing-Dienste ein. Damit die
 		Zurück-Navigation die Scrollposition wiederherstellt, legt die Seite während der Sitzung im
 		Session Storage Ihres Browsers technische Navigationsdaten (etwa Scrollpositionen) ab. Diese verlassen Ihr
 		Gerät nicht und werden beim Schließen des Tabs gelöscht. Diese Speicherung ist für die von Ihnen
@@ -79,9 +105,10 @@
 	<h2 id="english">English translation</h2>
 	<h3>Privacy at a glance</h3>
 	<p>
-		fastforks.dev sets no cookies, uses no analytics or tracking, loads no third-party content (fonts,
-		scripts, videos) and has no user accounts or contact forms. When you request a page, the hosting
-		provider processes the connection data needed to deliver it. This policy covers fastforks.dev and
+		fastforks.dev sets no cookies, loads no third-party content (fonts, scripts, videos) and has no user
+		accounts or contact forms. It uses a self-hosted Plausible Analytics instance for privacy-conscious
+		traffic measurement. When you request a page, the hosting provider also processes the connection data
+		needed to deliver it. This policy covers fastforks.dev and
 		www.fastforks.dev.
 	</p>
 	<h3>Controller</h3>
@@ -96,9 +123,23 @@
 		certification under the EU-US Data Privacy Framework (Art. 45 GDPR). Retention follows technical need and
 		Cloudflare's deletion periods. See <a href={CF_PRIVACY}>Cloudflare's privacy policy ↗</a>.
 	</p>
-	<h3>No cookies, no tracking</h3>
+	<h3>Self-hosted Plausible Analytics</h3>
 	<p>
-		The site sets no cookies and uses no analytics, advertising or tracking services. So that going back
+		fastforks.dev uses Plausible Analytics through the operator's own instance at analytics.re4vive.com. It
+		measures aggregated usage so the operator can understand which pages and models are used, how visitors
+		arrive and where the site can be improved. The processed information includes the requested page and
+		hostname, referrer and campaign parameters where present, browser, operating system, device type and
+		approximate geographic region. Plausible uses no cookies, browser cache or local storage. The IP address
+		and User-Agent are transmitted with the request and processed briefly to produce a daily rotating
+		identifier; the raw values are not retained, and the identifier cannot build a profile across days. The
+		legal basis is Art. 6(1)(f) GDPR (privacy-conscious, aggregated traffic measurement and service
+		improvement). Aggregated statistics are kept only while required for these purposes and then deleted.
+		The data is not combined with other datasets, used for advertising or sold. You may object under Art. 21
+		GDPR; browser extensions that block analytics scripts also prevent collection.
+	</p>
+	<h3>No cookies, no advertising</h3>
+	<p>
+		The site sets no cookies and uses no advertising or marketing services. So that going back
 		restores your scroll position, the page keeps navigation data such as scroll positions in your browser's session storage for the
 		session. They never leave your device and are cleared when the tab closes. This storage is strictly
 		necessary for a function you use (§ 25(2) no. 2 TDDDG) and needs no consent.

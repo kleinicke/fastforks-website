@@ -65,7 +65,7 @@
 			<a href={LINKS.author}>Made by Florian Nick ↗</a>
 			<a href={LINKS.impressum}>Impressum</a>
 			<a href={LINKS.datenschutz}>Datenschutz</a>
-			<span>No cookies, no tracking</span>
+			<span>No cookies</span>
 		</div>
 	</div>
 </footer>
