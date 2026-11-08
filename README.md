@@ -1,10 +1,10 @@
 # fastforks-website
 
-Project site for [fastforks](https://github.com/kleinicke/fastforks). Served at
-https://fastforks.f-kleinicke.de for now, later https://fastforks.dev.
+Project site for [fastforks](https://github.com/kleinicke/fastforks). Served by the Cloudflare Pages project
+`fastforks` at https://fastforks.pages.dev and https://fastforks.dev (once the custom domain is added).
 
 SvelteKit 3 + Svelte 5 + TypeScript on [Vite+](https://viteplus.dev) (Vite, Oxlint, Oxfmt, Vitest behind one `vp`
-CLI), prerendered to static HTML (adapter-static), deployed on Netlify.
+CLI), prerendered to static HTML (adapter-static), deployed on Cloudflare Pages.
 
 ## Commands
 
@@ -49,6 +49,8 @@ run `pnpm sync`, commit the JSON. The headline gains compare kernels with the au
 - SvelteKit 3: config lives in `vite.config.ts` (`sveltekit({...})`, no `svelte.config.js`); `$lib` is gone,
   use the subpath import `#lib/...` with the file extension for `.ts` files (`#lib/site.ts`).
 - `pnpm` needs the `packageManager` field here because a stray `~/package.json` declares yarn.
-- Moving to fastforks.dev: set `VITE_SITE_URL=https://fastforks.dev` in Netlify (canonical and og URLs), add
-  the domain, and redirect the old subdomain with a 301.
+- Deploy: `pnpm ship` builds with `VITE_SITE_URL=https://fastforks.dev` (canonical and og URLs; without it they
+  fall back to fastforks.f-kleinicke.de) and uploads `build/` with wrangler to the Pages project `fastforks`, branch
+  `main`. No Git integration: Cloudflare does not build from the repo. Needs `wrangler login` (yours, once; again
+  when the token expires). Headers, caching and `noindex` on `*.pages.dev` live in `static/_headers`.
 - No external fonts, analytics or cookies; Impressum and Datenschutz link to f-kleinicke.de.
