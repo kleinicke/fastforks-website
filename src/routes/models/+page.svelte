@@ -25,11 +25,12 @@
 		>;
 	type Key = 'rank' | 'id' | 'task' | 'acc' | `${Mode}_ms` | GainKey | MemKey;
 
-	// Default order on every device: the reference GPU's kernels time, so a model keeps its row when you switch.
+	// Default order, the same on every device: by task, then family, then name (natural, so resnet18 before resnet101).
+	const byName = new Intl.Collator('en', { numeric: true }).compare;
 	const RANK = new Map(
 		data.tasks
-			.flatMap((t) => t.models.map((m) => ({ key: `${t.id}/${m.id}`, ms: m.kernels_ms ?? Infinity })))
-			.sort((a, b) => a.ms - b.ms)
+			.flatMap((t) => t.models.map((m) => ({ key: `${t.id}/${m.id}`, task: TASK_ORDER.indexOf(t.id), family: m.family, id: m.id })))
+			.sort((a, b) => a.task - b.task || byName(a.family, b.family) || byName(a.id, b.id))
 			.map((m, i) => [m.key, i])
 	);
 
