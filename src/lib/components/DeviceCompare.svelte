@@ -98,11 +98,15 @@ let relative = $state(false);
 
 	/** Bars of one model on every device: portable and kernels, on one scale. */
 	function bars(cells: { slug: string; t: Timing | undefined }[]) {
-		// One outlier (usually the M1) would squash every other bar: cut it at 10 % past the second longest bar.
-		const all = cells
-			.flatMap((c) => [c.t?.portable_ms ?? 0, c.t?.kernels_ms ?? 0])
-			.sort((a, b) => b - a);
-		const max = all.length > 1 && all[0] > all[1] * 1.1 ? all[1] * 1.1 : all[0];
+		// The M1 (portable and kernels alike) would squash the GPU bars: the scale ends 10 % past the longest GPU bar,
+		// and every M1 bar beyond that is cut.
+		const times = (apple: boolean) =>
+			cells
+				.filter((c) => (DEVICES.find((x) => x.slug === c.slug)!.backend !== 'cuda') === apple)
+				.flatMap((c) => [c.t?.portable_ms ?? 0, c.t?.kernels_ms ?? 0]);
+		const gpu = Math.max(0, ...times(false));
+		const all = Math.max(gpu, ...times(true));
+		const max = gpu > 0 && all > gpu * 1.1 ? gpu * 1.1 : all;
 		const w = (v: number | null | undefined) => (v == null || !max ? 0 : Math.max(1, (Math.min(v, max) / max) * 100));
 		const cut = (v: number | null | undefined) => v != null && v > max;
 		const ms = (v: number | null) => (v === null ? null : `${fmtMs(v)} ms`);
