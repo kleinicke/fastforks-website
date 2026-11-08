@@ -25,7 +25,7 @@
 		const label = (v: number | null, why: string | null) =>
 			v === null ? (why && why !== 'not tested' ? why : 'not timed') : `${fmtMs(v)} ms`;
 		const cell = {
-			original: { ms: m.original_ms, text: label(m.original_ms, null) },
+			original: { ms: m.original_ms, text: label(m.original_ms, m.original_note) },
 			portable: { ms: m.portable_ms, text: label(m.portable_ms, m.portable_note) },
 			kernels: { ms: m.kernels_ms, text: label(m.kernels_ms, m.kernels_note) }
 		};
@@ -115,10 +115,10 @@
 				· a survey on {device.measured?.to}, fastest passing dtype per mode, no original timed here ·
 				<a href={device.page}>device page</a>
 			{/if}
-			· <a href="/models?task={selected}{device.reference ? '' : `&device=${device.slug}`}"
-				>all {TASK_META[selected].name.toLowerCase()} models →</a
-			>
 		</p>
+		<a class="button more" href="/models?task={selected}{device.reference ? '' : `&device=${device.slug}`}"
+			>All {all.length} {TASK_META[selected].name.toLowerCase()} models in the table →</a
+		>
 	</div>
 </div>
 
@@ -288,6 +288,9 @@
 	.kernels .bar,
 	i.kernels {
 		background: var(--bar-kernels);
+	}
+	.more {
+		margin-top: 1.2rem;
 	}
 	.foot {
 		margin: 0;

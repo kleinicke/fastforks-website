@@ -5,15 +5,14 @@ export const SITE_URL: string = import.meta.env.VITE_SITE_URL || 'https://fastfo
 
 export const LINKS = {
 	github: 'https://github.com/kleinicke/fastforks',
-	docs: 'https://github.com/kleinicke/fastforks/tree/main/docs',
-	usage: 'https://github.com/kleinicke/fastforks/blob/main/docs/usage.md',
-	benchmarks: 'https://github.com/kleinicke/fastforks/blob/main/docs/benchmarks.md',
-	overview: 'https://github.com/kleinicke/fastforks/blob/main/docs/overview.md',
-	otherGpus: 'https://github.com/kleinicke/fastforks/blob/main/docs/OTHER_GPUS.md',
+	usage: '/usage',
+	benchmarks: '/benchmarks',
+	export: '/export',
+	otherGpus: '/other-gpus',
 	pypi: 'https://pypi.org/project/fastforks/',
 	author: 'https://f-kleinicke.de/',
-	impressum: 'https://f-kleinicke.de/impressum.html',
-	datenschutz: 'https://f-kleinicke.de/datenschutz.html'
+	impressum: '/impressum',
+	datenschutz: '/datenschutz'
 };
 
 export type Model = (typeof data.tasks)[number]['models'][number];
@@ -70,7 +69,7 @@ export const licenceOf = (id: string): Licence | undefined =>
 	Object.entries(LICENCES).find(([k]) => bare(k) === id)?.[1] ??
 	Object.entries(LICENCES).find(([k]) => bare(k).split('.')[0] === id)?.[1];
 
-type Cell = { ms: number; dtype: string } | { status: string };
+type Cell = { ms: number; dtype: string; alloc: number | null; reserved: number | null } | { status: string };
 export type Device = {
 	slug: string;
 	name: string;
@@ -81,15 +80,21 @@ export type Device = {
 	reference: boolean;
 	page: string;
 	measured: { from: string; to: string; rows: number } | null;
+	/** `torch-peak` (allocated / reserved by PyTorch) or `process-footprint` (Apple: the whole process). */
+	memory_kind: string | null;
 	tasks: string[];
 	times: Record<string, { task: string; portable?: Cell; kernels?: Cell }> | null;
 };
 export const DEVICES = data.devices as Device[];
 export const REFERENCE = DEVICES.find((d) => d.reference)!;
 
+/** Peak MiB of one run; reserved is null where only a process footprint exists (Apple). */
+export type Mem = { alloc: number; reserved: number | null };
+
 /** One model's timings on one device. `*_note` says why a time is missing (unsupported, failed, OOM, not tested). */
 export type Timing = Pick<Model, 'id' | 'doc' | 'commercial'> & {
 	original_ms: number | null;
+	original_note: string | null;
 	portable_ms: number | null;
 	kernels_ms: number | null;
 	portable_note: string | null;
@@ -97,15 +102,27 @@ export type Timing = Pick<Model, 'id' | 'doc' | 'commercial'> & {
 	speedup: number | null;
 	speedup_vs: string | null;
 	peak_mib: number | null;
+	/** Peak MiB per backend: the docs' variant tables on the reference GPU, the fastest survey row elsewhere. */
+	mem: Record<'original' | 'portable' | 'kernels', Mem | null> | null;
+	/** Reference GPU only (null elsewhere): torch.compile, the TensorRT engine and the golden-check accuracy. */
+	compile: Extra;
+	tensorrt: Extra;
+	accuracy: string | null;
+	accuracy_metric: string | null;
 };
+/** A time, or why it failed; `part` = the part of the call a TensorRT engine runs, if not all; `prep_s` = one-time cost. */
+export type Extra = { ms: number | null; fails: string | null; part: string | null; prep_s: number | null } | null;
 
 const ms = (c: Cell | undefined) => (c && 'ms' in c ? c.ms : null);
-const note = (c: Cell | undefined) =>
-	!c ? 'not tested' : 'status' in c ? (c.status === 'oom' ? 'OOM' : c.status) : c.dtype;
+const mem = (c: Cell | undefined) =>
+	c && 'ms' in c && c.alloc !== null ? { alloc: c.alloc, reserved: c.reserved } : null;
+// "unsupported" = no kernels path on that backend: kernels were only written where they beat portable there.
+const STATUS: Record<string, string> = { oom: 'OOM', unsupported: 'portable only' };
+const note = (c: Cell | undefined) => (!c ? 'not tested' : 'status' in c ? (STATUS[c.status] ?? c.status) : c.dtype);
 
 /** The models of a task on a device: the reference device has the overview's numbers, a survey device its own. */
 export function timings(device: Device, task: Task): Timing[] {
-	if (!device.times) return task.models.map((m) => ({ ...m, portable_note: null, kernels_note: null }));
+	if (!device.times) return task.models.map((m) => ({ ...m, portable_note: null, kernels_note: null }) as Timing);
 	const times = device.times;
 	return task.models
 		.filter((m) => times[m.id])
@@ -118,13 +135,22 @@ export function timings(device: Device, task: Task): Timing[] {
 				doc: m.doc,
 				commercial: m.commercial,
 				original_ms: null,
+				original_note: null,
 				portable_ms: p,
 				kernels_ms: k,
 				portable_note: note(t.portable),
 				kernels_note: note(t.kernels),
 				speedup: p !== null && k !== null ? Math.round((p / k) * 10) / 10 : null,
 				speedup_vs: p !== null && k !== null ? 'portable' : null,
-				peak_mib: null
+				peak_mib: null,
+				mem: { original: null, portable: mem(t.portable), kernels: mem(t.kernels) },
+				compile: null,
+				tensorrt: null,
+				accuracy: null,
+				accuracy_metric: null
 			};
 		});
 }
+
+/** A device's name without the vendor prefix, for narrow column headers. */
+export const shortName = (d: Device) => d.name.replace(/^NVIDIA /, '');

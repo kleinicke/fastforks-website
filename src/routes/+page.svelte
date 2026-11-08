@@ -192,7 +192,7 @@ fastforks download depth-anything-v2-s --kernels
 fastforks doctor</code
 				></pre>
 			<div class="buttons">
-				<a class="button primary" href={LINKS.usage}>Read the usage guide ↗</a>
+				<a class="button primary" href={LINKS.usage}>Read the usage guide</a>
 				<a class="button" href={LINKS.pypi}>PyPI ↗</a>
 			</div>
 		</div>

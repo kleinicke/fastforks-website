@@ -5,6 +5,14 @@
 
 	let { children } = $props();
 	const canonical = $derived(SITE_URL + (page.url.pathname === '/' ? '/' : page.url.pathname));
+	// The header marks the part a page belongs to: the model table, or the docs (guides, tasks, devices, families).
+	const section = $derived(
+		page.url.pathname === '/models'
+			? 'models'
+			: ['/', '/impressum', '/datenschutz'].includes(page.url.pathname)
+				? null
+				: 'docs'
+	);
 </script>
 
 <svelte:head>
@@ -27,10 +35,8 @@
 			<span>fastforks</span>
 		</a>
 		<nav aria-label="Main">
-			<a href="/models" aria-current={page.url.pathname === '/models' ? 'page' : undefined}>Models</a>
-			<a class="hide-sm" href="/#speed">Speed</a>
-			<a href="/#install">Install</a>
-			<a class="hide-sm" href={LINKS.usage}>Docs ↗</a>
+			<a href="/models" aria-current={section === 'models' ? 'page' : undefined}>Models</a>
+			<a href={LINKS.usage} aria-current={section === 'docs' ? 'page' : undefined}>Docs</a>
 			<a href={LINKS.github}>GitHub ↗</a>
 		</nav>
 	</div>
@@ -52,13 +58,14 @@
 		<div class="links">
 			<a href={LINKS.github}>GitHub ↗</a>
 			<a href={LINKS.pypi}>PyPI ↗</a>
-			<a href={LINKS.usage}>Usage guide ↗</a>
-			<a href={LINKS.benchmarks}>Benchmark method ↗</a>
+			<a href={LINKS.usage}>Usage guide</a>
+			<a href={LINKS.benchmarks}>Benchmark method</a>
 		</div>
 		<div class="links">
 			<a href={LINKS.author}>Made by Florian Nick ↗</a>
 			<a href={LINKS.impressum}>Impressum</a>
 			<a href={LINKS.datenschutz}>Datenschutz</a>
+			<span>No cookies, no tracking</span>
 		</div>
 	</div>
 </footer>
@@ -153,7 +160,8 @@
 		align-content: start;
 		gap: 0.5rem;
 	}
-	.links a {
+	.links a,
+	.links span {
 		text-decoration: none;
 		color: var(--muted);
 	}
@@ -162,9 +170,6 @@
 		text-decoration: underline;
 	}
 	@media (max-width: 680px) {
-		.hide-sm {
-			display: none;
-		}
 		nav {
 			font-size: 0.8rem;
 			gap: 0.75rem;
