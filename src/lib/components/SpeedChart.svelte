@@ -12,12 +12,17 @@
 	const task = $derived(data.tasks.find((t) => t.id === selected)!);
 	const all = $derived(timings(device, task));
 	const best = (m: Timing) => m.kernels_ms ?? m.portable_ms;
-	const rows = $derived(
-		all
-			.filter((m) => best(m) !== null)
-			.sort((a, b) => (best(a) ?? 0) - (best(b) ?? 0))
-			.slice(0, LIMIT)
-	);
+	// Checkpoints of one network time the same: show the network once, with the number of further checkpoints.
+	const rows = $derived.by(() => {
+		const seen = new Map<string, { m: Timing; more: number }>();
+		for (const m of all.filter((m) => best(m) !== null).sort((a, b) => (best(a) ?? 0) - (best(b) ?? 0))) {
+			const key = `${m.doc}|${m.original_ms}|${m.portable_ms}|${m.kernels_ms}`;
+			const hit = seen.get(key);
+			if (hit) hit.more++;
+			else seen.set(key, { m, more: 0 });
+		}
+		return [...seen.values()].slice(0, LIMIT);
+	});
 	const kinds = $derived(device.reference ? (['original', 'portable', 'kernels'] as const) : (['portable', 'kernels'] as const));
 	const bars = (m: Timing) => {
 		const max = Math.max(m.original_ms ?? 0, m.portable_ms ?? 0, m.kernels_ms ?? 0);
@@ -84,7 +89,7 @@
 			</span>
 		</div>
 		<ol class="rows">
-			{#each rows as m (m.id)}
+			{#each rows as { m, more } (m.id)}
 				<li>
 					<div class="name">
 						<a href={m.doc}><code>{m.id}</code></a>
@@ -93,6 +98,7 @@
 								>{m.speedup.toFixed(1)}× <small>vs {m.speedup_vs}</small></span
 							>
 						{/if}
+						{#if more}<small class="dt">+{more} checkpoint{more > 1 ? 's' : ''}, same time</small>{/if}
 						{#if dtypes(m)}<small class="dt">{dtypes(m)}</small>{/if}
 					</div>
 					<dl class="bars">
@@ -110,7 +116,7 @@
 		<p class="foot">
 			{device.name}{device.details ? ` (${device.details})` : ''} · median of warm runs
 			{#if device.reference}
-				· the regression floor of every release
+				· every release is checked against these times
 			{:else}
 				· a survey on {device.measured?.to}, fastest passing dtype per mode, no original timed here ·
 				<a href={device.page}>device page</a>

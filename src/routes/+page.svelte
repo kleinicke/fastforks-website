@@ -4,8 +4,8 @@
 	import { data, LINKS, REFERENCE, TASK_META, TASK_ORDER } from '#lib/site.ts';
 
 	const t = data.totals;
-	const title = 'fastforks · published vision models, same output, faster';
-	const description = `${t.models} published vision models (stereo, depth, SAM, DINOv3, detection and more) behind one Python API. A plain PyTorch port checked against the authors' code, plus CUDA and Metal kernels: up to ${t.vs_original.max}× faster than the original.`;
+	const title = 'fastforks: faster ports of published vision models';
+	const description = `${t.models} published vision models (stereo, depth, SAM, DINOv3, detection and more) behind one Python API. A plain PyTorch port checked against the authors' code, plus CUDA and Metal kernels: ${t.vs_original.median}× faster than the original in the median, measured on an ${data.source.reference_gpu}.`;
 
 	const examples = (id: string) =>
 		[...data.tasks.find((x) => x.id === id)!.models]
@@ -25,10 +25,10 @@
 	<div class="wrap grid">
 		<div class="copy">
 			<p class="eyebrow">Open source · Python · PyTorch</p>
-			<h1>Published vision models.<br /><span>Same output, faster.</span></h1>
+			<h1>Faster ports of {t.models} published vision models</h1>
 			<p class="intro">
 				Load a stereo, depth, segmentation, detection or feature model by its id and get the original
-				network's output, faster. Each model is ported to plain PyTorch and checked against the authors'
+				network's output, faster, within fp16 rounding. Each model is ported to plain PyTorch and checked against the authors'
 				code, then sped up with our own CUDA and Metal kernels.
 			</p>
 			<div class="actions">
@@ -67,11 +67,11 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 
 <section class="section" id="how" aria-labelledby="how-title">
 	<div class="wrap">
-		<p class="eyebrow">How it works</p>
-		<h2 id="how-title">One network, two backends.</h2>
+		<h2 id="how-title">Three modes</h2>
 		<p class="lede">
-			Nothing is retrained or approximated. fastforks runs the authors' checkpoint, and every speed and
-			accuracy number is measured against their original code.
+			Nothing is retrained: fastforks runs the authors' checkpoint. Portable and kernels compute in fp16 by
+			default, so the output is close to the original but not bit-identical; each model page lists how far it
+			is from the authors' code.
 		</p>
 		<ol class="modes">
 			<li>
@@ -99,8 +99,7 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 
 <section class="section" id="speed" aria-labelledby="speed-title">
 	<div class="wrap">
-		<p class="eyebrow">Speed</p>
-		<h2 id="speed-title">Measured, not promised.</h2>
+		<h2 id="speed-title">Speed</h2>
 		<p class="lede">
 			Every row is a median of warm runs, with the accuracy checked on public benchmarks. The {REFERENCE.name} is
 			the reference and times all three modes; the other devices are surveys of portable against kernels, the
@@ -112,8 +111,7 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 
 <section class="section" id="tasks" aria-labelledby="tasks-title">
 	<div class="wrap">
-		<p class="eyebrow">Tasks</p>
-		<h2 id="tasks-title">Eight tasks, one calling convention.</h2>
+		<h2 id="tasks-title">Tasks</h2>
 		<p class="lede">
 			Load by id, call on an image path, array or tensor, get a typed result. Licences, accuracy and memory are
 			on every model page.
@@ -139,8 +137,7 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 <section class="section" id="licences" aria-labelledby="licences-title">
 	<div class="wrap split">
 		<div>
-			<p class="eyebrow">Licences</p>
-			<h2 id="licences-title">Know what you can ship.</h2>
+			<h2 id="licences-title">Licences</h2>
 			<p class="lede">
 				Many vision models are non-commercial. Each fastforks model lists its code licence, weights licence and
 				training data, and is flagged commercial <em>yes</em> only if both licences allow it. Non-commercial
@@ -167,10 +164,9 @@ print(fastforks.describe_models(stereo.list_models(<span class="s">"igev*"</span
 <section class="section" id="install" aria-labelledby="install-title">
 	<div class="wrap split">
 		<div>
-			<p class="eyebrow">Install</p>
-			<h2 id="install-title">Uses the PyTorch you have.</h2>
+			<h2 id="install-title">Install</h2>
 			<p class="lede">
-				Install PyTorch for your platform first; fastforks uses that build, CUDA or CPU-only. Weights and kernels
+				fastforks uses the PyTorch you already have. Install PyTorch for your platform first; fastforks uses that build, CUDA or CPU-only. Weights and kernels
 				download on first use and are checked against a recorded SHA-256.
 			</p>
 			<ul class="reqs">
@@ -211,22 +207,10 @@ fastforks doctor</code
 	}
 	h1 {
 		margin: 1rem 0 1.4rem;
-		font-size: clamp(2.6rem, 6.2vw, 5.1rem);
+		font-size: clamp(2.2rem, 4.6vw, 3.6rem);
 		font-weight: 700;
-		letter-spacing: -0.045em;
-		line-height: 0.98;
-	}
-	h1 span {
-		color: var(--muted);
-	}
-	h1 span::after {
-		content: '';
-		display: inline-block;
-		width: 0.42em;
-		height: 0.42em;
-		margin-left: 0.12em;
-		background: var(--accent);
-		vertical-align: 0.04em;
+		letter-spacing: -0.03em;
+		line-height: 1.05;
 	}
 	.intro {
 		max-width: 600px;
