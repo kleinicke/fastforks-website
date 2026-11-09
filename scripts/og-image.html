@@ -1,0 +1,162 @@
+<!doctype html>
+<!-- Source of static/og.png (1200x630 link preview). Re-render after editing:
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --hide-scrollbars \
+       --window-size=1200,630 --screenshot=static/og.png scripts/og-image.html
+     Times: RTX 5060 Ti 16 GB, original code against fastforks kernels (docs/overview.md). -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<style>
+			* {
+				box-sizing: border-box;
+				margin: 0;
+			}
+			body {
+				width: 1200px;
+				height: 630px;
+				background: #f4f3ee;
+				color: #0f1311;
+				font-family: Inter, -apple-system, 'Helvetica Neue', sans-serif;
+				padding: 64px 72px;
+				display: grid;
+				grid-template-columns: 1fr 470px;
+				gap: 56px;
+			}
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 14px;
+				font:
+					700 34px/1 -apple-system,
+					sans-serif;
+			}
+			.logo svg {
+				width: 48px;
+				height: 48px;
+			}
+			.logo rect {
+				fill: #0f1311;
+			}
+			.logo path {
+				stroke: #d9f45f;
+				stroke-width: 2.6;
+				fill: none;
+				stroke-linecap: round;
+			}
+			h1 {
+				margin-top: 64px;
+				font-size: 58px;
+				line-height: 1.05;
+				letter-spacing: -0.03em;
+			}
+			p {
+				margin-top: 26px;
+				font-size: 25px;
+				line-height: 1.4;
+				color: #5a615c;
+			}
+			.url {
+				position: absolute;
+				left: 72px;
+				bottom: 56px;
+				font:
+					600 22px/1 ui-monospace,
+					Menlo,
+					monospace;
+			}
+			.chart {
+				align-self: center;
+				background: #0f1311;
+				color: #e8ebe4;
+				border-radius: 14px;
+				padding: 30px 32px;
+			}
+			.head {
+				font:
+					500 14px/1 ui-monospace,
+					Menlo,
+					monospace;
+				color: #9aa29b;
+				letter-spacing: 0.06em;
+			}
+			.row {
+				margin-top: 22px;
+			}
+			.name {
+				display: flex;
+				justify-content: space-between;
+				font:
+					600 19px/1 ui-monospace,
+					Menlo,
+					monospace;
+			}
+			.name em {
+				font-style: normal;
+				color: #d9f45f;
+			}
+			.bar {
+				height: 9px;
+				margin-top: 9px;
+				border-radius: 2px;
+				background: #3d4540;
+			}
+			.bar.k {
+				margin-top: 4px;
+				background: #d9f45f;
+			}
+			.foot {
+				margin-top: 24px;
+				font:
+					500 13px/1.4 ui-monospace,
+					Menlo,
+					monospace;
+				color: #9aa29b;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div class="logo">
+				<svg viewBox="0 0 32 32">
+					<rect width="32" height="32" rx="7" />
+					<path d="M10 7v8a6 6 0 0 0 12 0V7M16 21v5M16 7v8" /></svg
+				>fastforks
+			</div>
+			<h1>Faster ports of published vision models</h1>
+			<p>
+				Stereo, depth, SAM, DINOv3, detection and more. The authors' checkpoints, plain PyTorch or CUDA and Metal
+				kernels.
+			</p>
+			<div class="url">fastforks.dev · pip install fastforks</div>
+		</div>
+		<div class="chart">
+			<div class="head">ORIGINAL CODE → FASTFORKS KERNELS</div>
+			<div class="row">
+				<div class="name">Depth Anything V2-S<em>9.1×</em></div>
+				<div class="bar" style="width: 100%"></div>
+				<div class="bar k" style="width: 11%"></div>
+			</div>
+			<div class="row">
+				<div class="name">HITNet ETH3D<em>7.9×</em></div>
+				<div class="bar" style="width: 100%"></div>
+				<div class="bar k" style="width: 12.7%"></div>
+			</div>
+			<div class="row">
+				<div class="name">DINOv3 ViT-L/16<em>5.4×</em></div>
+				<div class="bar" style="width: 100%"></div>
+				<div class="bar k" style="width: 18.6%"></div>
+			</div>
+			<div class="row">
+				<div class="name">RAFT-Stereo<em>3.8×</em></div>
+				<div class="bar" style="width: 100%"></div>
+				<div class="bar k" style="width: 26.3%"></div>
+			</div>
+			<div class="row">
+				<div class="name">SAM ViT-B<em>2.7×</em></div>
+				<div class="bar" style="width: 100%"></div>
+				<div class="bar k" style="width: 37.7%"></div>
+			</div>
+			<div class="foot">RTX 5060 Ti 16 GB · median of warm runs</div>
+		</div>
+	</body>
+</html>

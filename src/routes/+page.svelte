@@ -1,11 +1,28 @@
 <script lang="ts">
 	import CopyCommand from '#lib/components/CopyCommand.svelte';
 	import SpeedChart from '#lib/components/SpeedChart.svelte';
-	import { data, LINKS, REFERENCE, TASK_META, TASK_ORDER } from '#lib/site.ts';
+	import { data, LINKS, REFERENCE, SITE_URL, TASK_META, TASK_ORDER } from '#lib/site.ts';
 
 	const t = data.totals;
 	const title = 'fastforks: faster ports of published vision models';
 	const description = `${t.models} published vision models (stereo, depth, SAM, DINOv3, detection and more) behind one Python API. A plain PyTorch port checked against the authors' code, plus CUDA and Metal kernels: ${t.vs_original.median}× faster than the original in the median, measured on an ${data.source.reference_gpu}.`;
+
+	// schema.org metadata for search engines; `<` escaped so the JSON cannot close the script tag.
+	const jsonLd = JSON.stringify({
+		'@context': 'https://schema.org',
+		'@type': 'SoftwareSourceCode',
+		name: 'fastforks',
+		description,
+		url: SITE_URL,
+		codeRepository: LINKS.github,
+		programmingLanguage: 'Python',
+		runtimePlatform: 'PyTorch',
+		license: `${LINKS.github}/blob/main/LICENSE`,
+		keywords: 'stereo matching, depth estimation, segment anything, DINOv3, object detection, CUDA kernels, Metal, PyTorch inference',
+		author: { '@type': 'Person', name: 'Florian Nick', url: LINKS.author }
+	}).replaceAll('<', '\\u003c');
+	// The closing tag is split so the Svelte parser does not end this script block at it.
+	const jsonLdTag = `<script type="application/ld+json">${jsonLd}</scr` + 'ipt>';
 
 	const examples = (id: string) =>
 		[...data.tasks.find((x) => x.id === id)!.models]
@@ -19,6 +36,8 @@
 	<meta name="description" content={description} />
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
+	<!-- eslint-disable-next-line svelte/no-at-html-tags -- JSON built from our own data -->
+	{@html jsonLdTag}
 </svelte:head>
 
 <section class="hero">

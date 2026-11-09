@@ -20,6 +20,11 @@
 	<meta property="og:url" content={canonical} />
 	<meta property="og:type" content="website" />
 	<meta property="og:site_name" content="fastforks" />
+	<meta property="og:image" content="{SITE_URL}/og.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="fastforks: inference time of five models, original code against fastforks kernels" />
+	<meta name="twitter:card" content="summary_large_image" />
 </svelte:head>
 
 <a class="skip" href="#main">Skip to content</a>

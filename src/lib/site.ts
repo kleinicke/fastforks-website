@@ -1,7 +1,7 @@
 import data from './data/models.json';
 
-/** Canonical origin. Set VITE_SITE_URL=https://fastforks.dev at build time once the domain moves. */
-export const SITE_URL: string = import.meta.env.VITE_SITE_URL || 'https://fastforks.f-kleinicke.de';
+/** Canonical origin; VITE_SITE_URL overrides it (e.g. for a staging copy). */
+export const SITE_URL: string = import.meta.env.VITE_SITE_URL || 'https://fastforks.dev';
 
 export const LINKS = {
 	github: 'https://github.com/kleinicke/fastforks',
