@@ -1,11 +1,11 @@
 <script lang="ts">
 	// Relative pose from a matcher's output: fastforks' GPU RANSAC against the usual CPU solvers, same matches, same machine.
-	// Numbers: experiment 017 results/2026-11-12_gpu_ransac.md, follow-up 2 (MegaDepth-1500 x5, RoMa v2 matches).
+	// Numbers: fastforks docs/data/relative_pose_eval.jsonl (protocol in docs/data/README.md), commit f816588a.
 	const ROWS = [
-		{ solver: 'fastforks estimate_pose, kernels', where: 'GPU, batches of 500 pairs', auc: [68.63, 80.73, 88.86], pps: 19120, ours: true },
-		{ solver: 'fastforks estimate_pose, portable', where: 'GPU, batches of 500 pairs', auc: [68.49, 80.61, 88.71], pps: 358, ours: false },
-		{ solver: 'PoseLib 2.0.5', where: 'CPU, 16 processes', auc: [68.85, 80.89, 88.97], pps: 204, ours: false },
-		{ solver: 'OpenCV RANSAC', where: 'CPU, 16 processes', auc: [62.87, 76.9, 86.42], pps: 306, ours: false }
+		{ solver: 'fastforks estimate_pose, kernels', where: 'GPU, batches of 500 pairs', auc: [68.63, 80.73, 88.86], pps: 18235, ours: true },
+		{ solver: 'fastforks estimate_pose, portable', where: 'GPU, batches of 500 pairs', auc: [68.49, 80.61, 88.71], pps: 359, ours: false },
+		{ solver: 'PoseLib 2.0.5', where: 'CPU, 16 processes', auc: [68.85, 80.89, 88.97], pps: 222, ours: false },
+		{ solver: 'OpenCV RANSAC', where: 'CPU, 16 processes', auc: [62.87, 76.9, 86.42], pps: 327, ours: false }
 	];
 </script>
 
@@ -41,7 +41,7 @@
 	MegaDepth-1500, RoMa v2 matches (5000 per pair), 5 samplings, the same matches for every solver, on one machine: RTX
 	5060 Ti and a Ryzen 7 5800X (16 threads). Pairs per second is wall-clock throughput over all 7500 poses: the CPU solvers
 	run one pair per call in 16 single-threaded processes, the GPU solver takes 500 pairs per call. One pair alone takes
-	about 1.7 ms with the kernels, 41 ms with PoseLib and 24 ms with OpenCV. The accuracy table above stays on OpenCV
+	about 1.7 ms with the kernels, 42 ms with PoseLib and 24 ms with OpenCV. The accuracy table above stays on OpenCV
 	RANSAC, as in the papers, so it is comparable with published numbers; this table is the only place the GPU solver is
 	used.
 </p>

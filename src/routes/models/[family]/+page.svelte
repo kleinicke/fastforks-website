@@ -10,7 +10,7 @@
 	import CardExample from '#lib/components/card/CardExample.svelte';
 	import CardPose from '#lib/components/card/CardPose.svelte';
 	import { REFERENCE, TASK_META } from '#lib/site.ts';
-	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms } from '#lib/cards.ts';
+	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms, newestVersion } from '#lib/cards.ts';
 
 	let { data } = $props();
 	const card = $derived(data.card);
@@ -58,6 +58,10 @@
 	});
 	const orig = $derived(std ? fasterOriginal(std) : null);
 	const validated = $derived(card.parity.validated[variant.id] ?? null);
+	// The release the shown accuracy results come from: the newest of the variant's rows.
+	const evalVersion = $derived(
+		newestVersion(variant.quality.flatMap((d) => Object.values(d.modes).map((r) => r!.version)))
+	);
 	const quality = $derived.by(() => {
 		const d = variant.quality.find((d) => d.modes.original32 && (d.modes.kernels ?? d.modes.portable));
 		if (!d) return null;
@@ -170,6 +174,12 @@
 			<p class="single">Checkpoint <code>{variant.id}</code></p>
 		{/if}
 		{#if variant.setting}<p class="setting">{variant.setting}</p>{/if}
+		<p class="versions">
+			<span class="ver" title="The fastforks release that added this checkpoint">Added in {variant.added_in}</span>
+			{#if evalVersion}<span class="ver" title="The fastforks release the accuracy results below come from"
+					>Evaluated with {evalVersion}</span
+				>{/if}
+		</p>
 
 		<div class="glance">
 			<div class="tile">
@@ -475,6 +485,19 @@ pose.R, pose.t, pose.inliers  <span class="c"># rotation, unit translation, inli
 		letter-spacing: 0.03em;
 	}
 	.banner,
+	.versions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin: 0.2rem 0 0.6rem;
+	}
+	.ver {
+		border: 1px solid var(--line);
+		border-radius: 999px;
+		padding: 0.05rem 0.55rem;
+		color: var(--muted);
+		font-size: 0.78rem;
+	}
 	.soon-note {
 		max-width: 920px;
 		padding: 0.6rem 0.85rem;

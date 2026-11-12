@@ -91,6 +91,8 @@ export type EvalRow = {
 	date: string;
 	how: string | null;
 	note: string | null;
+	/** The fastforks release this result first shipped in (results measured since the last release: the coming one). */
+	version: string;
 };
 export type Dataset = {
 	id: string;
@@ -129,6 +131,8 @@ export type Variant = {
 	id: string;
 	/** The release whose package has this variant (the latest tag), or null: upcoming, only in the repository. */
 	released: string | null;
+	/** The fastforks release that added this variant (not released yet: the coming one). */
+	added_in: string;
 	ref: string;
 	name: string;
 	setting: string;
@@ -208,7 +212,7 @@ export type CardIndex = {
 		family: string;
 		task: string;
 		name: string;
-		variants: { id: string; name: string; released: string | null }[];
+		variants: { id: string; name: string; released: string | null; added_in: string }[];
 	}[];
 };
 
@@ -304,4 +308,15 @@ export function fasterOriginal(s: SpeedInput): { key: Mode; row: SpeedRow } | nu
 		if (row && (!best || row.ms < best.row.ms)) best = { key, row };
 	}
 	return best;
+}
+
+/** The newest of some versions ("0.1.1" > "0.1.0"), or null for none. */
+export function newestVersion(versions: string[]): string | null {
+	const key = (v: string) => v.split('.').map(Number);
+	return versions.reduce<string | null>((best, v) => {
+		if (best === null) return v;
+		const [a, b] = [key(v), key(best)];
+		const i = a.findIndex((x, j) => x !== b[j]);
+		return i >= 0 && a[i] > b[i] ? v : best;
+	}, null);
 }
