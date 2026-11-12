@@ -85,7 +85,9 @@ export const licenceOf = (id: string): Licence | undefined =>
 	Object.entries(LICENCES).find(([k]) => bare(k) === id)?.[1] ??
 	Object.entries(LICENCES).find(([k]) => bare(k).split('.')[0] === id)?.[1];
 
-type Cell = { ms: number; dtype: string; alloc: number | null; reserved: number | null } | { status: string };
+type Cell =
+	| { ms: number; dtype: string; alloc: number | null; reserved: number | null }
+	| { status: string; why?: string };
 export type Device = {
 	slug: string;
 	name: string;
@@ -99,7 +101,9 @@ export type Device = {
 	/** `torch-peak` (allocated / reserved by PyTorch) or `process-footprint` (Apple: the whole process). */
 	memory_kind: string | null;
 	tasks: string[];
-	times: Record<string, { task: string; portable?: Cell; kernels?: Cell }> | null;
+	/** The same chip's CPU cores, where they were surveyed too (Apple silicon): their portable time is `times[id].cpu`. */
+	cpu: { name: string; details: string } | null;
+	times: Record<string, { task: string; original?: Cell; portable?: Cell; kernels?: Cell; cpu?: Cell }> | null;
 };
 export const DEVICES = data.devices as Device[];
 export const REFERENCE = DEVICES.find((d) => d.reference)!;
@@ -111,7 +115,12 @@ export type Mem = { alloc: number; reserved: number | null };
 export type Timing = Pick<Model, 'id' | 'doc' | 'commercial'> & {
 	original_ms: number | null;
 	original_note: string | null;
+	/** Why the authors' code did not run here, e.g. a CUDA-only extension. */
+	original_why: string | null;
 	portable_ms: number | null;
+	/** Portable on the same chip's CPU cores (only where `device.cpu`); `cpu_note` its dtype or why it is missing. */
+	cpu_ms: number | null;
+	cpu_note: string | null;
 	kernels_ms: number | null;
 	portable_note: string | null;
 	kernels_note: string | null;
@@ -135,11 +144,18 @@ const mem = (c: Cell | undefined) =>
 // "unsupported" = no kernels path on that backend: kernels were only written where they beat portable there.
 const STATUS: Record<string, string> = { oom: 'OOM', unsupported: 'portable only' };
 const note = (c: Cell | undefined) => (!c ? 'not tested' : 'status' in c ? (STATUS[c.status] ?? c.status) : c.dtype);
+// For the authors' code "unsupported" means it cannot run on this device at all (CUDA-only extensions, MPS limits).
+const originalNote = (c: Cell) => ('status' in c && c.status === 'unsupported' ? 'incompatible' : note(c));
 
 /** The models of a task on a device: the reference device has the overview's numbers, a survey device its own. */
 export function timings(device: Device, task: Task): Timing[] {
-	if (!device.times) return task.models.map((m) => ({ ...m, portable_note: null, kernels_note: null }) as Timing);
+	if (!device.times)
+		return task.models.map(
+			(m) =>
+				({ ...m, original_why: null, cpu_ms: null, cpu_note: null, portable_note: null, kernels_note: null }) as Timing
+		);
 	const times = device.times;
+	const ranOriginal = Object.values(times).some((t) => t.original);
 	return task.models
 		.filter((m) => times[m.id])
 		.map((m) => {
@@ -150,16 +166,20 @@ export function timings(device: Device, task: Task): Timing[] {
 				id: m.id,
 				doc: m.doc,
 				commercial: m.commercial,
-				original_ms: null,
-				original_note: null,
+				// The authors' code where it was run on this device (Apple silicon); 'not run' where it was run for other models.
+				original_ms: ms(t.original),
+				original_note: t.original ? originalNote(t.original) : ranOriginal ? 'not run' : null,
+				original_why: t.original && 'why' in t.original ? (t.original.why ?? null) : null,
 				portable_ms: p,
+				cpu_ms: ms(t.cpu),
+				cpu_note: device.cpu ? (t.cpu ? note(t.cpu) : 'not run') : null,
 				kernels_ms: k,
 				portable_note: note(t.portable),
 				kernels_note: note(t.kernels),
 				speedup: p !== null && k !== null ? Math.round((p / k) * 10) / 10 : null,
 				speedup_vs: p !== null && k !== null ? 'portable' : null,
 				peak_mib: null,
-				mem: { original: null, portable: mem(t.portable), kernels: mem(t.kernels) },
+				mem: { original: mem(t.original), portable: mem(t.portable), kernels: mem(t.kernels) },
 				compile: null,
 				tensorrt: null,
 				accuracy: null,

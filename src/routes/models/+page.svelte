@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import DeviceCompare from '#lib/components/DeviceCompare.svelte';
+	import ModelCompare from '#lib/components/ModelCompare.svelte';
 	import { UPCOMING } from '#lib/cards.ts';
+	import EmptyRows from '#lib/components/EmptyRows.svelte';
 	import {
 		data,
 		DEVICES,
@@ -16,15 +18,16 @@
 		type Timing
 	} from '#lib/site.ts';
 
-	type Mode = 'original' | 'portable' | 'compile' | 'tensorrt' | 'kernels';
+	type Mode = 'original' | 'portable' | 'compile' | 'tensorrt' | 'kernels' | 'cpu';
 	type MemMode = 'original' | 'portable' | 'kernels';
 	type MemKey = `mem_${MemMode}`;
-	type GainKey = 'gain_original' | 'gain_portable';
-	type Row = Timing & { task: string; code: string; weights: string; rank: number; acc: number | null } & Record<
+	type Gain = 'original' | 'portable' | 'cpu';
+	type GainKey = `gain_${Gain}`;
+	type Row = Timing & { task: string; code: string; weights: string; rank: number } & Record<
 			MemKey | GainKey | 'compile_ms' | 'tensorrt_ms',
 			number | null
 		>;
-	type Key = 'rank' | 'id' | 'task' | 'acc' | `${Mode}_ms` | GainKey | MemKey;
+	type Key = 'rank' | 'id' | 'task' | `${Mode}_ms` | GainKey | MemKey;
 
 	// Default order, the same on every device: by task, then family, then name (natural, so resnet18 before resnet101).
 	const byName = new Intl.Collator('en', { numeric: true }).compare;
@@ -49,15 +52,27 @@
 					code: lic?.code ?? '–',
 					weights: lic?.weights ?? '–',
 					// Kernels against the authors' code (only where it was timed) and against portable, the same weights in fastforks.
-					gain_original: m.speedup_vs === 'original' ? m.speedup : null,
+					// A survey device has no kernels for most models (Apple: Metal kernels only where they won), so there
+					// it is fastforks' fastest mode, kernels or portable, against the authors' code.
+					gain_original: device.reference
+						? m.speedup_vs === 'original'
+							? m.speedup
+							: null
+						: m.original_ms !== null && (m.kernels_ms ?? m.portable_ms) !== null
+							? Math.round((m.original_ms / Math.min(m.kernels_ms ?? Infinity, m.portable_ms ?? Infinity)) * 10) / 10
+							: null,
+					// The same chip's CPU (portable, fp32) against fastforks' fastest GPU mode.
+					gain_cpu:
+						m.cpu_ms !== null && (m.kernels_ms ?? m.portable_ms) !== null
+							? Math.round((m.cpu_ms / Math.min(m.kernels_ms ?? Infinity, m.portable_ms ?? Infinity)) * 10) / 10
+							: null,
 					gain_portable:
 						m.portable_ms !== null && m.kernels_ms !== null ? Math.round((m.portable_ms / m.kernels_ms) * 10) / 10 : null,
 					mem_original: m.mem?.original?.alloc ?? null,
 					mem_portable: m.mem?.portable?.alloc ?? null,
 					mem_kernels: m.mem?.kernels?.alloc ?? null,
 					compile_ms: m.compile?.ms ?? null,
-					tensorrt_ms: m.tensorrt?.ms ?? null,
-					acc: Number.isFinite(Number.parseFloat(m.accuracy ?? '')) ? Number.parseFloat(m.accuracy!) : null
+					tensorrt_ms: m.tensorrt?.ms ?? null
 				};
 			})
 		)
@@ -70,11 +85,13 @@
 	let upcoming = $state(false);
 	let sortKey = $state<Key>('rank');
 	let ascending = $state(true);
-	let view = $state<'device' | 'compare'>('device');
-	// The reference GPU also has the authors' code, torch.compile, TensorRT and accuracy: off by default, so every
-	// device's table has the same columns.
-	let extra = $state(false);
+	type View = 'device' | 'compare' | 'models';
+	let view = $state<View>('device');
+	// The reference GPU also has the authors' code, torch.compile and TensorRT: on by default (`more=0` turns them off).
+	let extra = $state(true);
 	const more = $derived(device.reference && extra);
+	// A survey device where the authors' code was also run (Apple silicon): its original column, always shown.
+	const surveyOriginal = $derived(!device.reference && all.some((r) => r.original_ms !== null));
 
 	onMount(() => {
 		const q = new URLSearchParams(location.search);
@@ -82,8 +99,9 @@
 		if (d && DEVICES.some((x) => x.slug === d)) deviceSlug = d;
 		const t = q.get('task');
 		if (t && TASK_ORDER.includes(t)) task = t;
-		if (q.get('view') === 'compare') view = 'compare';
-		if (q.get('more') === '1') extra = true;
+		const v = q.get('view');
+		if (v === 'compare' || v === 'models') setView(v);
+		if (q.get('more') === '0') extra = false;
 		if (q.get('upcoming') === '1') upcoming = true;
 	});
 
@@ -101,13 +119,18 @@
 		deviceSlug = slug;
 		setParam('device', slug === REFERENCE.slug ? null : slug);
 		if (task !== 'all' && !DEVICES.find((d) => d.slug === slug)!.tasks.includes(task)) setTask('all');
-		if (!DEVICES.find((d) => d.slug === slug)!.reference && !COMMON.has(sortKey)) sortKey = 'rank';
+		if (!DEVICES.find((d) => d.slug === slug)!.reference && !COMMON.has(sortKey) && !ORIGINAL.has(sortKey)) sortKey = 'rank';
 	}
 	const COMMON = new Set<Key>(['rank', 'id', 'task', 'portable_ms', 'kernels_ms', 'gain_portable', 'mem_portable', 'mem_kernels']);
-	function setView(v: 'device' | 'compare') {
+	// Columns of a survey device that also ran the authors' code.
+	const ORIGINAL = new Set<Key>(['original_ms', 'gain_original', 'mem_original', 'cpu_ms', 'gain_cpu']);
+	function setView(v: View) {
 		view = v;
-		setParam('view', v === 'compare' ? 'compare' : null);
+		setParam('view', v === 'device' ? null : v);
+		// Benchmarks differ per task, so this view has no "All".
+		if (v === 'models' && task === 'all') setTask(MODEL_TASKS[0]);
 	}
+	const MODEL_TASKS = TASK_ORDER.filter((id) => REFERENCE.tasks.includes(id));
 	function showExtra() {
 		setView('device');
 		setDevice(REFERENCE.slug);
@@ -115,7 +138,7 @@
 	}
 	function setExtra(on: boolean) {
 		extra = on;
-		setParam('more', on ? '1' : null);
+		setParam('more', on ? null : '0');
 		if (!on && !COMMON.has(sortKey)) sortKey = 'rank';
 	}
 
@@ -141,15 +164,20 @@
 		}
 	}
 
-	const rows = $derived.by(() => {
+	// Every filter but the upcoming toggle.
+	const matching = $derived.by(() => {
 		const q = query.trim().toLowerCase();
-		const out = all.filter(
+		return all.filter(
 			(r) =>
 				(task === 'all' || r.task === task) &&
 				(!commercialOnly || r.commercial === 'yes') &&
-				(upcoming || !UPCOMING.has(r.id)) &&
 				(!q || r.id.includes(q) || r.code.toLowerCase().includes(q) || r.weights.toLowerCase().includes(q))
 		);
+	});
+	// Upcoming models the toggle hides from the current filter: the empty table offers them.
+	const hiddenUpcoming = $derived(upcoming ? 0 : matching.filter((r) => UPCOMING.has(r.id)).length);
+	const rows = $derived.by(() => {
+		const out = matching.filter((r) => upcoming || !UPCOMING.has(r.id));
 		const dir = ascending ? 1 : -1;
 		return out.sort((a, b) => {
 			const x = a[sortKey];
@@ -163,23 +191,31 @@
 	const current = $derived(task === 'all' ? null : data.tasks.find((t) => t.id === task)!);
 	const arrow = (key: Key) => (sortKey === key ? (ascending ? ' ↑' : ' ↓') : '');
 	const ariaSort = (key: Key) => (sortKey === key ? (ascending ? 'ascending' : 'descending') : 'none');
-	const modes: Mode[] = $derived(more ? ['original', 'portable', 'compile', 'tensorrt', 'kernels'] : ['portable', 'kernels']);
-	const memModes: MemMode[] = $derived(more ? ['original', 'portable', 'kernels'] : ['portable', 'kernels']);
-	/** The speed-up columns of kernels. */
-	const gains = $derived((more ? ['original', 'portable'] : ['portable']) as ('original' | 'portable')[]);
+	const modes: Mode[] = $derived(
+		more
+			? ['original', 'portable', 'compile', 'tensorrt', 'kernels']
+			: surveyOriginal
+				? ['original', 'portable', 'kernels', ...(device.cpu ? (['cpu'] as const) : [])]
+				: ['portable', 'kernels']
+	);
+	const memModes: MemMode[] = $derived(more || surveyOriginal ? ['original', 'portable', 'kernels'] : ['portable', 'kernels']);
+	/** The speed-up columns. */
+	const gains: Gain[] = $derived(
+		more
+			? ['original', 'portable']
+			: surveyOriginal
+				? ['original', 'portable', ...(device.cpu ? (['cpu'] as const) : [])]
+				: ['portable']
+	);
 	const LABEL: Record<Mode, string> = {
 		original: 'Original',
 		portable: 'Portable',
 		compile: 'Compile',
 		tensorrt: 'TensorRT',
-		kernels: 'Kernels'
+		kernels: 'Kernels',
+		cpu: 'CPU'
 	};
 	const label = (m: Mode) => LABEL[m];
-	/** "ImageNet-1k val, 5000 random images, top-1 / top-5 %" → "ImageNet-1k val · top-1 / top-5 %". */
-	const metric = (m: string) => {
-		const parts = m.split(', ');
-		return parts.length > 1 ? `${parts[0]} · ${parts.at(-1)}` : m;
-	};
 	/** One-time cost of torch.compile or a TensorRT engine build, in s or min. */
 	const prep = (s: number | null) => (s === null ? '?' : s >= 90 ? `${(s / 60).toFixed(1)} min` : `${Math.round(s)} s`);
 	const footprint = $derived(device.memory_kind === 'process-footprint');
@@ -207,17 +243,23 @@
 		<p class="lede">
 			{#if view === 'compare'}
 				Every model on every device, side by side: pick a task, then sort by a device or open a model for its bars.
-				All devices ran the same models at the same inputs; the authors' code, torch.compile and TensorRT only on the
-				{REFERENCE.name} (<button type="button" class="link" onclick={showExtra}>its extra columns</button>).
+				All devices ran the same models at the same inputs; torch.compile and TensorRT only on the {REFERENCE.name},
+				the authors' code on it and on Apple silicon (pick that device under One device) (<button type="button" class="link" onclick={showExtra}>its extra columns</button>).
+			{:else if view === 'models'}
+				Every model of one task on the benchmarks its golden checks ran, with the kernels time and peak memory on the
+				{REFERENCE.name}: pick a task, then sort by any benchmark to see what each millisecond buys.
 			{:else if device.reference}
 				Times are medians of warm runs on the {device.name}, the reference GPU, at each task's standard input:
 				portable is the model in plain PyTorch, kernels the same weights with the custom kernels. This GPU also has
-				the authors' original code, torch.compile and TensorRT: switch on the extra columns. Click a model for its
-				variants, accuracy and limitations; the method is on the <a href="/benchmarks">benchmarks page</a>. Data
+				the authors' original code, torch.compile and TensorRT in the extra columns; accuracy on every benchmark is
+				under <button type="button" class="link" onclick={() => setView('models')}>Compare models</button>. Click a
+				model for its variants and limitations; the method is on the <a href="/benchmarks">benchmarks page</a>. Data
 				from fastforks <code>{data.source.commit}</code>.
 			{:else}
 				A survey on the {device.name} ({device.memory}, {device.details}; {device.software}), measured
-				{device.measured?.to}: {all.length} models. Each time is the fastest passing dtype of that mode. Details on
+				{device.measured?.to}: {all.length} models. Each time is the fastest passing dtype of that mode{surveyOriginal
+					? ", and the authors' original code ran here too"
+					: ''}. Details on
 				the <a href={device.page}>device page</a>.
 			{/if}
 		</p>
@@ -229,6 +271,9 @@
 				>
 				<button type="button" role="tab" aria-selected={view === 'compare'} onclick={() => setView('compare')}
 					>Compare devices</button
+				>
+				<button type="button" role="tab" aria-selected={view === 'models'} onclick={() => setView('models')}
+					>Compare models</button
 				>
 			</div>
 			{#if view === 'device'}
@@ -247,8 +292,10 @@
 			<div class="filter">
 				<span class="lab" id="lab-task">Task</span>
 				<div class="chips" role="group" aria-labelledby="lab-task">
-					<button type="button" aria-pressed={task === 'all'} onclick={() => setTask('all')}>All</button>
-					{#each view === 'device' ? taskIds : TASK_ORDER as id (id)}
+					{#if view !== 'models'}
+						<button type="button" aria-pressed={task === 'all'} onclick={() => setTask('all')}>All</button>
+					{/if}
+					{#each view === 'device' ? taskIds : view === 'models' ? MODEL_TASKS : TASK_ORDER as id (id)}
 						<button type="button" aria-pressed={task === id} onclick={() => setTask(id)}>{TASK_META[id].name}</button>
 					{/each}
 				</div>
@@ -272,7 +319,7 @@
 					{#if device.reference}
 						<label class="toggle">
 							<input type="checkbox" checked={extra} onchange={(e) => setExtra(e.currentTarget.checked)} />
-							Extra columns: original code, torch.compile, TensorRT, accuracy
+							Extra columns: original code, torch.compile, TensorRT
 						</label>
 					{/if}
 					<span class="count" aria-live="polite">{rows.length} shown</span>
@@ -292,8 +339,10 @@
 			</p>
 		{/if}
 
-		{#if view === 'compare'}
-			<DeviceCompare {task} {query} {commercialOnly} {upcoming} rank={RANK} />
+		{#if view === 'models'}
+			<ModelCompare {task} {query} {commercialOnly} {upcoming} onupcoming={() => setUpcoming(true)} />
+		{:else if view === 'compare'}
+			<DeviceCompare {task} {query} {commercialOnly} {upcoming} rank={RANK} onupcoming={() => setUpcoming(true)} />
 		{:else}
 			<div class="table">
 				<table class:wide={more}>
@@ -301,9 +350,8 @@
 						<tr class="groups">
 							<th scope="colgroup" colspan="2"></th>
 							<th scope="colgroup" colspan={modes.length} class="grp">Time (ms)</th>
-							<th scope="colgroup" colspan={gains.length} class="grp">Kernels speed-up vs</th>
+							<th scope="colgroup" colspan={gains.length} class="grp">{surveyOriginal ? 'Speed-up vs' : 'Kernels speed-up vs'}</th>
 							<th scope="colgroup" colspan={memModes.length} class="grp">{memTitle}</th>
-							{#if more}<th scope="col" rowspan="2" class="first acc">Accuracy (kernels)</th>{/if}
 							<th scope="col" rowspan="2">Licence (code / weights)</th>
 						</tr>
 						<tr>
@@ -343,12 +391,20 @@
 									<td class="num first">{fmtMs(r.portable_ms)}</td>
 									<td class="num strong">{fmtMs(r.kernels_ms)}</td>
 								{:else}
-									<td class="num first" class:muted={r.portable_ms === null}>
+									{#if surveyOriginal}
+										<td class="num first" class:muted={r.original_ms === null} title={r.original_why ?? undefined}>
+											{cell(r.original_ms, r.original_note)}{#if r.original_ms !== null}<small>{r.original_note}</small>{/if}
+										</td>
+									{/if}
+									<td class="num" class:first={!surveyOriginal} class:muted={r.portable_ms === null}>
 										{cell(r.portable_ms, r.portable_note)}{#if r.portable_ms !== null}<small>{r.portable_note}</small>{/if}
 									</td>
 									<td class="num strong" class:muted={r.kernels_ms === null}>
 										{cell(r.kernels_ms, r.kernels_note)}{#if r.kernels_ms !== null}<small>{r.kernels_note}</small>{/if}
 									</td>
+									{#if device.cpu}
+										<td class="num" class:muted={r.cpu_ms === null}>{cell(r.cpu_ms, r.cpu_note)}</td>
+									{/if}
 								{/if}
 								{#each gains as m, i (m)}
 									{@const g = r[`gain_${m}`]}
@@ -361,11 +417,6 @@
 										{r[`mem_${m}`] ?? '–'}
 									</td>
 								{/each}
-								{#if more}
-									<td class="num first acc">
-										{r.accuracy ?? '–'}{#if r.accuracy_metric}<span class="sub">{metric(r.accuracy_metric)}</span>{/if}
-									</td>
-								{/if}
 								<td class="lic">
 									<span class="badge" class:yes={r.commercial === 'yes'}
 										>{r.commercial === 'yes' ? 'commercial' : 'non-commercial'}</span
@@ -374,7 +425,9 @@
 								</td>
 							</tr>
 						{:else}
-							<tr><td colspan={3 + modes.length + gains.length + memModes.length + (more ? 1 : 0)} class="empty">No model matches.</td></tr>
+							<tr><td colspan={3 + modes.length + gains.length + memModes.length} class="empty"
+								><EmptyRows hidden={hiddenUpcoming} onshow={() => setUpcoming(true)} /></td
+							></tr>
 						{/each}
 					</tbody>
 				</table>
@@ -382,10 +435,10 @@
 			<p class="note">
 				Rows keep the reference GPU's kernels-time order on every device; click a header to sort by it. Times are
 				milliseconds per call; – means not timed or not available{more
-					? ". Original is the faster of the authors' code in fp32 and in its own half precision. Compile is portable with model.compile() and TensorRT the fp16 engine of portable, both run for one variant per family; under each time is its one-time cost (compile or engine build), and where it fails, why. Accuracy is the kernels result of the model's golden check, with its dataset and metric below. Memory is the peak allocated by PyTorch"
+					? ". Original is the faster of the authors' code in fp32 and in its own half precision. Compile is portable with model.compile() and TensorRT the fp16 engine of portable, both run for one variant per family; under each time is its one-time cost (compile or engine build), and where it fails, why. Memory is the peak allocated by PyTorch"
 					: device.reference
 						? '. Memory is the peak allocated by PyTorch'
-						: `; the small text is the dtype; portable only = no kernels for this model on this backend (they were written only where they beat portable), failed = it raised, OOM = out of memory. Memory is that of the fastest dtype's run, ${footprint ? 'the peak footprint of the whole process (Apple has no PyTorch allocator peak), so it includes PyTorch itself' : 'the peak allocated by PyTorch'}; compare it within a device, not across devices`}. Licence data comes from the model registry and is not legal advice.
+						: `; the small text is the dtype; portable only = no kernels for this model on this backend (they were written only where they beat portable), failed = it raised, OOM = out of memory.${surveyOriginal ? " Original is the authors' own code run on this device; not run = not measured here yet; incompatible = it cannot run here (hover for why: CUDA-only extensions, compiled ops not built for macOS, MPS limits); speed-up vs original is fastforks' faster mode (kernels, else portable) against it, vs portable is that of kernels." : ''}${device.cpu ? ` CPU is portable in fp32 on the same chip's CPU (${device.cpu.details || device.cpu.name}); not run = not measured yet; speed-up vs CPU is fastforks' fastest GPU mode against it.` : ''} Memory is that of the fastest dtype's run, ${footprint ? 'the peak footprint of the whole process (Apple has no PyTorch allocator peak), so it includes PyTorch itself' : 'the peak allocated by PyTorch'}; compare it within a device, not across devices`}. Licence data comes from the model registry and is not legal advice.
 			</p>
 		{/if}
 	</div>
@@ -440,10 +493,6 @@
 	.head :global(table.wide) {
 		min-width: 1380px;
 	}
-	.head :global(th.acc) {
-		vertical-align: bottom;
-		border-bottom: 1px solid var(--strong-line);
-	}
 	.head :global(.filter) {
 		display: grid;
 		grid-template-columns: 4.5rem 1fr;
@@ -488,8 +537,7 @@
 		box-shadow: inset 0 0 0 1px var(--ink);
 		background: color-mix(in srgb, var(--accent) 22%, var(--surface));
 	}
-	.head :global(.ext .sub),
-	.head :global(.acc .sub) {
+	.head :global(.ext .sub) {
 		display: block;
 		max-width: 12rem;
 		margin-left: auto;
@@ -497,9 +545,6 @@
 		color: var(--muted);
 		font: 500 0.64rem/1.25 var(--mono);
 		white-space: normal;
-	}
-	.head :global(.acc .sub) {
-		max-width: 16rem;
 	}
 	.head :global(.ext .sub:not(.why)) {
 		white-space: nowrap;

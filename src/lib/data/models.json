@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "065fa524",
+		"commit": "d4bedb8a",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -15992,6 +15992,7 @@
 				"flow",
 				"matching"
 			],
+			"cpu": null,
 			"times": null
 		},
 		{
@@ -16006,13 +16007,14 @@
 			"measured": {
 				"from": "2026-11-06",
 				"to": "2026-11-12",
-				"rows": 935
+				"rows": 1269
 			},
 			"memory_kind": "process-footprint",
 			"tasks": [
 				"stereo",
 				"depth",
 				"multiview",
+				"matching",
 				"promptable_segmentation",
 				"segmentation",
 				"detection",
@@ -16021,9 +16023,19 @@
 				"features",
 				"flow"
 			],
+			"cpu": {
+				"name": "Apple M1 Pro 16 GB (CPU)",
+				"details": "10-core CPU (8 performance, 2 efficiency), PyTorch's default threads"
+			},
 			"times": {
 				"alexnet": {
 					"task": "classification",
+					"original": {
+						"ms": 9.484,
+						"dtype": "fp32",
+						"alloc": 1819,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3.045,
 						"dtype": "fp16",
@@ -16031,11 +16043,274 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 13.079,
+						"dtype": "fp32",
+						"alloc": 496,
+						"reserved": null
+					}
+				},
+				"coatnet_0_rw_224": {
+					"task": "classification",
+					"original": {
+						"ms": 21.57,
+						"dtype": "fp32",
+						"alloc": 763,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 20.051,
+						"dtype": "fp32",
+						"alloc": 735,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 32.144,
+						"dtype": "fp32",
+						"alloc": 538,
+						"reserved": null
+					}
+				},
+				"coatnet_1_rw_224": {
+					"task": "classification",
+					"original": {
+						"ms": 33.932,
+						"dtype": "fp32",
+						"alloc": 1933,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 33.834,
+						"dtype": "fp32",
+						"alloc": 1917,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 80.262,
+						"dtype": "fp32",
+						"alloc": 672,
+						"reserved": null
+					}
+				},
+				"coatnet_2_rw_224": {
+					"task": "classification",
+					"original": {
+						"ms": 47.911,
+						"dtype": "fp32",
+						"alloc": 2091,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 46.974,
+						"dtype": "fp32",
+						"alloc": 2194,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 119.869,
+						"dtype": "fp32",
+						"alloc": 952,
+						"reserved": null
+					}
+				},
+				"coatnet_nano_rw_224": {
+					"task": "classification",
+					"original": {
+						"ms": 19.802,
+						"dtype": "fp32",
+						"alloc": 596,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 19.571,
+						"dtype": "fp32",
+						"alloc": 564,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 28.563,
+						"dtype": "fp32",
+						"alloc": 436,
+						"reserved": null
+					}
+				},
+				"coatnet_rmlp_1_rw2_224": {
+					"task": "classification",
+					"original": {
+						"ms": 37.059,
+						"dtype": "fp32",
+						"alloc": 1920,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 36.669,
+						"dtype": "fp32",
+						"alloc": 1917,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 86.07,
+						"dtype": "fp32",
+						"alloc": 670,
+						"reserved": null
+					}
+				},
+				"coatnet_rmlp_1_rw_224": {
+					"task": "classification",
+					"original": {
+						"ms": 35.241,
+						"dtype": "fp32",
+						"alloc": 940,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 34.983,
+						"dtype": "fp32",
+						"alloc": 919,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 57.485,
+						"dtype": "fp32",
+						"alloc": 653,
+						"reserved": null
+					}
+				},
+				"coatnet_rmlp_2_rw_224": {
+					"task": "classification",
+					"original": {
+						"ms": 52.517,
+						"dtype": "fp32",
+						"alloc": 2183,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 51.88,
+						"dtype": "fp32",
+						"alloc": 2204,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 125.792,
+						"dtype": "fp32",
+						"alloc": 952,
+						"reserved": null
+					}
+				},
+				"coatnet_rmlp_2_rw_224.sw_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 51.85,
+						"dtype": "fp32",
+						"alloc": 2140,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 51.813,
+						"dtype": "fp32",
+						"alloc": 2197,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 126.05,
+						"dtype": "fp32",
+						"alloc": 953,
+						"reserved": null
+					}
+				},
+				"coatnet_rmlp_2_rw_384": {
+					"task": "classification",
+					"original": {
+						"ms": 126.637,
+						"dtype": "fp32",
+						"alloc": 2111,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 118.844,
+						"dtype": "fp32",
+						"alloc": 2306,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 253.458,
+						"dtype": "fp32",
+						"alloc": 1224,
+						"reserved": null
+					}
+				},
+				"coatnet_rmlp_nano_rw_224": {
+					"task": "classification",
+					"original": {
+						"ms": 21.871,
+						"dtype": "fp32",
+						"alloc": 1627,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 21.171,
+						"dtype": "fp32",
+						"alloc": 1596,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 52.79,
+						"dtype": "fp32",
+						"alloc": 453,
+						"reserved": null
 					}
 				},
 				"convnext_base.fb_in1k": {
 					"task": "classification",
+					"original": {
+						"ms": 26.748,
+						"dtype": "fp32",
+						"alloc": 2061,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 27.728,
 						"dtype": "fp32",
@@ -16043,11 +16318,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1159.213,
+						"dtype": "fp32",
+						"alloc": 1172,
+						"reserved": null
 					}
 				},
 				"convnext_base": {
 					"task": "classification",
+					"original": {
+						"ms": 25.687,
+						"dtype": "fp32",
+						"alloc": 2092,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 27.448,
 						"dtype": "fp32",
@@ -16055,11 +16343,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1179.136,
+						"dtype": "fp32",
+						"alloc": 1164,
+						"reserved": null
 					}
 				},
 				"convnext_base.fb_in22k_ft_in1k_384": {
 					"task": "classification",
+					"original": {
+						"ms": 51.933,
+						"dtype": "fp32",
+						"alloc": 2065,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 50.843,
 						"dtype": "fp32",
@@ -16067,11 +16368,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1713.993,
+						"dtype": "fp32",
+						"alloc": 1226,
+						"reserved": null
 					}
 				},
 				"convnext_large.fb_in1k": {
 					"task": "classification",
+					"original": {
+						"ms": 42.676,
+						"dtype": "fp32",
+						"alloc": 2775,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 41.277,
 						"dtype": "fp32",
@@ -16079,11 +16393,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1759.572,
+						"dtype": "fp32",
+						"alloc": 2231,
+						"reserved": null
 					}
 				},
 				"convnext_large": {
 					"task": "classification",
+					"original": {
+						"ms": 40.801,
+						"dtype": "fp32",
+						"alloc": 2770,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 41.346,
 						"dtype": "fp32",
@@ -16091,11 +16418,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1676.083,
+						"dtype": "fp32",
+						"alloc": 2227,
+						"reserved": null
 					}
 				},
 				"convnext_large.fb_in22k_ft_in1k_384": {
 					"task": "classification",
+					"original": {
+						"ms": 90.289,
+						"dtype": "fp32",
+						"alloc": 2942,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 88.712,
 						"dtype": "fp32",
@@ -16103,11 +16443,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2723.25,
+						"dtype": "fp32",
+						"alloc": 2303,
+						"reserved": null
 					}
 				},
 				"convnext_small.fb_in1k": {
 					"task": "classification",
+					"original": {
+						"ms": 20.296,
+						"dtype": "fp32",
+						"alloc": 881,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 19.075,
 						"dtype": "fp32",
@@ -16115,11 +16468,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 823.559,
+						"dtype": "fp32",
+						"alloc": 789,
+						"reserved": null
 					}
 				},
 				"convnext_small.fb_in22k_ft_in1k": {
 					"task": "classification",
+					"original": {
+						"ms": 20.285,
+						"dtype": "fp32",
+						"alloc": 825,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 19.408,
 						"dtype": "fp32",
@@ -16127,11 +16493,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 805.6,
+						"dtype": "fp32",
+						"alloc": 790,
+						"reserved": null
 					}
 				},
 				"convnext_small.fb_in22k_ft_in1k_384": {
 					"task": "classification",
+					"original": {
+						"ms": 34.846,
+						"dtype": "fp32",
+						"alloc": 1890,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 33.496,
 						"dtype": "fp32",
@@ -16139,11 +16518,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1241.836,
+						"dtype": "fp32",
+						"alloc": 838,
+						"reserved": null
 					}
 				},
 				"convnext_tiny.fb_in1k": {
 					"task": "classification",
+					"original": {
+						"ms": 11.989,
+						"dtype": "fp32",
+						"alloc": 706,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11.162,
 						"dtype": "fp32",
@@ -16151,11 +16543,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"convnext_tiny.fb_in22k_ft_in1k": {
 					"task": "classification",
+					"original": {
+						"ms": 11.78,
+						"dtype": "fp32",
+						"alloc": 697,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11.409,
 						"dtype": "fp32",
@@ -16163,11 +16565,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 420.185,
+						"dtype": "fp32",
+						"alloc": 582,
+						"reserved": null
 					}
 				},
 				"convnext_tiny.fb_in22k_ft_in1k_384": {
 					"task": "classification",
+					"original": {
+						"ms": 20.668,
+						"dtype": "fp32",
+						"alloc": 1736,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 20.42,
 						"dtype": "fp32",
@@ -16175,11 +16590,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 647.575,
+						"dtype": "fp32",
+						"alloc": 632,
+						"reserved": null
 					}
 				},
 				"convnextv2_base": {
 					"task": "classification",
+					"original": {
+						"ms": 41.027,
+						"dtype": "fp32",
+						"alloc": 2066,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 36.119,
 						"dtype": "fp32",
@@ -16187,11 +16615,99 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1230.479,
+						"dtype": "fp32",
+						"alloc": 1009,
+						"reserved": null
+					}
+				},
+				"davit_base": {
+					"task": "classification",
+					"original": {
+						"ms": 34.539,
+						"dtype": "fp32",
+						"alloc": 2060,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 33.959,
+						"dtype": "fp32",
+						"alloc": 2314,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 995.713,
+						"dtype": "fp32",
+						"alloc": 1017,
+						"reserved": null
+					}
+				},
+				"davit_small": {
+					"task": "classification",
+					"original": {
+						"ms": 26.426,
+						"dtype": "fp32",
+						"alloc": 957,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 25.397,
+						"dtype": "fp32",
+						"alloc": 968,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 743.171,
+						"dtype": "fp32",
+						"alloc": 701,
+						"reserved": null
+					}
+				},
+				"davit_tiny": {
+					"task": "classification",
+					"original": {
+						"ms": 14.97,
+						"dtype": "fp32",
+						"alloc": 738,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 14.669,
+						"dtype": "fp32",
+						"alloc": 701,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 404.719,
+						"dtype": "fp32",
+						"alloc": 535,
+						"reserved": null
 					}
 				},
 				"deit_base_patch16_224": {
 					"task": "classification",
+					"original": {
+						"ms": 17.498,
+						"dtype": "fp32",
+						"alloc": 1147,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 16.933,
 						"dtype": "fp32",
@@ -16199,11 +16715,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 48.745,
+						"dtype": "fp32",
+						"alloc": 962,
+						"reserved": null
 					}
 				},
 				"densenet121": {
 					"task": "classification",
+					"original": {
+						"ms": 31.524,
+						"dtype": "fp32",
+						"alloc": 554,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 25.353,
 						"dtype": "fp32",
@@ -16211,11 +16740,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 31.073,
+						"dtype": "fp32",
+						"alloc": 348,
+						"reserved": null
 					}
 				},
 				"dinov2_vitl14_lc": {
 					"task": "classification",
+					"original": {
+						"ms": 64.127,
+						"dtype": "fp32",
+						"alloc": 3291,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 64.468,
 						"dtype": "fp32",
@@ -16223,11 +16765,199 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 175.476,
+						"dtype": "fp32",
+						"alloc": 2641,
+						"reserved": null
+					}
+				},
+				"efficientformer_l1": {
+					"task": "classification",
+					"original": {
+						"ms": 12.466,
+						"dtype": "fp32",
+						"alloc": 550,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 8.567,
+						"dtype": "fp32",
+						"alloc": 589,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 14.763,
+						"dtype": "fp32",
+						"alloc": 446,
+						"reserved": null
+					}
+				},
+				"efficientformer_l3": {
+					"task": "classification",
+					"original": {
+						"ms": 21.584,
+						"dtype": "fp32",
+						"alloc": 747,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 16.023,
+						"dtype": "fp32",
+						"alloc": 881,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 32.837,
+						"dtype": "fp32",
+						"alloc": 656,
+						"reserved": null
+					}
+				},
+				"efficientformer_l7": {
+					"task": "classification",
+					"original": {
+						"ms": 34.904,
+						"dtype": "fp32",
+						"alloc": 1146,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 28.017,
+						"dtype": "fp32",
+						"alloc": 2466,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 53.963,
+						"dtype": "fp32",
+						"alloc": 1126,
+						"reserved": null
+					}
+				},
+				"efficientformerv2_l": {
+					"task": "classification",
+					"original": {
+						"ms": 49.839,
+						"dtype": "fp32",
+						"alloc": 763,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 34.668,
+						"dtype": "fp32",
+						"alloc": 913,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 1741.504,
+						"dtype": "fp32",
+						"alloc": 692,
+						"reserved": null
+					}
+				},
+				"efficientformerv2_s0": {
+					"task": "classification",
+					"original": {
+						"ms": 20.97,
+						"dtype": "fp32",
+						"alloc": 483,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 13.862,
+						"dtype": "fp32",
+						"alloc": 510,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 448.667,
+						"dtype": "fp32",
+						"alloc": 365,
+						"reserved": null
+					}
+				},
+				"efficientformerv2_s1": {
+					"task": "classification",
+					"original": {
+						"ms": 24.608,
+						"dtype": "fp32",
+						"alloc": 521,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 17.399,
+						"dtype": "fp32",
+						"alloc": 554,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 639.887,
+						"dtype": "fp32",
+						"alloc": 404,
+						"reserved": null
+					}
+				},
+				"efficientformerv2_s2": {
+					"task": "classification",
+					"original": {
+						"ms": 36.446,
+						"dtype": "fp32",
+						"alloc": 575,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 25.354,
+						"dtype": "fp32",
+						"alloc": 657,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 1074.85,
+						"dtype": "fp32",
+						"alloc": 498,
+						"reserved": null
 					}
 				},
 				"efficientnet_b0": {
 					"task": "classification",
+					"original": {
+						"ms": 17.916,
+						"dtype": "fp32",
+						"alloc": 442,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 13.006,
 						"dtype": "fp32",
@@ -16235,11 +16965,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 473.734,
+						"dtype": "fp32",
+						"alloc": 293,
+						"reserved": null
 					}
 				},
 				"efficientnet_b4": {
 					"task": "classification",
+					"original": {
+						"ms": 53.957,
+						"dtype": "fp32",
+						"alloc": 1676,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 38.269,
 						"dtype": "fp32",
@@ -16247,11 +16990,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1637.273,
+						"dtype": "fp32",
+						"alloc": 434,
+						"reserved": null
 					}
 				},
 				"efficientnet_v2_s": {
 					"task": "classification",
+					"original": {
+						"ms": 45.861,
+						"dtype": "fp32",
+						"alloc": 638,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 33.972,
 						"dtype": "fp32",
@@ -16259,11 +17015,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1730.388,
+						"dtype": "fp32",
+						"alloc": 480,
+						"reserved": null
 					}
 				},
 				"efficientvit_b2": {
 					"task": "classification",
+					"original": {
+						"ms": 25.704,
+						"dtype": "fp32",
+						"alloc": 1695,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 18.645,
 						"dtype": "fp32",
@@ -16271,11 +17040,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1276.521,
+						"dtype": "fp32",
+						"alloc": 538,
+						"reserved": null
 					}
 				},
 				"eva02_large_patch14_448": {
 					"task": "classification",
+					"original": {
+						"ms": 266.976,
+						"dtype": "fp32",
+						"alloc": 3515,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 234.809,
 						"dtype": "fp16",
@@ -16283,23 +17065,379 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 764.183,
+						"dtype": "fp32",
+						"alloc": 2714,
+						"reserved": null
 					}
 				},
 				"fastvit_sa24": {
 					"task": "classification",
+					"original": {
+						"status": "golden fail"
+					},
 					"portable": {
-						"ms": 16.811,
+						"ms": 15.802,
 						"dtype": "fp32",
-						"alloc": 656,
+						"alloc": 665,
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 712.279,
+						"dtype": "fp32",
+						"alloc": 483,
+						"reserved": null
+					}
+				},
+				"fastvit_t12.apple_dist_in1k": {
+					"task": "classification",
+					"original": {
+						"status": "golden fail"
+					},
+					"portable": {
+						"ms": 8.287,
+						"dtype": "fp32",
+						"alloc": 529,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 500.569,
+						"dtype": "fp32",
+						"alloc": 371,
+						"reserved": null
+					}
+				},
+				"fastvit_t8.apple_dist_in1k": {
+					"task": "classification",
+					"original": {
+						"status": "golden fail"
+					},
+					"portable": {
+						"ms": 6.814,
+						"dtype": "fp32",
+						"alloc": 458,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 287.73,
+						"dtype": "fp32",
+						"alloc": 336,
+						"reserved": null
+					}
+				},
+				"focalnet_base_lrf": {
+					"task": "classification",
+					"original": {
+						"ms": 44.707,
+						"dtype": "fp32",
+						"alloc": 2225,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 44.335,
+						"dtype": "fp32",
+						"alloc": 2362,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 3911.132,
+						"dtype": "fp32",
+						"alloc": 1027,
+						"reserved": null
+					}
+				},
+				"focalnet_base_srf": {
+					"task": "classification",
+					"original": {
+						"ms": 41.776,
+						"dtype": "fp32",
+						"alloc": 2222,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 40.976,
+						"dtype": "fp32",
+						"alloc": 2353,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 1264.336,
+						"dtype": "fp32",
+						"alloc": 1016,
+						"reserved": null
+					}
+				},
+				"focalnet_small_lrf": {
+					"task": "classification",
+					"original": {
+						"ms": 35.154,
+						"dtype": "fp32",
+						"alloc": 921,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 34.842,
+						"dtype": "fp32",
+						"alloc": 977,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 1530.372,
+						"dtype": "fp32",
+						"alloc": 706,
+						"reserved": null
+					}
+				},
+				"focalnet_small_srf": {
+					"task": "classification",
+					"original": {
+						"ms": 32.506,
+						"dtype": "fp32",
+						"alloc": 1003,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 31.942,
+						"dtype": "fp32",
+						"alloc": 969,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 958.071,
+						"dtype": "fp32",
+						"alloc": 702,
+						"reserved": null
+					}
+				},
+				"focalnet_tiny_lrf": {
+					"task": "classification",
+					"original": {
+						"ms": 20.519,
+						"dtype": "fp32",
+						"alloc": 762,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 19.67,
+						"dtype": "fp32",
+						"alloc": 727,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 788.878,
+						"dtype": "fp32",
+						"alloc": 538,
+						"reserved": null
+					}
+				},
+				"focalnet_tiny_srf": {
+					"task": "classification",
+					"original": {
+						"ms": 18.691,
+						"dtype": "fp32",
+						"alloc": 755,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 18.002,
+						"dtype": "fp32",
+						"alloc": 720,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 440.646,
+						"dtype": "fp32",
+						"alloc": 535,
+						"reserved": null
+					}
+				},
+				"hgnetv2_b0": {
+					"task": "classification",
+					"original": {
+						"ms": 11.629,
+						"dtype": "fp32",
+						"alloc": 480,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 6.345,
+						"dtype": "fp32",
+						"alloc": 503,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 78.605,
+						"dtype": "fp32",
+						"alloc": 362,
+						"reserved": null
+					}
+				},
+				"hgnetv2_b1": {
+					"task": "classification",
+					"original": {
+						"ms": 11.041,
+						"dtype": "fp32",
+						"alloc": 492,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 8.489,
+						"dtype": "fp32",
+						"alloc": 516,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"hgnetv2_b2": {
+					"task": "classification",
+					"original": {
+						"ms": 16.356,
+						"dtype": "fp32",
+						"alloc": 571,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 9.356,
+						"dtype": "fp32",
+						"alloc": 596,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"hgnetv2_b3": {
+					"task": "classification",
+					"original": {
+						"ms": 19.533,
+						"dtype": "fp32",
+						"alloc": 1617,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 14.684,
+						"dtype": "fp32",
+						"alloc": 1641,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"hgnetv2_b4": {
+					"task": "classification",
+					"original": {
+						"ms": 20.26,
+						"dtype": "fp32",
+						"alloc": 1658,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 12.144,
+						"dtype": "fp32",
+						"alloc": 1685,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"hgnetv2_b5": {
+					"task": "classification",
+					"original": {
+						"ms": 32.788,
+						"dtype": "fp32",
+						"alloc": 948,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 19.283,
+						"dtype": "fp32",
+						"alloc": 2015,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"hgnetv2_b6": {
+					"task": "classification",
+					"original": {
+						"ms": 52.522,
+						"dtype": "fp32",
+						"alloc": 2269,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 34.16,
+						"dtype": "fp32",
+						"alloc": 2322,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
 					}
 				},
 				"inception_v3": {
 					"task": "classification",
+					"original": {
+						"ms": 27.692,
+						"dtype": "fp32",
+						"alloc": 730,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 17.401,
 						"dtype": "fp32",
@@ -16307,11 +17445,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 32.579,
+						"dtype": "fp32",
+						"alloc": 470,
+						"reserved": null
 					}
 				},
 				"mobilenet_v2": {
 					"task": "classification",
+					"original": {
+						"ms": 12.413,
+						"dtype": "fp32",
+						"alloc": 396,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6.484,
 						"dtype": "fp32",
@@ -16319,11 +17470,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 323.932,
+						"dtype": "fp32",
+						"alloc": 278,
+						"reserved": null
 					}
 				},
 				"mobilenet_v3_large": {
 					"task": "classification",
+					"original": {
+						"ms": 13.417,
+						"dtype": "fp32",
+						"alloc": 440,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 8.54,
 						"dtype": "fp32",
@@ -16331,11 +17495,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 232.736,
+						"dtype": "fp32",
+						"alloc": 280,
+						"reserved": null
 					}
 				},
 				"mobilenetv1_100": {
 					"task": "classification",
+					"original": {
+						"ms": 8.112,
+						"dtype": "fp32",
+						"alloc": 446,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4.289,
 						"dtype": "fp32",
@@ -16343,11 +17520,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 233.789,
+						"dtype": "fp32",
+						"alloc": 341,
+						"reserved": null
 					}
 				},
 				"mobilenetv4_conv_medium": {
 					"task": "classification",
+					"original": {
+						"ms": 18.139,
+						"dtype": "fp32",
+						"alloc": 544,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 9.581,
 						"dtype": "fp32",
@@ -16355,11 +17545,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 546.415,
+						"dtype": "fp32",
+						"alloc": 400,
+						"reserved": null
 					}
 				},
 				"regnety_160": {
 					"task": "classification",
+					"original": {
+						"ms": 46.063,
+						"dtype": "fp32",
+						"alloc": 2209,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 33.084,
 						"dtype": "fp16",
@@ -16367,11 +17570,220 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 68.051,
+						"dtype": "fp32",
+						"alloc": 849,
+						"reserved": null
+					}
+				},
+				"repvit_m0_9": {
+					"task": "classification",
+					"original": {
+						"ms": 24.487,
+						"dtype": "fp32",
+						"alloc": 478,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 11.598,
+						"dtype": "fp32",
+						"alloc": 453,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 201.418,
+						"dtype": "fp32",
+						"alloc": 343,
+						"reserved": null
+					}
+				},
+				"repvit_m0_9.dist_450e_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 24.988,
+						"dtype": "fp32",
+						"alloc": 479,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 11.471,
+						"dtype": "fp32",
+						"alloc": 452,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m1_0": {
+					"task": "classification",
+					"original": {
+						"ms": 25.098,
+						"dtype": "fp32",
+						"alloc": 505,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 11.956,
+						"dtype": "fp32",
+						"alloc": 469,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m1_0.dist_450e_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 24.928,
+						"dtype": "fp32",
+						"alloc": 502,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 12.046,
+						"dtype": "fp32",
+						"alloc": 470,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m1_1": {
+					"task": "classification",
+					"original": {
+						"ms": 24.501,
+						"dtype": "fp32",
+						"alloc": 511,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 11.509,
+						"dtype": "fp32",
+						"alloc": 485,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m1_1.dist_450e_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 26.109,
+						"dtype": "fp32",
+						"alloc": 511,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 11.562,
+						"dtype": "fp32",
+						"alloc": 486,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m1_5": {
+					"task": "classification",
+					"original": {
+						"ms": 40.13,
+						"dtype": "fp32",
+						"alloc": 575,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 19.26,
+						"dtype": "fp32",
+						"alloc": 550,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m1_5.dist_450e_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 39.805,
+						"dtype": "fp32",
+						"alloc": 575,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 19.128,
+						"dtype": "fp32",
+						"alloc": 550,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m2_3": {
+					"task": "classification",
+					"original": {
+						"ms": 54.062,
+						"dtype": "fp32",
+						"alloc": 685,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 27.316,
+						"dtype": "fp32",
+						"alloc": 692,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"repvit_m2_3.dist_450e_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 53.943,
+						"dtype": "fp32",
+						"alloc": 692,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 27.182,
+						"dtype": "fp32",
+						"alloc": 692,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"resnet152": {
 					"task": "classification",
+					"original": {
+						"ms": 41.098,
+						"dtype": "fp32",
+						"alloc": 1007,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 25.684,
 						"dtype": "fp32",
@@ -16379,11 +17791,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"resnet18": {
 					"task": "classification",
+					"original": {
+						"ms": 7.248,
+						"dtype": "fp32",
+						"alloc": 466,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4.667,
 						"dtype": "fp32",
@@ -16391,11 +17810,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 9.733,
+						"dtype": "fp32",
+						"alloc": 334,
+						"reserved": null
 					}
 				},
 				"resnet50": {
 					"task": "classification",
+					"original": {
+						"ms": 16.815,
+						"dtype": "fp32",
+						"alloc": 669,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11.214,
 						"dtype": "fp32",
@@ -16403,11 +17835,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"shufflenet_v2_x1_0": {
 					"task": "classification",
+					"original": {
+						"ms": 12.078,
+						"dtype": "fp32",
+						"alloc": 364,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6.327,
 						"dtype": "fp32",
@@ -16415,11 +17854,106 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 110.202,
+						"dtype": "fp32",
+						"alloc": 267,
+						"reserved": null
+					}
+				},
+				"shvit_s1": {
+					"task": "classification",
+					"original": {
+						"ms": 17.817,
+						"dtype": "fp32",
+						"alloc": 493,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 10.337,
+						"dtype": "fp32",
+						"alloc": 477,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 201.259,
+						"dtype": "fp32",
+						"alloc": 351,
+						"reserved": null
+					}
+				},
+				"shvit_s2": {
+					"task": "classification",
+					"original": {
+						"ms": 18.744,
+						"dtype": "fp32",
+						"alloc": 536,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 10.941,
+						"dtype": "fp32",
+						"alloc": 548,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"shvit_s3": {
+					"task": "classification",
+					"original": {
+						"ms": 20.214,
+						"dtype": "fp32",
+						"alloc": 557,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 11.834,
+						"dtype": "fp32",
+						"alloc": 575,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"shvit_s4": {
+					"task": "classification",
+					"original": {
+						"ms": 26.586,
+						"dtype": "fp32",
+						"alloc": 627,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 14.439,
+						"dtype": "fp32",
+						"alloc": 604,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
 					}
 				},
 				"squeezenet1_1": {
 					"task": "classification",
+					"original": {
+						"ms": 4.032,
+						"dtype": "fp32",
+						"alloc": 347,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3.72,
 						"dtype": "fp16",
@@ -16427,11 +17961,106 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5.096,
+						"dtype": "fp32",
+						"alloc": 256,
+						"reserved": null
+					}
+				},
+				"starnet_s1": {
+					"task": "classification",
+					"original": {
+						"ms": 13.039,
+						"dtype": "fp32",
+						"alloc": 436,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 8.326,
+						"dtype": "fp32",
+						"alloc": 424,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 179.674,
+						"dtype": "fp32",
+						"alloc": 324,
+						"reserved": null
+					}
+				},
+				"starnet_s2": {
+					"task": "classification",
+					"original": {
+						"ms": 11.372,
+						"dtype": "fp32",
+						"alloc": 440,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 7.228,
+						"dtype": "fp32",
+						"alloc": 426,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"starnet_s3": {
+					"task": "classification",
+					"original": {
+						"ms": 14.363,
+						"dtype": "fp32",
+						"alloc": 464,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 10.246,
+						"dtype": "fp32",
+						"alloc": 461,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"starnet_s4": {
+					"task": "classification",
+					"original": {
+						"ms": 18.834,
+						"dtype": "fp32",
+						"alloc": 486,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 12.656,
+						"dtype": "fp32",
+						"alloc": 483,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"swin_base_patch4_window7_224": {
 					"task": "classification",
+					"original": {
+						"ms": 37.506,
+						"dtype": "fp32",
+						"alloc": 2062,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 28.192,
 						"dtype": "fp32",
@@ -16439,11 +18068,125 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 69.308,
+						"dtype": "fp32",
+						"alloc": 1005,
+						"reserved": null
+					}
+				},
+				"tiny_vit_11m_224.dist_in22k_ft_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 13.201,
+						"dtype": "fp32",
+						"alloc": 549,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 9.49,
+						"dtype": "fp32",
+						"alloc": 524,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"tiny_vit_21m_224.dist_in22k_ft_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 15.246,
+						"dtype": "fp32",
+						"alloc": 679,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 11.598,
+						"dtype": "fp32",
+						"alloc": 653,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"tiny_vit_21m_384": {
+					"task": "classification",
+					"original": {
+						"ms": 24.645,
+						"dtype": "fp32",
+						"alloc": 1724,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 22.021,
+						"dtype": "fp32",
+						"alloc": 1669,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"tiny_vit_21m_512": {
+					"task": "classification",
+					"original": {
+						"ms": 38.661,
+						"dtype": "fp32",
+						"alloc": 1818,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 34.315,
+						"dtype": "fp32",
+						"alloc": 1737,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"tiny_vit_5m_224.dist_in22k_ft_in1k": {
+					"task": "classification",
+					"original": {
+						"ms": 12.807,
+						"dtype": "fp32",
+						"alloc": 465,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 8.613,
+						"dtype": "fp32",
+						"alloc": 441,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 172.886,
+						"dtype": "fp32",
+						"alloc": 356,
+						"reserved": null
 					}
 				},
 				"vgg16": {
 					"task": "classification",
+					"original": {
+						"ms": 13.644,
+						"dtype": "fp32",
+						"alloc": 2438,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11.699,
 						"dtype": "fp16",
@@ -16451,11 +18194,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 41.728,
+						"dtype": "fp32",
+						"alloc": 1468,
+						"reserved": null
 					}
 				},
 				"vit_base_patch16_224": {
 					"task": "classification",
+					"original": {
+						"ms": 17.433,
+						"dtype": "fp32",
+						"alloc": 1258,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 16.944,
 						"dtype": "fp32",
@@ -16463,11 +18219,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 45.073,
+						"dtype": "fp32",
+						"alloc": 960,
+						"reserved": null
 					}
 				},
 				"vit_so400m_patch14_siglip_378": {
 					"task": "classification",
+					"original": {
+						"ms": 215.384,
+						"dtype": "fp32",
+						"alloc": 3973,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 196.809,
 						"dtype": "fp16",
@@ -16475,11 +18244,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 559.661,
+						"dtype": "fp32",
+						"alloc": 3632,
+						"reserved": null
 					}
 				},
 				"da3-giant-1.1": {
 					"task": "depth",
+					"original": {
+						"ms": 898.091,
+						"dtype": "fp32",
+						"alloc": 8269,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 758.549,
 						"dtype": "fp16",
@@ -16487,11 +18269,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1830.536,
+						"dtype": "fp32",
+						"alloc": 2264,
+						"reserved": null
 					}
 				},
 				"da3-large-1.1": {
 					"task": "depth",
+					"original": {
+						"ms": 411.74,
+						"dtype": "fp32",
+						"alloc": 4019,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 326.737,
 						"dtype": "fp16",
@@ -16499,11 +18294,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 814.149,
+						"dtype": "fp32",
+						"alloc": 2167,
+						"reserved": null
 					}
 				},
 				"da3metric-large": {
 					"task": "depth",
+					"original": {
+						"ms": 271.471,
+						"dtype": "fp32",
+						"alloc": 3393,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 267.763,
 						"dtype": "fp16",
@@ -16511,11 +18319,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 747.163,
+						"dtype": "fp32",
+						"alloc": 1953,
+						"reserved": null
 					}
 				},
 				"da3mono-large": {
 					"task": "depth",
+					"original": {
+						"ms": 270.792,
+						"dtype": "fp32",
+						"alloc": 3393,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 271.95,
 						"dtype": "fp16",
@@ -16523,11 +18344,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 837.897,
+						"dtype": "fp32",
+						"alloc": 1954,
+						"reserved": null
 					}
 				},
 				"da3nested-giant-large-1.1": {
 					"task": "depth",
+					"original": {
+						"ms": 1173.595,
+						"dtype": "fp32",
+						"alloc": 9549,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1184.373,
 						"dtype": "fp16",
@@ -16535,11 +18369,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2582.833,
+						"dtype": "fp32",
+						"alloc": 2301,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-b": {
 					"task": "depth",
+					"original": {
+						"ms": 238.867,
+						"dtype": "fp32",
+						"alloc": 2342,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 211.543,
 						"dtype": "fp32",
@@ -16547,11 +18394,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 642.075,
+						"dtype": "fp32",
+						"alloc": 2652,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-l": {
 					"task": "depth",
+					"original": {
+						"ms": 696.73,
+						"dtype": "fp32",
+						"alloc": 4218,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 622.498,
 						"dtype": "fp32",
@@ -16559,11 +18419,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1943.922,
+						"dtype": "fp32",
+						"alloc": 5429,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-metric-hypersim-b": {
 					"task": "depth",
+					"original": {
+						"ms": 238.669,
+						"dtype": "fp32",
+						"alloc": 2351,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 211.49,
 						"dtype": "fp32",
@@ -16571,11 +18444,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 621.628,
+						"dtype": "fp32",
+						"alloc": 2655,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-metric-hypersim-l": {
 					"task": "depth",
+					"original": {
+						"ms": 699.699,
+						"dtype": "fp32",
+						"alloc": 4227,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 628.05,
 						"dtype": "fp32",
@@ -16583,11 +18469,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1981.612,
+						"dtype": "fp32",
+						"alloc": 5425,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-metric-hypersim-s": {
 					"task": "depth",
+					"original": {
+						"ms": 110.234,
+						"dtype": "fp32",
+						"alloc": 1862,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 87.829,
 						"dtype": "fp32",
@@ -16595,11 +18494,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 269.346,
+						"dtype": "fp32",
+						"alloc": 1410,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-metric-vkitti-b": {
 					"task": "depth",
+					"original": {
+						"ms": 239.255,
+						"dtype": "fp32",
+						"alloc": 2349,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 211.498,
 						"dtype": "fp32",
@@ -16607,11 +18519,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 634.523,
+						"dtype": "fp32",
+						"alloc": 2650,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-metric-vkitti-l": {
 					"task": "depth",
+					"original": {
+						"ms": 697.778,
+						"dtype": "fp32",
+						"alloc": 4226,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 622.801,
 						"dtype": "fp32",
@@ -16619,11 +18544,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1948.885,
+						"dtype": "fp32",
+						"alloc": 5428,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-metric-vkitti-s": {
 					"task": "depth",
+					"original": {
+						"ms": 109.76,
+						"dtype": "fp32",
+						"alloc": 1856,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 90.028,
 						"dtype": "fp32",
@@ -16631,11 +18569,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 252.321,
+						"dtype": "fp32",
+						"alloc": 1410,
+						"reserved": null
 					}
 				},
 				"depth-anything-v2-s": {
 					"task": "depth",
+					"original": {
+						"ms": 113.457,
+						"dtype": "fp32",
+						"alloc": 1860,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 87.254,
 						"dtype": "fp32",
@@ -16643,11 +18594,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 273.811,
+						"dtype": "fp32",
+						"alloc": 1406,
+						"reserved": null
 					}
 				},
 				"depth-pro": {
 					"task": "depth",
+					"original": {
+						"ms": 5853.456,
+						"dtype": "fp32",
+						"alloc": 13125,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 5011.45,
 						"dtype": "fp16",
@@ -16655,11 +18619,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "golden fail"
 					}
 				},
 				"distill-any-depth-b": {
 					"task": "depth",
+					"original": {
+						"ms": 238.347,
+						"dtype": "fp32",
+						"alloc": 2389,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 211.687,
 						"dtype": "fp32",
@@ -16667,11 +18641,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 625.485,
+						"dtype": "fp32",
+						"alloc": 2651,
+						"reserved": null
 					}
 				},
 				"distill-any-depth-l": {
 					"task": "depth",
+					"original": {
+						"ms": 696.708,
+						"dtype": "fp32",
+						"alloc": 4288,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 622.468,
 						"dtype": "fp32",
@@ -16679,11 +18666,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1956.661,
+						"dtype": "fp32",
+						"alloc": 5434,
+						"reserved": null
 					}
 				},
 				"distill-any-depth-s": {
 					"task": "depth",
+					"original": {
+						"ms": 109.223,
+						"dtype": "fp32",
+						"alloc": 1868,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 87.325,
 						"dtype": "fp32",
@@ -16691,11 +18691,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 243.404,
+						"dtype": "fp32",
+						"alloc": 1412,
+						"reserved": null
 					}
 				},
 				"marigold-depth-v1-1": {
 					"task": "depth",
+					"original": {
+						"ms": 3236.653,
+						"dtype": "fp32",
+						"alloc": 10462,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2497.717,
 						"dtype": "fp16",
@@ -16703,11 +18716,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 15966.775,
+						"dtype": "fp32",
+						"alloc": 13237,
+						"reserved": null
 					}
 				},
 				"metric3d-vit-large": {
 					"task": "depth",
+					"original": {
+						"ms": 1945.537,
+						"dtype": "fp32",
+						"alloc": 4973,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1822.346,
 						"dtype": "fp32",
@@ -16715,11 +18741,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 6265.575,
+						"dtype": "fp32",
+						"alloc": 4039,
+						"reserved": null
 					}
 				},
 				"midas-dpt-beit-large-512": {
 					"task": "depth",
+					"original": {
+						"ms": 1107.136,
+						"dtype": "fp32",
+						"alloc": 4976,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 634.656,
 						"dtype": "fp16",
@@ -16727,11 +18766,42 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1883.473,
+						"dtype": "fp32",
+						"alloc": 4996,
+						"reserved": null
+					}
+				},
+				"moge-2-vitb-normal": {
+					"task": "depth",
+					"original": {
+						"status": "golden fail"
+					},
+					"portable": {
+						"ms": 584.882,
+						"dtype": "fp32",
+						"alloc": 3089,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 585.592,
+						"dtype": "fp32",
+						"alloc": 3160,
+						"reserved": null
 					}
 				},
 				"moge-2-vitl-normal": {
 					"task": "depth",
+					"original": {
+						"ms": 1552.996,
+						"dtype": "fp32",
+						"alloc": 4036,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1343.148,
 						"dtype": "fp32",
@@ -16747,6 +18817,12 @@
 				},
 				"moge-2-vits-normal": {
 					"task": "depth",
+					"original": {
+						"ms": 515.763,
+						"dtype": "fp32",
+						"alloc": 2849,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 361.3,
 						"dtype": "fp32",
@@ -16758,10 +18834,20 @@
 						"dtype": "fp32",
 						"alloc": 2704,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 1358.003,
+						"dtype": "fp32",
+						"alloc": 4405,
+						"reserved": null
 					}
 				},
 				"moge-3-vitl": {
 					"task": "depth",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs flex_gemm, a CUDA-only extension"
+					},
 					"portable": {
 						"ms": 3468.544,
 						"dtype": "fp32",
@@ -16777,6 +18863,12 @@
 				},
 				"unidepth-v2-vitl14": {
 					"task": "depth",
+					"original": {
+						"ms": 1356.214,
+						"dtype": "fp32",
+						"alloc": 5260,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1252.486,
 						"dtype": "fp32",
@@ -16784,11 +18876,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3636.061,
+						"dtype": "fp32",
+						"alloc": 6240,
+						"reserved": null
 					}
 				},
 				"unik3d-vitl": {
 					"task": "depth",
+					"original": {
+						"ms": 1332.558,
+						"dtype": "fp32",
+						"alloc": 5316,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1217.451,
 						"dtype": "fp32",
@@ -16796,11 +18901,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3607.729,
+						"dtype": "fp32",
+						"alloc": 4578,
+						"reserved": null
 					}
 				},
 				"zoedepth-nk": {
 					"task": "depth",
+					"original": {
+						"ms": 1268.412,
+						"dtype": "fp32",
+						"alloc": 4223,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 777.684,
 						"dtype": "fp32",
@@ -16808,7 +18926,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1949.817,
+						"dtype": "fp32",
+						"alloc": 3998,
+						"reserved": null
 					}
 				},
 				"detr-r101-coco": {
@@ -16820,7 +18945,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 453.604,
+						"dtype": "fp32",
+						"alloc": 1659,
+						"reserved": null
 					}
 				},
 				"detr-r50-coco": {
@@ -16832,7 +18964,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 323.428,
+						"dtype": "fp32",
+						"alloc": 1492,
+						"reserved": null
 					}
 				},
 				"dfine-l-coco": {
@@ -16844,7 +18983,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 538.149,
+						"dtype": "fp32",
+						"alloc": 740,
+						"reserved": null
 					}
 				},
 				"dfine-m-coco": {
@@ -16856,7 +19002,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 324.558,
+						"dtype": "fp32",
+						"alloc": 629,
+						"reserved": null
 					}
 				},
 				"dfine-n-coco": {
@@ -16868,7 +19021,11 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"dfine-s-coco": {
@@ -16880,7 +19037,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 192.858,
+						"dtype": "fp32",
+						"alloc": 488,
+						"reserved": null
 					}
 				},
 				"dfine-x-coco": {
@@ -16892,11 +19056,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1011.259,
+						"dtype": "fp32",
+						"alloc": 1192,
+						"reserved": null
 					}
 				},
 				"faster-rcnn-r50-fpn-3x-coco": {
 					"task": "detection",
+					"original": {
+						"ms": 240.026,
+						"dtype": "fp32",
+						"alloc": 1938,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 214.18,
 						"dtype": "fp32",
@@ -16904,11 +19081,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 639.289,
+						"dtype": "fp32",
+						"alloc": 1848,
+						"reserved": null
 					}
 				},
 				"mask-rcnn-r50-fpn-3x-coco": {
 					"task": "detection",
+					"original": {
+						"ms": 244.625,
+						"dtype": "fp32",
+						"alloc": 1964,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 221.978,
 						"dtype": "fp32",
@@ -16916,7 +19106,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 597.596,
+						"dtype": "fp32",
+						"alloc": 1869,
+						"reserved": null
 					}
 				},
 				"rtdetrv2-l-coco": {
@@ -16928,7 +19125,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtdetrv2-m-coco": {
@@ -16940,7 +19138,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtdetrv2-ms-coco": {
@@ -16952,7 +19151,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtdetrv2-s-coco": {
@@ -16964,7 +19164,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 121.178,
+						"dtype": "fp32",
+						"alloc": 711,
+						"reserved": null
 					}
 				},
 				"rtdetrv2-x-coco": {
@@ -16976,11 +19183,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtmdet-l-coco": {
 					"task": "detection",
+					"original": {
+						"ms": 108.804,
+						"dtype": "fp32",
+						"alloc": 2230,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 75.181,
 						"dtype": "fp16",
@@ -16988,11 +19202,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtmdet-m-coco": {
 					"task": "detection",
+					"original": {
+						"ms": 71.888,
+						"dtype": "fp32",
+						"alloc": 2155,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 50.875,
 						"dtype": "fp16",
@@ -17000,11 +19221,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtmdet-m-person": {
 					"task": "detection",
+					"original": {
+						"ms": 69.797,
+						"dtype": "fp32",
+						"alloc": 2022,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 48.469,
 						"dtype": "fp16",
@@ -17012,11 +19240,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtmdet-nano-person": {
 					"task": "detection",
+					"original": {
+						"ms": 29.931,
+						"dtype": "fp32",
+						"alloc": 1688,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 22.042,
 						"dtype": "fp16",
@@ -17024,11 +19259,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtmdet-s-coco": {
 					"task": "detection",
+					"original": {
+						"ms": 42.803,
+						"dtype": "fp32",
+						"alloc": 1874,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 30.71,
 						"dtype": "fp16",
@@ -17036,11 +19278,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"rtmdet-tiny-coco": {
 					"task": "detection",
+					"original": {
+						"ms": 35.93,
+						"dtype": "fp32",
+						"alloc": 1813,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 26.979,
 						"dtype": "fp16",
@@ -17048,11 +19297,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 97.656,
+						"dtype": "fp32",
+						"alloc": 511,
+						"reserved": null
 					}
 				},
 				"rtmdet-x-coco": {
 					"task": "detection",
+					"original": {
+						"ms": 155.45,
+						"dtype": "fp32",
+						"alloc": 2381,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 115.123,
 						"dtype": "fp16",
@@ -17060,7 +19322,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"c-radio-v3-b": {
@@ -17072,7 +19335,11 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"c-radio-v3-g": {
@@ -17084,7 +19351,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 428.137,
+						"dtype": "fp32",
+						"alloc": 4743,
+						"reserved": null
 					}
 				},
 				"c-radio-v3-h": {
@@ -17096,7 +19370,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 253.58,
+						"dtype": "fp32",
+						"alloc": 2801,
+						"reserved": null
 					}
 				},
 				"c-radio-v3-l": {
@@ -17108,7 +19389,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 144.384,
+						"dtype": "fp32",
+						"alloc": 1527,
+						"reserved": null
 					}
 				},
 				"clip-b16-laion2b": {
@@ -17120,7 +19408,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 44.775,
+						"dtype": "fp32",
+						"alloc": 959,
+						"reserved": null
 					}
 				},
 				"clip-b16-openai": {
@@ -17132,7 +19427,11 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"clip-h14-378-dfn5b": {
@@ -17144,7 +19443,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 304.648,
+						"dtype": "fp32",
+						"alloc": 5160,
+						"reserved": null
 					}
 				},
 				"clip-h14-dfn5b": {
@@ -17156,7 +19462,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 303.893,
+						"dtype": "fp32",
+						"alloc": 5150,
+						"reserved": null
 					}
 				},
 				"clip-h14-laion2b": {
@@ -17168,7 +19481,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 294.511,
+						"dtype": "fp32",
+						"alloc": 5146,
+						"reserved": null
 					}
 				},
 				"clip-l14-336-openai": {
@@ -17180,7 +19500,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 179.07,
+						"dtype": "fp32",
+						"alloc": 2637,
+						"reserved": null
 					}
 				},
 				"clip-l14-datacompxl": {
@@ -17192,7 +19519,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 172.747,
+						"dtype": "fp32",
+						"alloc": 2633,
+						"reserved": null
 					}
 				},
 				"clip-l14-dfn2b": {
@@ -17204,7 +19538,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 178.615,
+						"dtype": "fp32",
+						"alloc": 2634,
+						"reserved": null
 					}
 				},
 				"clip-l14-laion2b": {
@@ -17216,7 +19557,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 173.987,
+						"dtype": "fp32",
+						"alloc": 2632,
+						"reserved": null
 					}
 				},
 				"clip-l14-openai": {
@@ -17228,11 +19576,100 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 179.29,
+						"dtype": "fp32",
+						"alloc": 3108,
+						"reserved": null
+					}
+				},
+				"convnext_base.fb_in22k": {
+					"task": "features",
+					"portable": {
+						"ms": 26.233,
+						"dtype": "fp32",
+						"alloc": 2468,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1111.478,
+						"dtype": "fp32",
+						"alloc": 1330,
+						"reserved": null
+					}
+				},
+				"convnext_large.fb_in22k": {
+					"task": "features",
+					"portable": {
+						"ms": 40.989,
+						"dtype": "fp32",
+						"alloc": 3694,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1676.122,
+						"dtype": "fp32",
+						"alloc": 2475,
+						"reserved": null
+					}
+				},
+				"convnext_small.fb_in22k": {
+					"task": "features",
+					"portable": {
+						"ms": 18.744,
+						"dtype": "fp32",
+						"alloc": 1159,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 808.245,
+						"dtype": "fp32",
+						"alloc": 911,
+						"reserved": null
+					}
+				},
+				"convnext_tiny.fb_in22k": {
+					"task": "features",
+					"portable": {
+						"ms": 10.866,
+						"dtype": "fp32",
+						"alloc": 865,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 434.005,
+						"dtype": "fp32",
+						"alloc": 702,
+						"reserved": null
 					}
 				},
 				"dinov2-vitb14": {
 					"task": "features",
+					"original": {
+						"ms": 28.541,
+						"dtype": "fp32",
+						"alloc": 998,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 21.749,
 						"dtype": "fp16",
@@ -17240,11 +19677,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 53.988,
+						"dtype": "fp32",
+						"alloc": 503,
+						"reserved": null
 					}
 				},
 				"dinov2-vitb14-reg": {
 					"task": "features",
+					"original": {
+						"ms": 51.044,
+						"dtype": "fp32",
+						"alloc": 1013,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 42.773,
 						"dtype": "fp16",
@@ -17252,11 +19702,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 55.538,
+						"dtype": "fp32",
+						"alloc": 503,
+						"reserved": null
 					}
 				},
 				"dinov2-vitg14": {
 					"task": "features",
+					"original": {
+						"ms": 270.722,
+						"dtype": "fp32",
+						"alloc": 8904,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 192.539,
 						"dtype": "fp16",
@@ -17264,11 +19727,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 506.201,
+						"dtype": "fp32",
+						"alloc": 4502,
+						"reserved": null
 					}
 				},
 				"dinov2-vitg14-reg": {
 					"task": "features",
+					"original": {
+						"ms": 293.673,
+						"dtype": "fp32",
+						"alloc": 8897,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 234.652,
 						"dtype": "fp16",
@@ -17276,11 +19752,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 505.314,
+						"dtype": "fp32",
+						"alloc": 4503,
+						"reserved": null
 					}
 				},
 				"dinov2-vitl14": {
 					"task": "features",
+					"original": {
+						"ms": 75.925,
+						"dtype": "fp32",
+						"alloc": 3165,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 59.419,
 						"dtype": "fp16",
@@ -17288,11 +19777,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 174.16,
+						"dtype": "fp32",
+						"alloc": 1324,
+						"reserved": null
 					}
 				},
 				"dinov2-vitl14-reg": {
 					"task": "features",
+					"original": {
+						"ms": 106.652,
+						"dtype": "fp32",
+						"alloc": 3168,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 86.287,
 						"dtype": "fp16",
@@ -17300,11 +19802,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 169.155,
+						"dtype": "fp32",
+						"alloc": 1324,
+						"reserved": null
 					}
 				},
 				"dinov2-vits14": {
 					"task": "features",
+					"original": {
+						"ms": 12.829,
+						"dtype": "fp32",
+						"alloc": 476,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11.174,
 						"dtype": "fp16",
@@ -17312,11 +19827,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 21.526,
+						"dtype": "fp32",
+						"alloc": 247,
+						"reserved": null
 					}
 				},
 				"dinov2-vits14-reg": {
 					"task": "features",
+					"original": {
+						"ms": 24.764,
+						"dtype": "fp32",
+						"alloc": 476,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 22.145,
 						"dtype": "fp16",
@@ -17324,7 +19852,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 23.319,
+						"dtype": "fp32",
+						"alloc": 249,
+						"reserved": null
 					}
 				},
 				"dinov3-convnext-base": {
@@ -17336,7 +19871,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1090.63,
+						"dtype": "fp32",
+						"alloc": 508,
+						"reserved": null
 					}
 				},
 				"dinov3-convnext-large": {
@@ -17348,7 +19890,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1673.047,
+						"dtype": "fp32",
+						"alloc": 917,
+						"reserved": null
 					}
 				},
 				"dinov3-convnext-small": {
@@ -17360,7 +19909,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 820.807,
+						"dtype": "fp32",
+						"alloc": 362,
+						"reserved": null
 					}
 				},
 				"dinov3-convnext-tiny": {
@@ -17372,11 +19928,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"dinov3-vitb16": {
 					"task": "features",
+					"original": {
+						"ms": 24.922,
+						"dtype": "fp32",
+						"alloc": 721,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 19.96,
 						"dtype": "fp16",
@@ -17384,11 +19950,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 55.664,
+						"dtype": "fp32",
+						"alloc": 489,
+						"reserved": null
 					}
 				},
 				"dinov3-vith16plus": {
 					"task": "features",
+					"original": {
+						"ms": 173.843,
+						"dtype": "fp32",
+						"alloc": 4593,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 126.39,
 						"dtype": "fp16",
@@ -17396,11 +19975,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 352.1,
+						"dtype": "fp32",
+						"alloc": 3375,
+						"reserved": null
 					}
 				},
 				"dinov3-vitl16": {
 					"task": "features",
+					"original": {
+						"ms": 71.19,
+						"dtype": "fp32",
+						"alloc": 2465,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 52.725,
 						"dtype": "fp16",
@@ -17408,11 +20000,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 158.604,
+						"dtype": "fp32",
+						"alloc": 1321,
+						"reserved": null
 					}
 				},
 				"dinov3-vits16": {
 					"task": "features",
+					"original": {
+						"ms": 13.416,
+						"dtype": "fp32",
+						"alloc": 446,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11.459,
 						"dtype": "fp16",
@@ -17420,7 +20025,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 27.12,
+						"dtype": "fp32",
+						"alloc": 249,
+						"reserved": null
 					}
 				},
 				"pe-core-b16-224": {
@@ -17495,6 +20107,12 @@
 						"ms": 7.253,
 						"dtype": "fp16",
 						"alloc": 388,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 14.859,
+						"dtype": "fp32",
+						"alloc": 334,
 						"reserved": null
 					}
 				},
@@ -17582,7 +20200,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 46.393,
+						"dtype": "fp32",
+						"alloc": 1008,
+						"reserved": null
 					}
 				},
 				"siglip2-b16-512": {
@@ -17594,7 +20219,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-g16-256": {
@@ -17606,7 +20232,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-g16-384": {
@@ -17618,7 +20245,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-l16-256": {
@@ -17630,7 +20258,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-l16-512": {
@@ -17642,7 +20271,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-so400m14-224": {
@@ -17654,7 +20284,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-so400m14-378": {
@@ -17666,7 +20297,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-so400m16-256": {
@@ -17678,7 +20310,8 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"siglip2-so400m16-512": {
@@ -17690,11 +20323,341 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"tipsv2-b14": {
+					"task": "features",
+					"portable": {
+						"ms": 23.071,
+						"dtype": "fp16",
+						"alloc": 775,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 55.486,
+						"dtype": "fp32",
+						"alloc": 504,
+						"reserved": null
+					}
+				},
+				"tipsv2-l14": {
+					"task": "features",
+					"portable": {
+						"ms": 59.943,
+						"dtype": "fp16",
+						"alloc": 1562,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"flowformer-small-chairs": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"status": "failed"
+					}
+				},
+				"flowformer-small-sintel": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"status": "failed"
+					}
+				},
+				"flowformer-small-things": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"status": "failed"
+					}
+				},
+				"flowseek-t": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 17403.885,
+						"dtype": "fp32",
+						"alloc": 14570,
+						"reserved": null
+					}
+				},
+				"flowseek-t-things": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 25538.914,
+						"dtype": "fp32",
+						"alloc": 13769,
+						"reserved": null
+					}
+				},
+				"flowseek-t-things-notartan": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 22819.195,
+						"dtype": "fp32",
+						"alloc": 14057,
+						"reserved": null
+					}
+				},
+				"gmflow-scale1-mixdata": {
+					"task": "flow",
+					"original": {
+						"ms": 4892.697,
+						"dtype": "fp32",
+						"alloc": 12995,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 3268.925,
+						"dtype": "fp32",
+						"alloc": 12049,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"gmflow-scale1-things": {
+					"task": "flow",
+					"original": {
+						"ms": 5142.577,
+						"dtype": "fp32",
+						"alloc": 13106,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 3268.697,
+						"dtype": "fp32",
+						"alloc": 11902,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 11705.977,
+						"dtype": "fp32",
+						"alloc": 11607,
+						"reserved": null
+					}
+				},
+				"gmflow-scale2-mixdata": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"gmflow-scale2-regrefine6-kitti": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"gmflow-scale2-regrefine6-mixdata": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"gmflow-scale2-regrefine6-sintelft": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"gmflow-scale2-regrefine6-things": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"gmflow-scale2-sintel": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"gmflow-scale2-things": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"status": "oom"
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "the card has no kernels mode"
+					}
+				},
+				"neuflow-v2": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"ms": 1039.342,
+						"dtype": "fp32",
+						"alloc": 13354,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 4374.87,
+						"dtype": "fp32",
+						"alloc": 11606,
+						"reserved": null
+					}
+				},
+				"neuflow-v2-sintel": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"ms": 1075.97,
+						"dtype": "fp32",
+						"alloc": 13226,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"neuflow-v2-things": {
+					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"ms": 945.442,
+						"dtype": "fp32",
+						"alloc": 13049,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"raft-large": {
 					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 2522.336,
 						"dtype": "fp32",
@@ -17706,10 +20669,19 @@
 						"dtype": "fp16",
 						"alloc": 3647,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 8067.319,
+						"dtype": "fp32",
+						"alloc": 14701,
+						"reserved": null
 					}
 				},
 				"raft-large-kitti": {
 					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 10205.65,
 						"dtype": "fp32",
@@ -17725,6 +20697,9 @@
 				},
 				"raft-large-things": {
 					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 3992.034,
 						"dtype": "fp32",
@@ -17740,6 +20715,9 @@
 				},
 				"raft-small": {
 					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 4513.109,
 						"dtype": "fp32",
@@ -17755,6 +20733,12 @@
 				},
 				"sea-raft-m": {
 					"task": "flow",
+					"original": {
+						"ms": 2636.899,
+						"dtype": "fp32",
+						"alloc": 12444,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1819.718,
 						"dtype": "fp32",
@@ -17766,10 +20750,19 @@
 						"dtype": "fp16",
 						"alloc": 4752,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 9930.081,
+						"dtype": "fp32",
+						"alloc": 13170,
+						"reserved": null
 					}
 				},
 				"sea-raft-m-kitti": {
 					"task": "flow",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 5025.595,
 						"dtype": "fp32",
@@ -17785,6 +20778,12 @@
 				},
 				"sea-raft-m-spring": {
 					"task": "flow",
+					"original": {
+						"ms": 353.553,
+						"dtype": "fp32",
+						"alloc": 2923,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 389.988,
 						"dtype": "fp32",
@@ -17800,6 +20799,12 @@
 				},
 				"sea-raft-m-things": {
 					"task": "flow",
+					"original": {
+						"ms": 2004.669,
+						"dtype": "fp32",
+						"alloc": 13022,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4161.751,
 						"dtype": "fp32",
@@ -17815,6 +20820,12 @@
 				},
 				"sea-raft-s": {
 					"task": "flow",
+					"original": {
+						"ms": 1530.64,
+						"dtype": "fp32",
+						"alloc": 13174,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2114.878,
 						"dtype": "fp32",
@@ -17830,6 +20841,12 @@
 				},
 				"sea-raft-s-kitti": {
 					"task": "flow",
+					"original": {
+						"ms": 1502.646,
+						"dtype": "fp32",
+						"alloc": 13130,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2000.311,
 						"dtype": "fp32",
@@ -17845,6 +20862,12 @@
 				},
 				"sea-raft-s-spring": {
 					"task": "flow",
+					"original": {
+						"ms": 255.224,
+						"dtype": "fp32",
+						"alloc": 2757,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 268.336,
 						"dtype": "fp32",
@@ -17858,8 +20881,36 @@
 						"reserved": null
 					}
 				},
+				"romav2": {
+					"task": "matching",
+					"original": {
+						"status": "oom"
+					},
+					"portable": {
+						"ms": 4698.322,
+						"dtype": "fp32",
+						"alloc": 7718,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 30509.572,
+						"dtype": "fp32",
+						"alloc": 13394,
+						"reserved": null
+					}
+				},
 				"mapanything-apache": {
 					"task": "multiview",
+					"original": {
+						"ms": 8491.971,
+						"dtype": "fp32",
+						"alloc": 11136,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6369.19,
 						"dtype": "fp16",
@@ -17867,11 +20918,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 37780.726,
+						"dtype": "fp32",
+						"alloc": 13944,
+						"reserved": null
 					}
 				},
 				"mvsanywhere": {
 					"task": "multiview",
+					"original": {
+						"status": "unsupported",
+						"why": "the original's compiled (TorchScript) functions fail with variable arguments under torch 2.14"
+					},
 					"portable": {
 						"ms": 1050.642,
 						"dtype": "fp32",
@@ -17879,11 +20941,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 4201.257,
+						"dtype": "fp32",
+						"alloc": 2842,
+						"reserved": null
 					}
 				},
 				"patchmatchnet": {
 					"task": "multiview",
+					"original": {
+						"ms": 875.043,
+						"dtype": "fp32",
+						"alloc": 3724,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1009.717,
 						"dtype": "fp32",
@@ -17891,11 +20966,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 4495.844,
+						"dtype": "fp32",
+						"alloc": 8226,
+						"reserved": null
 					}
 				},
 				"vggt-1b": {
 					"task": "multiview",
+					"original": {
+						"ms": 7986.931,
+						"dtype": "fp32",
+						"alloc": 10337,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 7209.307,
 						"dtype": "fp32",
@@ -17907,10 +20995,22 @@
 						"dtype": "fp32",
 						"alloc": 10692,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 42044.094,
+						"dtype": "fp32",
+						"alloc": 16738,
+						"reserved": null
 					}
 				},
 				"vggt-omega-1b-512": {
 					"task": "multiview",
+					"original": {
+						"ms": 7827.571,
+						"dtype": "fp32",
+						"alloc": 9079,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 7241.942,
 						"dtype": "fp16",
@@ -17918,11 +21018,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 21645.116,
+						"dtype": "fp32",
+						"alloc": 8764,
+						"reserved": null
 					}
 				},
 				"dwpose-l": {
 					"task": "pose",
+					"original": {
+						"ms": 224.977,
+						"dtype": "fp32",
+						"alloc": 2059,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 87.649,
 						"dtype": "fp16",
@@ -17934,10 +21047,22 @@
 						"dtype": "fp32",
 						"alloc": 1917,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 846.421,
+						"dtype": "fp32",
+						"alloc": 1161,
+						"reserved": null
 					}
 				},
 				"dwpose-l-384": {
 					"task": "pose",
+					"original": {
+						"ms": 318.9,
+						"dtype": "fp32",
+						"alloc": 2034,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 172.534,
 						"dtype": "fp16",
@@ -17949,10 +21074,22 @@
 						"dtype": "fp32",
 						"alloc": 1916,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 1062.497,
+						"dtype": "fp32",
+						"alloc": 2080,
+						"reserved": null
 					}
 				},
 				"dwpose-m": {
 					"task": "pose",
+					"original": {
+						"ms": 192.277,
+						"dtype": "fp32",
+						"alloc": 1991,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 59.085,
 						"dtype": "fp16",
@@ -17964,10 +21101,22 @@
 						"dtype": "fp32",
 						"alloc": 1791,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 414.956,
+						"dtype": "fp32",
+						"alloc": 881,
+						"reserved": null
 					}
 				},
 				"dwpose-s": {
 					"task": "pose",
+					"original": {
+						"ms": 164.495,
+						"dtype": "fp32",
+						"alloc": 1885,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 38.274,
 						"dtype": "fp16",
@@ -17979,10 +21128,22 @@
 						"dtype": "fp32",
 						"alloc": 1595,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 157.038,
+						"dtype": "fp32",
+						"alloc": 648,
+						"reserved": null
 					}
 				},
 				"dwpose-t": {
 					"task": "pose",
+					"original": {
+						"ms": 157.987,
+						"dtype": "fp32",
+						"alloc": 1817,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 33.146,
 						"dtype": "fp16",
@@ -17994,10 +21155,211 @@
 						"dtype": "fp32",
 						"alloc": 1539,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 101.747,
+						"dtype": "fp32",
+						"alloc": 531,
+						"reserved": null
+					}
+				},
+				"hrnet-w32": {
+					"task": "pose",
+					"original": {
+						"ms": 304.016,
+						"dtype": "fp32",
+						"alloc": 2014,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 121.77,
+						"dtype": "fp16",
+						"alloc": 1675,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 535.473,
+						"dtype": "fp32",
+						"alloc": 1360,
+						"reserved": null
+					}
+				},
+				"hrnet-w32-384": {
+					"task": "pose",
+					"original": {
+						"ms": 437.83,
+						"dtype": "fp32",
+						"alloc": 2019,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 216.63,
+						"dtype": "fp16",
+						"alloc": 1690,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"hrnet-w48": {
+					"task": "pose",
+					"original": {
+						"ms": 385.982,
+						"dtype": "fp32",
+						"alloc": 2380,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 198.297,
+						"dtype": "fp16",
+						"alloc": 2065,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"hrnet-w48-384": {
+					"task": "pose",
+					"original": {
+						"ms": 616.819,
+						"dtype": "fp32",
+						"alloc": 2432,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 369.382,
+						"dtype": "fp16",
+						"alloc": 2067,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"rf-detr-keypoint-preview": {
+					"task": "pose",
+					"original": {
+						"ms": 148.013,
+						"dtype": "fp32",
+						"alloc": 2074,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 135.02,
+						"dtype": "fp16",
+						"alloc": 1737,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 234.092,
+						"dtype": "fp32",
+						"alloc": 713,
+						"reserved": null
+					}
+				},
+				"rtmo-l": {
+					"task": "pose",
+					"original": {
+						"ms": 87.992,
+						"dtype": "fp32",
+						"alloc": 2101,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 61.944,
+						"dtype": "fp16",
+						"alloc": 1829,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"rtmo-m": {
+					"task": "pose",
+					"original": {
+						"ms": 60.446,
+						"dtype": "fp32",
+						"alloc": 2043,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 43.901,
+						"dtype": "fp16",
+						"alloc": 1802,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"rtmo-s": {
+					"task": "pose",
+					"original": {
+						"ms": 37.356,
+						"dtype": "fp32",
+						"alloc": 1870,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 31.016,
+						"dtype": "fp16",
+						"alloc": 1560,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"rtmo-t": {
+					"task": "pose",
+					"original": {
+						"ms": 25.405,
+						"dtype": "fp32",
+						"alloc": 1836,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 19.897,
+						"dtype": "fp16",
+						"alloc": 1506,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 35.938,
+						"dtype": "fp32",
+						"alloc": 388,
+						"reserved": null
 					}
 				},
 				"rtmpose-l": {
 					"task": "pose",
+					"original": {
+						"ms": 215.57,
+						"dtype": "fp32",
+						"alloc": 2018,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 81.266,
 						"dtype": "fp16",
@@ -18013,6 +21375,12 @@
 				},
 				"rtmpose-l-384": {
 					"task": "pose",
+					"original": {
+						"ms": 302.642,
+						"dtype": "fp32",
+						"alloc": 2039,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 158.152,
 						"dtype": "fp16",
@@ -18026,8 +21394,56 @@
 						"reserved": null
 					}
 				},
+				"rtmpose-l-halpe26": {
+					"task": "pose",
+					"original": {
+						"ms": 218.957,
+						"dtype": "fp32",
+						"alloc": 2014,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 69.301,
+						"dtype": "fp16",
+						"alloc": 1851,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 73.343,
+						"dtype": "fp32",
+						"alloc": 1896,
+						"reserved": null
+					}
+				},
+				"rtmpose-l-halpe26-384": {
+					"task": "pose",
+					"original": {
+						"ms": 304.775,
+						"dtype": "fp32",
+						"alloc": 2039,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 135.523,
+						"dtype": "fp16",
+						"alloc": 1857,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 143.735,
+						"dtype": "fp32",
+						"alloc": 1899,
+						"reserved": null
+					}
+				},
 				"rtmpose-m": {
 					"task": "pose",
+					"original": {
+						"ms": 184.921,
+						"dtype": "fp32",
+						"alloc": 1920,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 57.762,
 						"dtype": "fp16",
@@ -18043,6 +21459,12 @@
 				},
 				"rtmpose-m-384": {
 					"task": "pose",
+					"original": {
+						"ms": 236.605,
+						"dtype": "fp32",
+						"alloc": 1936,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 102.727,
 						"dtype": "fp16",
@@ -18056,8 +21478,119 @@
 						"reserved": null
 					}
 				},
+				"rtmpose-m-ap10k": {
+					"task": "pose",
+					"original": {
+						"ms": 193.069,
+						"dtype": "fp32",
+						"alloc": 1935,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 54.73,
+						"dtype": "fp16",
+						"alloc": 1637,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 50.037,
+						"dtype": "fp32",
+						"alloc": 1739,
+						"reserved": null
+					}
+				},
+				"rtmpose-m-face6": {
+					"task": "pose",
+					"original": {
+						"ms": 200.395,
+						"dtype": "fp32",
+						"alloc": 1958,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 59.357,
+						"dtype": "fp16",
+						"alloc": 1673,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 56.146,
+						"dtype": "fp32",
+						"alloc": 1780,
+						"reserved": null
+					}
+				},
+				"rtmpose-m-halpe26": {
+					"task": "pose",
+					"original": {
+						"ms": 186.294,
+						"dtype": "fp32",
+						"alloc": 1918,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 47.081,
+						"dtype": "fp16",
+						"alloc": 1640,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 44.8,
+						"dtype": "fp32",
+						"alloc": 1742,
+						"reserved": null
+					}
+				},
+				"rtmpose-m-halpe26-384": {
+					"task": "pose",
+					"original": {
+						"ms": 235.908,
+						"dtype": "fp32",
+						"alloc": 1935,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 87.575,
+						"dtype": "fp16",
+						"alloc": 1635,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 84.898,
+						"dtype": "fp32",
+						"alloc": 1742,
+						"reserved": null
+					}
+				},
+				"rtmpose-m-hand5": {
+					"task": "pose",
+					"original": {
+						"ms": 192.301,
+						"dtype": "fp32",
+						"alloc": 1936,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 54.978,
+						"dtype": "fp16",
+						"alloc": 1639,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 50.027,
+						"dtype": "fp32",
+						"alloc": 1740,
+						"reserved": null
+					}
+				},
 				"rtmpose-s": {
 					"task": "pose",
+					"original": {
+						"ms": 157.935,
+						"dtype": "fp32",
+						"alloc": 1839,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 33.232,
 						"dtype": "fp16",
@@ -18071,8 +21604,56 @@
 						"reserved": null
 					}
 				},
+				"rtmpose-s-face6": {
+					"task": "pose",
+					"original": {
+						"ms": 169.872,
+						"dtype": "fp32",
+						"alloc": 1861,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 38.158,
+						"dtype": "fp16",
+						"alloc": 1518,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 31.85,
+						"dtype": "fp32",
+						"alloc": 1587,
+						"reserved": null
+					}
+				},
+				"rtmpose-s-halpe26": {
+					"task": "pose",
+					"original": {
+						"ms": 159.869,
+						"dtype": "fp32",
+						"alloc": 1831,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 28.402,
+						"dtype": "fp16",
+						"alloc": 1500,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 24.918,
+						"dtype": "fp32",
+						"alloc": 1567,
+						"reserved": null
+					}
+				},
 				"rtmpose-t": {
 					"task": "pose",
+					"original": {
+						"ms": 157.014,
+						"dtype": "fp32",
+						"alloc": 1804,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 24.566,
 						"dtype": "fp16",
@@ -18084,10 +21665,190 @@
 						"dtype": "fp32",
 						"alloc": 1513,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 93.782,
+						"dtype": "fp32",
+						"alloc": 524,
+						"reserved": null
+					}
+				},
+				"rtmpose-t-face6": {
+					"task": "pose",
+					"original": {
+						"ms": 161.507,
+						"dtype": "fp32",
+						"alloc": 1820,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 31.304,
+						"dtype": "fp16",
+						"alloc": 1461,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 25.247,
+						"dtype": "fp32",
+						"alloc": 1533,
+						"reserved": null
+					}
+				},
+				"rtmpose-t-halpe26": {
+					"task": "pose",
+					"original": {
+						"ms": 155.981,
+						"dtype": "fp32",
+						"alloc": 1816,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 25.529,
+						"dtype": "fp32",
+						"alloc": 1454,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 19.994,
+						"dtype": "fp32",
+						"alloc": 1513,
+						"reserved": null
+					}
+				},
+				"rtmpose-x-halpe26-384": {
+					"task": "pose",
+					"original": {
+						"ms": 395.31,
+						"dtype": "fp32",
+						"alloc": 3244,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 213.365,
+						"dtype": "fp16",
+						"alloc": 2017,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 224.567,
+						"dtype": "fp32",
+						"alloc": 2130,
+						"reserved": null
+					}
+				},
+				"rtmw-l": {
+					"task": "pose",
+					"original": {
+						"ms": 293.918,
+						"dtype": "fp32",
+						"alloc": 2064,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 125.322,
+						"dtype": "fp16",
+						"alloc": 2079,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 136.895,
+						"dtype": "fp32",
+						"alloc": 2097,
+						"reserved": null
+					}
+				},
+				"rtmw-l-384": {
+					"task": "pose",
+					"original": {
+						"ms": 454.935,
+						"dtype": "fp32",
+						"alloc": 2071,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 247.558,
+						"dtype": "fp16",
+						"alloc": 2076,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 267.621,
+						"dtype": "fp32",
+						"alloc": 2127,
+						"reserved": null
+					}
+				},
+				"rtmw-m": {
+					"task": "pose",
+					"original": {
+						"ms": 243.006,
+						"dtype": "fp32",
+						"alloc": 2018,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 89.996,
+						"dtype": "fp16",
+						"alloc": 1784,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 95.788,
+						"dtype": "fp32",
+						"alloc": 1897,
+						"reserved": null
+					}
+				},
+				"rtmw-x": {
+					"task": "pose",
+					"original": {
+						"ms": 365.467,
+						"dtype": "fp32",
+						"alloc": 2505,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 184.374,
+						"dtype": "fp16",
+						"alloc": 2266,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 201.276,
+						"dtype": "fp32",
+						"alloc": 2308,
+						"reserved": null
+					}
+				},
+				"rtmw-x-384": {
+					"task": "pose",
+					"original": {
+						"ms": 584.935,
+						"dtype": "fp32",
+						"alloc": 3581,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 363.425,
+						"dtype": "fp16",
+						"alloc": 2268,
+						"reserved": null
+					},
+					"kernels": {
+						"ms": 392.565,
+						"dtype": "fp32",
+						"alloc": 3322,
+						"reserved": null
 					}
 				},
 				"vitpose-base": {
 					"task": "pose",
+					"original": {
+						"ms": 288.33,
+						"dtype": "fp32",
+						"alloc": 2309,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 212.361,
 						"dtype": "fp16",
@@ -18103,6 +21864,12 @@
 				},
 				"vitpose-base-simple": {
 					"task": "pose",
+					"original": {
+						"ms": 254.183,
+						"dtype": "fp32",
+						"alloc": 2270,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 186.037,
 						"dtype": "fp16",
@@ -18114,10 +21881,22 @@
 						"dtype": "fp16",
 						"alloc": 1977,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 417.829,
+						"dtype": "fp32",
+						"alloc": 2214,
+						"reserved": null
 					}
 				},
 				"vitpose-plus-base": {
 					"task": "pose",
+					"original": {
+						"ms": 358.208,
+						"dtype": "fp32",
+						"alloc": 2557,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 211.84,
 						"dtype": "fp16",
@@ -18133,6 +21912,12 @@
 				},
 				"vitpose-plus-huge": {
 					"task": "pose",
+					"original": {
+						"ms": 1543.32,
+						"dtype": "fp32",
+						"alloc": 6040,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1158.12,
 						"dtype": "fp16",
@@ -18148,6 +21933,12 @@
 				},
 				"vitpose-plus-large": {
 					"task": "pose",
+					"original": {
+						"ms": 841.702,
+						"dtype": "fp32",
+						"alloc": 5237,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 602.911,
 						"dtype": "fp16",
@@ -18163,6 +21954,12 @@
 				},
 				"vitpose-plus-small": {
 					"task": "pose",
+					"original": {
+						"ms": 212.629,
+						"dtype": "fp32",
+						"alloc": 1865,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 92.349,
 						"dtype": "fp16",
@@ -18178,6 +21975,12 @@
 				},
 				"efficientvit-sam-l0": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 70.531,
+						"dtype": "fp32",
+						"alloc": 1959,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 50.612,
 						"dtype": "fp32",
@@ -18185,11 +21988,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"efficientvit-sam-l1": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 85.386,
+						"dtype": "fp32",
+						"alloc": 2075,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 75.154,
 						"dtype": "fp32",
@@ -18197,11 +22010,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2404.014,
+						"dtype": "fp32",
+						"alloc": 739,
+						"reserved": null
 					}
 				},
 				"efficientvit-sam-l2": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 101.674,
+						"dtype": "fp32",
+						"alloc": 2144,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 91.226,
 						"dtype": "fp32",
@@ -18209,11 +22035,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3072.811,
+						"dtype": "fp32",
+						"alloc": 824,
+						"reserved": null
 					}
 				},
 				"efficientvit-sam-xl0": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 156.793,
+						"dtype": "fp32",
+						"alloc": 3588,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 166.879,
 						"dtype": "fp32",
@@ -18221,11 +22060,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3536.948,
+						"dtype": "fp32",
+						"alloc": 1545,
+						"reserved": null
 					}
 				},
 				"efficientvit-sam-xl1": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 245.314,
+						"dtype": "fp32",
+						"alloc": 3671,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 259.238,
 						"dtype": "fp32",
@@ -18233,11 +22085,49 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5899.503,
+						"dtype": "fp32",
+						"alloc": 2380,
+						"reserved": null
+					}
+				},
+				"mobile-sam": {
+					"task": "promptable_segmentation",
+					"original": {
+						"ms": 120.651,
+						"dtype": "fp32",
+						"alloc": 1768,
+						"reserved": null
+					},
+					"portable": {
+						"ms": 80.819,
+						"dtype": "fp32",
+						"alloc": 1480,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1020.317,
+						"dtype": "fp32",
+						"alloc": 737,
+						"reserved": null
 					}
 				},
 				"sam-hq-vit-b": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 745.119,
+						"dtype": "fp32",
+						"alloc": 4909,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 645.216,
 						"dtype": "fp32",
@@ -18245,11 +22135,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1262.083,
+						"dtype": "fp32",
+						"alloc": 1259,
+						"reserved": null
 					}
 				},
 				"sam-hq-vit-h": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 2757.942,
+						"dtype": "fp32",
+						"alloc": 8858,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2633.48,
 						"dtype": "fp32",
@@ -18257,11 +22160,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sam-hq-vit-l": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 1582.101,
+						"dtype": "fp32",
+						"alloc": 6401,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1420.243,
 						"dtype": "fp32",
@@ -18269,11 +22179,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sam-vit-b": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 840.911,
+						"dtype": "fp32",
+						"alloc": 4783,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 630.824,
 						"dtype": "fp32",
@@ -18281,11 +22198,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1183.171,
+						"dtype": "fp32",
+						"alloc": 1041,
+						"reserved": null
 					}
 				},
 				"sam-vit-h": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 3209.551,
+						"dtype": "fp32",
+						"alloc": 8721,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2517.635,
 						"dtype": "fp32",
@@ -18293,11 +22223,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sam-vit-l": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 1844.027,
+						"dtype": "fp32",
+						"alloc": 6292,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1373.421,
 						"dtype": "fp32",
@@ -18305,11 +22242,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sam2.1-hiera-base-plus": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 543.401,
+						"dtype": "fp32",
+						"alloc": 4874,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 423.706,
 						"dtype": "fp32",
@@ -18317,11 +22261,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sam2.1-hiera-large": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 721.705,
+						"dtype": "fp32",
+						"alloc": 3860,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 613.356,
 						"dtype": "fp32",
@@ -18329,11 +22280,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sam2.1-hiera-small": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 217.367,
+						"dtype": "fp32",
+						"alloc": 3071,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 177.427,
 						"dtype": "fp32",
@@ -18341,11 +22299,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sam2.1-hiera-tiny": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 193.279,
+						"dtype": "fp32",
+						"alloc": 3044,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 150.995,
 						"dtype": "fp32",
@@ -18353,11 +22318,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 337.809,
+						"dtype": "fp32",
+						"alloc": 1021,
+						"reserved": null
 					}
 				},
 				"sam3": {
 					"task": "promptable_segmentation",
+					"original": {
+						"ms": 2203.386,
+						"dtype": "fp32",
+						"alloc": 4842,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3619.606,
 						"dtype": "fp32",
@@ -18365,11 +22343,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 4991.99,
+						"dtype": "fp32",
+						"alloc": 2262,
+						"reserved": null
 					}
 				},
 				"deeplabv3-r101-d8-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
 					"portable": {
 						"ms": 527.871,
 						"dtype": "fp16",
@@ -18377,11 +22366,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2113.81,
+						"dtype": "fp32",
+						"alloc": 3017,
+						"reserved": null
 					}
 				},
 				"deeplabv3plus-r101-d8-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
 					"portable": {
 						"ms": 430.161,
 						"dtype": "fp16",
@@ -18389,11 +22389,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2226.546,
+						"dtype": "fp32",
+						"alloc": 2703,
+						"reserved": null
 					}
 				},
 				"dinov2-b-linear-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 491.056,
+						"dtype": "fp32",
+						"alloc": 3325,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 408.886,
 						"dtype": "fp32",
@@ -18401,11 +22414,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1238.923,
+						"dtype": "fp32",
+						"alloc": 1888,
+						"reserved": null
 					}
 				},
 				"dinov2-l-linear-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 1234.744,
+						"dtype": "fp32",
+						"alloc": 5570,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1032.479,
 						"dtype": "fp32",
@@ -18413,11 +22439,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2934.761,
+						"dtype": "fp32",
+						"alloc": 2759,
+						"reserved": null
 					}
 				},
 				"dinov2-s-linear-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 263.716,
+						"dtype": "fp32",
+						"alloc": 2830,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 223.978,
 						"dtype": "fp32",
@@ -18425,11 +22464,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 811.014,
+						"dtype": "fp32",
+						"alloc": 1547,
+						"reserved": null
 					}
 				},
 				"eomt-l-dinov2-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 732.518,
+						"dtype": "fp32",
+						"alloc": 7112,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 540.048,
 						"dtype": "fp16",
@@ -18437,11 +22489,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"eomt-l-dinov3-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 782.226,
+						"dtype": "fp32",
+						"alloc": 6918,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 574.509,
 						"dtype": "fp16",
@@ -18449,11 +22511,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3434.952,
+						"dtype": "fp32",
+						"alloc": 3261,
+						"reserved": null
 					}
 				},
 				"fcn-r101-d8-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
 					"portable": {
 						"ms": 405.249,
 						"dtype": "fp16",
@@ -18461,11 +22534,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2045.686,
+						"dtype": "fp32",
+						"alloc": 2964,
+						"reserved": null
 					}
 				},
 				"hrnet-w48-fcn-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
 					"portable": {
 						"ms": 228.267,
 						"dtype": "fp16",
@@ -18473,11 +22557,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"mask2former-swinl-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 932.919,
+						"dtype": "fp32",
+						"alloc": 7342,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 909.488,
 						"dtype": "fp32",
@@ -18485,11 +22576,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2202.482,
+						"dtype": "fp32",
+						"alloc": 3836,
+						"reserved": null
 					}
 				},
 				"oneformer-swinl-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 1126.75,
 						"dtype": "fp32",
@@ -18497,11 +22598,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2716.03,
+						"dtype": "fp32",
+						"alloc": 6271,
+						"reserved": null
 					}
 				},
 				"pspnet-r101-d8-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
 					"portable": {
 						"ms": 410.846,
 						"dtype": "fp16",
@@ -18509,11 +22621,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"sapiens-seg-0.3b-goliath": {
 					"task": "segmentation",
+					"original": {
+						"ms": 4353.931,
+						"dtype": "fp32",
+						"alloc": 4741,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1517.056,
 						"dtype": "fp16",
@@ -18521,11 +22640,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 4787.58,
+						"dtype": "fp32",
+						"alloc": 5725,
+						"reserved": null
 					}
 				},
 				"sapiens-seg-1b-goliath": {
 					"task": "segmentation",
+					"original": {
+						"ms": 6308.164,
+						"dtype": "fp32",
+						"alloc": 7360,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3112.873,
 						"dtype": "fp16",
@@ -18533,11 +22665,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"segformer-b0-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 146.849,
+						"dtype": "fp32",
+						"alloc": 4085,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 105.693,
 						"dtype": "fp32",
@@ -18545,11 +22684,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 967.776,
+						"dtype": "fp32",
+						"alloc": 943,
+						"reserved": null
 					}
 				},
 				"segformer-b5-ade20k": {
 					"task": "segmentation",
+					"original": {
+						"ms": 851.728,
+						"dtype": "fp32",
+						"alloc": 5348,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 427.695,
 						"dtype": "fp32",
@@ -18557,11 +22709,92 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"segnext-mscan-b-ade20k": {
+					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
+					"portable": {
+						"ms": 184.121,
+						"dtype": "fp16",
+						"alloc": 1659,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"segnext-mscan-l-ade20k": {
+					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
+					"portable": {
+						"ms": 268.202,
+						"dtype": "fp16",
+						"alloc": 1840,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"segnext-mscan-s-ade20k": {
+					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
+					"portable": {
+						"ms": 134.449,
+						"dtype": "fp16",
+						"alloc": 1556,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					}
+				},
+				"segnext-mscan-t-ade20k": {
+					"task": "segmentation",
+					"original": {
+						"status": "unsupported",
+						"why": "the original needs mmcv's compiled ops (mmcv._ext), which mmcv does not ship for macOS"
+					},
+					"portable": {
+						"ms": 117.503,
+						"dtype": "fp16",
+						"alloc": 1445,
+						"reserved": null
+					},
+					"kernels": {
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1825.77,
+						"dtype": "fp32",
+						"alloc": 794,
+						"reserved": null
 					}
 				},
 				"aanet-plus-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 870.334,
+						"dtype": "fp32",
+						"alloc": 6805,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 989.914,
 						"dtype": "fp32",
@@ -18573,10 +22806,22 @@
 						"dtype": "fp16",
 						"alloc": 3754,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 8037.963,
+						"dtype": "fp32",
+						"alloc": 10580,
+						"reserved": null
 					}
 				},
 				"aanet-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 812.957,
+						"dtype": "fp32",
+						"alloc": 3710,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 911.633,
 						"dtype": "fp32",
@@ -18588,10 +22833,22 @@
 						"dtype": "fp16",
 						"alloc": 2606,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 3577.237,
+						"dtype": "fp32",
+						"alloc": 4962,
+						"reserved": null
 					}
 				},
 				"bridgedepth-rvc-pretrain": {
 					"task": "stereo",
+					"original": {
+						"ms": 4415.755,
+						"dtype": "fp32",
+						"alloc": 7028,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4375.027,
 						"dtype": "fp32",
@@ -18603,10 +22860,22 @@
 						"dtype": "fp16",
 						"alloc": 5100,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 29443.396,
+						"dtype": "fp32",
+						"alloc": 9083,
+						"reserved": null
 					}
 				},
 				"bridgedepth-sf": {
 					"task": "stereo",
+					"original": {
+						"ms": 4278.636,
+						"dtype": "fp32",
+						"alloc": 7464,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4279.862,
 						"dtype": "fp32",
@@ -18618,10 +22887,22 @@
 						"dtype": "fp16",
 						"alloc": 6270,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 18988.979,
+						"dtype": "fp32",
+						"alloc": 10240,
+						"reserved": null
 					}
 				},
 				"c-fast-foundationstereo": {
 					"task": "stereo",
+					"original": {
+						"ms": 7561.585,
+						"dtype": "fp32",
+						"alloc": 13037,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4881.287,
 						"dtype": "fp32",
@@ -18629,20 +22910,40 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 178284.641,
+						"dtype": "fp32",
+						"alloc": 17051,
+						"reserved": null
 					}
 				},
 				"c-foundationstereo-s": {
 					"task": "stereo",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"status": "oom"
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"cas-gwcnet-c-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 7909.384,
+						"dtype": "fp32",
+						"alloc": 9174,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2488.525,
 						"dtype": "fp16",
@@ -18650,11 +22951,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 94076.398,
+						"dtype": "fp32",
+						"alloc": 24409,
+						"reserved": null
 					}
 				},
 				"cas-gwcnet-gc-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 2995.289,
 						"dtype": "fp16",
@@ -18662,11 +22973,21 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 127836.475,
+						"dtype": "fp32",
+						"alloc": 24110,
+						"reserved": null
 					}
 				},
 				"cfnet-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"status": "oom"
 					},
@@ -18675,10 +22996,22 @@
 						"dtype": "fp16",
 						"alloc": 5416,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 61263.063,
+						"dtype": "fp32",
+						"alloc": 13737,
+						"reserved": null
 					}
 				},
 				"coex-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 1023.892,
+						"dtype": "fp32",
+						"alloc": 5473,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 411.053,
 						"dtype": "fp16",
@@ -18686,7 +23019,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1632.046,
+						"dtype": "fp32",
+						"alloc": 6131,
+						"reserved": null
 					}
 				},
 				"crestereo-eth3d": {
@@ -18702,10 +23042,19 @@
 						"dtype": "fp16",
 						"alloc": 2804,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 21063.132,
+						"dtype": "fp32",
+						"alloc": 3963,
+						"reserved": null
 					}
 				},
 				"defom-stereo-vitl-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 11105.073,
 						"dtype": "fp32",
@@ -18717,10 +23066,22 @@
 						"dtype": "fp16",
 						"alloc": 8328,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 75468.775,
+						"dtype": "fp32",
+						"alloc": 17710,
+						"reserved": null
 					}
 				},
 				"dlnr-middlebury": {
 					"task": "stereo",
+					"original": {
+						"ms": 3257.038,
+						"dtype": "fp32",
+						"alloc": 7472,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2142.85,
 						"dtype": "fp16",
@@ -18728,11 +23089,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 68465.904,
+						"dtype": "fp32",
+						"alloc": 11381,
+						"reserved": null
 					}
 				},
 				"dlnr-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 3258.13,
+						"dtype": "fp32",
+						"alloc": 7469,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 2142.551,
 						"dtype": "fp16",
@@ -18740,11 +23114,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 78302.424,
+						"dtype": "fp32",
+						"alloc": 11854,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-generalization": {
 					"task": "stereo",
+					"original": {
+						"ms": 1334.207,
+						"dtype": "fp32",
+						"alloc": 4975,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 944.392,
 						"dtype": "fp32",
@@ -18752,11 +23139,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 7246.456,
+						"dtype": "fp32",
+						"alloc": 10666,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-kitti12": {
 					"task": "stereo",
+					"original": {
+						"ms": 1333.747,
+						"dtype": "fp32",
+						"alloc": 4976,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 941.736,
 						"dtype": "fp32",
@@ -18764,11 +23164,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5329.98,
+						"dtype": "fp32",
+						"alloc": 10686,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-kitti15": {
 					"task": "stereo",
+					"original": {
+						"ms": 1333.524,
+						"dtype": "fp32",
+						"alloc": 4974,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 942.79,
 						"dtype": "fp32",
@@ -18776,11 +23189,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5173.95,
+						"dtype": "fp32",
+						"alloc": 11275,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-plus-generalization": {
 					"task": "stereo",
+					"original": {
+						"ms": 1763.53,
+						"dtype": "fp32",
+						"alloc": 4992,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1321.521,
 						"dtype": "fp32",
@@ -18788,11 +23214,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5702.051,
+						"dtype": "fp32",
+						"alloc": 11855,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-plus-kitti12": {
 					"task": "stereo",
+					"original": {
+						"ms": 1761.076,
+						"dtype": "fp32",
+						"alloc": 3963,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1321.194,
 						"dtype": "fp32",
@@ -18800,11 +23239,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5190.671,
+						"dtype": "fp32",
+						"alloc": 11590,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-plus-kitti15": {
 					"task": "stereo",
+					"original": {
+						"ms": 1761.836,
+						"dtype": "fp32",
+						"alloc": 4991,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1322.022,
 						"dtype": "fp32",
@@ -18812,11 +23264,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3116.661,
+						"dtype": "fp32",
+						"alloc": 11129,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-plus-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 1762.054,
+						"dtype": "fp32",
+						"alloc": 3962,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1321.658,
 						"dtype": "fp32",
@@ -18824,11 +23289,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3430.365,
+						"dtype": "fp32",
+						"alloc": 11535,
+						"reserved": null
 					}
 				},
 				"fast-acvnet-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 1333.091,
+						"dtype": "fp32",
+						"alloc": 4980,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 941.837,
 						"dtype": "fp32",
@@ -18836,7 +23314,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5299.865,
+						"dtype": "fp32",
+						"alloc": 10924,
+						"reserved": null
 					}
 				},
 				"fast-foundationstereo": {
@@ -18848,7 +23333,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 256189.563,
+						"dtype": "fp32",
+						"alloc": 17052,
+						"reserved": null
 					}
 				},
 				"foundationstereo-vit-l": {
@@ -18863,6 +23355,12 @@
 						"ms": 24480.347,
 						"dtype": "fp16",
 						"alloc": 13277,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 260095.098,
+						"dtype": "fp32",
+						"alloc": 17475,
 						"reserved": null
 					}
 				},
@@ -18939,10 +23437,22 @@
 						"dtype": "fp16",
 						"alloc": 10126,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 380765.918,
+						"dtype": "fp32",
+						"alloc": 19901,
+						"reserved": null
 					}
 				},
 				"gwcnet-g-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 6074.267,
+						"dtype": "fp32",
+						"alloc": 10858,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4340.146,
 						"dtype": "fp32",
@@ -18950,11 +23460,15 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"gwcnet-gc-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 4461.437,
 						"dtype": "fp32",
@@ -18962,7 +23476,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 233258.725,
+						"dtype": "fp32",
+						"alloc": 32421,
+						"reserved": null
 					}
 				},
 				"hitnet-eth3d": {
@@ -18977,6 +23498,12 @@
 						"ms": 136.13,
 						"dtype": "fp16",
 						"alloc": 2486,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 1374.9,
+						"dtype": "fp32",
+						"alloc": 6413,
 						"reserved": null
 					}
 				},
@@ -18997,6 +23524,12 @@
 				},
 				"igev-plusplus-eth3d": {
 					"task": "stereo",
+					"original": {
+						"ms": 9851.33,
+						"dtype": "fp32",
+						"alloc": 7730,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 8613.476,
 						"dtype": "fp16",
@@ -19012,6 +23545,12 @@
 				},
 				"igev-plusplus-kitti12": {
 					"task": "stereo",
+					"original": {
+						"ms": 9778.721,
+						"dtype": "fp32",
+						"alloc": 7841,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 8605.861,
 						"dtype": "fp16",
@@ -19027,6 +23566,12 @@
 				},
 				"igev-plusplus-kitti15": {
 					"task": "stereo",
+					"original": {
+						"ms": 11619.032,
+						"dtype": "fp32",
+						"alloc": 8295,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 8597.146,
 						"dtype": "fp16",
@@ -19042,6 +23587,12 @@
 				},
 				"igev-plusplus-middlebury": {
 					"task": "stereo",
+					"original": {
+						"ms": 9785.404,
+						"dtype": "fp32",
+						"alloc": 8179,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 8595.056,
 						"dtype": "fp16",
@@ -19057,6 +23608,12 @@
 				},
 				"igev-plusplus-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 10992.486,
+						"dtype": "fp32",
+						"alloc": 7860,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 8602.462,
 						"dtype": "fp16",
@@ -19068,10 +23625,22 @@
 						"dtype": "fp16",
 						"alloc": 4972,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 39352.025,
+						"dtype": "fp32",
+						"alloc": 11966,
+						"reserved": null
 					}
 				},
 				"igev-stereo-eth3d": {
 					"task": "stereo",
+					"original": {
+						"ms": 6626.804,
+						"dtype": "fp32",
+						"alloc": 7008,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6406.788,
 						"dtype": "fp32",
@@ -19087,6 +23656,12 @@
 				},
 				"igev-stereo-kitti12": {
 					"task": "stereo",
+					"original": {
+						"ms": 6805.388,
+						"dtype": "fp32",
+						"alloc": 7022,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6410.957,
 						"dtype": "fp32",
@@ -19102,6 +23677,12 @@
 				},
 				"igev-stereo-kitti15": {
 					"task": "stereo",
+					"original": {
+						"ms": 6841.225,
+						"dtype": "fp32",
+						"alloc": 5985,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6406.717,
 						"dtype": "fp32",
@@ -19117,6 +23698,12 @@
 				},
 				"igev-stereo-middlebury": {
 					"task": "stereo",
+					"original": {
+						"ms": 5659.568,
+						"dtype": "fp32",
+						"alloc": 7012,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6407.638,
 						"dtype": "fp32",
@@ -19132,6 +23719,12 @@
 				},
 				"igev-stereo-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 5949.459,
+						"dtype": "fp32",
+						"alloc": 5984,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6422.998,
 						"dtype": "fp32",
@@ -19143,10 +23736,22 @@
 						"dtype": "fp16",
 						"alloc": 3793,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 29175.437,
+						"dtype": "fp32",
+						"alloc": 11505,
+						"reserved": null
 					}
 				},
 				"las2-h": {
 					"task": "stereo",
+					"original": {
+						"ms": 1306.061,
+						"dtype": "fp32",
+						"alloc": 5643,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1271.34,
 						"dtype": "fp32",
@@ -19162,6 +23767,12 @@
 				},
 				"las2-l": {
 					"task": "stereo",
+					"original": {
+						"ms": 603.684,
+						"dtype": "fp32",
+						"alloc": 4740,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 575.636,
 						"dtype": "fp32",
@@ -19177,6 +23788,12 @@
 				},
 				"las2-m": {
 					"task": "stereo",
+					"original": {
+						"ms": 327.035,
+						"dtype": "fp32",
+						"alloc": 4615,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 299.559,
 						"dtype": "fp32",
@@ -19192,6 +23809,12 @@
 				},
 				"las2-s": {
 					"task": "stereo",
+					"original": {
+						"ms": 272.966,
+						"dtype": "fp32",
+						"alloc": 4556,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 244.853,
 						"dtype": "fp32",
@@ -19203,10 +23826,22 @@
 						"dtype": "fp16",
 						"alloc": 2620,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 1049.403,
+						"dtype": "fp32",
+						"alloc": 2825,
+						"reserved": null
 					}
 				},
 				"mocha-v1-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 8560.647,
+						"dtype": "fp32",
+						"alloc": 8058,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 7967.282,
 						"dtype": "fp16",
@@ -19218,10 +23853,22 @@
 						"dtype": "fp16",
 						"alloc": 5695,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 38734.582,
+						"dtype": "fp32",
+						"alloc": 12992,
+						"reserved": null
 					}
 				},
 				"mocha-v2-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 7685.154,
+						"dtype": "fp32",
+						"alloc": 9037,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 7766.169,
 						"dtype": "fp16",
@@ -19237,6 +23884,12 @@
 				},
 				"monster-mix-all": {
 					"task": "stereo",
+					"original": {
+						"ms": 20935.716,
+						"dtype": "fp32",
+						"alloc": 12856,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11376.833,
 						"dtype": "fp16",
@@ -19252,6 +23905,12 @@
 				},
 				"monster-plusplus-mix-all": {
 					"task": "stereo",
+					"original": {
+						"ms": 17463.516,
+						"dtype": "fp32",
+						"alloc": 12920,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11875.781,
 						"dtype": "fp16",
@@ -19263,10 +23922,22 @@
 						"dtype": "fp16",
 						"alloc": 7347,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 73937.495,
+						"dtype": "fp32",
+						"alloc": 14155,
+						"reserved": null
 					}
 				},
 				"monster-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 18671.829,
+						"dtype": "fp32",
+						"alloc": 13435,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 11368.306,
 						"dtype": "fp16",
@@ -19278,10 +23949,22 @@
 						"dtype": "fp16",
 						"alloc": 6299,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 69099.939,
+						"dtype": "fp32",
+						"alloc": 13647,
+						"reserved": null
 					}
 				},
 				"nmrf-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 1735.792,
+						"dtype": "fp32",
+						"alloc": 7232,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 1560.442,
 						"dtype": "fp32",
@@ -19293,10 +23976,22 @@
 						"dtype": "fp16",
 						"alloc": 3806,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 8513.059,
+						"dtype": "fp32",
+						"alloc": 6528,
+						"reserved": null
 					}
 				},
 				"psmnet-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 6065.795,
+						"dtype": "fp32",
+						"alloc": 10870,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 4615.163,
 						"dtype": "fp32",
@@ -19304,11 +23999,24 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 341681.312,
+						"dtype": "fp32",
+						"alloc": 31573,
+						"reserved": null
 					}
 				},
 				"raft-stereo-eth3d": {
 					"task": "stereo",
+					"original": {
+						"ms": 5162.38,
+						"dtype": "fp32",
+						"alloc": 9712,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3936.653,
 						"dtype": "fp16",
@@ -19324,6 +24032,12 @@
 				},
 				"raft-stereo-middlebury": {
 					"task": "stereo",
+					"original": {
+						"ms": 5574.108,
+						"dtype": "fp32",
+						"alloc": 9545,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3939.636,
 						"dtype": "fp16",
@@ -19335,10 +24049,22 @@
 						"dtype": "fp16",
 						"alloc": 4722,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 30615.25,
+						"dtype": "fp32",
+						"alloc": 9950,
+						"reserved": null
 					}
 				},
 				"raft-stereo-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 5065.983,
+						"dtype": "fp32",
+						"alloc": 9437,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3937.505,
 						"dtype": "fp16",
@@ -19354,6 +24080,12 @@
 				},
 				"rt-monster-plusplus-mix-all": {
 					"task": "stereo",
+					"original": {
+						"ms": 916.584,
+						"dtype": "fp32",
+						"alloc": 6269,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 663.259,
 						"dtype": "fp32",
@@ -19361,11 +24093,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3348.053,
+						"dtype": "fp32",
+						"alloc": 7101,
+						"reserved": null
 					}
 				},
 				"s2m2-l": {
 					"task": "stereo",
+					"original": {
+						"status": "unsupported",
+						"why": "the original's adaptive pooling needs input sizes divisible by the output size on MPS"
+					},
 					"portable": {
 						"ms": 6589.698,
 						"dtype": "fp16",
@@ -19373,11 +24116,16 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"s2m2-m": {
 					"task": "stereo",
+					"original": {
+						"status": "unsupported",
+						"why": "the original's adaptive pooling needs input sizes divisible by the output size on MPS"
+					},
 					"portable": {
 						"ms": 3620.396,
 						"dtype": "fp16",
@@ -19385,11 +24133,16 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"s2m2-s": {
 					"task": "stereo",
+					"original": {
+						"status": "unsupported",
+						"why": "the original's adaptive pooling needs input sizes divisible by the output size on MPS"
+					},
 					"portable": {
 						"ms": 1607.273,
 						"dtype": "fp16",
@@ -19397,11 +24150,22 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 7975.325,
+						"dtype": "fp32",
+						"alloc": 11254,
+						"reserved": null
 					}
 				},
 				"s2m2-xl": {
 					"task": "stereo",
+					"original": {
+						"status": "unsupported",
+						"why": "the original's adaptive pooling needs input sizes divisible by the output size on MPS"
+					},
 					"portable": {
 						"ms": 13398.109,
 						"dtype": "fp16",
@@ -19409,11 +24173,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"selective-igev-eth3d-finetune": {
 					"task": "stereo",
+					"original": {
+						"ms": 8184.012,
+						"dtype": "fp32",
+						"alloc": 7003,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6991.015,
 						"dtype": "fp16",
@@ -19429,6 +24200,12 @@
 				},
 				"selective-igev-eth3d-train": {
 					"task": "stereo",
+					"original": {
+						"ms": 8191.553,
+						"dtype": "fp32",
+						"alloc": 7002,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6968.719,
 						"dtype": "fp16",
@@ -19444,6 +24221,12 @@
 				},
 				"selective-igev-kitti12": {
 					"task": "stereo",
+					"original": {
+						"ms": 8197.396,
+						"dtype": "fp32",
+						"alloc": 6999,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6971.087,
 						"dtype": "fp16",
@@ -19459,6 +24242,12 @@
 				},
 				"selective-igev-kitti15": {
 					"task": "stereo",
+					"original": {
+						"ms": 8193.643,
+						"dtype": "fp32",
+						"alloc": 7002,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6963.487,
 						"dtype": "fp16",
@@ -19474,6 +24263,12 @@
 				},
 				"selective-igev-middlebury-finetune": {
 					"task": "stereo",
+					"original": {
+						"ms": 8198.137,
+						"dtype": "fp32",
+						"alloc": 7003,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6988.509,
 						"dtype": "fp16",
@@ -19489,6 +24284,12 @@
 				},
 				"selective-igev-middlebury-train": {
 					"task": "stereo",
+					"original": {
+						"ms": 8195.342,
+						"dtype": "fp32",
+						"alloc": 7003,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 7205.972,
 						"dtype": "fp16",
@@ -19504,6 +24305,12 @@
 				},
 				"selective-igev-sceneflow": {
 					"task": "stereo",
+					"original": {
+						"ms": 8195.87,
+						"dtype": "fp32",
+						"alloc": 7002,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 6968.142,
 						"dtype": "fp16",
@@ -19515,10 +24322,19 @@
 						"dtype": "fp16",
 						"alloc": 3907,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 37675.091,
+						"dtype": "fp32",
+						"alloc": 13243,
+						"reserved": null
 					}
 				},
 				"waft-stereo-b": {
 					"task": "stereo",
+					"original": {
+						"status": "oom"
+					},
 					"portable": {
 						"ms": 11022.221,
 						"dtype": "fp32",
@@ -19526,11 +24342,18 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
 					}
 				},
 				"waft-stereo-s": {
 					"task": "stereo",
+					"original": {
+						"ms": 4098.359,
+						"dtype": "fp32",
+						"alloc": 10164,
+						"reserved": null
+					},
 					"portable": {
 						"ms": 3360.392,
 						"dtype": "fp32",
@@ -19538,7 +24361,14 @@
 						"reserved": null
 					},
 					"kernels": {
-						"status": "unsupported"
+						"status": "unsupported",
+						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 12200.146,
+						"dtype": "fp32",
+						"alloc": 9329,
+						"reserved": null
 					}
 				}
 			}
@@ -19568,6 +24398,7 @@
 				"classification",
 				"features"
 			],
+			"cpu": null,
 			"times": {
 				"alexnet": {
 					"task": "classification",
@@ -21381,6 +26212,7 @@
 				"classification",
 				"features"
 			],
+			"cpu": null,
 			"times": {
 				"alexnet": {
 					"task": "classification",
@@ -23194,6 +28026,7 @@
 				"classification",
 				"features"
 			],
+			"cpu": null,
 			"times": {
 				"alexnet": {
 					"task": "classification",
@@ -25007,6 +29840,7 @@
 				"classification",
 				"features"
 			],
+			"cpu": null,
 			"times": {
 				"alexnet": {
 					"task": "classification",
@@ -26790,6 +31624,7 @@
 				"classification",
 				"features"
 			],
+			"cpu": null,
 			"times": {
 				"alexnet": {
 					"task": "classification",

@@ -258,9 +258,13 @@ const ref = readFileSync(resolve(repo, 'docs/overview.md'), 'utf8').match(/Measu
 // Other devices: docs/data/devices.toml lists them, docs/data/speed/<slug>.jsonl holds their survey rows. The
 // reference device's numbers are the overview's (above); a survey device gets, per model and mode, its fastest
 // passing row over all dtypes (the rule of the device pages: ok and not a golden fail), else the reason it has none.
+// The authors' original code (`upstream` rows) only where it was run on that device, so far Apple silicon.
 // Memory of the fastest row: torch peak allocated / reserved on CUDA, the process footprint on Apple (no reserved).
-type Cell = { ms: number; dtype: string; alloc: number | null; reserved: number | null } | { status: string };
+type Cell =
+	| { ms: number; dtype: string; alloc: number | null; reserved: number | null }
+	| { status: string; why?: string };
 type SurveyRow = {
+	note?: string;
 	ref: string;
 	task: string;
 	mode: string;
@@ -286,6 +290,43 @@ for (const line of readFileSync(resolve(repo, 'docs/data/devices.toml'), 'utf8')
 const modelIds = new Set(tasks.flatMap((t) => t.models.map((m) => m.id)));
 // Survey rows use full timm ids (`alexnet.tv_in1k`), the overview the bare architecture (`alexnet`).
 const modelId = (ref: string) => (modelIds.has(ref) ? ref : ref.split('.')[0]);
+type Times = Record<string, { task: string; original?: Cell; portable?: Cell; kernels?: Cell; cpu?: Cell }>;
+/** A survey device's rows and, per model and mode, its fastest passing row (else the reason it has none). */
+function survey(slug: string): { rows: SurveyRow[]; times: Times } {
+	const rows = readFileSync(resolve(repo, `docs/data/speed/${slug}.jsonl`), 'utf8')
+		.split('\n')
+		.filter(Boolean)
+		.map((l) => JSON.parse(l) as SurveyRow);
+	const times: Times = {};
+	const KEY: Record<string, 'original' | 'portable' | 'kernels'> = {
+		upstream: 'original',
+		portable: 'portable',
+		kernels: 'kernels'
+	};
+	for (const r of rows) {
+		const key = KEY[r.mode];
+		if (!key) continue;
+		const id = modelId(r.ref);
+		if (!modelIds.has(id)) throw new Error(`${slug}: survey row for unknown model ${r.ref}`);
+		const entry = (times[id] ??= { task: r.task });
+		const prev = entry[key];
+		if (r.status === 'ok' && r.golden !== 'fail' && typeof r.ms === 'number') {
+			if (!prev || !('ms' in prev) || r.ms < prev.ms)
+				entry[key] = {
+					ms: r.ms,
+					dtype: DTYPE[r.dtype] ?? r.dtype,
+					alloc: r.peak_alloc_mb ?? r.peak_footprint_mb ?? null,
+					reserved: r.peak_reserved_mb ?? null
+				};
+		} else if (!prev)
+			entry[key] = {
+				status: r.golden === 'fail' ? 'golden fail' : r.status,
+				...(r.note ? { why: r.note } : {})
+			};
+	}
+	return { rows, times };
+}
+
 // `hidden = true`: measured and kept in the repo, but not published (the docs give it no page either).
 const devices = Object.entries(toml)
 	.filter(([, d]) => d.hidden !== true)
@@ -301,34 +342,29 @@ const devices = Object.entries(toml)
 			page: d.reference === true ? '/benchmarks' : `/devices/${slug}`
 		};
 		if (base.reference)
-			return { ...base, measured: null, memory_kind: 'torch-peak', tasks: tasks.map((t) => t.id), times: null };
-		const rows = readFileSync(resolve(repo, `docs/data/speed/${slug}.jsonl`), 'utf8')
-			.split('\n')
-			.filter(Boolean)
-			.map((l) => JSON.parse(l) as SurveyRow);
-		const times: Record<string, { task: string; portable?: Cell; kernels?: Cell }> = {};
-		for (const r of rows) {
-			if (r.mode !== 'portable' && r.mode !== 'kernels') continue;
-			const id = modelId(r.ref);
-			if (!modelIds.has(id)) throw new Error(`${slug}: survey row for unknown model ${r.ref}`);
-			const entry = (times[id] ??= { task: r.task });
-			const prev = entry[r.mode];
-			if (r.status === 'ok' && r.golden !== 'fail' && typeof r.ms === 'number') {
-				if (!prev || !('ms' in prev) || r.ms < prev.ms)
-					entry[r.mode] = {
-						ms: r.ms,
-						dtype: DTYPE[r.dtype] ?? r.dtype,
-						alloc: r.peak_alloc_mb ?? r.peak_footprint_mb ?? null,
-						reserved: r.peak_reserved_mb ?? null
-					};
-			} else if (!prev) entry[r.mode] = { status: r.golden === 'fail' ? 'golden fail' : r.status };
-		}
+			return {
+				...base,
+				measured: null,
+				memory_kind: 'torch-peak',
+				tasks: tasks.map((t) => t.id),
+				cpu: null,
+				times: null
+			};
+		const { rows, times } = survey(slug);
+		// The same chip's CPU cores (a hidden device of the same `match`): its portable time next to the GPU's.
+		const cpu = Object.entries(toml).find(
+			([s, x]) => s !== slug && x.backend === 'cpu' && x.match === d.match && d.backend !== 'cpu'
+		);
+		if (cpu)
+			for (const [id, t] of Object.entries(survey(cpu[0]).times))
+				if (times[id] && t.portable) times[id].cpu = t.portable;
 		const dates = rows.map((r) => r.date).sort();
 		return {
 			...base,
 			measured: { from: dates[0], to: dates.at(-1), rows: rows.length },
 			memory_kind: rows.find((r) => r.memory_kind)?.memory_kind ?? null,
 			tasks: TASK_ORDER_SYNC.filter((t) => Object.values(times).some((e) => e.task === t)),
+			cpu: cpu ? { name: String(cpu[1].name), details: String(cpu[1].details ?? '') } : null,
 			times
 		};
 	});
@@ -362,3 +398,54 @@ console.log(
 	`wrote ${out}: ${tasks.length} tasks, ${tasks.reduce((n, t) => n + t.models.length, 0)} timed rows, ` +
 		`${list.length} models, ${devices.length} devices, commit ${commit}`
 );
+
+// The "Compare models" view of /models: every benchmark of a task with each model's result, taken from the cards
+// (kernels; portable where a model has no kernels). Small enough for the list page, which loads no card.
+{
+	type Metric = { key: string; format: string; optional: boolean; lower: boolean };
+	type Run = { dtype: string | null; metrics: Record<string, number>; error: string | null } | null;
+	type Quality = {
+		id: string;
+		title: string;
+		noun: string;
+		overlap: string | null;
+		metrics: Metric[];
+		modes: Record<string, Run>;
+	};
+	type CardFile = { task: string; variants: { id: string; quality: Quality[] }[] };
+	const byTask: Record<
+		string,
+		{
+			datasets: (Omit<Quality, 'modes'> & { count: number })[];
+			results: Record<string, Record<string, { mode: 'kernels' | 'portable'; metrics: Record<string, number> }>>;
+		}
+	> = {};
+	for (const f of readdirSync(cardsDir).filter((f) => f.endsWith('.json') && f !== 'index.json')) {
+		const card = JSON.parse(readFileSync(resolve(cardsDir, f), 'utf8')) as CardFile;
+		const t = (byTask[card.task] ??= { datasets: [], results: {} });
+		for (const v of card.variants)
+			for (const q of v.quality) {
+				const mode =
+					q.modes.kernels && !q.modes.kernels.error
+						? 'kernels'
+						: q.modes.portable && !q.modes.portable.error
+							? 'portable'
+							: null;
+				if (!mode) continue;
+				let d = t.datasets.find((x) => x.id === q.id);
+				if (!d)
+					t.datasets.push((d = { id: q.id, title: q.title, noun: q.noun, overlap: q.overlap, metrics: [], count: 0 }));
+				d.count += 1;
+				const run = q.modes[mode]!;
+				// Optional metrics only where some model reports them.
+				for (const m of q.metrics)
+					if (!d.metrics.some((x) => x.key === m.key) && (!m.optional || m.key in run.metrics)) d.metrics.push(m);
+				(t.results[v.id] ??= {})[q.id] = { mode, metrics: run.metrics };
+			}
+	}
+	// Most widely measured benchmark first.
+	for (const t of Object.values(byTask)) t.datasets.sort((a, b) => b.count - a.count || a.id.localeCompare(b.id));
+	const benchOut = resolve('src/lib/data/benchmarks.json');
+	writeFileSync(benchOut, JSON.stringify(byTask) + '\n');
+	console.log(`wrote ${benchOut}: ${Object.values(byTask).reduce((n, t) => n + t.datasets.length, 0)} benchmarks`);
+}

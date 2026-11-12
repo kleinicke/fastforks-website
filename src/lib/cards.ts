@@ -290,7 +290,10 @@ export const METRIC_LABEL: Record<string, string> = {
 	top1: 'top-1 %',
 	top5: 'top-5 %',
 	keypoint_ap: 'keypoint AP',
-	fl_all: 'Fl-all %'
+	fl_all: 'Fl-all %',
+	auc5: 'AUC@5°',
+	auc10: 'AUC@10°',
+	auc20: 'AUC@20°'
 };
 
 /** The faster original run (fp16 or fp32): what the docs' speed-ups use, a conservative headline. */

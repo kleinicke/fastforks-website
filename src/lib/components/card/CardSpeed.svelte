@@ -25,6 +25,8 @@
 		first: number | undefined;
 		state: 'ok' | 'oom' | 'missing' | 'fails';
 		note: string;
+		/** A short qualifier after the memory value (TensorRT: what the number covers). */
+		memNote?: string;
 		kind: 'original' | 'ours' | 'extra' | 'network';
 		see?: { variant: Variant; input: string } | null;
 	};
@@ -101,9 +103,8 @@
 					load: r.setup_s ?? undefined,
 					first: undefined,
 					state: 'ok',
-					note: [r.part && (r.part.endsWith(' only') ? r.part : `${r.part} only`),key === 'tensorrt' && r.device_mb ? 'memory: engine device memory' : '']
-						.filter(Boolean)
-						.join('; '),
+					note: r.part ? (r.part.endsWith(' only') ? r.part : `${r.part} only`) : '',
+					memNote: key === 'tensorrt' && r.device_mb ? 'engine' : undefined,
 					kind: 'extra'
 				});
 				// The engine is the network on crops only: with our portable crop and decode around it, a whole call.
@@ -199,7 +200,11 @@
 								<span class:fast={x > 1.05} class:slow={x < 0.95}>{x >= 10 ? x.toFixed(0) : x.toFixed(x >= 1 ? 1 : 2)}×</span>
 							{:else}–{/if}
 						</td>
-						<td class="num">{#if r.state === 'ok'}{mib(r.alloc)}{#if r.reserved !== null && r.reserved !== undefined}<span class="sep"> / </span>{mib(r.reserved)}{/if}{:else}–{/if}</td>
+						<td class="num">{#if r.state === 'ok'}{mib(r.alloc)}{#if r.reserved !== null && r.reserved !== undefined}<span class="sep"> / </span>{mib(r.reserved)}{/if}{#if r.memNote}<small
+									class="memnote"
+									title="The GPU memory the TensorRT engine took, measured from the driver outside PyTorch: measured differently from the PyTorch peaks of the other rows, so not comparable to them"
+									><span class="engine">{r.memNote}</span><span class="apart">not comparable</span></small
+								>{/if}{:else}–{/if}</td>
 						<td class="num">{r.load !== undefined ? (r.kind === 'extra' ? `${r.load.toFixed(0)} (build)` : r.load.toFixed(1)) : '–'}</td>
 						<td class="num">{r.first !== undefined ? r.first.toFixed(2) : '–'}</td>
 					</tr>
@@ -215,7 +220,7 @@
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}
 		{#if current.sections}The splits under Portable and Kernels come from a separate run that times each step on its own
 			(synchronised in between); the TensorRT engine covers the network only, so its full call is an estimate with
-			our crop and decode added.{/if} torch.compile and TensorRT: build time instead of load time.
+			our crop and decode added.{/if} torch.compile and TensorRT: build time instead of load time. TensorRT memory (<small>engine, not comparable</small>) is the GPU memory the engine took, read from the driver because TensorRT allocates outside PyTorch, so it can't be compared with the PyTorch peaks of the other rows.
 	</p>
 {/if}
 
@@ -322,6 +327,17 @@
 		color: var(--muted);
 		font-weight: 400;
 		font-size: 0.74rem;
+	}
+	.memnote {
+		color: var(--muted);
+		font-size: 0.72rem;
+	}
+	.memnote .engine {
+		margin-left: 0.3rem;
+	}
+	.memnote .apart {
+		display: block;
+		line-height: 1.2;
 	}
 	.missing {
 		color: var(--muted);

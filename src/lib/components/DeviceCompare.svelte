@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { UPCOMING } from '#lib/cards.ts';
+	import EmptyRows from '#lib/components/EmptyRows.svelte';
 	import { data, DEVICES, fmtMs, licenceOf, REFERENCE, shortName, TASK_META, timings, type Timing } from '#lib/site.ts';
 
 	type Key = 'rank' | 'id' | 'task' | 'mem' | `dev:${string}`;
@@ -8,8 +9,16 @@
 		query,
 		commercialOnly,
 		upcoming,
-		rank
-	}: { task: string; query: string; commercialOnly: boolean; upcoming: boolean; rank: Map<string, number> } = $props();
+		rank,
+		onupcoming
+	}: {
+		task: string;
+		query: string;
+		commercialOnly: boolean;
+		upcoming: boolean;
+		rank: Map<string, number>;
+		onupcoming: () => void;
+	} = $props();
 
 let relative = $state(false);
 	let sortKey = $state<Key>('rank');
@@ -46,16 +55,21 @@ let relative = $state(false);
 			return DEVICES.filter((d) => measured(BY_DEVICE.get(d.slug)!.get(m.key))).length >= MIN_DEVICES;
 		});
 
-	const rows = $derived.by(() => {
+	// Every filter but the upcoming toggle.
+	const matching = $derived.by(() => {
 		const q = query.trim().toLowerCase();
-		const out = MODELS.filter((m) => {
+		return MODELS.filter((m) => {
 			if (task !== 'all' && m.task !== task) return false;
 			if (commercialOnly && m.commercial !== 'yes') return false;
-			if (!upcoming && UPCOMING.has(m.id)) return false;
 			if (!q) return true;
 			const lic = licenceOf(m.id);
 			return m.id.includes(q) || !!lic?.code.toLowerCase().includes(q) || !!lic?.weights.toLowerCase().includes(q);
-		}).map((m) => {
+		});
+	});
+	const hiddenUpcoming = $derived(upcoming ? 0 : matching.filter((m) => UPCOMING.has(m.id)).length);
+
+	const rows = $derived.by(() => {
+		const out = matching.filter((m) => upcoming || !UPCOMING.has(m.id)).map((m) => {
 			const cells = DEVICES.map((d) => {
 				const t = BY_DEVICE.get(d.slug)!.get(m.key);
 				return { slug: d.slug, t, v: shown(t) };
@@ -227,7 +241,7 @@ let relative = $state(false);
 					</tr>
 				{/if}
 			{:else}
-				<tr><td colspan={cols} class="empty">No model matches.</td></tr>
+				<tr><td colspan={cols} class="empty"><EmptyRows hidden={hiddenUpcoming} onshow={onupcoming} /></td></tr>
 			{/each}
 		</tbody>
 	</table>
