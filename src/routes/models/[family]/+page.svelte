@@ -8,6 +8,7 @@
 	import CardDevices from '#lib/components/card/CardDevices.svelte';
 	import CardLicence from '#lib/components/card/CardLicence.svelte';
 	import CardExample from '#lib/components/card/CardExample.svelte';
+	import CardPose from '#lib/components/card/CardPose.svelte';
 	import { REFERENCE, TASK_META } from '#lib/site.ts';
 	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms } from '#lib/cards.ts';
 
@@ -82,16 +83,19 @@
 	const unit = $derived(card.parity.relative ? '(relative)' : card.parity.unit);
 	const kernelName = (k: string) => k.split('@')[0];
 
-	const SECTIONS = [
+	// Matchers: relative pose from the matches on the GPU (fastforks.matching.estimate_pose).
+	const pose = $derived(card.task === 'matching');
+	const SECTIONS = $derived([
 		['use', 'Use it'],
 		['speed', 'Speed and memory'],
 		['devices', 'Other devices'],
 		['licence', 'Licence and weights'],
 		['accuracy', 'Accuracy'],
+		...(pose ? [['pose', 'Relative pose on the GPU']] : []),
 		['parity', 'Closeness to the original'],
 		['details', 'Details'],
 		['example', 'Example output']
-	];
+	]);
 </script>
 
 <DocPage doc={{ title: card.name, description: card.plain }}>
@@ -221,7 +225,11 @@
 model = {meta?.pkg}.load(<span class="s">"{variant.id}"</span>)  <span class="c"># kernels on a supported GPU, else portable PyTorch</span>
 result = {meta?.call.replace(/…/g, '...')}
 result.{first}{#if others.length}  <span class="c"># also: {others.join(', ')}</span>{/if}
-result.backend  <span class="c"># what ran: mode, device, dtype, kernels</span></code
+result.backend  <span class="c"># what ran: mode, device, dtype, kernels</span>{#if pose}
+
+points1, points2 = result.matches(5000)  <span class="c"># matched pixels, sampled where the model is certain</span>
+pose = {meta?.pkg}.estimate_pose(points1, points2, K1, K2)  <span class="c"># relative pose on the GPU (RANSAC); K = intrinsics [3, 3]</span>
+pose.R, pose.t, pose.inliers  <span class="c"># rotation, unit translation, inlier mask</span>{/if}</code
 		></pre>
 	{#if nc}
 		<p class="after">
@@ -254,6 +262,11 @@ result.backend  <span class="c"># what ran: mode, device, dtype, kernels</span><
 		original’s fp32 and fp16 runs is what half precision alone costs; our runs should stay within it.
 	</p>
 	<CardQuality {card} variantId={variant.id} datasets={variant.quality} />
+
+	{#if pose}
+		<h2 id="pose">Relative pose on the GPU</h2>
+		<CardPose />
+	{/if}
 
 	<h2 id="parity">Closeness to the original</h2>
 	<p>
