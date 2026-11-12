@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import DeviceCompare from '#lib/components/DeviceCompare.svelte';
+	import { UPCOMING } from '#lib/cards.ts';
 	import {
 		data,
 		DEVICES,
@@ -65,6 +66,8 @@
 	let task = $state('all');
 	let query = $state('');
 	let commercialOnly = $state(false);
+	// Variants not in the latest release (only in the repository): hidden unless asked for.
+	let upcoming = $state(false);
 	let sortKey = $state<Key>('rank');
 	let ascending = $state(true);
 	let view = $state<'device' | 'compare'>('device');
@@ -81,6 +84,7 @@
 		if (t && TASK_ORDER.includes(t)) task = t;
 		if (q.get('view') === 'compare') view = 'compare';
 		if (q.get('more') === '1') extra = true;
+		if (q.get('upcoming') === '1') upcoming = true;
 	});
 
 	function setParam(key: string, value: string | null) {
@@ -115,6 +119,20 @@
 		if (!on && !COMMON.has(sortKey)) sortKey = 'rank';
 	}
 
+	function setUpcoming(on: boolean) {
+		upcoming = on;
+		setParam('upcoming', on ? '1' : null);
+	}
+	const upcomingCount = $derived(all.filter((r) => UPCOMING.has(r.id)).length);
+	// The headline counts what `pip install fastforks` has; upcoming variants are counted apart.
+	const everyModel: { id: string; commercial: string }[] = data.tasks.flatMap((t) => t.models as { id: string; commercial: string }[]);
+	const shipped = everyModel.filter((m) => !UPCOMING.has(m.id));
+	const totals = {
+		models: shipped.length,
+		commercial: shipped.filter((m) => m.commercial === 'yes').length,
+		upcoming: everyModel.length - shipped.length
+	};
+
 	function sortBy(key: Key) {
 		if (sortKey === key) ascending = !ascending;
 		else {
@@ -129,6 +147,7 @@
 			(r) =>
 				(task === 'all' || r.task === task) &&
 				(!commercialOnly || r.commercial === 'yes') &&
+				(upcoming || !UPCOMING.has(r.id)) &&
 				(!q || r.id.includes(q) || r.code.toLowerCase().includes(q) || r.weights.toLowerCase().includes(q))
 		);
 		const dir = ascending ? 1 : -1;
@@ -170,7 +189,7 @@
 </script>
 
 <svelte:head>
-	<title>All {data.totals.models} models · fastforks</title>
+	<title>All {totals.models} models · fastforks</title>
 	<meta
 		name="description"
 		content="Every fastforks model with its speed on the reference GPU, speed-up over the authors' code, peak memory and code and weights licences."
@@ -180,7 +199,11 @@
 <section class="section head">
 	<div class="wrap">
 		<p class="eyebrow">Models</p>
-		<h1>{data.totals.models} models, {data.totals.commercial} commercially usable.</h1>
+		<h1>
+			{totals.models} models, {totals.commercial} commercially usable.{#if totals.upcoming}<span class="more-soon"
+					>+ {totals.upcoming} upcoming</span
+				>{/if}
+		</h1>
 		<p class="lede">
 			{#if view === 'compare'}
 				Every model on every device, side by side: pick a task, then sort by a device or open a model for its bars.
@@ -239,6 +262,12 @@
 					<input type="checkbox" bind:checked={commercialOnly} />
 					Commercially usable only
 				</label>
+				{#if upcomingCount}
+					<label class="toggle">
+						<input type="checkbox" checked={upcoming} onchange={(e) => setUpcoming(e.currentTarget.checked)} />
+						Show upcoming ({upcomingCount})
+					</label>
+				{/if}
 				{#if view === 'device'}
 					{#if device.reference}
 						<label class="toggle">
@@ -264,7 +293,7 @@
 		{/if}
 
 		{#if view === 'compare'}
-			<DeviceCompare {task} {query} {commercialOnly} rank={RANK} />
+			<DeviceCompare {task} {query} {commercialOnly} {upcoming} rank={RANK} />
 		{:else}
 			<div class="table">
 				<table class:wide={more}>
@@ -299,8 +328,10 @@
 								)}<span class="sub">+ {prep(x.prep_s)} {what}</span>{#if x.part}<span class="sub">{x.part} only</span>{/if}{/if}
 						{/snippet}
 						{#each rows as r (r.task + r.id)}
-							<tr>
-								<th scope="row"><a href={r.doc}><code>{r.id}</code></a></th>
+							<tr class:upcoming={UPCOMING.has(r.id)}>
+								<th scope="row"
+									><a href={r.doc}><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
+								>
 								<td class="task">{TASK_META[r.task].name}</td>
 								{#if more}
 									<td class="num first" class:muted={r.original_ms === null}>{cell(r.original_ms, r.original_note)}</td>
@@ -537,6 +568,33 @@
 	.head :global(.search input:focus) {
 		outline: 2px solid var(--blue);
 		outline-offset: 1px;
+	}
+	/* Upcoming: in the repository, not in the latest release. Greyed, still readable and linked. */
+	.head :global(tr.upcoming > *) {
+		color: var(--muted);
+	}
+	.head :global(tr.upcoming code) {
+		opacity: 0.75;
+	}
+	.more-soon {
+		display: block;
+		margin-top: 0.4rem;
+		color: var(--muted);
+		font-size: 0.4em;
+		font-weight: 500;
+		letter-spacing: 0;
+	}
+	.head :global(.soon) {
+		display: inline-block;
+		margin-left: 0.45rem;
+		padding: 0 0.35rem;
+		border: 1px dashed var(--line);
+		border-radius: 3px;
+		color: var(--muted);
+		font: 500 0.68rem/1.5 var(--sans);
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		vertical-align: middle;
 	}
 	.head :global(.toggle) {
 		display: inline-flex;

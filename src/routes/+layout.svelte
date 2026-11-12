@@ -1,13 +1,22 @@
 <script lang="ts">
 	import '../app.css';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import { page } from '$app/state';
 	import { LINKS, SITE_URL } from '#lib/site.ts';
 
 	let { children } = $props();
+	// Smooth scrolling (app.css) is for jumps within a page: a new page starts at its top (or its saved position)
+	// at once instead of animating there from the previous page's scroll position.
+	beforeNavigate(({ from, to }) => {
+		if (from?.url.pathname !== to?.url.pathname) document.documentElement.style.scrollBehavior = 'auto';
+	});
+	afterNavigate(() => {
+		requestAnimationFrame(() => document.documentElement.style.removeProperty('scroll-behavior'));
+	});
 	const canonical = $derived(SITE_URL + (page.url.pathname === '/' ? '/' : page.url.pathname));
-	// The header marks the part a page belongs to: the model table, or the docs (guides, tasks, devices, families).
+	// The header marks the part a page belongs to: the models (table and cards), or the docs (guides, tasks, devices).
 	const section = $derived(
-		page.url.pathname === '/models'
+		page.url.pathname === '/models' || page.url.pathname.startsWith('/models/')
 			? 'models'
 			: ['/', '/impressum', '/datenschutz'].includes(page.url.pathname)
 				? null

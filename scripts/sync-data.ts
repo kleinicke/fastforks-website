@@ -6,7 +6,7 @@
 // Speed numbers come from docs/overview.md (generated there by tools/gen_docs.py: one standard input per task,
 // measured on the reference GPU), the other devices from docs/data/devices.toml and docs/data/speed/. Licences come from `fastforks list --format json`. Nothing here measures anything.
 import { execFileSync } from 'node:child_process';
-import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { renderDocs, type ModeRow } from './docs.ts';
 
@@ -14,16 +14,27 @@ const repo = resolve(process.env.FASTFORKS_REPO ?? '../fastforks');
 const out = resolve('src/lib/data/models.json');
 // Docs pages rendered for the site (src/lib/data/docs/), plus each variant's per-backend time and memory.
 const docs = renderDocs(repo, resolve('src/lib/data/docs'));
+// Model cards (/models/<family>): structured per-family data from tools/site_data.py (card, licences, weights files,
+// every measured speed / quality / device row). The site renders it; nothing is computed here.
+const cardsDir = resolve('src/lib/data/cards');
+rmSync(cardsDir, { recursive: true, force: true });
+execFileSync('uv', ['run', '--project', repo, 'python', 'tools/site_data.py', '--out', cardsDir], {
+	cwd: repo,
+	stdio: ['ignore', 'inherit', 'inherit']
+});
 
 const TASK_ORDER_SYNC = [
 	'stereo',
 	'depth',
 	'multiview',
+	'matching',
 	'promptable_segmentation',
 	'segmentation',
 	'detection',
+	'pose',
 	'classification',
-	'features'
+	'features',
+	'flow'
 ];
 
 const TASK_IDS: Record<string, string> = {
@@ -34,7 +45,10 @@ const TASK_IDS: Record<string, string> = {
 	'Promptable segmentation': 'promptable_segmentation',
 	Detection: 'detection',
 	Features: 'features',
-	Multiview: 'multiview'
+	Multiview: 'multiview',
+	Pose: 'pose',
+	Flow: 'flow',
+	Matching: 'matching'
 };
 
 type Row = {

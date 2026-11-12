@@ -4,14 +4,21 @@
 	import type { Doc } from '#lib/docs.ts';
 	import { DEVICES, TASK_META, TASK_ORDER } from '#lib/site.ts';
 
-	// `children` replaces doc.html for pages written in Svelte (the legal pages).
+	// `children` replaces doc.html for pages written in Svelte (the legal pages, the model cards); `side` replaces the
+	// docs navigation (a model card shows its own sections there).
 	let {
 		doc,
 		eyebrow,
 		intro,
+		side,
 		children
-	}: { doc: Pick<Doc, 'title' | 'description'> & Partial<Doc>; eyebrow: Snippet; intro?: Snippet; children?: Snippet } =
-		$props();
+	}: {
+		doc: Pick<Doc, 'title' | 'description'> & Partial<Doc>;
+		eyebrow: Snippet;
+		intro?: Snippet;
+		side?: Snippet;
+		children?: Snippet;
+	} = $props();
 
 	const NAV: { title: string; links: [string, string][] }[] = [
 		{
@@ -43,6 +50,9 @@
 
 <section class="section head">
 	<div class="wrap layout">
+		{#if side}
+			<nav class="side own" aria-label="On this page">{@render side()}</nav>
+		{:else}
 		<nav class="side" aria-label="Documentation">
 			{#each NAV as group (group.title)}
 				<p class="eyebrow">{group.title}</p>
@@ -53,6 +63,7 @@
 				</ul>
 			{/each}
 		</nav>
+		{/if}
 		<article>
 			<p class="eyebrow">{@render eyebrow()}</p>
 			<h1>{doc.title}</h1>
@@ -115,6 +126,9 @@
 		.layout {
 			grid-template-columns: minmax(0, 1fr);
 			gap: 1.5rem;
+		}
+		.side.own {
+			display: none;
 		}
 		.side {
 			position: static;

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { UPCOMING } from '#lib/cards.ts';
 	import { data, DEVICES, fmtMs, licenceOf, REFERENCE, shortName, TASK_META, timings, type Timing } from '#lib/site.ts';
 
 	type Key = 'rank' | 'id' | 'task' | 'mem' | `dev:${string}`;
@@ -6,8 +7,9 @@
 		task,
 		query,
 		commercialOnly,
+		upcoming,
 		rank
-	}: { task: string; query: string; commercialOnly: boolean; rank: Map<string, number> } = $props();
+	}: { task: string; query: string; commercialOnly: boolean; upcoming: boolean; rank: Map<string, number> } = $props();
 
 let relative = $state(false);
 	let sortKey = $state<Key>('rank');
@@ -49,6 +51,7 @@ let relative = $state(false);
 		const out = MODELS.filter((m) => {
 			if (task !== 'all' && m.task !== task) return false;
 			if (commercialOnly && m.commercial !== 'yes') return false;
+			if (!upcoming && UPCOMING.has(m.id)) return false;
 			if (!q) return true;
 			const lic = licenceOf(m.id);
 			return m.id.includes(q) || !!lic?.code.toLowerCase().includes(q) || !!lic?.weights.toLowerCase().includes(q);
@@ -170,7 +173,7 @@ let relative = $state(false);
 		<tbody>
 			{#each rows as r (r.key)}
 				{@const isOpen = open.has(r.key)}
-				<tr class:open={isOpen}>
+				<tr class:open={isOpen} class:upcoming={UPCOMING.has(r.id)}>
 					<td class="exp">
 						<button
 							type="button"
@@ -179,7 +182,7 @@ let relative = $state(false);
 							onclick={() => toggle(r.key)}>{isOpen ? '−' : '+'}</button
 						>
 					</td>
-					<th scope="row"><a href={r.doc}><code>{r.id}</code></a></th>
+					<th scope="row"><a href={r.doc}><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th>
 <td class="task">{TASK_META[r.task].name}</td>
 					<td class="num">{r.mem ?? '–'}</td>
 					{#each r.cells as c, i (c.slug)}

@@ -20,7 +20,7 @@ export function GET() {
 	});
 	const body = `# fastforks
 
-> Faster ports of ${t.models} published vision models (stereo matching, monocular and multi-view depth, classification,
+> Faster ports of ${t.models} published vision models (stereo matching, monocular and multi-view depth, dense matching, classification,
 > semantic and promptable segmentation (SAM), object detection, feature backbones such as DINOv2/DINOv3) behind one
 > Python API. Each model loads the authors' checkpoint and has a plain PyTorch port checked against the authors' code
 > ("portable") plus CUDA and Apple Metal kernels ("kernels"): ${t.vs_original.median}x faster than the original code

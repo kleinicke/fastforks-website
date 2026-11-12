@@ -27,6 +27,12 @@ export const TASK_META: Record<string, { name: string; pkg: string; call: string
 		call: 'model(images)',
 		result: 'depth, points and cameras per view'
 	},
+	matching: {
+		name: 'Dense matching',
+		pkg: 'matching',
+		call: 'model(image_a, image_b)',
+		result: 'warp + certainty per pixel, sampled matches, relative pose'
+	},
 	classification: { name: 'Classification', pkg: 'classification', call: 'model(image)', result: 'logits, top(k)' },
 	segmentation: { name: 'Semantic segmentation', pkg: 'segmentation', call: 'model(image)', result: 'label map' },
 	promptable_segmentation: {
@@ -36,6 +42,13 @@ export const TASK_META: Record<string, { name: string; pkg: string; call: string
 		result: 'masks + IoU scores (SAM, SAM 2, SAM 3 text prompts)'
 	},
 	detection: { name: 'Object detection', pkg: 'detection', call: 'model(image)', result: 'boxes, labels, scores' },
+	pose: {
+		name: 'Pose estimation',
+		pkg: 'pose',
+		call: 'model(image, boxes=…)',
+		result: 'keypoints + scores per person'
+	},
+	flow: { name: 'Optical flow', pkg: 'flow', call: 'model(frame1, frame2)', result: 'flow (dx, dy per pixel)' },
 	features: {
 		name: 'Feature backbones',
 		pkg: 'features',
@@ -48,11 +61,14 @@ export const TASK_ORDER = [
 	'stereo',
 	'depth',
 	'multiview',
+	'matching',
 	'promptable_segmentation',
 	'segmentation',
 	'detection',
+	'pose',
 	'classification',
-	'features'
+	'features',
+	'flow'
 ];
 
 export { data };
