@@ -168,8 +168,8 @@
 					<th class="bar-col">Time per call (ms)</th>
 					<th class="num">vs {baseLabel}</th>
 					<th class="num">Peak memory<br /><small>allocated / reserved</small></th>
-					<th class="num">Load (s)</th>
-					<th class="num">First call (s)</th>
+					<th class="num"><span class="hint" title="Seconds from the load call until the model is ready on the device: reading the weights, building the network and moving it to the GPU (importing PyTorch not included). For torch.compile and TensorRT it shows the one-time build instead: the compile, or the ONNX export plus engine build.">Load (s)</span></th>
+					<th class="num"><span class="hint" title="Seconds the very first call takes in a fresh process. It includes one-time work the warm calls skip, such as picking GPU kernels and allocating memory, so it is slower than the time per call.">First call (s)</span></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -327,6 +327,11 @@
 		color: var(--muted);
 		font-weight: 400;
 		font-size: 0.74rem;
+	}
+	.hint {
+		cursor: help;
+		text-decoration: underline dotted;
+		text-underline-offset: 0.2em;
 	}
 	.memnote {
 		color: var(--muted);
