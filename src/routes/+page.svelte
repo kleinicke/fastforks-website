@@ -78,15 +78,15 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 			<div><dt>commercially usable</dt><dd>{t.commercial}</dd></div>
 		</dl>
 		<p class="stats-note">
-			Speed-ups: our kernels against the authors' code with the same checkpoint, at each task's standard input,
-			for the {t.vs_original.models} models where the original was timed; {data.source.reference_gpu}.
+			Speed-ups: our kernels against the authors' code in its 16-bit precision with the same checkpoint, at each
+			task's standard input, for the {t.vs_original.models} models where the original was timed; {data.source.reference_gpu}.
 		</p>
 	</div>
 </section>
 
 <section class="section" id="how" aria-labelledby="how-title">
 	<div class="wrap">
-		<h2 id="how-title">Three modes</h2>
+		<h2 id="how-title">Two modes, measured against the original</h2>
 		<p class="lede">
 			Nothing is retrained: fastforks runs the authors' checkpoint. Portable and kernels compute in fp16 by
 			default, so the output is close to the original but not bit-identical; each model page lists how far it
@@ -96,7 +96,11 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 			<li>
 				<span class="tag">original</span>
 				<h3>The authors' code</h3>
-				<p>The reference: their repository at a pinned commit with the same checkpoint. Used to check parity and to time the baseline.</p>
+				<p>
+					Not part of fastforks, the reference: their repository at a pinned commit with the same checkpoint, run in
+					16-bit (the authors' own fp16 or bf16 option where the code has one, else <code>torch.autocast</code> fp16).
+					Used to check parity and as the baseline of every speed-up.
+				</p>
 			</li>
 			<li>
 				<span class="tag portable">portable</span>
@@ -121,7 +125,7 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 		<h2 id="speed-title">Speed</h2>
 		<p class="lede">
 			Every row is a median of warm runs, with the accuracy checked on public benchmarks. The {REFERENCE.name} is
-			the reference and times all three modes; the other devices are surveys of portable against kernels, the
+			the reference and times the original and both modes; the other devices are surveys of portable against kernels, the
 			Apple M1 Pro across every task. Run <code>fastforks bench MODEL</code> to time both backends on yours.
 		</p>
 		<SpeedChart />

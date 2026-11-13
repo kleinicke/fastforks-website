@@ -36,7 +36,7 @@
 							<td>{MODE[r.mode] ?? r.mode}</td>
 							<td>{dt(r.dtype)}</td>
 							{#if r.status !== 'ok'}
-								<td class="num" colspan="2"><span class="tag">{r.status === 'oom' ? 'out of memory' : r.error ? `fails: ${r.error.slice(0, 80)}` : r.status}</span></td>
+								<td class="num" colspan="2"><span class="tag">{r.status === 'oom' ? 'out of memory' : r.error ? `fails: ${r.error.slice(0, 80)}` : r.status === 'unsupported' ? (r.mode === 'kernels' ? 'not implemented' : 'cannot run here') : r.status}</span></td>
 							{:else}
 								<td class="num">{ms(r.ms)}</td>
 								<td class="num">
@@ -54,7 +54,8 @@
 	<p class="fine">
 		CUDA memory is torch’s peak allocated / reserved; Apple has no such counter, so the Mac rows show the process
 		footprint (weights, Python and torch included). “Output vs reference” compares the device’s output with the
-		stored golden output under the card’s tolerance; – = not checked on that device.
+		stored golden output under the card’s tolerance; – = not checked on that device. Kernels “not implemented” = no
+		kernels for this model on that backend yet: it runs portable there.
 	</p>
 {/if}
 
