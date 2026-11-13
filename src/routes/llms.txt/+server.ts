@@ -32,7 +32,7 @@ It uses the PyTorch already installed.
 \`\`\`python
 from fastforks import stereo, depth
 
-model = stereo.load("igev-stereo-sceneflow")
+model = stereo.load("c-foundationstereo-s")
 result = model("left.png", "right.png")
 result.disparity  # [H, W] float32 tensor, pixels
 

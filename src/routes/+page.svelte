@@ -61,7 +61,7 @@
 		<pre class="code" aria-label="Python example"><code
 				><span class="k">from</span> fastforks <span class="k">import</span> stereo, depth
 
-model = stereo.<span class="k">load</span>(<span class="s">"igev-stereo-sceneflow"</span>)
+model = stereo.<span class="k">load</span>(<span class="s">"c-foundationstereo-s"</span>)
 result = model(<span class="s">"left.png"</span>, <span class="s">"right.png"</span>)
 result.disparity  <span class="c"># [H, W] float32 tensor, pixels</span>
 result.backend    <span class="c"># kernels on CUDA / Apple silicon, else portable</span>
@@ -179,7 +179,7 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 stereo.list_models(commercial=<span class="s">"yes"</span>)
 
 <span class="c"># licences, and what blocks a "yes"</span>
-print(fastforks.describe_models(stereo.list_models(<span class="s">"igev*"</span>)))</code
+print(fastforks.describe_models(stereo.list_models(<span class="s">"*foundationstereo*"</span>)))</code
 			></pre>
 	</div>
 </section>

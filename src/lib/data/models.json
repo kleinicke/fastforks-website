@@ -1,16 +1,16 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "cdac234a",
+		"commit": "eb808c9a",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
-		"models": 387,
-		"tasks": 11,
-		"commercial": 352,
+		"models": 505,
+		"tasks": 17,
+		"commercial": 466,
 		"vs_original": {
-			"models": 329,
-			"median": 3.7,
+			"models": 414,
+			"median": 3.3,
 			"max": 63.2
 		}
 	},
@@ -57,8 +57,8 @@
 							"reserved": 978
 						},
 						"portable": {
-							"alloc": 955,
-							"reserved": 988
+							"alloc": 568,
+							"reserved": 648
 						},
 						"kernels": {
 							"alloc": 320,
@@ -71,7 +71,7 @@
 					"original_ms": 43.5,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 46.9,
+					"portable_ms": 27.8,
 					"kernels_ms": 14.3,
 					"speedup": 3,
 					"speedup_vs": "original",
@@ -99,8 +99,8 @@
 							"reserved": 1000
 						},
 						"portable": {
-							"alloc": 972,
-							"reserved": 1026
+							"alloc": 584,
+							"reserved": 664
 						},
 						"kernels": {
 							"alloc": 329,
@@ -113,7 +113,7 @@
 					"original_ms": 52.4,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 54.1,
+					"portable_ms": 37.1,
 					"kernels_ms": 18.3,
 					"speedup": 2.9,
 					"speedup_vs": "original",
@@ -225,8 +225,8 @@
 							"reserved": 1082
 						},
 						"portable": {
-							"alloc": 1036,
-							"reserved": 1098
+							"alloc": 648,
+							"reserved": 716
 						},
 						"kernels": {
 							"alloc": 397,
@@ -239,7 +239,7 @@
 					"original_ms": 90.8,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 80.3,
+					"portable_ms": 75.7,
 					"kernels_ms": 29.9,
 					"speedup": 3,
 					"speedup_vs": "original",
@@ -585,8 +585,8 @@
 							"reserved": 1084
 						},
 						"portable": {
-							"alloc": 1050,
-							"reserved": 1110
+							"alloc": 1013,
+							"reserved": 1066
 						},
 						"kernels": {
 							"alloc": 1021,
@@ -599,7 +599,7 @@
 					"original_ms": 134.9,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 122.8,
+					"portable_ms": 112.7,
 					"kernels_ms": 53.3,
 					"speedup": 2.5,
 					"speedup_vs": "original",
@@ -1226,7 +1226,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "2.61 ?",
+					"accuracy": "2.61 †",
 					"accuracy_metric": "ETH3D bad > 1 px (%)",
 					"original_ms": 1036.7,
 					"original_size": "994x1482",
@@ -1348,7 +1348,7 @@
 						},
 						"kernels": {
 							"alloc": 1113,
-							"reserved": 1286
+							"reserved": 1282
 						}
 					},
 					"commercial": "yes",
@@ -1358,8 +1358,8 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 689,
-					"kernels_ms": 283.8,
-					"speedup": 2.4,
+					"kernels_ms": 281.2,
+					"speedup": 2.5,
 					"speedup_vs": "original",
 					"peak_mib": 1113,
 					"compile": {
@@ -1394,7 +1394,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "0.56 ?",
+					"accuracy": "0.56 †",
 					"accuracy_metric": "ETH3D bad > 1 px (%)",
 					"original_ms": 941.3,
 					"original_size": "994x1482",
@@ -1971,8 +1971,8 @@
 							"reserved": 5852
 						},
 						"kernels": {
-							"alloc": 1907,
-							"reserved": 2316
+							"alloc": 1906,
+							"reserved": 2152
 						}
 					},
 					"commercial": "no",
@@ -1982,10 +1982,10 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 1137.2,
-					"kernels_ms": 392.9,
-					"speedup": 2.9,
+					"kernels_ms": 384.9,
+					"speedup": 3,
 					"speedup_vs": "original",
-					"peak_mib": 1907,
+					"peak_mib": 1906,
 					"compile": null,
 					"tensorrt": null
 				},
@@ -2490,7 +2490,7 @@
 						},
 						"kernels": {
 							"alloc": 3154,
-							"reserved": 3566
+							"reserved": 3522
 						}
 					},
 					"commercial": "no",
@@ -2500,8 +2500,8 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 1530.9,
-					"kernels_ms": 658.7,
-					"speedup": 4.3,
+					"kernels_ms": 642.2,
+					"speedup": 4.4,
 					"speedup_vs": "original",
 					"peak_mib": 3154,
 					"compile": {
@@ -2522,9 +2522,18 @@
 					"doc": "/models/monster_plusplus",
 					"family": "monster_plusplus",
 					"mem": {
-						"original": null,
-						"portable": null,
-						"kernels": null
+						"original": {
+							"alloc": 6382,
+							"reserved": 6430
+						},
+						"portable": {
+							"alloc": 2336,
+							"reserved": 2494
+						},
+						"kernels": {
+							"alloc": 2356,
+							"reserved": 2734
+						}
 					},
 					"commercial": "no",
 					"accuracy": "1.25 †",
@@ -2533,8 +2542,8 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 1585.2,
-					"kernels_ms": 667.6,
-					"speedup": 6.4,
+					"kernels_ms": 653.2,
+					"speedup": 6.5,
 					"speedup_vs": "original",
 					"peak_mib": 2356,
 					"compile": {
@@ -2565,7 +2574,7 @@
 						},
 						"kernels": {
 							"alloc": 2356,
-							"reserved": 2714
+							"reserved": 2734
 						}
 					},
 					"commercial": "no",
@@ -2575,8 +2584,8 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 1585.2,
-					"kernels_ms": 667.6,
-					"speedup": 6.4,
+					"kernels_ms": 653.3,
+					"speedup": 6.5,
 					"speedup_vs": "original",
 					"peak_mib": 2356,
 					"compile": {
@@ -2590,6 +2599,48 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 384
+					}
+				},
+				{
+					"id": "monster-plusplus-mix-all",
+					"doc": "/models/monster_plusplus",
+					"family": "monster_plusplus",
+					"mem": {
+						"original": {
+							"alloc": 6382,
+							"reserved": 6430
+						},
+						"portable": {
+							"alloc": 2583,
+							"reserved": 2918
+						},
+						"kernels": {
+							"alloc": 2438,
+							"reserved": 2754
+						}
+					},
+					"commercial": "no",
+					"accuracy": "1.08 ?",
+					"accuracy_metric": "ETH3D bad > 1 px (%)",
+					"original_ms": 4334.5,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 1632.6,
+					"kernels_ms": 657.2,
+					"speedup": 6.6,
+					"speedup_vs": "original",
+					"peak_mib": 2438,
+					"compile": {
+						"ms": 1126,
+						"fails": null,
+						"part": null,
+						"prep_s": 109
+					},
+					"tensorrt": {
+						"ms": 697,
+						"fails": null,
+						"part": null,
+						"prep_s": 416
 					}
 				},
 				{
@@ -2632,48 +2683,6 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 408
-					}
-				},
-				{
-					"id": "monster-plusplus-mix-all",
-					"doc": "/models/monster_plusplus",
-					"family": "monster_plusplus",
-					"mem": {
-						"original": {
-							"alloc": 6382,
-							"reserved": 6430
-						},
-						"portable": {
-							"alloc": 2583,
-							"reserved": 2918
-						},
-						"kernels": {
-							"alloc": 2438,
-							"reserved": 2760
-						}
-					},
-					"commercial": "no",
-					"accuracy": "1.08 ?",
-					"accuracy_metric": "ETH3D bad > 1 px (%)",
-					"original_ms": 4334.5,
-					"original_size": "994x1482",
-					"original_note": null,
-					"portable_ms": 1632.6,
-					"kernels_ms": 697.9,
-					"speedup": 6.2,
-					"speedup_vs": "original",
-					"peak_mib": 2438,
-					"compile": {
-						"ms": 1126,
-						"fails": null,
-						"part": null,
-						"prep_s": 109
-					},
-					"tensorrt": {
-						"ms": 697,
-						"fails": null,
-						"part": null,
-						"prep_s": 416
 					}
 				},
 				{
@@ -3159,6 +3168,38 @@
 					}
 				},
 				{
+					"id": "prompt-depth-anything-s",
+					"doc": "/models/prompt_depth_anything",
+					"family": "prompt_depth_anything",
+					"mem": {
+						"original": {
+							"alloc": 781,
+							"reserved": 1112
+						},
+						"portable": {
+							"alloc": 363,
+							"reserved": 442
+						},
+						"kernels": {
+							"alloc": 297,
+							"reserved": 384
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 18.4,
+					"kernels_ms": 11.4,
+					"speedup": 1.6,
+					"speedup_vs": "portable",
+					"peak_mib": 297,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "da3mono-large",
 					"doc": "/models/depth_anything_3",
 					"family": "depth_anything_3",
@@ -3168,8 +3209,8 @@
 							"reserved": 3052
 						},
 						"portable": {
-							"alloc": 818,
-							"reserved": 1328
+							"alloc": 814,
+							"reserved": 868
 						},
 						"kernels": {
 							"alloc": 814,
@@ -3182,7 +3223,7 @@
 					"original_ms": 85.2,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 23.9,
+					"portable_ms": 24.1,
 					"kernels_ms": 14.6,
 					"speedup": 5.8,
 					"speedup_vs": "original",
@@ -3210,8 +3251,8 @@
 							"reserved": 3050
 						},
 						"portable": {
-							"alloc": 815,
-							"reserved": 1328
+							"alloc": 811,
+							"reserved": 868
 						},
 						"kernels": {
 							"alloc": 811,
@@ -3224,7 +3265,7 @@
 					"original_ms": 85.1,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 24.1,
+					"portable_ms": 24.3,
 					"kernels_ms": 14.7,
 					"speedup": 5.8,
 					"speedup_vs": "original",
@@ -3252,8 +3293,8 @@
 							"reserved": 3472
 						},
 						"portable": {
-							"alloc": 992,
-							"reserved": 1350
+							"alloc": 988,
+							"reserved": 1088
 						},
 						"kernels": {
 							"alloc": 985,
@@ -3266,7 +3307,7 @@
 					"original_ms": 165.6,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 37.4,
+					"portable_ms": 30,
 					"kernels_ms": 17.1,
 					"speedup": 9.7,
 					"speedup_vs": "original",
@@ -3546,8 +3587,8 @@
 							"reserved": 8718
 						},
 						"portable": {
-							"alloc": 2638,
-							"reserved": 4608
+							"alloc": 2634,
+							"reserved": 2728
 						},
 						"kernels": {
 							"alloc": 2628,
@@ -3560,7 +3601,7 @@
 					"original_ms": 227.1,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 81.8,
+					"portable_ms": 71.5,
 					"kernels_ms": 44.2,
 					"speedup": 5.1,
 					"speedup_vs": "original",
@@ -3588,8 +3629,8 @@
 							"reserved": 10402
 						},
 						"portable": {
-							"alloc": 3275,
-							"reserved": 5914
+							"alloc": 3271,
+							"reserved": 3374
 						},
 						"kernels": {
 							"alloc": 3271,
@@ -3602,7 +3643,7 @@
 					"original_ms": 308.2,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 108,
+					"portable_ms": 94.9,
 					"kernels_ms": 58.2,
 					"speedup": 5.3,
 					"speedup_vs": "original",
@@ -3663,6 +3704,48 @@
 					}
 				},
 				{
+					"id": "unidepth-v2-vitl14",
+					"doc": "/models/unidepth_v2",
+					"family": "unidepth_v2",
+					"mem": {
+						"original": {
+							"alloc": 3230,
+							"reserved": 3508
+						},
+						"portable": {
+							"alloc": 1208,
+							"reserved": 1472
+						},
+						"kernels": {
+							"alloc": 1166,
+							"reserved": 1252
+						}
+					},
+					"commercial": "no",
+					"accuracy": "0.0355",
+					"accuracy_metric": "NYUv2 AbsRel (scale+shift aligned)",
+					"original_ms": 132,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 99.8,
+					"kernels_ms": 63,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 1166,
+					"compile": {
+						"ms": 96.4,
+						"fails": null,
+						"part": null,
+						"prep_s": 31.1
+					},
+					"tensorrt": {
+						"ms": 64.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 119
+					}
+				},
+				{
 					"id": "midas-dpt-beit-large-512",
 					"doc": "/models/midas",
 					"family": "midas",
@@ -3705,46 +3788,36 @@
 					}
 				},
 				{
-					"id": "unidepth-v2-vitl14",
-					"doc": "/models/unidepth_v2",
-					"family": "unidepth_v2",
+					"id": "prompt-depth-anything-l",
+					"doc": "/models/prompt_depth_anything",
+					"family": "prompt_depth_anything",
 					"mem": {
 						"original": {
-							"alloc": 3230,
-							"reserved": 3508
+							"alloc": 3446,
+							"reserved": 3810
 						},
 						"portable": {
-							"alloc": 1208,
-							"reserved": 1472
+							"alloc": 1318,
+							"reserved": 1488
 						},
 						"kernels": {
-							"alloc": 1211,
-							"reserved": 1472
+							"alloc": 1179,
+							"reserved": 1348
 						}
 					},
-					"commercial": "no",
-					"accuracy": "0.0355",
-					"accuracy_metric": "NYUv2 AbsRel (scale+shift aligned)",
-					"original_ms": 132,
-					"original_size": "994x1482",
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
 					"original_note": null,
-					"portable_ms": 99.8,
-					"kernels_ms": 66.4,
-					"speedup": 2,
-					"speedup_vs": "original",
-					"peak_mib": 1211,
-					"compile": {
-						"ms": 96.4,
-						"fails": null,
-						"part": null,
-						"prep_s": 31.1
-					},
-					"tensorrt": {
-						"ms": 64.3,
-						"fails": null,
-						"part": null,
-						"prep_s": 119
-					}
+					"portable_ms": 124.8,
+					"kernels_ms": 69.3,
+					"speedup": 1.8,
+					"speedup_vs": "portable",
+					"peak_mib": 1179,
+					"compile": null,
+					"tensorrt": null
 				},
 				{
 					"id": "moge-2-vitl-normal",
@@ -3844,8 +3917,8 @@
 							"reserved": 1696
 						},
 						"kernels": {
-							"alloc": 1516,
-							"reserved": 1688
+							"alloc": 1480,
+							"reserved": 1608
 						}
 					},
 					"commercial": "yes",
@@ -3855,10 +3928,10 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 200.3,
-					"kernels_ms": 158.5,
+					"kernels_ms": 155.2,
 					"speedup": 2.8,
 					"speedup_vs": "original",
-					"peak_mib": 1516,
+					"peak_mib": 1480,
 					"compile": {
 						"ms": 149,
 						"fails": null,
@@ -3870,6 +3943,174 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 96.6
+					}
+				},
+				{
+					"id": "lotus-normal-d-v1-1",
+					"doc": "/models/lotus",
+					"family": "lotus",
+					"mem": {
+						"original": {
+							"alloc": 3835,
+							"reserved": 3898
+						},
+						"portable": {
+							"alloc": 2777,
+							"reserved": 2940
+						},
+						"kernels": {
+							"alloc": 2351,
+							"reserved": 2500
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "16.70 / 7.28 / 67.22 / 83.52",
+					"accuracy_metric": "iBims-1 normals, mean / median angle deg, % < 11.25 / < 30 deg",
+					"original_ms": 344.3,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 267.6,
+					"kernels_ms": 164.1,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 2351,
+					"compile": {
+						"ms": 222,
+						"fails": null,
+						"part": null,
+						"prep_s": 63.9
+					},
+					"tensorrt": {
+						"ms": 107,
+						"fails": null,
+						"part": null,
+						"prep_s": 183
+					}
+				},
+				{
+					"id": "lotus-normal-g-v1-1",
+					"doc": "/models/lotus",
+					"family": "lotus",
+					"mem": {
+						"original": {
+							"alloc": 3836,
+							"reserved": 3898
+						},
+						"portable": {
+							"alloc": 2777,
+							"reserved": 2940
+						},
+						"kernels": {
+							"alloc": 2351,
+							"reserved": 2500
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "16.61 / 8.98 / 59.73 / 83.32",
+					"accuracy_metric": "NYUv2 test normals, mean / median angle deg, % < 11.25 / < 30 deg",
+					"original_ms": 344.1,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 267.5,
+					"kernels_ms": 164.1,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 2351,
+					"compile": {
+						"ms": 222,
+						"fails": null,
+						"part": null,
+						"prep_s": 63.4
+					},
+					"tensorrt": {
+						"ms": 107,
+						"fails": null,
+						"part": null,
+						"prep_s": 183
+					}
+				},
+				{
+					"id": "marigold-normals-lcm-v0-1",
+					"doc": "/models/marigold_normals",
+					"family": "marigold_normals",
+					"mem": {
+						"original": {
+							"alloc": 3441,
+							"reserved": 3640
+						},
+						"portable": {
+							"alloc": 2792,
+							"reserved": 2960
+						},
+						"kernels": {
+							"alloc": 2361,
+							"reserved": 2500
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "18.46 / 10.22 / 55.52 / 80.76",
+					"accuracy_metric": "NYUv2 test normals, mean / median angle deg, % < 11.25 / < 30 deg",
+					"original_ms": 279.5,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 272,
+					"kernels_ms": 167.1,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 2361,
+					"compile": {
+						"ms": 223,
+						"fails": null,
+						"part": null,
+						"prep_s": 64.5
+					},
+					"tensorrt": {
+						"ms": 109,
+						"fails": null,
+						"part": null,
+						"prep_s": 182
+					}
+				},
+				{
+					"id": "stablenormal-turbo",
+					"doc": "/models/stablenormal",
+					"family": "stablenormal",
+					"mem": {
+						"original": {
+							"alloc": 4156,
+							"reserved": 4374
+						},
+						"portable": {
+							"alloc": 3463,
+							"reserved": 3628
+						},
+						"kernels": {
+							"alloc": 3037,
+							"reserved": 3172
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "17.46 / 8.26 / 63.83 / 82.71",
+					"accuracy_metric": "iBims-1 normals, mean / median angle deg, % < 11.25 / < 30 deg",
+					"original_ms": 299.2,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 289.3,
+					"kernels_ms": 180.3,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 3037,
+					"compile": {
+						"ms": 238,
+						"fails": null,
+						"part": null,
+						"prep_s": 76.3
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "timeout after 290 s",
+						"part": null,
+						"prep_s": null
 					}
 				},
 				{
@@ -3987,6 +4228,117 @@
 						"part": null,
 						"prep_s": 285
 					}
+				},
+				{
+					"id": "video-depth-anything-s",
+					"doc": "/models/video_depth_anything",
+					"family": "video_depth_anything",
+					"mem": {
+						"original": {
+							"alloc": 8263,
+							"reserved": 11890
+						},
+						"portable": {
+							"alloc": 8201,
+							"reserved": 8652
+						},
+						"kernels": {
+							"alloc": 8204,
+							"reserved": 8782
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0549 / 0.9802",
+					"accuracy_metric": "TUM RGB-D video (3 sequences, first 110 frames each), AbsRel / delta1",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 1434.3,
+					"kernels_ms": 1284,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
+					"peak_mib": 8204,
+					"compile": {
+						"ms": 1314,
+						"fails": null,
+						"part": null,
+						"prep_s": 82.7
+					},
+					"tensorrt": {
+						"ms": 524,
+						"fails": null,
+						"part": null,
+						"prep_s": 181
+					}
+				},
+				{
+					"id": "lingbot-depth",
+					"doc": "/models/lingbot_depth",
+					"family": "lingbot_depth",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "lingbot-depth-dc",
+					"doc": "/models/lingbot_depth",
+					"family": "lingbot_depth",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "video-depth-anything-metric-s",
+					"doc": "/models/video_depth_anything",
+					"family": "video_depth_anything",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "0.0785 / 0.9769",
+					"accuracy_metric": "TUM RGB-D video (3 sequences, first 110 frames each), AbsRel / delta1",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -5481,6 +5833,48 @@
 					}
 				},
 				{
+					"id": "falconsai-nsfw-vit",
+					"doc": "/models/nsfw_vit",
+					"family": "nsfw_vit",
+					"mem": {
+						"original": {
+							"alloc": 200,
+							"reserved": 226
+						},
+						"portable": {
+							"alloc": 201,
+							"reserved": 226
+						},
+						"kernels": {
+							"alloc": 198,
+							"reserved": 228
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 5.7,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 2.8,
+					"kernels_ms": 1.6,
+					"speedup": 3.6,
+					"speedup_vs": "original",
+					"peak_mib": 198,
+					"compile": {
+						"ms": null,
+						"fails": "timeout after 290 s",
+						"part": null,
+						"prep_s": null
+					},
+					"tensorrt": {
+						"ms": 1.12,
+						"fails": null,
+						"part": null,
+						"prep_s": 27.4
+					}
+				},
+				{
 					"id": "deit_base_patch16_224",
 					"doc": "/models/deit",
 					"family": "deit",
@@ -6435,6 +6829,90 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 35.4
+					}
+				},
+				{
+					"id": "wd-vit-tagger-v3",
+					"doc": "/models/wd_tagger",
+					"family": "wd_tagger",
+					"mem": {
+						"original": {
+							"alloc": 231,
+							"reserved": 242
+						},
+						"portable": {
+							"alloc": 235,
+							"reserved": 242
+						},
+						"kernels": {
+							"alloc": 234,
+							"reserved": 284
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 4,
+					"kernels_ms": 4.1,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"peak_mib": 234,
+					"compile": {
+						"ms": 5.33,
+						"fails": null,
+						"part": null,
+						"prep_s": 9.55
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "timeout after 290 s",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "wd-convnext-tagger-v3",
+					"doc": "/models/wd_tagger",
+					"family": "wd_tagger",
+					"mem": {
+						"original": {
+							"alloc": 259,
+							"reserved": 292
+						},
+						"portable": {
+							"alloc": 340,
+							"reserved": 374
+						},
+						"kernels": {
+							"alloc": 318,
+							"reserved": 358
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 5.6,
+					"kernels_ms": 4.5,
+					"speedup": 1.3,
+					"speedup_vs": "portable",
+					"peak_mib": 318,
+					"compile": {
+						"ms": 4.45,
+						"fails": null,
+						"part": null,
+						"prep_s": 12.2
+					},
+					"tensorrt": {
+						"ms": 3.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 39.7
 					}
 				},
 				{
@@ -7419,6 +7897,48 @@
 					}
 				},
 				{
+					"id": "wd-vit-large-tagger-v3",
+					"doc": "/models/wd_tagger",
+					"family": "wd_tagger",
+					"mem": {
+						"original": {
+							"alloc": 662,
+							"reserved": 682
+						},
+						"portable": {
+							"alloc": 669,
+							"reserved": 682
+						},
+						"kernels": {
+							"alloc": 667,
+							"reserved": 724
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 12.9,
+					"kernels_ms": 12.5,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"peak_mib": 667,
+					"compile": {
+						"ms": 13.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 13.5
+					},
+					"tensorrt": {
+						"ms": 11.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 36.2
+					}
+				},
+				{
 					"id": "vit_so400m_patch14_siglip_378",
 					"doc": "/models/siglip",
 					"family": "siglip",
@@ -7656,6 +8176,48 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 43.5
+					}
+				},
+				{
+					"id": "wd-eva02-large-tagger-v3",
+					"doc": "/models/wd_tagger",
+					"family": "wd_tagger",
+					"mem": {
+						"original": {
+							"alloc": 668,
+							"reserved": 684
+						},
+						"portable": {
+							"alloc": 669,
+							"reserved": 684
+						},
+						"kernels": {
+							"alloc": 673,
+							"reserved": 806
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 18.3,
+					"kernels_ms": 14.1,
+					"speedup": 1.3,
+					"speedup_vs": "portable",
+					"peak_mib": 673,
+					"compile": {
+						"ms": 15.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 22.4
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "timeout after 290 s",
+						"part": null,
+						"prep_s": null
 					}
 				},
 				{
@@ -7996,6 +8558,48 @@
 					}
 				},
 				{
+					"id": "segformer-b2-clothes",
+					"doc": "/models/segformer",
+					"family": "segformer",
+					"mem": {
+						"original": {
+							"alloc": 425,
+							"reserved": 488
+						},
+						"portable": {
+							"alloc": 156,
+							"reserved": 168
+						},
+						"kernels": {
+							"alloc": 133,
+							"reserved": 170
+						}
+					},
+					"commercial": "no",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 8.1,
+					"kernels_ms": 3.6,
+					"speedup": 2.3,
+					"speedup_vs": "portable",
+					"peak_mib": 133,
+					"compile": {
+						"ms": 4.38,
+						"fails": null,
+						"part": null,
+						"prep_s": 17.6
+					},
+					"tensorrt": {
+						"ms": 2.68,
+						"fails": null,
+						"part": null,
+						"prep_s": 63.1
+					}
+				},
+				{
 					"id": "segnext-mscan-s-ade20k",
 					"doc": "/models/segnext",
 					"family": "segnext",
@@ -8080,6 +8684,90 @@
 					}
 				},
 				{
+					"id": "segformer-b5-face-parsing",
+					"doc": "/models/segformer",
+					"family": "segformer",
+					"mem": {
+						"original": {
+							"alloc": 647,
+							"reserved": 758
+						},
+						"portable": {
+							"alloc": 278,
+							"reserved": 292
+						},
+						"kernels": {
+							"alloc": 257,
+							"reserved": 294
+						}
+					},
+					"commercial": "no",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 21.9,
+					"kernels_ms": 9.2,
+					"speedup": 2.4,
+					"speedup_vs": "portable",
+					"peak_mib": 257,
+					"compile": {
+						"ms": 14.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 34.5
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "timeout after 290 s",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "dinov2-s-linear-ade20k",
+					"doc": "/models/dinov2_linear",
+					"family": "dinov2_linear",
+					"mem": {
+						"original": {
+							"alloc": 1694,
+							"reserved": 2046
+						},
+						"portable": {
+							"alloc": 642,
+							"reserved": 696
+						},
+						"kernels": {
+							"alloc": 645,
+							"reserved": 676
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "42.37 / 79.39",
+					"accuracy_metric": "ADE20K val, every 4th image, mIoU / aAcc %",
+					"original_ms": 24.7,
+					"original_size": "1024x2048",
+					"original_note": null,
+					"portable_ms": 18.3,
+					"kernels_ms": 11.8,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 645,
+					"compile": {
+						"ms": 20.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 10.6
+					},
+					"tensorrt": {
+						"ms": 40.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 36.2
+					}
+				},
+				{
 					"id": "hrnet-w48-fcn-ade20k",
 					"doc": "/models/mmseg",
 					"family": "mmseg",
@@ -8161,48 +8849,6 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 66.3
-					}
-				},
-				{
-					"id": "dinov2-s-linear-ade20k",
-					"doc": "/models/dinov2_linear",
-					"family": "dinov2_linear",
-					"mem": {
-						"original": {
-							"alloc": 1694,
-							"reserved": 2046
-						},
-						"portable": {
-							"alloc": 642,
-							"reserved": 696
-						},
-						"kernels": {
-							"alloc": 645,
-							"reserved": 676
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "42.37 / 79.39",
-					"accuracy_metric": "ADE20K val, every 4th image, mIoU / aAcc %",
-					"original_ms": 24.7,
-					"original_size": "1024x2048",
-					"original_note": null,
-					"portable_ms": 18.3,
-					"kernels_ms": 12.4,
-					"speedup": 2,
-					"speedup_vs": "original",
-					"peak_mib": 645,
-					"compile": {
-						"ms": 20.7,
-						"fails": null,
-						"part": null,
-						"prep_s": 10.6
-					},
-					"tensorrt": {
-						"ms": 40.3,
-						"fails": null,
-						"part": null,
-						"prep_s": 36.2
 					}
 				},
 				{
@@ -8332,6 +8978,48 @@
 					}
 				},
 				{
+					"id": "dinov2-b-linear-ade20k",
+					"doc": "/models/dinov2_linear",
+					"family": "dinov2_linear",
+					"mem": {
+						"original": {
+							"alloc": 2063,
+							"reserved": 2426
+						},
+						"portable": {
+							"alloc": 765,
+							"reserved": 884
+						},
+						"kernels": {
+							"alloc": 771,
+							"reserved": 884
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "45.12 / 80.28",
+					"accuracy_metric": "ADE20K val, every 4th image, mIoU / aAcc %",
+					"original_ms": 40.1,
+					"original_size": "1024x2048",
+					"original_note": null,
+					"portable_ms": 33.3,
+					"kernels_ms": 20.1,
+					"speedup": 2,
+					"speedup_vs": "original",
+					"peak_mib": 771,
+					"compile": {
+						"ms": 35.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 10.8
+					},
+					"tensorrt": {
+						"ms": 49.5,
+						"fails": null,
+						"part": null,
+						"prep_s": 40.6
+					}
+				},
+				{
 					"id": "segnext-mscan-l-ade20k",
 					"doc": "/models/segnext",
 					"family": "segnext",
@@ -8371,48 +9059,6 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 82.2
-					}
-				},
-				{
-					"id": "dinov2-b-linear-ade20k",
-					"doc": "/models/dinov2_linear",
-					"family": "dinov2_linear",
-					"mem": {
-						"original": {
-							"alloc": 2063,
-							"reserved": 2426
-						},
-						"portable": {
-							"alloc": 765,
-							"reserved": 884
-						},
-						"kernels": {
-							"alloc": 771,
-							"reserved": 904
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "45.12 / 80.28",
-					"accuracy_metric": "ADE20K val, every 4th image, mIoU / aAcc %",
-					"original_ms": 40.1,
-					"original_size": "1024x2048",
-					"original_note": null,
-					"portable_ms": 33.3,
-					"kernels_ms": 22.6,
-					"speedup": 1.8,
-					"speedup_vs": "original",
-					"peak_mib": 771,
-					"compile": {
-						"ms": 35.8,
-						"fails": null,
-						"part": null,
-						"prep_s": 10.8
-					},
-					"tensorrt": {
-						"ms": 49.5,
-						"fails": null,
-						"part": null,
-						"prep_s": 40.6
 					}
 				},
 				{
@@ -8608,8 +9254,8 @@
 					"original_size": "1024x2048",
 					"original_note": null,
 					"portable_ms": 83.9,
-					"kernels_ms": 56.8,
-					"speedup": 1.7,
+					"kernels_ms": 52.8,
+					"speedup": 1.8,
 					"speedup_vs": "original",
 					"peak_mib": 1189,
 					"compile": {
@@ -8791,6 +9437,544 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 84.9
+					}
+				}
+			]
+		},
+		{
+			"id": "matting",
+			"title": "Matting",
+			"input": "1080x1920",
+			"accuracy_metric": "DIS-VD MAE",
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "u2net",
+					"doc": "/tasks/matting#u²-net",
+					"note": "8.8 ms"
+				},
+				{
+					"label": "Most accurate",
+					"id": "birefnet",
+					"doc": "/models/birefnet",
+					"note": "214.3 ms, error 0.0325"
+				},
+				{
+					"label": "Best trade-off",
+					"id": "ben2",
+					"doc": "/models/ben2",
+					"note": "172.6 ms, error 0.0403"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "u2net",
+					"doc": "/tasks/matting#u²-net",
+					"note": "8.8 ms"
+				},
+				{
+					"label": "Most accurate commercially usable",
+					"id": "birefnet",
+					"doc": "/models/birefnet",
+					"note": "214.3 ms, error 0.0325"
+				}
+			],
+			"models": [
+				{
+					"id": "u2net",
+					"doc": "/tasks/matting#u²-net",
+					"family": "/tasks/matting#u²-net",
+					"mem": {
+						"original": {
+							"alloc": 476,
+							"reserved": 502
+						},
+						"portable": {
+							"alloc": 248,
+							"reserved": 278
+						},
+						"kernels": {
+							"alloc": 237,
+							"reserved": 260
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.1485 / 0.5273",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
+					"original_ms": 15.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 14.9,
+					"kernels_ms": 8.8,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 237,
+					"compile": {
+						"ms": 6.24,
+						"fails": null,
+						"part": null,
+						"prep_s": 35.7
+					},
+					"tensorrt": {
+						"ms": 3.07,
+						"fails": null,
+						"part": null,
+						"prep_s": 36
+					}
+				},
+				{
+					"id": "u2net-human-seg",
+					"doc": "/tasks/matting#u²-net",
+					"family": "/tasks/matting#u²-net",
+					"mem": {
+						"original": {
+							"alloc": 476,
+							"reserved": 502
+						},
+						"portable": {
+							"alloc": 248,
+							"reserved": 278
+						},
+						"kernels": {
+							"alloc": 237,
+							"reserved": 260
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.1717 / 0.3266",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
+					"original_ms": 16,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 14.6,
+					"kernels_ms": 9.1,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 237,
+					"compile": {
+						"ms": 6.25,
+						"fails": null,
+						"part": null,
+						"prep_s": 36
+					},
+					"tensorrt": {
+						"ms": 3.08,
+						"fails": null,
+						"part": null,
+						"prep_s": 34.7
+					}
+				},
+				{
+					"id": "u2netp",
+					"doc": "/tasks/matting#u²-net",
+					"family": "/tasks/matting#u²-net",
+					"mem": {
+						"original": {
+							"alloc": 280,
+							"reserved": 314
+						},
+						"portable": {
+							"alloc": 150,
+							"reserved": 172
+						},
+						"kernels": {
+							"alloc": 138,
+							"reserved": 172
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.1531 / 0.5405",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
+					"original_ms": 14.8,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 14.6,
+					"kernels_ms": 9.8,
+					"speedup": 1.5,
+					"speedup_vs": "original",
+					"peak_mib": 138,
+					"compile": {
+						"ms": 5.44,
+						"fails": null,
+						"part": null,
+						"prep_s": 29.9
+					},
+					"tensorrt": {
+						"ms": 1.87,
+						"fails": null,
+						"part": null,
+						"prep_s": 26.1
+					}
+				},
+				{
+					"id": "isnet-general-use",
+					"doc": "/models/isnet",
+					"family": "isnet",
+					"mem": {
+						"original": {
+							"alloc": 993,
+							"reserved": 1042
+						},
+						"portable": {
+							"alloc": 512,
+							"reserved": 562
+						},
+						"kernels": {
+							"alloc": 487,
+							"reserved": 522
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0157 / 0.9624",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
+					"original_ms": 38.5,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 21,
+					"kernels_ms": 12.1,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"peak_mib": 487,
+					"compile": {
+						"ms": 13.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 33.9
+					},
+					"tensorrt": {
+						"ms": 6.66,
+						"fails": null,
+						"part": null,
+						"prep_s": 32.3
+					}
+				},
+				{
+					"id": "isnet",
+					"doc": "/models/isnet",
+					"family": "isnet",
+					"mem": {
+						"original": {
+							"alloc": 993,
+							"reserved": 1042
+						},
+						"portable": {
+							"alloc": 512,
+							"reserved": 562
+						},
+						"kernels": {
+							"alloc": 487,
+							"reserved": 522
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0768 / 0.7821",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
+					"original_ms": 38.5,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 21,
+					"kernels_ms": 12.1,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"peak_mib": 487,
+					"compile": {
+						"ms": 13.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 33.8
+					},
+					"tensorrt": {
+						"ms": 6.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 34.4
+					}
+				},
+				{
+					"id": "inspyrenet-fast",
+					"doc": "/models/inspyrenet",
+					"family": "inspyrenet",
+					"mem": {
+						"original": {
+							"alloc": 810,
+							"reserved": 836
+						},
+						"portable": {
+							"alloc": 432,
+							"reserved": 494
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": 71.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 45.1,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 17.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 76.6
+					},
+					"tensorrt": {
+						"ms": 6.99,
+						"fails": null,
+						"part": null,
+						"prep_s": 138
+					}
+				},
+				{
+					"id": "birefnet-lite",
+					"doc": "/models/birefnet",
+					"family": "birefnet",
+					"mem": {
+						"original": {
+							"alloc": 913,
+							"reserved": 974
+						},
+						"portable": {
+							"alloc": 810,
+							"reserved": 932
+						},
+						"kernels": {
+							"alloc": 754,
+							"reserved": 960
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0446 / 0.8620",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
+					"original_ms": 75.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 67.3,
+					"kernels_ms": 59.3,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 754,
+					"compile": {
+						"ms": 50.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 75.1
+					},
+					"tensorrt": {
+						"ms": 49,
+						"fails": null,
+						"part": null,
+						"prep_s": 156
+					}
+				},
+				{
+					"id": "vitmatte-s",
+					"doc": "/models/vitmatte",
+					"family": "vitmatte",
+					"mem": {
+						"original": {
+							"alloc": 2536,
+							"reserved": 2582
+						},
+						"portable": {
+							"alloc": 1401,
+							"reserved": 1524
+						},
+						"kernels": {
+							"alloc": 1337,
+							"reserved": 1444
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "13.85 / 11.723",
+					"accuracy_metric": "AIM-500, every 5th image (100), generated trimaps, SAD / MSE x 1000 (unknown region)",
+					"original_ms": 140.2,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 101.9,
+					"kernels_ms": 83.8,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 1337,
+					"compile": {
+						"ms": 81.9,
+						"fails": null,
+						"part": null,
+						"prep_s": 31.5
+					},
+					"tensorrt": {
+						"ms": 54.6,
+						"fails": null,
+						"part": null,
+						"prep_s": 51.3
+					}
+				},
+				{
+					"id": "vitmatte-b",
+					"doc": "/models/vitmatte",
+					"family": "vitmatte",
+					"mem": {
+						"original": {
+							"alloc": 5070,
+							"reserved": 5128
+						},
+						"portable": {
+							"alloc": 1548,
+							"reserved": 1692
+						},
+						"kernels": {
+							"alloc": 1484,
+							"reserved": 1710
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "13.72 / 12.180",
+					"accuracy_metric": "AIM-500, all 500 images, generated trimaps, SAD / MSE x 1000 (unknown region)",
+					"original_ms": 257.3,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 181.7,
+					"kernels_ms": 147.4,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 1484,
+					"compile": {
+						"ms": 157,
+						"fails": null,
+						"part": null,
+						"prep_s": 32.6
+					},
+					"tensorrt": {
+						"ms": 108,
+						"fails": null,
+						"part": null,
+						"prep_s": 48.8
+					}
+				},
+				{
+					"id": "inspyrenet",
+					"doc": "/models/inspyrenet",
+					"family": "inspyrenet",
+					"mem": {
+						"original": {
+							"alloc": 3240,
+							"reserved": 3262
+						},
+						"portable": {
+							"alloc": 1649,
+							"reserved": 1854
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": 240.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 159.4,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 85.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 70.8
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "TensorRT: NaN output (onnxruntime on the same ONNX is right)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "ben2",
+					"doc": "/models/ben2",
+					"family": "ben2",
+					"mem": {
+						"original": {
+							"alloc": 2466,
+							"reserved": 2772
+						},
+						"portable": {
+							"alloc": 1681,
+							"reserved": 1976
+						},
+						"kernels": {
+							"alloc": 1946,
+							"reserved": 2238
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0403",
+					"accuracy_metric": "DIS-VD MAE",
+					"original_ms": 200.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 184.4,
+					"kernels_ms": 172.6,
+					"speedup": 1.2,
+					"speedup_vs": "original",
+					"peak_mib": 1946,
+					"compile": {
+						"ms": 103,
+						"fails": null,
+						"part": null,
+						"prep_s": 70.8
+					},
+					"tensorrt": {
+						"ms": 58.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 140
+					}
+				},
+				{
+					"id": "birefnet",
+					"doc": "/models/birefnet",
+					"family": "birefnet",
+					"mem": {
+						"original": {
+							"alloc": 1666,
+							"reserved": 1930
+						},
+						"portable": {
+							"alloc": 1660,
+							"reserved": 1888
+						},
+						"kernels": {
+							"alloc": 1674,
+							"reserved": 1916
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0325",
+					"accuracy_metric": "DIS-VD MAE",
+					"original_ms": 234.4,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 224.5,
+					"kernels_ms": 214.3,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"peak_mib": 1674,
+					"compile": {
+						"ms": 138,
+						"fails": null,
+						"part": null,
+						"prep_s": 93.8
+					},
+					"tensorrt": {
+						"ms": 87.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 201
 					}
 				}
 			]
@@ -9528,6 +10712,38 @@
 						"part": "image encoder",
 						"prep_s": 69.1
 					}
+				},
+				{
+					"id": "insid3-vitl16",
+					"doc": "/models/insid3",
+					"family": "insid3",
+					"mem": {
+						"original": {
+							"alloc": 2148,
+							"reserved": 2226
+						},
+						"portable": {
+							"alloc": 986,
+							"reserved": 1108
+						},
+						"kernels": {
+							"alloc": 987,
+							"reserved": 1108
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "57.21",
+					"accuracy_metric": "COCO val2017, one-shot episodes (3 per class), class mIoU %",
+					"original_ms": 713.5,
+					"original_size": "1024x1024",
+					"original_note": null,
+					"portable_ms": 255.5,
+					"kernels_ms": 156.5,
+					"speedup": 4.6,
+					"speedup_vs": "original",
+					"peak_mib": 987,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -9539,18 +10755,60 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "rtmdet-nano-person",
-					"doc": "/models/rtmdet",
-					"note": "2.1 ms"
+					"id": "yolox-tiny",
+					"doc": "/models/yolox",
+					"note": "2.0 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "rtmdet-nano-person",
-					"doc": "/models/rtmdet",
-					"note": "2.1 ms"
+					"id": "yolox-tiny",
+					"doc": "/models/yolox",
+					"note": "2.0 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "yolox-tiny",
+					"doc": "/models/yolox",
+					"family": "yolox",
+					"mem": {
+						"original": {
+							"alloc": 32,
+							"reserved": 58
+						},
+						"portable": {
+							"alloc": 60,
+							"reserved": 92
+						},
+						"kernels": {
+							"alloc": 62,
+							"reserved": 108
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "38.29",
+					"accuracy_metric": "COCO val2017, every 25th image (200), box mAP",
+					"original_ms": 9.8,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 5.6,
+					"kernels_ms": 2,
+					"speedup": 4.9,
+					"speedup_vs": "original",
+					"peak_mib": 62,
+					"compile": {
+						"ms": 2.87,
+						"fails": null,
+						"part": null,
+						"prep_s": 13.1
+					},
+					"tensorrt": {
+						"ms": 0.561,
+						"fails": null,
+						"part": null,
+						"prep_s": 23.7
+					}
+				},
 				{
 					"id": "rtmdet-nano-person",
 					"doc": "/models/rtmdet",
@@ -9561,12 +10819,12 @@
 							"reserved": 30
 						},
 						"portable": {
-							"alloc": 48,
-							"reserved": 84
+							"alloc": 9,
+							"reserved": 28
 						},
 						"kernels": {
-							"alloc": 49,
-							"reserved": 92
+							"alloc": 11,
+							"reserved": 52
 						}
 					},
 					"commercial": "yes",
@@ -9575,11 +10833,11 @@
 					"original_ms": 12.9,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 7.6,
+					"portable_ms": 7.5,
 					"kernels_ms": 2.1,
 					"speedup": 6.1,
 					"speedup_vs": "original",
-					"peak_mib": 49,
+					"peak_mib": 11,
 					"compile": {
 						"ms": 4.23,
 						"fails": null,
@@ -9594,45 +10852,129 @@
 					}
 				},
 				{
-					"id": "rtmdet-tiny-coco",
-					"doc": "/models/rtmdet",
-					"family": "rtmdet",
+					"id": "lw-detr-tiny-coco",
+					"doc": "/models/lwdetr",
+					"family": "lwdetr",
 					"mem": {
 						"original": {
-							"alloc": 73,
-							"reserved": 96
+							"alloc": 114,
+							"reserved": 132
 						},
 						"portable": {
-							"alloc": 72,
-							"reserved": 96
+							"alloc": 92,
+							"reserved": 112
 						},
 						"kernels": {
-							"alloc": 80,
-							"reserved": 124
+							"alloc": 94,
+							"reserved": 134
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "40.52",
-					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
-					"original_ms": 10.7,
+					"accuracy": "48.99",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
+					"original_ms": 16.4,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 6.1,
-					"kernels_ms": 2.7,
-					"speedup": 4,
+					"portable_ms": 7.4,
+					"kernels_ms": 2.2,
+					"speedup": 7.5,
 					"speedup_vs": "original",
-					"peak_mib": 80,
+					"peak_mib": 94,
 					"compile": {
-						"ms": 3.43,
+						"ms": 2.98,
 						"fails": null,
 						"part": null,
-						"prep_s": 13.7
+						"prep_s": 21.6
 					},
 					"tensorrt": {
-						"ms": 0.962,
+						"ms": 0.999,
 						"fails": null,
 						"part": null,
-						"prep_s": 19.3
+						"prep_s": 60.3
+					}
+				},
+				{
+					"id": "rf-detr-n-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 118,
+							"reserved": 160
+						},
+						"portable": {
+							"alloc": 114,
+							"reserved": 140
+						},
+						"kernels": {
+							"alloc": 114,
+							"reserved": 142
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 10.5,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 9.4,
+					"kernels_ms": 2.5,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 114,
+					"compile": {
+						"ms": 4.58,
+						"fails": null,
+						"part": null,
+						"prep_s": 25.8
+					},
+					"tensorrt": {
+						"ms": 1.15,
+						"fails": null,
+						"part": null,
+						"prep_s": 60.1
+					}
+				},
+				{
+					"id": "deim-n-coco",
+					"doc": "/models/dfine",
+					"family": "dfine",
+					"mem": {
+						"original": {
+							"alloc": 93,
+							"reserved": 124
+						},
+						"portable": {
+							"alloc": 88,
+							"reserved": 116
+						},
+						"kernels": {
+							"alloc": 93,
+							"reserved": 122
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "44.38",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 24.6,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 10.2,
+					"kernels_ms": 2.5,
+					"speedup": 9.8,
+					"speedup_vs": "original",
+					"peak_mib": 93,
+					"compile": {
+						"ms": 5.44,
+						"fails": null,
+						"part": null,
+						"prep_s": 28
+					},
+					"tensorrt": {
+						"ms": 1.01,
+						"fails": null,
+						"part": null,
+						"prep_s": 50.8
 					}
 				},
 				{
@@ -9649,8 +10991,8 @@
 							"reserved": 116
 						},
 						"kernels": {
-							"alloc": 124,
-							"reserved": 202
+							"alloc": 93,
+							"reserved": 122
 						}
 					},
 					"commercial": "yes",
@@ -9660,10 +11002,10 @@
 					"original_size": "800x1344",
 					"original_note": null,
 					"portable_ms": 10.3,
-					"kernels_ms": 2.7,
-					"speedup": 8.9,
+					"kernels_ms": 2.5,
+					"speedup": 9.7,
 					"speedup_vs": "original",
-					"peak_mib": 124,
+					"peak_mib": 93,
 					"compile": {
 						"ms": 5.43,
 						"fails": null,
@@ -9678,6 +11020,132 @@
 					}
 				},
 				{
+					"id": "yolox-s",
+					"doc": "/models/yolox",
+					"family": "yolox",
+					"mem": {
+						"original": {
+							"alloc": 67,
+							"reserved": 90
+						},
+						"portable": {
+							"alloc": 79,
+							"reserved": 100
+						},
+						"kernels": {
+							"alloc": 84,
+							"reserved": 134
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "44.73",
+					"accuracy_metric": "COCO val2017, every 25th image (200), box mAP",
+					"original_ms": 10.4,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 5.5,
+					"kernels_ms": 2.6,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 84,
+					"compile": {
+						"ms": 2.95,
+						"fails": null,
+						"part": null,
+						"prep_s": 12.7
+					},
+					"tensorrt": {
+						"ms": 1.02,
+						"fails": null,
+						"part": null,
+						"prep_s": 17.2
+					}
+				},
+				{
+					"id": "rtmdet-tiny-coco",
+					"doc": "/models/rtmdet",
+					"family": "rtmdet",
+					"mem": {
+						"original": {
+							"alloc": 73,
+							"reserved": 96
+						},
+						"portable": {
+							"alloc": 40,
+							"reserved": 56
+						},
+						"kernels": {
+							"alloc": 40,
+							"reserved": 84
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "40.52",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 10.7,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 6,
+					"kernels_ms": 2.7,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 40,
+					"compile": {
+						"ms": 3.43,
+						"fails": null,
+						"part": null,
+						"prep_s": 13.7
+					},
+					"tensorrt": {
+						"ms": 0.962,
+						"fails": null,
+						"part": null,
+						"prep_s": 19.3
+					}
+				},
+				{
+					"id": "lw-detr-small-coco",
+					"doc": "/models/lwdetr",
+					"family": "lwdetr",
+					"mem": {
+						"original": {
+							"alloc": 129,
+							"reserved": 166
+						},
+						"portable": {
+							"alloc": 97,
+							"reserved": 116
+						},
+						"kernels": {
+							"alloc": 99,
+							"reserved": 140
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 19.9,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 8.8,
+					"kernels_ms": 2.8,
+					"speedup": 7.1,
+					"speedup_vs": "original",
+					"peak_mib": 99,
+					"compile": {
+						"ms": 3.63,
+						"fails": null,
+						"part": null,
+						"prep_s": 23
+					},
+					"tensorrt": {
+						"ms": 1.36,
+						"fails": null,
+						"part": null,
+						"prep_s": 63.1
+					}
+				},
+				{
 					"id": "rtmdet-s-coco",
 					"doc": "/models/rtmdet",
 					"family": "rtmdet",
@@ -9687,12 +11155,12 @@
 							"reserved": 106
 						},
 						"portable": {
-							"alloc": 81,
-							"reserved": 102
+							"alloc": 53,
+							"reserved": 82
 						},
 						"kernels": {
-							"alloc": 88,
-							"reserved": 136
+							"alloc": 48,
+							"reserved": 96
 						}
 					},
 					"commercial": "yes",
@@ -9701,11 +11169,11 @@
 					"original_ms": 12.1,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 6.3,
+					"portable_ms": 6.2,
 					"kernels_ms": 3,
 					"speedup": 4.1,
 					"speedup_vs": "original",
-					"peak_mib": 88,
+					"peak_mib": 48,
 					"compile": {
 						"ms": 3.56,
 						"fails": null,
@@ -9717,6 +11185,174 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 20.1
+					}
+				},
+				{
+					"id": "rf-detr-s-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 189,
+							"reserved": 238
+						},
+						"portable": {
+							"alloc": 126,
+							"reserved": 148
+						},
+						"kernels": {
+							"alloc": 125,
+							"reserved": 170
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 11.2,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 10.1,
+					"kernels_ms": 3.4,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"peak_mib": 125,
+					"compile": {
+						"ms": 4.56,
+						"fails": null,
+						"part": null,
+						"prep_s": 24.4
+					},
+					"tensorrt": {
+						"ms": 1.83,
+						"fails": null,
+						"part": null,
+						"prep_s": 52.5
+					}
+				},
+				{
+					"id": "yolox-m",
+					"doc": "/models/yolox",
+					"family": "yolox",
+					"mem": {
+						"original": {
+							"alloc": 142,
+							"reserved": 160
+						},
+						"portable": {
+							"alloc": 110,
+							"reserved": 132
+						},
+						"kernels": {
+							"alloc": 115,
+							"reserved": 182
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "50.38",
+					"accuracy_metric": "COCO val2017, every 25th image (200), box mAP",
+					"original_ms": 12.4,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 6.4,
+					"kernels_ms": 3.7,
+					"speedup": 3.4,
+					"speedup_vs": "original",
+					"peak_mib": 115,
+					"compile": {
+						"ms": 3.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 13.4
+					},
+					"tensorrt": {
+						"ms": 2.03,
+						"fails": null,
+						"part": null,
+						"prep_s": 20.1
+					}
+				},
+				{
+					"id": "rf-detr-seg-n-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 255,
+							"reserved": 298
+						},
+						"portable": {
+							"alloc": 123,
+							"reserved": 148
+						},
+						"kernels": {
+							"alloc": 126,
+							"reserved": 190
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 13,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 11.9,
+					"kernels_ms": 3.7,
+					"speedup": 3.5,
+					"speedup_vs": "original",
+					"peak_mib": 126,
+					"compile": {
+						"ms": 6.59,
+						"fails": null,
+						"part": null,
+						"prep_s": 31.2
+					},
+					"tensorrt": {
+						"ms": 1.52,
+						"fails": null,
+						"part": null,
+						"prep_s": 54
+					}
+				},
+				{
+					"id": "deim-s-coco",
+					"doc": "/models/dfine",
+					"family": "dfine",
+					"mem": {
+						"original": {
+							"alloc": 154,
+							"reserved": 180
+						},
+						"portable": {
+							"alloc": 105,
+							"reserved": 128
+						},
+						"kernels": {
+							"alloc": 106,
+							"reserved": 172
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "49.52",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 26.4,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 11.4,
+					"kernels_ms": 3.8,
+					"speedup": 7,
+					"speedup_vs": "original",
+					"peak_mib": 106,
+					"compile": {
+						"ms": 5.63,
+						"fails": null,
+						"part": null,
+						"prep_s": 31.3
+					},
+					"tensorrt": {
+						"ms": 1.68,
+						"fails": null,
+						"part": null,
+						"prep_s": 57.5
 					}
 				},
 				{
@@ -9733,8 +11369,8 @@
 							"reserved": 128
 						},
 						"kernels": {
-							"alloc": 138,
-							"reserved": 212
+							"alloc": 106,
+							"reserved": 172
 						}
 					},
 					"commercial": "yes",
@@ -9744,10 +11380,10 @@
 					"original_size": "800x1344",
 					"original_note": null,
 					"portable_ms": 11.1,
-					"kernels_ms": 4,
-					"speedup": 6.4,
+					"kernels_ms": 3.8,
+					"speedup": 6.7,
 					"speedup_vs": "original",
-					"peak_mib": 138,
+					"peak_mib": 106,
 					"compile": {
 						"ms": 5.63,
 						"fails": null,
@@ -9759,6 +11395,90 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 51.4
+					}
+				},
+				{
+					"id": "lw-detr-medium-coco",
+					"doc": "/models/lwdetr",
+					"family": "lwdetr",
+					"mem": {
+						"original": {
+							"alloc": 228,
+							"reserved": 274
+						},
+						"portable": {
+							"alloc": 128,
+							"reserved": 136
+						},
+						"kernels": {
+							"alloc": 128,
+							"reserved": 180
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 23.3,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 8.9,
+					"kernels_ms": 3.8,
+					"speedup": 6.1,
+					"speedup_vs": "original",
+					"peak_mib": 128,
+					"compile": {
+						"ms": 3.74,
+						"fails": null,
+						"part": null,
+						"prep_s": 22.4
+					},
+					"tensorrt": {
+						"ms": 2.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 63.3
+					}
+				},
+				{
+					"id": "rf-detr-m-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 140,
+							"reserved": 174
+						},
+						"portable": {
+							"alloc": 135,
+							"reserved": 154
+						},
+						"kernels": {
+							"alloc": 133,
+							"reserved": 180
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "54.40",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 11.8,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 12.3,
+					"kernels_ms": 3.9,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"peak_mib": 133,
+					"compile": {
+						"ms": 4.92,
+						"fails": null,
+						"part": null,
+						"prep_s": 27.8
+					},
+					"tensorrt": {
+						"ms": 2.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 55.3
 					}
 				},
 				{
@@ -9846,6 +11566,48 @@
 					}
 				},
 				{
+					"id": "rf-detr-seg-s-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 327,
+							"reserved": 382
+						},
+						"portable": {
+							"alloc": 130,
+							"reserved": 154
+						},
+						"kernels": {
+							"alloc": 129,
+							"reserved": 198
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 13,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 12,
+					"kernels_ms": 4.3,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"peak_mib": 129,
+					"compile": {
+						"ms": 6.55,
+						"fails": null,
+						"part": null,
+						"prep_s": 29.8
+					},
+					"tensorrt": {
+						"ms": 2,
+						"fails": null,
+						"part": null,
+						"prep_s": 63.6
+					}
+				},
+				{
 					"id": "rtmdet-m-coco",
 					"doc": "/models/rtmdet",
 					"family": "rtmdet",
@@ -9888,6 +11650,132 @@
 					}
 				},
 				{
+					"id": "dfine-m-coco",
+					"doc": "/models/dfine",
+					"family": "dfine",
+					"mem": {
+						"original": {
+							"alloc": 231,
+							"reserved": 264
+						},
+						"portable": {
+							"alloc": 126,
+							"reserved": 142
+						},
+						"kernels": {
+							"alloc": 127,
+							"reserved": 192
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "52.00",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 30.8,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 13.5,
+					"kernels_ms": 5.2,
+					"speedup": 6,
+					"speedup_vs": "original",
+					"peak_mib": 127,
+					"compile": {
+						"ms": 6.79,
+						"fails": null,
+						"part": null,
+						"prep_s": 36.4
+					},
+					"tensorrt": {
+						"ms": 2.49,
+						"fails": null,
+						"part": null,
+						"prep_s": 54.6
+					}
+				},
+				{
+					"id": "deim-m-coco",
+					"doc": "/models/dfine",
+					"family": "dfine",
+					"mem": {
+						"original": {
+							"alloc": 210,
+							"reserved": 250
+						},
+						"portable": {
+							"alloc": 126,
+							"reserved": 142
+						},
+						"kernels": {
+							"alloc": 127,
+							"reserved": 192
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "52.43",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 31.4,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 13.6,
+					"kernels_ms": 5.2,
+					"speedup": 6.1,
+					"speedup_vs": "original",
+					"peak_mib": 127,
+					"compile": {
+						"ms": 6.73,
+						"fails": null,
+						"part": null,
+						"prep_s": 39.1
+					},
+					"tensorrt": {
+						"ms": 2.54,
+						"fails": null,
+						"part": null,
+						"prep_s": 58.2
+					}
+				},
+				{
+					"id": "yolox-l",
+					"doc": "/models/yolox",
+					"family": "yolox",
+					"mem": {
+						"original": {
+							"alloc": 265,
+							"reserved": 298
+						},
+						"portable": {
+							"alloc": 165,
+							"reserved": 206
+						},
+						"kernels": {
+							"alloc": 170,
+							"reserved": 304
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "54.19",
+					"accuracy_metric": "COCO val2017, every 25th image (200), box mAP",
+					"original_ms": 15.1,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 8.1,
+					"kernels_ms": 5.2,
+					"speedup": 2.9,
+					"speedup_vs": "original",
+					"peak_mib": 170,
+					"compile": {
+						"ms": 6.15,
+						"fails": null,
+						"part": null,
+						"prep_s": 15.3
+					},
+					"tensorrt": {
+						"ms": 3.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 21.2
+					}
+				},
+				{
 					"id": "rtdetrv2-m-coco",
 					"doc": "/models/rtdetrv2",
 					"family": "rtdetrv2",
@@ -9920,6 +11808,90 @@
 					"tensorrt": null
 				},
 				{
+					"id": "rf-detr-l-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 219,
+							"reserved": 240
+						},
+						"portable": {
+							"alloc": 148,
+							"reserved": 166
+						},
+						"kernels": {
+							"alloc": 146,
+							"reserved": 206
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 11.8,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 10.7,
+					"kernels_ms": 5.4,
+					"speedup": 2.2,
+					"speedup_vs": "original",
+					"peak_mib": 146,
+					"compile": {
+						"ms": 5.32,
+						"fails": null,
+						"part": null,
+						"prep_s": 28.7
+					},
+					"tensorrt": {
+						"ms": 2.87,
+						"fails": null,
+						"part": null,
+						"prep_s": 65.7
+					}
+				},
+				{
+					"id": "rf-detr-seg-m-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 381,
+							"reserved": 424
+						},
+						"portable": {
+							"alloc": 140,
+							"reserved": 180
+						},
+						"kernels": {
+							"alloc": 144,
+							"reserved": 204
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "53.49 / 44.38",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP / mask mAP",
+					"original_ms": 14.4,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 15.1,
+					"kernels_ms": 5.4,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 144,
+					"compile": {
+						"ms": 6.86,
+						"fails": null,
+						"part": null,
+						"prep_s": 32.1
+					},
+					"tensorrt": {
+						"ms": 2.5,
+						"fails": null,
+						"part": null,
+						"prep_s": 72.4
+					}
+				},
+				{
 					"id": "rtdetrv2-ms-coco",
 					"doc": "/models/rtdetrv2",
 					"family": "rtdetrv2",
@@ -9950,6 +11922,48 @@
 					"peak_mib": 189,
 					"compile": null,
 					"tensorrt": null
+				},
+				{
+					"id": "lw-detr-large-coco",
+					"doc": "/models/lwdetr",
+					"family": "lwdetr",
+					"mem": {
+						"original": {
+							"alloc": 355,
+							"reserved": 382
+						},
+						"portable": {
+							"alloc": 204,
+							"reserved": 230
+						},
+						"kernels": {
+							"alloc": 192,
+							"reserved": 254
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "60.74",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
+					"original_ms": 22.8,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 10.2,
+					"kernels_ms": 5.6,
+					"speedup": 4,
+					"speedup_vs": "original",
+					"peak_mib": 192,
+					"compile": {
+						"ms": 5.62,
+						"fails": null,
+						"part": null,
+						"prep_s": 29.6
+					},
+					"tensorrt": {
+						"ms": 3.45,
+						"fails": null,
+						"part": null,
+						"prep_s": 56
+					}
 				},
 				{
 					"id": "rtmdet-l-coco",
@@ -9994,45 +12008,45 @@
 					}
 				},
 				{
-					"id": "dfine-m-coco",
+					"id": "deim-l-coco",
 					"doc": "/models/dfine",
 					"family": "dfine",
 					"mem": {
 						"original": {
-							"alloc": 231,
-							"reserved": 264
+							"alloc": 264,
+							"reserved": 322
 						},
 						"portable": {
-							"alloc": 126,
-							"reserved": 142
+							"alloc": 152,
+							"reserved": 172
 						},
 						"kernels": {
-							"alloc": 156,
-							"reserved": 252
+							"alloc": 149,
+							"reserved": 220
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "52.00",
+					"accuracy": "54.67",
 					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
-					"original_ms": 30.8,
+					"original_ms": 36.1,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 13.5,
-					"kernels_ms": 6,
-					"speedup": 5.2,
+					"portable_ms": 16.2,
+					"kernels_ms": 6.6,
+					"speedup": 5.5,
 					"speedup_vs": "original",
-					"peak_mib": 156,
+					"peak_mib": 149,
 					"compile": {
-						"ms": 6.79,
+						"ms": 7.99,
 						"fails": null,
 						"part": null,
-						"prep_s": 36.4
+						"prep_s": 49.8
 					},
 					"tensorrt": {
-						"ms": 2.49,
+						"ms": 3.39,
 						"fails": null,
 						"part": null,
-						"prep_s": 54.6
+						"prep_s": 58.1
 					}
 				},
 				{
@@ -10066,6 +12080,132 @@
 					"peak_mib": 200,
 					"compile": null,
 					"tensorrt": null
+				},
+				{
+					"id": "dfine-l-coco",
+					"doc": "/models/dfine",
+					"family": "dfine",
+					"mem": {
+						"original": {
+							"alloc": 281,
+							"reserved": 328
+						},
+						"portable": {
+							"alloc": 152,
+							"reserved": 172
+						},
+						"kernels": {
+							"alloc": 149,
+							"reserved": 220
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "54.17",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 37.1,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 16.2,
+					"kernels_ms": 6.6,
+					"speedup": 5.6,
+					"speedup_vs": "original",
+					"peak_mib": 149,
+					"compile": {
+						"ms": 7.91,
+						"fails": null,
+						"part": null,
+						"prep_s": 45.7
+					},
+					"tensorrt": {
+						"ms": 3.19,
+						"fails": null,
+						"part": null,
+						"prep_s": 58.7
+					}
+				},
+				{
+					"id": "rf-detr-seg-l-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 459,
+							"reserved": 492
+						},
+						"portable": {
+							"alloc": 150,
+							"reserved": 168
+						},
+						"kernels": {
+							"alloc": 151,
+							"reserved": 228
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 15.3,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 15.2,
+					"kernels_ms": 6.8,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"peak_mib": 151,
+					"compile": {
+						"ms": 7.08,
+						"fails": null,
+						"part": null,
+						"prep_s": 31.5
+					},
+					"tensorrt": {
+						"ms": 3.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 68.5
+					}
+				},
+				{
+					"id": "yolox-x",
+					"doc": "/models/yolox",
+					"family": "yolox",
+					"mem": {
+						"original": {
+							"alloc": 450,
+							"reserved": 504
+						},
+						"portable": {
+							"alloc": 255,
+							"reserved": 300
+						},
+						"kernels": {
+							"alloc": 258,
+							"reserved": 358
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "54.60",
+					"accuracy_metric": "COCO val2017, every 25th image (200), box mAP",
+					"original_ms": 17.2,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 11.8,
+					"kernels_ms": 7.8,
+					"speedup": 2.2,
+					"speedup_vs": "original",
+					"peak_mib": 258,
+					"compile": {
+						"ms": 11.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 15.8
+					},
+					"tensorrt": {
+						"ms": 5.28,
+						"fails": null,
+						"part": null,
+						"prep_s": 24.1
+					}
 				},
 				{
 					"id": "rtmdet-x-coco",
@@ -10110,48 +12250,6 @@
 					}
 				},
 				{
-					"id": "dfine-l-coco",
-					"doc": "/models/dfine",
-					"family": "dfine",
-					"mem": {
-						"original": {
-							"alloc": 281,
-							"reserved": 328
-						},
-						"portable": {
-							"alloc": 152,
-							"reserved": 172
-						},
-						"kernels": {
-							"alloc": 179,
-							"reserved": 300
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "54.17",
-					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
-					"original_ms": 37.1,
-					"original_size": "800x1344",
-					"original_note": null,
-					"portable_ms": 16.2,
-					"kernels_ms": 8.7,
-					"speedup": 4.3,
-					"speedup_vs": "original",
-					"peak_mib": 179,
-					"compile": {
-						"ms": 7.91,
-						"fails": null,
-						"part": null,
-						"prep_s": 45.7
-					},
-					"tensorrt": {
-						"ms": 3.19,
-						"fails": null,
-						"part": null,
-						"prep_s": 58.7
-					}
-				},
-				{
 					"id": "rtdetrv2-x-coco",
 					"doc": "/models/rtdetrv2",
 					"family": "rtdetrv2",
@@ -10182,6 +12280,132 @@
 					"peak_mib": 262,
 					"compile": null,
 					"tensorrt": null
+				},
+				{
+					"id": "lw-detr-xlarge-coco",
+					"doc": "/models/lwdetr",
+					"family": "lwdetr",
+					"mem": {
+						"original": {
+							"alloc": 762,
+							"reserved": 850
+						},
+						"portable": {
+							"alloc": 344,
+							"reserved": 360
+						},
+						"kernels": {
+							"alloc": 333,
+							"reserved": 408
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 25.5,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 12.1,
+					"kernels_ms": 9.4,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 333,
+					"compile": {
+						"ms": 10.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 30.5
+					},
+					"tensorrt": {
+						"ms": 6.58,
+						"fails": null,
+						"part": null,
+						"prep_s": 57.5
+					}
+				},
+				{
+					"id": "deim-x-coco",
+					"doc": "/models/dfine",
+					"family": "dfine",
+					"mem": {
+						"original": {
+							"alloc": 462,
+							"reserved": 502
+						},
+						"portable": {
+							"alloc": 227,
+							"reserved": 258
+						},
+						"kernels": {
+							"alloc": 228,
+							"reserved": 304
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "56.90",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 41.3,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 18.6,
+					"kernels_ms": 9.6,
+					"speedup": 4.3,
+					"speedup_vs": "original",
+					"peak_mib": 228,
+					"compile": {
+						"ms": 11,
+						"fails": null,
+						"part": null,
+						"prep_s": 48.8
+					},
+					"tensorrt": {
+						"ms": 5.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 66.5
+					}
+				},
+				{
+					"id": "dfine-x-coco",
+					"doc": "/models/dfine",
+					"family": "dfine",
+					"mem": {
+						"original": {
+							"alloc": 452,
+							"reserved": 488
+						},
+						"portable": {
+							"alloc": 227,
+							"reserved": 258
+						},
+						"kernels": {
+							"alloc": 228,
+							"reserved": 304
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "56.32",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 44.9,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 18.5,
+					"kernels_ms": 9.7,
+					"speedup": 4.6,
+					"speedup_vs": "original",
+					"peak_mib": 228,
+					"compile": {
+						"ms": 11,
+						"fails": null,
+						"part": null,
+						"prep_s": 47.7
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "TensorRT: NaN output (onnxruntime on the same ONNX is right)",
+						"part": null,
+						"prep_s": null
+					}
 				},
 				{
 					"id": "detr-r50-coco",
@@ -10226,6 +12450,48 @@
 					}
 				},
 				{
+					"id": "rf-detr-seg-xl-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
+					"mem": {
+						"original": {
+							"alloc": 182,
+							"reserved": 248
+						},
+						"portable": {
+							"alloc": 178,
+							"reserved": 188
+						},
+						"kernels": {
+							"alloc": 188,
+							"reserved": 268
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 18.7,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 19.4,
+					"kernels_ms": 10.5,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 188,
+					"compile": {
+						"ms": 10.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 35.3
+					},
+					"tensorrt": {
+						"ms": 5.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 92.5
+					}
+				},
+				{
 					"id": "detr-r101-coco",
 					"doc": "/models/detr",
 					"family": "detr",
@@ -10258,45 +12524,45 @@
 					"tensorrt": null
 				},
 				{
-					"id": "dfine-x-coco",
-					"doc": "/models/dfine",
-					"family": "dfine",
+					"id": "rf-detr-seg-2xl-coco",
+					"doc": "/models/rfdetr",
+					"family": "rfdetr",
 					"mem": {
 						"original": {
-							"alloc": 452,
-							"reserved": 488
+							"alloc": 287,
+							"reserved": 352
 						},
 						"portable": {
-							"alloc": 227,
-							"reserved": 258
+							"alloc": 210,
+							"reserved": 230
 						},
 						"kernels": {
-							"alloc": 237,
-							"reserved": 364
+							"alloc": 218,
+							"reserved": 332
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "56.32",
-					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
-					"original_ms": 44.9,
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 25.6,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 18.5,
-					"kernels_ms": 14.1,
-					"speedup": 3.2,
+					"portable_ms": 25.5,
+					"kernels_ms": 16,
+					"speedup": 1.6,
 					"speedup_vs": "original",
-					"peak_mib": 237,
+					"peak_mib": 218,
 					"compile": {
-						"ms": 11,
+						"ms": 16.9,
 						"fails": null,
 						"part": null,
-						"prep_s": 47.7
+						"prep_s": 44.6
 					},
 					"tensorrt": {
-						"ms": null,
-						"fails": "TensorRT: NaN output (onnxruntime on the same ONNX is right)",
+						"ms": 8.62,
+						"fails": null,
 						"part": null,
-						"prep_s": null
+						"prep_s": 69.2
 					}
 				},
 				{
@@ -10381,6 +12647,246 @@
 						"fails": null,
 						"part": "backbone + FPN",
 						"prep_s": 18.3
+					}
+				},
+				{
+					"id": "owlv2-b16",
+					"doc": "/models/owlv2",
+					"family": "owlv2",
+					"mem": {
+						"original": {
+							"alloc": 921,
+							"reserved": 960
+						},
+						"portable": {
+							"alloc": 497,
+							"reserved": 570
+						},
+						"kernels": {
+							"alloc": 607,
+							"reserved": 732
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "46.14",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 92.3,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 31.8,
+					"kernels_ms": 23.8,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 607,
+					"compile": {
+						"ms": 28.5,
+						"fails": null,
+						"part": null,
+						"prep_s": 10.6
+					},
+					"tensorrt": {
+						"ms": 18.4,
+						"fails": null,
+						"part": null,
+						"prep_s": 25.9
+					}
+				},
+				{
+					"id": "owlv2-l14",
+					"doc": "/models/owlv2",
+					"family": "owlv2",
+					"mem": {
+						"original": {
+							"alloc": 2550,
+							"reserved": 2606
+						},
+						"portable": {
+							"alloc": 1239,
+							"reserved": 1282
+						},
+						"kernels": {
+							"alloc": 1552,
+							"reserved": 1726
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "47.88",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 211.7,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 154.8,
+					"kernels_ms": 109.8,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 1552,
+					"compile": {
+						"ms": 141,
+						"fails": null,
+						"part": null,
+						"prep_s": 12.4
+					},
+					"tensorrt": {
+						"ms": 95.9,
+						"fails": null,
+						"part": null,
+						"prep_s": 33.8
+					}
+				},
+				{
+					"id": "grounding-dino-tiny",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2541,
+							"reserved": 2716
+						},
+						"portable": {
+							"alloc": 1404,
+							"reserved": 1468
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 198.9,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 137.8,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 111,
+						"fails": null,
+						"part": null,
+						"prep_s": 72.5
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: conversion failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "mm-grounding-dino-tiny",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2541,
+							"reserved": 2716
+						},
+						"portable": {
+							"alloc": 1405,
+							"reserved": 1470
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 202,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 138.2,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 111,
+						"fails": null,
+						"part": null,
+						"prep_s": 71.2
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: conversion failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "grounding-dino-base",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2895,
+							"reserved": 3094
+						},
+						"portable": {
+							"alloc": 1525,
+							"reserved": 1624
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 229.8,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 160.2,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 131,
+						"fails": null,
+						"part": null,
+						"prep_s": 98.4
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: conversion failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "mm-grounding-dino-base",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2895,
+							"reserved": 3094
+						},
+						"portable": {
+							"alloc": 1525,
+							"reserved": 1624
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 232.5,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 160.2,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 132,
+						"fails": null,
+						"part": null,
+						"prep_s": 105
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: conversion failed",
+						"part": null,
+						"prep_s": null
 					}
 				}
 			]
@@ -11078,6 +13584,48 @@
 					}
 				},
 				{
+					"id": "vitpose-plus-small",
+					"doc": "/models/vitpose",
+					"family": "vitpose",
+					"mem": {
+						"original": {
+							"alloc": 312,
+							"reserved": 376
+						},
+						"portable": {
+							"alloc": 164,
+							"reserved": 196
+						},
+						"kernels": {
+							"alloc": 145,
+							"reserved": 198
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "76.8",
+					"accuracy_metric": "COCO val2017, ground-truth person boxes, keypoint AP",
+					"original_ms": 104.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 7.8,
+					"kernels_ms": 6.1,
+					"speedup": 17.2,
+					"speedup_vs": "original",
+					"peak_mib": 145,
+					"compile": {
+						"ms": 7.54,
+						"fails": null,
+						"part": null,
+						"prep_s": 10.6
+					},
+					"tensorrt": {
+						"ms": 3.39,
+						"fails": null,
+						"part": "network on person crops",
+						"prep_s": 37.5
+					}
+				},
+				{
 					"id": "dwpose-l",
 					"doc": "/models/rtmpose",
 					"family": "rtmpose",
@@ -11285,48 +13833,6 @@
 						"fails": null,
 						"part": "network on person crops",
 						"prep_s": 23.1
-					}
-				},
-				{
-					"id": "vitpose-plus-small",
-					"doc": "/models/vitpose",
-					"family": "vitpose",
-					"mem": {
-						"original": {
-							"alloc": 312,
-							"reserved": 376
-						},
-						"portable": {
-							"alloc": 472,
-							"reserved": 496
-						},
-						"kernels": {
-							"alloc": 449,
-							"reserved": 558
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "76.8",
-					"accuracy_metric": "COCO val2017, ground-truth person boxes, keypoint AP",
-					"original_ms": 104.1,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 10,
-					"kernels_ms": 8.1,
-					"speedup": 12.9,
-					"speedup_vs": "original",
-					"peak_mib": 449,
-					"compile": {
-						"ms": 7.54,
-						"fails": null,
-						"part": null,
-						"prep_s": 10.6
-					},
-					"tensorrt": {
-						"ms": 3.39,
-						"fails": null,
-						"part": "network on person crops",
-						"prep_s": 37.5
 					}
 				},
 				{
@@ -12252,8 +14758,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "5.46",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 6.6,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12318,6 +14824,48 @@
 					}
 				},
 				{
+					"id": "dinov3-vits16",
+					"doc": "/models/dinov3",
+					"family": "dinov3",
+					"mem": {
+						"original": {
+							"alloc": 158,
+							"reserved": 166
+						},
+						"portable": {
+							"alloc": 76,
+							"reserved": 78
+						},
+						"kernels": {
+							"alloc": 44,
+							"reserved": 62
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "55.36",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
+					"original_ms": 6.5,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 3.5,
+					"kernels_ms": 0.8,
+					"speedup": 8.2,
+					"speedup_vs": "original",
+					"peak_mib": 44,
+					"compile": {
+						"ms": 2.18,
+						"fails": null,
+						"part": null,
+						"prep_s": 8.81
+					},
+					"tensorrt": {
+						"ms": 0.564,
+						"fails": null,
+						"part": null,
+						"prep_s": 25
+					}
+				},
+				{
 					"id": "dinov2-vits14-reg",
 					"doc": "/models/dinov2",
 					"family": "dinov2",
@@ -12363,8 +14911,8 @@
 							"reserved": 98
 						},
 						"kernels": {
-							"alloc": 112,
-							"reserved": 148
+							"alloc": 80,
+							"reserved": 122
 						}
 					},
 					"commercial": "yes",
@@ -12375,9 +14923,9 @@
 					"original_note": null,
 					"portable_ms": 3,
 					"kernels_ms": 0.8,
-					"speedup": 3.9,
+					"speedup": 4,
 					"speedup_vs": "original",
-					"peak_mib": 112,
+					"peak_mib": 80,
 					"compile": {
 						"ms": 2.02,
 						"fails": null,
@@ -12389,48 +14937,6 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 22.9
-					}
-				},
-				{
-					"id": "dinov3-vits16",
-					"doc": "/models/dinov3",
-					"family": "dinov3",
-					"mem": {
-						"original": {
-							"alloc": 158,
-							"reserved": 166
-						},
-						"portable": {
-							"alloc": 77,
-							"reserved": 80
-						},
-						"kernels": {
-							"alloc": 77,
-							"reserved": 106
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "55.36",
-					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
-					"original_ms": 6.5,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 4.7,
-					"kernels_ms": 0.9,
-					"speedup": 7.2,
-					"speedup_vs": "original",
-					"peak_mib": 77,
-					"compile": {
-						"ms": 2.18,
-						"fails": null,
-						"part": null,
-						"prep_s": 8.81
-					},
-					"tensorrt": {
-						"ms": 0.564,
-						"fails": null,
-						"part": null,
-						"prep_s": 25
 					}
 				},
 				{
@@ -12452,8 +14958,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "7.98",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 6.7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12494,8 +15000,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "45.38",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12602,6 +15108,38 @@
 					}
 				},
 				{
+					"id": "dinov3-vitb16",
+					"doc": "/models/dinov3",
+					"family": "dinov3",
+					"mem": {
+						"original": {
+							"alloc": 527,
+							"reserved": 550
+						},
+						"portable": {
+							"alloc": 200,
+							"reserved": 206
+						},
+						"kernels": {
+							"alloc": 168,
+							"reserved": 210
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "66.54",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
+					"original_ms": 7,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 3.7,
+					"kernels_ms": 1.3,
+					"speedup": 5.5,
+					"speedup_vs": "original",
+					"peak_mib": 168,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "clip-b16-openai",
 					"doc": "/models/clip",
 					"family": "clip",
@@ -12620,8 +15158,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "52.00",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 5.7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12662,8 +15200,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "57.66",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 5.8,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12704,8 +15242,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "54.16",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 5.3,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12746,8 +15284,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "13.58",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12770,38 +15308,6 @@
 					}
 				},
 				{
-					"id": "dinov3-vitb16",
-					"doc": "/models/dinov3",
-					"family": "dinov3",
-					"mem": {
-						"original": {
-							"alloc": 527,
-							"reserved": 550
-						},
-						"portable": {
-							"alloc": 201,
-							"reserved": 206
-						},
-						"kernels": {
-							"alloc": 201,
-							"reserved": 252
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "66.54",
-					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
-					"original_ms": 7,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 4.9,
-					"kernels_ms": 1.4,
-					"speedup": 5,
-					"speedup_vs": "original",
-					"peak_mib": 201,
-					"compile": null,
-					"tensorrt": null
-				},
-				{
 					"id": "siglip2-b16-256",
 					"doc": "/models/siglip2",
 					"family": "siglip2",
@@ -12820,8 +15326,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "53.86",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 6.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12862,8 +15368,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "26.52",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 6,
 					"original_size": "224x224",
 					"original_note": null,
@@ -12904,8 +15410,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "58.50",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 7.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13192,6 +15698,38 @@
 					"tensorrt": null
 				},
 				{
+					"id": "dinov3-vitl16",
+					"doc": "/models/dinov3",
+					"family": "dinov3",
+					"mem": {
+						"original": {
+							"alloc": 1772,
+							"reserved": 1812
+						},
+						"portable": {
+							"alloc": 616,
+							"reserved": 626
+						},
+						"kernels": {
+							"alloc": 616,
+							"reserved": 652
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "75.88",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
+					"original_ms": 17.7,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 6.7,
+					"kernels_ms": 3,
+					"speedup": 5.8,
+					"speedup_vs": "original",
+					"peak_mib": 616,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "convnext_large.fb_in22k",
 					"doc": "/models/convnext_features",
 					"family": "convnext_features",
@@ -13252,8 +15790,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "67.08",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 10.7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13276,38 +15814,6 @@
 					}
 				},
 				{
-					"id": "dinov3-vitl16",
-					"doc": "/models/dinov3",
-					"family": "dinov3",
-					"mem": {
-						"original": {
-							"alloc": 1772,
-							"reserved": 1812
-						},
-						"portable": {
-							"alloc": 617,
-							"reserved": 646
-						},
-						"kernels": {
-							"alloc": 617,
-							"reserved": 674
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "75.88",
-					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
-					"original_ms": 17.7,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 9.1,
-					"kernels_ms": 3.3,
-					"speedup": 5.4,
-					"speedup_vs": "original",
-					"peak_mib": 617,
-					"compile": null,
-					"tensorrt": null
-				},
-				{
 					"id": "siglip2-l16-512",
 					"doc": "/models/siglip2",
 					"family": "siglip2",
@@ -13326,8 +15832,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "65.10",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 11.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13368,8 +15874,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "64.62",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 11.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13452,8 +15958,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "67.20",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 12.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13494,8 +16000,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "59.50",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 12.6,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13518,6 +16024,38 @@
 					}
 				},
 				{
+					"id": "c-radio-v4-so400m",
+					"doc": "/models/c_radio",
+					"family": "c_radio",
+					"mem": {
+						"original": {
+							"alloc": 4115,
+							"reserved": 4150
+						},
+						"portable": {
+							"alloc": 864,
+							"reserved": 906
+						},
+						"kernels": {
+							"alloc": 864,
+							"reserved": 908
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "70.04",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
+					"original_ms": 11.5,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 6.3,
+					"kernels_ms": 4.2,
+					"speedup": 2.7,
+					"speedup_vs": "original",
+					"peak_mib": 864,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "siglip2-so400m14-378",
 					"doc": "/models/siglip2",
 					"family": "siglip2",
@@ -13536,8 +16074,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "59.92",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 12.5,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13578,8 +16116,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "66.10",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 12.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13736,8 +16274,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "58.58",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 10.8,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13778,8 +16316,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "58.86",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 10.8,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13820,8 +16358,8 @@
 						}
 					},
 					"commercial": "no",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "66.78",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 10.6,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13852,8 +16390,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "59.32",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 10.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13894,8 +16432,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "62.38",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 10.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13936,8 +16474,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "17.12",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 17.2,
 					"original_size": "224x224",
 					"original_note": null,
@@ -13978,8 +16516,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "66.28",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 17.7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14002,6 +16540,38 @@
 					}
 				},
 				{
+					"id": "c-radio-v4-h",
+					"doc": "/models/c_radio",
+					"family": "c_radio",
+					"mem": {
+						"original": {
+							"alloc": 6214,
+							"reserved": 6250
+						},
+						"portable": {
+							"alloc": 1289,
+							"reserved": 1308
+						},
+						"kernels": {
+							"alloc": 1289,
+							"reserved": 1308
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "71.36",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
+					"original_ms": 17.1,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 8.9,
+					"kernels_ms": 7.4,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"peak_mib": 1289,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "c-radio-v3-h",
 					"doc": "/models/c_radio",
 					"family": "c_radio",
@@ -14020,8 +16590,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "69.58",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 17,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14062,8 +16632,8 @@
 						}
 					},
 					"commercial": "no",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "65.00",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 19.5,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14094,8 +16664,8 @@
 						}
 					},
 					"commercial": "no",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "68.86",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 19.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14126,8 +16696,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "62.56",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 19.3,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14159,12 +16729,12 @@
 							"reserved": 4876
 						},
 						"portable": {
-							"alloc": 1645,
+							"alloc": 1646,
 							"reserved": 1668
 						},
 						"kernels": {
-							"alloc": 1644,
-							"reserved": 1694
+							"alloc": 1645,
+							"reserved": 1672
 						}
 					},
 					"commercial": "yes",
@@ -14173,11 +16743,11 @@
 					"original_ms": 25.9,
 					"original_size": "224x224",
 					"original_note": null,
-					"portable_ms": 13.3,
-					"kernels_ms": 9.3,
-					"speedup": 2.8,
+					"portable_ms": 12.5,
+					"kernels_ms": 8.5,
+					"speedup": 3.1,
 					"speedup_vs": "original",
-					"peak_mib": 1644,
+					"peak_mib": 1645,
 					"compile": null,
 					"tensorrt": null
 				},
@@ -14200,8 +16770,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "70.98",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 29.5,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14242,8 +16812,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "68.00",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 30.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14284,8 +16854,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "69.10",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 31,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14322,7 +16892,7 @@
 						},
 						"kernels": {
 							"alloc": 2222,
-							"reserved": 4430
+							"reserved": 2250
 						}
 					},
 					"commercial": "yes",
@@ -14332,8 +16902,8 @@
 					"original_size": "224x224",
 					"original_note": null,
 					"portable_ms": 18.7,
-					"kernels_ms": 13,
-					"speedup": 2.6,
+					"kernels_ms": 12.7,
+					"speedup": 2.7,
 					"speedup_vs": "original",
 					"peak_mib": 2222,
 					"compile": null,
@@ -14353,8 +16923,8 @@
 							"reserved": 2230
 						},
 						"kernels": {
-							"alloc": 2246,
-							"reserved": 2318
+							"alloc": 2222,
+							"reserved": 2250
 						}
 					},
 					"commercial": "yes",
@@ -14364,10 +16934,10 @@
 					"original_size": "224x224",
 					"original_note": null,
 					"portable_ms": 18.9,
-					"kernels_ms": 13.2,
-					"speedup": 2.6,
+					"kernels_ms": 12.8,
+					"speedup": 2.7,
 					"speedup_vs": "original",
-					"peak_mib": 2246,
+					"peak_mib": 2222,
 					"compile": null,
 					"tensorrt": null
 				},
@@ -14390,8 +16960,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "16.30",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 52.7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -14453,6 +17023,218 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 106
+					}
+				}
+			]
+		},
+		{
+			"id": "retrieval",
+			"title": "Retrieval",
+			"input": "480x640",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "boq-dinov2",
+					"doc": "/models/boq",
+					"note": "2.8 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "boq-dinov2",
+					"doc": "/models/boq",
+					"note": "2.8 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "boq-dinov2",
+					"doc": "/models/boq",
+					"family": "boq",
+					"mem": {
+						"original": {
+							"alloc": 231,
+							"reserved": 256
+						},
+						"portable": {
+							"alloc": 231,
+							"reserved": 254
+						},
+						"kernels": {
+							"alloc": 227,
+							"reserved": 256
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "99.86 / 100.00",
+					"accuracy_metric": "St Lucia, all 1464 queries against the 1549 database images, recall@1 / @5 % (25 m)",
+					"original_ms": 7.4,
+					"original_size": "480x640",
+					"original_note": null,
+					"portable_ms": 5.7,
+					"kernels_ms": 2.8,
+					"speedup": 2.6,
+					"speedup_vs": "original",
+					"peak_mib": 227,
+					"compile": {
+						"ms": 3.89,
+						"fails": null,
+						"part": null,
+						"prep_s": 11.8
+					},
+					"tensorrt": {
+						"ms": 2.73,
+						"fails": null,
+						"part": null,
+						"prep_s": 46.4
+					}
+				},
+				{
+					"id": "megaloc",
+					"doc": "/models/megaloc",
+					"family": "megaloc",
+					"mem": {
+						"original": {
+							"alloc": 1347,
+							"reserved": 1368
+						},
+						"portable": {
+							"alloc": 483,
+							"reserved": 508
+						},
+						"kernels": {
+							"alloc": 485,
+							"reserved": 508
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "100.00 / 100.00",
+					"accuracy_metric": "St Lucia, all 1464 queries against the 1549 database images, recall@1 / @5 % (25 m)",
+					"original_ms": 9.7,
+					"original_size": "480x640",
+					"original_note": null,
+					"portable_ms": 5.3,
+					"kernels_ms": 4.3,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"peak_mib": 485,
+					"compile": {
+						"ms": 4.27,
+						"fails": null,
+						"part": null,
+						"prep_s": 13.2
+					},
+					"tensorrt": {
+						"ms": 3.21,
+						"fails": null,
+						"part": null,
+						"prep_s": 51.1
+					}
+				}
+			]
+		},
+		{
+			"id": "calibration",
+			"title": "Calibration",
+			"input": "1080x1920",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "anycalib-pinhole",
+					"doc": "/models/anycalib",
+					"note": "21.3 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "anycalib-pinhole",
+					"doc": "/models/anycalib",
+					"note": "21.3 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "anycalib-pinhole",
+					"doc": "/models/anycalib",
+					"family": "anycalib",
+					"mem": {
+						"original": {
+							"alloc": 1343,
+							"reserved": 1352
+						},
+						"portable": {
+							"alloc": 705,
+							"reserved": 742
+						},
+						"kernels": {
+							"alloc": 741,
+							"reserved": 816
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "– / – / 51.5",
+					"accuracy_metric": "LaMAR2k, all 2000 images, roll / pitch / vertical FoV error AUC@5 degrees %",
+					"original_ms": 38.4,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 29.4,
+					"kernels_ms": 21.3,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 741,
+					"compile": {
+						"ms": 25.5,
+						"fails": null,
+						"part": null,
+						"prep_s": 16.5
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: conversion failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "geocalib-pinhole",
+					"doc": "/models/geocalib",
+					"family": "geocalib",
+					"mem": {
+						"original": {
+							"alloc": 502,
+							"reserved": 558
+						},
+						"portable": {
+							"alloc": 320,
+							"reserved": 378
+						},
+						"kernels": {
+							"alloc": 279,
+							"reserved": 342
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "92.6 / 76.8 / 41.6",
+					"accuracy_metric": "LaMAR2k, all 2000 images, roll / pitch / vertical FoV error AUC@5 degrees %",
+					"original_ms": 106.2,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 82.3,
+					"kernels_ms": 82.5,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 279,
+					"compile": {
+						"ms": 73.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 28.4
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: torch.export failed",
+						"part": null,
+						"prep_s": null
 					}
 				}
 			]
@@ -14533,8 +17315,8 @@
 							"reserved": 1226
 						},
 						"kernels": {
-							"alloc": 761,
-							"reserved": 884
+							"alloc": 702,
+							"reserved": 760
 						}
 					},
 					"commercial": "no",
@@ -14544,10 +17326,10 @@
 					"original_size": "448x672",
 					"original_note": null,
 					"portable_ms": 93.2,
-					"kernels_ms": 35.6,
-					"speedup": 6.1,
+					"kernels_ms": 35.2,
+					"speedup": 6.2,
 					"speedup_vs": "original",
-					"peak_mib": 761,
+					"peak_mib": 702,
 					"compile": {
 						"ms": 70.8,
 						"fails": null,
@@ -14559,6 +17341,122 @@
 						"fails": "TensorRT: NaN output (onnxruntime on the same ONNX is right)",
 						"part": null,
 						"prep_s": null
+					}
+				},
+				{
+					"id": "depthsplat-small-re10k",
+					"doc": "/models/depthsplat",
+					"family": "depthsplat",
+					"mem": {
+						"original": {
+							"alloc": 5694,
+							"reserved": 5892
+						},
+						"portable": {
+							"alloc": 5432,
+							"reserved": 5606
+						},
+						"kernels": {
+							"alloc": 5479,
+							"reserved": 5668
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0974 / 98.69 / 65.34",
+					"accuracy_metric": "DTU scans 1, 9, 24, 33, 75, view 24 + 7 sources, AbsRel / delta1 % / MAE mm",
+					"original_ms": 126.5,
+					"original_size": "336x518",
+					"original_note": null,
+					"portable_ms": 118.9,
+					"kernels_ms": 119.7,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"peak_mib": 5479,
+					"compile": {
+						"ms": 82.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 80
+					},
+					"tensorrt": {
+						"ms": 86.4,
+						"fails": null,
+						"part": null,
+						"prep_s": 224
+					}
+				},
+				{
+					"id": "mvsplat-re10k",
+					"doc": "/models/mvsplat",
+					"family": "mvsplat",
+					"mem": {
+						"original": {
+							"alloc": 2889,
+							"reserved": 4160
+						},
+						"portable": {
+							"alloc": 1239,
+							"reserved": 1532
+						},
+						"kernels": {
+							"alloc": 1239,
+							"reserved": 1532
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0438 / 97.30 / 31.20",
+					"accuracy_metric": "DTU scans 1, 9, 24, 33, 75, view 24 + 7 sources, AbsRel / delta1 % / MAE mm",
+					"original_ms": 279.3,
+					"original_size": "336x518",
+					"original_note": null,
+					"portable_ms": 180.9,
+					"kernels_ms": 172.5,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 1239,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "anysplat",
+					"doc": "/models/anysplat",
+					"family": "anysplat",
+					"mem": {
+						"original": {
+							"alloc": 8931,
+							"reserved": 9394
+						},
+						"portable": {
+							"alloc": 4842,
+							"reserved": 4932
+						},
+						"kernels": {
+							"alloc": 4852,
+							"reserved": 5192
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0108 / 99.93",
+					"accuracy_metric": "DTU scans 1, 9, 24, 33, 75, view 24 + 7 sources, AbsRel / delta1 %",
+					"original_ms": 741.2,
+					"original_size": "336x518",
+					"original_note": null,
+					"portable_ms": 503.5,
+					"kernels_ms": 363.8,
+					"speedup": 2,
+					"speedup_vs": "original",
+					"peak_mib": 4852,
+					"compile": {
+						"ms": 427,
+						"fails": null,
+						"part": null,
+						"prep_s": 80.3
+					},
+					"tensorrt": {
+						"ms": 314,
+						"fails": null,
+						"part": null,
+						"prep_s": 215
 					}
 				},
 				{
@@ -14686,6 +17584,38 @@
 						"part": null,
 						"prep_s": 137
 					}
+				},
+				{
+					"id": "pi3",
+					"doc": "/models/pi3",
+					"family": "pi3",
+					"mem": {
+						"original": {
+							"alloc": 5926,
+							"reserved": 6016
+						},
+						"portable": {
+							"alloc": 2360,
+							"reserved": 2416
+						},
+						"kernels": {
+							"alloc": 2367,
+							"reserved": 2456
+						}
+					},
+					"commercial": "no",
+					"accuracy": "0.0070 / 99.94",
+					"accuracy_metric": "DTU scans 1, 9, 24, 33, 75, view 24 + 7 sources, AbsRel / delta1 %",
+					"original_ms": 1056.6,
+					"original_size": "336x518",
+					"original_note": null,
+					"portable_ms": 820.7,
+					"kernels_ms": 559.7,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 2367,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -14737,8 +17667,8 @@
 							"reserved": 764
 						},
 						"portable": {
-							"alloc": 672,
-							"reserved": 714
+							"alloc": 611,
+							"reserved": 656
 						},
 						"kernels": {
 							"alloc": 160,
@@ -14751,7 +17681,7 @@
 					"original_ms": 42.4,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 37.1,
+					"portable_ms": 32.8,
 					"kernels_ms": 16,
 					"speedup": 2.6,
 					"speedup_vs": "original",
@@ -14779,8 +17709,8 @@
 							"reserved": 812
 						},
 						"portable": {
-							"alloc": 713,
-							"reserved": 740
+							"alloc": 652,
+							"reserved": 700
 						},
 						"kernels": {
 							"alloc": 181,
@@ -14793,7 +17723,7 @@
 					"original_ms": 56.7,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 52.3,
+					"portable_ms": 46.8,
 					"kernels_ms": 23.2,
 					"speedup": 2.4,
 					"speedup_vs": "original",
@@ -14821,8 +17751,8 @@
 							"reserved": 10888
 						},
 						"portable": {
-							"alloc": 8198,
-							"reserved": 8226
+							"alloc": 5669,
+							"reserved": 5706
 						},
 						"kernels": {
 							"alloc": 197,
@@ -14835,7 +17765,7 @@
 					"original_ms": 196.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 143.6,
+					"portable_ms": 144.2,
 					"kernels_ms": 36.3,
 					"speedup": 5.4,
 					"speedup_vs": "original",
@@ -14863,8 +17793,8 @@
 							"reserved": 8502
 						},
 						"portable": {
-							"alloc": 8292,
-							"reserved": 8354
+							"alloc": 6019,
+							"reserved": 6136
 						},
 						"kernels": {
 							"alloc": 415,
@@ -14877,7 +17807,7 @@
 					"original_ms": 299.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 226.4,
+					"portable_ms": 210.6,
 					"kernels_ms": 50.4,
 					"speedup": 6,
 					"speedup_vs": "original",
@@ -14905,8 +17835,8 @@
 							"reserved": 8502
 						},
 						"portable": {
-							"alloc": 8292,
-							"reserved": 8354
+							"alloc": 6019,
+							"reserved": 6136
 						},
 						"kernels": {
 							"alloc": 415,
@@ -14919,7 +17849,7 @@
 					"original_ms": 299,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 226.3,
+					"portable_ms": 210.4,
 					"kernels_ms": 50.5,
 					"speedup": 5.9,
 					"speedup_vs": "original",
@@ -14947,8 +17877,8 @@
 							"reserved": 4720
 						},
 						"portable": {
-							"alloc": 8392,
-							"reserved": 8416
+							"alloc": 2435,
+							"reserved": 2478
 						},
 						"kernels": {
 							"alloc": 790,
@@ -14961,7 +17891,7 @@
 					"original_ms": 75.8,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 102.6,
+					"portable_ms": 71.2,
 					"kernels_ms": 58.9,
 					"speedup": 1.3,
 					"speedup_vs": "original",
@@ -14989,8 +17919,8 @@
 							"reserved": 4576
 						},
 						"portable": {
-							"alloc": 8392,
-							"reserved": 8416
+							"alloc": 2435,
+							"reserved": 2478
 						},
 						"kernels": {
 							"alloc": 790,
@@ -15003,7 +17933,7 @@
 					"original_ms": 75.7,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 102.4,
+					"portable_ms": 71.2,
 					"kernels_ms": 58.9,
 					"speedup": 1.3,
 					"speedup_vs": "original",
@@ -15031,8 +17961,8 @@
 							"reserved": 4556
 						},
 						"portable": {
-							"alloc": 8392,
-							"reserved": 8416
+							"alloc": 2435,
+							"reserved": 2478
 						},
 						"kernels": {
 							"alloc": 790,
@@ -15045,8 +17975,8 @@
 					"original_ms": 75.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 102.5,
-					"kernels_ms": 59,
+					"portable_ms": 71.3,
+					"kernels_ms": 59.1,
 					"speedup": 1.3,
 					"speedup_vs": "original",
 					"peak_mib": 790,
@@ -15064,48 +17994,6 @@
 					}
 				},
 				{
-					"id": "sea-raft-m",
-					"doc": "/models/sea_raft",
-					"family": "sea_raft",
-					"mem": {
-						"original": {
-							"alloc": 7385,
-							"reserved": 8570
-						},
-						"portable": {
-							"alloc": 8333,
-							"reserved": 8420
-						},
-						"kernels": {
-							"alloc": 435,
-							"reserved": 514
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "0.880 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 366.9,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 299,
-					"kernels_ms": 73.1,
-					"speedup": 5,
-					"speedup_vs": "original",
-					"peak_mib": 435,
-					"compile": {
-						"ms": 191,
-						"fails": null,
-						"part": null,
-						"prep_s": 34.3
-					},
-					"tensorrt": {
-						"ms": 132,
-						"fails": null,
-						"part": null,
-						"prep_s": 70
-					}
-				},
-				{
 					"id": "sea-raft-m-things",
 					"doc": "/models/sea_raft",
 					"family": "sea_raft",
@@ -15115,8 +18003,8 @@
 							"reserved": 8570
 						},
 						"portable": {
-							"alloc": 8333,
-							"reserved": 8420
+							"alloc": 6060,
+							"reserved": 6180
 						},
 						"kernels": {
 							"alloc": 435,
@@ -15129,7 +18017,7 @@
 					"original_ms": 367.3,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 299.3,
+					"portable_ms": 270.3,
 					"kernels_ms": 73.1,
 					"speedup": 5,
 					"speedup_vs": "original",
@@ -15157,8 +18045,8 @@
 							"reserved": 8570
 						},
 						"portable": {
-							"alloc": 8333,
-							"reserved": 8420
+							"alloc": 6060,
+							"reserved": 6180
 						},
 						"kernels": {
 							"alloc": 435,
@@ -15171,7 +18059,7 @@
 					"original_ms": 367.3,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 298.9,
+					"portable_ms": 269.9,
 					"kernels_ms": 73.1,
 					"speedup": 5,
 					"speedup_vs": "original",
@@ -15190,6 +18078,48 @@
 					}
 				},
 				{
+					"id": "sea-raft-m",
+					"doc": "/models/sea_raft",
+					"family": "sea_raft",
+					"mem": {
+						"original": {
+							"alloc": 7385,
+							"reserved": 8570
+						},
+						"portable": {
+							"alloc": 6060,
+							"reserved": 6180
+						},
+						"kernels": {
+							"alloc": 435,
+							"reserved": 514
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.880 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 366.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 270.3,
+					"kernels_ms": 73.1,
+					"speedup": 5,
+					"speedup_vs": "original",
+					"peak_mib": 435,
+					"compile": {
+						"ms": 191,
+						"fails": null,
+						"part": null,
+						"prep_s": 34.3
+					},
+					"tensorrt": {
+						"ms": 132,
+						"fails": null,
+						"part": null,
+						"prep_s": 70
+					}
+				},
+				{
 					"id": "raft-large-things",
 					"doc": "/models/raft",
 					"family": "raft",
@@ -15199,8 +18129,8 @@
 							"reserved": 10928
 						},
 						"portable": {
-							"alloc": 8268,
-							"reserved": 8298
+							"alloc": 5930,
+							"reserved": 6058
 						},
 						"kernels": {
 							"alloc": 333,
@@ -15213,7 +18143,7 @@
 					"original_ms": 480.5,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 290.2,
+					"portable_ms": 291.5,
 					"kernels_ms": 83.1,
 					"speedup": 5.8,
 					"speedup_vs": "original",
@@ -15241,12 +18171,12 @@
 							"reserved": 10928
 						},
 						"portable": {
-							"alloc": 8268,
-							"reserved": 8298
+							"alloc": 5930,
+							"reserved": 6058
 						},
 						"kernels": {
-							"alloc": 333,
-							"reserved": 352
+							"alloc": 342,
+							"reserved": 372
 						}
 					},
 					"commercial": "yes",
@@ -15255,11 +18185,11 @@
 					"original_ms": 479.5,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 290.3,
-					"kernels_ms": 83.3,
-					"speedup": 5.8,
+					"portable_ms": 290.9,
+					"kernels_ms": 83.5,
+					"speedup": 5.7,
 					"speedup_vs": "original",
-					"peak_mib": 333,
+					"peak_mib": 342,
 					"compile": {
 						"ms": 195,
 						"fails": null,
@@ -15283,8 +18213,8 @@
 							"reserved": 10928
 						},
 						"portable": {
-							"alloc": 8268,
-							"reserved": 8298
+							"alloc": 5930,
+							"reserved": 6058
 						},
 						"kernels": {
 							"alloc": 333,
@@ -15297,7 +18227,7 @@
 					"original_ms": 479.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 290.2,
+					"portable_ms": 291,
 					"kernels_ms": 83.6,
 					"speedup": 5.7,
 					"speedup_vs": "original",
@@ -15307,6 +18237,45 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 39.3
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "TensorRT engine build failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "memfof-kitti",
+					"doc": "/models/memfof",
+					"family": "memfof",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 1619,
+							"reserved": 1856
+						},
+						"kernels": {
+							"alloc": 1137,
+							"reserved": 1218
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 385.6,
+					"kernels_ms": 380,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"peak_mib": 1137,
+					"compile": {
+						"ms": 258,
+						"fails": null,
+						"part": null,
+						"prep_s": 48.7
 					},
 					"tensorrt": {
 						"ms": null,
@@ -15433,6 +18402,48 @@
 					}
 				},
 				{
+					"id": "memfof",
+					"doc": "/models/memfof",
+					"family": "memfof",
+					"mem": {
+						"original": {
+							"alloc": 2003,
+							"reserved": 2144
+						},
+						"portable": {
+							"alloc": 1911,
+							"reserved": 2196
+						},
+						"kernels": {
+							"alloc": 1301,
+							"reserved": 1418
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "10.891 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 530.7,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 432.6,
+					"kernels_ms": 427.4,
+					"speedup": 1.2,
+					"speedup_vs": "original",
+					"peak_mib": 1301,
+					"compile": {
+						"ms": 291,
+						"fails": null,
+						"part": null,
+						"prep_s": 50.5
+					},
+					"tensorrt": {
+						"ms": 160,
+						"fails": null,
+						"part": null,
+						"prep_s": 110
+					}
+				},
+				{
 					"id": "gmflow-scale1-mixdata",
 					"doc": "/models/gmflow",
 					"family": "gmflow",
@@ -15508,6 +18519,132 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 69.3
+					}
+				},
+				{
+					"id": "memflow-sintel",
+					"doc": "/models/memflow",
+					"family": "memflow",
+					"mem": {
+						"original": {
+							"alloc": 15061,
+							"reserved": 15634
+						},
+						"portable": {
+							"alloc": 8265,
+							"reserved": 8382
+						},
+						"kernels": {
+							"alloc": 968,
+							"reserved": 1022
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": 3214.2,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 964.5,
+					"kernels_ms": 864.5,
+					"speedup": 3.7,
+					"speedup_vs": "original",
+					"peak_mib": 968,
+					"compile": {
+						"ms": 1640,
+						"fails": null,
+						"part": null,
+						"prep_s": 76
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "TensorRT engine build failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "memflow-kitti",
+					"doc": "/models/memflow",
+					"family": "memflow",
+					"mem": {
+						"original": {
+							"alloc": 15061,
+							"reserved": 15594
+						},
+						"portable": {
+							"alloc": 8265,
+							"reserved": 8382
+						},
+						"kernels": {
+							"alloc": 968,
+							"reserved": 1022
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.600 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 3247.3,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 964.7,
+					"kernels_ms": 864.6,
+					"speedup": 3.8,
+					"speedup_vs": "original",
+					"peak_mib": 968,
+					"compile": {
+						"ms": 1644,
+						"fails": null,
+						"part": null,
+						"prep_s": 72.6
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "TensorRT engine build failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "memflow",
+					"doc": "/models/memflow",
+					"family": "memflow",
+					"mem": {
+						"original": {
+							"alloc": 15061,
+							"reserved": 15594
+						},
+						"portable": {
+							"alloc": 8265,
+							"reserved": 8382
+						},
+						"kernels": {
+							"alloc": 968,
+							"reserved": 1022
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "4.103",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 3115.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 964.3,
+					"kernels_ms": 864.8,
+					"speedup": 3.6,
+					"speedup_vs": "original",
+					"peak_mib": 968,
+					"compile": {
+						"ms": 1642,
+						"fails": null,
+						"part": null,
+						"prep_s": 78.9
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "TensorRT engine build failed",
+						"part": null,
+						"prep_s": null
 					}
 				},
 				{
@@ -15760,7 +18897,7 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": "0.570 ?",
+					"accuracy": "0.570 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 2187.8,
 					"original_size": "1080x1920",
@@ -15899,6 +19036,52 @@
 						"part": null,
 						"prep_s": 118
 					}
+				},
+				{
+					"id": "memfof-sintel",
+					"doc": "/models/memfof",
+					"family": "memfof",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "memfof-spring",
+					"doc": "/models/memfof",
+					"family": "memfof",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -15910,18 +19093,323 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "romav2",
-					"doc": "/models/romav2",
-					"note": "405.9 ms"
+					"id": "xfeat",
+					"doc": "/models/xfeat",
+					"note": "7.2 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "romav2",
-					"doc": "/models/romav2",
-					"note": "405.9 ms"
+					"id": "xfeat",
+					"doc": "/models/xfeat",
+					"note": "7.2 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "xfeat",
+					"doc": "/models/xfeat",
+					"family": "xfeat",
+					"mem": {
+						"original": {
+							"alloc": 128,
+							"reserved": 174
+						},
+						"portable": {
+							"alloc": 122,
+							"reserved": 154
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 8.9,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 7.2,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 5.65,
+						"fails": null,
+						"part": null,
+						"prep_s": 30.8
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: conversion failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "xfeat-lighterglue",
+					"doc": "/models/xfeat",
+					"family": "xfeat",
+					"mem": {
+						"original": {
+							"alloc": 448,
+							"reserved": 478
+						},
+						"portable": {
+							"alloc": 445,
+							"reserved": 476
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 23.6,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 21.6,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 16.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 39.7
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: torch.export failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "aliked-lightglue",
+					"doc": "/models/lightglue",
+					"family": "lightglue",
+					"mem": {
+						"original": {
+							"alloc": 1305,
+							"reserved": 1364
+						},
+						"portable": {
+							"alloc": 1300,
+							"reserved": 1406
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 41.8,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 48.4,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 29.5,
+						"fails": null,
+						"part": null,
+						"prep_s": 30.8
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: torch.export failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "loftr-outdoor",
+					"doc": "/models/loftr",
+					"family": "loftr",
+					"mem": {
+						"original": {
+							"alloc": 1739,
+							"reserved": 1870
+						},
+						"portable": {
+							"alloc": 796,
+							"reserved": 904
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 241.5,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 109.9,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 176,
+						"fails": null,
+						"part": null,
+						"prep_s": 33.3
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: torch.export failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "loftr-indoor",
+					"doc": "/models/loftr",
+					"family": "loftr",
+					"mem": {
+						"original": {
+							"alloc": 1751,
+							"reserved": 1910
+						},
+						"portable": {
+							"alloc": 796,
+							"reserved": 904
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 241.6,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 110.6,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "disk-lightglue",
+					"doc": "/models/lightglue",
+					"family": "lightglue",
+					"mem": {
+						"original": {
+							"alloc": 1955,
+							"reserved": 2412
+						},
+						"portable": {
+							"alloc": 1950,
+							"reserved": 2398
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 116.7,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 116.4,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 113,
+						"fails": null,
+						"part": null,
+						"prep_s": 21.4
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: torch.export failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "dedode-v2-b",
+					"doc": "/models/dedode",
+					"family": "dedode",
+					"mem": {
+						"original": {
+							"alloc": 1734,
+							"reserved": 1992
+						},
+						"portable": {
+							"alloc": 1535,
+							"reserved": 1654
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 318.5,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 246.5,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 164,
+						"fails": null,
+						"part": null,
+						"prep_s": 50.5
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "timeout after 298 s",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "romav1",
+					"doc": "/models/romav1",
+					"family": "romav1",
+					"mem": {
+						"original": {
+							"alloc": 3887,
+							"reserved": 4094
+						},
+						"portable": {
+							"alloc": 1720,
+							"reserved": 1820
+						},
+						"kernels": {
+							"alloc": 1720,
+							"reserved": 1860
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "62.4 / 76.4 / 86.2",
+					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
+					"original_ms": 385.8,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 376.3,
+					"kernels_ms": 356,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"peak_mib": 1720,
+					"compile": {
+						"ms": null,
+						"fails": "worker rc=124",
+						"part": null,
+						"prep_s": null
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ONNX export: conversion failed",
+						"part": null,
+						"prep_s": null
+					}
+				},
 				{
 					"id": "romav2",
 					"doc": "/models/romav2",
@@ -15963,6 +19451,1313 @@
 						"part": null,
 						"prep_s": 185
 					}
+				},
+				{
+					"id": "dedode-v2-g",
+					"doc": "/models/dedode",
+					"family": "dedode",
+					"mem": {
+						"original": {
+							"alloc": 2335,
+							"reserved": 2472
+						},
+						"portable": {
+							"alloc": 2142,
+							"reserved": 2334
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 665.5,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 592.5,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "aliked-flexglue",
+					"doc": "/models/flexglue",
+					"family": "flexglue",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "loma-b",
+					"doc": "/models/loma",
+					"family": "loma",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				}
+			]
+		},
+		{
+			"id": "tracking",
+			"title": "Tracking",
+			"input": "480x854",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "tapir",
+					"doc": "/models/tapir",
+					"note": "140.8 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "tapir",
+					"doc": "/models/tapir",
+					"note": "140.8 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "tapir",
+					"doc": "/models/tapir",
+					"family": "tapir",
+					"mem": {
+						"original": {
+							"alloc": 498,
+							"reserved": 574
+						},
+						"portable": {
+							"alloc": 463,
+							"reserved": 548
+						},
+						"kernels": {
+							"alloc": 463,
+							"reserved": 548
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "62.73 / 74.55 / 90.21",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 186.9,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 181.8,
+					"kernels_ms": 140.8,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 463,
+					"compile": {
+						"ms": 131,
+						"fails": null,
+						"part": null,
+						"prep_s": 169
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "locotrack-s",
+					"doc": "/models/locotrack",
+					"family": "locotrack",
+					"mem": {
+						"original": {
+							"alloc": 706,
+							"reserved": 812
+						},
+						"portable": {
+							"alloc": 759,
+							"reserved": 842
+						},
+						"kernels": {
+							"alloc": 764,
+							"reserved": 822
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 192.8,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 179.5,
+					"kernels_ms": 151.1,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 764,
+					"compile": {
+						"ms": 74.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 140
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "locotrack-b",
+					"doc": "/models/locotrack",
+					"family": "locotrack",
+					"mem": {
+						"original": {
+							"alloc": 719,
+							"reserved": 784
+						},
+						"portable": {
+							"alloc": 771,
+							"reserved": 856
+						},
+						"kernels": {
+							"alloc": 782,
+							"reserved": 840
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "67.29 / 78.10 / 89.83",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 203.3,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 190.1,
+					"kernels_ms": 177.6,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"peak_mib": 782,
+					"compile": {
+						"ms": 82.6,
+						"fails": null,
+						"part": null,
+						"prep_s": 146
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "bootstapir",
+					"doc": "/models/tapir",
+					"family": "tapir",
+					"mem": {
+						"original": {
+							"alloc": 639,
+							"reserved": 774
+						},
+						"portable": {
+							"alloc": 508,
+							"reserved": 628
+						},
+						"kernels": {
+							"alloc": 508,
+							"reserved": 628
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "65.51 / 76.72 / 92.51",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 242.5,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 233.7,
+					"kernels_ms": 192.5,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 508,
+					"compile": {
+						"ms": 183,
+						"fails": null,
+						"part": null,
+						"prep_s": 207
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "alltracker",
+					"doc": "/models/alltracker",
+					"family": "alltracker",
+					"mem": {
+						"original": {
+							"alloc": 2100,
+							"reserved": 2318
+						},
+						"portable": {
+							"alloc": 993,
+							"reserved": 1238
+						},
+						"kernels": {
+							"alloc": 1076,
+							"reserved": 1288
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "67.38 / 78.63 / 90.65",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 485.3,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 391.2,
+					"kernels_ms": 221.3,
+					"speedup": 2.2,
+					"speedup_vs": "original",
+					"peak_mib": 1076,
+					"compile": {
+						"ms": 284,
+						"fails": null,
+						"part": null,
+						"prep_s": 105
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "alltracker-tiny",
+					"doc": "/models/alltracker",
+					"family": "alltracker",
+					"mem": {
+						"original": {
+							"alloc": 1995,
+							"reserved": 2200
+						},
+						"portable": {
+							"alloc": 919,
+							"reserved": 1178
+						},
+						"kernels": {
+							"alloc": 978,
+							"reserved": 1166
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "65.34 / 76.66 / 88.10",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 424.2,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 329.9,
+					"kernels_ms": 232.9,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 978,
+					"compile": {
+						"ms": 229,
+						"fails": null,
+						"part": null,
+						"prep_s": 103
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "tapnext",
+					"doc": "/models/tapnext",
+					"family": "tapnext",
+					"mem": {
+						"original": {
+							"alloc": 1721,
+							"reserved": 1902
+						},
+						"portable": {
+							"alloc": 1220,
+							"reserved": 1294
+						},
+						"kernels": {
+							"alloc": 1313,
+							"reserved": 1374
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "71.02 / 82.03 / 95.23",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 908.8,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 529.5,
+					"kernels_ms": 382.2,
+					"speedup": 2.4,
+					"speedup_vs": "original",
+					"peak_mib": 1313,
+					"compile": {
+						"ms": 398,
+						"fails": null,
+						"part": null,
+						"prep_s": 40.5
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "track-on-r",
+					"doc": "/models/track_on",
+					"family": "track_on",
+					"mem": {
+						"original": {
+							"alloc": 1801,
+							"reserved": 1928
+						},
+						"portable": {
+							"alloc": 1423,
+							"reserved": 1632
+						},
+						"kernels": {
+							"alloc": 1368,
+							"reserved": 1620
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 2021.8,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 1188,
+					"kernels_ms": 1102.3,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 1368,
+					"compile": {
+						"ms": null,
+						"fails": "worker rc=124",
+						"part": null,
+						"prep_s": null
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "track-on2",
+					"doc": "/models/track_on",
+					"family": "track_on",
+					"mem": {
+						"original": {
+							"alloc": 1403,
+							"reserved": 1558
+						},
+						"portable": {
+							"alloc": 1423,
+							"reserved": 1632
+						},
+						"kernels": {
+							"alloc": 1368,
+							"reserved": 1620
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "69.65 / 81.32 / 92.93",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 1952.8,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 1238.3,
+					"kernels_ms": 1120.3,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"peak_mib": 1368,
+					"compile": {
+						"ms": null,
+						"fails": "worker rc=124",
+						"part": null,
+						"prep_s": null
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "ValueError: not enough values to unpack (expected 4, got 2)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "tapnext-pp",
+					"doc": "/models/tapnext",
+					"family": "tapnext",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "71.47 / 82.41 / 94.98",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				}
+			]
+		},
+		{
+			"id": "interpolation",
+			"title": "Interpolation",
+			"input": "1080x1920",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "rife-4.25-lite",
+					"doc": "/models/rife",
+					"note": "18.3 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "rife-4.25-lite",
+					"doc": "/models/rife",
+					"note": "18.3 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "rife-4.25-lite",
+					"doc": "/models/rife",
+					"family": "rife",
+					"mem": {
+						"original": {
+							"alloc": 1012,
+							"reserved": 1214
+						},
+						"portable": {
+							"alloc": 754,
+							"reserved": 854
+						},
+						"kernels": {
+							"alloc": 950,
+							"reserved": 1056
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "26.81 / 0.8010",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 21.3,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 21.1,
+					"kernels_ms": 18.3,
+					"speedup": 1.2,
+					"speedup_vs": "original",
+					"peak_mib": 950,
+					"compile": {
+						"ms": 42.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 34.9
+					},
+					"tensorrt": {
+						"ms": 14.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 49.5
+					}
+				},
+				{
+					"id": "rife-4.26",
+					"doc": "/models/rife",
+					"family": "rife",
+					"mem": {
+						"original": {
+							"alloc": 1004,
+							"reserved": 1154
+						},
+						"portable": {
+							"alloc": 755,
+							"reserved": 896
+						},
+						"kernels": {
+							"alloc": 967,
+							"reserved": 1076
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.24 / 0.8131",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 24.2,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 25.1,
+					"kernels_ms": 21.4,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"peak_mib": 967,
+					"compile": {
+						"ms": 44.5,
+						"fails": null,
+						"part": null,
+						"prep_s": 34.9
+					},
+					"tensorrt": {
+						"ms": 17.6,
+						"fails": null,
+						"part": null,
+						"prep_s": 54.9
+					}
+				},
+				{
+					"id": "rife-4.25",
+					"doc": "/models/rife",
+					"family": "rife",
+					"mem": {
+						"original": {
+							"alloc": 987,
+							"reserved": 1154
+						},
+						"portable": {
+							"alloc": 755,
+							"reserved": 894
+						},
+						"kernels": {
+							"alloc": 967,
+							"reserved": 1076
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.13 / 0.8081",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 24.5,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 25,
+					"kernels_ms": 21.5,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"peak_mib": 967,
+					"compile": {
+						"ms": 44.9,
+						"fails": null,
+						"part": null,
+						"prep_s": 36.1
+					},
+					"tensorrt": {
+						"ms": 17.6,
+						"fails": null,
+						"part": null,
+						"prep_s": 56.3
+					}
+				}
+			]
+		},
+		{
+			"id": "restoration",
+			"title": "Restoration",
+			"input": "512x512",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "span-x4",
+					"doc": "/models/span",
+					"note": "14.6 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "span-x4",
+					"doc": "/models/span",
+					"note": "14.6 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "span-x4",
+					"doc": "/models/span",
+					"family": "span",
+					"mem": {
+						"original": {
+							"alloc": 611,
+							"reserved": 648
+						},
+						"portable": {
+							"alloc": 607,
+							"reserved": 662
+						},
+						"kernels": {
+							"alloc": 487,
+							"reserved": 522
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "30.47 / 0.8382",
+					"accuracy_metric": "DIV2K validation (100 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 26.9,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 24.2,
+					"kernels_ms": 14.6,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 487,
+					"compile": {
+						"ms": 13.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 4.57
+					},
+					"tensorrt": {
+						"ms": 8.28,
+						"fails": null,
+						"part": null,
+						"prep_s": 9.8
+					}
+				},
+				{
+					"id": "span-x2",
+					"doc": "/models/span",
+					"family": "span",
+					"mem": {
+						"original": {
+							"alloc": 611,
+							"reserved": 648
+						},
+						"portable": {
+							"alloc": 607,
+							"reserved": 662
+						},
+						"kernels": {
+							"alloc": 487,
+							"reserved": 522
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "36.20 / 0.9460",
+					"accuracy_metric": "DIV2K validation (100 images), bicubic x2 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 24.6,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 23.5,
+					"kernels_ms": 14.9,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 487,
+					"compile": {
+						"ms": 13.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 7.26
+					},
+					"tensorrt": {
+						"ms": 7.98,
+						"fails": null,
+						"part": null,
+						"prep_s": 9.6
+					}
+				},
+				{
+					"id": "codeformer",
+					"doc": "/models/codeformer",
+					"family": "codeformer",
+					"mem": {
+						"original": {
+							"alloc": 959,
+							"reserved": 1090
+						},
+						"portable": {
+							"alloc": 512,
+							"reserved": 638
+						},
+						"kernels": null
+					},
+					"commercial": "no",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 85.7,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 48.6,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 30.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 34.1
+					},
+					"tensorrt": {
+						"ms": 16.3,
+						"fails": null,
+						"part": null,
+						"prep_s": 64.8
+					}
+				},
+				{
+					"id": "realesrgan-x2plus",
+					"doc": "/models/realesrgan",
+					"family": "realesrgan",
+					"mem": {
+						"original": {
+							"alloc": 592,
+							"reserved": 656
+						},
+						"portable": {
+							"alloc": 333,
+							"reserved": 394
+						},
+						"kernels": {
+							"alloc": 333,
+							"reserved": 394
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "30.03 / 0.8591",
+					"accuracy_metric": "DIV2K validation (100 images), bicubic x2 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 128.2,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 97,
+					"kernels_ms": 80.2,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 333,
+					"compile": {
+						"ms": 85.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 33.2
+					},
+					"tensorrt": {
+						"ms": 59.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 40.3
+					}
+				},
+				{
+					"id": "realesrgan-x4plus-anime-6b",
+					"doc": "/models/realesrgan",
+					"family": "realesrgan",
+					"mem": {
+						"original": {
+							"alloc": 2243,
+							"reserved": 2472
+						},
+						"portable": {
+							"alloc": 1197,
+							"reserved": 1430
+						},
+						"kernels": {
+							"alloc": 1197,
+							"reserved": 1410
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "25.66 / 0.7356",
+					"accuracy_metric": "DIV2K validation (100 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 205.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 154.9,
+					"kernels_ms": 131.8,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 1197,
+					"compile": {
+						"ms": 114,
+						"fails": null,
+						"part": null,
+						"prep_s": 10
+					},
+					"tensorrt": {
+						"ms": 83.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 36.7
+					}
+				},
+				{
+					"id": "dat-light-x4",
+					"doc": "/models/dat",
+					"family": "dat",
+					"mem": {
+						"original": {
+							"alloc": 1606,
+							"reserved": 1656
+						},
+						"portable": {
+							"alloc": 1535,
+							"reserved": 1552
+						},
+						"kernels": {
+							"alloc": 1535,
+							"reserved": 1572
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "30.46 / 0.8375",
+					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 2203.5,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 267.8,
+					"kernels_ms": 268.2,
+					"speedup": 8.2,
+					"speedup_vs": "original",
+					"peak_mib": 1535,
+					"compile": {
+						"ms": 158,
+						"fails": null,
+						"part": null,
+						"prep_s": 36.7
+					},
+					"tensorrt": null
+				},
+				{
+					"id": "realesrgan-x4plus",
+					"doc": "/models/realesrgan",
+					"family": "realesrgan",
+					"mem": {
+						"original": {
+							"alloc": 2266,
+							"reserved": 2496
+						},
+						"portable": {
+							"alloc": 1220,
+							"reserved": 1454
+						},
+						"kernels": {
+							"alloc": 1220,
+							"reserved": 1434
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "26.64 / 0.7580",
+					"accuracy_metric": "DIV2K validation (100 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 631.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 471.3,
+					"kernels_ms": 402.7,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"peak_mib": 1220,
+					"compile": {
+						"ms": 354,
+						"fails": null,
+						"part": null,
+						"prep_s": 29.9
+					},
+					"tensorrt": {
+						"ms": 273,
+						"fails": null,
+						"part": null,
+						"prep_s": 55.2
+					}
+				},
+				{
+					"id": "swinir-m-x2",
+					"doc": "/models/swinir",
+					"family": "swinir",
+					"mem": {
+						"original": {
+							"alloc": 1500,
+							"reserved": 1818
+						},
+						"portable": {
+							"alloc": 1386,
+							"reserved": 1574
+						},
+						"kernels": {
+							"alloc": 1577,
+							"reserved": 1754
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 3252.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1192.3,
+					"kernels_ms": 557.8,
+					"speedup": 5.8,
+					"speedup_vs": "original",
+					"peak_mib": 1577,
+					"compile": {
+						"ms": 781,
+						"fails": null,
+						"part": null,
+						"prep_s": 60.3
+					},
+					"tensorrt": {
+						"ms": 719,
+						"fails": null,
+						"part": null,
+						"prep_s": 102
+					}
+				},
+				{
+					"id": "swinir-m-x4",
+					"doc": "/models/swinir",
+					"family": "swinir",
+					"mem": {
+						"original": {
+							"alloc": 1500,
+							"reserved": 2058
+						},
+						"portable": {
+							"alloc": 1499,
+							"reserved": 2054
+						},
+						"kernels": {
+							"alloc": 1390,
+							"reserved": 1456
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "30.89 / 0.8422",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 3497.4,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 767.5,
+					"kernels_ms": 580.4,
+					"speedup": 6,
+					"speedup_vs": "original",
+					"peak_mib": 1390,
+					"compile": {
+						"ms": 795,
+						"fails": null,
+						"part": null,
+						"prep_s": 61.8
+					},
+					"tensorrt": {
+						"ms": 727,
+						"fails": null,
+						"part": null,
+						"prep_s": 104
+					}
+				},
+				{
+					"id": "swinir-m-x4-real",
+					"doc": "/models/swinir",
+					"family": "swinir",
+					"mem": {
+						"original": {
+							"alloc": 2321,
+							"reserved": 2978
+						},
+						"portable": {
+							"alloc": 2387,
+							"reserved": 3034
+						},
+						"kernels": {
+							"alloc": 1577,
+							"reserved": 1954
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "26.71 / 0.7515",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 2461.6,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1241.7,
+					"kernels_ms": 588.5,
+					"speedup": 4.2,
+					"speedup_vs": "original",
+					"peak_mib": 1577,
+					"compile": {
+						"ms": 807,
+						"fails": null,
+						"part": null,
+						"prep_s": 59.6
+					},
+					"tensorrt": {
+						"ms": 733,
+						"fails": null,
+						"part": null,
+						"prep_s": 109
+					}
+				},
+				{
+					"id": "hat-s-x4",
+					"doc": "/models/hat",
+					"family": "hat",
+					"mem": {
+						"original": {
+							"alloc": 5018,
+							"reserved": 5644
+						},
+						"portable": {
+							"alloc": 1984,
+							"reserved": 2148
+						},
+						"kernels": {
+							"alloc": 1985,
+							"reserved": 2088
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "30.90 / 0.8476",
+					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 2401.8,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1072.2,
+					"kernels_ms": 974.4,
+					"speedup": 2.5,
+					"speedup_vs": "original",
+					"peak_mib": 1985,
+					"compile": {
+						"ms": 750,
+						"fails": null,
+						"part": null,
+						"prep_s": 41.9
+					},
+					"tensorrt": null
+				},
+				{
+					"id": "swinir-l-x4-real",
+					"doc": "/models/swinir",
+					"family": "swinir",
+					"mem": {
+						"original": {
+							"alloc": 2357,
+							"reserved": 2746
+						},
+						"portable": {
+							"alloc": 2425,
+							"reserved": 2672
+						},
+						"kernels": {
+							"alloc": 1872,
+							"reserved": 2152
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.05 / 0.7628",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 3709.3,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 2098.7,
+					"kernels_ms": 1043.5,
+					"speedup": 3.6,
+					"speedup_vs": "original",
+					"peak_mib": 1872,
+					"compile": {
+						"ms": 1426,
+						"fails": null,
+						"part": null,
+						"prep_s": 68.1
+					},
+					"tensorrt": {
+						"ms": 1118,
+						"fails": null,
+						"part": null,
+						"prep_s": 193
+					}
+				},
+				{
+					"id": "dat-2-x4",
+					"doc": "/models/dat",
+					"family": "dat",
+					"mem": {
+						"original": {
+							"alloc": 2436,
+							"reserved": 2518
+						},
+						"portable": {
+							"alloc": 2546,
+							"reserved": 2618
+						},
+						"kernels": {
+							"alloc": 2730,
+							"reserved": 2858
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "30.97 / 0.8492",
+					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 4880.3,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1338,
+					"kernels_ms": 1246.7,
+					"speedup": 3.9,
+					"speedup_vs": "original",
+					"peak_mib": 2730,
+					"compile": {
+						"ms": 964,
+						"fails": null,
+						"part": null,
+						"prep_s": 44.3
+					},
+					"tensorrt": null
+				},
+				{
+					"id": "dat-x4",
+					"doc": "/models/dat",
+					"family": "dat",
+					"mem": {
+						"original": {
+							"alloc": 2443,
+							"reserved": 2528
+						},
+						"portable": {
+							"alloc": 2552,
+							"reserved": 2624
+						},
+						"kernels": {
+							"alloc": 2737,
+							"reserved": 2864
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "31.01 / 0.8498",
+					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 9563.6,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1565,
+					"kernels_ms": 1421.1,
+					"speedup": 6.7,
+					"speedup_vs": "original",
+					"peak_mib": 2737,
+					"compile": {
+						"ms": 1063,
+						"fails": null,
+						"part": null,
+						"prep_s": 43.1
+					},
+					"tensorrt": null
+				},
+				{
+					"id": "hat-x4",
+					"doc": "/models/hat",
+					"family": "hat",
+					"mem": {
+						"original": {
+							"alloc": 5318,
+							"reserved": 6106
+						},
+						"portable": {
+							"alloc": 2426,
+							"reserved": 2590
+						},
+						"kernels": {
+							"alloc": 2610,
+							"reserved": 2790
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "31.01 / 0.8498",
+					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 3038.2,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1595.9,
+					"kernels_ms": 1444.6,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 2610,
+					"compile": {
+						"ms": 1185,
+						"fails": null,
+						"part": null,
+						"prep_s": 53.4
+					},
+					"tensorrt": null
+				},
+				{
+					"id": "real-hat-gan-x4",
+					"doc": "/models/hat",
+					"family": "hat",
+					"mem": {
+						"original": {
+							"alloc": 5318,
+							"reserved": 6106
+						},
+						"portable": {
+							"alloc": 2426,
+							"reserved": 2610
+						},
+						"kernels": {
+							"alloc": 2610,
+							"reserved": 2770
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.13 / 0.7632",
+					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 3038.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1596.7,
+					"kernels_ms": 1444.7,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 2610,
+					"compile": {
+						"ms": 1185,
+						"fails": null,
+						"part": null,
+						"prep_s": 54.3
+					},
+					"tensorrt": null
 				}
 			]
 		}
@@ -15984,13 +20779,19 @@
 				"depth",
 				"classification",
 				"segmentation",
+				"matting",
 				"promptable_segmentation",
 				"detection",
 				"pose",
 				"features",
+				"retrieval",
+				"calibration",
 				"multiview",
 				"flow",
-				"matching"
+				"matching",
+				"tracking",
+				"interpolation",
+				"restoration"
 			],
 			"cpu": null,
 			"times": null
@@ -35983,11 +40784,56 @@
 				"unstated"
 			]
 		},
+		"lingbot-depth@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"lingbot-depth-dc@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"lotus-normal-d-v1-1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"lotus-normal-g-v1-1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
 		"marigold-depth-v1-1@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
 			"weights": "LicenseRef-CreativeML-OpenRAIL-PlusPlus-M",
+			"training": [
+				"unstated"
+			]
+		},
+		"marigold-normals-lcm-v0-1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
 			"training": [
 				"unstated"
 			]
@@ -36009,6 +40855,7 @@
 			"training": [
 				"kitti",
 				"nyu",
+				"megadepth",
 				"tartanair",
 				"unstated"
 			]
@@ -36049,6 +40896,33 @@
 				"unstated"
 			]
 		},
+		"prompt-depth-anything-l@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"prompt-depth-anything-s@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"stablenormal-turbo@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
 		"unidepth-v2-vitl14@1": {
 			"task": "depth",
 			"tier": "stable",
@@ -36067,6 +40941,24 @@
 				"unstated"
 			]
 		},
+		"video-depth-anything-metric-s@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"video-depth-anything-s@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
 		"zoedepth-nk@1": {
 			"task": "depth",
 			"tier": "stable",
@@ -36075,6 +40967,7 @@
 			"training": [
 				"nyu",
 				"kitti",
+				"megadepth",
 				"tartanair",
 				"unstated"
 			]
@@ -36471,6 +41364,16 @@
 				"merged-38m",
 				"imagenet-21k",
 				"imagenet-1k"
+			]
+		},
+		"falconsai-nsfw-vit@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"falconsai-nsfw"
 			]
 		},
 		"fastvit_sa24.apple_dist_in1k@1": {
@@ -36974,6 +41877,42 @@
 				"imagenet-1k"
 			]
 		},
+		"wd-convnext-tagger-v3@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"danbooru"
+			]
+		},
+		"wd-eva02-large-tagger-v3@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"danbooru"
+			]
+		},
+		"wd-vit-large-tagger-v3@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"danbooru"
+			]
+		},
+		"wd-vit-tagger-v3@1": {
+			"task": "classification",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"danbooru"
+			]
+		},
 		"deeplabv3-r101-d8-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
@@ -37121,6 +42060,16 @@
 				"ade20k"
 			]
 		},
+		"segformer-b2-clothes@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC",
+			"training": [
+				"imagenet-1k",
+				"atr"
+			]
+		},
 		"segformer-b5-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
@@ -37129,6 +42078,16 @@
 			"training": [
 				"imagenet-1k",
 				"ade20k"
+			]
+		},
+		"segformer-b5-face-parsing@1": {
+			"task": "segmentation",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-noncommercial",
+			"training": [
+				"imagenet-1k",
+				"celebamask-hq"
 			]
 		},
 		"segnext-mscan-b-ade20k@1": {
@@ -37169,6 +42128,131 @@
 			"training": [
 				"imagenet-1k",
 				"ade20k"
+			]
+		},
+		"ben2@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"dis5k",
+				"prama-internal"
+			]
+		},
+		"birefnet@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"dis5k",
+				"duts",
+				"hrsod",
+				"uhrsd",
+				"hrs10k",
+				"p3m-10k"
+			]
+		},
+		"birefnet-lite@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"dis5k",
+				"duts",
+				"hrsod",
+				"uhrsd",
+				"hrs10k",
+				"p3m-10k"
+			]
+		},
+		"inspyrenet@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"duts",
+				"hrsod",
+				"uhrsd",
+				"dis5k"
+			]
+		},
+		"inspyrenet-fast@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"duts",
+				"hrsod",
+				"uhrsd",
+				"dis5k"
+			]
+		},
+		"isnet@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"dis5k"
+			]
+		},
+		"isnet-general-use@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"dis5k"
+			]
+		},
+		"u2net@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"duts"
+			]
+		},
+		"u2net-human-seg@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"supervisely-person"
+			]
+		},
+		"u2netp@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"duts"
+			]
+		},
+		"vitmatte-b@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"composition-1k"
+			]
+		},
+		"vitmatte-s@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"composition-1k"
 			]
 		},
 		"efficientvit-sam-l0@1": {
@@ -37212,6 +42296,15 @@
 			"tier": "stable",
 			"code": "Apache-2.0",
 			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"insid3-vitl16@1": {
+			"task": "promptable_segmentation",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-DINOv3-License",
 			"training": [
 				"unstated"
 			]
@@ -37324,6 +42417,56 @@
 				"unstated"
 			]
 		},
+		"deim-l-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
+		},
+		"deim-m-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
+		},
+		"deim-n-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
+		},
+		"deim-s-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
+		},
+		"deim-x-coco@1": {
+			"task": "detection",
+			"tier": "stable",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
+		},
 		"detr-r101-coco@1": {
 			"task": "detection",
 			"tier": "stable",
@@ -37403,6 +42546,75 @@
 				"coco"
 			]
 		},
+		"grounding-dino-base@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365"
+			]
+		},
+		"grounding-dino-tiny@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"objects365"
+			]
+		},
+		"lw-detr-large-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365"
+			]
+		},
+		"lw-detr-medium-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365"
+			]
+		},
+		"lw-detr-small-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365"
+			]
+		},
+		"lw-detr-tiny-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365"
+			]
+		},
+		"lw-detr-xlarge-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365"
+			]
+		},
 		"mask-rcnn-r50-fpn-3x-coco@1": {
 			"task": "detection",
 			"tier": "stable",
@@ -37410,6 +42622,154 @@
 			"weights": "CC-BY-SA-3.0",
 			"training": [
 				"coco"
+			]
+		},
+		"mm-grounding-dino-base@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"objects365"
+			]
+		},
+		"mm-grounding-dino-tiny@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"objects365"
+			]
+		},
+		"owlv2-b16@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"webli",
+				"objects365"
+			]
+		},
+		"owlv2-l14@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"webli",
+				"objects365"
+			]
+		},
+		"rf-detr-l-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-m-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-n-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-s-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-seg-2xl-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-seg-l-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-seg-m-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-seg-n-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-seg-s-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
+			]
+		},
+		"rf-detr-seg-xl-coco@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"lvd-142m"
 			]
 		},
 		"rtdetrv2-l-coco@1": {
@@ -37532,6 +42892,51 @@
 			"training": [
 				"coco",
 				"imagenet-1k"
+			]
+		},
+		"yolox-l@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco"
+			]
+		},
+		"yolox-m@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco"
+			]
+		},
+		"yolox-s@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco"
+			]
+		},
+		"yolox-tiny@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco"
+			]
+		},
+		"yolox-x@1": {
+			"task": "detection",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"coco"
 			]
 		},
 		"dwpose-l@1": {
@@ -38147,7 +43552,7 @@
 		},
 		"c-radio-v3-b@1": {
 			"task": "features",
-			"tier": "stable",
+			"tier": "experimental",
 			"code": "Apache-2.0",
 			"weights": "LicenseRef-NVIDIA-Open-Model-License",
 			"training": [
@@ -38156,7 +43561,7 @@
 		},
 		"c-radio-v3-g@1": {
 			"task": "features",
-			"tier": "stable",
+			"tier": "experimental",
 			"code": "Apache-2.0",
 			"weights": "LicenseRef-NVIDIA-Open-Model-License",
 			"training": [
@@ -38165,7 +43570,7 @@
 		},
 		"c-radio-v3-h@1": {
 			"task": "features",
-			"tier": "stable",
+			"tier": "experimental",
 			"code": "Apache-2.0",
 			"weights": "LicenseRef-NVIDIA-Open-Model-License",
 			"training": [
@@ -38174,7 +43579,25 @@
 		},
 		"c-radio-v3-l@1": {
 			"task": "features",
-			"tier": "stable",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Open-Model-License",
+			"training": [
+				"nv-cc-img-text"
+			]
+		},
+		"c-radio-v4-h@1": {
+			"task": "features",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "LicenseRef-NVIDIA-Open-Model-License",
+			"training": [
+				"nv-cc-img-text"
+			]
+		},
+		"c-radio-v4-so400m@1": {
+			"task": "features",
+			"tier": "experimental",
 			"code": "Apache-2.0",
 			"weights": "LicenseRef-NVIDIA-Open-Model-License",
 			"training": [
@@ -38649,6 +44072,67 @@
 				"unstated"
 			]
 		},
+		"boq-dinov2@1": {
+			"task": "retrieval",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"lvd-142m",
+				"gsv-cities"
+			]
+		},
+		"megaloc@1": {
+			"task": "retrieval",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"lvd-142m",
+				"gsv-cities",
+				"msls",
+				"megascenes",
+				"scannet",
+				"sf-xl"
+			]
+		},
+		"anycalib-pinhole@1": {
+			"task": "calibration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"lvd-142m",
+				"openpano"
+			]
+		},
+		"geocalib-pinhole@1": {
+			"task": "calibration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-4.0",
+			"training": [
+				"openpano"
+			]
+		},
+		"anysplat@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "MIT AND LicenseRef-VGGT",
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
+		},
+		"depthsplat-small-re10k@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"realestate10k"
+			]
+		},
 		"mapanything-apache@1": {
 			"task": "multiview",
 			"tier": "stable",
@@ -38667,6 +44151,15 @@
 				"unstated"
 			]
 		},
+		"mvsplat-re10k@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"realestate10k"
+			]
+		},
 		"patchmatchnet@1": {
 			"task": "multiview",
 			"tier": "stable",
@@ -38674,6 +44167,15 @@
 			"weights": "MIT (assumed from code)",
 			"training": [
 				"dtu"
+			]
+		},
+		"pi3@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
 			]
 		},
 		"vggt-1b@1": {
@@ -38856,6 +44358,95 @@
 				"sceneflow"
 			]
 		},
+		"memflow@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
+		},
+		"memflow-kitti@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"memflow-sintel@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"memfof@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"memfof-kitti@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"memfof-sintel@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"memfof-spring@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k",
+				"spring"
+			]
+		},
 		"neuflow-v2@1": {
 			"task": "flow",
 			"tier": "experimental",
@@ -39032,6 +44623,87 @@
 				"spring"
 			]
 		},
+		"aliked-flexglue@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT AND BSD-3-Clause",
+			"weights": "MIT AND LicenseRef-DINOv3-License AND BSD-3-Clause",
+			"training": [
+				"unstated"
+			]
+		},
+		"aliked-lightglue@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "Apache-2.0 AND BSD-3-Clause",
+			"weights": "Apache-2.0 AND BSD-3-Clause",
+			"training": [
+				"megadepth"
+			]
+		},
+		"dedode-v2-b@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"megadepth"
+			]
+		},
+		"dedode-v2-g@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"megadepth"
+			]
+		},
+		"disk-lightglue@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "Apache-2.0 AND BSD-3-Clause",
+			"weights": "Apache-2.0 AND BSD-3-Clause",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loftr-indoor@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loftr-outdoor@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loma-b@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"megadepth"
+			]
+		},
+		"romav1@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT AND Apache-2.0",
+			"training": [
+				"megadepth"
+			]
+		},
 		"romav2@1": {
 			"task": "matching",
 			"tier": "experimental",
@@ -39039,6 +44711,325 @@
 			"weights": "MIT AND LicenseRef-DINOv3-License",
 			"training": [
 				"unstated"
+			]
+		},
+		"xfeat@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"megadepth",
+				"coco"
+			]
+		},
+		"xfeat-lighterglue@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"megadepth",
+				"coco"
+			]
+		},
+		"alltracker@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"sceneflow",
+				"flyingchairs",
+				"spring",
+				"hd1k",
+				"kitti",
+				"tartanair",
+				"unstated"
+			]
+		},
+		"alltracker-tiny@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"sceneflow",
+				"flyingchairs",
+				"spring",
+				"hd1k",
+				"kitti",
+				"tartanair",
+				"unstated"
+			]
+		},
+		"bootstapir@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"locotrack-b@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"locotrack-s@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"tapir@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"tapnext@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"tapnext-pp@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"track-on-r@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "MIT AND LicenseRef-DINOv3-License",
+			"weights": "MIT AND LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
+		},
+		"track-on2@1": {
+			"task": "tracking",
+			"tier": "experimental",
+			"code": "MIT AND LicenseRef-DINOv3-License",
+			"weights": "MIT AND LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
+		},
+		"rife-4.25@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"rife-4.25-lite@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"rife-4.26@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"codeformer@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial",
+			"training": [
+				"ffhq"
+			]
+		},
+		"dat-2-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"dat-light-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"dat-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"hat-s-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"hat-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"real-hat-gan-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k",
+				"ost"
+			]
+		},
+		"realesrgan-x2plus@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"div2k",
+				"flickr2k",
+				"ost"
+			]
+		},
+		"realesrgan-x4plus@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"div2k",
+				"flickr2k",
+				"ost"
+			]
+		},
+		"realesrgan-x4plus-anime-6b@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"div2k",
+				"flickr2k",
+				"ost"
+			]
+		},
+		"span-x2@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"span-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"swinir-l-x4-real@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k",
+				"ost",
+				"wed",
+				"ffhq",
+				"manga109",
+				"scut-ctw1500"
+			]
+		},
+		"swinir-m-x2@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"swinir-m-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"swinir-m-x4-real@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k",
+				"ost"
 			]
 		}
 	}

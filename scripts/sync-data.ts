@@ -34,7 +34,13 @@ const TASK_ORDER_SYNC = [
 	'pose',
 	'classification',
 	'features',
-	'flow'
+	'retrieval',
+	'calibration',
+	'matting',
+	'flow',
+	'tracking',
+	'interpolation',
+	'restoration'
 ];
 
 const TASK_IDS: Record<string, string> = {
@@ -48,7 +54,13 @@ const TASK_IDS: Record<string, string> = {
 	Multiview: 'multiview',
 	Pose: 'pose',
 	Flow: 'flow',
-	Matching: 'matching'
+	Matching: 'matching',
+	Matting: 'matting',
+	Retrieval: 'retrieval',
+	Calibration: 'calibration',
+	Tracking: 'tracking',
+	Interpolation: 'interpolation',
+	Restoration: 'restoration'
 };
 
 type Row = {

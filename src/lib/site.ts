@@ -54,6 +54,32 @@ export const TASK_META: Record<string, { name: string; pkg: string; call: string
 		pkg: 'features',
 		call: 'model(image)',
 		result: 'token features, image embedding'
+	},
+	matting: { name: 'Matting', pkg: 'matting', call: 'model(image)', result: 'foreground alpha per pixel' },
+	retrieval: { name: 'Image retrieval', pkg: 'retrieval', call: 'model(image)', result: 'global descriptor' },
+	calibration: {
+		name: 'Camera calibration',
+		pkg: 'calibration',
+		call: 'model(image)',
+		result: 'intrinsics, gravity, roll, pitch'
+	},
+	tracking: {
+		name: 'Point tracking',
+		pkg: 'tracking',
+		call: 'model(video, queries)',
+		result: 'tracks + visibility per frame'
+	},
+	interpolation: {
+		name: 'Frame interpolation',
+		pkg: 'interpolation',
+		call: 'model(frame1, frame2)',
+		result: 'the frame in between'
+	},
+	restoration: {
+		name: 'Image restoration',
+		pkg: 'restoration',
+		call: 'model(image)',
+		result: 'restored / upscaled image'
 	}
 };
 
@@ -68,7 +94,13 @@ export const TASK_ORDER = [
 	'pose',
 	'classification',
 	'features',
-	'flow'
+	'retrieval',
+	'calibration',
+	'matting',
+	'flow',
+	'tracking',
+	'interpolation',
+	'restoration'
 ];
 
 export { data };

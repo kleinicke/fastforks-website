@@ -7,7 +7,8 @@
 		stereo: ['Left view', 'Right view'],
 		flow: ['Frame 1', 'Frame 2'],
 		multiview: ['View 1', 'View 2'],
-		matching: ['View A', 'View B']
+		matching: ['View A', 'View B'],
+		interpolation: ['Frame 1', 'Frame 2']
 	};
 	const views = $derived(VIEWS[task] ?? ['Input']);
 	const pct = (x: number) => (x < 0.001 ? '<0.1%' : `${(x * 100).toFixed(x < 0.1 ? 1 : 0)}%`);
