@@ -174,6 +174,26 @@
 				(!q || r.id.includes(q) || r.code.toLowerCase().includes(q) || r.weights.toLowerCase().includes(q))
 		);
 	});
+	// Per task chip: how many models the table shows with every filter but the task (released, and upcoming apart).
+	// One device counts that device's rows; the compare views count the whole catalogue.
+	const chipCounts = $derived.by(() => {
+		const q = query.trim().toLowerCase();
+		const pool: { id: string; task: string; commercial: string; code?: string; weights?: string }[] =
+			view === 'device' ? all : data.tasks.flatMap((t) => t.models.map((m) => ({ ...(m as { id: string; commercial: string }), task: t.id })));
+		const out: Record<string, { shipped: number; soon: number }> = {};
+		for (const r of pool) {
+			if (commercialOnly && r.commercial !== 'yes') continue;
+			if (q && !(r.id.includes(q) || r.code?.toLowerCase().includes(q) || r.weights?.toLowerCase().includes(q))) continue;
+			const c = (out[r.task] ??= { shipped: 0, soon: 0 });
+			if (UPCOMING.has(r.id)) c.soon++;
+			else c.shipped++;
+		}
+		return out;
+	});
+	const chipTotal = (id: string | null) => {
+		const cs = id ? [chipCounts[id]].filter(Boolean) : Object.values(chipCounts);
+		return { shipped: cs.reduce((a, c) => a + c.shipped, 0), soon: cs.reduce((a, c) => a + c.soon, 0) };
+	};
 	// Upcoming models the toggle hides from the current filter: the empty table offers them.
 	const hiddenUpcoming = $derived(upcoming ? 0 : matching.filter((r) => UPCOMING.has(r.id)).length);
 	const rows = $derived.by(() => {
@@ -293,10 +313,18 @@
 				<span class="lab" id="lab-task">Task</span>
 				<div class="chips" role="group" aria-labelledby="lab-task">
 					{#if view !== 'models'}
-						<button type="button" aria-pressed={task === 'all'} onclick={() => setTask('all')}>All</button>
+						{@const c = chipTotal(null)}
+						<button type="button" aria-pressed={task === 'all'} onclick={() => setTask('all')}
+							>All<small>{c.shipped}</small>{#if upcoming && c.soon}<small class="chip-soon">+{c.soon}</small>{/if}</button
+						>
 					{/if}
 					{#each view === 'device' ? taskIds : view === 'models' ? MODEL_TASKS : TASK_ORDER as id (id)}
-						<button type="button" aria-pressed={task === id} onclick={() => setTask(id)}>{TASK_META[id].name}</button>
+						{@const c = chipTotal(id)}
+						<button type="button" aria-pressed={task === id} onclick={() => setTask(id)}
+							>{TASK_META[id].name}<small>{c.shipped}</small>{#if upcoming && c.soon}<small class="chip-soon"
+									>+{c.soon}</small
+								>{/if}</button
+						>
 					{/each}
 				</div>
 			</div>
@@ -580,6 +608,11 @@
 		margin-left: 0.4em;
 		font-weight: 500;
 		opacity: 0.7;
+	}
+	.head :global(.chips small.chip-soon) {
+		margin-left: 0.25em;
+		font-style: italic;
+		opacity: 0.55;
 	}
 	.head :global(td.muted) {
 		color: var(--muted);
