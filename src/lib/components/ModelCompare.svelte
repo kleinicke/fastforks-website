@@ -23,6 +23,21 @@
 	/** "COCO val2017, every 10th image, box mAP / mask mAP" → "COCO val2017, every 10th image": the metric is in the row below. */
 	const short = (title: string) => title.split(', ').slice(0, -1).join(', ') || title;
 	const colKey = (d: Dataset, m: Metric) => `${d.id}:${m.key}`;
+	/** Benchmark id prefix → the training dataset id of the cards' training_data that covers its images. */
+	const SOURCE: [string, string][] = [
+		['eth3d', 'eth3d'],
+		['middH', 'middlebury'],
+		['nyu', 'nyu'],
+		['ibims', 'ibims'],
+		['kitti', 'kitti'],
+		['imagenet', 'imagenet-1k'],
+		['coco', 'coco'],
+		['ade20k', 'ade20k'],
+		['dtu', 'dtu'],
+		['megadepth', 'megadepth']
+	];
+	const sourceOf = (d: Dataset) => SOURCE.find(([prefix]) => d.id.startsWith(prefix))?.[1];
+	const input = $derived(data.tasks.find((x) => x.id === task)?.input?.replace('x', '×') ?? '');
 
 	const all = $derived.by(() => {
 		const t = data.tasks.find((x) => x.id === task);
@@ -36,6 +51,7 @@
 				commercial: m.commercial,
 				code: lic?.code ?? '',
 				weights: lic?.weights ?? '',
+				training: lic?.training ?? [],
 				portable,
 				ms: m.kernels_ms ?? m.portable_ms,
 				mem: (portable ? m.mem?.portable?.alloc : m.mem?.kernels?.alloc) ?? null,
@@ -105,6 +121,18 @@
 	});
 	const arrow = (key: string) => (sort.key === key ? (sort.ascending ? ' ↑' : ' ↓') : '');
 	const ariaSort = (key: string) => (sort.key === key ? (sort.ascending ? 'ascending' : 'descending') : 'none');
+	/** Datasets a shown model trained on, per benchmark: marked only where some shown models did not (else nothing to tell apart). */
+	const tunedOn = $derived.by(() => {
+		const out = new Map<string, Set<string>>();
+		for (const d of datasets) {
+			const src = sourceOf(d);
+			if (!src) continue;
+			const ids = rows.filter((r) => r.results[d.id] && r.training.includes(src)).map((r) => r.id);
+			const evaluated = rows.filter((r) => r.results[d.id]).length;
+			if (ids.length && ids.length < evaluated) out.set(d.id, new Set(ids));
+		}
+		return out;
+	});
 	const columns = $derived(3 + datasets.reduce((n, d) => n + d.metrics.length, 0));
 </script>
 
@@ -113,7 +141,9 @@
 		<thead>
 			<tr class="groups">
 				<th scope="colgroup"></th>
-				<th scope="colgroup" colspan="2" class="grp">Kernels on the {shortName(REFERENCE)}</th>
+				<th scope="colgroup" colspan="2" class="grp" title="Time and memory at the task's standard input, not at the benchmarks' image sizes"
+					>Kernels on the {shortName(REFERENCE)}{#if input}, {input} input{/if}</th
+				>
 				{#each datasets as d (d.id)}
 					<th scope="colgroup" colspan={d.metrics.length} class="grp" title={d.title}
 						>{short(d.title)}{#if d.overlap === 'train'}<sup title="Trained on this dataset's public images: not zero-shot">†</sup
@@ -158,7 +188,10 @@
 						{#each d.metrics as m, i (m.key)}
 							{@const v = res?.metrics[m.key]}
 							<td class="num" class:first={i === 0} class:muted={v === undefined} class:strong={v !== undefined && v === best.get(colKey(d, m))}
-								>{fmt(m.format, v)}{#if v !== undefined && res.mode === 'portable' && i === 0}<small>portable</small>{/if}</td
+								>{fmt(m.format, v)}{#if v !== undefined && i === 0 && tunedOn.get(d.id)?.has(r.id)}<sup
+										class="tuned"
+										title="Trained on this benchmark's dataset (its training split or the same images): not zero-shot">*</sup
+									>{/if}{#if v !== undefined && res.mode === 'portable' && i === 0}<small>portable</small>{/if}</td
 							>
 						{/each}
 					{/each}
@@ -171,8 +204,10 @@
 </div>
 <p class="note">
 	Each model's own benchmark results, as the golden checks measured them with the kernels (<small>portable</small> where
-	the model has no kernels), next to its kernels time and peak memory allocated by PyTorch on the {REFERENCE.name} at the
-	task's standard input. Rows start sorted best first by the first benchmark, and a click on a metric sorts best first (hover it for whether lower or higher is better); the best of the shown rows is bold; – means not evaluated on that
-	benchmark. † trained on the dataset's public images, ? training data not stated. Hover a benchmark for its full
+	the model has no kernels), next to its kernels time and peak memory allocated by PyTorch on the {REFERENCE.name}. Time and memory are at the
+	task's standard input ({input || 'see the task'}), one image at a time; the benchmarks run at their own image sizes, so
+	memory there can be higher or lower. Rows start sorted best first by the first benchmark, and a click on a metric sorts best first (hover it for whether lower or higher is better); the best of the shown rows is bold; – means not evaluated on that
+	benchmark. * this model was trained on that benchmark's dataset (its training split or the same images), so its
+	result there is not zero-shot; shown only where some models were not. † trained on the dataset's public images, ? training data not stated. Hover a benchmark for its full
 	description; the method is on the <a href="/benchmarks">benchmarks page</a>.
 </p>

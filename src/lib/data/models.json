@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "d4bedb8a",
+		"commit": "cdac234a",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -17333,6 +17333,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 104.737,
+						"dtype": "fp32",
+						"alloc": 361,
+						"reserved": null
 					}
 				},
 				"hgnetv2_b2": {
@@ -17352,6 +17358,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 199.088,
+						"dtype": "fp32",
+						"alloc": 411,
+						"reserved": null
 					}
 				},
 				"hgnetv2_b3": {
@@ -17371,6 +17383,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 255.829,
+						"dtype": "fp32",
+						"alloc": 475,
+						"reserved": null
 					}
 				},
 				"hgnetv2_b4": {
@@ -17390,6 +17408,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 385.557,
+						"dtype": "fp32",
+						"alloc": 513,
+						"reserved": null
 					}
 				},
 				"hgnetv2_b5": {
@@ -17409,6 +17433,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 788.983,
+						"dtype": "fp32",
+						"alloc": 728,
+						"reserved": null
 					}
 				},
 				"hgnetv2_b6": {
@@ -17428,6 +17458,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 1468.017,
+						"dtype": "fp32",
+						"alloc": 1147,
+						"reserved": null
 					}
 				},
 				"inception_v3": {
@@ -17622,6 +17658,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 233.106,
+						"dtype": "fp32",
+						"alloc": 348,
+						"reserved": null
 					}
 				},
 				"repvit_m1_0": {
@@ -17641,6 +17683,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 274.225,
+						"dtype": "fp32",
+						"alloc": 363,
+						"reserved": null
 					}
 				},
 				"repvit_m1_0.dist_450e_in1k": {
@@ -17660,6 +17708,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 264.758,
+						"dtype": "fp32",
+						"alloc": 364,
+						"reserved": null
 					}
 				},
 				"repvit_m1_1": {
@@ -17679,6 +17733,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 400.33,
+						"dtype": "fp32",
+						"alloc": 385,
+						"reserved": null
 					}
 				},
 				"repvit_m1_1.dist_450e_in1k": {
@@ -17698,6 +17758,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 307.439,
+						"dtype": "fp32",
+						"alloc": 381,
+						"reserved": null
 					}
 				},
 				"repvit_m1_5": {
@@ -17717,6 +17783,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 511.021,
+						"dtype": "fp32",
+						"alloc": 430,
+						"reserved": null
 					}
 				},
 				"repvit_m1_5.dist_450e_in1k": {
@@ -17736,6 +17808,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 605.943,
+						"dtype": "fp32",
+						"alloc": 442,
+						"reserved": null
 					}
 				},
 				"repvit_m2_3": {
@@ -17755,6 +17833,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 860.481,
+						"dtype": "fp32",
+						"alloc": 516,
+						"reserved": null
 					}
 				},
 				"repvit_m2_3.dist_450e_in1k": {
@@ -17774,6 +17858,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 937.326,
+						"dtype": "fp32",
+						"alloc": 517,
+						"reserved": null
 					}
 				},
 				"resnet152": {
@@ -17793,6 +17883,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 82.073,
+						"dtype": "fp32",
+						"alloc": 714,
+						"reserved": null
 					}
 				},
 				"resnet18": {
@@ -17837,6 +17933,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 25.235,
+						"dtype": "fp32",
+						"alloc": 433,
+						"reserved": null
 					}
 				},
 				"shufflenet_v2_x1_0": {
@@ -17906,6 +18008,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 275.944,
+						"dtype": "fp32",
+						"alloc": 404,
+						"reserved": null
 					}
 				},
 				"shvit_s3": {
@@ -17925,6 +18033,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 336.404,
+						"dtype": "fp32",
+						"alloc": 437,
+						"reserved": null
 					}
 				},
 				"shvit_s4": {
@@ -17944,6 +18058,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 395.341,
+						"dtype": "fp32",
+						"alloc": 463,
+						"reserved": null
 					}
 				},
 				"squeezenet1_1": {
@@ -18013,6 +18133,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 175.3,
+						"dtype": "fp32",
+						"alloc": 332,
+						"reserved": null
 					}
 				},
 				"starnet_s3": {
@@ -18032,6 +18158,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 271.712,
+						"dtype": "fp32",
+						"alloc": 353,
+						"reserved": null
 					}
 				},
 				"starnet_s4": {
@@ -18051,6 +18183,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 368.444,
+						"dtype": "fp32",
+						"alloc": 366,
+						"reserved": null
 					}
 				},
 				"swin_base_patch4_window7_224": {
@@ -18095,6 +18233,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 225.314,
+						"dtype": "fp32",
+						"alloc": 402,
+						"reserved": null
 					}
 				},
 				"tiny_vit_21m_224.dist_in22k_ft_in1k": {
@@ -18114,6 +18258,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 319.719,
+						"dtype": "fp32",
+						"alloc": 500,
+						"reserved": null
 					}
 				},
 				"tiny_vit_21m_384": {
@@ -18133,6 +18283,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 455.983,
+						"dtype": "fp32",
+						"alloc": 670,
+						"reserved": null
 					}
 				},
 				"tiny_vit_21m_512": {
@@ -18152,6 +18308,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 654.412,
+						"dtype": "fp32",
+						"alloc": 1078,
+						"reserved": null
 					}
 				},
 				"tiny_vit_5m_224.dist_in22k_ft_in1k": {
@@ -18792,6 +18954,12 @@
 						"dtype": "fp32",
 						"alloc": 3160,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 2700.656,
+						"dtype": "fp32",
+						"alloc": 4744,
+						"reserved": null
 					}
 				},
 				"moge-2-vitl-normal": {
@@ -18812,6 +18980,12 @@
 						"ms": 1343.838,
 						"dtype": "fp32",
 						"alloc": 3994,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 6634.622,
+						"dtype": "fp32",
+						"alloc": 5587,
 						"reserved": null
 					}
 				},
@@ -18858,6 +19032,12 @@
 						"ms": 2414.649,
 						"dtype": "fp32",
 						"alloc": 6121,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 15928.854,
+						"dtype": "fp32",
+						"alloc": 7736,
 						"reserved": null
 					}
 				},
@@ -19127,6 +19307,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 379.432,
+						"dtype": "fp32",
+						"alloc": 915,
+						"reserved": null
 					}
 				},
 				"rtdetrv2-m-coco": {
@@ -19140,6 +19326,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 174.969,
+						"dtype": "fp32",
+						"alloc": 779,
+						"reserved": null
 					}
 				},
 				"rtdetrv2-ms-coco": {
@@ -19153,6 +19345,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 190.324,
+						"dtype": "fp32",
+						"alloc": 839,
+						"reserved": null
 					}
 				},
 				"rtdetrv2-s-coco": {
@@ -19185,6 +19383,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 406.211,
+						"dtype": "fp32",
+						"alloc": 1192,
+						"reserved": null
 					}
 				},
 				"rtmdet-l-coco": {
@@ -19204,6 +19408,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 657.128,
+						"dtype": "fp32",
+						"alloc": 1144,
+						"reserved": null
 					}
 				},
 				"rtmdet-m-coco": {
@@ -19223,6 +19433,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 381.918,
+						"dtype": "fp32",
+						"alloc": 847,
+						"reserved": null
 					}
 				},
 				"rtmdet-m-person": {
@@ -19242,6 +19458,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 381.012,
+						"dtype": "fp32",
+						"alloc": 725,
+						"reserved": null
 					}
 				},
 				"rtmdet-nano-person": {
@@ -19261,6 +19483,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 65.866,
+						"dtype": "fp32",
+						"alloc": 314,
+						"reserved": null
 					}
 				},
 				"rtmdet-s-coco": {
@@ -19280,6 +19508,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 149.688,
+						"dtype": "fp32",
+						"alloc": 614,
+						"reserved": null
 					}
 				},
 				"rtmdet-tiny-coco": {
@@ -19324,6 +19558,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1001.037,
+						"dtype": "fp32",
+						"alloc": 1545,
+						"reserved": null
 					}
 				},
 				"c-radio-v3-b": {
@@ -20048,6 +20288,9 @@
 						"dtype": "fp16",
 						"alloc": 1571,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-core-g14-448": {
@@ -20063,6 +20306,9 @@
 						"dtype": "fp16",
 						"alloc": 17853,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-core-l14-336": {
@@ -20078,6 +20324,9 @@
 						"dtype": "fp16",
 						"alloc": 4528,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-core-s16-384": {
@@ -20093,6 +20342,9 @@
 						"dtype": "fp16",
 						"alloc": 646,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-core-t16-384": {
@@ -20129,6 +20381,9 @@
 						"dtype": "fp16",
 						"alloc": 1486,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-spatial-g14-448": {
@@ -20144,6 +20399,9 @@
 						"dtype": "fp16",
 						"alloc": 17724,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-spatial-l14-448": {
@@ -20159,6 +20417,9 @@
 						"dtype": "fp16",
 						"alloc": 4429,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-spatial-s16-512": {
@@ -20174,6 +20435,9 @@
 						"dtype": "fp16",
 						"alloc": 590,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"pe-spatial-t16-512": {
@@ -20189,6 +20453,9 @@
 						"dtype": "fp16",
 						"alloc": 383,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-b16-256": {
@@ -20221,6 +20488,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-g16-256": {
@@ -20234,6 +20504,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-g16-384": {
@@ -20247,6 +20520,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-l16-256": {
@@ -20260,6 +20536,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-l16-512": {
@@ -20273,6 +20552,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-so400m14-224": {
@@ -20286,6 +20568,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-so400m14-378": {
@@ -20299,6 +20584,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-so400m16-256": {
@@ -20312,6 +20600,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"siglip2-so400m16-512": {
@@ -20325,6 +20616,9 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"tipsv2-b14": {
@@ -20357,6 +20651,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 184.305,
+						"dtype": "fp32",
+						"alloc": 1324,
+						"reserved": null
 					}
 				},
 				"flowformer-small-chairs": {
@@ -20481,6 +20781,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 13209.348,
+						"dtype": "fp32",
+						"alloc": 11047,
+						"reserved": null
 					}
 				},
 				"gmflow-scale1-things": {
@@ -20519,6 +20825,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 35050.656,
+						"dtype": "fp32",
+						"alloc": 12648,
+						"reserved": null
 					}
 				},
 				"gmflow-scale2-regrefine6-kitti": {
@@ -20532,6 +20844,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 73459.24,
+						"dtype": "fp32",
+						"alloc": 13266,
+						"reserved": null
 					}
 				},
 				"gmflow-scale2-regrefine6-mixdata": {
@@ -20545,6 +20863,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 91258.653,
+						"dtype": "fp32",
+						"alloc": 13283,
+						"reserved": null
 					}
 				},
 				"gmflow-scale2-regrefine6-sintelft": {
@@ -20558,6 +20882,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 82412.05,
+						"dtype": "fp32",
+						"alloc": 12221,
+						"reserved": null
 					}
 				},
 				"gmflow-scale2-regrefine6-things": {
@@ -20571,6 +20901,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 83317.291,
+						"dtype": "fp32",
+						"alloc": 13736,
+						"reserved": null
 					}
 				},
 				"gmflow-scale2-sintel": {
@@ -20584,6 +20920,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 47250.954,
+						"dtype": "fp32",
+						"alloc": 12167,
+						"reserved": null
 					}
 				},
 				"gmflow-scale2-things": {
@@ -20597,6 +20939,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "the card has no kernels mode"
+					},
+					"cpu": {
+						"ms": 35665.521,
+						"dtype": "fp32",
+						"alloc": 13237,
+						"reserved": null
 					}
 				},
 				"neuflow-v2": {
@@ -20635,6 +20983,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 10421.772,
+						"dtype": "fp32",
+						"alloc": 9565,
+						"reserved": null
 					}
 				},
 				"neuflow-v2-things": {
@@ -20651,6 +21005,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 7114.676,
+						"dtype": "fp32",
+						"alloc": 10585,
+						"reserved": null
 					}
 				},
 				"raft-large": {
@@ -20693,6 +21053,12 @@
 						"dtype": "fp16",
 						"alloc": 4671,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 40657.541,
+						"dtype": "fp32",
+						"alloc": 10799,
+						"reserved": null
 					}
 				},
 				"raft-large-things": {
@@ -20711,6 +21077,12 @@
 						"dtype": "fp16",
 						"alloc": 4670,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 56782.893,
+						"dtype": "fp32",
+						"alloc": 9061,
+						"reserved": null
 					}
 				},
 				"raft-small": {
@@ -20728,6 +21100,12 @@
 						"ms": 385.796,
 						"dtype": "fp16",
 						"alloc": 2482,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 9508.619,
+						"dtype": "fp32",
+						"alloc": 11484,
 						"reserved": null
 					}
 				},
@@ -20774,6 +21152,12 @@
 						"dtype": "fp16",
 						"alloc": 4754,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 16090.81,
+						"dtype": "fp32",
+						"alloc": 12140,
+						"reserved": null
 					}
 				},
 				"sea-raft-m-spring": {
@@ -20794,6 +21178,12 @@
 						"ms": 339.899,
 						"dtype": "fp16",
 						"alloc": 1621,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 1424.969,
+						"dtype": "fp32",
+						"alloc": 2305,
 						"reserved": null
 					}
 				},
@@ -20816,6 +21206,12 @@
 						"dtype": "fp16",
 						"alloc": 4753,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 10636.331,
+						"dtype": "fp32",
+						"alloc": 13181,
+						"reserved": null
 					}
 				},
 				"sea-raft-s": {
@@ -20836,6 +21232,12 @@
 						"ms": 833.089,
 						"dtype": "fp16",
 						"alloc": 4667,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 11792.229,
+						"dtype": "fp32",
+						"alloc": 12561,
 						"reserved": null
 					}
 				},
@@ -20858,6 +21260,12 @@
 						"dtype": "fp16",
 						"alloc": 4664,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 11908.528,
+						"dtype": "fp32",
+						"alloc": 14222,
+						"reserved": null
 					}
 				},
 				"sea-raft-s-spring": {
@@ -20878,6 +21286,12 @@
 						"ms": 233.478,
 						"dtype": "fp16",
 						"alloc": 1527,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 1040.895,
+						"dtype": "fp32",
+						"alloc": 2265,
 						"reserved": null
 					}
 				},
@@ -21205,6 +21619,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1228.404,
+						"dtype": "fp32",
+						"alloc": 2431,
+						"reserved": null
 					}
 				},
 				"hrnet-w48": {
@@ -21224,6 +21644,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1198.714,
+						"dtype": "fp32",
+						"alloc": 1586,
+						"reserved": null
 					}
 				},
 				"hrnet-w48-384": {
@@ -21243,6 +21669,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2191.301,
+						"dtype": "fp32",
+						"alloc": 2589,
+						"reserved": null
 					}
 				},
 				"rf-detr-keypoint-preview": {
@@ -21287,6 +21719,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 207.828,
+						"dtype": "fp32",
+						"alloc": 935,
+						"reserved": null
 					}
 				},
 				"rtmo-m": {
@@ -21306,6 +21744,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 121.207,
+						"dtype": "fp32",
+						"alloc": 674,
+						"reserved": null
 					}
 				},
 				"rtmo-s": {
@@ -21325,6 +21769,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 74.043,
+						"dtype": "fp32",
+						"alloc": 487,
+						"reserved": null
 					}
 				},
 				"rtmo-t": {
@@ -21371,6 +21821,12 @@
 						"dtype": "fp32",
 						"alloc": 1893,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 828.571,
+						"dtype": "fp32",
+						"alloc": 1146,
+						"reserved": null
 					}
 				},
 				"rtmpose-l-384": {
@@ -21391,6 +21847,12 @@
 						"ms": 167.23,
 						"dtype": "fp32",
 						"alloc": 1893,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 1126.753,
+						"dtype": "fp32",
+						"alloc": 2115,
 						"reserved": null
 					}
 				},
@@ -21413,6 +21875,12 @@
 						"dtype": "fp32",
 						"alloc": 1896,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 988.767,
+						"dtype": "fp32",
+						"alloc": 1144,
+						"reserved": null
 					}
 				},
 				"rtmpose-l-halpe26-384": {
@@ -21433,6 +21901,12 @@
 						"ms": 143.735,
 						"dtype": "fp32",
 						"alloc": 1899,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 1209.847,
+						"dtype": "fp32",
+						"alloc": 2122,
 						"reserved": null
 					}
 				},
@@ -21455,6 +21929,12 @@
 						"dtype": "fp32",
 						"alloc": 1740,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 436.446,
+						"dtype": "fp32",
+						"alloc": 858,
+						"reserved": null
 					}
 				},
 				"rtmpose-m-384": {
@@ -21475,6 +21955,12 @@
 						"ms": 98.333,
 						"dtype": "fp32",
 						"alloc": 1738,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 697.825,
+						"dtype": "fp32",
+						"alloc": 1431,
 						"reserved": null
 					}
 				},
@@ -21497,6 +21983,12 @@
 						"dtype": "fp32",
 						"alloc": 1739,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 525.33,
+						"dtype": "fp32",
+						"alloc": 1055,
+						"reserved": null
 					}
 				},
 				"rtmpose-m-face6": {
@@ -21517,6 +22009,12 @@
 						"ms": 56.146,
 						"dtype": "fp32",
 						"alloc": 1780,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 513.019,
+						"dtype": "fp32",
+						"alloc": 1056,
 						"reserved": null
 					}
 				},
@@ -21539,6 +22037,12 @@
 						"dtype": "fp32",
 						"alloc": 1742,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 420.606,
+						"dtype": "fp32",
+						"alloc": 861,
+						"reserved": null
 					}
 				},
 				"rtmpose-m-halpe26-384": {
@@ -21559,6 +22063,12 @@
 						"ms": 84.898,
 						"dtype": "fp32",
 						"alloc": 1742,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 709.479,
+						"dtype": "fp32",
+						"alloc": 1462,
 						"reserved": null
 					}
 				},
@@ -21581,6 +22091,12 @@
 						"dtype": "fp32",
 						"alloc": 1740,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 532.519,
+						"dtype": "fp32",
+						"alloc": 1046,
+						"reserved": null
 					}
 				},
 				"rtmpose-s": {
@@ -21601,6 +22117,12 @@
 						"ms": 28.997,
 						"dtype": "fp32",
 						"alloc": 1559,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 179.032,
+						"dtype": "fp32",
+						"alloc": 624,
 						"reserved": null
 					}
 				},
@@ -21623,6 +22145,12 @@
 						"dtype": "fp32",
 						"alloc": 1587,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 221.145,
+						"dtype": "fp32",
+						"alloc": 807,
+						"reserved": null
 					}
 				},
 				"rtmpose-s-halpe26": {
@@ -21643,6 +22171,12 @@
 						"ms": 24.918,
 						"dtype": "fp32",
 						"alloc": 1567,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 178.537,
+						"dtype": "fp32",
+						"alloc": 620,
 						"reserved": null
 					}
 				},
@@ -21692,6 +22226,12 @@
 						"dtype": "fp32",
 						"alloc": 1533,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 145.926,
+						"dtype": "fp32",
+						"alloc": 630,
+						"reserved": null
 					}
 				},
 				"rtmpose-t-halpe26": {
@@ -21712,6 +22252,12 @@
 						"ms": 19.994,
 						"dtype": "fp32",
 						"alloc": 1513,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 99.503,
+						"dtype": "fp32",
+						"alloc": 511,
 						"reserved": null
 					}
 				},
@@ -21734,6 +22280,12 @@
 						"dtype": "fp32",
 						"alloc": 2130,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 1856.341,
+						"dtype": "fp32",
+						"alloc": 2473,
+						"reserved": null
 					}
 				},
 				"rtmw-l": {
@@ -21754,6 +22306,12 @@
 						"ms": 136.895,
 						"dtype": "fp32",
 						"alloc": 2097,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 1261.988,
+						"dtype": "fp32",
+						"alloc": 1634,
 						"reserved": null
 					}
 				},
@@ -21776,6 +22334,12 @@
 						"dtype": "fp32",
 						"alloc": 2127,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 1717.144,
+						"dtype": "fp32",
+						"alloc": 3086,
+						"reserved": null
 					}
 				},
 				"rtmw-m": {
@@ -21796,6 +22360,12 @@
 						"ms": 95.788,
 						"dtype": "fp32",
 						"alloc": 1897,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 679.425,
+						"dtype": "fp32",
+						"alloc": 1205,
 						"reserved": null
 					}
 				},
@@ -21818,6 +22388,12 @@
 						"dtype": "fp32",
 						"alloc": 2308,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 1924.16,
+						"dtype": "fp32",
+						"alloc": 2306,
+						"reserved": null
 					}
 				},
 				"rtmw-x-384": {
@@ -21839,6 +22415,12 @@
 						"dtype": "fp32",
 						"alloc": 3322,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 2829.74,
+						"dtype": "fp32",
+						"alloc": 3904,
+						"reserved": null
 					}
 				},
 				"vitpose-base": {
@@ -21859,6 +22441,12 @@
 						"ms": 172.158,
 						"dtype": "fp16",
 						"alloc": 1995,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 449.875,
+						"dtype": "fp32",
+						"alloc": 1188,
 						"reserved": null
 					}
 				},
@@ -21908,6 +22496,12 @@
 						"dtype": "fp16",
 						"alloc": 2006,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 446.721,
+						"dtype": "fp32",
+						"alloc": 1235,
+						"reserved": null
 					}
 				},
 				"vitpose-plus-huge": {
@@ -21928,6 +22522,12 @@
 						"ms": 1182.498,
 						"dtype": "fp16",
 						"alloc": 4957,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 2548.952,
+						"dtype": "fp32",
+						"alloc": 4299,
 						"reserved": null
 					}
 				},
@@ -21950,6 +22550,12 @@
 						"dtype": "fp16",
 						"alloc": 2741,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 1532.775,
+						"dtype": "fp32",
+						"alloc": 2495,
+						"reserved": null
 					}
 				},
 				"vitpose-plus-small": {
@@ -21970,6 +22576,12 @@
 						"ms": 66.479,
 						"dtype": "fp16",
 						"alloc": 1633,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 186.233,
+						"dtype": "fp32",
+						"alloc": 752,
 						"reserved": null
 					}
 				},
@@ -22162,6 +22774,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5296.687,
+						"dtype": "fp32",
+						"alloc": 3559,
+						"reserved": null
 					}
 				},
 				"sam-hq-vit-l": {
@@ -22181,6 +22799,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3346.359,
+						"dtype": "fp32",
+						"alloc": 2278,
+						"reserved": null
 					}
 				},
 				"sam-vit-b": {
@@ -22225,6 +22849,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5397.174,
+						"dtype": "fp32",
+						"alloc": 3373,
+						"reserved": null
 					}
 				},
 				"sam-vit-l": {
@@ -22244,6 +22874,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 3252.986,
+						"dtype": "fp32",
+						"alloc": 2037,
+						"reserved": null
 					}
 				},
 				"sam2.1-hiera-base-plus": {
@@ -22263,6 +22899,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 766.354,
+						"dtype": "fp32",
+						"alloc": 1301,
+						"reserved": null
 					}
 				},
 				"sam2.1-hiera-large": {
@@ -22282,6 +22924,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1625.269,
+						"dtype": "fp32",
+						"alloc": 2059,
+						"reserved": null
 					}
 				},
 				"sam2.1-hiera-small": {
@@ -22301,6 +22949,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 428.362,
+						"dtype": "fp32",
+						"alloc": 1051,
+						"reserved": null
 					}
 				},
 				"sam2.1-hiera-tiny": {
@@ -22559,6 +23213,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 1759.956,
+						"dtype": "fp32",
+						"alloc": 1637,
+						"reserved": null
 					}
 				},
 				"mask2former-swinl-ade20k": {
@@ -22623,6 +23283,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2048.032,
+						"dtype": "fp32",
+						"alloc": 2953,
+						"reserved": null
 					}
 				},
 				"sapiens-seg-0.3b-goliath": {
@@ -22667,6 +23333,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 12663.771,
+						"dtype": "fp32",
+						"alloc": 8981,
+						"reserved": null
 					}
 				},
 				"segformer-b0-ade20k": {
@@ -22711,6 +23383,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 8051.178,
+						"dtype": "fp32",
+						"alloc": 1512,
+						"reserved": null
 					}
 				},
 				"segnext-mscan-b-ade20k": {
@@ -22728,6 +23406,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 5361.248,
+						"dtype": "fp32",
+						"alloc": 1049,
+						"reserved": null
 					}
 				},
 				"segnext-mscan-l-ade20k": {
@@ -22745,6 +23429,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 9907.951,
+						"dtype": "fp32",
+						"alloc": 1224,
+						"reserved": null
 					}
 				},
 				"segnext-mscan-s-ade20k": {
@@ -22762,6 +23452,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 2779.298,
+						"dtype": "fp32",
+						"alloc": 966,
+						"reserved": null
 					}
 				},
 				"segnext-mscan-t-ade20k": {
@@ -23377,6 +24073,12 @@
 						"dtype": "fp16",
 						"alloc": 12980,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 185355.297,
+						"dtype": "fp32",
+						"alloc": 17231,
+						"reserved": null
 					}
 				},
 				"great-igev-eth3d": {
@@ -23392,6 +24094,9 @@
 						"dtype": "fp16",
 						"alloc": 10133,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"great-igev-kitti": {
@@ -23407,6 +24112,9 @@
 						"dtype": "fp16",
 						"alloc": 10130,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"great-igev-middlebury": {
@@ -23422,6 +24130,9 @@
 						"dtype": "fp16",
 						"alloc": 12420,
 						"reserved": null
+					},
+					"cpu": {
+						"status": "failed"
 					}
 				},
 				"great-igev-sceneflow": {
@@ -23462,6 +24173,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 172931.473,
+						"dtype": "fp32",
+						"alloc": 20569,
+						"reserved": null
 					}
 				},
 				"gwcnet-gc-sceneflow": {
@@ -23520,6 +24237,12 @@
 						"dtype": "fp16",
 						"alloc": 4591,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 9103.754,
+						"dtype": "fp32",
+						"alloc": 10655,
+						"reserved": null
 					}
 				},
 				"igev-plusplus-eth3d": {
@@ -23540,6 +24263,12 @@
 						"ms": 6138.884,
 						"dtype": "fp16",
 						"alloc": 4971,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 46064.232,
+						"dtype": "fp32",
+						"alloc": 10642,
 						"reserved": null
 					}
 				},
@@ -23562,6 +24291,12 @@
 						"dtype": "fp16",
 						"alloc": 4967,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 48240.96,
+						"dtype": "fp32",
+						"alloc": 11661,
+						"reserved": null
 					}
 				},
 				"igev-plusplus-kitti15": {
@@ -23583,6 +24318,12 @@
 						"dtype": "fp16",
 						"alloc": 4967,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 46612.79,
+						"dtype": "fp32",
+						"alloc": 11268,
+						"reserved": null
 					}
 				},
 				"igev-plusplus-middlebury": {
@@ -23603,6 +24344,12 @@
 						"ms": 6129.964,
 						"dtype": "fp16",
 						"alloc": 4966,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 54870.547,
+						"dtype": "fp32",
+						"alloc": 10984,
 						"reserved": null
 					}
 				},
@@ -23652,6 +24399,12 @@
 						"dtype": "fp16",
 						"alloc": 3789,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 38144.753,
+						"dtype": "fp32",
+						"alloc": 10457,
+						"reserved": null
 					}
 				},
 				"igev-stereo-kitti12": {
@@ -23672,6 +24425,12 @@
 						"ms": 4005.77,
 						"dtype": "fp16",
 						"alloc": 3791,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 41367.361,
+						"dtype": "fp32",
+						"alloc": 10495,
 						"reserved": null
 					}
 				},
@@ -23694,6 +24453,12 @@
 						"dtype": "fp16",
 						"alloc": 3791,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 49352.861,
+						"dtype": "fp32",
+						"alloc": 10192,
+						"reserved": null
 					}
 				},
 				"igev-stereo-middlebury": {
@@ -23714,6 +24479,12 @@
 						"ms": 4007.354,
 						"dtype": "fp16",
 						"alloc": 3792,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 106311.554,
+						"dtype": "fp32",
+						"alloc": 10432,
 						"reserved": null
 					}
 				},
@@ -23763,6 +24534,12 @@
 						"dtype": "fp16",
 						"alloc": 3771,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 6325.499,
+						"dtype": "fp32",
+						"alloc": 4562,
+						"reserved": null
 					}
 				},
 				"las2-l": {
@@ -23784,6 +24561,12 @@
 						"dtype": "fp16",
 						"alloc": 2818,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 3711.807,
+						"dtype": "fp32",
+						"alloc": 3348,
+						"reserved": null
 					}
 				},
 				"las2-m": {
@@ -23804,6 +24587,12 @@
 						"ms": 281.17,
 						"dtype": "fp16",
 						"alloc": 2666,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 2529.849,
+						"dtype": "fp32",
+						"alloc": 2977,
 						"reserved": null
 					}
 				},
@@ -23880,6 +24669,12 @@
 						"dtype": "fp16",
 						"alloc": 4643,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 60816.914,
+						"dtype": "fp32",
+						"alloc": 10866,
+						"reserved": null
 					}
 				},
 				"monster-mix-all": {
@@ -23900,6 +24695,12 @@
 						"ms": 9646.052,
 						"dtype": "fp16",
 						"alloc": 6330,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 119371.449,
+						"dtype": "fp32",
+						"alloc": 11477,
 						"reserved": null
 					}
 				},
@@ -24028,6 +24829,12 @@
 						"dtype": "fp16",
 						"alloc": 4721,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 50277.325,
+						"dtype": "fp32",
+						"alloc": 9555,
+						"reserved": null
 					}
 				},
 				"raft-stereo-middlebury": {
@@ -24076,6 +24883,12 @@
 						"dtype": "fp16",
 						"alloc": 4720,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 54218.224,
+						"dtype": "fp32",
+						"alloc": 10510,
+						"reserved": null
 					}
 				},
 				"rt-monster-plusplus-mix-all": {
@@ -24118,6 +24931,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 32400.688,
+						"dtype": "fp32",
+						"alloc": 12003,
+						"reserved": null
 					}
 				},
 				"s2m2-m": {
@@ -24135,6 +24954,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 16978.866,
+						"dtype": "fp32",
+						"alloc": 12185,
+						"reserved": null
 					}
 				},
 				"s2m2-s": {
@@ -24175,6 +25000,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 118421.385,
+						"dtype": "fp32",
+						"alloc": 16191,
+						"reserved": null
 					}
 				},
 				"selective-igev-eth3d-finetune": {
@@ -24195,6 +25026,12 @@
 						"ms": 5708.083,
 						"dtype": "fp16",
 						"alloc": 3904,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 43888.477,
+						"dtype": "fp32",
+						"alloc": 12004,
 						"reserved": null
 					}
 				},
@@ -24217,6 +25054,12 @@
 						"dtype": "fp16",
 						"alloc": 3907,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 41757.549,
+						"dtype": "fp32",
+						"alloc": 12053,
+						"reserved": null
 					}
 				},
 				"selective-igev-kitti12": {
@@ -24237,6 +25080,12 @@
 						"ms": 5708.654,
 						"dtype": "fp16",
 						"alloc": 3906,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 43754.765,
+						"dtype": "fp32",
+						"alloc": 12084,
 						"reserved": null
 					}
 				},
@@ -24259,6 +25108,12 @@
 						"dtype": "fp16",
 						"alloc": 3905,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 42892.023,
+						"dtype": "fp32",
+						"alloc": 12729,
+						"reserved": null
 					}
 				},
 				"selective-igev-middlebury-finetune": {
@@ -24280,6 +25135,12 @@
 						"dtype": "fp16",
 						"alloc": 3907,
 						"reserved": null
+					},
+					"cpu": {
+						"ms": 43401.626,
+						"dtype": "fp32",
+						"alloc": 11907,
+						"reserved": null
 					}
 				},
 				"selective-igev-middlebury-train": {
@@ -24300,6 +25161,12 @@
 						"ms": 5737.848,
 						"dtype": "fp16",
 						"alloc": 3907,
+						"reserved": null
+					},
+					"cpu": {
+						"ms": 42607.643,
+						"dtype": "fp32",
+						"alloc": 11911,
 						"reserved": null
 					}
 				},
@@ -24344,6 +25211,12 @@
 					"kernels": {
 						"status": "unsupported",
 						"why": "no Metal kernels for this family (card mps_kernels)"
+					},
+					"cpu": {
+						"ms": 28101.715,
+						"dtype": "fp32",
+						"alloc": 11828,
+						"reserved": null
 					}
 				},
 				"waft-stereo-s": {
@@ -34244,2323 +35117,3929 @@
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"aanet-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"bridgedepth-rvc-pretrain@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"sceneflow",
+				"falling_things",
+				"crestereo",
+				"tartanair",
+				"sintel",
+				"unstated"
+			]
 		},
 		"bridgedepth-sf@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"c-fast-foundationstereo@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Open-Model-Agreement"
+			"weights": "LicenseRef-NVIDIA-Open-Model-Agreement",
+			"training": [
+				"fsd",
+				"nvidia-internal",
+				"stereo4d"
+			]
 		},
 		"c-foundationstereo-s@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Open-Model-License"
+			"weights": "LicenseRef-NVIDIA-Open-Model-License",
+			"training": [
+				"fsd",
+				"crestereo",
+				"tartanair"
+			]
 		},
 		"cas-gwcnet-c-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"cas-gwcnet-gc-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"cfnet-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"coex-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "GPL-3.0-only",
-			"weights": "GPL-3.0-only (assumed from code)"
+			"weights": "GPL-3.0-only (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"crestereo-eth3d@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"crestereo",
+				"sceneflow",
+				"sintel",
+				"middlebury",
+				"eth3d",
+				"kitti",
+				"falling_things",
+				"instereo2k",
+				"hr_vs"
+			]
 		},
 		"defom-stereo-vitl-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"dlnr-middlebury@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"middlebury"
+			]
 		},
 		"dlnr-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"fast-acvnet-generalization@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"fast-acvnet-kitti12@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"fast-acvnet-kitti15@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"fast-acvnet-plus-generalization@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"fast-acvnet-plus-kitti12@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"fast-acvnet-plus-kitti15@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"fast-acvnet-plus-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"fast-acvnet-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"fast-foundationstereo@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC",
+			"training": [
+				"fsd"
+			]
 		},
 		"foundationstereo-vit-l@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "LicenseRef-NVIDIA-Source-Code-License-NC AND Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC",
+			"training": [
+				"unstated"
+			]
 		},
 		"foundationstereo-vit-s@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "LicenseRef-NVIDIA-Source-Code-License-NC AND Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC",
+			"training": [
+				"unstated"
+			]
 		},
 		"great-igev-eth3d@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"sceneflow",
+				"crestereo",
+				"instereo2k",
+				"eth3d",
+				"unstated"
+			]
 		},
 		"great-igev-kitti@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"great-igev-middlebury@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"sceneflow",
+				"crestereo",
+				"instereo2k",
+				"hr_vs",
+				"middlebury",
+				"falling_things",
+				"unstated"
+			]
 		},
 		"great-igev-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"gwcnet-g-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"gwcnet-gc-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"hitnet-eth3d@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"eth3d"
+			]
 		},
 		"hitnet-middlebury-d400@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"middlebury"
+			]
 		},
 		"igev-plusplus-eth3d@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"tartanair",
+				"sintel",
+				"crestereo",
+				"instereo2k",
+				"eth3d"
+			]
 		},
 		"igev-plusplus-kitti12@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"igev-plusplus-kitti15@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"igev-plusplus-middlebury@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"tartanair",
+				"falling_things",
+				"crestereo",
+				"instereo2k",
+				"middlebury",
+				"unstated"
+			]
 		},
 		"igev-plusplus-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"igev-stereo-eth3d@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"eth3d",
+				"unstated"
+			]
 		},
 		"igev-stereo-kitti12@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"igev-stereo-kitti15@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"igev-stereo-middlebury@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"middlebury",
+				"unstated"
+			]
 		},
 		"igev-stereo-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"las2-h@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"las2-l@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"las2-m@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"las2-s@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"mocha-v1-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"mocha-v2-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"monster-mix-all@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "LicenseRef-noncommercial",
-			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0"
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0",
+			"training": [
+				"sceneflow",
+				"kitti",
+				"eth3d",
+				"middlebury",
+				"tartanair",
+				"crestereo",
+				"falling_things",
+				"instereo2k",
+				"sintel",
+				"hr_vs"
+			]
 		},
 		"monster-plusplus-mix-all@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "LicenseRef-noncommercial",
-			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0"
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"monster-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "LicenseRef-noncommercial",
-			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0"
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-4.0",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"nmrf-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"psmnet-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"raft-stereo-eth3d@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"eth3d",
+				"unstated"
+			]
 		},
 		"raft-stereo-middlebury@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"middlebury"
+			]
 		},
 		"raft-stereo-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"rt-monster-plusplus-mix-all@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "LicenseRef-noncommercial",
-			"weights": "LicenseRef-noncommercial"
+			"weights": "LicenseRef-noncommercial",
+			"training": [
+				"unstated"
+			]
 		},
 		"s2m2-l@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "CC-BY-NC-4.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"s2m2-m@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "CC-BY-NC-4.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"s2m2-s@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "CC-BY-NC-4.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"s2m2-xl@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "CC-BY-NC-4.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"selective-igev-eth3d-finetune@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"eth3d"
+			]
 		},
 		"selective-igev-eth3d-train@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"eth3d"
+			]
 		},
 		"selective-igev-kitti12@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"selective-igev-kitti15@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"kitti"
+			]
 		},
 		"selective-igev-middlebury-finetune@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"middlebury"
+			]
 		},
 		"selective-igev-middlebury-train@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow",
+				"middlebury"
+			]
 		},
 		"selective-igev-sceneflow@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"waft-stereo-b@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"sceneflow",
+				"unstated"
+			]
 		},
 		"waft-stereo-s@1": {
 			"task": "stereo",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"sceneflow",
+				"unstated"
+			]
 		},
 		"da3-giant-1.1@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"da3-large-1.1@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"da3metric-large@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"da3mono-large@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"da3nested-giant-large-1.1@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-b@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-l@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-metric-hypersim-b@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-metric-hypersim-l@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-metric-hypersim-s@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-metric-vkitti-b@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-metric-vkitti-l@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-metric-vkitti-s@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-anything-v2-s@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"depth-pro@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "LicenseRef-Apple-Sample-Code",
-			"weights": "LicenseRef-research-only"
+			"weights": "LicenseRef-research-only",
+			"training": [
+				"unstated"
+			]
 		},
 		"distill-any-depth-b@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"distill-any-depth-l@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"distill-any-depth-s@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"marigold-depth-v1-1@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-CreativeML-OpenRAIL-PlusPlus-M"
+			"weights": "LicenseRef-CreativeML-OpenRAIL-PlusPlus-M",
+			"training": [
+				"unstated"
+			]
 		},
 		"metric3d-vit-large@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "BSD-2-Clause",
-			"weights": "BSD-2-Clause (assumed from code)"
+			"weights": "BSD-2-Clause (assumed from code)",
+			"training": [
+				"unstated"
+			]
 		},
 		"midas-dpt-beit-large-512@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"kitti",
+				"nyu",
+				"tartanair",
+				"unstated"
+			]
 		},
 		"moge-2-vitb-normal@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"moge-2-vitl-normal@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"moge-2-vits-normal@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"moge-3-vitl@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"unidepth-v2-vitl14@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "CC-BY-NC-4.0",
-			"weights": "CC-BY-NC-4.0 (assumed from code)"
+			"weights": "CC-BY-NC-4.0 (assumed from code)",
+			"training": [
+				"unstated"
+			]
 		},
 		"unik3d-vitl@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "CC-BY-NC-SA-4.0",
-			"weights": "CC-BY-NC-SA-4.0 (assumed from code)"
+			"weights": "CC-BY-NC-SA-4.0 (assumed from code)",
+			"training": [
+				"unstated"
+			]
 		},
 		"zoedepth-nk@1": {
 			"task": "depth",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"nyu",
+				"kitti",
+				"tartanair",
+				"unstated"
+			]
 		},
 		"alexnet.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"coatnet_0_rw_224.sw_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"coatnet_1_rw_224.sw_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"coatnet_2_rw_224.sw_in12k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"coatnet_nano_rw_224.sw_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"coatnet_rmlp_1_rw2_224.sw_in12k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"coatnet_rmlp_1_rw_224.sw_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"coatnet_rmlp_2_rw_224.sw_in12k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"coatnet_rmlp_2_rw_224.sw_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"coatnet_rmlp_nano_rw_224.sw_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"convnext_base.fb_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"convnext_base.fb_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnext_base.fb_in22k_ft_in1k_384@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnext_large.fb_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"convnext_large.fb_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnext_large.fb_in22k_ft_in1k_384@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnext_small.fb_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"convnext_small.fb_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnext_small.fb_in22k_ft_in1k_384@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnext_tiny.fb_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"convnext_tiny.fb_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnext_tiny.fb_in22k_ft_in1k_384@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"convnextv2_base.fcmae_ft_in22k_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"davit_base.msft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"davit_small.msft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"davit_tiny.msft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"deit_base_patch16_224.fb_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"densenet121.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"dinov2_vitl14_lc@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"lvd-142m",
+				"imagenet-1k"
+			]
 		},
 		"efficientformer_l1.snap_dist_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientformer_l3.snap_dist_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientformer_l7.snap_dist_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientformerv2_l.snap_dist_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientformerv2_s0.snap_dist_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientformerv2_s1.snap_dist_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientformerv2_s2.snap_dist_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientnet_b0.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientnet_b4.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientnet_v2_s.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"efficientvit_b2.r288_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"eva02_large_patch14_448.mim_m38m_ft_in22k_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"merged-38m",
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"fastvit_sa24.apple_dist_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-Apple-Sample-Code"
+			"weights": "LicenseRef-Apple-Sample-Code",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"fastvit_t12.apple_dist_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-Apple-Sample-Code"
+			"weights": "LicenseRef-Apple-Sample-Code",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"fastvit_t8.apple_dist_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-Apple-Sample-Code"
+			"weights": "LicenseRef-Apple-Sample-Code",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"focalnet_base_lrf.ms_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"focalnet_base_srf.ms_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"focalnet_small_lrf.ms_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"focalnet_small_srf.ms_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"focalnet_tiny_lrf.ms_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"focalnet_tiny_srf.ms_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"hgnetv2_b0.ssld_stage2_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"hgnetv2_b1.ssld_stage2_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"hgnetv2_b2.ssld_stage2_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"hgnetv2_b3.ssld_stage2_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"hgnetv2_b4.ssld_stage2_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"hgnetv2_b5.ssld_stage2_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"hgnetv2_b6.ssld_stage2_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"inception_v3.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"mobilenet_v2.tv2_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"mobilenet_v3_large.tv2_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"mobilenetv1_100.ra4_e3600_r224_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"mobilenetv4_conv_medium.e500_r256_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"regnety_160.tv2_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m0_9.dist_300e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m0_9.dist_450e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m1_0.dist_300e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m1_0.dist_450e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m1_1.dist_300e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m1_1.dist_450e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m1_5.dist_300e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m1_5.dist_450e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m2_3.dist_300e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"repvit_m2_3.dist_450e_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"resnet152.tv2_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"resnet18.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"resnet50.tv2_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"shufflenet_v2_x1_0.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"shvit_s1.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"shvit_s2.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"shvit_s3.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"shvit_s4.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"squeezenet1_1.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"starnet_s1.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"starnet_s2.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"starnet_s3.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"starnet_s4.in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"swin_base_patch4_window7_224.ms_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"tiny_vit_11m_224.dist_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"tiny_vit_21m_224.dist_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"tiny_vit_21m_384.dist_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"tiny_vit_21m_512.dist_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"tiny_vit_5m_224.dist_in22k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"vgg16.tv_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"imagenet-1k"
+			]
 		},
 		"vit_base_patch16_224.augreg2_in21k_ft_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k",
+				"imagenet-1k"
+			]
 		},
 		"vit_so400m_patch14_siglip_378.webli_ft_in1k@1": {
 			"task": "classification",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli",
+				"imagenet-1k"
+			]
 		},
 		"deeplabv3-r101-d8-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"deeplabv3plus-r101-d8-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"dinov2-b-linear-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"lvd-142m",
+				"ade20k"
+			]
 		},
 		"dinov2-l-linear-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"lvd-142m",
+				"ade20k"
+			]
 		},
 		"dinov2-s-linear-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"lvd-142m",
+				"ade20k"
+			]
 		},
 		"eomt-l-dinov2-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"lvd-142m",
+				"ade20k"
+			]
 		},
 		"eomt-l-dinov3-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT AND LicenseRef-DINOv3-License"
+			"weights": "MIT AND LicenseRef-DINOv3-License",
+			"training": [
+				"ade20k"
+			]
 		},
 		"fcn-r101-d8-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"hrnet-w48-fcn-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"mask2former-swinl-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"imagenet-21k",
+				"ade20k"
+			]
 		},
 		"oneformer-swinl-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"imagenet-21k",
+				"ade20k"
+			]
 		},
 		"pspnet-r101-d8-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"sapiens-seg-0.3b-goliath@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "CC-BY-NC-4.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sapiens-seg-1b-goliath@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "CC-BY-NC-4.0",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"segformer-b0-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"segformer-b5-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC"
+			"weights": "LicenseRef-NVIDIA-Source-Code-License-NC",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"segnext-mscan-b-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"segnext-mscan-l-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"segnext-mscan-s-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"segnext-mscan-t-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-1k",
+				"ade20k"
+			]
 		},
 		"efficientvit-sam-l0@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"efficientvit-sam-l1@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"efficientvit-sam-l2@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"efficientvit-sam-xl0@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"efficientvit-sam-xl1@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"mobile-sam@1": {
 			"task": "promptable_segmentation",
 			"tier": "experimental",
 			"code": "Apache-2.0 AND MIT",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam-hq-vit-b@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam-hq-vit-h@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam-hq-vit-l@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam-vit-b@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam-vit-h@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam-vit-l@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam2.1-hiera-base-plus@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam2.1-hiera-large@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam2.1-hiera-small@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam2.1-hiera-tiny@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"sam3@1": {
 			"task": "promptable_segmentation",
 			"tier": "stable",
 			"code": "LicenseRef-SAM-License AND Apache-2.0",
-			"weights": "LicenseRef-SAM-License"
+			"weights": "LicenseRef-SAM-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"detr-r101-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"detr-r50-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"dfine-l-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"dfine-m-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"dfine-n-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"dfine-s-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"dfine-x-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"faster-rcnn-r50-fpn-3x-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-SA-3.0"
+			"weights": "CC-BY-SA-3.0",
+			"training": [
+				"coco"
+			]
 		},
 		"mask-rcnn-r50-fpn-3x-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "CC-BY-SA-3.0"
+			"weights": "CC-BY-SA-3.0",
+			"training": [
+				"coco"
+			]
 		},
 		"rtdetrv2-l-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtdetrv2-m-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtdetrv2-ms-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtdetrv2-s-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtdetrv2-x-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0 (assumed from code)"
+			"weights": "Apache-2.0 (assumed from code)",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmdet-l-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmdet-m-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmdet-m-person@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"imagenet-1k"
+			]
 		},
 		"rtmdet-nano-person@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"objects365",
+				"imagenet-1k"
+			]
 		},
 		"rtmdet-s-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmdet-tiny-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmdet-x-coco@1": {
 			"task": "detection",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"dwpose-l@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"coco",
+				"aic",
+				"imagenet-1k"
+			]
 		},
 		"dwpose-l-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"coco",
+				"aic",
+				"imagenet-1k"
+			]
 		},
 		"dwpose-m@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"coco",
+				"aic",
+				"imagenet-1k"
+			]
 		},
 		"dwpose-s@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"coco",
+				"aic",
+				"imagenet-1k"
+			]
 		},
 		"dwpose-t@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"coco",
+				"aic",
+				"imagenet-1k"
+			]
 		},
 		"hrnet-w32@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"hrnet-w32-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"hrnet-w48@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"hrnet-w48-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rf-detr-keypoint-preview@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"lvd-142m"
+			]
 		},
 		"rtmo-l@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18"
+			]
 		},
 		"rtmo-m@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18"
+			]
 		},
 		"rtmo-s@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18"
+			]
 		},
 		"rtmo-t@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18"
+			]
 		},
 		"rtmpose-l@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-l-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-l-halpe26@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-l-halpe26-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-m@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-m-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-m-ap10k@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"ap-10k",
+				"coco",
+				"aic",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-m-face6@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"halpe",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-m-halpe26@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-m-halpe26-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-m-hand5@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"halpe",
+				"coco",
+				"aic",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-s@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-s-face6@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"halpe",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-s-halpe26@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-t@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-t-face6@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"halpe",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-t-halpe26@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmpose-x-halpe26-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"imagenet-1k"
+			]
 		},
 		"rtmw-l@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmw-l-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmw-m@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmw-x@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"rtmw-x-384@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco-wholebody",
+				"ubody",
+				"aic",
+				"crowdpose",
+				"mpii",
+				"jhmdb",
+				"halpe",
+				"posetrack18",
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"vitpose-base@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"vitpose-base-simple@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"imagenet-1k"
+			]
 		},
 		"vitpose-plus-base@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"mpii",
+				"ap-10k",
+				"apt-36k",
+				"coco-wholebody",
+				"imagenet-1k"
+			]
 		},
 		"vitpose-plus-huge@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"mpii",
+				"ap-10k",
+				"apt-36k",
+				"coco-wholebody",
+				"imagenet-1k"
+			]
 		},
 		"vitpose-plus-large@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"mpii",
+				"ap-10k",
+				"apt-36k",
+				"coco-wholebody",
+				"imagenet-1k"
+			]
 		},
 		"vitpose-plus-small@1": {
 			"task": "pose",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"coco",
+				"aic",
+				"mpii",
+				"ap-10k",
+				"apt-36k",
+				"coco-wholebody",
+				"imagenet-1k"
+			]
 		},
 		"c-radio-v3-b@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Open-Model-License"
+			"weights": "LicenseRef-NVIDIA-Open-Model-License",
+			"training": [
+				"nv-cc-img-text"
+			]
 		},
 		"c-radio-v3-g@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Open-Model-License"
+			"weights": "LicenseRef-NVIDIA-Open-Model-License",
+			"training": [
+				"nv-cc-img-text"
+			]
 		},
 		"c-radio-v3-h@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Open-Model-License"
+			"weights": "LicenseRef-NVIDIA-Open-Model-License",
+			"training": [
+				"nv-cc-img-text"
+			]
 		},
 		"c-radio-v3-l@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-NVIDIA-Open-Model-License"
+			"weights": "LicenseRef-NVIDIA-Open-Model-License",
+			"training": [
+				"nv-cc-img-text"
+			]
 		},
 		"clip-b16-laion2b@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"laion-2b"
+			]
 		},
 		"clip-b16-openai@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"clip-h14-378-dfn5b@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-Apple-AMLR"
+			"weights": "LicenseRef-Apple-AMLR",
+			"training": [
+				"unstated"
+			]
 		},
 		"clip-h14-dfn5b@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-Apple-AMLR"
+			"weights": "LicenseRef-Apple-AMLR",
+			"training": [
+				"unstated"
+			]
 		},
 		"clip-h14-laion2b@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"laion-2b"
+			]
 		},
 		"clip-l14-336-openai@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"clip-l14-datacompxl@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"datacomp-1b"
+			]
 		},
 		"clip-l14-dfn2b@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "LicenseRef-Apple-AMLR"
+			"weights": "LicenseRef-Apple-AMLR",
+			"training": [
+				"unstated"
+			]
 		},
 		"clip-l14-laion2b@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"laion-2b"
+			]
 		},
 		"clip-l14-openai@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "MIT"
+			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
 		},
 		"convnext_base.fb_in22k@1": {
 			"task": "features",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k"
+			]
 		},
 		"convnext_large.fb_in22k@1": {
 			"task": "features",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k"
+			]
 		},
 		"convnext_small.fb_in22k@1": {
 			"task": "features",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k"
+			]
 		},
 		"convnext_tiny.fb_in22k@1": {
 			"task": "features",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"imagenet-21k"
+			]
 		},
 		"dinov2-vitb14@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov2-vitb14-reg@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov2-vitg14@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov2-vitg14-reg@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov2-vitl14@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov2-vitl14-reg@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov2-vits14@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov2-vits14-reg@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-convnext-base@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-convnext-large@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-convnext-small@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-convnext-tiny@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-vitb16@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-vith16plus@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-vitl16@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"dinov3-vits16@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "LicenseRef-DINOv3-License",
-			"weights": "LicenseRef-DINOv3-License"
+			"weights": "LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-core-b16-224@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-core-g14-448@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-core-l14-336@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-core-s16-384@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-core-t16-384@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-spatial-b16-512@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-spatial-g14-448@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-spatial-l14-448@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-spatial-s16-512@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"pe-spatial-t16-512@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"siglip2-b16-256@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-b16-512@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-g16-256@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-g16-384@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-l16-256@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-l16-512@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-so400m14-224@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-so400m14-378@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-so400m16-256@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"siglip2-so400m16-512@1": {
 			"task": "features",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"webli"
+			]
 		},
 		"tipsv2-b14@1": {
 			"task": "features",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"tipsv2-l14@1": {
 			"task": "features",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"mapanything-apache@1": {
 			"task": "multiview",
 			"tier": "stable",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"mvsanywhere@1": {
 			"task": "multiview",
 			"tier": "stable",
 			"code": "LicenseRef-noncommercial AND CC-BY-NC-SA-4.0",
-			"weights": "LicenseRef-noncommercial AND CC-BY-NC-SA-4.0 (assumed from code)"
+			"weights": "LicenseRef-noncommercial AND CC-BY-NC-SA-4.0 (assumed from code)",
+			"training": [
+				"unstated"
+			]
 		},
 		"patchmatchnet@1": {
 			"task": "multiview",
 			"tier": "stable",
 			"code": "MIT",
-			"weights": "MIT (assumed from code)"
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"dtu"
+			]
 		},
 		"vggt-1b@1": {
 			"task": "multiview",
 			"tier": "stable",
 			"code": "LicenseRef-VGGT",
-			"weights": "CC-BY-NC-4.0"
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"unstated"
+			]
 		},
 		"vggt-omega-1b-512@1": {
 			"task": "multiview",
 			"tier": "stable",
 			"code": "LicenseRef-FAIR-Noncommercial-Research",
-			"weights": "LicenseRef-FAIR-Noncommercial-Research"
+			"weights": "LicenseRef-FAIR-Noncommercial-Research",
+			"training": [
+				"unstated"
+			]
 		},
 		"flowformer-small-chairs@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0 AND BSD-3-Clause AND WTFPL",
-			"weights": "Apache-2.0 AND BSD-3-Clause AND WTFPL (assumed from code)"
+			"weights": "Apache-2.0 AND BSD-3-Clause AND WTFPL (assumed from code)",
+			"training": [
+				"flyingchairs"
+			]
 		},
 		"flowformer-small-sintel@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0 AND BSD-3-Clause AND WTFPL",
-			"weights": "Apache-2.0 AND BSD-3-Clause AND WTFPL (assumed from code)"
+			"weights": "Apache-2.0 AND BSD-3-Clause AND WTFPL (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"flowformer-small-things@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0 AND BSD-3-Clause AND WTFPL",
-			"weights": "Apache-2.0 AND BSD-3-Clause AND WTFPL (assumed from code)"
+			"weights": "Apache-2.0 AND BSD-3-Clause AND WTFPL (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"flowseek-t@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0 AND BSD-3-Clause",
-			"weights": "Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"flowseek-t-things@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0 AND BSD-3-Clause",
-			"weights": "Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"flowseek-t-things-notartan@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0 AND BSD-3-Clause",
-			"weights": "Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"gmflow-scale1-mixdata@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"unstated"
+			]
 		},
 		"gmflow-scale1-things@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"gmflow-scale2-mixdata@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"unstated"
+			]
 		},
 		"gmflow-scale2-regrefine6-kitti@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"kitti",
+				"unstated"
+			]
 		},
 		"gmflow-scale2-regrefine6-mixdata@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"unstated"
+			]
 		},
 		"gmflow-scale2-regrefine6-sintelft@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"gmflow-scale2-regrefine6-things@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"gmflow-scale2-sintel@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"gmflow-scale2-things@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "MIT AND Apache-2.0 AND BSD-3-Clause",
-			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)"
+			"weights": "MIT AND Apache-2.0 AND BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"neuflow-v2@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"neuflow-v2-sintel@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"neuflow-v2-things@1": {
 			"task": "flow",
 			"tier": "experimental",
 			"code": "Apache-2.0",
-			"weights": "Apache-2.0"
+			"weights": "Apache-2.0",
+			"training": [
+				"sceneflow"
+			]
 		},
 		"raft-large@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"raft-large-kitti@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"raft-large-things@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"raft-small@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause (assumed from code)"
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"sea-raft-m@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"sea-raft-m-kitti@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"sea-raft-m-spring@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k",
+				"spring"
+			]
 		},
 		"sea-raft-m-things@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow"
+			]
 		},
 		"sea-raft-s@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"sea-raft-s-kitti@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
 		},
 		"sea-raft-s-spring@1": {
 			"task": "flow",
 			"tier": "stable",
 			"code": "BSD-3-Clause",
-			"weights": "BSD-3-Clause"
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k",
+				"spring"
+			]
 		},
 		"romav2@1": {
 			"task": "matching",
 			"tier": "experimental",
 			"code": "MIT AND LicenseRef-DINOv3-License",
-			"weights": "MIT AND LicenseRef-DINOv3-License"
+			"weights": "MIT AND LicenseRef-DINOv3-License",
+			"training": [
+				"unstated"
+			]
 		}
 	}
 }

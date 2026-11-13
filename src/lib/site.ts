@@ -75,7 +75,8 @@ export { data };
 
 export const fmtMs = (ms: number | null) => (ms === null ? '–' : ms.toFixed(ms >= 100 ? 0 : 1));
 
-type Licence = { task: string; tier: string; code: string; weights: string };
+/** `training`: the card's training dataset ids (`fastforks list`'s training_data). */
+type Licence = { task: string; tier: string; code: string; weights: string; training?: string[] };
 const LICENCES = data.licences as Record<string, Licence>;
 const bare = (k: string) => k.split('@')[0];
 

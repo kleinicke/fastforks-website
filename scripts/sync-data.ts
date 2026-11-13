@@ -250,6 +250,7 @@ const list = JSON.parse(
 	commercial: string;
 	code_licence: string;
 	weights_licence: string;
+	training_data: string[];
 }[];
 
 const commit = execFileSync('git', ['-C', repo, 'rev-parse', '--short', 'HEAD'], { encoding: 'utf8' }).trim();
@@ -390,7 +391,16 @@ const data = {
 	tasks,
 	devices,
 	licences: Object.fromEntries(
-		list.map((m) => [m.id, { task: m.task, tier: m.tier, code: m.code_licence, weights: m.weights_licence }])
+		list.map((m) => [
+			m.id,
+			{
+				task: m.task,
+				tier: m.tier,
+				code: m.code_licence,
+				weights: m.weights_licence,
+				training: m.training_data ?? []
+			}
+		])
 	)
 };
 writeFileSync(out, JSON.stringify(data, null, '\t') + '\n');
