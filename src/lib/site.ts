@@ -240,6 +240,7 @@ export type Timing = Pick<Model, 'id' | 'doc' | 'commercial'> & {
 	kernels_note: string | null;
 	speedup: number | null;
 	speedup_vs: string | null;
+	year: number | null;
 	peak_mib: number | null;
 	/** Peak MiB per backend: the docs' variant tables on the reference GPU, the fastest survey row elsewhere. */
 	mem: Record<'original' | 'portable' | 'kernels', Mem | null> | null;
@@ -292,6 +293,7 @@ export function timings(device: Device, task: Task): Timing[] {
 				kernels_note: note(t.kernels),
 				speedup: p !== null && k !== null ? Math.round((p / k) * 10) / 10 : null,
 				speedup_vs: p !== null && k !== null ? 'portable' : null,
+				year: null,
 				peak_mib: null,
 				mem: { original: mem(t.original), portable: mem(t.portable), kernels: mem(t.kernels) },
 				compile: null,
