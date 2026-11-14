@@ -92,6 +92,10 @@
 		const parts = card.task_io.split(/(?<=\.)\s+/);
 		return { head: parts.slice(0, 2).join(' '), rest: parts.slice(2).join(' ') };
 	});
+	// The year of the paper behind the shown checkpoint (the paper that lists it, else the family's first unlisted one).
+	const paperYear = $derived(
+		(card.papers.find((p) => p.variants.includes(variant.id)) ?? card.papers.find((p) => !p.variants.length))?.date?.slice(0, 4) ?? null
+	);
 	const codeParts = (t: string) => t.split('`');
 
 	// Matchers: relative pose from the matches on the GPU (fastforks.matching.estimate_pose).
@@ -182,6 +186,7 @@
 		{/if}
 		{#if variant.setting}<p class="setting">{variant.setting}</p>{/if}
 		<p class="versions">
+			{#if paperYear}<span class="ver" title="Year of the paper behind this checkpoint">Paper {paperYear}</span>{/if}
 			<span class="ver" title="The fastforks release that added this checkpoint">Added in {variant.added_in}</span>
 			{#if evalVersion}<span class="ver" title="The fastforks release the accuracy results below come from"
 					>Evaluated with {evalVersion}</span

@@ -48,6 +48,7 @@
 			return {
 				id: m.id,
 				doc: m.doc,
+				year: m.year,
 				commercial: m.commercial,
 				code: lic?.code ?? '',
 				weights: lic?.weights ?? '',
@@ -142,7 +143,7 @@
 			<tr class="groups">
 				<th scope="colgroup"></th>
 				<th scope="colgroup" colspan="2" class="grp" title="Time and memory at the task's standard input, not at the benchmarks' image sizes"
-					>Kernels on the {shortName(REFERENCE)}{#if input}, {input} input{/if}</th
+					>Kernels, {shortName(REFERENCE)}{#if input}<br /><small class="inp">{input} input</small>{/if}</th
 				>
 				{#each datasets as d (d.id)}
 					<th scope="colgroup" colspan={d.metrics.length} class="grp" title={d.title}
@@ -179,7 +180,7 @@
 			{#each rows as r (r.id)}
 				<tr class:upcoming={UPCOMING.has(r.id)}>
 					<th scope="row"
-						><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
+						><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if r.year}<span class="yr">{r.year}</span>{/if}{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
 					>
 					<td class="num first strong">{fmtMs(r.ms)}{#if r.portable && r.ms !== null}<small>portable</small>{/if}</td>
 					<td class="num">{r.mem ?? '–'}</td>

@@ -76,6 +76,7 @@
 					"kernels_ms": 14.3,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 320,
 					"compile": {
 						"ms": 23.7,
@@ -118,6 +119,7 @@
 					"kernels_ms": 18.3,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 329,
 					"compile": {
 						"ms": 28.6,
@@ -160,6 +162,7 @@
 					"kernels_ms": 23.2,
 					"speedup": 7.9,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 647,
 					"compile": {
 						"ms": 27.7,
@@ -202,6 +205,7 @@
 					"kernels_ms": 23.5,
 					"speedup": 2.6,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 495,
 					"compile": {
 						"ms": 29.4,
@@ -244,6 +248,7 @@
 					"kernels_ms": 29.9,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 397,
 					"compile": {
 						"ms": 46.6,
@@ -286,6 +291,7 @@
 					"kernels_ms": 38.2,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 739,
 					"compile": {
 						"ms": 36.4,
@@ -328,6 +334,7 @@
 					"kernels_ms": 38.2,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 739,
 					"compile": null,
 					"tensorrt": null
@@ -360,6 +367,7 @@
 					"kernels_ms": 38.2,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 739,
 					"compile": null,
 					"tensorrt": null
@@ -392,6 +400,7 @@
 					"kernels_ms": 38.2,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 739,
 					"compile": {
 						"ms": 36.2,
@@ -434,6 +443,7 @@
 					"kernels_ms": 46.4,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 790,
 					"compile": null,
 					"tensorrt": null
@@ -466,6 +476,7 @@
 					"kernels_ms": 46.4,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 790,
 					"compile": null,
 					"tensorrt": null
@@ -498,6 +509,7 @@
 					"kernels_ms": 46.4,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 790,
 					"compile": null,
 					"tensorrt": null
@@ -530,6 +542,7 @@
 					"kernels_ms": 46.4,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 790,
 					"compile": null,
 					"tensorrt": null
@@ -562,6 +575,7 @@
 					"kernels_ms": 52.7,
 					"speedup": 9.2,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 1263,
 					"compile": {
 						"ms": 71.5,
@@ -604,6 +618,7 @@
 					"kernels_ms": 53.3,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 1021,
 					"compile": {
 						"ms": 75,
@@ -646,6 +661,7 @@
 					"kernels_ms": 88.9,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 813,
 					"compile": null,
 					"tensorrt": null
@@ -678,6 +694,7 @@
 					"kernels_ms": 94.1,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2704,
 					"compile": {
 						"ms": 77,
@@ -720,6 +737,7 @@
 					"kernels_ms": 100.8,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 536,
 					"compile": {
 						"ms": 91.8,
@@ -762,6 +780,7 @@
 					"kernels_ms": 113.5,
 					"speedup": 3.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 686,
 					"compile": {
 						"ms": 186,
@@ -804,6 +823,7 @@
 					"kernels_ms": 134.9,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1196,
 					"compile": {
 						"ms": 339,
@@ -846,6 +866,7 @@
 					"kernels_ms": 135,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1196,
 					"compile": {
 						"ms": 339,
@@ -888,6 +909,7 @@
 					"kernels_ms": 195.7,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1022,
 					"compile": {
 						"ms": 161,
@@ -930,6 +952,7 @@
 					"kernels_ms": 213.9,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1236,
 					"compile": null,
 					"tensorrt": null
@@ -962,6 +985,7 @@
 					"kernels_ms": 213.9,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1236,
 					"compile": {
 						"ms": 301,
@@ -1004,6 +1028,7 @@
 					"kernels_ms": 225.4,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 1725,
 					"compile": {
 						"ms": 295,
@@ -1046,6 +1071,7 @@
 					"kernels_ms": 228.9,
 					"speedup": 7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 644,
 					"compile": {
 						"ms": 398,
@@ -1088,6 +1114,7 @@
 					"kernels_ms": 231.8,
 					"speedup": 2.6,
 					"speedup_vs": "original",
+					"year": 2018,
 					"peak_mib": 1786,
 					"compile": {
 						"ms": 440,
@@ -1130,6 +1157,7 @@
 					"kernels_ms": 238.1,
 					"speedup": 1.5,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 1799,
 					"compile": {
 						"ms": 417,
@@ -1172,6 +1200,7 @@
 					"kernels_ms": 247.9,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 876,
 					"compile": null,
 					"tensorrt": null
@@ -1204,6 +1233,7 @@
 					"kernels_ms": 257.3,
 					"speedup": 1.4,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 1768,
 					"compile": null,
 					"tensorrt": null
@@ -1236,6 +1266,7 @@
 					"kernels_ms": 272.8,
 					"speedup": 3.8,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 765,
 					"compile": {
 						"ms": 506,
@@ -1278,6 +1309,7 @@
 					"kernels_ms": 272.8,
 					"speedup": 3.8,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 765,
 					"compile": {
 						"ms": 506,
@@ -1320,6 +1352,7 @@
 					"kernels_ms": 272.8,
 					"speedup": 3.8,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 765,
 					"compile": {
 						"ms": 507,
@@ -1362,6 +1395,7 @@
 					"kernels_ms": 281.2,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 1113,
 					"compile": {
 						"ms": 357,
@@ -1404,6 +1438,7 @@
 					"kernels_ms": 288.2,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1113,
 					"compile": {
 						"ms": 527,
@@ -1446,6 +1481,7 @@
 					"kernels_ms": 288.2,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1113,
 					"compile": null,
 					"tensorrt": null
@@ -1478,6 +1514,7 @@
 					"kernels_ms": 288.2,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1113,
 					"compile": null,
 					"tensorrt": null
@@ -1510,6 +1547,7 @@
 					"kernels_ms": 288.2,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1113,
 					"compile": {
 						"ms": 527,
@@ -1552,6 +1590,7 @@
 					"kernels_ms": 288.2,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1113,
 					"compile": {
 						"ms": 527,
@@ -1594,6 +1633,7 @@
 					"kernels_ms": 348.4,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2310,
 					"compile": {
 						"ms": 325,
@@ -1636,6 +1676,7 @@
 					"kernels_ms": 348.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1109,
 					"compile": {
 						"ms": 691,
@@ -1678,6 +1719,7 @@
 					"kernels_ms": 348.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1109,
 					"compile": null,
 					"tensorrt": null
@@ -1710,6 +1752,7 @@
 					"kernels_ms": 348.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1109,
 					"compile": null,
 					"tensorrt": null
@@ -1742,6 +1785,7 @@
 					"kernels_ms": 348.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1109,
 					"compile": null,
 					"tensorrt": null
@@ -1774,6 +1818,7 @@
 					"kernels_ms": 348.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1109,
 					"compile": null,
 					"tensorrt": null
@@ -1806,6 +1851,7 @@
 					"kernels_ms": 348.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1109,
 					"compile": null,
 					"tensorrt": null
@@ -1838,6 +1884,7 @@
 					"kernels_ms": 348.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1109,
 					"compile": null,
 					"tensorrt": null
@@ -1870,6 +1917,7 @@
 					"kernels_ms": 353.6,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2361,
 					"compile": null,
 					"tensorrt": null
@@ -1902,6 +1950,7 @@
 					"kernels_ms": 357.5,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 2272,
 					"compile": {
 						"ms": 383,
@@ -1944,6 +1993,7 @@
 					"kernels_ms": 375.8,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1249,
 					"compile": {
 						"ms": 650,
@@ -1986,6 +2036,7 @@
 					"kernels_ms": 384.9,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 1906,
 					"compile": null,
 					"tensorrt": null
@@ -2018,6 +2069,7 @@
 					"kernels_ms": 393,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1389,
 					"compile": {
 						"ms": 716,
@@ -2060,6 +2112,7 @@
 					"kernels_ms": 393,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1389,
 					"compile": {
 						"ms": 718,
@@ -2102,6 +2155,7 @@
 					"kernels_ms": 393,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1389,
 					"compile": {
 						"ms": 718,
@@ -2144,6 +2198,7 @@
 					"kernels_ms": 393,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1389,
 					"compile": {
 						"ms": 718,
@@ -2186,6 +2241,7 @@
 					"kernels_ms": 393,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1389,
 					"compile": {
 						"ms": 718,
@@ -2228,6 +2284,7 @@
 					"kernels_ms": 393.1,
 					"speedup": 3.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1192,
 					"compile": {
 						"ms": 829,
@@ -2270,6 +2327,7 @@
 					"kernels_ms": 393.1,
 					"speedup": 3.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1192,
 					"compile": {
 						"ms": 830,
@@ -2312,6 +2370,7 @@
 					"kernels_ms": 393.1,
 					"speedup": 3.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1192,
 					"compile": {
 						"ms": 830,
@@ -2354,6 +2413,7 @@
 					"kernels_ms": 400.7,
 					"speedup": 1.4,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 3662,
 					"compile": {
 						"ms": 249,
@@ -2396,6 +2456,7 @@
 					"kernels_ms": 448.1,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1587,
 					"compile": {
 						"ms": 713,
@@ -2438,6 +2499,7 @@
 					"kernels_ms": 455.5,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1588,
 					"compile": null,
 					"tensorrt": null
@@ -2467,6 +2529,7 @@
 					"kernels_ms": 578.8,
 					"speedup": 3.1,
 					"speedup_vs": "portable",
+					"year": 2025,
 					"peak_mib": 1553,
 					"compile": {
 						"ms": 1676,
@@ -2504,6 +2567,7 @@
 					"kernels_ms": 642.2,
 					"speedup": 4.4,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 3154,
 					"compile": {
 						"ms": 1002,
@@ -2546,6 +2610,7 @@
 					"kernels_ms": 653.2,
 					"speedup": 6.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2356,
 					"compile": {
 						"ms": 1098,
@@ -2588,6 +2653,7 @@
 					"kernels_ms": 653.3,
 					"speedup": 6.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2356,
 					"compile": {
 						"ms": 1096,
@@ -2630,6 +2696,7 @@
 					"kernels_ms": 657.2,
 					"speedup": 6.6,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2438,
 					"compile": {
 						"ms": 1126,
@@ -2672,6 +2739,7 @@
 					"kernels_ms": 681.9,
 					"speedup": 2.6,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2092,
 					"compile": {
 						"ms": 1298,
@@ -2714,6 +2782,7 @@
 					"kernels_ms": 1120.2,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2169,
 					"compile": {
 						"ms": 2044,
@@ -2756,6 +2825,7 @@
 					"kernels_ms": 1362.1,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 3107,
 					"compile": {
 						"ms": null,
@@ -2798,6 +2868,7 @@
 					"kernels_ms": 1513.1,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2818,
 					"compile": null,
 					"tensorrt": null
@@ -2870,6 +2941,7 @@
 					"kernels_ms": 4.5,
 					"speedup": 9.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 190,
 					"compile": {
 						"ms": 6.65,
@@ -2912,6 +2984,7 @@
 					"kernels_ms": 4.6,
 					"speedup": 7.6,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 152,
 					"compile": {
 						"ms": 6.67,
@@ -2954,6 +3027,7 @@
 					"kernels_ms": 4.7,
 					"speedup": 7.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 152,
 					"compile": {
 						"ms": 6.68,
@@ -2996,6 +3070,7 @@
 					"kernels_ms": 4.7,
 					"speedup": 9.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 152,
 					"compile": {
 						"ms": 6.67,
@@ -3038,6 +3113,7 @@
 					"kernels_ms": 10.5,
 					"speedup": 6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 387,
 					"compile": null,
 					"tensorrt": null
@@ -3070,6 +3146,7 @@
 					"kernels_ms": 10.8,
 					"speedup": 5.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 349,
 					"compile": {
 						"ms": 17,
@@ -3112,6 +3189,7 @@
 					"kernels_ms": 10.8,
 					"speedup": 5.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 349,
 					"compile": {
 						"ms": 17,
@@ -3154,6 +3232,7 @@
 					"kernels_ms": 10.8,
 					"speedup": 5.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 349,
 					"compile": {
 						"ms": 17,
@@ -3196,6 +3275,7 @@
 					"kernels_ms": 11.4,
 					"speedup": 6.8,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 297,
 					"compile": null,
 					"tensorrt": null
@@ -3228,6 +3308,7 @@
 					"kernels_ms": 14.6,
 					"speedup": 5.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 814,
 					"compile": {
 						"ms": 21.2,
@@ -3270,6 +3351,7 @@
 					"kernels_ms": 14.7,
 					"speedup": 5.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 811,
 					"compile": {
 						"ms": 21.2,
@@ -3312,6 +3394,7 @@
 					"kernels_ms": 17.1,
 					"speedup": 9.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 985,
 					"compile": {
 						"ms": 26.5,
@@ -3354,6 +3437,7 @@
 					"kernels_ms": 29.7,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 884,
 					"compile": {
 						"ms": 43.9,
@@ -3396,6 +3480,7 @@
 					"kernels_ms": 31.1,
 					"speedup": 4.5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 921,
 					"compile": {
 						"ms": 51.7,
@@ -3438,6 +3523,7 @@
 					"kernels_ms": 31.7,
 					"speedup": 4.4,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 917,
 					"compile": {
 						"ms": 51.3,
@@ -3480,6 +3566,7 @@
 					"kernels_ms": 31.8,
 					"speedup": 4.4,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 917,
 					"compile": {
 						"ms": 51.6,
@@ -3522,6 +3609,7 @@
 					"kernels_ms": 31.9,
 					"speedup": 4.4,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 917,
 					"compile": {
 						"ms": 51.3,
@@ -3564,6 +3652,7 @@
 					"kernels_ms": 40.7,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1093,
 					"compile": {
 						"ms": 60.9,
@@ -3606,6 +3695,7 @@
 					"kernels_ms": 44.2,
 					"speedup": 5.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2628,
 					"compile": {
 						"ms": 64.3,
@@ -3648,6 +3738,7 @@
 					"kernels_ms": 58.2,
 					"speedup": 5.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 3271,
 					"compile": {
 						"ms": 85.4,
@@ -3690,6 +3781,7 @@
 					"kernels_ms": 62.9,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1166,
 					"compile": {
 						"ms": 94.4,
@@ -3732,6 +3824,7 @@
 					"kernels_ms": 63,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1166,
 					"compile": {
 						"ms": 96.4,
@@ -3774,6 +3867,7 @@
 					"kernels_ms": 63.9,
 					"speedup": 5.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1003,
 					"compile": {
 						"ms": 58.8,
@@ -3816,6 +3910,7 @@
 					"kernels_ms": 69.3,
 					"speedup": 6.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1179,
 					"compile": null,
 					"tensorrt": null
@@ -3848,6 +3943,7 @@
 					"kernels_ms": 73.4,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1498,
 					"compile": {
 						"ms": 124,
@@ -3890,6 +3986,7 @@
 					"kernels_ms": 88.9,
 					"speedup": 3.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1771,
 					"compile": {
 						"ms": 71.7,
@@ -3932,6 +4029,7 @@
 					"kernels_ms": 155.2,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1480,
 					"compile": {
 						"ms": 149,
@@ -3974,6 +4072,7 @@
 					"kernels_ms": 164.1,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 2351,
 					"compile": {
 						"ms": 222,
@@ -4016,6 +4115,7 @@
 					"kernels_ms": 164.1,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 2351,
 					"compile": {
 						"ms": 222,
@@ -4058,6 +4158,7 @@
 					"kernels_ms": 167.1,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2361,
 					"compile": {
 						"ms": 223,
@@ -4100,6 +4201,7 @@
 					"kernels_ms": 180.3,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 3037,
 					"compile": {
 						"ms": 238,
@@ -4142,6 +4244,7 @@
 					"kernels_ms": 214.7,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 1673,
 					"compile": null,
 					"tensorrt": null
@@ -4174,6 +4277,7 @@
 					"kernels_ms": 270.9,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 3667,
 					"compile": {
 						"ms": 488,
@@ -4216,6 +4320,7 @@
 					"kernels_ms": 383.2,
 					"speedup": 1.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2583,
 					"compile": {
 						"ms": 342,
@@ -4258,6 +4363,7 @@
 					"kernels_ms": 1284,
 					"speedup": 9.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 8204,
 					"compile": {
 						"ms": 1314,
@@ -4291,6 +4397,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4314,6 +4421,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4337,6 +4445,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4360,6 +4469,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4383,6 +4493,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4406,6 +4517,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4429,6 +4541,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4452,6 +4565,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -4506,6 +4620,7 @@
 					"kernels_ms": 0.4,
 					"speedup": 4.8,
 					"speedup_vs": "original",
+					"year": 2016,
 					"peak_mib": 8,
 					"compile": {
 						"ms": 1.13,
@@ -4548,6 +4663,7 @@
 					"kernels_ms": 0.4,
 					"speedup": 5.9,
 					"speedup_vs": "original",
+					"year": 2017,
 					"peak_mib": 76,
 					"compile": {
 						"ms": 1.21,
@@ -4590,6 +4706,7 @@
 					"kernels_ms": 0.4,
 					"speedup": 8.2,
 					"speedup_vs": "original",
+					"year": 2018,
 					"peak_mib": 75,
 					"compile": {
 						"ms": 1.82,
@@ -4632,6 +4749,7 @@
 					"kernels_ms": 0.5,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2015,
 					"peak_mib": 90,
 					"compile": {
 						"ms": 1.04,
@@ -4674,6 +4792,7 @@
 					"kernels_ms": 0.5,
 					"speedup": 7.9,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 78,
 					"compile": {
 						"ms": 2.19,
@@ -4716,6 +4835,7 @@
 					"kernels_ms": 0.6,
 					"speedup": 6.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 43,
 					"compile": {
 						"ms": 1.96,
@@ -4758,6 +4878,7 @@
 					"kernels_ms": 0.6,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2012,
 					"peak_mib": 184,
 					"compile": {
 						"ms": 0.824,
@@ -4800,6 +4921,7 @@
 					"kernels_ms": 0.6,
 					"speedup": 9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 87,
 					"compile": {
 						"ms": 2.48,
@@ -4842,6 +4964,7 @@
 					"kernels_ms": 0.7,
 					"speedup": 6.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 41,
 					"compile": {
 						"ms": 2.41,
@@ -4884,6 +5007,7 @@
 					"kernels_ms": 0.7,
 					"speedup": 4.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 45,
 					"compile": {
 						"ms": 2.55,
@@ -4926,6 +5050,7 @@
 					"kernels_ms": 0.7,
 					"speedup": 6.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 47,
 					"compile": {
 						"ms": 2.6,
@@ -4968,6 +5093,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 10.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 51,
 					"compile": {
 						"ms": 6.07,
@@ -5010,6 +5136,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 10.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 51,
 					"compile": {
 						"ms": 6.12,
@@ -5052,6 +5179,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 11.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 45,
 					"compile": {
 						"ms": 3.34,
@@ -5094,6 +5222,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 7.3,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 78,
 					"compile": {
 						"ms": 2.88,
@@ -5136,6 +5265,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 10.9,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 45,
 					"compile": {
 						"ms": 3.3,
@@ -5178,6 +5308,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 4.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 52,
 					"compile": {
 						"ms": 2.32,
@@ -5220,6 +5351,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 11.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 48,
 					"compile": {
 						"ms": 3.21,
@@ -5262,6 +5394,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 11.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 48,
 					"compile": {
 						"ms": 3.33,
@@ -5304,6 +5437,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 6.1,
 					"speedup_vs": "original",
+					"year": 2018,
 					"peak_mib": 87,
 					"compile": {
 						"ms": 1.98,
@@ -5346,6 +5480,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 5.7,
 					"speedup_vs": "original",
+					"year": 2015,
 					"peak_mib": 116,
 					"compile": {
 						"ms": 2.1,
@@ -5388,6 +5523,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 48,
 					"compile": {
 						"ms": 2.92,
@@ -5430,6 +5566,7 @@
 					"kernels_ms": 0.9,
 					"speedup": 7.5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 51,
 					"compile": {
 						"ms": 3.37,
@@ -5472,6 +5609,7 @@
 					"kernels_ms": 0.9,
 					"speedup": 6.4,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 60,
 					"compile": {
 						"ms": 2.92,
@@ -5514,6 +5652,7 @@
 					"kernels_ms": 1.1,
 					"speedup": 9.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 120,
 					"compile": {
 						"ms": 6.91,
@@ -5556,6 +5695,7 @@
 					"kernels_ms": 1.1,
 					"speedup": 3.5,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 92,
 					"compile": {
 						"ms": 2.09,
@@ -5598,6 +5738,7 @@
 					"kernels_ms": 1.1,
 					"speedup": 3.6,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 92,
 					"compile": {
 						"ms": 2.08,
@@ -5640,6 +5781,7 @@
 					"kernels_ms": 1.2,
 					"speedup": 5.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 83,
 					"compile": {
 						"ms": 2.95,
@@ -5682,6 +5824,7 @@
 					"kernels_ms": 1.2,
 					"speedup": 11.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 62,
 					"compile": {
 						"ms": 4.89,
@@ -5724,6 +5867,7 @@
 					"kernels_ms": 1.2,
 					"speedup": 11.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 62,
 					"compile": {
 						"ms": 4.93,
@@ -5766,6 +5910,7 @@
 					"kernels_ms": 1.3,
 					"speedup": 8.4,
 					"speedup_vs": "original",
+					"year": 2016,
 					"peak_mib": 83,
 					"compile": {
 						"ms": 5.49,
@@ -5808,6 +5953,7 @@
 					"kernels_ms": 1.3,
 					"speedup": 6.1,
 					"speedup_vs": "original",
+					"year": 2015,
 					"peak_mib": 150,
 					"compile": {
 						"ms": 3.03,
@@ -5850,6 +5996,7 @@
 					"kernels_ms": 1.4,
 					"speedup": 5.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 80,
 					"compile": {
 						"ms": 3.97,
@@ -5892,6 +6039,7 @@
 					"kernels_ms": 1.5,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2014,
 					"peak_mib": 332,
 					"compile": {
 						"ms": 1.86,
@@ -5934,6 +6082,7 @@
 					"kernels_ms": 1.6,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 96,
 					"compile": {
 						"ms": 2.05,
@@ -5976,6 +6125,7 @@
 					"kernels_ms": 1.6,
 					"speedup": 3.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 198,
 					"compile": {
 						"ms": null,
@@ -6018,6 +6168,7 @@
 					"kernels_ms": 1.6,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 300,
 					"compile": {
 						"ms": 2.09,
@@ -6060,6 +6211,7 @@
 					"kernels_ms": 1.6,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 300,
 					"compile": {
 						"ms": 2.1,
@@ -6102,6 +6254,7 @@
 					"kernels_ms": 1.7,
 					"speedup": 10.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 79,
 					"compile": {
 						"ms": 6.51,
@@ -6144,6 +6297,7 @@
 					"kernels_ms": 1.7,
 					"speedup": 10.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 79,
 					"compile": {
 						"ms": 6.49,
@@ -6186,6 +6340,7 @@
 					"kernels_ms": 1.8,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 132,
 					"compile": {
 						"ms": 2.79,
@@ -6228,6 +6383,7 @@
 					"kernels_ms": 1.8,
 					"speedup": 7,
 					"speedup_vs": "original",
+					"year": 2015,
 					"peak_mib": 182,
 					"compile": {
 						"ms": 4.55,
@@ -6270,6 +6426,7 @@
 					"kernels_ms": 1.8,
 					"speedup": 4,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 134,
 					"compile": {
 						"ms": 3.47,
@@ -6312,6 +6469,7 @@
 					"kernels_ms": 1.8,
 					"speedup": 4.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 134,
 					"compile": {
 						"ms": 3.5,
@@ -6354,6 +6512,7 @@
 					"kernels_ms": 1.9,
 					"speedup": 6.5,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 229,
 					"compile": {
 						"ms": 5.42,
@@ -6396,6 +6555,7 @@
 					"kernels_ms": 1.9,
 					"speedup": 6.4,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 114,
 					"compile": {
 						"ms": 5.39,
@@ -6438,6 +6598,7 @@
 					"kernels_ms": 2,
 					"speedup": 5.5,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 111,
 					"compile": {
 						"ms": 5.39,
@@ -6480,6 +6641,7 @@
 					"kernels_ms": 2,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 208,
 					"compile": {
 						"ms": 3.37,
@@ -6522,6 +6684,7 @@
 					"kernels_ms": 2,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 208,
 					"compile": {
 						"ms": 3.37,
@@ -6564,6 +6727,7 @@
 					"kernels_ms": 2.1,
 					"speedup": 7,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 246,
 					"compile": {
 						"ms": 4.19,
@@ -6606,6 +6770,7 @@
 					"kernels_ms": 2.5,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 138,
 					"compile": {
 						"ms": 3.36,
@@ -6648,6 +6813,7 @@
 					"kernels_ms": 2.9,
 					"speedup": 3.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 318,
 					"compile": {
 						"ms": 3.85,
@@ -6690,6 +6856,7 @@
 					"kernels_ms": 3,
 					"speedup": 3.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 213,
 					"compile": {
 						"ms": 3.41,
@@ -6732,6 +6899,7 @@
 					"kernels_ms": 3.1,
 					"speedup": 2.6,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 237,
 					"compile": {
 						"ms": 3.14,
@@ -6774,6 +6942,7 @@
 					"kernels_ms": 3.3,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 419,
 					"compile": {
 						"ms": 3.44,
@@ -6816,6 +6985,7 @@
 					"kernels_ms": 3.3,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 419,
 					"compile": {
 						"ms": 3.45,
@@ -6855,6 +7025,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1.78,
@@ -6894,6 +7065,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1.84,
@@ -6933,6 +7105,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1.69,
@@ -6975,6 +7148,7 @@
 					"kernels_ms": 4.1,
 					"speedup": 1.4,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 234,
 					"compile": {
 						"ms": 5.33,
@@ -7017,6 +7191,7 @@
 					"kernels_ms": 4.5,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 318,
 					"compile": {
 						"ms": 4.45,
@@ -7056,6 +7231,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 2.66,
@@ -7095,6 +7271,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 2.33,
@@ -7137,6 +7314,7 @@
 					"kernels_ms": 4.9,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 890,
 					"compile": {
 						"ms": 5.09,
@@ -7179,6 +7357,7 @@
 					"kernels_ms": 5.2,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 426,
 					"compile": {
 						"ms": 5.8,
@@ -7218,6 +7397,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 2.55,
@@ -7257,6 +7437,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.1,
@@ -7296,6 +7477,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 2.57,
@@ -7335,6 +7517,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.59,
@@ -7374,6 +7557,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.11,
@@ -7413,6 +7597,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.9,
@@ -7452,6 +7637,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 4.13,
@@ -7491,6 +7677,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 4.71,
@@ -7530,6 +7717,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.72,
@@ -7569,6 +7757,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.34,
@@ -7608,6 +7797,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.94,
@@ -7647,6 +7837,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 9.89,
@@ -7686,6 +7877,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.64,
@@ -7725,6 +7917,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.91,
@@ -7764,6 +7957,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 4.11,
@@ -7803,6 +7997,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 5.44,
@@ -7842,6 +8037,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 3.69,
@@ -7881,6 +8077,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 5.58,
@@ -7920,6 +8117,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 5.48,
@@ -7959,6 +8157,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 5.53,
@@ -7998,6 +8197,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 6.63,
@@ -8037,6 +8237,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 6.54,
@@ -8079,6 +8280,7 @@
 					"kernels_ms": 12.5,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 667,
 					"compile": {
 						"ms": 13.3,
@@ -8121,6 +8323,7 @@
 					"kernels_ms": 12.8,
 					"speedup": 2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1216,
 					"compile": {
 						"ms": 13.3,
@@ -8160,6 +8363,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 6.52,
@@ -8199,6 +8403,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 5.54,
@@ -8238,6 +8443,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 5.55,
@@ -8277,6 +8483,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 6.92,
@@ -8316,6 +8523,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 6.9,
@@ -8358,6 +8566,7 @@
 					"kernels_ms": 14.1,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1236,
 					"compile": {
 						"ms": 14.9,
@@ -8400,6 +8609,7 @@
 					"kernels_ms": 14.1,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 673,
 					"compile": {
 						"ms": 15.7,
@@ -8439,6 +8649,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 6.94,
@@ -8478,6 +8689,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 6.34,
@@ -8517,6 +8729,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 7.47,
@@ -8556,6 +8769,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 7.28,
@@ -8595,6 +8809,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 7.32,
@@ -8656,6 +8871,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2018,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1.34,
@@ -8698,6 +8914,7 @@
 					"kernels_ms": 3.5,
 					"speedup": 5,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 148,
 					"compile": {
 						"ms": 9.27,
@@ -8740,6 +8957,7 @@
 					"kernels_ms": 3.6,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 133,
 					"compile": {
 						"ms": 4.38,
@@ -8782,6 +9000,7 @@
 					"kernels_ms": 8,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 202,
 					"compile": {
 						"ms": 24.9,
@@ -8824,6 +9043,7 @@
 					"kernels_ms": 9,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 147,
 					"compile": {
 						"ms": 16.6,
@@ -8866,6 +9086,7 @@
 					"kernels_ms": 9.2,
 					"speedup": 3.7,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 257,
 					"compile": {
 						"ms": 14.1,
@@ -8908,6 +9129,7 @@
 					"kernels_ms": 11.8,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 645,
 					"compile": {
 						"ms": 20.7,
@@ -8950,6 +9172,7 @@
 					"kernels_ms": 11.9,
 					"speedup": 4.1,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 274,
 					"compile": {
 						"ms": 23.9,
@@ -8992,6 +9215,7 @@
 					"kernels_ms": 12.2,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 229,
 					"compile": {
 						"ms": 40.7,
@@ -9034,6 +9258,7 @@
 					"kernels_ms": 16.6,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2014,
 					"peak_mib": 294,
 					"compile": {
 						"ms": 35.6,
@@ -9076,6 +9301,7 @@
 					"kernels_ms": 18,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2018,
 					"peak_mib": 365,
 					"compile": {
 						"ms": 44.6,
@@ -9118,6 +9344,7 @@
 					"kernels_ms": 20.1,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2017,
 					"peak_mib": 362,
 					"compile": {
 						"ms": 42.1,
@@ -9160,6 +9387,7 @@
 					"kernels_ms": 20.1,
 					"speedup": 2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 771,
 					"compile": {
 						"ms": 35.8,
@@ -9202,6 +9430,7 @@
 					"kernels_ms": 20.6,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 314,
 					"compile": {
 						"ms": 63.6,
@@ -9244,6 +9473,7 @@
 					"kernels_ms": 25,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2016,
 					"peak_mib": 341,
 					"compile": {
 						"ms": 41.3,
@@ -9286,6 +9516,7 @@
 					"kernels_ms": 25.3,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 407,
 					"compile": {
 						"ms": 31.4,
@@ -9328,6 +9559,7 @@
 					"kernels_ms": 35,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1515,
 					"compile": {
 						"ms": 49.4,
@@ -9370,6 +9602,7 @@
 					"kernels_ms": 38.8,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1514,
 					"compile": {
 						"ms": 50,
@@ -9412,6 +9645,7 @@
 					"kernels_ms": 52.8,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1189,
 					"compile": {
 						"ms": 84.5,
@@ -9454,6 +9688,7 @@
 					"kernels_ms": 60.4,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1164,
 					"compile": {
 						"ms": null,
@@ -9496,6 +9731,7 @@
 					"kernels_ms": 92.6,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1643,
 					"compile": {
 						"ms": 118,
@@ -9538,6 +9774,7 @@
 					"kernels_ms": 100,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 2054,
 					"compile": {
 						"ms": null,
@@ -9580,6 +9817,7 @@
 					"kernels_ms": 185.2,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 3259,
 					"compile": {
 						"ms": 263,
@@ -9662,6 +9900,7 @@
 					"kernels_ms": 8.8,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 237,
 					"compile": {
 						"ms": 6.24,
@@ -9704,6 +9943,7 @@
 					"kernels_ms": 9.1,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 237,
 					"compile": {
 						"ms": 6.25,
@@ -9746,6 +9986,7 @@
 					"kernels_ms": 9.8,
 					"speedup": 1.5,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 138,
 					"compile": {
 						"ms": 5.44,
@@ -9788,6 +10029,7 @@
 					"kernels_ms": 12.1,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 487,
 					"compile": {
 						"ms": 13.1,
@@ -9830,6 +10072,7 @@
 					"kernels_ms": 12.1,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 487,
 					"compile": {
 						"ms": 13.1,
@@ -9869,6 +10112,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 17.7,
@@ -9911,6 +10155,7 @@
 					"kernels_ms": 48.1,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 754,
 					"compile": {
 						"ms": 50.2,
@@ -9953,6 +10198,7 @@
 					"kernels_ms": 83.8,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1337,
 					"compile": {
 						"ms": 81.9,
@@ -9995,6 +10241,7 @@
 					"kernels_ms": 103.5,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1942,
 					"compile": {
 						"ms": 103,
@@ -10034,6 +10281,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 85.8,
@@ -10076,6 +10324,7 @@
 					"kernels_ms": 121.1,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1674,
 					"compile": {
 						"ms": 138,
@@ -10118,6 +10367,7 @@
 					"kernels_ms": 121.4,
 					"speedup": 1.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1674,
 					"compile": {
 						"ms": 110,
@@ -10160,6 +10410,7 @@
 					"kernels_ms": 147.4,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1484,
 					"compile": {
 						"ms": 157,
@@ -10199,6 +10450,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10250,6 +10502,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10279,6 +10532,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2016,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10308,6 +10562,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10337,6 +10592,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2015,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10366,6 +10622,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10395,6 +10652,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10424,6 +10682,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10453,6 +10712,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -10507,6 +10767,7 @@
 					"kernels_ms": 2.7,
 					"speedup": 5.6,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 458,
 					"compile": null,
 					"tensorrt": null
@@ -10539,6 +10800,7 @@
 					"kernels_ms": 4.4,
 					"speedup": 5.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 176,
 					"compile": {
 						"ms": 6.44,
@@ -10581,6 +10843,7 @@
 					"kernels_ms": 5.8,
 					"speedup": 5.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 203,
 					"compile": {
 						"ms": 11.3,
@@ -10623,6 +10886,7 @@
 					"kernels_ms": 6.8,
 					"speedup": 5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 232,
 					"compile": {
 						"ms": 10.8,
@@ -10665,6 +10929,7 @@
 					"kernels_ms": 6.9,
 					"speedup": 3.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 215,
 					"compile": {
 						"ms": 6.22,
@@ -10707,6 +10972,7 @@
 					"kernels_ms": 9.7,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 401,
 					"compile": {
 						"ms": 14.2,
@@ -10749,6 +11015,7 @@
 					"kernels_ms": 13.9,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 316,
 					"compile": {
 						"ms": 14.2,
@@ -10791,6 +11058,7 @@
 					"kernels_ms": 15.3,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 582,
 					"compile": {
 						"ms": 22.9,
@@ -10833,6 +11101,7 @@
 					"kernels_ms": 15.6,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 330,
 					"compile": {
 						"ms": 14.9,
@@ -10875,6 +11144,7 @@
 					"kernels_ms": 25.1,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 426,
 					"compile": {
 						"ms": 26.4,
@@ -10917,6 +11187,7 @@
 					"kernels_ms": 36.8,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 433,
 					"compile": {
 						"ms": 39.4,
@@ -10959,6 +11230,7 @@
 					"kernels_ms": 37,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 377,
 					"compile": {
 						"ms": 40.9,
@@ -11001,6 +11273,7 @@
 					"kernels_ms": 48.8,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 760,
 					"compile": {
 						"ms": 59.5,
@@ -11043,6 +11316,7 @@
 					"kernels_ms": 81.4,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 889,
 					"compile": {
 						"ms": 97,
@@ -11085,6 +11359,7 @@
 					"kernels_ms": 81.5,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 831,
 					"compile": {
 						"ms": 97.2,
@@ -11127,6 +11402,7 @@
 					"kernels_ms": 116.5,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2019,
 					"compile": {
 						"ms": 168,
@@ -11169,6 +11445,7 @@
 					"kernels_ms": 143.1,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1480,
 					"compile": {
 						"ms": 188,
@@ -11211,6 +11488,7 @@
 					"kernels_ms": 143.5,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1541,
 					"compile": {
 						"ms": 187,
@@ -11253,6 +11531,7 @@
 					"kernels_ms": 156.9,
 					"speedup": 4.5,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 987,
 					"compile": {
 						"ms": 236,
@@ -11317,6 +11596,7 @@
 					"kernels_ms": 2,
 					"speedup": 4.9,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 62,
 					"compile": {
 						"ms": 2.87,
@@ -11359,6 +11639,7 @@
 					"kernels_ms": 2.1,
 					"speedup": 6.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 11,
 					"compile": {
 						"ms": 4.23,
@@ -11401,6 +11682,7 @@
 					"kernels_ms": 2.2,
 					"speedup": 7.5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 94,
 					"compile": {
 						"ms": 2.98,
@@ -11443,6 +11725,7 @@
 					"kernels_ms": 2.5,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 114,
 					"compile": {
 						"ms": 4.58,
@@ -11485,6 +11768,7 @@
 					"kernels_ms": 2.5,
 					"speedup": 9.8,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 93,
 					"compile": {
 						"ms": 5.44,
@@ -11527,6 +11811,7 @@
 					"kernels_ms": 2.5,
 					"speedup": 9.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 93,
 					"compile": {
 						"ms": 5.43,
@@ -11569,6 +11854,7 @@
 					"kernels_ms": 2.6,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 84,
 					"compile": {
 						"ms": 2.95,
@@ -11611,6 +11897,7 @@
 					"kernels_ms": 2.7,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 40,
 					"compile": {
 						"ms": 3.43,
@@ -11653,6 +11940,7 @@
 					"kernels_ms": 2.8,
 					"speedup": 7.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 99,
 					"compile": {
 						"ms": 3.63,
@@ -11695,6 +11983,7 @@
 					"kernels_ms": 3,
 					"speedup": 4.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 48,
 					"compile": {
 						"ms": 3.56,
@@ -11737,6 +12026,7 @@
 					"kernels_ms": 3.4,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 125,
 					"compile": {
 						"ms": 4.56,
@@ -11779,6 +12069,7 @@
 					"kernels_ms": 3.7,
 					"speedup": 3.4,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 115,
 					"compile": {
 						"ms": 3.7,
@@ -11821,6 +12112,7 @@
 					"kernels_ms": 3.7,
 					"speedup": 3.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 126,
 					"compile": {
 						"ms": 6.59,
@@ -11863,6 +12155,7 @@
 					"kernels_ms": 3.8,
 					"speedup": 7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 106,
 					"compile": {
 						"ms": 5.63,
@@ -11905,6 +12198,7 @@
 					"kernels_ms": 3.8,
 					"speedup": 6.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 106,
 					"compile": {
 						"ms": 5.63,
@@ -11947,6 +12241,7 @@
 					"kernels_ms": 3.8,
 					"speedup": 6.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 128,
 					"compile": {
 						"ms": 3.74,
@@ -11989,6 +12284,7 @@
 					"kernels_ms": 3.9,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 133,
 					"compile": {
 						"ms": 4.92,
@@ -12031,6 +12327,7 @@
 					"kernels_ms": 4.1,
 					"speedup": 3.4,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 119,
 					"compile": {
 						"ms": 4.44,
@@ -12073,6 +12370,7 @@
 					"kernels_ms": 4.2,
 					"speedup": 3.4,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 155,
 					"compile": {
 						"ms": 4.22,
@@ -12115,6 +12413,7 @@
 					"kernels_ms": 4.3,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 129,
 					"compile": {
 						"ms": 6.55,
@@ -12157,6 +12456,7 @@
 					"kernels_ms": 4.5,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 122,
 					"compile": {
 						"ms": 4.78,
@@ -12199,6 +12499,7 @@
 					"kernels_ms": 5.2,
 					"speedup": 6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 127,
 					"compile": {
 						"ms": 6.79,
@@ -12241,6 +12542,7 @@
 					"kernels_ms": 5.2,
 					"speedup": 6.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 127,
 					"compile": {
 						"ms": 6.73,
@@ -12283,6 +12585,7 @@
 					"kernels_ms": 5.2,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 170,
 					"compile": {
 						"ms": 6.15,
@@ -12325,6 +12628,7 @@
 					"kernels_ms": 5.3,
 					"speedup": 3.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 177,
 					"compile": null,
 					"tensorrt": null
@@ -12357,6 +12661,7 @@
 					"kernels_ms": 5.4,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 146,
 					"compile": {
 						"ms": 5.32,
@@ -12399,6 +12704,7 @@
 					"kernels_ms": 5.4,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 144,
 					"compile": {
 						"ms": 6.86,
@@ -12441,6 +12747,7 @@
 					"kernels_ms": 5.5,
 					"speedup": 4.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 189,
 					"compile": null,
 					"tensorrt": null
@@ -12473,6 +12780,7 @@
 					"kernels_ms": 5.6,
 					"speedup": 4,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 192,
 					"compile": {
 						"ms": 5.62,
@@ -12515,6 +12823,7 @@
 					"kernels_ms": 5.7,
 					"speedup": 3.4,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 178,
 					"compile": {
 						"ms": 10.6,
@@ -12557,6 +12866,7 @@
 					"kernels_ms": 6.6,
 					"speedup": 5.5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 149,
 					"compile": {
 						"ms": 7.99,
@@ -12599,6 +12909,7 @@
 					"kernels_ms": 6.6,
 					"speedup": 4.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 200,
 					"compile": null,
 					"tensorrt": null
@@ -12631,6 +12942,7 @@
 					"kernels_ms": 6.6,
 					"speedup": 5.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 149,
 					"compile": {
 						"ms": 7.91,
@@ -12673,6 +12985,7 @@
 					"kernels_ms": 6.8,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 151,
 					"compile": {
 						"ms": 7.08,
@@ -12715,6 +13028,7 @@
 					"kernels_ms": 7.8,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 258,
 					"compile": {
 						"ms": 11.3,
@@ -12757,6 +13071,7 @@
 					"kernels_ms": 8.5,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 267,
 					"compile": {
 						"ms": 11.8,
@@ -12799,6 +13114,7 @@
 					"kernels_ms": 9.2,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 262,
 					"compile": null,
 					"tensorrt": null
@@ -12831,6 +13147,7 @@
 					"kernels_ms": 9.4,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 333,
 					"compile": {
 						"ms": 10.7,
@@ -12873,6 +13190,7 @@
 					"kernels_ms": 9.6,
 					"speedup": 4.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 228,
 					"compile": {
 						"ms": 11,
@@ -12915,6 +13233,7 @@
 					"kernels_ms": 9.7,
 					"speedup": 4.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 228,
 					"compile": {
 						"ms": 11,
@@ -12957,6 +13276,7 @@
 					"kernels_ms": 9.9,
 					"speedup": 5.6,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 218,
 					"compile": {
 						"ms": 9.27,
@@ -12999,6 +13319,7 @@
 					"kernels_ms": 10.5,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 188,
 					"compile": {
 						"ms": 10.8,
@@ -13041,6 +13362,7 @@
 					"kernels_ms": 13.7,
 					"speedup": 5.8,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 254,
 					"compile": null,
 					"tensorrt": null
@@ -13073,6 +13395,7 @@
 					"kernels_ms": 16,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 218,
 					"compile": {
 						"ms": 16.9,
@@ -13115,6 +13438,7 @@
 					"kernels_ms": 19.5,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2015,
 					"peak_mib": 391,
 					"compile": {
 						"ms": 18.9,
@@ -13157,6 +13481,7 @@
 					"kernels_ms": 21,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2017,
 					"peak_mib": 353,
 					"compile": {
 						"ms": 21.5,
@@ -13199,6 +13524,7 @@
 					"kernels_ms": 23.8,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 607,
 					"compile": {
 						"ms": 28.5,
@@ -13241,6 +13567,7 @@
 					"kernels_ms": 109.8,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1552,
 					"compile": {
 						"ms": 141,
@@ -13280,6 +13607,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 111,
@@ -13319,6 +13647,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 111,
@@ -13358,6 +13687,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 131,
@@ -13397,6 +13727,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 132,
@@ -13461,6 +13792,7 @@
 					"kernels_ms": 2.7,
 					"speedup": 27.7,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 105,
 					"compile": null,
 					"tensorrt": null
@@ -13493,6 +13825,7 @@
 					"kernels_ms": 2.9,
 					"speedup": 52,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 129,
 					"compile": {
 						"ms": 1.91,
@@ -13535,6 +13868,7 @@
 					"kernels_ms": 2.9,
 					"speedup": 59.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 129,
 					"compile": {
 						"ms": 1.94,
@@ -13577,6 +13911,7 @@
 					"kernels_ms": 3,
 					"speedup": 53.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 133,
 					"compile": {
 						"ms": 2.07,
@@ -13619,6 +13954,7 @@
 					"kernels_ms": 3,
 					"speedup": 56.5,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 133,
 					"compile": {
 						"ms": 2.11,
@@ -13661,6 +13997,7 @@
 					"kernels_ms": 3.2,
 					"speedup": 50.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 133,
 					"compile": {
 						"ms": 1.96,
@@ -13703,6 +14040,7 @@
 					"kernels_ms": 3.3,
 					"speedup": 52.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 138,
 					"compile": {
 						"ms": 2.27,
@@ -13745,6 +14083,7 @@
 					"kernels_ms": 3.6,
 					"speedup": 51.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 146,
 					"compile": {
 						"ms": 2.23,
@@ -13787,6 +14126,7 @@
 					"kernels_ms": 3.7,
 					"speedup": 63.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 151,
 					"compile": {
 						"ms": 2.69,
@@ -13829,6 +14169,7 @@
 					"kernels_ms": 4.4,
 					"speedup": 40.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 148,
 					"compile": {
 						"ms": 3.42,
@@ -13871,6 +14212,7 @@
 					"kernels_ms": 4.5,
 					"speedup": 40.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 149,
 					"compile": {
 						"ms": 3.44,
@@ -13913,6 +14255,7 @@
 					"kernels_ms": 4.9,
 					"speedup": 33.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 157,
 					"compile": {
 						"ms": 3.8,
@@ -13955,6 +14298,7 @@
 					"kernels_ms": 5.4,
 					"speedup": 34.5,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 163,
 					"compile": {
 						"ms": 4.54,
@@ -13997,6 +14341,7 @@
 					"kernels_ms": 5.4,
 					"speedup": 35.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 163,
 					"compile": {
 						"ms": 4.51,
@@ -14039,6 +14384,7 @@
 					"kernels_ms": 5.6,
 					"speedup": 28.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 175,
 					"compile": {
 						"ms": 5.32,
@@ -14081,6 +14427,7 @@
 					"kernels_ms": 5.7,
 					"speedup": 29.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 176,
 					"compile": {
 						"ms": 5.34,
@@ -14123,6 +14470,7 @@
 					"kernels_ms": 5.8,
 					"speedup": 34.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 169,
 					"compile": {
 						"ms": 4.79,
@@ -14165,6 +14513,7 @@
 					"kernels_ms": 6.1,
 					"speedup": 17.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 145,
 					"compile": {
 						"ms": 7.54,
@@ -14207,6 +14556,7 @@
 					"kernels_ms": 6.2,
 					"speedup": 28.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 186,
 					"compile": {
 						"ms": 5.75,
@@ -14249,6 +14599,7 @@
 					"kernels_ms": 6.3,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 142,
 					"compile": {
 						"ms": 3.35,
@@ -14291,6 +14642,7 @@
 					"kernels_ms": 6.3,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 121,
 					"compile": {
 						"ms": 3.3,
@@ -14333,6 +14685,7 @@
 					"kernels_ms": 6.8,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 166,
 					"compile": {
 						"ms": 4.99,
@@ -14375,6 +14728,7 @@
 					"kernels_ms": 7.5,
 					"speedup": 22.5,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 184,
 					"compile": {
 						"ms": 6.23,
@@ -14417,6 +14771,7 @@
 					"kernels_ms": 8.3,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 208,
 					"compile": {
 						"ms": 7.07,
@@ -14459,6 +14814,7 @@
 					"kernels_ms": 9,
 					"speedup": 18.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 202,
 					"compile": {
 						"ms": 7.09,
@@ -14501,6 +14857,7 @@
 					"kernels_ms": 9,
 					"speedup": 21.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 203,
 					"compile": {
 						"ms": 7.12,
@@ -14543,6 +14900,7 @@
 					"kernels_ms": 9.5,
 					"speedup": 2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 176,
 					"compile": {
 						"ms": 8,
@@ -14585,6 +14943,7 @@
 					"kernels_ms": 9.8,
 					"speedup": 18,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 210,
 					"compile": {
 						"ms": 9.94,
@@ -14627,6 +14986,7 @@
 					"kernels_ms": 10.2,
 					"speedup": 19.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 232,
 					"compile": {
 						"ms": 9.34,
@@ -14669,6 +15029,7 @@
 					"kernels_ms": 11.2,
 					"speedup": 15.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 229,
 					"compile": {
 						"ms": 10.7,
@@ -14711,6 +15072,7 @@
 					"kernels_ms": 11.2,
 					"speedup": 18.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 230,
 					"compile": {
 						"ms": 10.6,
@@ -14753,6 +15115,7 @@
 					"kernels_ms": 11.7,
 					"speedup": 6.8,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 379,
 					"compile": null,
 					"tensorrt": null
@@ -14785,6 +15148,7 @@
 					"kernels_ms": 12.5,
 					"speedup": 15.5,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 240,
 					"compile": {
 						"ms": 11.9,
@@ -14827,6 +15191,7 @@
 					"kernels_ms": 13.9,
 					"speedup": 8.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 574,
 					"compile": {
 						"ms": 16.4,
@@ -14869,6 +15234,7 @@
 					"kernels_ms": 14,
 					"speedup": 7.5,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 574,
 					"compile": {
 						"ms": 16.4,
@@ -14911,6 +15277,7 @@
 					"kernels_ms": 14.1,
 					"speedup": 7.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 567,
 					"compile": {
 						"ms": 16,
@@ -14953,6 +15320,7 @@
 					"kernels_ms": 14.3,
 					"speedup": 14.5,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 298,
 					"compile": {
 						"ms": 15.3,
@@ -14995,6 +15363,7 @@
 					"kernels_ms": 15.5,
 					"speedup": 12.9,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 343,
 					"compile": {
 						"ms": 21.2,
@@ -15037,6 +15406,7 @@
 					"kernels_ms": 18.7,
 					"speedup": 11.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 280,
 					"compile": {
 						"ms": 21.1,
@@ -15079,6 +15449,7 @@
 					"kernels_ms": 19.4,
 					"speedup": 9.8,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 305,
 					"compile": {
 						"ms": 19.6,
@@ -15121,6 +15492,7 @@
 					"kernels_ms": 20.2,
 					"speedup": 13.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 286,
 					"compile": {
 						"ms": 19.5,
@@ -15163,6 +15535,7 @@
 					"kernels_ms": 33.9,
 					"speedup": 7.2,
 					"speedup_vs": "original",
+					"year": 2019,
 					"peak_mib": 438,
 					"compile": {
 						"ms": 46,
@@ -15205,6 +15578,7 @@
 					"kernels_ms": 34.9,
 					"speedup": 4.7,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 991,
 					"compile": {
 						"ms": 46.9,
@@ -15247,6 +15621,7 @@
 					"kernels_ms": 50.8,
 					"speedup": 5.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 496,
 					"compile": {
 						"ms": 34,
@@ -15289,6 +15664,7 @@
 					"kernels_ms": 64.1,
 					"speedup": 3.8,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 1618,
 					"compile": {
 						"ms": 92.9,
@@ -15353,6 +15729,7 @@
 					"kernels_ms": 0.7,
 					"speedup": 9.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 53,
 					"compile": {
 						"ms": 2.12,
@@ -15395,6 +15772,7 @@
 					"kernels_ms": 0.7,
 					"speedup": 9.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 53,
 					"compile": {
 						"ms": 2.29,
@@ -15437,6 +15815,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 8.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 44,
 					"compile": {
 						"ms": 2.18,
@@ -15479,6 +15858,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 5,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 112,
 					"compile": null,
 					"tensorrt": null
@@ -15511,6 +15891,7 @@
 					"kernels_ms": 0.8,
 					"speedup": 4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 80,
 					"compile": {
 						"ms": 2.02,
@@ -15553,6 +15934,7 @@
 					"kernels_ms": 0.9,
 					"speedup": 7.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 98,
 					"compile": {
 						"ms": 2.67,
@@ -15595,6 +15977,7 @@
 					"kernels_ms": 1,
 					"speedup": 7.4,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 100,
 					"compile": {
 						"ms": 2.39,
@@ -15637,6 +16020,7 @@
 					"kernels_ms": 1.1,
 					"speedup": 3.6,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 88,
 					"compile": {
 						"ms": 2.08,
@@ -15679,6 +16063,7 @@
 					"kernels_ms": 1.2,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 86,
 					"compile": {
 						"ms": 1.96,
@@ -15721,6 +16106,7 @@
 					"kernels_ms": 1.3,
 					"speedup": 5.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 168,
 					"compile": null,
 					"tensorrt": null
@@ -15753,6 +16139,7 @@
 					"kernels_ms": 1.4,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 324,
 					"compile": {
 						"ms": 2.39,
@@ -15795,6 +16182,7 @@
 					"kernels_ms": 1.4,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 284,
 					"compile": {
 						"ms": 7.33,
@@ -15837,6 +16225,7 @@
 					"kernels_ms": 1.4,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 270,
 					"compile": {
 						"ms": 2.41,
@@ -15879,6 +16268,7 @@
 					"kernels_ms": 1.4,
 					"speedup": 5.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 274,
 					"compile": {
 						"ms": 2.67,
@@ -15921,6 +16311,7 @@
 					"kernels_ms": 1.4,
 					"speedup": 4.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 284,
 					"compile": {
 						"ms": 2.53,
@@ -15963,6 +16354,7 @@
 					"kernels_ms": 1.4,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 287,
 					"compile": {
 						"ms": 2.75,
@@ -16005,6 +16397,7 @@
 					"kernels_ms": 1.5,
 					"speedup": 4.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 285,
 					"compile": {
 						"ms": 2.5,
@@ -16047,6 +16440,7 @@
 					"kernels_ms": 1.5,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 237,
 					"compile": {
 						"ms": 2.2,
@@ -16089,6 +16483,7 @@
 					"kernels_ms": 1.5,
 					"speedup": 4.7,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 206,
 					"compile": {
 						"ms": 2.18,
@@ -16131,6 +16526,7 @@
 					"kernels_ms": 1.5,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 237,
 					"compile": null,
 					"tensorrt": null
@@ -16163,6 +16559,7 @@
 					"kernels_ms": 1.8,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 130,
 					"compile": {
 						"ms": 3.36,
@@ -16205,6 +16602,7 @@
 					"kernels_ms": 2,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 204,
 					"compile": {
 						"ms": 3.21,
@@ -16247,6 +16645,7 @@
 					"kernels_ms": 2,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 127,
 					"compile": null,
 					"tensorrt": null
@@ -16279,6 +16678,7 @@
 					"kernels_ms": 2.2,
 					"speedup": 3.4,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 200,
 					"compile": null,
 					"tensorrt": null
@@ -16311,6 +16711,7 @@
 					"kernels_ms": 3,
 					"speedup": 5.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 616,
 					"compile": null,
 					"tensorrt": null
@@ -16343,6 +16744,7 @@
 					"kernels_ms": 3.2,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 413,
 					"compile": {
 						"ms": 3.34,
@@ -16385,6 +16787,7 @@
 					"kernels_ms": 3.3,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 888,
 					"compile": {
 						"ms": 11.8,
@@ -16427,6 +16830,7 @@
 					"kernels_ms": 3.3,
 					"speedup": 3.4,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 887,
 					"compile": {
 						"ms": 5.38,
@@ -16469,6 +16873,7 @@
 					"kernels_ms": 3.3,
 					"speedup": 3.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 883,
 					"compile": {
 						"ms": 5.15,
@@ -16511,6 +16916,7 @@
 					"kernels_ms": 3.6,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 441,
 					"compile": {
 						"ms": 4.3,
@@ -16553,6 +16959,7 @@
 					"kernels_ms": 4.2,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1185,
 					"compile": {
 						"ms": 7.02,
@@ -16595,6 +17002,7 @@
 					"kernels_ms": 4.2,
 					"speedup": 3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1181,
 					"compile": {
 						"ms": 6.62,
@@ -16637,6 +17045,7 @@
 					"kernels_ms": 4.2,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 864,
 					"compile": null,
 					"tensorrt": null
@@ -16669,6 +17078,7 @@
 					"kernels_ms": 4.3,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1185,
 					"compile": {
 						"ms": 6.98,
@@ -16711,6 +17121,7 @@
 					"kernels_ms": 4.3,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1182,
 					"compile": {
 						"ms": 6.71,
@@ -16753,6 +17164,7 @@
 					"kernels_ms": 4.6,
 					"speedup": 3.1,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 624,
 					"compile": {
 						"ms": 6.04,
@@ -16795,6 +17207,7 @@
 					"kernels_ms": 4.6,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 655,
 					"compile": {
 						"ms": 6.03,
@@ -16837,6 +17250,7 @@
 					"kernels_ms": 4.6,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 655,
 					"compile": null,
 					"tensorrt": null
@@ -16869,6 +17283,7 @@
 					"kernels_ms": 4.7,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1054,
 					"compile": {
 						"ms": 6.17,
@@ -16911,6 +17326,7 @@
 					"kernels_ms": 4.8,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1056,
 					"compile": {
 						"ms": 6.36,
@@ -16953,6 +17369,7 @@
 					"kernels_ms": 4.8,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1054,
 					"compile": null,
 					"tensorrt": null
@@ -16985,6 +17402,7 @@
 					"kernels_ms": 4.8,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 862,
 					"compile": {
 						"ms": 6.19,
@@ -17027,6 +17445,7 @@
 					"kernels_ms": 4.8,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 862,
 					"compile": {
 						"ms": 6.24,
@@ -17069,6 +17488,7 @@
 					"kernels_ms": 4.9,
 					"speedup": 3.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 865,
 					"compile": {
 						"ms": 6.59,
@@ -17111,6 +17531,7 @@
 					"kernels_ms": 5,
 					"speedup": 3.6,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 889,
 					"compile": {
 						"ms": 6.53,
@@ -17153,6 +17574,7 @@
 					"kernels_ms": 7.4,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1289,
 					"compile": null,
 					"tensorrt": null
@@ -17185,6 +17607,7 @@
 					"kernels_ms": 7.4,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1789,
 					"compile": {
 						"ms": 18.1,
@@ -17227,6 +17650,7 @@
 					"kernels_ms": 8.2,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2153,
 					"compile": null,
 					"tensorrt": null
@@ -17259,6 +17683,7 @@
 					"kernels_ms": 8.2,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2150,
 					"compile": null,
 					"tensorrt": null
@@ -17291,6 +17716,7 @@
 					"kernels_ms": 8.3,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 1750,
 					"compile": {
 						"ms": 11.6,
@@ -17333,6 +17759,7 @@
 					"kernels_ms": 8.5,
 					"speedup": 3.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1645,
 					"compile": null,
 					"tensorrt": null
@@ -17365,6 +17792,7 @@
 					"kernels_ms": 10.6,
 					"speedup": 2.8,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 3166,
 					"compile": {
 						"ms": 25.5,
@@ -17407,6 +17835,7 @@
 					"kernels_ms": 10.6,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 3163,
 					"compile": {
 						"ms": 15.3,
@@ -17449,6 +17878,7 @@
 					"kernels_ms": 10.6,
 					"speedup": 2.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 3165,
 					"compile": {
 						"ms": 16.9,
@@ -17491,6 +17921,7 @@
 					"kernels_ms": 12.7,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2222,
 					"compile": null,
 					"tensorrt": null
@@ -17523,6 +17954,7 @@
 					"kernels_ms": 12.8,
 					"speedup": 2.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2222,
 					"compile": null,
 					"tensorrt": null
@@ -17555,6 +17987,7 @@
 					"kernels_ms": 16.9,
 					"speedup": 3.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 5123,
 					"compile": {
 						"ms": 24.3,
@@ -17597,6 +18030,7 @@
 					"kernels_ms": 17,
 					"speedup": 3.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 5180,
 					"compile": {
 						"ms": 24.5,
@@ -17661,6 +18095,7 @@
 					"kernels_ms": 2.8,
 					"speedup": 2.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 227,
 					"compile": {
 						"ms": 3.89,
@@ -17703,6 +18138,7 @@
 					"kernels_ms": 4.3,
 					"speedup": 2.3,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 485,
 					"compile": {
 						"ms": 4.27,
@@ -17767,6 +18203,7 @@
 					"kernels_ms": 21.3,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 741,
 					"compile": {
 						"ms": 25.5,
@@ -17809,6 +18246,7 @@
 					"kernels_ms": 82.5,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 279,
 					"compile": {
 						"ms": 73.1,
@@ -17873,6 +18311,7 @@
 					"kernels_ms": 29.6,
 					"speedup": 7.4,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 740,
 					"compile": {
 						"ms": 175,
@@ -17915,6 +18354,7 @@
 					"kernels_ms": 35.2,
 					"speedup": 6.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 702,
 					"compile": {
 						"ms": 70.8,
@@ -17957,6 +18397,7 @@
 					"kernels_ms": 119.7,
 					"speedup": 1.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 5479,
 					"compile": {
 						"ms": 82.2,
@@ -17999,6 +18440,7 @@
 					"kernels_ms": 172.5,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 1239,
 					"compile": null,
 					"tensorrt": null
@@ -18031,6 +18473,7 @@
 					"kernels_ms": 363.8,
 					"speedup": 2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 4852,
 					"compile": {
 						"ms": 427,
@@ -18073,6 +18516,7 @@
 					"kernels_ms": 458.4,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 3702,
 					"compile": {
 						"ms": 557,
@@ -18115,6 +18559,7 @@
 					"kernels_ms": 464.4,
 					"speedup": 2,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 3422,
 					"compile": {
 						"ms": 589,
@@ -18157,6 +18602,7 @@
 					"kernels_ms": 544,
 					"speedup": 3.6,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 3697,
 					"compile": {
 						"ms": 596,
@@ -18199,6 +18645,7 @@
 					"kernels_ms": 559.7,
 					"speedup": 1.9,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 2367,
 					"compile": null,
 					"tensorrt": null
@@ -18222,6 +18669,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -18245,6 +18693,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -18268,6 +18717,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -18334,6 +18784,7 @@
 					"kernels_ms": 16,
 					"speedup": 2.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 160,
 					"compile": {
 						"ms": 23.8,
@@ -18376,6 +18827,7 @@
 					"kernels_ms": 23.2,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 181,
 					"compile": {
 						"ms": 34.6,
@@ -18418,6 +18870,7 @@
 					"kernels_ms": 36.3,
 					"speedup": 5.4,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 197,
 					"compile": {
 						"ms": 110,
@@ -18460,6 +18913,7 @@
 					"kernels_ms": 41.8,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 580,
 					"compile": {
 						"ms": 33.4,
@@ -18502,6 +18956,7 @@
 					"kernels_ms": 50.4,
 					"speedup": 6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 415,
 					"compile": {
 						"ms": 150,
@@ -18544,6 +18999,7 @@
 					"kernels_ms": 50.5,
 					"speedup": 5.9,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 415,
 					"compile": {
 						"ms": 150,
@@ -18586,6 +19042,7 @@
 					"kernels_ms": 51.3,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 590,
 					"compile": {
 						"ms": 48.7,
@@ -18628,6 +19085,7 @@
 					"kernels_ms": 58.9,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 790,
 					"compile": {
 						"ms": 91.5,
@@ -18670,6 +19128,7 @@
 					"kernels_ms": 58.9,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 790,
 					"compile": {
 						"ms": 91.4,
@@ -18712,6 +19171,7 @@
 					"kernels_ms": 59.1,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 790,
 					"compile": {
 						"ms": 91.4,
@@ -18754,6 +19214,7 @@
 					"kernels_ms": 73.1,
 					"speedup": 5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 435,
 					"compile": {
 						"ms": 192,
@@ -18796,6 +19257,7 @@
 					"kernels_ms": 73.1,
 					"speedup": 5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 435,
 					"compile": {
 						"ms": 191,
@@ -18838,6 +19300,7 @@
 					"kernels_ms": 73.1,
 					"speedup": 5,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 435,
 					"compile": {
 						"ms": 191,
@@ -18880,6 +19343,7 @@
 					"kernels_ms": 83.1,
 					"speedup": 5.8,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 333,
 					"compile": {
 						"ms": 195,
@@ -18922,6 +19386,7 @@
 					"kernels_ms": 83.5,
 					"speedup": 5.7,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 342,
 					"compile": {
 						"ms": 195,
@@ -18964,6 +19429,7 @@
 					"kernels_ms": 83.6,
 					"speedup": 5.7,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 333,
 					"compile": {
 						"ms": 195,
@@ -19006,6 +19472,7 @@
 					"kernels_ms": 89.8,
 					"speedup": 2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 733,
 					"compile": {
 						"ms": 89.9,
@@ -19045,6 +19512,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 250,
@@ -19084,6 +19552,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 250,
@@ -19123,6 +19592,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 250,
@@ -19162,6 +19632,7 @@
 					"kernels_ms": 380,
 					"speedup": 1,
 					"speedup_vs": "portable",
+					"year": 2025,
 					"peak_mib": 1137,
 					"compile": {
 						"ms": 258,
@@ -19201,6 +19672,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": {
 						"ms": 258,
@@ -19240,6 +19712,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": {
 						"ms": 258,
@@ -19279,6 +19752,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": {
 						"ms": 258,
@@ -19321,6 +19795,7 @@
 					"kernels_ms": 427.4,
 					"speedup": 1.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1301,
 					"compile": {
 						"ms": 291,
@@ -19363,6 +19838,7 @@
 					"kernels_ms": 733.5,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2026,
 					"peak_mib": 2866,
 					"compile": {
 						"ms": 917,
@@ -19402,6 +19878,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -19431,6 +19908,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -19460,6 +19938,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -19489,6 +19968,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 382,
@@ -19528,6 +20008,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 382,
@@ -19570,6 +20051,7 @@
 					"kernels_ms": 864.5,
 					"speedup": 3.7,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 968,
 					"compile": {
 						"ms": 1640,
@@ -19612,6 +20094,7 @@
 					"kernels_ms": 864.6,
 					"speedup": 3.8,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 968,
 					"compile": {
 						"ms": 1644,
@@ -19654,6 +20137,7 @@
 					"kernels_ms": 864.8,
 					"speedup": 3.6,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 968,
 					"compile": {
 						"ms": 1642,
@@ -19693,6 +20177,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 765,
@@ -19732,6 +20217,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 765,
@@ -19771,6 +20257,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 765,
@@ -19810,6 +20297,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1116,
@@ -19849,6 +20337,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1116,
@@ -19888,6 +20377,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1116,
@@ -19927,6 +20417,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 1116,
@@ -19960,6 +20451,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -19983,6 +20475,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2025,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -20034,6 +20527,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 5.65,
@@ -20073,6 +20567,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 16.2,
@@ -20112,6 +20607,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 29.5,
@@ -20151,6 +20647,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": {
 						"ms": 176,
@@ -20190,6 +20687,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2021,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -20219,6 +20717,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2023,
 					"peak_mib": null,
 					"compile": {
 						"ms": 113,
@@ -20258,6 +20757,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": {
 						"ms": 164,
@@ -20300,6 +20800,7 @@
 					"kernels_ms": 356,
 					"speedup": 1.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1720,
 					"compile": {
 						"ms": null,
@@ -20342,6 +20843,7 @@
 					"kernels_ms": 405.9,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1909,
 					"compile": {
 						"ms": 576,
@@ -20381,6 +20883,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2024,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -20404,6 +20907,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -20427,6 +20931,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -20481,6 +20986,7 @@
 					"kernels_ms": 140.8,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 463,
 					"compile": {
 						"ms": 131,
@@ -20523,6 +21029,7 @@
 					"kernels_ms": 151.1,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 764,
 					"compile": {
 						"ms": 74.1,
@@ -20565,6 +21072,7 @@
 					"kernels_ms": 177.6,
 					"speedup": 1.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 782,
 					"compile": {
 						"ms": 82.6,
@@ -20607,6 +21115,7 @@
 					"kernels_ms": 192.5,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 508,
 					"compile": {
 						"ms": 183,
@@ -20649,6 +21158,7 @@
 					"kernels_ms": 221.3,
 					"speedup": 2.2,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1076,
 					"compile": {
 						"ms": 284,
@@ -20691,6 +21201,7 @@
 					"kernels_ms": 232.9,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 978,
 					"compile": {
 						"ms": 229,
@@ -20733,6 +21244,7 @@
 					"kernels_ms": 382.2,
 					"speedup": 2.4,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1313,
 					"compile": {
 						"ms": 398,
@@ -20775,6 +21287,7 @@
 					"kernels_ms": 1102.3,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1368,
 					"compile": {
 						"ms": null,
@@ -20817,6 +21330,7 @@
 					"kernels_ms": 1120.3,
 					"speedup": 1.7,
 					"speedup_vs": "original",
+					"year": 2025,
 					"peak_mib": 1368,
 					"compile": {
 						"ms": null,
@@ -20850,6 +21364,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2026,
 					"peak_mib": null,
 					"compile": null,
 					"tensorrt": null
@@ -20904,6 +21419,7 @@
 					"kernels_ms": 18.3,
 					"speedup": 1.2,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 950,
 					"compile": {
 						"ms": 42.3,
@@ -20946,6 +21462,7 @@
 					"kernels_ms": 21.4,
 					"speedup": 1.1,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 967,
 					"compile": {
 						"ms": 44.5,
@@ -20988,6 +21505,7 @@
 					"kernels_ms": 21.5,
 					"speedup": 1.1,
 					"speedup_vs": "original",
+					"year": 2020,
 					"peak_mib": 967,
 					"compile": {
 						"ms": 44.9,
@@ -21030,6 +21548,7 @@
 					"kernels_ms": 84.5,
 					"speedup": 1.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1660,
 					"compile": null,
 					"tensorrt": null
@@ -21062,6 +21581,7 @@
 					"kernels_ms": 84.5,
 					"speedup": 1.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1660,
 					"compile": null,
 					"tensorrt": null
@@ -21094,6 +21614,7 @@
 					"kernels_ms": 206.7,
 					"speedup": 1.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 3129,
 					"compile": null,
 					"tensorrt": null
@@ -21126,6 +21647,7 @@
 					"kernels_ms": 206.8,
 					"speedup": 1.4,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 3129,
 					"compile": null,
 					"tensorrt": null
@@ -21158,6 +21680,7 @@
 					"kernels_ms": 444.3,
 					"speedup": 1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 4763,
 					"compile": null,
 					"tensorrt": null
@@ -21187,6 +21710,7 @@
 					"kernels_ms": 1694.7,
 					"speedup": 1.6,
 					"speedup_vs": "portable",
+					"year": 2024,
 					"peak_mib": 7860,
 					"compile": null,
 					"tensorrt": null
@@ -21216,6 +21740,7 @@
 					"kernels_ms": 1695,
 					"speedup": 1.7,
 					"speedup_vs": "portable",
+					"year": 2024,
 					"peak_mib": 7860,
 					"compile": null,
 					"tensorrt": null
@@ -21270,6 +21795,7 @@
 					"kernels_ms": 14.6,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 487,
 					"compile": {
 						"ms": 13.2,
@@ -21312,6 +21838,7 @@
 					"kernels_ms": 14.9,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 487,
 					"compile": {
 						"ms": 13.2,
@@ -21354,6 +21881,7 @@
 					"kernels_ms": 18,
 					"speedup": 1.2,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 473,
 					"compile": {
 						"ms": 12.5,
@@ -21396,6 +21924,7 @@
 					"kernels_ms": 21.2,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 219,
 					"compile": null,
 					"tensorrt": null
@@ -21428,6 +21957,7 @@
 					"kernels_ms": 24,
 					"speedup": 1.8,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 125,
 					"compile": {
 						"ms": 22.6,
@@ -21467,6 +21997,7 @@
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
+					"year": 2022,
 					"peak_mib": null,
 					"compile": {
 						"ms": 30.8,
@@ -21509,6 +22040,7 @@
 					"kernels_ms": 80.2,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 333,
 					"compile": {
 						"ms": 85.2,
@@ -21551,6 +22083,7 @@
 					"kernels_ms": 129.8,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 179,
 					"compile": {
 						"ms": 154,
@@ -21593,6 +22126,7 @@
 					"kernels_ms": 131.8,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1197,
 					"compile": {
 						"ms": 114,
@@ -21635,6 +22169,7 @@
 					"kernels_ms": 268.2,
 					"speedup": 8.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1535,
 					"compile": {
 						"ms": 158,
@@ -21672,6 +22207,7 @@
 					"kernels_ms": 402.7,
 					"speedup": 1.6,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1220,
 					"compile": {
 						"ms": 354,
@@ -21714,6 +22250,7 @@
 					"kernels_ms": 557.8,
 					"speedup": 5.8,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1577,
 					"compile": {
 						"ms": 781,
@@ -21756,6 +22293,7 @@
 					"kernels_ms": 580.4,
 					"speedup": 6,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1390,
 					"compile": {
 						"ms": 795,
@@ -21798,6 +22336,7 @@
 					"kernels_ms": 588.5,
 					"speedup": 4.2,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1577,
 					"compile": {
 						"ms": 807,
@@ -21840,6 +22379,7 @@
 					"kernels_ms": 730.2,
 					"speedup": 10.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 2626,
 					"compile": {
 						"ms": 618,
@@ -21877,6 +22417,7 @@
 					"kernels_ms": 974.4,
 					"speedup": 2.5,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 1985,
 					"compile": {
 						"ms": 750,
@@ -21914,6 +22455,7 @@
 					"kernels_ms": 1043.5,
 					"speedup": 3.6,
 					"speedup_vs": "original",
+					"year": 2021,
 					"peak_mib": 1872,
 					"compile": {
 						"ms": 1426,
@@ -21956,6 +22498,7 @@
 					"kernels_ms": 1246.7,
 					"speedup": 3.9,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2730,
 					"compile": {
 						"ms": 964,
@@ -21993,6 +22536,7 @@
 					"kernels_ms": 1421.1,
 					"speedup": 6.7,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2737,
 					"compile": {
 						"ms": 1063,
@@ -22030,6 +22574,7 @@
 					"kernels_ms": 1422.5,
 					"speedup": 10.3,
 					"speedup_vs": "original",
+					"year": 2024,
 					"peak_mib": 2692,
 					"compile": {
 						"ms": 1210,
@@ -22067,6 +22612,7 @@
 					"kernels_ms": 1444.6,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2022,
 					"peak_mib": 2610,
 					"compile": {
 						"ms": 1185,
@@ -22104,6 +22650,7 @@
 					"kernels_ms": 1444.7,
 					"speedup": 2.1,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2610,
 					"compile": {
 						"ms": 1185,
@@ -22163,6 +22710,7 @@
 					"kernels_ms": 64.2,
 					"speedup": 113.3,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 1037,
 					"compile": null,
 					"tensorrt": null
@@ -22195,6 +22743,7 @@
 					"kernels_ms": 1742.7,
 					"speedup": 26.2,
 					"speedup_vs": "original",
+					"year": 2023,
 					"peak_mib": 2349,
 					"compile": null,
 					"tensorrt": null

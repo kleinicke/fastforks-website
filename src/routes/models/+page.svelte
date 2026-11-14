@@ -407,7 +407,7 @@
 						{#each rows as r (r.task + r.id)}
 							<tr class:upcoming={UPCOMING.has(r.id)}>
 								<th scope="row"
-									><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
+									><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if r.year}<span class="yr" title="Year of the model's paper">{r.year}</span>{/if}{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
 								>
 								{#if task === 'all'}<td class="task">{TASK_META[r.task].name}</td>{/if}
 								{#if more}
@@ -662,6 +662,16 @@
 		font-size: 0.4em;
 		font-weight: 500;
 		letter-spacing: 0;
+	}
+	.head :global(.yr) {
+		margin-left: 0.45rem;
+		color: var(--muted);
+		font-size: 0.78rem;
+		font-weight: 400;
+	}
+	.head :global(.inp) {
+		color: var(--muted);
+		font-weight: 400;
 	}
 	.head :global(.soon) {
 		display: inline-block;

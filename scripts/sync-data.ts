@@ -23,6 +23,22 @@ execFileSync('uv', ['run', '--project', repo, 'python', 'tools/site_data.py', '-
 	stdio: ['ignore', 'inherit', 'inherit']
 });
 
+// The year of each checkpoint's paper: the paper that lists the checkpoint, else the family's first paper without a list.
+const yearOf: Record<string, number> = {};
+const familyYear: Record<string, number> = {};
+for (const f of readdirSync(cardsDir).filter((f) => f.endsWith('.json') && f !== 'index.json')) {
+	const card = JSON.parse(readFileSync(resolve(cardsDir, f), 'utf8')) as {
+		papers: { date: string; variants: string[] }[];
+		variants: { id: string }[];
+	};
+	const first = card.papers.find((p) => !p.variants.length) ?? card.papers[0];
+	if (first?.date) familyYear[f.replace(/\.json$/, '')] = Number(first.date.slice(0, 4));
+	for (const v of card.variants) {
+		const p = card.papers.find((p) => p.variants.includes(v.id)) ?? card.papers.find((p) => !p.variants.length);
+		if (p?.date) yearOf[v.id] = Number(p.date.slice(0, 4));
+	}
+}
+
 const TASK_ORDER_SYNC = [
 	'stereo',
 	'depth',
@@ -82,6 +98,8 @@ type Row = {
 	kernels_ms: number | null;
 	speedup: number | null;
 	speedup_vs: string | null;
+	/** Year of the model's paper (null if the card gives none). */
+	year: number | null;
 	peak_mib: number | null;
 	family: string;
 	mem: { original: Mem; portable: Mem; kernels: Mem };
@@ -187,6 +205,7 @@ for (const line of md) {
 			kernels_ms: num(col((h) => h.startsWith('kernels time'))),
 			speedup: spm ? Number(spm[1]) : null,
 			speedup_vs: spm ? spm[2] : null,
+			year: yearOf[l.id] ?? familyYear[family] ?? null,
 			peak_mib: num(col((h) => h.includes('peak memory'))),
 			compile: null,
 			tensorrt: null
