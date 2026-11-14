@@ -179,7 +179,7 @@
 			{#each rows as r (r.id)}
 				<tr class:upcoming={UPCOMING.has(r.id)}>
 					<th scope="row"
-						><a href={r.doc}><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
+						><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
 					>
 					<td class="num first strong">{fmtMs(r.ms)}{#if r.portable && r.ms !== null}<small>portable</small>{/if}</td>
 					<td class="num">{r.mem ?? '–'}</td>

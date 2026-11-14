@@ -304,3 +304,49 @@ export function timings(device: Device, task: Task): Timing[] {
 
 /** A device's name without the vendor prefix, for narrow column headers. */
 export const shortName = (d: Device) => d.name.replace(/^NVIDIA /, '');
+
+// What each CUDA / Metal kernel library is, in plain words (shown on the model page; the names are internal).
+export const KERNEL_LIBS: Record<string, string> = {
+	fastbb:
+		'fast backbone kernels: flash attention, window attention, instance norm and rotary embeddings for ViT and similar backbones',
+	dpt_fused: 'fused fp16 matrix multiplies and convolutions for DINOv2 backbones and DPT depth heads',
+	cudnn_hacc: 'convolutions with fp16 accumulation (cuDNN)',
+	cutlass_conv: 'CUTLASS convolutions with the recurrent update (GRU) fused in',
+	deform_conv: 'deformable convolution fused into one kernel',
+	fvm_conv: 'fused convolutions for image classifiers',
+	fvm_extra: 'fused transformer row operations (rotary split, SwiGLU with LayerNorm)',
+	fvm_mb: 'fused MBConv blocks (MobileNet and EfficientNet families)',
+	fvm_r3: 'further fused classifier blocks',
+	fvm_seg: 'fused kernels for Mask2Former and OneFormer',
+	seg_conv: 'fused convolutions for segmentation CNNs',
+	seg_up: 'fused resize and argmax of segmentation scores',
+	stereo_ops: 'stereo building blocks: cost volume, soft-argmax, upsampling',
+	igev: 'IGEV stereo: convolution epilogues, correlation lookups, GRU gates',
+	igevpp: 'IGEV++ and GREAT-IGEV: correlation volume, lookups, attention',
+	raft: 'RAFT-Stereo: normalisation, GRU gates, correlation, upsampling',
+	raft_flow: 'RAFT optical flow kernels',
+	fs: 'FoundationStereo: fused epilogues, geometry lookups, GRU gates',
+	fs_cutlass: 'FoundationStereo: CUTLASS convolutions with fused epilogues',
+	ffs_cutlass: 'Fast-FoundationStereo: fused CUTLASS convolutions',
+	cfs: 'C-FoundationStereo-S transformer kernels',
+	crestereo: 'CREStereo: fused adaptive group correlation',
+	hitnet: 'HITNet: cost initialisation, tile and warp matching',
+	hitnet_conv: 'HITNet: fused convolutions',
+	mocha: 'MoCha-Stereo: fused LSTM gate update',
+	mvsanywhere: 'MVSAnywhere: fused cost-volume MLP',
+	patchmatchnet: 'PatchmatchNet: fused cost, weights and aggregation',
+	s2m2: 'S2M2: attention and optimal-transport kernels',
+	s2m2_cutlass: 'S2M2: CUTLASS convolutions',
+	romav2: 'RoMa v2: local correlation without the sampled window tensor',
+	sparse_conv: 'MoGe-3: sparse 3D convolution',
+	vggt_omega: 'VGGT-Omega: fused LayerNorm, residual and rotary kernels',
+	vol_norm: 'instance norm and LeakyReLU on 3D volumes',
+	gsraster: '3D Gaussian splatting rasteriser',
+	ransac: 'RANSAC for matching and pose estimation',
+	flow_metal: 'Metal: RAFT correlation lookup without a volume',
+	pose_metal: 'Metal: top-down pose decoders and crops',
+	sparse_metal: 'Metal: sparse 3D convolution',
+	stereo_metal: 'Metal: stereo kernels',
+	vggt_metal: 'Metal: VGGT rotary embeddings',
+	vit_metal: 'Metal: vision transformer rotary embeddings'
+};

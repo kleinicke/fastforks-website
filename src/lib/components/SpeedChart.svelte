@@ -92,7 +92,7 @@
 			{#each rows as { m, more } (m.id)}
 				<li>
 					<div class="name">
-						<a href={m.doc}><code>{m.id}</code></a>
+						<a href="{m.doc}?variant={m.id}"><code>{m.id}</code></a>
 						{#if m.speedup !== null}
 							<span class="gain" title="kernels against {m.speedup_vs === 'original' ? 'the original code' : 'portable'}"
 								>{m.speedup.toFixed(1)}× <small>vs {m.speedup_vs}</small></span

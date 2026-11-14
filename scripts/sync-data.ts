@@ -397,6 +397,7 @@ const data = {
 	source: { repo: 'https://github.com/kleinicke/fastforks', commit, reference_gpu: ref ?? 'RTX 5060 Ti 16 GB' },
 	totals: {
 		models: list.length,
+		families: new Set(tasks.flatMap((x) => x.models).map((m) => m.doc)).size,
 		tasks: new Set(list.map((m) => m.task)).size,
 		commercial: list.filter((m) => m.commercial === 'yes').length,
 		vs_original: {

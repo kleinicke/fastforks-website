@@ -407,7 +407,7 @@
 						{#each rows as r (r.task + r.id)}
 							<tr class:upcoming={UPCOMING.has(r.id)}>
 								<th scope="row"
-									><a href={r.doc}><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
+									><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
 								>
 								{#if task === 'all'}<td class="task">{TASK_META[r.task].name}</td>{/if}
 								{#if more}

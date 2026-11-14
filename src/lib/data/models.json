@@ -6,6 +6,7 @@
 	},
 	"totals": {
 		"models": 549,
+		"families": 190,
 		"tasks": 19,
 		"commercial": 503,
 		"vs_original": {

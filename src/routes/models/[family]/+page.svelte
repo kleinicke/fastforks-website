@@ -9,7 +9,7 @@
 	import CardLicence from '#lib/components/card/CardLicence.svelte';
 	import CardExample from '#lib/components/card/CardExample.svelte';
 	import CardPose from '#lib/components/card/CardPose.svelte';
-	import { REFERENCE, TASK_META } from '#lib/site.ts';
+	import { KERNEL_LIBS, REFERENCE, TASK_META } from '#lib/site.ts';
 	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms, newestVersion } from '#lib/cards.ts';
 
 	let { data } = $props();
@@ -86,6 +86,13 @@
 	};
 	const unit = $derived(card.parity.relative ? '(relative)' : card.parity.unit);
 	const kernelName = (k: string) => k.split('@')[0];
+	// The input / output text is written once per task: the first two sentences say what goes in and out, the rest explains the
+	// numbers and applies to several models of the task, so it sits in a fold. Backticks become code.
+	const ioSplit = $derived.by(() => {
+		const parts = card.task_io.split(/(?<=\.)\s+/);
+		return { head: parts.slice(0, 2).join(' '), rest: parts.slice(2).join(' ') };
+	});
+	const codeParts = (t: string) => t.split('`');
 
 	// Matchers: relative pose from the matches on the GPU (fastforks.matching.estimate_pose).
 	const pose = $derived(card.task === 'matching');
@@ -319,7 +326,17 @@ pose.R, pose.t, pose.inliers  <span class="c"># rotation, unit translation, inli
 	<p>{card.summary}</p>
 	<dl class="facts">
 		<dt>Input / output</dt>
-		<dd>{card.task_io}</dd>
+		<dd>
+			{#each codeParts(ioSplit.head) as part, i (i)}{#if i % 2}<code>{part}</code>{:else}{part}{/if}{/each}
+			{#if ioSplit.rest}
+				<details class="io">
+					<summary>What the numbers mean, and which models need the camera focal length</summary>
+					<p>
+						{#each codeParts(ioSplit.rest) as part, i (i)}{#if i % 2}<code>{part}</code>{:else}{part}{/if}{/each}
+					</p>
+				</details>
+			{/if}
+		</dd>
 		<dt>Input size</dt>
 		<dd>
 			{variant.input_size}{#if variant.tested_max}; tested up to {variant.tested_max.size} ({mib(variant.tested_max.alloc_mib)}
@@ -349,14 +366,16 @@ pose.R, pose.t, pose.inliers  <span class="c"># rotation, unit translation, inli
 		{/if}
 		<dt>CUDA kernels</dt>
 		<dd>
-			{#if card.kernel_libs.length}{#each card.kernel_libs as k (k)}<code class="chip">{k}</code>{/each}{:else}none{card.no_kernels_reason
+			{#if card.kernel_libs.length}<ul class="libs">{#each card.kernel_libs as k (k)}<li>
+						<code class="chip">{k}</code>{#if KERNEL_LIBS[k]}<span class="muted"> {KERNEL_LIBS[k]}</span>{/if}
+					</li>{/each}</ul>{:else}none{card.no_kernels_reason
 					? `: ${card.no_kernels_reason}`
 					: ''}{/if}
 		</dd>
 		{#if card.mps_kernel_libs.length || card.mps_dtypes.length}
 			<dt>Apple (MPS)</dt>
 			<dd>
-				{#each card.mps_kernel_libs as k (k)}<code class="chip">{k}</code>{/each}
+				{#each card.mps_kernel_libs as k (k)}<code class="chip" title={KERNEL_LIBS[k] ?? ''}>{k}</code>{#if KERNEL_LIBS[k]}<span class="muted"> {KERNEL_LIBS[k]}.</span>{/if}{/each}
 				{#if card.mps_dtypes.length}<small>{card.mps_dtypes.map(dt).join(', ')}</small>{/if}
 			</dd>
 		{/if}
@@ -624,6 +643,23 @@ pose.R, pose.t, pose.inliers  <span class="c"># rotation, unit translation, inli
 	:global(.prose code.chip) {
 		display: inline-block;
 		margin: 0.1rem 0.25rem 0.1rem 0;
+	}
+	.libs {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.libs .muted {
+		margin-left: 0.3rem;
+	}
+	.io summary {
+		cursor: pointer;
+		color: var(--muted);
+		font-size: 0.9rem;
+		margin-top: 0.3rem;
+	}
+	.io p {
+		margin: 0.4rem 0 0;
 	}
 	.facts {
 		display: grid;

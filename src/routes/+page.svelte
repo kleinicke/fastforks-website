@@ -5,7 +5,7 @@
 
 	const t = data.totals;
 	const title = 'fastforks: faster ports of published vision models';
-	const description = `${t.models} published vision models (stereo, depth, SAM, DINOv3, detection and more) behind one Python API. A plain PyTorch port checked against the authors' code, plus CUDA and Metal kernels: ${t.vs_original.median}× faster than the original in the median, measured on an ${data.source.reference_gpu}.`;
+	const description = `${t.models} pretrained models from ${t.families} model families (stereo, depth, SAM, DINOv3, detection and more) behind one Python API. A plain PyTorch port checked against the authors' code, plus CUDA and Metal kernels: ${t.vs_original.median}× faster than the original in the median, measured on an ${data.source.reference_gpu}.`;
 
 	// schema.org metadata for search engines; `<` escaped so the JSON cannot close the script tag.
 	const jsonLd = JSON.stringify({
@@ -44,7 +44,7 @@
 	<div class="wrap grid">
 		<div class="copy">
 			<p class="eyebrow">Open source · Python · PyTorch</p>
-			<h1>Faster ports of {t.models} published vision models</h1>
+			<h1>Faster ports of {t.models} pretrained vision models from {t.families} model families</h1>
 			<p class="intro">
 				Load a stereo, depth, segmentation, detection or feature model by its id and get the original
 				network's output, faster, within fp16 rounding. Each model is ported to plain PyTorch and checked against the authors'
@@ -71,7 +71,8 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 	</div>
 	<div class="wrap">
 		<dl class="stats">
-			<div><dt>models</dt><dd>{t.models}</dd></div>
+			<div><dt>pretrained models</dt><dd>{t.models}</dd></div>
+			<div><dt>model families</dt><dd>{t.families}</dd></div>
 			<div><dt>tasks</dt><dd>{t.tasks}</dd></div>
 			<div><dt>median vs original</dt><dd>{t.vs_original.median}×</dd></div>
 			<div><dt>best vs original</dt><dd>{t.vs_original.max}×</dd></div>
