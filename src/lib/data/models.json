@@ -1,17 +1,17 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "88d1956e",
+		"commit": "f104019b",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
-		"models": 505,
-		"tasks": 17,
-		"commercial": 466,
+		"models": 549,
+		"tasks": 19,
+		"commercial": 503,
 		"vs_original": {
-			"models": 414,
+			"models": 435,
 			"median": 3.3,
-			"max": 63.2
+			"max": 113.3
 		}
 	},
 	"tasks": [
@@ -4272,6 +4272,98 @@
 					}
 				},
 				{
+					"id": "any2full-b",
+					"doc": "/models/any2full",
+					"family": "any2full",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "any2full-l",
+					"doc": "/models/any2full",
+					"family": "any2full",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "any2full-s",
+					"doc": "/models/any2full",
+					"family": "any2full",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "depthfm-v1",
+					"doc": "/models/depthfm",
+					"family": "depthfm",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "lingbot-depth",
 					"doc": "/models/lingbot_depth",
 					"family": "lingbot_depth",
@@ -4304,6 +4396,29 @@
 						"kernels": null
 					},
 					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "omni-dc",
+					"doc": "/models/omni_dc",
+					"family": "omni_dc",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "no",
 					"accuracy": "–",
 					"accuracy_metric": null,
 					"original_ms": null,
@@ -9438,6 +9553,45 @@
 						"part": null,
 						"prep_s": 84.9
 					}
+				},
+				{
+					"id": "bisenet-face-parsing",
+					"doc": "/models/bisenet",
+					"family": "bisenet",
+					"mem": {
+						"original": {
+							"alloc": 69,
+							"reserved": 94
+						},
+						"portable": {
+							"alloc": 51,
+							"reserved": 72
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 1.34,
+						"fails": null,
+						"part": null,
+						"prep_s": 5.79
+					},
+					"tensorrt": {
+						"ms": 0.678,
+						"fails": null,
+						"part": null,
+						"prep_s": 12.9
+					}
 				}
 			]
 		},
@@ -9457,13 +9611,13 @@
 					"label": "Most accurate",
 					"id": "birefnet",
 					"doc": "/models/birefnet",
-					"note": "214.3 ms, error 0.0325"
+					"note": "121.1 ms, error 0.0325"
 				},
 				{
 					"label": "Best trade-off",
 					"id": "ben2",
 					"doc": "/models/ben2",
-					"note": "172.6 ms, error 0.0403"
+					"note": "103.5 ms, error 0.0403"
 				},
 				{
 					"label": "Fastest commercially usable",
@@ -9475,7 +9629,7 @@
 					"label": "Most accurate commercially usable",
 					"id": "birefnet",
 					"doc": "/models/birefnet",
-					"note": "214.3 ms, error 0.0325"
+					"note": "121.1 ms, error 0.0325"
 				}
 			],
 			"models": [
@@ -9700,7 +9854,7 @@
 						},
 						"portable": {
 							"alloc": 432,
-							"reserved": 494
+							"reserved": 488
 						},
 						"kernels": null
 					},
@@ -9710,7 +9864,7 @@
 					"original_ms": 71.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 45.1,
+					"portable_ms": 41.7,
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
@@ -9739,7 +9893,7 @@
 						},
 						"portable": {
 							"alloc": 810,
-							"reserved": 932
+							"reserved": 952
 						},
 						"kernels": {
 							"alloc": 754,
@@ -9752,9 +9906,9 @@
 					"original_ms": 75.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 67.3,
-					"kernels_ms": 59.3,
-					"speedup": 1.3,
+					"portable_ms": 58,
+					"kernels_ms": 48.1,
+					"speedup": 1.6,
 					"speedup_vs": "original",
 					"peak_mib": 754,
 					"compile": {
@@ -9813,6 +9967,171 @@
 					}
 				},
 				{
+					"id": "ben2",
+					"doc": "/models/ben2",
+					"family": "ben2",
+					"mem": {
+						"original": {
+							"alloc": 2466,
+							"reserved": 2772
+						},
+						"portable": {
+							"alloc": 1681,
+							"reserved": 1976
+						},
+						"kernels": {
+							"alloc": 1942,
+							"reserved": 2238
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0403",
+					"accuracy_metric": "DIS-VD MAE",
+					"original_ms": 200.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 110.3,
+					"kernels_ms": 103.5,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 1942,
+					"compile": {
+						"ms": 103,
+						"fails": null,
+						"part": null,
+						"prep_s": 70.8
+					},
+					"tensorrt": {
+						"ms": 58.2,
+						"fails": null,
+						"part": null,
+						"prep_s": 140
+					}
+				},
+				{
+					"id": "inspyrenet",
+					"doc": "/models/inspyrenet",
+					"family": "inspyrenet",
+					"mem": {
+						"original": {
+							"alloc": 3240,
+							"reserved": 3262
+						},
+						"portable": {
+							"alloc": 1649,
+							"reserved": 1848
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": 240.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 108.5,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 85.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 70.8
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "TensorRT: NaN output (onnxruntime on the same ONNX is right)",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "birefnet",
+					"doc": "/models/birefnet",
+					"family": "birefnet",
+					"mem": {
+						"original": {
+							"alloc": 1666,
+							"reserved": 1930
+						},
+						"portable": {
+							"alloc": 1660,
+							"reserved": 1908
+						},
+						"kernels": {
+							"alloc": 1674,
+							"reserved": 1916
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0325",
+					"accuracy_metric": "DIS-VD MAE",
+					"original_ms": 234.4,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 131.4,
+					"kernels_ms": 121.1,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"peak_mib": 1674,
+					"compile": {
+						"ms": 138,
+						"fails": null,
+						"part": null,
+						"prep_s": 93.8
+					},
+					"tensorrt": {
+						"ms": 87.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 201
+					}
+				},
+				{
+					"id": "rmbg-2.0",
+					"doc": "/models/birefnet",
+					"family": "birefnet",
+					"mem": {
+						"original": {
+							"alloc": 1672,
+							"reserved": 1990
+						},
+						"portable": {
+							"alloc": 1660,
+							"reserved": 1908
+						},
+						"kernels": {
+							"alloc": 1674,
+							"reserved": 1936
+						}
+					},
+					"commercial": "no",
+					"accuracy": "0.0205 / 0.9326",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
+					"original_ms": 149,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 131.5,
+					"kernels_ms": 121.4,
+					"speedup": 1.2,
+					"speedup_vs": "original",
+					"peak_mib": 1674,
+					"compile": {
+						"ms": 110,
+						"fails": null,
+						"part": null,
+						"prep_s": 82.9
+					},
+					"tensorrt": {
+						"ms": 88.1,
+						"fails": null,
+						"part": null,
+						"prep_s": 219
+					}
+				},
+				{
 					"id": "vitmatte-b",
 					"doc": "/models/vitmatte",
 					"family": "vitmatte",
@@ -9855,127 +10174,287 @@
 					}
 				},
 				{
-					"id": "inspyrenet",
-					"doc": "/models/inspyrenet",
-					"family": "inspyrenet",
+					"id": "matanyone",
+					"doc": "/models/matanyone",
+					"family": "matanyone",
 					"mem": {
 						"original": {
-							"alloc": 3240,
-							"reserved": 3262
+							"alloc": 2978,
+							"reserved": 3208
 						},
 						"portable": {
-							"alloc": 1649,
-							"reserved": 1854
+							"alloc": 2719,
+							"reserved": 2908
 						},
 						"kernels": null
 					},
-					"commercial": "yes",
+					"commercial": "no",
 					"accuracy": "–",
 					"accuracy_metric": null,
-					"original_ms": 240.9,
+					"original_ms": 1219.9,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 159.4,
+					"portable_ms": 1208.1,
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
 					"peak_mib": null,
-					"compile": {
-						"ms": 85.8,
-						"fails": null,
-						"part": null,
-						"prep_s": 70.8
-					},
-					"tensorrt": {
-						"ms": null,
-						"fails": "TensorRT: NaN output (onnxruntime on the same ONNX is right)",
-						"part": null,
-						"prep_s": null
-					}
+					"compile": null,
+					"tensorrt": null
+				}
+			]
+		},
+		{
+			"id": "edges",
+			"title": "Edges",
+			"input": "1080x1920",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "teed",
+					"doc": "/models/teed",
+					"note": "4.1 ms"
 				},
 				{
-					"id": "ben2",
-					"doc": "/models/ben2",
-					"family": "ben2",
+					"label": "Fastest commercially usable",
+					"id": "teed",
+					"doc": "/models/teed",
+					"note": "4.1 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "teed",
+					"doc": "/models/teed",
+					"family": "teed",
 					"mem": {
 						"original": {
-							"alloc": 2466,
-							"reserved": 2772
+							"alloc": 149,
+							"reserved": 184
 						},
 						"portable": {
-							"alloc": 1681,
-							"reserved": 1976
+							"alloc": 122,
+							"reserved": 146
 						},
-						"kernels": {
-							"alloc": 1946,
-							"reserved": 2238
-						}
+						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": "0.0403",
-					"accuracy_metric": "DIS-VD MAE",
-					"original_ms": 200.6,
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 29.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 184.4,
-					"kernels_ms": 172.6,
-					"speedup": 1.2,
-					"speedup_vs": "original",
-					"peak_mib": 1946,
-					"compile": {
-						"ms": 103,
-						"fails": null,
-						"part": null,
-						"prep_s": 70.8
-					},
-					"tensorrt": {
-						"ms": 58.2,
-						"fails": null,
-						"part": null,
-						"prep_s": 140
-					}
+					"portable_ms": 4.1,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
 				},
 				{
-					"id": "birefnet",
-					"doc": "/models/birefnet",
-					"family": "birefnet",
+					"id": "lineart-anime",
+					"doc": "/models/lineart_anime",
+					"family": "lineart_anime",
 					"mem": {
 						"original": {
-							"alloc": 1666,
-							"reserved": 1930
+							"alloc": 407,
+							"reserved": 448
 						},
 						"portable": {
-							"alloc": 1660,
-							"reserved": 1888
+							"alloc": 241,
+							"reserved": 284
 						},
-						"kernels": {
-							"alloc": 1674,
-							"reserved": 1916
-						}
+						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": "0.0325",
-					"accuracy_metric": "DIS-VD MAE",
-					"original_ms": 234.4,
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 25.2,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 224.5,
-					"kernels_ms": 214.3,
-					"speedup": 1.1,
-					"speedup_vs": "original",
-					"peak_mib": 1674,
-					"compile": {
-						"ms": 138,
-						"fails": null,
-						"part": null,
-						"prep_s": 93.8
+					"portable_ms": 8.4,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "mlsd",
+					"doc": "/models/mlsd",
+					"family": "mlsd",
+					"mem": {
+						"original": {
+							"alloc": 185,
+							"reserved": 212
+						},
+						"portable": {
+							"alloc": 127,
+							"reserved": 170
+						},
+						"kernels": null
 					},
-					"tensorrt": {
-						"ms": 87.8,
-						"fails": null,
-						"part": null,
-						"prep_s": 201
-					}
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 35.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 9.3,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "hed",
+					"doc": "/models/hed",
+					"family": "hed",
+					"mem": {
+						"original": {
+							"alloc": 300,
+							"reserved": 324
+						},
+						"portable": {
+							"alloc": 187,
+							"reserved": 224
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 38.5,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 11.3,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "pidinet",
+					"doc": "/models/pidinet",
+					"family": "pidinet",
+					"mem": {
+						"original": {
+							"alloc": 339,
+							"reserved": 368
+						},
+						"portable": {
+							"alloc": 328,
+							"reserved": 372
+						},
+						"kernels": null
+					},
+					"commercial": "no",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 35.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 13.1,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "lineart",
+					"doc": "/models/lineart",
+					"family": "lineart",
+					"mem": {
+						"original": {
+							"alloc": 221,
+							"reserved": 264
+						},
+						"portable": {
+							"alloc": 222,
+							"reserved": 284
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 29.8,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 18.3,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "lineart-coarse",
+					"doc": "/models/lineart",
+					"family": "lineart",
+					"mem": {
+						"original": {
+							"alloc": 221,
+							"reserved": 264
+						},
+						"portable": {
+							"alloc": 222,
+							"reserved": 284
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 30.4,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 18.3,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "anyline",
+					"doc": "/models/anyline",
+					"family": "anyline",
+					"mem": {
+						"original": {
+							"alloc": 909,
+							"reserved": 1002
+						},
+						"portable": {
+							"alloc": 654,
+							"reserved": 722
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 585.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 50.7,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -9987,18 +10466,50 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "efficientvit-sam-l0",
-					"doc": "/models/efficientvit_sam",
-					"note": "4.4 ms"
+					"id": "clipseg",
+					"doc": "/models/clipseg",
+					"note": "2.7 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "efficientvit-sam-l0",
-					"doc": "/models/efficientvit_sam",
-					"note": "4.4 ms"
+					"id": "clipseg",
+					"doc": "/models/clipseg",
+					"note": "2.7 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "clipseg",
+					"doc": "/models/clipseg",
+					"family": "clipseg",
+					"mem": {
+						"original": {
+							"alloc": 346,
+							"reserved": 404
+						},
+						"portable": {
+							"alloc": 362,
+							"reserved": 376
+						},
+						"kernels": {
+							"alloc": 458,
+							"reserved": 544
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 15.3,
+					"original_size": "1024x1024",
+					"original_note": null,
+					"portable_ms": 4.4,
+					"kernels_ms": 2.7,
+					"speedup": 5.6,
+					"speedup_vs": "original",
+					"peak_mib": 458,
+					"compile": null,
+					"tensorrt": null
+				},
 				{
 					"id": "efficientvit-sam-l0",
 					"doc": "/models/efficientvit_sam",
@@ -11449,8 +11960,8 @@
 							"reserved": 174
 						},
 						"portable": {
-							"alloc": 135,
-							"reserved": 154
+							"alloc": 136,
+							"reserved": 156
 						},
 						"kernels": {
 							"alloc": 133,
@@ -11463,7 +11974,7 @@
 					"original_ms": 11.8,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 12.3,
+					"portable_ms": 11.3,
 					"kernels_ms": 3.9,
 					"speedup": 3,
 					"speedup_vs": "original",
@@ -11859,7 +12370,7 @@
 							"reserved": 424
 						},
 						"portable": {
-							"alloc": 140,
+							"alloc": 141,
 							"reserved": 180
 						},
 						"kernels": {
@@ -11873,7 +12384,7 @@
 					"original_ms": 14.4,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 15.1,
+					"portable_ms": 13.2,
 					"kernels_ms": 5.4,
 					"speedup": 2.7,
 					"speedup_vs": "original",
@@ -12459,8 +12970,8 @@
 							"reserved": 248
 						},
 						"portable": {
-							"alloc": 178,
-							"reserved": 188
+							"alloc": 177,
+							"reserved": 206
 						},
 						"kernels": {
 							"alloc": 188,
@@ -12473,7 +12984,7 @@
 					"original_ms": 18.7,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 19.4,
+					"portable_ms": 17.9,
 					"kernels_ms": 10.5,
 					"speedup": 1.8,
 					"speedup_vs": "original",
@@ -12899,18 +13410,50 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "rtmpose-t",
-					"doc": "/models/rtmpose",
-					"note": "2.9 ms"
+					"id": "retinaface-mobilenet0.25",
+					"doc": "/models/retinaface",
+					"note": "2.7 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "rtmpose-t",
-					"doc": "/models/rtmpose",
-					"note": "2.9 ms"
+					"id": "retinaface-mobilenet0.25",
+					"doc": "/models/retinaface",
+					"note": "2.7 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "retinaface-mobilenet0.25",
+					"doc": "/models/retinaface",
+					"family": "retinaface",
+					"mem": {
+						"original": {
+							"alloc": 110,
+							"reserved": 128
+						},
+						"portable": {
+							"alloc": 86,
+							"reserved": 108
+						},
+						"kernels": {
+							"alloc": 105,
+							"reserved": 128
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 75.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 3.4,
+					"kernels_ms": 2.7,
+					"speedup": 27.7,
+					"speedup_vs": "original",
+					"peak_mib": 105,
+					"compile": null,
+					"tensorrt": null
+				},
 				{
 					"id": "rtmpose-t",
 					"doc": "/models/rtmpose",
@@ -14170,6 +14713,38 @@
 						"part": "network on person crops",
 						"prep_s": 20.6
 					}
+				},
+				{
+					"id": "retinaface-resnet50",
+					"doc": "/models/retinaface",
+					"family": "retinaface",
+					"mem": {
+						"original": {
+							"alloc": 371,
+							"reserved": 490
+						},
+						"portable": {
+							"alloc": 405,
+							"reserved": 504
+						},
+						"kernels": {
+							"alloc": 379,
+							"reserved": 464
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 79.4,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 24.3,
+					"kernels_ms": 11.7,
+					"speedup": 6.8,
+					"speedup_vs": "original",
+					"peak_mib": 379,
+					"compile": null,
+					"tensorrt": null
 				},
 				{
 					"id": "dwpose-l-384",
@@ -17616,6 +18191,75 @@
 					"peak_mib": 2367,
 					"compile": null,
 					"tensorrt": null
+				},
+				{
+					"id": "lingbot-map",
+					"doc": "/models/lingbot_map",
+					"family": "lingbot_map",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "resplat-base-re10k",
+					"doc": "/models/resplat",
+					"family": "resplat",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "no",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "resplat-small-dl3dv",
+					"doc": "/models/resplat",
+					"family": "resplat",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -17633,15 +18277,9 @@
 				},
 				{
 					"label": "Most accurate",
-					"id": "flowseek-t-things-notartan",
-					"doc": "/models/flowseek",
-					"note": "395.6 ms, error 3.933"
-				},
-				{
-					"label": "Best trade-off",
-					"id": "neuflow-v2-things",
-					"doc": "/models/neuflow_v2",
-					"note": "58.9 ms, error 4.095"
+					"id": "waft-a1",
+					"doc": "/models/waft",
+					"note": "790.2 ms, error 2.315"
 				},
 				{
 					"label": "Fastest commercially usable",
@@ -17651,9 +18289,9 @@
 				},
 				{
 					"label": "Most accurate commercially usable",
-					"id": "flowseek-t-things-notartan",
-					"doc": "/models/flowseek",
-					"note": "395.6 ms, error 3.933"
+					"id": "waft-a1",
+					"doc": "/models/waft",
+					"note": "790.2 ms, error 2.315"
 				}
 			],
 			"models": [
@@ -17784,6 +18422,38 @@
 					}
 				},
 				{
+					"id": "recover-mn",
+					"doc": "/models/recover",
+					"family": "recover",
+					"mem": {
+						"original": {
+							"alloc": 921,
+							"reserved": 1036
+						},
+						"portable": {
+							"alloc": 580,
+							"reserved": 676
+						},
+						"kernels": {
+							"alloc": 580,
+							"reserved": 676
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.681 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 102.7,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 45.5,
+					"kernels_ms": 41.8,
+					"speedup": 2.5,
+					"speedup_vs": "original",
+					"peak_mib": 580,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "sea-raft-s",
 					"doc": "/models/sea_raft",
 					"family": "sea_raft",
@@ -17866,6 +18536,38 @@
 						"part": null,
 						"prep_s": 67.3
 					}
+				},
+				{
+					"id": "recover-rn",
+					"doc": "/models/recover",
+					"family": "recover",
+					"mem": {
+						"original": {
+							"alloc": 950,
+							"reserved": 1046
+						},
+						"portable": {
+							"alloc": 590,
+							"reserved": 672
+						},
+						"kernels": {
+							"alloc": 590,
+							"reserved": 672
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.292 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 130.3,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 64.1,
+					"kernels_ms": 51.3,
+					"speedup": 2.5,
+					"speedup_vs": "original",
+					"peak_mib": 590,
+					"compile": null,
+					"tensorrt": null
 				},
 				{
 					"id": "neuflow-v2-things",
@@ -18246,6 +18948,38 @@
 					}
 				},
 				{
+					"id": "recover-cx",
+					"doc": "/models/recover",
+					"family": "recover",
+					"mem": {
+						"original": {
+							"alloc": 1066,
+							"reserved": 1168
+						},
+						"portable": {
+							"alloc": 733,
+							"reserved": 892
+						},
+						"kernels": {
+							"alloc": 733,
+							"reserved": 892
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.043 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 178.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 107.2,
+					"kernels_ms": 89.8,
+					"speedup": 2,
+					"speedup_vs": "original",
+					"peak_mib": 733,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "memfof-kitti",
 					"doc": "/models/memfof",
 					"family": "memfof",
@@ -18442,6 +19176,125 @@
 						"part": null,
 						"prep_s": 110
 					}
+				},
+				{
+					"id": "megaflow",
+					"doc": "/models/megaflow",
+					"family": "megaflow",
+					"mem": {
+						"original": {
+							"alloc": 8230,
+							"reserved": 8786
+						},
+						"portable": {
+							"alloc": 3035,
+							"reserved": 3246
+						},
+						"kernels": {
+							"alloc": 2866,
+							"reserved": 3066
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.714 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1588.5,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 1109,
+					"kernels_ms": 733.5,
+					"speedup": 2.2,
+					"speedup_vs": "original",
+					"peak_mib": 2866,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "waft-a1",
+					"doc": "/models/waft",
+					"family": "waft",
+					"mem": {
+						"original": {
+							"alloc": 5537,
+							"reserved": 5916
+						},
+						"portable": {
+							"alloc": 3553,
+							"reserved": 4076
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "2.315",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1533.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 790.2,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "waft-a1-sintel",
+					"doc": "/models/waft",
+					"family": "waft",
+					"mem": {
+						"original": {
+							"alloc": 5537,
+							"reserved": 5916
+						},
+						"portable": {
+							"alloc": 3553,
+							"reserved": 4076
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": 1532.7,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 790.5,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "waft-a1-kitti",
+					"doc": "/models/waft",
+					"family": "waft",
+					"mem": {
+						"original": {
+							"alloc": 5537,
+							"reserved": 5936
+						},
+						"portable": {
+							"alloc": 3553,
+							"reserved": 4196
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "–",
+					"accuracy_metric": null,
+					"original_ms": 1533.3,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 790.8,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
 				},
 				{
 					"id": "gmflow-scale1-mixdata",
@@ -19194,7 +20047,7 @@
 						},
 						"portable": {
 							"alloc": 1300,
-							"reserved": 1406
+							"reserved": 1404
 						},
 						"kernels": null
 					},
@@ -19204,7 +20057,7 @@
 					"original_ms": 41.8,
 					"original_size": "768x1024",
 					"original_note": null,
-					"portable_ms": 48.4,
+					"portable_ms": 40.6,
 					"kernels_ms": null,
 					"speedup": null,
 					"speedup_vs": null,
@@ -20097,6 +20950,224 @@
 						"part": null,
 						"prep_s": 56.3
 					}
+				},
+				{
+					"id": "ema-vfi-small-t",
+					"doc": "/models/ema_vfi",
+					"family": "ema_vfi",
+					"mem": {
+						"original": {
+							"alloc": 2272,
+							"reserved": 2384
+						},
+						"portable": {
+							"alloc": 1614,
+							"reserved": 1792
+						},
+						"kernels": {
+							"alloc": 1660,
+							"reserved": 2178
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "28.65 / 0.8461",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 113.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 89.4,
+					"kernels_ms": 84.5,
+					"speedup": 1.3,
+					"speedup_vs": "original",
+					"peak_mib": 1660,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "ema-vfi-small",
+					"doc": "/models/ema_vfi",
+					"family": "ema_vfi",
+					"mem": {
+						"original": {
+							"alloc": 2272,
+							"reserved": 2384
+						},
+						"portable": {
+							"alloc": 1614,
+							"reserved": 1792
+						},
+						"kernels": {
+							"alloc": 1660,
+							"reserved": 2178
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.44 / 0.8043",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 121.4,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 89.5,
+					"kernels_ms": 84.5,
+					"speedup": 1.4,
+					"speedup_vs": "original",
+					"peak_mib": 1660,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "ema-vfi-t",
+					"doc": "/models/ema_vfi",
+					"family": "ema_vfi",
+					"mem": {
+						"original": {
+							"alloc": 3940,
+							"reserved": 4290
+						},
+						"portable": {
+							"alloc": 2827,
+							"reserved": 3184
+						},
+						"kernels": {
+							"alloc": 3129,
+							"reserved": 4152
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "29.07 / 0.8567",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 286.9,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 232.9,
+					"kernels_ms": 206.7,
+					"speedup": 1.4,
+					"speedup_vs": "original",
+					"peak_mib": 3129,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "ema-vfi",
+					"doc": "/models/ema_vfi",
+					"family": "ema_vfi",
+					"mem": {
+						"original": {
+							"alloc": 3940,
+							"reserved": 4290
+						},
+						"portable": {
+							"alloc": 2827,
+							"reserved": 3204
+						},
+						"kernels": {
+							"alloc": 3129,
+							"reserved": 4152
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.67 / 0.8119",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 296.2,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 233.7,
+					"kernels_ms": 206.8,
+					"speedup": 1.4,
+					"speedup_vs": "original",
+					"peak_mib": 3129,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "film",
+					"doc": "/models/film",
+					"family": "film",
+					"mem": {
+						"original": {
+							"alloc": 2953,
+							"reserved": 3556
+						},
+						"portable": {
+							"alloc": 4747,
+							"reserved": 5078
+						},
+						"kernels": {
+							"alloc": 4763,
+							"reserved": 6188
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.63 / 0.8104",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 463.8,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 527.6,
+					"kernels_ms": 444.3,
+					"speedup": 1,
+					"speedup_vs": "original",
+					"peak_mib": 4763,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "gimm-vfi-r",
+					"doc": "/models/gimm_vfi",
+					"family": "gimm_vfi",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 13698,
+							"reserved": 15340
+						},
+						"kernels": {
+							"alloc": 7860,
+							"reserved": 8942
+						}
+					},
+					"commercial": "no",
+					"accuracy": "28.94 / 0.8543",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 2791.2,
+					"kernels_ms": 1694.7,
+					"speedup": 1.6,
+					"speedup_vs": "portable",
+					"peak_mib": 7860,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "gimm-vfi-r-p",
+					"doc": "/models/gimm_vfi",
+					"family": "gimm_vfi",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 13698,
+							"reserved": 15180
+						},
+						"kernels": {
+							"alloc": 7860,
+							"reserved": 8882
+						}
+					},
+					"commercial": "no",
+					"accuracy": "28.81 / 0.8481",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 2796.9,
+					"kernels_ms": 1695,
+					"speedup": 1.7,
+					"speedup_vs": "portable",
+					"peak_mib": 7860,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -20205,6 +21276,122 @@
 					}
 				},
 				{
+					"id": "gfpgan-v1.4",
+					"doc": "/models/gfpgan",
+					"family": "gfpgan",
+					"mem": {
+						"original": {
+							"alloc": 563,
+							"reserved": 670
+						},
+						"portable": {
+							"alloc": 505,
+							"reserved": 528
+						},
+						"kernels": {
+							"alloc": 473,
+							"reserved": 530
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 21.9,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 21.2,
+					"kernels_ms": 18,
+					"speedup": 1.2,
+					"speedup_vs": "original",
+					"peak_mib": 473,
+					"compile": {
+						"ms": 12.5,
+						"fails": null,
+						"part": null,
+						"prep_s": 27.3
+					},
+					"tensorrt": {
+						"ms": 15.8,
+						"fails": null,
+						"part": null,
+						"prep_s": 115
+					}
+				},
+				{
+					"id": "big-lama",
+					"doc": "/models/lama",
+					"family": "lama",
+					"mem": {
+						"original": {
+							"alloc": 239,
+							"reserved": 286
+						},
+						"portable": {
+							"alloc": 219,
+							"reserved": 242
+						},
+						"kernels": {
+							"alloc": 219,
+							"reserved": 284
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 38,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 26,
+					"kernels_ms": 21.2,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 219,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "realesr-general-x4v3",
+					"doc": "/models/compact",
+					"family": "compact",
+					"mem": {
+						"original": {
+							"alloc": 157,
+							"reserved": 206
+						},
+						"portable": {
+							"alloc": 125,
+							"reserved": 164
+						},
+						"kernels": {
+							"alloc": 125,
+							"reserved": 164
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "26.70 / 0.7701",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 42.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 30.1,
+					"kernels_ms": 24,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"peak_mib": 125,
+					"compile": {
+						"ms": 22.6,
+						"fails": null,
+						"part": null,
+						"prep_s": 3.89
+					},
+					"tensorrt": {
+						"ms": 11.9,
+						"fails": null,
+						"part": null,
+						"prep_s": 15.3
+					}
+				},
+				{
 					"id": "codeformer",
 					"doc": "/models/codeformer",
 					"family": "codeformer",
@@ -20283,6 +21470,48 @@
 						"fails": null,
 						"part": null,
 						"prep_s": 40.3
+					}
+				},
+				{
+					"id": "realplksr-nomoswebphoto-x4",
+					"doc": "/models/realplksr",
+					"family": "realplksr",
+					"mem": {
+						"original": {
+							"alloc": 244,
+							"reserved": 320
+						},
+						"portable": {
+							"alloc": 179,
+							"reserved": 216
+						},
+						"kernels": {
+							"alloc": 179,
+							"reserved": 216
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "26.99 / 0.7481",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 267.3,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 181.8,
+					"kernels_ms": 129.8,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"peak_mib": 179,
+					"compile": {
+						"ms": 154,
+						"fails": null,
+						"part": null,
+						"prep_s": 15.2
+					},
+					"tensorrt": {
+						"ms": 247,
+						"fails": null,
+						"part": null,
+						"prep_s": 26.2
 					}
 				},
 				{
@@ -20533,6 +21762,43 @@
 					}
 				},
 				{
+					"id": "drct-x4",
+					"doc": "/models/drct",
+					"family": "drct",
+					"mem": {
+						"original": {
+							"alloc": 3359,
+							"reserved": 3944
+						},
+						"portable": {
+							"alloc": 2626,
+							"reserved": 3048
+						},
+						"kernels": {
+							"alloc": 2626,
+							"reserved": 2946
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "30.76 / 0.8388",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 7491.7,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 829.8,
+					"kernels_ms": 730.2,
+					"speedup": 10.3,
+					"speedup_vs": "original",
+					"peak_mib": 2626,
+					"compile": {
+						"ms": 618,
+						"fails": null,
+						"part": null,
+						"prep_s": 40.5
+					},
+					"tensorrt": null
+				},
+				{
 					"id": "hat-s-x4",
 					"doc": "/models/hat",
 					"family": "hat",
@@ -20686,6 +21952,43 @@
 					"tensorrt": null
 				},
 				{
+					"id": "drct-l-x4",
+					"doc": "/models/drct",
+					"family": "drct",
+					"mem": {
+						"original": {
+							"alloc": 5574,
+							"reserved": 6926
+						},
+						"portable": {
+							"alloc": 2692,
+							"reserved": 3110
+						},
+						"kernels": {
+							"alloc": 2692,
+							"reserved": 3010
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "31.00 / 0.8434",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 14651.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1606.9,
+					"kernels_ms": 1422.5,
+					"speedup": 10.3,
+					"speedup_vs": "original",
+					"peak_mib": 2692,
+					"compile": {
+						"ms": 1210,
+						"fails": null,
+						"part": null,
+						"prep_s": 67.2
+					},
+					"tensorrt": null
+				},
+				{
 					"id": "hat-x4",
 					"doc": "/models/hat",
 					"family": "hat",
@@ -20760,6 +22063,92 @@
 					"tensorrt": null
 				}
 			]
+		},
+		{
+			"id": "volume",
+			"title": "Volume",
+			"input": "200x200",
+			"accuracy_metric": null,
+			"picks": [
+				{
+					"label": "Fastest",
+					"id": "totalsegmentator-total-3mm",
+					"doc": "/models/totalsegmentator",
+					"note": "64.2 ms"
+				},
+				{
+					"label": "Fastest commercially usable",
+					"id": "totalsegmentator-total-3mm",
+					"doc": "/models/totalsegmentator",
+					"note": "64.2 ms"
+				}
+			],
+			"models": [
+				{
+					"id": "totalsegmentator-total-3mm",
+					"doc": "/models/totalsegmentator",
+					"family": "totalsegmentator",
+					"mem": {
+						"original": {
+							"alloc": 2010,
+							"reserved": 2684
+						},
+						"portable": {
+							"alloc": 1092,
+							"reserved": 1250
+						},
+						"kernels": {
+							"alloc": 1037,
+							"reserved": 1410
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 7269.8,
+					"original_size": "200x200",
+					"original_note": null,
+					"portable_ms": 68.7,
+					"kernels_ms": 64.2,
+					"speedup": 113.3,
+					"speedup_vs": "original",
+					"peak_mib": 1037,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "totalsegmentator-total",
+					"doc": "/models/totalsegmentator",
+					"family": "totalsegmentator",
+					"mem": {
+						"original": {
+							"alloc": 2640,
+							"reserved": 2874
+						},
+						"portable": {
+							"alloc": 2605,
+							"reserved": 2964
+						},
+						"kernels": {
+							"alloc": 2349,
+							"reserved": 2704
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 45629.8,
+					"original_size": "200x200",
+					"original_note": null,
+					"portable_ms": 1929.1,
+					"kernels_ms": 1742.7,
+					"speedup": 26.2,
+					"speedup_vs": "original",
+					"peak_mib": 2349,
+					"compile": null,
+					"tensorrt": null
+				}
+			]
 		}
 	],
 	"devices": [
@@ -20780,6 +22169,7 @@
 				"classification",
 				"segmentation",
 				"matting",
+				"edges",
 				"promptable_segmentation",
 				"detection",
 				"pose",
@@ -20791,7 +22181,8 @@
 				"matching",
 				"tracking",
 				"interpolation",
-				"restoration"
+				"restoration",
+				"volume"
 			],
 			"cpu": null,
 			"times": null
@@ -40622,6 +42013,33 @@
 				"unstated"
 			]
 		},
+		"any2full-b@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"any2full-l@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"any2full-s@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
 		"da3-giant-1.1@1": {
 			"task": "depth",
 			"tier": "stable",
@@ -40753,6 +42171,15 @@
 			"tier": "stable",
 			"code": "LicenseRef-Apple-Sample-Code",
 			"weights": "LicenseRef-research-only",
+			"training": [
+				"unstated"
+			]
+		},
+		"depthfm-v1@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "LicenseRef-CreativeML-OpenRAIL-PlusPlus-M AND LicenseRef-CreativeML-OpenRAIL-M",
 			"training": [
 				"unstated"
 			]
@@ -40892,6 +42319,15 @@
 			"tier": "stable",
 			"code": "MIT",
 			"weights": "MIT",
+			"training": [
+				"unstated"
+			]
+		},
+		"omni-dc@1": {
+			"task": "depth",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "CC-BY-NC-4.0",
 			"training": [
 				"unstated"
 			]
@@ -41913,6 +43349,16 @@
 				"danbooru"
 			]
 		},
+		"bisenet-face-parsing@1": {
+			"task": "segmentation",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k",
+				"celebamask-hq"
+			]
+		},
 		"deeplabv3-r101-d8-ade20k@1": {
 			"task": "segmentation",
 			"tier": "stable",
@@ -42210,6 +43656,31 @@
 				"dis5k"
 			]
 		},
+		"matanyone@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial",
+			"training": [
+				"vm800",
+				"composition-1k",
+				"distinctions-646",
+				"bg20k",
+				"dvm-background",
+				"coco",
+				"youtube-vis-2021",
+				"supervisely-person"
+			]
+		},
+		"rmbg-2.0@1": {
+			"task": "matting",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"bria-internal"
+			]
+		},
 		"u2net@1": {
 			"task": "matting",
 			"tier": "experimental",
@@ -42253,6 +43724,87 @@
 			"weights": "Apache-2.0",
 			"training": [
 				"composition-1k"
+			]
+		},
+		"anyline@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "LicenseRef-CreativeML-OpenRAIL-PlusPlus-M",
+			"training": [
+				"unstated"
+			]
+		},
+		"hed@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"lineart@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"unstated"
+			]
+		},
+		"lineart-anime@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"unstated"
+			]
+		},
+		"lineart-coarse@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT (assumed from code)",
+			"training": [
+				"unstated"
+			]
+		},
+		"mlsd@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
+		"pidinet@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "LicenseRef-research-only",
+			"weights": "LicenseRef-research-only (assumed from code)",
+			"training": [
+				"unstated"
+			]
+		},
+		"teed@1": {
+			"task": "edges",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"biped"
+			]
+		},
+		"clipseg@1": {
+			"task": "promptable_segmentation",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"phrasecut"
 			]
 		},
 		"efficientvit-sam-l0@1": {
@@ -43042,6 +44594,24 @@
 			"training": [
 				"coco",
 				"imagenet-1k"
+			]
+		},
+		"retinaface-mobilenet0.25@1": {
+			"task": "pose",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"wider-face"
+			]
+		},
+		"retinaface-resnet50@1": {
+			"task": "pose",
+			"tier": "stable",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"wider-face"
 			]
 		},
 		"rf-detr-keypoint-preview@1": {
@@ -44133,6 +45703,15 @@
 				"realestate10k"
 			]
 		},
+		"lingbot-map@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"unstated"
+			]
+		},
 		"mapanything-apache@1": {
 			"task": "multiview",
 			"tier": "stable",
@@ -44176,6 +45755,24 @@
 			"weights": "CC-BY-NC-4.0",
 			"training": [
 				"unstated"
+			]
+		},
+		"resplat-base-re10k@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "CC-BY-NC-4.0",
+			"training": [
+				"realestate10k"
+			]
+		},
+		"resplat-small-dl3dv@1": {
+			"task": "multiview",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"dl3dv"
 			]
 		},
 		"vggt-1b@1": {
@@ -44358,6 +45955,20 @@
 				"sceneflow"
 			]
 		},
+		"megaflow@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"flyingchairs",
+				"tartanair",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
 		"memflow@1": {
 			"task": "flow",
 			"tier": "experimental",
@@ -44526,6 +46137,48 @@
 				"sceneflow"
 			]
 		},
+		"recover-cx@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"recover-mn@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"recover-rn@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
 		"sea-raft-m@1": {
 			"task": "flow",
 			"tier": "stable",
@@ -44621,6 +46274,45 @@
 				"kitti",
 				"hd1k",
 				"spring"
+			]
+		},
+		"waft-a1@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow"
+			]
+		},
+		"waft-a1-kitti@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
+			]
+		},
+		"waft-a1-sintel@1": {
+			"task": "flow",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause (assumed from code)",
+			"training": [
+				"tartanair",
+				"flyingchairs",
+				"sceneflow",
+				"sintel-flow",
+				"kitti",
+				"hd1k"
 			]
 		},
 		"aliked-flexglue@1": {
@@ -44835,6 +46527,69 @@
 				"unstated"
 			]
 		},
+		"ema-vfi@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"ema-vfi-small@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"ema-vfi-small-t@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"ema-vfi-t@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"film@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"gimm-vfi-r@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial",
+			"training": [
+				"vimeo90k"
+			]
+		},
+		"gimm-vfi-r-p@1": {
+			"task": "interpolation",
+			"tier": "experimental",
+			"code": "LicenseRef-noncommercial",
+			"weights": "LicenseRef-noncommercial",
+			"training": [
+				"vimeo90k"
+			]
+		},
 		"rife-4.25@1": {
 			"task": "interpolation",
 			"tier": "experimental",
@@ -44860,6 +46615,15 @@
 			"weights": "MIT",
 			"training": [
 				"vimeo90k"
+			]
+		},
+		"big-lama@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"places365"
 			]
 		},
 		"codeformer@1": {
@@ -44901,6 +46665,37 @@
 				"flickr2k"
 			]
 		},
+		"drct-l-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k",
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"drct-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "MIT",
+			"weights": "MIT",
+			"training": [
+				"imagenet-1k",
+				"div2k",
+				"flickr2k"
+			]
+		},
+		"gfpgan-v1.4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"ffhq"
+			]
+		},
 		"hat-s-x4@1": {
 			"task": "restoration",
 			"tier": "experimental",
@@ -44927,6 +46722,17 @@
 			"tier": "experimental",
 			"code": "Apache-2.0",
 			"weights": "Apache-2.0",
+			"training": [
+				"div2k",
+				"flickr2k",
+				"ost"
+			]
+		},
+		"realesr-general-x4v3@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "BSD-3-Clause",
+			"weights": "BSD-3-Clause",
 			"training": [
 				"div2k",
 				"flickr2k",
@@ -44964,6 +46770,15 @@
 				"div2k",
 				"flickr2k",
 				"ost"
+			]
+		},
+		"realplksr-nomoswebphoto-x4@1": {
+			"task": "restoration",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "CC-BY-4.0",
+			"training": [
+				"nomos-v2"
 			]
 		},
 		"span-x2@1": {
@@ -45030,6 +46845,24 @@
 				"div2k",
 				"flickr2k",
 				"ost"
+			]
+		},
+		"totalsegmentator-total@1": {
+			"task": "volume",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"totalsegmentator-ct"
+			]
+		},
+		"totalsegmentator-total-3mm@1": {
+			"task": "volume",
+			"tier": "experimental",
+			"code": "Apache-2.0",
+			"weights": "Apache-2.0",
+			"training": [
+				"totalsegmentator-ct"
 			]
 		}
 	}

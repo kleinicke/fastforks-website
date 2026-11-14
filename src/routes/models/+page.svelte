@@ -357,6 +357,7 @@
 
 		{#if current}
 			<p class="taskinfo">
+				<span class="about">{TASK_META[task].about}</span><br />
 				<code>{TASK_META[task].pkg}.load(…) → {TASK_META[task].call}</code> · input {current.input}
 				{#if current.picks.length}
 					<br />
@@ -376,7 +377,7 @@
 				<table class:wide={more}>
 					<thead>
 						<tr class="groups">
-							<th scope="colgroup" colspan="2"></th>
+							<th scope="colgroup" colspan={task === 'all' ? 2 : 1}></th>
 							<th scope="colgroup" colspan={modes.length} class="grp">Time (ms)</th>
 							<th scope="colgroup" colspan={gains.length} class="grp">{surveyOriginal ? 'Speed-up vs' : 'Kernels speed-up vs'}</th>
 							<th scope="colgroup" colspan={memModes.length} class="grp">{memTitle}</th>
@@ -391,7 +392,7 @@
 								</th>
 							{/snippet}
 							{@render sortable('id', 'Model', false)}
-							{@render sortable('task', 'Task', false)}
+							{#if task === 'all'}{@render sortable('task', 'Task', false)}{/if}
 							{#each modes as m, i (m)}{@render sortable(`${m}_ms`, label(m), true, i === 0)}{/each}
 							{#each gains as m, i (m)}{@render sortable(`gain_${m}`, label(m), true, i === 0)}{/each}
 							{#each memModes as m, i (m)}{@render sortable(`mem_${m}`, label(m), true, i === 0)}{/each}
@@ -408,7 +409,7 @@
 								<th scope="row"
 									><a href={r.doc}><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
 								>
-								<td class="task">{TASK_META[r.task].name}</td>
+								{#if task === 'all'}<td class="task">{TASK_META[r.task].name}</td>{/if}
 								{#if more}
 									<td class="num first" class:muted={r.original_ms === null}>{cell(r.original_ms, r.original_note)}</td>
 									<td class="num">{fmtMs(r.portable_ms)}</td>
@@ -453,7 +454,7 @@
 								</td>
 							</tr>
 						{:else}
-							<tr><td colspan={3 + modes.length + gains.length + memModes.length} class="empty"
+							<tr><td colspan={(task === 'all' ? 3 : 2) + modes.length + gains.length + memModes.length} class="empty"
 								><EmptyRows hidden={hiddenUpcoming} onshow={() => setUpcoming(true)} /></td
 							></tr>
 						{/each}
@@ -695,6 +696,9 @@
 		color: var(--ink);
 		font-size: 0.86rem;
 		line-height: 1.8;
+	}
+	.head :global(.taskinfo .about) {
+		font-weight: 500;
 	}
 	.head :global(.taskinfo code) {
 		color: var(--blue);

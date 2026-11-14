@@ -40,7 +40,9 @@ const TASK_ORDER_SYNC = [
 	'flow',
 	'tracking',
 	'interpolation',
-	'restoration'
+	'restoration',
+	'edges',
+	'volume'
 ];
 
 const TASK_IDS: Record<string, string> = {
@@ -60,6 +62,8 @@ const TASK_IDS: Record<string, string> = {
 	Calibration: 'calibration',
 	Tracking: 'tracking',
 	Interpolation: 'interpolation',
+	Edges: 'edges',
+	Volume: 'volume',
 	Restoration: 'restoration'
 };
 

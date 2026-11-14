@@ -18,68 +18,147 @@ export const LINKS = {
 export type Model = (typeof data.tasks)[number]['models'][number];
 export type Task = (typeof data.tasks)[number];
 
-export const TASK_META: Record<string, { name: string; pkg: string; call: string; result: string }> = {
-	stereo: { name: 'Stereo matching', pkg: 'stereo', call: 'model(left, right)', result: 'disparity' },
-	depth: { name: 'Monocular depth', pkg: 'depth', call: 'model(image)', result: 'depth or inverse depth' },
+export const TASK_META: Record<string, { name: string; pkg: string; call: string; result: string; about: string }> = {
+	stereo: {
+		name: 'Stereo matching',
+		pkg: 'stereo',
+		call: 'model(left, right)',
+		result: 'disparity',
+		about:
+			'Finds, for every pixel of the left image, how far it shifts in the right image of a calibrated pair; that shift (the disparity) gives depth.'
+	},
+	depth: {
+		name: 'Monocular depth',
+		pkg: 'depth',
+		call: 'model(image)',
+		result: 'depth or inverse depth',
+		about: 'Estimates how far away every pixel is from a single image, either as relative depth or in metres.'
+	},
 	multiview: {
 		name: 'Multi-view depth',
 		pkg: 'multiview',
 		call: 'model(images)',
-		result: 'depth, points and cameras per view'
+		result: 'depth, points and cameras per view',
+		about: 'Reconstructs depth, 3D points and camera poses from several images of the same scene at once.'
 	},
 	matching: {
 		name: 'Dense matching',
 		pkg: 'matching',
 		call: 'model(image_a, image_b)',
-		result: 'warp + certainty per pixel, sampled matches, relative pose'
+		result: 'warp + certainty per pixel, sampled matches, relative pose',
+		about:
+			'Finds which pixel in image B belongs to each pixel in image A, with a certainty, across large changes of view; enough for relative camera pose.'
 	},
-	classification: { name: 'Classification', pkg: 'classification', call: 'model(image)', result: 'logits, top(k)' },
-	segmentation: { name: 'Semantic segmentation', pkg: 'segmentation', call: 'model(image)', result: 'label map' },
+	classification: {
+		name: 'Classification',
+		pkg: 'classification',
+		call: 'model(image)',
+		result: 'logits, top(k)',
+		about: 'Names what is in an image: one score per class from a fixed label set such as ImageNet.'
+	},
+	segmentation: {
+		name: 'Semantic segmentation',
+		pkg: 'segmentation',
+		call: 'model(image)',
+		result: 'label map',
+		about: 'Labels every pixel with a class (road, person, sky, …) so the image splits into regions.'
+	},
 	promptable_segmentation: {
 		name: 'Promptable segmentation',
 		pkg: 'promptable_segmentation',
 		call: 'model(image, input_points=…)',
-		result: 'masks + IoU scores (SAM, SAM 2, SAM 3 text prompts)'
+		result: 'masks + IoU scores (SAM, SAM 2, SAM 3 text prompts)',
+		about: 'Cuts out the object you point at: click, box or text prompt in, a mask out.'
 	},
-	detection: { name: 'Object detection', pkg: 'detection', call: 'model(image)', result: 'boxes, labels, scores' },
+	detection: {
+		name: 'Object detection',
+		pkg: 'detection',
+		call: 'model(image)',
+		result: 'boxes, labels, scores',
+		about: 'Finds objects in an image and returns a box, a label and a score for each.'
+	},
 	pose: {
 		name: 'Pose estimation',
 		pkg: 'pose',
 		call: 'model(image, boxes=…)',
-		result: 'keypoints + scores per person'
+		result: 'keypoints + scores per person',
+		about: 'Finds people (or faces) in an image and returns their body or face keypoints.'
 	},
-	flow: { name: 'Optical flow', pkg: 'flow', call: 'model(frame1, frame2)', result: 'flow (dx, dy per pixel)' },
+	flow: {
+		name: 'Optical flow',
+		pkg: 'flow',
+		call: 'model(frame1, frame2)',
+		result: 'flow (dx, dy per pixel)',
+		about: 'Estimates how every pixel moved between two video frames, as a motion vector per pixel.'
+	},
 	features: {
 		name: 'Feature backbones',
 		pkg: 'features',
 		call: 'model(image)',
-		result: 'token features, image embedding'
+		result: 'token features, image embedding',
+		about:
+			'Turns an image into reusable feature vectors (per patch and per image) for retrieval, matching, segmentation or any downstream head.'
 	},
-	matting: { name: 'Matting', pkg: 'matting', call: 'model(image)', result: 'foreground alpha per pixel' },
-	retrieval: { name: 'Image retrieval', pkg: 'retrieval', call: 'model(image)', result: 'global descriptor' },
+	matting: {
+		name: 'Matting',
+		pkg: 'matting',
+		call: 'model(image)',
+		result: 'foreground alpha per pixel',
+		about:
+			'Separates a foreground (person, object) from its background with a soft alpha value per pixel, hair included.'
+	},
+	retrieval: {
+		name: 'Image retrieval',
+		pkg: 'retrieval',
+		call: 'model(image)',
+		result: 'global descriptor',
+		about:
+			'Turns an image into one compact descriptor so that pictures of the same place or object can be found in a large collection.'
+	},
 	calibration: {
 		name: 'Camera calibration',
 		pkg: 'calibration',
 		call: 'model(image)',
-		result: 'intrinsics, gravity, roll, pitch'
+		result: 'intrinsics, gravity, roll, pitch',
+		about:
+			'Recovers camera intrinsics (focal length, distortion) and orientation (gravity, roll, pitch) from a single image.'
 	},
 	tracking: {
 		name: 'Point tracking',
 		pkg: 'tracking',
 		call: 'model(video, queries)',
-		result: 'tracks + visibility per frame'
+		result: 'tracks + visibility per frame',
+		about:
+			'Follows chosen points through a video and says where each one is, and whether it is visible, in every frame.'
 	},
 	interpolation: {
 		name: 'Frame interpolation',
 		pkg: 'interpolation',
 		call: 'model(frame1, frame2)',
-		result: 'the frame in between'
+		result: 'the frame in between',
+		about: 'Creates the frame that lies between two video frames, for slow motion and higher frame rates.'
 	},
 	restoration: {
 		name: 'Image restoration',
 		pkg: 'restoration',
 		call: 'model(image)',
-		result: 'restored / upscaled image'
+		result: 'restored / upscaled image',
+		about: 'Repairs or upscales an image: super-resolution, face restoration, inpainting.'
+	},
+	edges: {
+		name: 'Edges and lines',
+		pkg: 'edges',
+		call: 'model(image)',
+		result: 'edge map, or line segments for M-LSD',
+		about:
+			'Draws the lines of an image: edge maps, line art and straight line segments, the preprocessors ControlNet takes as input.'
+	},
+	volume: {
+		name: '3D volume segmentation',
+		pkg: 'volume',
+		call: 'model(volume, spacing)',
+		result: 'a label per voxel',
+		about: 'Labels organs and structures in 3D medical scans (CT, MR) voxel by voxel.'
 	}
 };
 
@@ -100,7 +179,9 @@ export const TASK_ORDER = [
 	'flow',
 	'tracking',
 	'interpolation',
-	'restoration'
+	'restoration',
+	'edges',
+	'volume'
 ];
 
 export { data };
