@@ -242,7 +242,8 @@ for (const line of md) {
 				continue;
 			}
 			if (!head.length || /^-+$/.test(c[0])) continue;
-			const k = head.indexOf('kernels');
+			// Families without a kernels build have no kernels column: their golden check is the portable one.
+			const k = head.indexOf('kernels') >= 0 ? head.indexOf('kernels') : head.indexOf('portable');
 			const v = c[0].replace(/`/g, '');
 			const m = byId.get(v) ?? byId.get(v.split('.')[0]);
 			if (!m || m.accuracy_metric || !c[k] || c[k] === '–') continue;

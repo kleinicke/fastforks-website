@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "f104019b",
+		"commit": "7f43e024",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -9,7 +9,7 @@
 		"tasks": 19,
 		"commercial": 503,
 		"vs_original": {
-			"models": 435,
+			"models": 449,
 			"median": 3.3,
 			"max": 113.3
 		}
@@ -3188,13 +3188,13 @@
 					"commercial": "yes",
 					"accuracy": "–",
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 77.3,
+					"original_size": "756x1008",
 					"original_note": null,
 					"portable_ms": 18.4,
 					"kernels_ms": 11.4,
-					"speedup": 1.6,
-					"speedup_vs": "portable",
+					"speedup": 6.8,
+					"speedup_vs": "original",
 					"peak_mib": 297,
 					"compile": null,
 					"tensorrt": null
@@ -3808,13 +3808,13 @@
 					"commercial": "yes",
 					"accuracy": "–",
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 438.4,
+					"original_size": "756x1008",
 					"original_note": null,
 					"portable_ms": 124.8,
 					"kernels_ms": 69.3,
-					"speedup": 1.8,
-					"speedup_vs": "portable",
+					"speedup": 6.3,
+					"speedup_vs": "original",
 					"peak_mib": 1179,
 					"compile": null,
 					"tensorrt": null
@@ -4250,13 +4250,13 @@
 					"commercial": "yes",
 					"accuracy": "0.0549 / 0.9802",
 					"accuracy_metric": "TUM RGB-D video (3 sequences, first 110 frames each), AbsRel / delta1",
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 11625.8,
+					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 1434.3,
 					"kernels_ms": 1284,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
+					"speedup": 9.1,
+					"speedup_vs": "original",
 					"peak_mib": 8204,
 					"compile": {
 						"ms": 1314,
@@ -4876,13 +4876,13 @@
 					"commercial": "yes",
 					"accuracy": "78.66 / 93.38",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 3.1,
+					"original_size": "256x256",
 					"original_note": null,
 					"portable_ms": 3.3,
 					"kernels_ms": 0.7,
-					"speedup": 4.7,
-					"speedup_vs": "portable",
+					"speedup": 4.4,
+					"speedup_vs": "original",
 					"peak_mib": 45,
 					"compile": {
 						"ms": 2.55,
@@ -5170,13 +5170,13 @@
 					"commercial": "yes",
 					"accuracy": "81.08 / 94.96",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 3.6,
+					"original_size": "256x256",
 					"original_note": null,
 					"portable_ms": 3.3,
 					"kernels_ms": 0.8,
-					"speedup": 4.2,
-					"speedup_vs": "portable",
+					"speedup": 4.6,
+					"speedup_vs": "original",
 					"peak_mib": 52,
 					"compile": {
 						"ms": 2.32,
@@ -5827,8 +5827,8 @@
 					"family": "fastvit",
 					"mem": {
 						"original": {
-							"alloc": 157,
-							"reserved": 176
+							"alloc": 129,
+							"reserved": 142
 						},
 						"portable": {
 							"alloc": 81,
@@ -5842,13 +5842,13 @@
 					"commercial": "yes",
 					"accuracy": "83.80 / 96.42",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 7.1,
+					"original_size": "256x256",
 					"original_note": null,
 					"portable_ms": 6.1,
 					"kernels_ms": 1.4,
-					"speedup": 4.3,
-					"speedup_vs": "portable",
+					"speedup": 5.1,
+					"speedup_vs": "original",
 					"peak_mib": 80,
 					"compile": {
 						"ms": 3.97,
@@ -6178,13 +6178,13 @@
 					"commercial": "yes",
 					"accuracy": "86.96 / 97.84",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 5.8,
+					"original_size": "384x384",
 					"original_note": null,
 					"portable_ms": 5,
 					"kernels_ms": 1.8,
-					"speedup": 2.8,
-					"speedup_vs": "portable",
+					"speedup": 3.3,
+					"speedup_vs": "original",
 					"peak_mib": 132,
 					"compile": {
 						"ms": 2.79,
@@ -6724,13 +6724,13 @@
 					"commercial": "yes",
 					"accuracy": "87.14 / 97.88",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 8.1,
+					"original_size": "512x512",
 					"original_note": null,
 					"portable_ms": 4.9,
 					"kernels_ms": 3.1,
-					"speedup": 1.6,
-					"speedup_vs": "portable",
+					"speedup": 2.6,
+					"speedup_vs": "original",
 					"peak_mib": 237,
 					"compile": {
 						"ms": 3.14,
@@ -6845,8 +6845,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "78.50 / 94.04",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 4.5,
 					"original_size": "224x224",
 					"original_note": null,
@@ -6884,8 +6884,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "80.12 / 94.38",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 4.6,
 					"original_size": "224x224",
 					"original_note": null,
@@ -6923,8 +6923,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "81.14 / 95.12",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 4.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -6967,13 +6967,13 @@
 					"commercial": "yes",
 					"accuracy": null,
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 5.8,
+					"original_size": "448x448",
 					"original_note": null,
 					"portable_ms": 4,
 					"kernels_ms": 4.1,
-					"speedup": 1,
-					"speedup_vs": "portable",
+					"speedup": 1.4,
+					"speedup_vs": "original",
 					"peak_mib": 234,
 					"compile": {
 						"ms": 5.33,
@@ -7009,13 +7009,13 @@
 					"commercial": "yes",
 					"accuracy": null,
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 9.6,
+					"original_size": "448x448",
 					"original_note": null,
 					"portable_ms": 5.6,
 					"kernels_ms": 4.5,
-					"speedup": 1.3,
-					"speedup_vs": "portable",
+					"speedup": 2.2,
+					"speedup_vs": "original",
 					"peak_mib": 318,
 					"compile": {
 						"ms": 4.45,
@@ -7046,8 +7046,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.00 / 96.64",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 7.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7085,8 +7085,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "82.50 / 95.92",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 6.2,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7208,8 +7208,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "83.66 / 96.02",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 7.2,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7247,8 +7247,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "83.94 / 96.56",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 6.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7286,8 +7286,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "83.16 / 96.32",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7325,8 +7325,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "83.38 / 96.30",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 7.6,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7364,8 +7364,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "74.26 / 91.00",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7403,8 +7403,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "76.82 / 92.44",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7442,8 +7442,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "85.52 / 97.18",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 11.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7481,8 +7481,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "82.56 / 95.78",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 7.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7520,8 +7520,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "82.90 / 96.28",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7559,8 +7559,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "77.34 / 92.82",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.2,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7598,8 +7598,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "82.86 / 96.20",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7637,8 +7637,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "82.44 / 95.96",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7676,8 +7676,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "77.96 / 93.50",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 9.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7715,8 +7715,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "80.88 / 95.00",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 10.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7739,6 +7739,45 @@
 					}
 				},
 				{
+					"id": "shvit_s4",
+					"doc": "/models/shvit",
+					"family": "shvit",
+					"mem": {
+						"original": {
+							"alloc": 103,
+							"reserved": 118
+						},
+						"portable": {
+							"alloc": 67,
+							"reserved": 118
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "80.40 / 94.52",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 11.5,
+					"original_size": "256x256",
+					"original_note": null,
+					"portable_ms": 9.3,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 4.11,
+						"fails": null,
+						"part": null,
+						"prep_s": 11.3
+					},
+					"tensorrt": {
+						"ms": 0.658,
+						"fails": null,
+						"part": null,
+						"prep_s": 26.3
+					}
+				},
+				{
 					"id": "hgnetv2_b6",
 					"doc": "/models/hgnetv2",
 					"family": "hgnetv2",
@@ -7754,8 +7793,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "86.74 / 98.00",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 16.5,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7793,8 +7832,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.38 / 96.68",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 12.3,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7832,8 +7871,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.44 / 96.56",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 12.3,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7871,8 +7910,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "85.66 / 97.12",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 13.4,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7910,8 +7949,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "87.18 / 98.16",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 14.6,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7949,8 +7988,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "85.30 / 97.04",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 13.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -7988,8 +8027,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.46 / 96.56",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 14,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8032,13 +8071,13 @@
 					"commercial": "yes",
 					"accuracy": null,
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 19.9,
+					"original_size": "448x448",
 					"original_note": null,
 					"portable_ms": 12.9,
 					"kernels_ms": 12.5,
-					"speedup": 1,
-					"speedup_vs": "portable",
+					"speedup": 1.6,
+					"speedup_vs": "original",
 					"peak_mib": 667,
 					"compile": {
 						"ms": 13.3,
@@ -8111,8 +8150,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "87.02 / 98.12",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 15.3,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8150,8 +8189,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "85.24 / 97.18",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 13,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8189,8 +8228,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "83.18 / 96.30",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 15.2,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8213,6 +8252,45 @@
 					}
 				},
 				{
+					"id": "coatnet_rmlp_2_rw_384",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 516,
+							"reserved": 528
+						},
+						"portable": {
+							"alloc": 296,
+							"reserved": 330
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "87.84 / 98.54",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 17.9,
+					"original_size": "384x384",
+					"original_note": null,
+					"portable_ms": 13.9,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 6.92,
+						"fails": null,
+						"part": null,
+						"prep_s": 18.6
+					},
+					"tensorrt": {
+						"ms": 3.69,
+						"fails": null,
+						"part": null,
+						"prep_s": 42.3
+					}
+				},
+				{
 					"id": "focalnet_small_srf",
 					"doc": "/models/focalnet",
 					"family": "focalnet",
@@ -8228,8 +8306,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.44 / 96.76",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 15.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8314,13 +8392,13 @@
 					"commercial": "yes",
 					"accuracy": null,
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 26.6,
+					"original_size": "448x448",
 					"original_note": null,
 					"portable_ms": 18.3,
 					"kernels_ms": 14.1,
-					"speedup": 1.3,
-					"speedup_vs": "portable",
+					"speedup": 1.9,
+					"speedup_vs": "original",
 					"peak_mib": 673,
 					"compile": {
 						"ms": 15.7,
@@ -8351,8 +8429,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.16 / 96.84",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 17.1,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8390,8 +8468,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "85.16 / 96.80",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 15.3,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8429,8 +8507,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.56 / 96.56",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 18,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8468,8 +8546,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.32 / 96.80",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 16.8,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8507,8 +8585,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "84.02 / 96.50",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 19.9,
 					"original_size": "224x224",
 					"original_note": null,
@@ -8529,84 +8607,6 @@
 						"part": null,
 						"prep_s": 45.1
 					}
-				},
-				{
-					"id": "coatnet_rmlp_2_rw_384",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 516,
-							"reserved": 528
-						},
-						"portable": {
-							"alloc": 296,
-							"reserved": 330
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"peak_mib": null,
-					"compile": {
-						"ms": 6.92,
-						"fails": null,
-						"part": null,
-						"prep_s": 18.6
-					},
-					"tensorrt": {
-						"ms": 3.69,
-						"fails": null,
-						"part": null,
-						"prep_s": 42.3
-					}
-				},
-				{
-					"id": "shvit_s4",
-					"doc": "/models/shvit",
-					"family": "shvit",
-					"mem": {
-						"original": {
-							"alloc": 129,
-							"reserved": 146
-						},
-						"portable": {
-							"alloc": 67,
-							"reserved": 118
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"peak_mib": null,
-					"compile": {
-						"ms": 4.11,
-						"fails": null,
-						"part": null,
-						"prep_s": 11.3
-					},
-					"tensorrt": {
-						"ms": 0.658,
-						"fails": null,
-						"part": null,
-						"prep_s": 26.3
-					}
 				}
 			]
 		},
@@ -8618,18 +8618,57 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "segformer-b0-ade20k",
-					"doc": "/models/segformer",
-					"note": "3.5 ms"
+					"id": "bisenet-face-parsing",
+					"doc": "/models/bisenet",
+					"note": "2.4 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "segnext-mscan-s-ade20k",
-					"doc": "/models/segnext",
-					"note": "8.0 ms"
+					"id": "bisenet-face-parsing",
+					"doc": "/models/bisenet",
+					"note": "2.4 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "bisenet-face-parsing",
+					"doc": "/models/bisenet",
+					"family": "bisenet",
+					"mem": {
+						"original": {
+							"alloc": 69,
+							"reserved": 94
+						},
+						"portable": {
+							"alloc": 51,
+							"reserved": 72
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": 5.9,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 2.4,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 1.34,
+						"fails": null,
+						"part": null,
+						"prep_s": 5.79
+					},
+					"tensorrt": {
+						"ms": 0.678,
+						"fails": null,
+						"part": null,
+						"prep_s": 12.9
+					}
+				},
 				{
 					"id": "segformer-b0-ade20k",
 					"doc": "/models/segformer",
@@ -8693,13 +8732,13 @@
 					"commercial": "no",
 					"accuracy": null,
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 14.1,
+					"original_size": "512x512",
 					"original_note": null,
 					"portable_ms": 8.1,
 					"kernels_ms": 3.6,
-					"speedup": 2.3,
-					"speedup_vs": "portable",
+					"speedup": 3.9,
+					"speedup_vs": "original",
 					"peak_mib": 133,
 					"compile": {
 						"ms": 4.38,
@@ -8819,13 +8858,13 @@
 					"commercial": "no",
 					"accuracy": null,
 					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
+					"original_ms": 34.2,
+					"original_size": "512x512",
 					"original_note": null,
 					"portable_ms": 21.9,
 					"kernels_ms": 9.2,
-					"speedup": 2.4,
-					"speedup_vs": "portable",
+					"speedup": 3.7,
+					"speedup_vs": "original",
 					"peak_mib": 257,
 					"compile": {
 						"ms": 14.1,
@@ -9553,45 +9592,6 @@
 						"part": null,
 						"prep_s": 84.9
 					}
-				},
-				{
-					"id": "bisenet-face-parsing",
-					"doc": "/models/bisenet",
-					"family": "bisenet",
-					"mem": {
-						"original": {
-							"alloc": 69,
-							"reserved": 94
-						},
-						"portable": {
-							"alloc": 51,
-							"reserved": 72
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"peak_mib": null,
-					"compile": {
-						"ms": 1.34,
-						"fails": null,
-						"part": null,
-						"prep_s": 5.79
-					},
-					"tensorrt": {
-						"ms": 0.678,
-						"fails": null,
-						"part": null,
-						"prep_s": 12.9
-					}
 				}
 			]
 		},
@@ -9859,8 +9859,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": "–",
-					"accuracy_metric": null,
+					"accuracy": "0.0420 / 0.8952",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
 					"original_ms": 71.1,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -10024,8 +10024,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": "–",
-					"accuracy_metric": null,
+					"accuracy": "0.0129 / 0.9699",
+					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
 					"original_ms": 240.9,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -10189,8 +10189,8 @@
 						"kernels": null
 					},
 					"commercial": "no",
-					"accuracy": "–",
-					"accuracy_metric": null,
+					"accuracy": "2.64 / 1.00 / 1.65",
+					"accuracy_metric": "YouTubeMatte 512 x 288, every 2nd clip (32 x 100 frames), first-frame mask, MAD x 1000 / MSE x 1000 / dtSSD x 100",
 					"original_ms": 1219.9,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -13260,8 +13260,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "51.14",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
 					"original_ms": 198.9,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -13299,8 +13299,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "54.92",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
 					"original_ms": 202,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -13338,8 +13338,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "55.72",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
 					"original_ms": 229.8,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -13377,8 +13377,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "56.94",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
 					"original_ms": 232.5,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -18980,6 +18980,123 @@
 					"tensorrt": null
 				},
 				{
+					"id": "flowformer-small-sintel",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": {
+							"alloc": 2382,
+							"reserved": 2990
+						},
+						"portable": {
+							"alloc": 3165,
+							"reserved": 3638
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "4.657 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 350.8,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 250,
+						"fails": null,
+						"part": null,
+						"prep_s": 98.9
+					},
+					"tensorrt": {
+						"ms": 202,
+						"fails": null,
+						"part": null,
+						"prep_s": 117
+					}
+				},
+				{
+					"id": "flowformer-small-things",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": {
+							"alloc": 2382,
+							"reserved": 3010
+						},
+						"portable": {
+							"alloc": 3165,
+							"reserved": 3638
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "6.884",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 350.8,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 250,
+						"fails": null,
+						"part": null,
+						"prep_s": 99.3
+					},
+					"tensorrt": {
+						"ms": 202,
+						"fails": null,
+						"part": null,
+						"prep_s": 118
+					}
+				},
+				{
+					"id": "flowformer-small-chairs",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": {
+							"alloc": 2382,
+							"reserved": 2970
+						},
+						"portable": {
+							"alloc": 3165,
+							"reserved": 3638
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "10.952",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 351.3,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"peak_mib": null,
+					"compile": {
+						"ms": 250,
+						"fails": null,
+						"part": null,
+						"prep_s": 98.7
+					},
+					"tensorrt": {
+						"ms": 202,
+						"fails": null,
+						"part": null,
+						"prep_s": 118
+					}
+				},
+				{
 					"id": "memfof-kitti",
 					"doc": "/models/memfof",
 					"family": "memfof",
@@ -19774,123 +19891,6 @@
 					}
 				},
 				{
-					"id": "flowformer-small-chairs",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 2970
-						},
-						"portable": {
-							"alloc": 3165,
-							"reserved": 3638
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "10.952",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"peak_mib": null,
-					"compile": {
-						"ms": 250,
-						"fails": null,
-						"part": null,
-						"prep_s": 98.7
-					},
-					"tensorrt": {
-						"ms": 202,
-						"fails": null,
-						"part": null,
-						"prep_s": 118
-					}
-				},
-				{
-					"id": "flowformer-small-sintel",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 2990
-						},
-						"portable": {
-							"alloc": 3165,
-							"reserved": 3638
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "4.657 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"peak_mib": null,
-					"compile": {
-						"ms": 250,
-						"fails": null,
-						"part": null,
-						"prep_s": 98.9
-					},
-					"tensorrt": {
-						"ms": 202,
-						"fails": null,
-						"part": null,
-						"prep_s": 117
-					}
-				},
-				{
-					"id": "flowformer-small-things",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 3010
-						},
-						"portable": {
-							"alloc": 3165,
-							"reserved": 3638
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "6.884",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"peak_mib": null,
-					"compile": {
-						"ms": 250,
-						"fails": null,
-						"part": null,
-						"prep_s": 99.3
-					},
-					"tensorrt": {
-						"ms": 202,
-						"fails": null,
-						"part": null,
-						"prep_s": 118
-					}
-				},
-				{
 					"id": "memfof-sintel",
 					"doc": "/models/memfof",
 					"family": "memfof",
@@ -19974,8 +19974,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "26.2 / 42.2 / 57.5",
+					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 8.9,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -20013,8 +20013,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "39.7 / 57.5 / 72.8",
+					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 23.6,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -20052,8 +20052,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "50.7 / 67.6 / 80.0",
+					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 41.8,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -20091,8 +20091,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "52.1 / 71.0 / 83.3",
+					"accuracy_metric": "MegaDepth-1500, every 10th pair, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 241.5,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -20159,8 +20159,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "45.6 / 63.3 / 77.3",
+					"accuracy_metric": "MegaDepth-1500, every 5th pair, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 116.7,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -20198,8 +20198,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "54.6 / 71.8 / 83.1",
+					"accuracy_metric": "MegaDepth-1500, every 10th pair, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 318.5,
 					"original_size": "768x1024",
 					"original_note": null,
