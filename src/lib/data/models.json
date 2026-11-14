@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "7f43e024",
+		"commit": "f7d3c8b1",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -11253,8 +11253,18 @@
 					"speedup": 4.5,
 					"speedup_vs": "original",
 					"peak_mib": 987,
-					"compile": null,
-					"tensorrt": null
+					"compile": {
+						"ms": 236,
+						"fails": null,
+						"part": null,
+						"prep_s": 20.3
+					},
+					"tensorrt": {
+						"ms": 64.8,
+						"fails": null,
+						"part": "image encoder",
+						"prep_s": null
+					}
 				}
 			]
 		},
@@ -18450,8 +18460,18 @@
 					"speedup": 2.5,
 					"speedup_vs": "original",
 					"peak_mib": 580,
-					"compile": null,
-					"tensorrt": null
+					"compile": {
+						"ms": 33.4,
+						"fails": null,
+						"part": null,
+						"prep_s": 14.9
+					},
+					"tensorrt": {
+						"ms": 21.2,
+						"fails": null,
+						"part": null,
+						"prep_s": null
+					}
 				},
 				{
 					"id": "sea-raft-s",
@@ -18566,8 +18586,18 @@
 					"speedup": 2.5,
 					"speedup_vs": "original",
 					"peak_mib": 590,
-					"compile": null,
-					"tensorrt": null
+					"compile": {
+						"ms": 48.7,
+						"fails": null,
+						"part": null,
+						"prep_s": 10.4
+					},
+					"tensorrt": {
+						"ms": 29.1,
+						"fails": null,
+						"part": null,
+						"prep_s": null
+					}
 				},
 				{
 					"id": "neuflow-v2-things",
@@ -18976,8 +19006,18 @@
 					"speedup": 2,
 					"speedup_vs": "original",
 					"peak_mib": 733,
-					"compile": null,
-					"tensorrt": null
+					"compile": {
+						"ms": 89.9,
+						"fails": null,
+						"part": null,
+						"prep_s": 15.4
+					},
+					"tensorrt": {
+						"ms": 48,
+						"fails": null,
+						"part": null,
+						"prep_s": null
+					}
 				},
 				{
 					"id": "flowformer-small-sintel",
@@ -19323,8 +19363,18 @@
 					"speedup": 2.2,
 					"speedup_vs": "original",
 					"peak_mib": 2866,
-					"compile": null,
-					"tensorrt": null
+					"compile": {
+						"ms": 917,
+						"fails": null,
+						"part": null,
+						"prep_s": 103
+					},
+					"tensorrt": {
+						"ms": 679,
+						"fails": null,
+						"part": null,
+						"prep_s": null
+					}
 				},
 				{
 					"id": "waft-a1",
