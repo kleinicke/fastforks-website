@@ -29,7 +29,9 @@ execFileSync('uv', ['run', '--project', repo, 'python', 'tools/site_data.py', '-
 const missingExamples: string[] = [];
 for (const f of readdirSync(cardsDir).filter((f) => f.endsWith('.json') && f !== 'index.json')) {
 	const path = resolve(cardsDir, f);
-	const card = JSON.parse(readFileSync(path, 'utf8')) as { variants: { id: string; example?: { image: string | null; inputs: string[] } | null }[] };
+	const card = JSON.parse(readFileSync(path, 'utf8')) as {
+		variants: { id: string; example?: { image: string | null; inputs: string[] } | null }[];
+	};
 	let changed = false;
 	for (const v of card.variants) {
 		const ex = v.example;
@@ -43,7 +45,10 @@ for (const f of readdirSync(cardsDir).filter((f) => f.endsWith('.json') && f !==
 	}
 	if (changed) writeFileSync(path, JSON.stringify(card) + '\n');
 }
-if (missingExamples.length) console.log(`${missingExamples.length} examples left out, image not in static/examples: ${missingExamples.join(', ')}`);
+if (missingExamples.length)
+	console.log(
+		`${missingExamples.length} examples left out, image not in static/examples: ${missingExamples.join(', ')}`
+	);
 
 const yearOf: Record<string, number> = {};
 const familyYear: Record<string, number> = {};
