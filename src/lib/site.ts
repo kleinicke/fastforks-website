@@ -99,6 +99,13 @@ export const TASK_META: Record<string, { name: string; pkg: string; call: string
 		about:
 			'Turns an image into reusable feature vectors (per patch and per image) for retrieval, matching, segmentation or any downstream head.'
 	},
+	ocr: {
+		name: 'Text recognition (OCR)',
+		pkg: 'ocr',
+		call: 'model(image)',
+		result: 'the text in the image',
+		about: 'Reads text from images: recognises a cropped word or finds and reads every line of text in a scene.'
+	},
 	matting: {
 		name: 'Matting',
 		pkg: 'matting',
@@ -170,6 +177,7 @@ export const TASK_ORDER = [
 	'promptable_segmentation',
 	'segmentation',
 	'detection',
+	'ocr',
 	'pose',
 	'classification',
 	'features',
