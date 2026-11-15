@@ -6,7 +6,7 @@
 // Speed numbers come from docs/overview.md (generated there by tools/gen_docs.py: one standard input per task,
 // measured on the reference GPU), the other devices from docs/data/devices.toml and docs/data/speed/. Licences come from `fastforks list --format json`. Nothing here measures anything.
 import { execFileSync } from 'node:child_process';
-import { readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { renderDocs, type ModeRow } from './docs.ts';
 
@@ -24,6 +24,27 @@ execFileSync('uv', ['run', '--project', repo, 'python', 'tools/site_data.py', '-
 });
 
 // The year of each checkpoint's paper: the paper that lists the checkpoint, else the family's first paper without a list.
+// Example images are rendered elsewhere and copied to static/examples/: an example whose image (or input) is not
+// there yet is left out instead of becoming a broken link, and reported.
+const missingExamples: string[] = [];
+for (const f of readdirSync(cardsDir).filter((f) => f.endsWith('.json') && f !== 'index.json')) {
+	const path = resolve(cardsDir, f);
+	const card = JSON.parse(readFileSync(path, 'utf8')) as { variants: { id: string; example?: { image: string | null; inputs: string[] } | null }[] };
+	let changed = false;
+	for (const v of card.variants) {
+		const ex = v.example;
+		if (!ex) continue;
+		const files = [...(ex.image ? [ex.image] : []), ...ex.inputs];
+		if (files.some((u) => !existsSync(resolve('static', u.replace(/^\//, ''))))) {
+			missingExamples.push(v.id);
+			v.example = null;
+			changed = true;
+		}
+	}
+	if (changed) writeFileSync(path, JSON.stringify(card) + '\n');
+}
+if (missingExamples.length) console.log(`${missingExamples.length} examples left out, image not in static/examples: ${missingExamples.join(', ')}`);
+
 const yearOf: Record<string, number> = {};
 const familyYear: Record<string, number> = {};
 for (const f of readdirSync(cardsDir).filter((f) => f.endsWith('.json') && f !== 'index.json')) {
