@@ -259,6 +259,8 @@ for (const line of md) {
 	const extra = (cell: string, prep: string): Extra => {
 		if (cell === '–') return null;
 		if (cell.startsWith('fails: ')) return { ms: null, fails: cell.slice(7), part: null, prep_s: null };
+		// "planned for 0.2.1": the mode is gated in this release, there is no time (the version number is not one).
+		if (cell.startsWith('planned')) return { ms: null, fails: cell, part: null, prep_s: null };
 		return { ms: num(cell), fails: null, part: cell.match(/\(([^)]+) only\)/)?.[1] ?? null, prep_s: num(prep) };
 	};
 	for (const line of lines.slice(2)) {

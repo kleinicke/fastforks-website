@@ -400,7 +400,7 @@
 					</thead>
 					<tbody>
 						{#snippet ext(x: Extra, what: string)}
-							{#if !x}–{:else if x.ms === null}fails<span class="sub why">{x.fails}</span>{:else}{fmtMs(
+							{#if !x}–{:else if x.ms === null}{#if x.fails?.startsWith('planned')}planned<span class="sub why">{x.fails.slice(8)}</span>{:else}fails<span class="sub why">{x.fails}</span>{/if}{:else}{fmtMs(
 									x.ms
 								)}<span class="sub">+ {prep(x.prep_s)} {what}</span>{#if x.part}<span class="sub">{x.part} only</span>{/if}{/if}
 						{/snippet}
