@@ -3,7 +3,7 @@
 	import benchmarks from '#lib/data/benchmarks.json';
 	import { fmt, METRIC_LABEL, UPCOMING } from '#lib/cards.ts';
 	import EmptyRows from '#lib/components/EmptyRows.svelte';
-	import { data, fmtMs, licenceOf, REFERENCE, shortName, timings } from '#lib/site.ts';
+	import { data, fmtMs, modelHref, licenceOf, REFERENCE, shortName, timings } from '#lib/site.ts';
 
 	type Metric = { key: string; format: string; optional: boolean; lower: boolean };
 	type Dataset = { id: string; title: string; noun: string; overlap: string | null; metrics: Metric[]; count: number };
@@ -180,7 +180,7 @@
 			{#each rows as r (r.id)}
 				<tr class:upcoming={UPCOMING.has(r.id)}>
 					<th scope="row"
-						><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if r.year}<span class="yr">{r.year}</span>{/if}{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
+						><a href={modelHref(r.doc, r.id)}><code>{r.id}</code></a>{#if r.year}<span class="yr">{r.year}</span>{/if}{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
 					>
 					<td class="num first strong">{fmtMs(r.ms)}{#if r.portable && r.ms !== null}<small>portable</small>{/if}</td>
 					<td class="num">{r.mem ?? '–'}</td>

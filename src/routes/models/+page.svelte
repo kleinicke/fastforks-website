@@ -8,6 +8,7 @@
 		data,
 		DEVICES,
 		fmtMs,
+		modelHref,
 		licenceOf,
 		REFERENCE,
 		shortName,
@@ -407,7 +408,7 @@
 						{#each rows as r (r.task + r.id)}
 							<tr class:upcoming={UPCOMING.has(r.id)}>
 								<th scope="row"
-									><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if r.year}<span class="yr" title="Year of the model's paper">{r.year}</span>{/if}{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
+									><a href={modelHref(r.doc, r.id)}><code>{r.id}</code></a>{#if r.year}<span class="yr" title="Year of the model's paper">{r.year}</span>{/if}{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th
 								>
 								{#if task === 'all'}<td class="task">{TASK_META[r.task].name}</td>{/if}
 								{#if more}

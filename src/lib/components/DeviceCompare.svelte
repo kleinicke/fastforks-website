@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { UPCOMING } from '#lib/cards.ts';
 	import EmptyRows from '#lib/components/EmptyRows.svelte';
-	import { data, DEVICES, fmtMs, licenceOf, REFERENCE, shortName, TASK_META, timings, type Timing } from '#lib/site.ts';
+	import { data, DEVICES, fmtMs, modelHref, licenceOf, REFERENCE, shortName, TASK_META, timings, type Timing } from '#lib/site.ts';
 
 	type Key = 'rank' | 'id' | 'task' | 'mem' | `dev:${string}`;
 	let {
@@ -196,7 +196,7 @@ let relative = $state(false);
 							onclick={() => toggle(r.key)}>{isOpen ? '−' : '+'}</button
 						>
 					</td>
-					<th scope="row"><a href="{r.doc}?variant={r.id}"><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th>
+					<th scope="row"><a href={modelHref(r.doc, r.id)}><code>{r.id}</code></a>{#if UPCOMING.has(r.id)}<span class="soon">upcoming</span>{/if}</th>
 <td class="task">{TASK_META[r.task].name}</td>
 					<td class="num">{r.mem ?? '–'}</td>
 					{#each r.cells as c, i (c.slug)}

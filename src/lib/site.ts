@@ -360,3 +360,9 @@ export const KERNEL_LIBS: Record<string, string> = {
 	vggt_metal: 'Metal: VGGT rotary embeddings',
 	vit_metal: 'Metal: vision transformer rotary embeddings'
 };
+
+/** Link to a model's page with the checkpoint preselected; the query goes before a `#section` anchor. */
+export const modelHref = (doc: string, id: string) => {
+	const [path, hash] = doc.split('#');
+	return `${path}?variant=${encodeURIComponent(id)}${hash ? `#${hash}` : ''}`;
+};

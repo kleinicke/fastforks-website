@@ -7,7 +7,7 @@ export default defineConfig({
 		sveltekit({
 			adapter: adapter({ fallback: '404.html' }),
 			// sitemap.xml and llms.txt are linked from nowhere, so the crawler needs them named.
-			prerender: { handleHttpError: 'fail', entries: ['*', '/sitemap.xml', '/llms.txt'] }
+			prerender: { handleHttpError: 'fail', handleMissingId: 'ignore', entries: ['*', '/sitemap.xml', '/llms.txt'] }
 		})
 	],
 	fmt: {

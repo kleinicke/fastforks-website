@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { data, DEVICES, REFERENCE, TASK_META, TASK_ORDER, fmtMs, timings, type Timing } from '#lib/site.ts';
+	import { data, DEVICES, modelHref, REFERENCE, TASK_META, TASK_ORDER, fmtMs, timings, type Timing } from '#lib/site.ts';
 
 	const LIMIT = 8;
 	let deviceSlug = $state(REFERENCE.slug);
@@ -92,7 +92,7 @@
 			{#each rows as { m, more } (m.id)}
 				<li>
 					<div class="name">
-						<a href="{m.doc}?variant={m.id}"><code>{m.id}</code></a>
+						<a href={modelHref(m.doc, m.id)}><code>{m.id}</code></a>
 						{#if m.speedup !== null}
 							<span class="gain" title="kernels against {m.speedup_vs === 'original' ? 'the original code' : 'portable'}"
 								>{m.speedup.toFixed(1)}× <small>vs {m.speedup_vs}</small></span
