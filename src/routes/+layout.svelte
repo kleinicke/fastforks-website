@@ -18,9 +18,11 @@
 	const section = $derived(
 		page.url.pathname === '/models' || page.url.pathname.startsWith('/models/')
 			? 'models'
-			: ['/', '/impressum', '/datenschutz'].includes(page.url.pathname)
-				? null
-				: 'docs'
+			: ['/pipelines', '/sfm', '/stereo-geometry'].includes(page.url.pathname)
+				? 'pipelines'
+				: ['/', '/impressum', '/datenschutz'].includes(page.url.pathname)
+					? null
+					: 'docs'
 	);
 </script>
 
@@ -50,6 +52,7 @@
 		</a>
 		<nav aria-label="Main">
 			<a href="/models" aria-current={section === 'models' ? 'page' : undefined}>Models</a>
+			<a href="/pipelines" aria-current={section === 'pipelines' ? 'page' : undefined}>Pipelines</a>
 			<a href={LINKS.usage} aria-current={section === 'docs' ? 'page' : undefined}>Docs</a>
 			<a href={LINKS.github}>GitHub ↗</a>
 		</nav>

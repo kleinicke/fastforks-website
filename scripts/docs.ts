@@ -18,6 +18,7 @@ export const PAGES: Record<string, string> = {
 	'export.md': 'export',
 	'docker.md': 'docker',
 	'stereo_geometry.md': 'stereo-geometry',
+	'sfm.md': 'sfm',
 	'OTHER_GPUS.md': 'other-gpus'
 };
 

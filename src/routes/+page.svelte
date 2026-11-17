@@ -158,6 +158,17 @@ depth.<span class="k">load</span>(<span class="s">"depth-anything-v2-s"</span>)(
 	</div>
 </section>
 
+<section class="section" id="pipelines" aria-labelledby="pipelines-title">
+	<div class="wrap">
+		<h2 id="pipelines-title">Pipelines</h2>
+		<p class="lede">
+			Models chained with GPU geometry:
+			<a href="/sfm">structure from motion</a>, <a href="/stereo-geometry">calibrated stereo and rectification</a>,
+			<a href="/pipelines#pose">two-view pose with RANSAC</a>. <a href="/pipelines">All pipelines →</a>
+		</p>
+	</div>
+</section>
+
 <section class="section" id="licences" aria-labelledby="licences-title">
 	<div class="wrap split">
 		<div>

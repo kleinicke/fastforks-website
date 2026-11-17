@@ -285,6 +285,12 @@
 			{/if}
 		</p>
 
+		<p class="pipes">
+			Looking for more than one model? <a href="/pipelines">Pipelines</a> chain them:
+			<a href="/sfm">structure from motion</a>, <a href="/stereo-geometry">calibrated stereo and rectification</a>,
+			<a href="/pipelines#pose">two-view pose with GPU RANSAC</a>.
+		</p>
+
 		<div class="controls">
 			<div class="views" role="tablist" aria-label="View">
 				<button type="button" role="tab" aria-selected={view === 'device'} onclick={() => setView('device')}
@@ -856,5 +862,10 @@
 		margin: 0.8rem 0 0;
 		color: var(--muted);
 		font: 500 0.72rem/1.5 var(--mono);
+	}
+	.pipes {
+		margin: 0.2rem 0 1rem;
+		font-size: 0.9rem;
+		color: var(--muted);
 	}
 </style>

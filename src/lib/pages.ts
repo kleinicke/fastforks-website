@@ -12,8 +12,23 @@ const PATH: Record<string, (slug: string) => string> = {
 	models: (s) => `/models/${s}`
 };
 
-export const docPages: PageEntry[] = Object.values(docs)
-	.map((d) => ({ path: PATH[d.kind](d.slug), kind: d.kind, title: d.title, description: d.description, task: d.task }))
-	.sort((a, b) => a.path.localeCompare(b.path));
+const PIPELINES: PageEntry = {
+	path: '/pipelines',
+	kind: 'pages',
+	title: 'Pipelines',
+	description:
+		'Structure from motion, calibrated stereo with rectification, two-view and absolute pose with GPU RANSAC, camera calibration.'
+};
+
+export const docPages: PageEntry[] = [
+	...Object.values(docs).map((d) => ({
+		path: PATH[d.kind](d.slug),
+		kind: d.kind,
+		title: d.title,
+		description: d.description,
+		task: d.task
+	})),
+	PIPELINES
+].sort((a, b) => a.path.localeCompare(b.path));
 
 export const allPaths = ['/', '/models', ...docPages.map((p) => p.path)];

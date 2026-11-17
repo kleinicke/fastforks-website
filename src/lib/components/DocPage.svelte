@@ -28,6 +28,8 @@
 				['/benchmarks', 'Benchmarks'],
 				['/export', 'Export'],
 				['/docker', 'Docker'],
+				['/pipelines', 'Pipelines'],
+				['/sfm', 'Structure from motion'],
 				['/stereo-geometry', 'Stereo geometry']
 			]
 		},
