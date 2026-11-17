@@ -1,14 +1,14 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "80345e4c",
+		"commit": "b785d049",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
-		"models": 573,
+		"models": 578,
 		"families": 202,
 		"tasks": 20,
-		"commercial": 524,
+		"commercial": 529,
 		"vs_original": {
 			"models": 476,
 			"median": 3.2,
@@ -11405,7 +11405,12 @@
 						"part": null,
 						"prep_s": 9.92
 					},
-					"tensorrt": null
+					"tensorrt": {
+						"ms": 1.75,
+						"fails": null,
+						"part": "segmentation network on a normalized 352x352 image and precomputed text embedding",
+						"prep_s": 39.9
+					}
 				},
 				{
 					"id": "efficientvit-sam-l0",
@@ -12455,10 +12460,10 @@
 						"prep_s": 28
 					},
 					"tensorrt": {
-						"ms": 1.01,
+						"ms": 1.1,
 						"fails": null,
 						"part": null,
-						"prep_s": 50.8
+						"prep_s": 65.6
 					}
 				},
 				{
@@ -12541,10 +12546,10 @@
 						"prep_s": 26.7
 					},
 					"tensorrt": {
-						"ms": 0.942,
+						"ms": 1.08,
 						"fails": null,
 						"part": null,
-						"prep_s": 51.5
+						"prep_s": 64.4
 					}
 				},
 				{
@@ -13917,10 +13922,10 @@
 						"prep_s": 47.7
 					},
 					"tensorrt": {
-						"ms": 5.03,
+						"ms": 5.64,
 						"fails": null,
 						"part": null,
-						"prep_s": 65.7
+						"prep_s": 107
 					}
 				},
 				{
@@ -22078,6 +22083,70 @@
 					}
 				},
 				{
+					"id": "loma-b64",
+					"doc": "/models/loma",
+					"family": "loma",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 854,
+							"reserved": 962
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 129.1,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"year": 2026,
+					"peak_mib": null,
+					"compile": {
+						"ms": 101,
+						"fails": null,
+						"part": null,
+						"prep_s": 65.6
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "RuntimeError: Trying to create tensor with negative dimensio",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "loma-b128",
+					"doc": "/models/loma",
+					"family": "loma",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 878,
+							"reserved": 984
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 149.6,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"year": 2026,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
 					"id": "dedode-v2-b",
 					"doc": "/models/dedode",
 					"family": "dedode",
@@ -22288,6 +22357,78 @@
 						"part": null,
 						"prep_s": null
 					}
+				},
+				{
+					"id": "loma-g",
+					"doc": "/models/loma",
+					"family": "loma",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"year": 2026,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "loma-l",
+					"doc": "/models/loma",
+					"family": "loma",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"year": 2026,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
+				},
+				{
+					"id": "loma-r",
+					"doc": "/models/loma",
+					"family": "loma",
+					"mem": {
+						"original": null,
+						"portable": null,
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": null,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"year": 2026,
+					"peak_mib": null,
+					"compile": null,
+					"tensorrt": null
 				}
 			]
 		},
@@ -22391,10 +22532,10 @@
 						"prep_s": 140
 					},
 					"tensorrt": {
-						"ms": null,
-						"fails": "planned for 0.2.1",
-						"part": null,
-						"prep_s": null
+						"ms": 5.66,
+						"fails": null,
+						"part": "8 frames with 16 queries",
+						"prep_s": 51.4
 					}
 				},
 				{
@@ -22477,9 +22618,9 @@
 						"prep_s": 146
 					},
 					"tensorrt": {
-						"ms": null,
-						"fails": "planned for 0.2.1",
-						"part": null,
+						"ms": 6.12,
+						"fails": null,
+						"part": "8 frames with 16 queries",
 						"prep_s": null
 					}
 				},
@@ -23187,10 +23328,10 @@
 						"prep_s": 41.1
 					},
 					"tensorrt": {
-						"ms": null,
-						"fails": "planned for 0.2.1",
+						"ms": 189,
+						"fails": null,
 						"part": null,
-						"prep_s": null
+						"prep_s": 203
 					}
 				},
 				{
@@ -23443,8 +23584,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "17.8946",
+					"accuracy_metric": "DIV2K validation, 25 centre crops with two masks each, masked RGB PSNR (dB)",
 					"original_ms": 38,
 					"original_size": "512x512",
 					"original_note": null,
@@ -23461,10 +23602,10 @@
 						"prep_s": 25.9
 					},
 					"tensorrt": {
-						"ms": null,
-						"fails": "planned for 0.2.1",
+						"ms": 33.9,
+						"fails": null,
 						"part": null,
-						"prep_s": null
+						"prep_s": 110
 					}
 				},
 				{
@@ -24623,7 +24764,7 @@
 					},
 					"tensorrt": {
 						"ms": null,
-						"fails": "not run: onnx is not installed in the test venv",
+						"fails": "RuntimeError: Inplace update to inference tensor outside Inf",
 						"part": null,
 						"prep_s": null
 					}
@@ -53960,8 +54101,53 @@
 		"loma-b@1": {
 			"task": "matching",
 			"tier": "experimental",
-			"code": "MIT",
-			"weights": "MIT",
+			"code": "MIT AND Apache-2.0",
+			"weights": "MIT AND Apache-2.0 (assumed from code)",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loma-b128@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT AND Apache-2.0",
+			"weights": "MIT AND Apache-2.0 (assumed from code)",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loma-b64@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT AND Apache-2.0",
+			"weights": "MIT AND Apache-2.0 (assumed from code)",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loma-g@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT AND Apache-2.0",
+			"weights": "MIT AND Apache-2.0 (assumed from code)",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loma-l@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT AND Apache-2.0",
+			"weights": "MIT AND Apache-2.0 (assumed from code)",
+			"training": [
+				"megadepth"
+			]
+		},
+		"loma-r@1": {
+			"task": "matching",
+			"tier": "experimental",
+			"code": "MIT AND Apache-2.0",
+			"weights": "MIT AND Apache-2.0 (assumed from code)",
 			"training": [
 				"megadepth"
 			]

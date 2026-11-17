@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MODES, dt, mib, ms, type SpeedInput, type Variant } from '#lib/cards.ts';
+	import { MODES, dt, fasterOriginal, mib, ms, type SpeedInput, type Variant } from '#lib/cards.ts';
 
 	let {
 		variant,
@@ -132,8 +132,13 @@
 
 	const rows = $derived(current ? lines(current) : []);
 	const slowest = $derived(Math.max(...rows.map((r) => r.ms ?? 0), 1));
-	const base = $derived(current?.modes.original32 ?? current?.modes.original16 ?? null);
-	const baseLabel = $derived(current?.modes.original32 ? 'original fp32' : 'original');
+	// The faster of the original's fp32 and fp16 runs, as the docs' speed-ups use (a conservative headline).
+	const faster = $derived(current ? fasterOriginal(current) : null);
+	const base = $derived(faster?.row ?? null);
+	const baseKey = $derived(faster?.key ?? null);
+	const baseLabel = $derived(
+		baseKey === 'original16' ? 'original fp16' : baseKey === 'original32' && current?.modes.original16 ? 'original fp32' : 'original'
+	);
 	const when = $derived.by(() => {
 		if (!current) return '';
 		const r = Object.values(current.modes);
@@ -195,7 +200,7 @@
 							{/if}
 						</td>
 						<td class="num">
-							{#if base && r.ms !== null && r.key !== 'original32'}
+							{#if base && r.ms !== null && r.key !== baseKey}
 								{@const x = base.ms / r.ms}
 								<span class:fast={x > 1.05} class:slow={x < 0.95}>{x >= 10 ? x.toFixed(0) : x.toFixed(x >= 1 ? 1 : 2)}×</span>
 							{:else}–{/if}
