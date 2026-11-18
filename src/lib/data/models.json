@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "b785d049",
+		"commit": "f4a55b2a",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -4482,7 +4482,7 @@
 						},
 						"portable": {
 							"alloc": 1678,
-							"reserved": 1926
+							"reserved": 1826
 						},
 						"kernels": {
 							"alloc": 1626,
@@ -4495,17 +4495,17 @@
 					"original_ms": 485.6,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 332,
+					"portable_ms": 334.3,
 					"kernels_ms": 149.1,
 					"speedup": 3.3,
 					"speedup_vs": "original",
 					"year": 2026,
 					"peak_mib": 1626,
 					"compile": {
-						"ms": null,
-						"fails": "planned for 0.2.1",
+						"ms": 311,
+						"fails": null,
 						"part": null,
-						"prep_s": null
+						"prep_s": 136
 					},
 					"tensorrt": {
 						"ms": null,
@@ -11388,8 +11388,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "55.00 / 38.37",
+					"accuracy_metric": "COCO val2017, every 10th image, class masks, class / prompt mIoU %",
 					"original_ms": 15.3,
 					"original_size": "1024x1024",
 					"original_note": null,
@@ -22113,10 +22113,10 @@
 						"prep_s": 65.6
 					},
 					"tensorrt": {
-						"ms": null,
-						"fails": "RuntimeError: Trying to create tensor with negative dimensio",
+						"ms": 109,
+						"fails": null,
 						"part": null,
-						"prep_s": null
+						"prep_s": 102
 					}
 				},
 				{
@@ -22143,8 +22143,18 @@
 					"speedup_vs": null,
 					"year": 2026,
 					"peak_mib": null,
-					"compile": null,
-					"tensorrt": null
+					"compile": {
+						"ms": 122,
+						"fails": null,
+						"part": null,
+						"prep_s": 66.5
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "RuntimeError: Trying to create tensor with negative dimensio",
+						"part": null,
+						"prep_s": null
+					}
 				},
 				{
 					"id": "dedode-v2-b",
@@ -22225,6 +22235,43 @@
 					"tensorrt": {
 						"ms": null,
 						"fails": "planned for 0.2.1",
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
+					"id": "loma-l",
+					"doc": "/models/loma",
+					"family": "loma",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 1903,
+							"reserved": 2012
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 318.6,
+					"kernels_ms": null,
+					"speedup": null,
+					"speedup_vs": null,
+					"year": 2026,
+					"peak_mib": null,
+					"compile": {
+						"ms": 295,
+						"fails": null,
+						"part": null,
+						"prep_s": 101
+					},
+					"tensorrt": {
+						"ms": null,
+						"fails": "RuntimeError: Trying to create tensor with negative dimensio",
 						"part": null,
 						"prep_s": null
 					}
@@ -22360,30 +22407,6 @@
 				},
 				{
 					"id": "loma-g",
-					"doc": "/models/loma",
-					"family": "loma",
-					"mem": {
-						"original": null,
-						"portable": null,
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2026,
-					"peak_mib": null,
-					"compile": null,
-					"tensorrt": null
-				},
-				{
-					"id": "loma-l",
 					"doc": "/models/loma",
 					"family": "loma",
 					"mem": {
@@ -24756,17 +24779,12 @@
 					"speedup_vs": "original",
 					"year": 2025,
 					"peak_mib": 6140,
-					"compile": {
-						"ms": 1941,
+					"compile": null,
+					"tensorrt": {
+						"ms": 46.8,
 						"fails": null,
 						"part": null,
-						"prep_s": 238
-					},
-					"tensorrt": {
-						"ms": null,
-						"fails": "RuntimeError: Inplace update to inference tensor outside Inf",
-						"part": null,
-						"prep_s": null
+						"prep_s": 324
 					}
 				},
 				{
@@ -24894,7 +24912,7 @@
 					},
 					"commercial": "no",
 					"accuracy": "0.9688 / 0.9999",
-					"accuracy_metric": "TotalSegmentator test subset (8 CT cases x 12 prompts), mean Dice vs the ground-truth mask / agreement with the original",
+					"accuracy_metric": "TotalSegmentator test subset (8 CT cases x 12 prompts), mean Dice vs the ground-truth mask / agreement with the original / agreement with portable FP16",
 					"original_ms": 459.7,
 					"original_size": "200x200",
 					"original_note": null,
@@ -24904,17 +24922,12 @@
 					"speedup_vs": "original",
 					"year": 2025,
 					"peak_mib": 2643,
-					"compile": {
-						"ms": 162,
+					"compile": null,
+					"tensorrt": {
+						"ms": 262,
 						"fails": null,
 						"part": null,
-						"prep_s": 18
-					},
-					"tensorrt": {
-						"ms": null,
-						"fails": "planned for 0.2.1",
-						"part": null,
-						"prep_s": null
+						"prep_s": 58
 					}
 				},
 				{
