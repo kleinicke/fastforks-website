@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "b3c181c06",
+		"commit": "9c6e5f8c1",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -8254,8 +8254,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "68.21 / 56.87 / 41.33 / 95.08 / 95.38 / 57.67",
+					"accuracy_metric": "UnsafeBench test (Sexual), balanced accuracy / accuracy / recall / precision / F1 %",
 					"original_ms": 5.7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -22840,7 +22840,7 @@
 					"label": "Most accurate",
 					"id": "waft-a1",
 					"doc": "/models/waft",
-					"note": "518.7 ms, error 2.367"
+					"note": "518.7 ms, error 2.621"
 				},
 				{
 					"label": "Fastest commercially usable",
@@ -22852,7 +22852,7 @@
 					"label": "Most accurate commercially usable",
 					"id": "waft-a1",
 					"doc": "/models/waft",
-					"note": "518.7 ms, error 2.367"
+					"note": "518.7 ms, error 2.621"
 				}
 			],
 			"models": [
@@ -24523,7 +24523,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "2.367",
+					"accuracy": "2.621",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 1533.1,
 					"original_size": "1080x1920",
@@ -27454,6 +27454,55 @@
 					}
 				},
 				{
+					"id": "restormer-deblur",
+					"doc": "/models/restormer",
+					"family": "restormer",
+					"mem": {
+						"original": {
+							"alloc": 1221,
+							"reserved": 1418
+						},
+						"portable": {
+							"alloc": 724,
+							"reserved": 740
+						},
+						"kernels": {
+							"alloc": 718,
+							"reserved": 740
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "32.85 / 0.9405",
+					"accuracy_metric": "GoPro test (every 15th: 75 frames), deblurring, PSNR / SSIM (RGB)",
+					"original_ms": 233.9,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 182.7,
+					"kernels_ms": 132.2,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 718,
+					"compile": {
+						"input": "512x512",
+						"ms": 143.056,
+						"fails": null,
+						"part": "",
+						"prep_s": 44.106,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "512x512",
+						"ms": 162.099,
+						"fails": null,
+						"part": "",
+						"prep_s": 58.300000000000004,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "restormer-derain",
 					"doc": "/models/restormer",
 					"family": "restormer",
@@ -27547,55 +27596,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 59.699999999999996,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "restormer-deblur",
-					"doc": "/models/restormer",
-					"family": "restormer",
-					"mem": {
-						"original": {
-							"alloc": 1221,
-							"reserved": 1418
-						},
-						"portable": {
-							"alloc": 724,
-							"reserved": 740
-						},
-						"kernels": {
-							"alloc": 766,
-							"reserved": 800
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "32.85 / 0.9405",
-					"accuracy_metric": "GoPro test (every 15th: 75 frames), deblurring, PSNR / SSIM (RGB)",
-					"original_ms": 233.9,
-					"original_size": "512x512",
-					"original_note": null,
-					"portable_ms": 182.7,
-					"kernels_ms": 132.7,
-					"speedup": 1.8,
-					"speedup_vs": "original",
-					"year": 2021,
-					"peak_mib": 766,
-					"compile": {
-						"input": "512x512",
-						"ms": 143.056,
-						"fails": null,
-						"part": "",
-						"prep_s": 44.106,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "512x512",
-						"ms": 162.099,
-						"fails": null,
-						"part": "",
-						"prep_s": 58.300000000000004,
 						"standalone": false,
 						"dtype": "float16"
 					}
