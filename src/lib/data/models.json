@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "3448901a0",
+		"commit": "a4d9a81d6",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -10,8 +10,8 @@
 		"tasks": 20,
 		"commercial": 529,
 		"vs_original": {
-			"models": 480,
-			"median": 3.2,
+			"models": 524,
+			"median": 3.3,
 			"max": 101.2
 		}
 	},
@@ -3093,8 +3093,8 @@
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 1875,
-							"reserved": 2078
+							"alloc": 1602,
+							"reserved": 1878
 						},
 						"kernels": {
 							"alloc": 1472,
@@ -3107,7 +3107,7 @@
 					"original_ms": null,
 					"original_size": "994x1482",
 					"original_note": "OOM",
-					"portable_ms": 1785.3,
+					"portable_ms": 1789.1,
 					"kernels_ms": 580,
 					"speedup": 3.1,
 					"speedup_vs": "portable",
@@ -6080,6 +6080,55 @@
 					}
 				},
 				{
+					"id": "hgnetv2_b0",
+					"doc": "/models/hgnetv2",
+					"family": "hgnetv2",
+					"mem": {
+						"original": {
+							"alloc": 68,
+							"reserved": 72
+						},
+						"portable": {
+							"alloc": 48,
+							"reserved": 70
+						},
+						"kernels": {
+							"alloc": 46,
+							"reserved": 72
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "78.50 / 94.04",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 4.5,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 3.5,
+					"kernels_ms": 0.6,
+					"speedup": 7.8,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 46,
+					"compile": {
+						"input": "224x224",
+						"ms": 1.785,
+						"fails": null,
+						"part": "",
+						"prep_s": 6.742,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.334,
+						"fails": null,
+						"part": "",
+						"prep_s": 21.2,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "starnet_s2",
 					"doc": "/models/starnet",
 					"family": "starnet",
@@ -6124,6 +6173,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 24.7,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "hgnetv2_b1",
+					"doc": "/models/hgnetv2",
+					"family": "hgnetv2",
+					"mem": {
+						"original": {
+							"alloc": 70,
+							"reserved": 92
+						},
+						"portable": {
+							"alloc": 50,
+							"reserved": 68
+						},
+						"kernels": {
+							"alloc": 48,
+							"reserved": 70
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "80.12 / 94.38",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 4.6,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 3.5,
+					"kernels_ms": 0.6,
+					"speedup": 7.6,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 48,
+					"compile": {
+						"input": "224x224",
+						"ms": 1.843,
+						"fails": null,
+						"part": "",
+						"prep_s": 7.065,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.307,
+						"fails": null,
+						"part": "",
+						"prep_s": 20.1,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -6276,6 +6374,55 @@
 					}
 				},
 				{
+					"id": "efficientformer_l1",
+					"doc": "/models/efficientformer",
+					"family": "efficientformer",
+					"mem": {
+						"original": {
+							"alloc": 104,
+							"reserved": 124
+						},
+						"portable": {
+							"alloc": 93,
+							"reserved": 104
+						},
+						"kernels": {
+							"alloc": 91,
+							"reserved": 126
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "81.14 / 95.12",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 4.9,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 3.7,
+					"kernels_ms": 0.7,
+					"speedup": 6.9,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 91,
+					"compile": {
+						"input": "224x224",
+						"ms": 1.693,
+						"fails": null,
+						"part": "",
+						"prep_s": 9.104,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.335,
+						"fails": null,
+						"part": "",
+						"prep_s": 35.4,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "fastvit_t8.apple_dist_in1k",
 					"doc": "/models/fastvit",
 					"family": "fastvit",
@@ -6418,6 +6565,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 33.4,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "hgnetv2_b2",
+					"doc": "/models/hgnetv2",
+					"family": "hgnetv2",
+					"mem": {
+						"original": {
+							"alloc": 98,
+							"reserved": 118
+						},
+						"portable": {
+							"alloc": 59,
+							"reserved": 94
+						},
+						"kernels": {
+							"alloc": 57,
+							"reserved": 94
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "82.50 / 95.92",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 6.2,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 4.6,
+					"kernels_ms": 0.8,
+					"speedup": 8.2,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 57,
+					"compile": {
+						"input": "224x224",
+						"ms": 2.335,
+						"fails": null,
+						"part": "",
+						"prep_s": 7.647,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.383,
+						"fails": null,
+						"part": "",
+						"prep_s": 23.400000000000002,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -6815,6 +7011,55 @@
 					}
 				},
 				{
+					"id": "shvit_s1",
+					"doc": "/models/shvit",
+					"family": "shvit",
+					"mem": {
+						"original": {
+							"alloc": 70,
+							"reserved": 76
+						},
+						"portable": {
+							"alloc": 47,
+							"reserved": 58
+						},
+						"kernels": {
+							"alloc": 47,
+							"reserved": 62
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "74.26 / 91.00",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 8.4,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 6.7,
+					"kernels_ms": 0.8,
+					"speedup": 10.4,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 47,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.109,
+						"fails": null,
+						"part": "",
+						"prep_s": 10.187,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.51,
+						"fails": null,
+						"part": "",
+						"prep_s": 23.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "resnet50",
 					"doc": "/models/resnet",
 					"family": "resnet",
@@ -6913,6 +7158,104 @@
 					}
 				},
 				{
+					"id": "hgnetv2_b4",
+					"doc": "/models/hgnetv2",
+					"family": "hgnetv2",
+					"mem": {
+						"original": {
+							"alloc": 147,
+							"reserved": 166
+						},
+						"portable": {
+							"alloc": 82,
+							"reserved": 116
+						},
+						"kernels": {
+							"alloc": 75,
+							"reserved": 138
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "84.00 / 96.64",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 7.1,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 4.5,
+					"kernels_ms": 0.9,
+					"speedup": 8.2,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 75,
+					"compile": {
+						"input": "224x224",
+						"ms": 2.656,
+						"fails": null,
+						"part": "",
+						"prep_s": 7.839,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.463,
+						"fails": null,
+						"part": "",
+						"prep_s": 19.8,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "hgnetv2_b3",
+					"doc": "/models/hgnetv2",
+					"family": "hgnetv2",
+					"mem": {
+						"original": {
+							"alloc": 127,
+							"reserved": 140
+						},
+						"portable": {
+							"alloc": 76,
+							"reserved": 114
+						},
+						"kernels": {
+							"alloc": 67,
+							"reserved": 116
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "83.66 / 96.02",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 7.2,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 5.2,
+					"kernels_ms": 0.9,
+					"speedup": 7.9,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 67,
+					"compile": {
+						"input": "224x224",
+						"ms": 2.553,
+						"fails": null,
+						"part": "",
+						"prep_s": 7.988,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.436,
+						"fails": null,
+						"part": "",
+						"prep_s": 24.599999999999998,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "starnet_s4",
 					"doc": "/models/starnet",
 					"family": "starnet",
@@ -7006,6 +7349,104 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 60.7,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "shvit_s2",
+					"doc": "/models/shvit",
+					"family": "shvit",
+					"mem": {
+						"original": {
+							"alloc": 99,
+							"reserved": 120
+						},
+						"portable": {
+							"alloc": 56,
+							"reserved": 88
+						},
+						"kernels": {
+							"alloc": 57,
+							"reserved": 88
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "76.82 / 92.44",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 8.4,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 6.8,
+					"kernels_ms": 0.9,
+					"speedup": 8.8,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 57,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.898,
+						"fails": null,
+						"part": "",
+						"prep_s": 10.055,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.533,
+						"fails": null,
+						"part": "",
+						"prep_s": 24,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "shvit_s3",
+					"doc": "/models/shvit",
+					"family": "shvit",
+					"mem": {
+						"original": {
+							"alloc": 92,
+							"reserved": 110
+						},
+						"portable": {
+							"alloc": 62,
+							"reserved": 112
+						},
+						"kernels": {
+							"alloc": 62,
+							"reserved": 112
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "77.96 / 93.50",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 9.4,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 8.1,
+					"kernels_ms": 1,
+					"speedup": 9.3,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 62,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.64,
+						"fails": null,
+						"part": "",
+						"prep_s": 10.924,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.575,
+						"fails": null,
+						"part": "",
+						"prep_s": 24.6,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -7158,6 +7599,55 @@
 					}
 				},
 				{
+					"id": "davit_tiny",
+					"doc": "/models/davit",
+					"family": "davit",
+					"mem": {
+						"original": {
+							"alloc": 196,
+							"reserved": 204
+						},
+						"portable": {
+							"alloc": 96,
+							"reserved": 116
+						},
+						"kernels": {
+							"alloc": 93,
+							"reserved": 134
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "83.94 / 96.56",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 6.9,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 6.3,
+					"kernels_ms": 1.2,
+					"speedup": 5.9,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 93,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.096,
+						"fails": null,
+						"part": "",
+						"prep_s": 15.455,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.031,
+						"fails": null,
+						"part": "",
+						"prep_s": 53.8,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "repvit_m1_5",
 					"doc": "/models/repvit",
 					"family": "repvit",
@@ -7305,6 +7795,153 @@
 					}
 				},
 				{
+					"id": "efficientformerv2_s0",
+					"doc": "/models/efficientformerv2",
+					"family": "efficientformerv2",
+					"mem": {
+						"original": {
+							"alloc": 55,
+							"reserved": 64
+						},
+						"portable": {
+							"alloc": 44,
+							"reserved": 64
+						},
+						"kernels": {
+							"alloc": 44,
+							"reserved": 66
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "77.34 / 92.82",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 8.2,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 7.6,
+					"kernels_ms": 1.2,
+					"speedup": 6.8,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 44,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.34,
+						"fails": null,
+						"part": "",
+						"prep_s": 11.281,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.55,
+						"fails": null,
+						"part": "",
+						"prep_s": 36.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "efficientformer_l3",
+					"doc": "/models/efficientformer",
+					"family": "efficientformer",
+					"mem": {
+						"original": {
+							"alloc": 214,
+							"reserved": 236
+						},
+						"portable": {
+							"alloc": 161,
+							"reserved": 216
+						},
+						"kernels": {
+							"alloc": 160,
+							"reserved": 218
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "83.16 / 96.32",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 8.4,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 6.4,
+					"kernels_ms": 1.2,
+					"speedup": 6.9,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 160,
+					"compile": {
+						"input": "224x224",
+						"ms": 2.574,
+						"fails": null,
+						"part": "",
+						"prep_s": 11.842,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.75,
+						"fails": null,
+						"part": "",
+						"prep_s": 39.400000000000006,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "hgnetv2_b5",
+					"doc": "/models/hgnetv2",
+					"family": "hgnetv2",
+					"mem": {
+						"original": {
+							"alloc": 213,
+							"reserved": 222
+						},
+						"portable": {
+							"alloc": 114,
+							"reserved": 150
+						},
+						"kernels": {
+							"alloc": 115,
+							"reserved": 156
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "85.52 / 97.18",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 11.4,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 7,
+					"kernels_ms": 1.3,
+					"speedup": 8.9,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 115,
+					"compile": {
+						"input": "224x224",
+						"ms": 4.129,
+						"fails": null,
+						"part": "",
+						"prep_s": 9.973,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.758,
+						"fails": null,
+						"part": "",
+						"prep_s": 23.8,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "densenet121",
 					"doc": "/models/densenet",
 					"family": "densenet",
@@ -7398,6 +8035,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 22.400000000000002,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "efficientformerv2_s1",
+					"doc": "/models/efficientformerv2",
+					"family": "efficientformerv2",
+					"mem": {
+						"original": {
+							"alloc": 65,
+							"reserved": 72
+						},
+						"portable": {
+							"alloc": 50,
+							"reserved": 88
+						},
+						"kernels": {
+							"alloc": 50,
+							"reserved": 88
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "80.88 / 95.00",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 10.1,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 8.9,
+					"kernels_ms": 1.4,
+					"speedup": 7.3,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 50,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.906,
+						"fails": null,
+						"part": "",
+						"prep_s": 12.714,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.632,
+						"fails": null,
+						"part": "",
+						"prep_s": 41.199999999999996,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -7599,6 +8285,55 @@
 					}
 				},
 				{
+					"id": "coatnet_nano_rw_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 124,
+							"reserved": 146
+						},
+						"portable": {
+							"alloc": 74,
+							"reserved": 86
+						},
+						"kernels": {
+							"alloc": 72,
+							"reserved": 106
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "82.56 / 95.78",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 7.9,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 7.2,
+					"kernels_ms": 1.6,
+					"speedup": 4.8,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 72,
+					"compile": {
+						"input": "224x224",
+						"ms": 4.706,
+						"fails": null,
+						"part": "",
+						"prep_s": 13.919,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.709,
+						"fails": null,
+						"part": "",
+						"prep_s": 31.8,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "repvit_m2_3",
 					"doc": "/models/repvit",
 					"family": "repvit",
@@ -7790,6 +8525,153 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 40.8,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "coatnet_0_rw_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 194,
+							"reserved": 210
+						},
+						"portable": {
+							"alloc": 102,
+							"reserved": 124
+						},
+						"kernels": {
+							"alloc": 100,
+							"reserved": 144
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "83.38 / 96.30",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 7.6,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 6.5,
+					"kernels_ms": 1.7,
+					"speedup": 4.4,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 100,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.591,
+						"fails": null,
+						"part": "",
+						"prep_s": 12.146,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.849,
+						"fails": null,
+						"part": "",
+						"prep_s": 38.2,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "coatnet_rmlp_nano_rw_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 124,
+							"reserved": 146
+						},
+						"portable": {
+							"alloc": 78,
+							"reserved": 106
+						},
+						"kernels": {
+							"alloc": 77,
+							"reserved": 106
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "82.44 / 95.96",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 8.9,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 8.1,
+					"kernels_ms": 1.8,
+					"speedup": 5.1,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 77,
+					"compile": {
+						"input": "224x224",
+						"ms": 9.891,
+						"fails": null,
+						"part": "",
+						"prep_s": 13.937,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.868,
+						"fails": null,
+						"part": "",
+						"prep_s": 37.1,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "shvit_s4",
+					"doc": "/models/shvit",
+					"family": "shvit",
+					"mem": {
+						"original": {
+							"alloc": 129,
+							"reserved": 146
+						},
+						"portable": {
+							"alloc": 67,
+							"reserved": 118
+						},
+						"kernels": {
+							"alloc": 68,
+							"reserved": 102
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "80.40 / 94.52",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 9.3,
+					"kernels_ms": 1.8,
+					"speedup": 5.2,
+					"speedup_vs": "portable",
+					"year": 2024,
+					"peak_mib": 68,
+					"compile": {
+						"input": "256x256",
+						"ms": 4.111,
+						"fails": null,
+						"part": "",
+						"prep_s": 11.319,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "256x256",
+						"ms": 0.658,
+						"fails": null,
+						"part": "",
+						"prep_s": 26.3,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -8040,6 +8922,55 @@
 					}
 				},
 				{
+					"id": "davit_small",
+					"doc": "/models/davit",
+					"family": "davit",
+					"mem": {
+						"original": {
+							"alloc": 239,
+							"reserved": 262
+						},
+						"portable": {
+							"alloc": 136,
+							"reserved": 150
+						},
+						"kernels": {
+							"alloc": 134,
+							"reserved": 168
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "85.24 / 97.18",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 13,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 12.8,
+					"kernels_ms": 1.9,
+					"speedup": 6.9,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 134,
+					"compile": {
+						"input": "224x224",
+						"ms": 5.536,
+						"fails": null,
+						"part": "",
+						"prep_s": 21.809,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.923,
+						"fails": null,
+						"part": "",
+						"prep_s": 66.39999999999999,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "efficientnet_v2_s",
 					"doc": "/models/efficientnetv2",
 					"family": "efficientnetv2",
@@ -8236,6 +9167,153 @@
 					}
 				},
 				{
+					"id": "efficientformer_l7",
+					"doc": "/models/efficientformer",
+					"family": "efficientformer",
+					"mem": {
+						"original": {
+							"alloc": 363,
+							"reserved": 378
+						},
+						"portable": {
+							"alloc": 300,
+							"reserved": 324
+						},
+						"kernels": {
+							"alloc": 298,
+							"reserved": 346
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "84.38 / 96.68",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 12.3,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 9.6,
+					"kernels_ms": 2,
+					"speedup": 6,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 298,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.695,
+						"fails": null,
+						"part": "",
+						"prep_s": 14.435,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.4,
+						"fails": null,
+						"part": "",
+						"prep_s": 40,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "davit_base",
+					"doc": "/models/davit",
+					"family": "davit",
+					"mem": {
+						"original": {
+							"alloc": 390,
+							"reserved": 416
+						},
+						"portable": {
+							"alloc": 212,
+							"reserved": 224
+						},
+						"kernels": {
+							"alloc": 209,
+							"reserved": 244
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "85.66 / 97.12",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 13.4,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 11.7,
+					"kernels_ms": 2.1,
+					"speedup": 6.4,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 209,
+					"compile": {
+						"input": "224x224",
+						"ms": 5.48,
+						"fails": null,
+						"part": "",
+						"prep_s": 21.845,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 2.28,
+						"fails": null,
+						"part": "",
+						"prep_s": 71.1,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "hgnetv2_b6",
+					"doc": "/models/hgnetv2",
+					"family": "hgnetv2",
+					"mem": {
+						"original": {
+							"alloc": 354,
+							"reserved": 376
+						},
+						"portable": {
+							"alloc": 198,
+							"reserved": 224
+						},
+						"kernels": {
+							"alloc": 188,
+							"reserved": 232
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "86.74 / 98.00",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 16.5,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 9.4,
+					"kernels_ms": 2.1,
+					"speedup": 7.9,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 188,
+					"compile": {
+						"input": "224x224",
+						"ms": 5.437,
+						"fails": null,
+						"part": "",
+						"prep_s": 11.199,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.415,
+						"fails": null,
+						"part": "",
+						"prep_s": 26.900000000000002,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "swin_base_patch4_window7_224",
 					"doc": "/models/swin",
 					"family": "swin",
@@ -8280,6 +9358,153 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 64.2,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "efficientformerv2_s2",
+					"doc": "/models/efficientformerv2",
+					"family": "efficientformerv2",
+					"mem": {
+						"original": {
+							"alloc": 91,
+							"reserved": 116
+						},
+						"portable": {
+							"alloc": 64,
+							"reserved": 104
+						},
+						"kernels": {
+							"alloc": 64,
+							"reserved": 104
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "83.18 / 96.30",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 15.2,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 13.9,
+					"kernels_ms": 2.2,
+					"speedup": 7,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 64,
+					"compile": {
+						"input": "224x224",
+						"ms": 5.548,
+						"fails": null,
+						"part": "",
+						"prep_s": 16.356,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.919,
+						"fails": null,
+						"part": "",
+						"prep_s": 38.900000000000006,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "focalnet_tiny_srf",
+					"doc": "/models/focalnet",
+					"family": "focalnet",
+					"mem": {
+						"original": {
+							"alloc": 197,
+							"reserved": 206
+						},
+						"portable": {
+							"alloc": 95,
+							"reserved": 118
+						},
+						"kernels": {
+							"alloc": 93,
+							"reserved": 138
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "82.90 / 96.28",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 8.4,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 7.4,
+					"kernels_ms": 2.2,
+					"speedup": 3.8,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 93,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.719,
+						"fails": null,
+						"part": "",
+						"prep_s": 12.852,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.864,
+						"fails": null,
+						"part": "",
+						"prep_s": 52,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "focalnet_tiny_lrf",
+					"doc": "/models/focalnet",
+					"family": "focalnet",
+					"mem": {
+						"original": {
+							"alloc": 199,
+							"reserved": 208
+						},
+						"portable": {
+							"alloc": 95,
+							"reserved": 118
+						},
+						"kernels": {
+							"alloc": 93,
+							"reserved": 138
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "82.86 / 96.20",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 8.9,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 8.1,
+					"kernels_ms": 2.4,
+					"speedup": 3.7,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 93,
+					"compile": {
+						"input": "224x224",
+						"ms": 3.937,
+						"fails": null,
+						"part": "",
+						"prep_s": 13.252,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 0.952,
+						"fails": null,
+						"part": "",
+						"prep_s": 49.9,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -8334,6 +9559,55 @@
 					}
 				},
 				{
+					"id": "coatnet_1_rw_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 225,
+							"reserved": 254
+						},
+						"portable": {
+							"alloc": 132,
+							"reserved": 158
+						},
+						"kernels": {
+							"alloc": 130,
+							"reserved": 196
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "84.44 / 96.56",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 12.3,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 10.7,
+					"kernels_ms": 2.9,
+					"speedup": 4.3,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 130,
+					"compile": {
+						"input": "224x224",
+						"ms": 5.585,
+						"fails": null,
+						"part": "",
+						"prep_s": 16.159,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.376,
+						"fails": null,
+						"part": "",
+						"prep_s": 42,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "convnextv2_base",
 					"doc": "/models/convnextv2",
 					"family": "convnextv2",
@@ -8383,6 +9657,104 @@
 					}
 				},
 				{
+					"id": "coatnet_rmlp_1_rw2_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 226,
+							"reserved": 254
+						},
+						"portable": {
+							"alloc": 132,
+							"reserved": 158
+						},
+						"kernels": {
+							"alloc": 130,
+							"reserved": 178
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "85.30 / 97.04",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 13.9,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 12.3,
+					"kernels_ms": 3,
+					"speedup": 4.6,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 130,
+					"compile": {
+						"input": "224x224",
+						"ms": 6.632,
+						"fails": null,
+						"part": "",
+						"prep_s": 17.878,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.546,
+						"fails": null,
+						"part": "",
+						"prep_s": 42.6,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "coatnet_rmlp_1_rw_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 213,
+							"reserved": 234
+						},
+						"portable": {
+							"alloc": 131,
+							"reserved": 156
+						},
+						"kernels": {
+							"alloc": 129,
+							"reserved": 178
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "84.46 / 96.56",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 14,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 12.4,
+					"kernels_ms": 3,
+					"speedup": 4.6,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 129,
+					"compile": {
+						"input": "224x224",
+						"ms": 6.543,
+						"fails": null,
+						"part": "",
+						"prep_s": 18.561,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.468,
+						"fails": null,
+						"part": "",
+						"prep_s": 43.8,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "convnext_base.fb_in22k_ft_in1k_384",
 					"doc": "/models/convnext_features",
 					"family": "convnext_features",
@@ -8427,6 +9799,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 31.2,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "efficientformerv2_l",
+					"doc": "/models/efficientformerv2",
+					"family": "efficientformerv2",
+					"mem": {
+						"original": {
+							"alloc": 145,
+							"reserved": 168
+						},
+						"portable": {
+							"alloc": 93,
+							"reserved": 144
+						},
+						"kernels": {
+							"alloc": 94,
+							"reserved": 188
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "84.02 / 96.50",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 19.9,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 17.1,
+					"kernels_ms": 3.1,
+					"speedup": 6.5,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 94,
+					"compile": {
+						"input": "224x224",
+						"ms": 7.322,
+						"fails": null,
+						"part": "",
+						"prep_s": 20.717,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.195,
+						"fails": null,
+						"part": "",
+						"prep_s": 45.1,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -8579,139 +10000,99 @@
 					}
 				},
 				{
-					"id": "hgnetv2_b0",
-					"doc": "/models/hgnetv2",
-					"family": "hgnetv2",
+					"id": "focalnet_small_srf",
+					"doc": "/models/focalnet",
+					"family": "focalnet",
 					"mem": {
 						"original": {
-							"alloc": 68,
-							"reserved": 72
+							"alloc": 239,
+							"reserved": 252
 						},
 						"portable": {
-							"alloc": 48,
-							"reserved": 70
+							"alloc": 136,
+							"reserved": 152
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 134,
+							"reserved": 154
+						}
 					},
 					"commercial": "yes",
-					"accuracy": "78.50 / 94.04",
+					"accuracy": "84.44 / 96.76",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 4.5,
+					"original_ms": 15.9,
 					"original_size": "224x224",
 					"original_note": null,
-					"portable_ms": 3.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 1.785,
-						"fails": null,
-						"part": "",
-						"prep_s": 6.742,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.334,
-						"fails": null,
-						"part": "",
-						"prep_s": 21.2,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "hgnetv2_b1",
-					"doc": "/models/hgnetv2",
-					"family": "hgnetv2",
-					"mem": {
-						"original": {
-							"alloc": 70,
-							"reserved": 92
-						},
-						"portable": {
-							"alloc": 50,
-							"reserved": 68
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "80.12 / 94.38",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 4.6,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 3.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 1.843,
-						"fails": null,
-						"part": "",
-						"prep_s": 7.065,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.307,
-						"fails": null,
-						"part": "",
-						"prep_s": 20.1,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "efficientformer_l1",
-					"doc": "/models/efficientformer",
-					"family": "efficientformer",
-					"mem": {
-						"original": {
-							"alloc": 104,
-							"reserved": 124
-						},
-						"portable": {
-							"alloc": 93,
-							"reserved": 104
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "81.14 / 95.12",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 4.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 3.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 14,
+					"kernels_ms": 3.7,
+					"speedup": 4.3,
+					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": null,
+					"peak_mib": 134,
 					"compile": {
 						"input": "224x224",
-						"ms": 1.693,
+						"ms": 6.9,
 						"fails": null,
 						"part": "",
-						"prep_s": 9.104,
+						"prep_s": 17.831,
 						"standalone": false,
 						"dtype": null
 					},
 					"tensorrt": {
 						"input": "224x224",
-						"ms": 0.335,
+						"ms": 1.492,
 						"fails": null,
 						"part": "",
-						"prep_s": 35.4,
+						"prep_s": 65.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "coatnet_2_rw_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 376,
+							"reserved": 410
+						},
+						"portable": {
+							"alloc": 207,
+							"reserved": 240
+						},
+						"kernels": {
+							"alloc": 204,
+							"reserved": 240
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "87.18 / 98.16",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 14.6,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 11.9,
+					"kernels_ms": 4,
+					"speedup": 3.6,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 204,
+					"compile": {
+						"input": "224x224",
+						"ms": 5.525,
+						"fails": null,
+						"part": "",
+						"prep_s": 16.17,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.73,
+						"fails": null,
+						"part": "",
+						"prep_s": 36,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -8766,6 +10147,153 @@
 					}
 				},
 				{
+					"id": "focalnet_small_lrf",
+					"doc": "/models/focalnet",
+					"family": "focalnet",
+					"mem": {
+						"original": {
+							"alloc": 241,
+							"reserved": 254
+						},
+						"portable": {
+							"alloc": 136,
+							"reserved": 152
+						},
+						"kernels": {
+							"alloc": 136,
+							"reserved": 154
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "84.32 / 96.80",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 16.8,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 15.8,
+					"kernels_ms": 4.2,
+					"speedup": 4,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 136,
+					"compile": {
+						"input": "224x224",
+						"ms": 7.28,
+						"fails": null,
+						"part": "",
+						"prep_s": 19.494,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.696,
+						"fails": null,
+						"part": "",
+						"prep_s": 62.5,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "coatnet_rmlp_2_rw_224",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 376,
+							"reserved": 410
+						},
+						"portable": {
+							"alloc": 207,
+							"reserved": 240
+						},
+						"kernels": {
+							"alloc": 204,
+							"reserved": 240
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "87.02 / 98.12",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 15.3,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 12.8,
+					"kernels_ms": 4.2,
+					"speedup": 3.6,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 204,
+					"compile": {
+						"input": "224x224",
+						"ms": 6.518,
+						"fails": null,
+						"part": "",
+						"prep_s": 18.41,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.871,
+						"fails": null,
+						"part": "",
+						"prep_s": 41,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "coatnet_rmlp_2_rw_224.sw_in1k",
+					"doc": "/models/coatnet",
+					"family": "coatnet",
+					"mem": {
+						"original": {
+							"alloc": 376,
+							"reserved": 410
+						},
+						"portable": {
+							"alloc": 207,
+							"reserved": 240
+						},
+						"kernels": {
+							"alloc": 204,
+							"reserved": 240
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "85.16 / 96.80",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 15.3,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 15.1,
+					"kernels_ms": 4.2,
+					"speedup": 3.6,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 204,
+					"compile": {
+						"input": "224x224",
+						"ms": 6.343,
+						"fails": null,
+						"part": "",
+						"prep_s": 18.437,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.924,
+						"fails": null,
+						"part": "",
+						"prep_s": 45.9,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "wd-convnext-tagger-v3",
 					"doc": "/models/wd_tagger",
 					"family": "wd_tagger",
@@ -8810,98 +10338,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 39.7,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "hgnetv2_b4",
-					"doc": "/models/hgnetv2",
-					"family": "hgnetv2",
-					"mem": {
-						"original": {
-							"alloc": 147,
-							"reserved": 166
-						},
-						"portable": {
-							"alloc": 82,
-							"reserved": 116
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.00 / 96.64",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 7.1,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 4.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 2.656,
-						"fails": null,
-						"part": "",
-						"prep_s": 7.839,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.463,
-						"fails": null,
-						"part": "",
-						"prep_s": 19.8,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "hgnetv2_b2",
-					"doc": "/models/hgnetv2",
-					"family": "hgnetv2",
-					"mem": {
-						"original": {
-							"alloc": 98,
-							"reserved": 118
-						},
-						"portable": {
-							"alloc": 59,
-							"reserved": 94
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "82.50 / 95.92",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 6.2,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 4.6,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 2.335,
-						"fails": null,
-						"part": "",
-						"prep_s": 7.647,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.383,
-						"fails": null,
-						"part": "",
-						"prep_s": 23.400000000000002,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -8956,6 +10392,55 @@
 					}
 				},
 				{
+					"id": "focalnet_base_srf",
+					"doc": "/models/focalnet",
+					"family": "focalnet",
+					"mem": {
+						"original": {
+							"alloc": 390,
+							"reserved": 414
+						},
+						"portable": {
+							"alloc": 211,
+							"reserved": 234
+						},
+						"kernels": {
+							"alloc": 210,
+							"reserved": 256
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "84.16 / 96.84",
+					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
+					"original_ms": 17.1,
+					"original_size": "224x224",
+					"original_note": null,
+					"portable_ms": 14.2,
+					"kernels_ms": 5,
+					"speedup": 3.4,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 210,
+					"compile": {
+						"input": "224x224",
+						"ms": 6.943,
+						"fails": null,
+						"part": "",
+						"prep_s": 17.81,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "224x224",
+						"ms": 1.741,
+						"fails": null,
+						"part": "",
+						"prep_s": 63.8,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "convnext_large.fb_in22k_ft_in1k_384",
 					"doc": "/models/convnext_features",
 					"family": "convnext_features",
@@ -9005,967 +10490,50 @@
 					}
 				},
 				{
-					"id": "hgnetv2_b3",
-					"doc": "/models/hgnetv2",
-					"family": "hgnetv2",
-					"mem": {
-						"original": {
-							"alloc": 127,
-							"reserved": 140
-						},
-						"portable": {
-							"alloc": 76,
-							"reserved": 114
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "83.66 / 96.02",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 7.2,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 5.2,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 2.553,
-						"fails": null,
-						"part": "",
-						"prep_s": 7.988,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.436,
-						"fails": null,
-						"part": "",
-						"prep_s": 24.599999999999998,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "davit_tiny",
-					"doc": "/models/davit",
-					"family": "davit",
-					"mem": {
-						"original": {
-							"alloc": 196,
-							"reserved": 204
-						},
-						"portable": {
-							"alloc": 96,
-							"reserved": 116
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "83.94 / 96.56",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 6.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 6.3,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.096,
-						"fails": null,
-						"part": "",
-						"prep_s": 15.455,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.031,
-						"fails": null,
-						"part": "",
-						"prep_s": 53.8,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "efficientformer_l3",
-					"doc": "/models/efficientformer",
-					"family": "efficientformer",
-					"mem": {
-						"original": {
-							"alloc": 214,
-							"reserved": 236
-						},
-						"portable": {
-							"alloc": 161,
-							"reserved": 216
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "83.16 / 96.32",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 8.4,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 6.4,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 2.574,
-						"fails": null,
-						"part": "",
-						"prep_s": 11.842,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.75,
-						"fails": null,
-						"part": "",
-						"prep_s": 39.400000000000006,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_0_rw_224",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 194,
-							"reserved": 210
-						},
-						"portable": {
-							"alloc": 102,
-							"reserved": 124
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "83.38 / 96.30",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 7.6,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 6.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.591,
-						"fails": null,
-						"part": "",
-						"prep_s": 12.146,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.849,
-						"fails": null,
-						"part": "",
-						"prep_s": 38.2,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "shvit_s1",
-					"doc": "/models/shvit",
-					"family": "shvit",
-					"mem": {
-						"original": {
-							"alloc": 70,
-							"reserved": 76
-						},
-						"portable": {
-							"alloc": 47,
-							"reserved": 58
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "74.26 / 91.00",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 8.4,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 6.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2024,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.109,
-						"fails": null,
-						"part": "",
-						"prep_s": 10.187,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.51,
-						"fails": null,
-						"part": "",
-						"prep_s": 23.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "shvit_s2",
-					"doc": "/models/shvit",
-					"family": "shvit",
-					"mem": {
-						"original": {
-							"alloc": 99,
-							"reserved": 120
-						},
-						"portable": {
-							"alloc": 56,
-							"reserved": 88
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "76.82 / 92.44",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 8.4,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 6.8,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2024,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.898,
-						"fails": null,
-						"part": "",
-						"prep_s": 10.055,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.533,
-						"fails": null,
-						"part": "",
-						"prep_s": 24,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "hgnetv2_b5",
-					"doc": "/models/hgnetv2",
-					"family": "hgnetv2",
-					"mem": {
-						"original": {
-							"alloc": 213,
-							"reserved": 222
-						},
-						"portable": {
-							"alloc": 114,
-							"reserved": 150
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "85.52 / 97.18",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 11.4,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 4.129,
-						"fails": null,
-						"part": "",
-						"prep_s": 9.973,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.758,
-						"fails": null,
-						"part": "",
-						"prep_s": 23.8,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_nano_rw_224",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 124,
-							"reserved": 146
-						},
-						"portable": {
-							"alloc": 74,
-							"reserved": 86
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "82.56 / 95.78",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 7.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 7.2,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 4.706,
-						"fails": null,
-						"part": "",
-						"prep_s": 13.919,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.709,
-						"fails": null,
-						"part": "",
-						"prep_s": 31.8,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "focalnet_tiny_srf",
+					"id": "focalnet_base_lrf",
 					"doc": "/models/focalnet",
 					"family": "focalnet",
 					"mem": {
 						"original": {
-							"alloc": 197,
-							"reserved": 206
-						},
-						"portable": {
-							"alloc": 95,
-							"reserved": 118
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "82.90 / 96.28",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 8.4,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 7.4,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.719,
-						"fails": null,
-						"part": "",
-						"prep_s": 12.852,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.864,
-						"fails": null,
-						"part": "",
-						"prep_s": 52,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "efficientformerv2_s0",
-					"doc": "/models/efficientformerv2",
-					"family": "efficientformerv2",
-					"mem": {
-						"original": {
-							"alloc": 55,
-							"reserved": 64
-						},
-						"portable": {
-							"alloc": 44,
-							"reserved": 64
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "77.34 / 92.82",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 8.2,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 7.6,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.34,
-						"fails": null,
-						"part": "",
-						"prep_s": 11.281,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.55,
-						"fails": null,
-						"part": "",
-						"prep_s": 36.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "focalnet_tiny_lrf",
-					"doc": "/models/focalnet",
-					"family": "focalnet",
-					"mem": {
-						"original": {
-							"alloc": 199,
-							"reserved": 208
-						},
-						"portable": {
-							"alloc": 95,
-							"reserved": 118
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "82.86 / 96.20",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 8.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 8.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.937,
-						"fails": null,
-						"part": "",
-						"prep_s": 13.252,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.952,
-						"fails": null,
-						"part": "",
-						"prep_s": 49.9,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_rmlp_nano_rw_224",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 124,
-							"reserved": 146
-						},
-						"portable": {
-							"alloc": 78,
-							"reserved": 106
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "82.44 / 95.96",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 8.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 8.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 9.891,
-						"fails": null,
-						"part": "",
-						"prep_s": 13.937,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.868,
-						"fails": null,
-						"part": "",
-						"prep_s": 37.1,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "shvit_s3",
-					"doc": "/models/shvit",
-					"family": "shvit",
-					"mem": {
-						"original": {
-							"alloc": 92,
-							"reserved": 110
-						},
-						"portable": {
-							"alloc": 62,
-							"reserved": 112
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "77.96 / 93.50",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 9.4,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 8.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2024,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.64,
-						"fails": null,
-						"part": "",
-						"prep_s": 10.924,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.575,
-						"fails": null,
-						"part": "",
-						"prep_s": 24.6,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "efficientformerv2_s1",
-					"doc": "/models/efficientformerv2",
-					"family": "efficientformerv2",
-					"mem": {
-						"original": {
-							"alloc": 65,
-							"reserved": 72
-						},
-						"portable": {
-							"alloc": 50,
-							"reserved": 88
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "80.88 / 95.00",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 10.1,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 8.9,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.906,
-						"fails": null,
-						"part": "",
-						"prep_s": 12.714,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.632,
-						"fails": null,
-						"part": "",
-						"prep_s": 41.199999999999996,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "hgnetv2_b6",
-					"doc": "/models/hgnetv2",
-					"family": "hgnetv2",
-					"mem": {
-						"original": {
-							"alloc": 354,
-							"reserved": 376
-						},
-						"portable": {
-							"alloc": 198,
-							"reserved": 224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "86.74 / 98.00",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 16.5,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 9.4,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 5.437,
-						"fails": null,
-						"part": "",
-						"prep_s": 11.199,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.415,
-						"fails": null,
-						"part": "",
-						"prep_s": 26.900000000000002,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "efficientformer_l7",
-					"doc": "/models/efficientformer",
-					"family": "efficientformer",
-					"mem": {
-						"original": {
-							"alloc": 363,
-							"reserved": 378
-						},
-						"portable": {
-							"alloc": 300,
-							"reserved": 324
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.38 / 96.68",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 12.3,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 9.6,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 3.695,
-						"fails": null,
-						"part": "",
-						"prep_s": 14.435,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.4,
-						"fails": null,
-						"part": "",
-						"prep_s": 40,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_1_rw_224",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 225,
-							"reserved": 254
-						},
-						"portable": {
-							"alloc": 132,
-							"reserved": 158
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.44 / 96.56",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 12.3,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 10.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 5.585,
-						"fails": null,
-						"part": "",
-						"prep_s": 16.159,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.376,
-						"fails": null,
-						"part": "",
-						"prep_s": 42,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "davit_base",
-					"doc": "/models/davit",
-					"family": "davit",
-					"mem": {
-						"original": {
-							"alloc": 390,
+							"alloc": 393,
 							"reserved": 416
 						},
 						"portable": {
 							"alloc": 212,
-							"reserved": 224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "85.66 / 97.12",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 13.4,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 11.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 5.48,
-						"fails": null,
-						"part": "",
-						"prep_s": 21.845,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 2.28,
-						"fails": null,
-						"part": "",
-						"prep_s": 71.1,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_2_rw_224",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 376,
-							"reserved": 410
-						},
-						"portable": {
-							"alloc": 207,
-							"reserved": 240
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "87.18 / 98.16",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 14.6,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 11.9,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 5.525,
-						"fails": null,
-						"part": "",
-						"prep_s": 16.17,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.73,
-						"fails": null,
-						"part": "",
-						"prep_s": 36,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_rmlp_1_rw2_224",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 226,
-							"reserved": 254
-						},
-						"portable": {
-							"alloc": 132,
-							"reserved": 158
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "85.30 / 97.04",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 13.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 12.3,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 6.632,
-						"fails": null,
-						"part": "",
-						"prep_s": 17.878,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.546,
-						"fails": null,
-						"part": "",
-						"prep_s": 42.6,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_rmlp_1_rw_224",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 213,
 							"reserved": 234
 						},
-						"portable": {
-							"alloc": 131,
-							"reserved": 156
-						},
-						"kernels": null
+						"kernels": {
+							"alloc": 212,
+							"reserved": 258
+						}
 					},
 					"commercial": "yes",
-					"accuracy": "84.46 / 96.56",
+					"accuracy": "84.56 / 96.56",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 14,
+					"original_ms": 18,
 					"original_size": "224x224",
 					"original_note": null,
-					"portable_ms": 12.4,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
+					"portable_ms": 15.5,
+					"kernels_ms": 5.4,
+					"speedup": 3.3,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 212,
 					"compile": {
 						"input": "224x224",
-						"ms": 6.543,
+						"ms": 7.473,
 						"fails": null,
 						"part": "",
-						"prep_s": 18.561,
+						"prep_s": 19.653,
 						"standalone": false,
 						"dtype": null
 					},
 					"tensorrt": {
 						"input": "224x224",
-						"ms": 1.468,
+						"ms": 2.075,
 						"fails": null,
 						"part": "",
-						"prep_s": 43.8,
+						"prep_s": 63.9,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -10020,93 +10588,50 @@
 					}
 				},
 				{
-					"id": "coatnet_rmlp_2_rw_224",
+					"id": "coatnet_rmlp_2_rw_384",
 					"doc": "/models/coatnet",
 					"family": "coatnet",
 					"mem": {
 						"original": {
-							"alloc": 376,
-							"reserved": 410
+							"alloc": 516,
+							"reserved": 528
 						},
 						"portable": {
-							"alloc": 207,
-							"reserved": 240
+							"alloc": 296,
+							"reserved": 330
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 288,
+							"reserved": 356
+						}
 					},
 					"commercial": "yes",
-					"accuracy": "87.02 / 98.12",
+					"accuracy": "87.84 / 98.54",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 15.3,
-					"original_size": "224x224",
+					"original_ms": null,
+					"original_size": null,
 					"original_note": null,
-					"portable_ms": 12.8,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 13.9,
+					"kernels_ms": 12.8,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
 					"year": 2021,
-					"peak_mib": null,
+					"peak_mib": 288,
 					"compile": {
-						"input": "224x224",
-						"ms": 6.518,
+						"input": "384x384",
+						"ms": 6.915,
 						"fails": null,
 						"part": "",
-						"prep_s": 18.41,
+						"prep_s": 18.568,
 						"standalone": false,
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.871,
+						"input": "384x384",
+						"ms": 3.694,
 						"fails": null,
 						"part": "",
-						"prep_s": 41,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "davit_small",
-					"doc": "/models/davit",
-					"family": "davit",
-					"mem": {
-						"original": {
-							"alloc": 239,
-							"reserved": 262
-						},
-						"portable": {
-							"alloc": 136,
-							"reserved": 150
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "85.24 / 97.18",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 13,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 12.8,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 5.536,
-						"fails": null,
-						"part": "",
-						"prep_s": 21.809,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.923,
-						"fails": null,
-						"part": "",
-						"prep_s": 66.39999999999999,
+						"prep_s": 42.3,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -10156,98 +10681,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 60.7,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "efficientformerv2_s2",
-					"doc": "/models/efficientformerv2",
-					"family": "efficientformerv2",
-					"mem": {
-						"original": {
-							"alloc": 91,
-							"reserved": 116
-						},
-						"portable": {
-							"alloc": 64,
-							"reserved": 104
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "83.18 / 96.30",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 15.2,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 13.9,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 5.548,
-						"fails": null,
-						"part": "",
-						"prep_s": 16.356,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 0.919,
-						"fails": null,
-						"part": "",
-						"prep_s": 38.900000000000006,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "focalnet_small_srf",
-					"doc": "/models/focalnet",
-					"family": "focalnet",
-					"mem": {
-						"original": {
-							"alloc": 239,
-							"reserved": 252
-						},
-						"portable": {
-							"alloc": 136,
-							"reserved": 152
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.44 / 96.76",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 15.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 14,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 6.9,
-						"fails": null,
-						"part": "",
-						"prep_s": 17.831,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.492,
-						"fails": null,
-						"part": "",
-						"prep_s": 65.3,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -10349,328 +10782,6 @@
 						"standalone": false,
 						"dtype": "float16"
 					}
-				},
-				{
-					"id": "focalnet_base_srf",
-					"doc": "/models/focalnet",
-					"family": "focalnet",
-					"mem": {
-						"original": {
-							"alloc": 390,
-							"reserved": 414
-						},
-						"portable": {
-							"alloc": 211,
-							"reserved": 234
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.16 / 96.84",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 17.1,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 14.2,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 6.943,
-						"fails": null,
-						"part": "",
-						"prep_s": 17.81,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.741,
-						"fails": null,
-						"part": "",
-						"prep_s": 63.8,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_rmlp_2_rw_224.sw_in1k",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 376,
-							"reserved": 410
-						},
-						"portable": {
-							"alloc": 207,
-							"reserved": 240
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "85.16 / 96.80",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 15.3,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 15.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 6.343,
-						"fails": null,
-						"part": "",
-						"prep_s": 18.437,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.924,
-						"fails": null,
-						"part": "",
-						"prep_s": 45.9,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "focalnet_base_lrf",
-					"doc": "/models/focalnet",
-					"family": "focalnet",
-					"mem": {
-						"original": {
-							"alloc": 393,
-							"reserved": 416
-						},
-						"portable": {
-							"alloc": 212,
-							"reserved": 234
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.56 / 96.56",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 18,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 15.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 7.473,
-						"fails": null,
-						"part": "",
-						"prep_s": 19.653,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 2.075,
-						"fails": null,
-						"part": "",
-						"prep_s": 63.9,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "focalnet_small_lrf",
-					"doc": "/models/focalnet",
-					"family": "focalnet",
-					"mem": {
-						"original": {
-							"alloc": 241,
-							"reserved": 254
-						},
-						"portable": {
-							"alloc": 136,
-							"reserved": 152
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.32 / 96.80",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 16.8,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 15.8,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 7.28,
-						"fails": null,
-						"part": "",
-						"prep_s": 19.494,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.696,
-						"fails": null,
-						"part": "",
-						"prep_s": 62.5,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "efficientformerv2_l",
-					"doc": "/models/efficientformerv2",
-					"family": "efficientformerv2",
-					"mem": {
-						"original": {
-							"alloc": 145,
-							"reserved": 168
-						},
-						"portable": {
-							"alloc": 93,
-							"reserved": 144
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "84.02 / 96.50",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": 19.9,
-					"original_size": "224x224",
-					"original_note": null,
-					"portable_ms": 17.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "224x224",
-						"ms": 7.322,
-						"fails": null,
-						"part": "",
-						"prep_s": 20.717,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "224x224",
-						"ms": 1.195,
-						"fails": null,
-						"part": "",
-						"prep_s": 45.1,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "coatnet_rmlp_2_rw_384",
-					"doc": "/models/coatnet",
-					"family": "coatnet",
-					"mem": {
-						"original": {
-							"alloc": 516,
-							"reserved": 528
-						},
-						"portable": {
-							"alloc": 296,
-							"reserved": 330
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "87.84 / 98.54",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "384x384",
-						"ms": 6.915,
-						"fails": null,
-						"part": "",
-						"prep_s": 18.568,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x384",
-						"ms": 3.694,
-						"fails": null,
-						"part": "",
-						"prep_s": 42.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "shvit_s4",
-					"doc": "/models/shvit",
-					"family": "shvit",
-					"mem": {
-						"original": {
-							"alloc": 129,
-							"reserved": 146
-						},
-						"portable": {
-							"alloc": 67,
-							"reserved": 118
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "80.40 / 94.52",
-					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2024,
-					"peak_mib": null,
-					"compile": {
-						"input": "256x256",
-						"ms": 4.111,
-						"fails": null,
-						"part": "",
-						"prep_s": 11.319,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "256x256",
-						"ms": 0.658,
-						"fails": null,
-						"part": "",
-						"prep_s": 26.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
 				}
 			]
 		},
@@ -10682,18 +10793,67 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "segformer-b0-ade20k",
-					"doc": "/models/segformer",
-					"note": "3.5 ms"
+					"id": "bisenet-face-parsing",
+					"doc": "/models/bisenet",
+					"note": "1.6 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "segnext-mscan-s-ade20k",
-					"doc": "/models/segnext",
-					"note": "8.0 ms"
+					"id": "bisenet-face-parsing",
+					"doc": "/models/bisenet",
+					"note": "1.6 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "bisenet-face-parsing",
+					"doc": "/models/bisenet",
+					"family": "bisenet",
+					"mem": {
+						"original": {
+							"alloc": 69,
+							"reserved": 94
+						},
+						"portable": {
+							"alloc": 51,
+							"reserved": 72
+						},
+						"kernels": {
+							"alloc": 61,
+							"reserved": 112
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "69.11 / 93.52",
+					"accuracy_metric": "LaPa test (2,000 images), common face parts, mIoU / aAcc %",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 2.4,
+					"kernels_ms": 1.6,
+					"speedup": 1.5,
+					"speedup_vs": "portable",
+					"year": 2018,
+					"peak_mib": 61,
+					"compile": {
+						"input": "512x512",
+						"ms": 1.343,
+						"fails": null,
+						"part": "",
+						"prep_s": 5.789,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "512x512",
+						"ms": 0.678,
+						"fails": null,
+						"part": "",
+						"prep_s": 12.9,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
 				{
 					"id": "segformer-b0-ade20k",
 					"doc": "/models/segformer",
@@ -11771,52 +11931,6 @@
 						"standalone": false,
 						"dtype": "float16"
 					}
-				},
-				{
-					"id": "bisenet-face-parsing",
-					"doc": "/models/bisenet",
-					"family": "bisenet",
-					"mem": {
-						"original": {
-							"alloc": 69,
-							"reserved": 94
-						},
-						"portable": {
-							"alloc": 51,
-							"reserved": 72
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "69.11 / 93.52",
-					"accuracy_metric": "LaPa test (2,000 images), common face parts, mIoU / aAcc %",
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2018,
-					"peak_mib": null,
-					"compile": {
-						"input": "512x512",
-						"ms": 1.343,
-						"fails": null,
-						"part": "",
-						"prep_s": 5.789,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "512x512",
-						"ms": 0.678,
-						"fails": null,
-						"part": "",
-						"prep_s": 12.9,
-						"standalone": false,
-						"dtype": "float16"
-					}
 				}
 			]
 		},
@@ -12116,7 +12230,10 @@
 							"alloc": 432,
 							"reserved": 488
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 432,
+							"reserved": 514
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "0.0420 / 0.8952",
@@ -12125,11 +12242,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 41.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"kernels_ms": 15.5,
+					"speedup": 4.6,
+					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": null,
+					"peak_mib": 432,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 17.73,
@@ -12309,7 +12426,10 @@
 							"alloc": 1649,
 							"reserved": 1848
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 1649,
+							"reserved": 1874
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "0.0129 / 0.9699",
@@ -12318,11 +12438,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 108.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"kernels_ms": 107.9,
+					"speedup": 2.2,
+					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": null,
+					"peak_mib": 1649,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 85.793,
@@ -12550,13 +12670,13 @@
 					"label": "Fastest",
 					"id": "teed",
 					"doc": "/models/teed",
-					"note": "4.1 ms"
+					"note": "2.4 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
 					"id": "teed",
 					"doc": "/models/teed",
-					"note": "4.1 ms"
+					"note": "2.4 ms"
 				}
 			],
 			"models": [
@@ -12581,12 +12701,12 @@
 					"original_ms": 29.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 4.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 2.5,
+					"kernels_ms": 2.4,
+					"speedup": 1,
+					"speedup_vs": "portable",
 					"year": 2023,
-					"peak_mib": null,
+					"peak_mib": 68,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 1.1,
@@ -12627,12 +12747,12 @@
 					"original_ms": 25.2,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 8.4,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 3.9,
+					"kernels_ms": 3.6,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
 					"year": 2016,
-					"peak_mib": null,
+					"peak_mib": 161,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 2.798,
@@ -12650,52 +12770,6 @@
 						"prep_s": 13.399999999999999,
 						"standalone": false,
 						"dtype": "float16"
-					}
-				},
-				{
-					"id": "mlsd",
-					"doc": "/models/mlsd",
-					"family": "mlsd",
-					"mem": {
-						"original": {
-							"alloc": 185,
-							"reserved": 212
-						},
-						"portable": {
-							"alloc": 127,
-							"reserved": 170
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "6.65 / 13.37 / 16.92",
-					"accuracy_metric": "YorkUrban test (102 images), line segment sAP@5 / @10 / @15 %",
-					"original_ms": 35.6,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 9.3,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "1024x1024",
-						"ms": 4.612,
-						"fails": null,
-						"part": "",
-						"prep_s": 11.413,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1024x1024",
-						"ms": 5.75,
-						"fails": null,
-						"part": "standalone CNN with eager resize and line decoding",
-						"prep_s": null,
-						"standalone": true,
-						"dtype": "float32"
 					}
 				},
 				{
@@ -12719,12 +12793,12 @@
 					"original_ms": 38.5,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 11.3,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 6,
+					"kernels_ms": 4.4,
+					"speedup": 1.4,
+					"speedup_vs": "portable",
 					"year": 2015,
-					"peak_mib": null,
+					"peak_mib": 121,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 4.81,
@@ -12765,12 +12839,12 @@
 					"original_ms": 35.9,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 13.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 6.6,
+					"kernels_ms": 6.4,
+					"speedup": 1,
+					"speedup_vs": "portable",
 					"year": 2021,
-					"peak_mib": null,
+					"peak_mib": 186,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 5.657,
@@ -12788,6 +12862,52 @@
 						"prep_s": 20.4,
 						"standalone": false,
 						"dtype": "float16"
+					}
+				},
+				{
+					"id": "mlsd",
+					"doc": "/models/mlsd",
+					"family": "mlsd",
+					"mem": {
+						"original": {
+							"alloc": 185,
+							"reserved": 212
+						},
+						"portable": {
+							"alloc": 127,
+							"reserved": 170
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "6.65 / 13.37 / 16.92",
+					"accuracy_metric": "YorkUrban test (102 images), line segment sAP@5 / @10 / @15 %",
+					"original_ms": 35.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 7.7,
+					"kernels_ms": 7,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
+					"year": 2021,
+					"peak_mib": 72,
+					"compile": {
+						"input": "1024x1024",
+						"ms": 4.612,
+						"fails": null,
+						"part": "",
+						"prep_s": 11.413,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1024x1024",
+						"ms": 5.75,
+						"fails": null,
+						"part": "standalone CNN with eager resize and line decoding",
+						"prep_s": null,
+						"standalone": true,
+						"dtype": "float32"
 					}
 				},
 				{
@@ -12811,12 +12931,12 @@
 					"original_ms": 29.8,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 18.3,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 9.9,
+					"kernels_ms": 8.5,
+					"speedup": 1.2,
+					"speedup_vs": "portable",
 					"year": 2022,
-					"peak_mib": null,
+					"peak_mib": 126,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 6.492,
@@ -12857,12 +12977,12 @@
 					"original_ms": 30.4,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 18.3,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 9.9,
+					"kernels_ms": 8.5,
+					"speedup": 1.2,
+					"speedup_vs": "portable",
 					"year": 2022,
-					"peak_mib": null,
+					"peak_mib": 126,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 6.488,
@@ -12903,12 +13023,12 @@
 					"original_ms": 585.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 50.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 24,
+					"kernels_ms": 18.8,
+					"speedup": 1.3,
+					"speedup_vs": "portable",
 					"year": 2023,
-					"peak_mib": null,
+					"peak_mib": 362,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 11.626,
@@ -16207,6 +16327,196 @@
 					}
 				},
 				{
+					"id": "grounding-dino-tiny",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2541,
+							"reserved": 2716
+						},
+						"portable": {
+							"alloc": 1404,
+							"reserved": 1468
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "51.14",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 198.9,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 40.9,
+					"kernels_ms": 55.4,
+					"speedup": 0.7,
+					"speedup_vs": "portable",
+					"year": 2023,
+					"peak_mib": 841,
+					"compile": {
+						"input": "800x1344",
+						"ms": 110.941,
+						"fails": null,
+						"part": "",
+						"prep_s": 72.519,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "800x1344",
+						"ms": 115.649,
+						"fails": null,
+						"part": "fixed 80-class text prompt",
+						"prep_s": 103.722036982188,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "mm-grounding-dino-tiny",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2541,
+							"reserved": 2716
+						},
+						"portable": {
+							"alloc": 1405,
+							"reserved": 1470
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "54.92",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
+					"original_ms": 202,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 40.8,
+					"kernels_ms": 55.5,
+					"speedup": 0.7,
+					"speedup_vs": "portable",
+					"year": 2024,
+					"peak_mib": 842,
+					"compile": {
+						"input": "800x1344",
+						"ms": 110.975,
+						"fails": null,
+						"part": "",
+						"prep_s": 71.222,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "800x1344",
+						"ms": 115.508,
+						"fails": null,
+						"part": "fixed 80-class text prompt",
+						"prep_s": 104.1025151219219,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "grounding-dino-base",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2895,
+							"reserved": 3094
+						},
+						"portable": {
+							"alloc": 1525,
+							"reserved": 1624
+						},
+						"kernels": {
+							"alloc": 1156,
+							"reserved": 1364
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "55.72",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
+					"original_ms": 229.8,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 160.2,
+					"kernels_ms": 109.1,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 1156,
+					"compile": {
+						"input": "800x1344",
+						"ms": 131.028,
+						"fails": null,
+						"part": "",
+						"prep_s": 98.4,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "800x1344",
+						"ms": 158.946,
+						"fails": null,
+						"part": "fixed 80-class text prompt",
+						"prep_s": 130.13407704001293,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "mm-grounding-dino-base",
+					"doc": "/models/grounding_dino",
+					"family": "grounding_dino",
+					"mem": {
+						"original": {
+							"alloc": 2895,
+							"reserved": 3094
+						},
+						"portable": {
+							"alloc": 1525,
+							"reserved": 1624
+						},
+						"kernels": {
+							"alloc": 1157,
+							"reserved": 1366
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "56.94",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
+					"original_ms": 232.5,
+					"original_size": "800x1344",
+					"original_note": null,
+					"portable_ms": 160.2,
+					"kernels_ms": 109.5,
+					"speedup": 2.1,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 1157,
+					"compile": {
+						"input": "800x1344",
+						"ms": 132.405,
+						"fails": null,
+						"part": "",
+						"prep_s": 105.199,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "800x1344",
+						"ms": 158.161,
+						"fails": null,
+						"part": "fixed 80-class text prompt",
+						"prep_s": 124.59663340006955,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "owlv2-l14",
 					"doc": "/models/owlv2",
 					"family": "owlv2",
@@ -16254,190 +16564,6 @@
 						"standalone": false,
 						"dtype": "float16"
 					}
-				},
-				{
-					"id": "grounding-dino-tiny",
-					"doc": "/models/grounding_dino",
-					"family": "grounding_dino",
-					"mem": {
-						"original": {
-							"alloc": 2541,
-							"reserved": 2716
-						},
-						"portable": {
-							"alloc": 1404,
-							"reserved": 1468
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "51.14",
-					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
-					"original_ms": 198.9,
-					"original_size": "800x1344",
-					"original_note": null,
-					"portable_ms": 137.8,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "800x1344",
-						"ms": 110.941,
-						"fails": null,
-						"part": "",
-						"prep_s": 72.519,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "800x1344",
-						"ms": 115.649,
-						"fails": null,
-						"part": "fixed 80-class text prompt",
-						"prep_s": 103.722036982188,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "mm-grounding-dino-tiny",
-					"doc": "/models/grounding_dino",
-					"family": "grounding_dino",
-					"mem": {
-						"original": {
-							"alloc": 2541,
-							"reserved": 2716
-						},
-						"portable": {
-							"alloc": 1405,
-							"reserved": 1470
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "54.92",
-					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
-					"original_ms": 202,
-					"original_size": "800x1344",
-					"original_note": null,
-					"portable_ms": 138.2,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2024,
-					"peak_mib": null,
-					"compile": {
-						"input": "800x1344",
-						"ms": 110.975,
-						"fails": null,
-						"part": "",
-						"prep_s": 71.222,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "800x1344",
-						"ms": 115.508,
-						"fails": null,
-						"part": "fixed 80-class text prompt",
-						"prep_s": 104.1025151219219,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "grounding-dino-base",
-					"doc": "/models/grounding_dino",
-					"family": "grounding_dino",
-					"mem": {
-						"original": {
-							"alloc": 2895,
-							"reserved": 3094
-						},
-						"portable": {
-							"alloc": 1525,
-							"reserved": 1624
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "55.72",
-					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
-					"original_ms": 229.8,
-					"original_size": "800x1344",
-					"original_note": null,
-					"portable_ms": 160.2,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2023,
-					"peak_mib": null,
-					"compile": {
-						"input": "800x1344",
-						"ms": 131.028,
-						"fails": null,
-						"part": "",
-						"prep_s": 98.4,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "800x1344",
-						"ms": 158.946,
-						"fails": null,
-						"part": "fixed 80-class text prompt",
-						"prep_s": 130.13407704001293,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "mm-grounding-dino-base",
-					"doc": "/models/grounding_dino",
-					"family": "grounding_dino",
-					"mem": {
-						"original": {
-							"alloc": 2895,
-							"reserved": 3094
-						},
-						"portable": {
-							"alloc": 1525,
-							"reserved": 1624
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "56.94",
-					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
-					"original_ms": 232.5,
-					"original_size": "800x1344",
-					"original_note": null,
-					"portable_ms": 160.2,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2024,
-					"peak_mib": null,
-					"compile": {
-						"input": "800x1344",
-						"ms": 132.405,
-						"fails": null,
-						"part": "",
-						"prep_s": 105.199,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "800x1344",
-						"ms": 158.161,
-						"fails": null,
-						"part": "fixed 80-class text prompt",
-						"prep_s": 124.59663340006955,
-						"standalone": true,
-						"dtype": "float32"
-					}
 				}
 			]
 		},
@@ -16449,18 +16575,116 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "ppocrv5-mobile",
-					"doc": "/models/ppocrv5",
-					"note": "152.9 ms"
+					"id": "parseq-tiny",
+					"doc": "/models/parseq",
+					"note": "2.1 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "ppocrv5-mobile",
-					"doc": "/models/ppocrv5",
-					"note": "152.9 ms"
+					"id": "parseq-tiny",
+					"doc": "/models/parseq",
+					"note": "2.1 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "parseq-tiny",
+					"doc": "/models/parseq",
+					"family": "parseq",
+					"mem": {
+						"original": {
+							"alloc": 56,
+							"reserved": 58
+						},
+						"portable": {
+							"alloc": 44,
+							"reserved": 54
+						},
+						"kernels": {
+							"alloc": 44,
+							"reserved": 54
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "97.00 / 99.32",
+					"accuracy_metric": "IIIT5K test (300 crops), word accuracy / normalized edit similarity %",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 2.1,
+					"kernels_ms": 2.1,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 44,
+					"compile": {
+						"input": "32x128",
+						"ms": 1.542,
+						"fails": null,
+						"part": "",
+						"prep_s": 18.01,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "32x128",
+						"ms": 1.669,
+						"fails": null,
+						"part": "",
+						"prep_s": 101.5,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "parseq",
+					"doc": "/models/parseq",
+					"family": "parseq",
+					"mem": {
+						"original": {
+							"alloc": 126,
+							"reserved": 144
+						},
+						"portable": {
+							"alloc": 79,
+							"reserved": 100
+						},
+						"kernels": {
+							"alloc": 79,
+							"reserved": 100
+						}
+					},
+					"commercial": "yes",
+					"accuracy": null,
+					"accuracy_metric": null,
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 3.6,
+					"kernels_ms": 3.6,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 79,
+					"compile": {
+						"input": "32x128",
+						"ms": 8.801,
+						"fails": null,
+						"part": "",
+						"prep_s": 19.924,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "32x128",
+						"ms": 1.674,
+						"fails": null,
+						"part": "",
+						"prep_s": 113.60000000000001,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
 				{
 					"id": "ppocrv5-mobile",
 					"doc": "/models/ppocrv5",
@@ -16474,7 +16698,10 @@
 							"alloc": 289,
 							"reserved": 448
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 500,
+							"reserved": 1016
+						}
 					},
 					"commercial": "yes",
 					"accuracy": null,
@@ -16483,11 +16710,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 152.9,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"kernels_ms": 153.8,
+					"speedup": 2.7,
+					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": null,
+					"peak_mib": 500,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 114.665,
@@ -16520,7 +16747,10 @@
 							"alloc": 1357,
 							"reserved": 1452
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 1328,
+							"reserved": 2708
+						}
 					},
 					"commercial": "yes",
 					"accuracy": null,
@@ -16529,11 +16759,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 276.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"kernels_ms": 235.2,
+					"speedup": 3.2,
+					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": null,
+					"peak_mib": 1328,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 276.928,
@@ -16549,98 +16779,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 40.6,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "parseq",
-					"doc": "/models/parseq",
-					"family": "parseq",
-					"mem": {
-						"original": {
-							"alloc": 126,
-							"reserved": 144
-						},
-						"portable": {
-							"alloc": 79,
-							"reserved": 100
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "32x128",
-						"ms": 8.801,
-						"fails": null,
-						"part": "",
-						"prep_s": 19.924,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "32x128",
-						"ms": 1.674,
-						"fails": null,
-						"part": "",
-						"prep_s": 113.60000000000001,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "parseq-tiny",
-					"doc": "/models/parseq",
-					"family": "parseq",
-					"mem": {
-						"original": {
-							"alloc": 56,
-							"reserved": 58
-						},
-						"portable": {
-							"alloc": 44,
-							"reserved": 54
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "97.00 / 99.32",
-					"accuracy_metric": "IIIT5K test (300 crops), word accuracy / normalized edit similarity %",
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": null,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "32x128",
-						"ms": 1.542,
-						"fails": null,
-						"part": "",
-						"prep_s": 18.01,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "32x128",
-						"ms": 1.669,
-						"fails": null,
-						"part": "",
-						"prep_s": 101.5,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -22866,6 +23004,52 @@
 					}
 				},
 				{
+					"id": "gmflow-scale1-mixdata",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8360,
+							"reserved": 8448
+						},
+						"portable": {
+							"alloc": 4496,
+							"reserved": 4642
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "3.697 ?",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 750.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 44.5,
+					"kernels_ms": 40.3,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
+					"year": 2021,
+					"peak_mib": 275,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 382.182,
+						"fails": null,
+						"part": "",
+						"prep_s": 29.053,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1080x1920",
+						"ms": 186.563,
+						"fails": null,
+						"part": "",
+						"prep_s": 67.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "recover-mn",
 					"doc": "/models/recover",
 					"family": "recover",
@@ -23552,6 +23736,282 @@
 					}
 				},
 				{
+					"id": "gmflow-scale2-mixdata",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8425,
+							"reserved": 8572
+						},
+						"portable": {
+							"alloc": 6017,
+							"reserved": 6224
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "2.389 ?",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1607.7,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 124,
+					"kernels_ms": 116,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
+					"year": 2021,
+					"peak_mib": 663,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 765.027,
+						"fails": null,
+						"part": "",
+						"prep_s": 46.621,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 212.24,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.635,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-sintel",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8425,
+							"reserved": 8552
+						},
+						"portable": {
+							"alloc": 6017,
+							"reserved": 6224
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "1.975 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1606.7,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 124.2,
+					"kernels_ms": 116,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
+					"year": 2021,
+					"peak_mib": 663,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 764.918,
+						"fails": null,
+						"part": "",
+						"prep_s": 46.605,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 211.724,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 12.68,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-things",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8425,
+							"reserved": 8552
+						},
+						"portable": {
+							"alloc": 6017,
+							"reserved": 6224
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "6.747",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1598.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 124.1,
+					"kernels_ms": 116.4,
+					"speedup": 1.1,
+					"speedup_vs": "portable",
+					"year": 2021,
+					"peak_mib": 663,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 764.88,
+						"fails": null,
+						"part": "",
+						"prep_s": 46.748,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 212.03,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.625,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-regrefine6-kitti",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8537,
+							"reserved": 8822
+						},
+						"portable": {
+							"alloc": 6080,
+							"reserved": 6230
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "0.570 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 2187.8,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 223.9,
+					"kernels_ms": 214,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 673,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1115.71,
+						"fails": null,
+						"part": "",
+						"prep_s": 58.363,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 350.575,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.053,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-regrefine6-sintelft",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8537,
+							"reserved": 8822
+						},
+						"portable": {
+							"alloc": 6080,
+							"reserved": 6250
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "1.154 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 2184,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 224.3,
+					"kernels_ms": 214,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 673,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1116.028,
+						"fails": null,
+						"part": "",
+						"prep_s": 58.479,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 350.081,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 14.51,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-regrefine6-mixdata",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8537,
+							"reserved": 8822
+						},
+						"portable": {
+							"alloc": 6080,
+							"reserved": 6250
+						},
+						"kernels": null
+					},
+					"commercial": "yes",
+					"accuracy": "1.315 ?",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 2187.5,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 224.1,
+					"kernels_ms": 214.3,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 673,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1116.187,
+						"fails": null,
+						"part": "",
+						"prep_s": 58.871,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 349.235,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.636000000000001,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "flowseek-t",
 					"doc": "/models/flowseek",
 					"family": "flowseek",
@@ -23745,6 +24205,153 @@
 						"prep_s": 32.018,
 						"standalone": true,
 						"dtype": "float32"
+					}
+				},
+				{
+					"id": "flowformer-small-sintel",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": {
+							"alloc": 2382,
+							"reserved": 2990
+						},
+						"portable": {
+							"alloc": 1404,
+							"reserved": 1698
+						},
+						"kernels": {
+							"alloc": 1401,
+							"reserved": 1698
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "4.657 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 336.3,
+					"kernels_ms": 321.9,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 1401,
+					"compile": {
+						"input": "375x1242",
+						"ms": 250.379,
+						"fails": null,
+						"part": "",
+						"prep_s": 98.934,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "375x1242",
+						"ms": 201.921,
+						"fails": null,
+						"part": "",
+						"prep_s": 117.1,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "flowformer-small-things",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": {
+							"alloc": 2382,
+							"reserved": 3010
+						},
+						"portable": {
+							"alloc": 1404,
+							"reserved": 1698
+						},
+						"kernels": {
+							"alloc": 1401,
+							"reserved": 1698
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "6.884",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 337.2,
+					"kernels_ms": 322.1,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 1401,
+					"compile": {
+						"input": "375x1242",
+						"ms": 250.211,
+						"fails": null,
+						"part": "",
+						"prep_s": 99.257,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "375x1242",
+						"ms": 201.968,
+						"fails": null,
+						"part": "",
+						"prep_s": 117.5,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "flowformer-small-chairs",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": {
+							"alloc": 2382,
+							"reserved": 2970
+						},
+						"portable": {
+							"alloc": 1404,
+							"reserved": 1698
+						},
+						"kernels": {
+							"alloc": 1401,
+							"reserved": 1698
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "10.952",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 336.7,
+					"kernels_ms": 322.3,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 1401,
+					"compile": {
+						"input": "375x1242",
+						"ms": 250.251,
+						"fails": null,
+						"part": "",
+						"prep_s": 98.71,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "375x1242",
+						"ms": 201.927,
+						"fails": null,
+						"part": "",
+						"prep_s": 117.7,
+						"standalone": false,
+						"dtype": "float16"
 					}
 				},
 				{
@@ -24042,52 +24649,6 @@
 					}
 				},
 				{
-					"id": "gmflow-scale1-mixdata",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8360,
-							"reserved": 8448
-						},
-						"portable": {
-							"alloc": 4496,
-							"reserved": 4642
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "3.697 ?",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 750.1,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 555.9,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 382.182,
-						"fails": null,
-						"part": "",
-						"prep_s": 29.053,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1080x1920",
-						"ms": 186.563,
-						"fails": null,
-						"part": "",
-						"prep_s": 67.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "megaflow",
 					"doc": "/models/megaflow",
 					"family": "megaflow",
@@ -24097,12 +24658,12 @@
 							"reserved": 8786
 						},
 						"portable": {
-							"alloc": 3035,
-							"reserved": 3246
+							"alloc": 2713,
+							"reserved": 3518
 						},
 						"kernels": {
-							"alloc": 2866,
-							"reserved": 3066
+							"alloc": 2724,
+							"reserved": 3530
 						}
 					},
 					"commercial": "yes",
@@ -24111,12 +24672,12 @@
 					"original_ms": 1588.5,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 1109,
-					"kernels_ms": 733.5,
+					"portable_ms": 1112,
+					"kernels_ms": 734.8,
 					"speedup": 2.2,
 					"speedup_vs": "original",
 					"year": 2026,
-					"peak_mib": 2866,
+					"peak_mib": 2724,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 917.242,
@@ -24284,144 +24845,6 @@
 					}
 				},
 				{
-					"id": "gmflow-scale2-things",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8425,
-							"reserved": 8552
-						},
-						"portable": {
-							"alloc": 6017,
-							"reserved": 6224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "6.747",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 1598.6,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 1138.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 764.88,
-						"fails": null,
-						"part": "",
-						"prep_s": 46.748,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 212.03,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.625,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-mixdata",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8425,
-							"reserved": 8572
-						},
-						"portable": {
-							"alloc": 6017,
-							"reserved": 6224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "2.389 ?",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 1607.7,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 1139.3,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 765.027,
-						"fails": null,
-						"part": "",
-						"prep_s": 46.621,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 212.24,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.635,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-sintel",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8425,
-							"reserved": 8552
-						},
-						"portable": {
-							"alloc": 6017,
-							"reserved": 6224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "1.975 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 1606.7,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 1139.5,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 764.918,
-						"fails": null,
-						"part": "",
-						"prep_s": 46.605,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 211.724,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 12.68,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
 					"id": "gmflow-scale2-regrefine6-things",
 					"doc": "/models/gmflow",
 					"family": "gmflow",
@@ -24471,144 +24894,6 @@
 					}
 				},
 				{
-					"id": "gmflow-scale2-regrefine6-sintelft",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8537,
-							"reserved": 8822
-						},
-						"portable": {
-							"alloc": 6080,
-							"reserved": 6250
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "1.154 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 2184,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 1674,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1116.028,
-						"fails": null,
-						"part": "",
-						"prep_s": 58.479,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 350.081,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 14.51,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-regrefine6-mixdata",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8537,
-							"reserved": 8822
-						},
-						"portable": {
-							"alloc": 6080,
-							"reserved": 6250
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "1.315 ?",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 2187.5,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 1674.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1116.187,
-						"fails": null,
-						"part": "",
-						"prep_s": 58.871,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 349.235,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.636000000000001,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-regrefine6-kitti",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8537,
-							"reserved": 8822
-						},
-						"portable": {
-							"alloc": 6080,
-							"reserved": 6230
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "0.570 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 2187.8,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 1677.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1115.71,
-						"fails": null,
-						"part": "",
-						"prep_s": 58.363,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 350.575,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.053,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
 					"id": "memfof-sintel",
 					"doc": "/models/memfof",
 					"family": "memfof",
@@ -24650,144 +24935,6 @@
 						"standalone": true,
 						"dtype": "float32"
 					}
-				},
-				{
-					"id": "flowformer-small-chairs",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 2970
-						},
-						"portable": {
-							"alloc": 1404,
-							"reserved": 1698
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "10.952",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 1080,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "375x1242",
-						"ms": 250.251,
-						"fails": null,
-						"part": "",
-						"prep_s": 98.71,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "375x1242",
-						"ms": 201.927,
-						"fails": null,
-						"part": "",
-						"prep_s": 117.7,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "flowformer-small-sintel",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 2990
-						},
-						"portable": {
-							"alloc": 1404,
-							"reserved": 1698
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "4.657 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 1080,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "375x1242",
-						"ms": 250.379,
-						"fails": null,
-						"part": "",
-						"prep_s": 98.934,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "375x1242",
-						"ms": 201.921,
-						"fails": null,
-						"part": "",
-						"prep_s": 117.1,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "flowformer-small-things",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 3010
-						},
-						"portable": {
-							"alloc": 1404,
-							"reserved": 1698
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "6.884",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 1080,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2022,
-					"peak_mib": null,
-					"compile": {
-						"input": "375x1242",
-						"ms": 250.211,
-						"fails": null,
-						"part": "",
-						"prep_s": 99.257,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "375x1242",
-						"ms": 201.968,
-						"fails": null,
-						"part": "",
-						"prep_s": 117.5,
-						"standalone": false,
-						"dtype": "float16"
-					}
 				}
 			]
 		},
@@ -24801,13 +24948,13 @@
 					"label": "Fastest",
 					"id": "xfeat",
 					"doc": "/models/xfeat",
-					"note": "7.2 ms"
+					"note": "15.1 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
 					"id": "xfeat",
 					"doc": "/models/xfeat",
-					"note": "7.2 ms"
+					"note": "15.1 ms"
 				}
 			],
 			"models": [
@@ -24824,7 +24971,10 @@
 							"alloc": 122,
 							"reserved": 154
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 290,
+							"reserved": 814
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "26.2 / 42.2 / 57.5",
@@ -24833,11 +24983,11 @@
 					"original_size": "768x1024",
 					"original_note": null,
 					"portable_ms": 7.2,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"kernels_ms": 15.1,
+					"speedup": 0.6,
+					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": null,
+					"peak_mib": 290,
 					"compile": {
 						"input": "768x1024",
 						"ms": 5.653,
@@ -24870,7 +25020,10 @@
 							"alloc": 445,
 							"reserved": 476
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 460,
+							"reserved": 818
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "39.7 / 57.5 / 72.8",
@@ -24879,11 +25032,11 @@
 					"original_size": "768x1024",
 					"original_note": null,
 					"portable_ms": 21.6,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"kernels_ms": 29.1,
+					"speedup": 0.8,
+					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": null,
+					"peak_mib": 460,
 					"compile": {
 						"input": "768x1024",
 						"ms": 16.228,
@@ -25202,7 +25355,10 @@
 							"alloc": 1775,
 							"reserved": 1886
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 1814,
+							"reserved": 2178
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "53.3 / 70.1 / 82.0",
@@ -25211,11 +25367,11 @@
 					"original_size": "768x1024",
 					"original_note": null,
 					"portable_ms": 128.7,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"kernels_ms": 128.6,
+					"speedup": 2.7,
+					"speedup_vs": "original",
 					"year": 2026,
-					"peak_mib": null,
+					"peak_mib": 1814,
 					"compile": {
 						"input": "768x1024",
 						"ms": 96.143,
