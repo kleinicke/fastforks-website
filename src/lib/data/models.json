@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "9c6e5f8c1",
+		"commit": "e25c44c6c",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -11950,7 +11950,7 @@
 					"label": "Most accurate",
 					"id": "birefnet",
 					"doc": "/models/birefnet",
-					"note": "121.1 ms, error 0.0325"
+					"note": "120.9 ms, error 0.0325"
 				},
 				{
 					"label": "Best trade-off",
@@ -11968,7 +11968,7 @@
 					"label": "Most accurate commercially usable",
 					"id": "birefnet",
 					"doc": "/models/birefnet",
-					"note": "121.1 ms, error 0.0325"
+					"note": "120.9 ms, error 0.0325"
 				}
 			],
 			"models": [
@@ -12276,12 +12276,12 @@
 							"reserved": 974
 						},
 						"portable": {
-							"alloc": 810,
-							"reserved": 952
+							"alloc": 748,
+							"reserved": 792
 						},
 						"kernels": {
-							"alloc": 754,
-							"reserved": 960
+							"alloc": 594,
+							"reserved": 660
 						}
 					},
 					"commercial": "yes",
@@ -12290,12 +12290,12 @@
 					"original_ms": 75.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 58,
-					"kernels_ms": 48.1,
+					"portable_ms": 58.1,
+					"kernels_ms": 47.6,
 					"speedup": 1.6,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 754,
+					"peak_mib": 594,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 50.244,
@@ -12463,55 +12463,6 @@
 					}
 				},
 				{
-					"id": "birefnet",
-					"doc": "/models/birefnet",
-					"family": "birefnet",
-					"mem": {
-						"original": {
-							"alloc": 1666,
-							"reserved": 1930
-						},
-						"portable": {
-							"alloc": 1660,
-							"reserved": 1908
-						},
-						"kernels": {
-							"alloc": 1674,
-							"reserved": 1916
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "0.0325",
-					"accuracy_metric": "DIS-VD MAE",
-					"original_ms": 234.4,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 131.4,
-					"kernels_ms": 121.1,
-					"speedup": 1.9,
-					"speedup_vs": "original",
-					"year": 2024,
-					"peak_mib": 1674,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 138.499,
-						"fails": null,
-						"part": "",
-						"prep_s": 93.808,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1080x1920",
-						"ms": 87.82,
-						"fails": null,
-						"part": "",
-						"prep_s": 200.6,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "rmbg-2.0",
 					"doc": "/models/birefnet",
 					"family": "birefnet",
@@ -12521,12 +12472,12 @@
 							"reserved": 1990
 						},
 						"portable": {
-							"alloc": 1660,
-							"reserved": 1908
+							"alloc": 1165,
+							"reserved": 1288
 						},
 						"kernels": {
-							"alloc": 1674,
-							"reserved": 1936
+							"alloc": 1145,
+							"reserved": 1296
 						}
 					},
 					"commercial": "no",
@@ -12535,12 +12486,12 @@
 					"original_ms": 149,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 131.5,
-					"kernels_ms": 121.4,
+					"portable_ms": 132.9,
+					"kernels_ms": 120.8,
 					"speedup": 1.2,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1674,
+					"peak_mib": 1145,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 110.413,
@@ -12556,6 +12507,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 219.10000000000002,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "birefnet",
+					"doc": "/models/birefnet",
+					"family": "birefnet",
+					"mem": {
+						"original": {
+							"alloc": 1666,
+							"reserved": 1930
+						},
+						"portable": {
+							"alloc": 1165,
+							"reserved": 1288
+						},
+						"kernels": {
+							"alloc": 1145,
+							"reserved": 1256
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0325",
+					"accuracy_metric": "DIS-VD MAE",
+					"original_ms": 234.4,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 132.9,
+					"kernels_ms": 120.9,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 1145,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 138.499,
+						"fails": null,
+						"part": "",
+						"prep_s": 93.808,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1080x1920",
+						"ms": 87.82,
+						"fails": null,
+						"part": "",
+						"prep_s": 200.6,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -13023,9 +13023,9 @@
 					"original_ms": 585.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 24,
+					"portable_ms": 21,
 					"kernels_ms": 18.8,
-					"speedup": 1.3,
+					"speedup": 1.1,
 					"speedup_vs": "portable",
 					"year": 2023,
 					"peak_mib": 362,
