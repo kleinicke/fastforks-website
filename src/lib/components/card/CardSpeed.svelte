@@ -23,7 +23,7 @@
 		reserved: number | null | undefined;
 		load: number | undefined;
 		first: number | undefined;
-		state: 'ok' | 'oom' | 'missing' | 'fails';
+		state: 'ok' | 'oom' | 'missing' | 'fails' | 'planned';
 		note: string;
 		/** A short qualifier after the memory value (TensorRT: what the number covers). */
 		memNote?: string;
@@ -35,7 +35,10 @@
 	function measuredAt(key: 'compile' | 'tensorrt', s: SpeedInput) {
 		for (const v of [variant, ...variants.filter((x) => x !== variant)]) {
 			const ins = [...v.speed.inputs].sort((a, b) => Number(b.standard) - Number(a.standard));
-			const hit = ins.find((i) => i[key] && !(v === variant && i === s));
+			const hit = ins.find((i) => {
+				const row = i[key];
+				return row && 'ms' in row && !(v === variant && i === s);
+			});
 			if (hit) return { variant: v, input: hit.input };
 		}
 		return null;
@@ -91,25 +94,28 @@
 			if (!r) {
 				out.push({ key, label, dtype: '', ms: null, alloc: undefined, reserved: undefined, load: undefined, first: undefined, state: 'missing', note: '', kind: 'extra', see: measuredAt(key, s) });
 			} else if ('fails' in r) {
-				out.push({ key, label, dtype: '', ms: null, alloc: undefined, reserved: undefined, load: undefined, first: undefined, state: 'fails', note: r.fails, kind: 'extra' });
+				out.push({ key, label, dtype: '', ms: null, alloc: undefined, reserved: undefined, load: undefined, first: undefined, state: r.planned ? 'planned' : 'fails', note: r.fails, kind: 'extra' });
 			} else {
+				const part = r.standalone && !r.part.includes('standalone build')
+					? ['Standalone build', r.part].filter(Boolean).join(' · ')
+					: r.part;
 				out.push({
 					key,
 					label: key === 'tensorrt' ? `TensorRT ${dt(r.engine_dtype) || 'fp16'}` : label,
 					dtype: key === 'tensorrt' ? dt(r.engine_dtype) || 'fp16' : '',
 					ms: r.ms,
-					alloc: key === 'tensorrt' ? r.device_mb : r.peak_alloc_mb,
-					reserved: key === 'tensorrt' ? null : r.peak_reserved_mb,
+					alloc: key === 'tensorrt' ? (r.peak_alloc_mb ?? r.device_mb) : r.peak_alloc_mb,
+					reserved: r.peak_reserved_mb,
 					load: r.setup_s ?? undefined,
 					first: undefined,
 					state: 'ok',
-					note: r.part ? (r.part.endsWith(' only') ? r.part : `${r.part} only`) : '',
-					memNote: key === 'tensorrt' && r.device_mb ? 'engine' : undefined,
+					note: part,
+					memNote: key === 'tensorrt' ? (r.peak_alloc_mb === null ? (r.device_mb ? 'engine only' : undefined) : 'estimated') : undefined,
 					kind: 'extra'
 				});
 				// The engine is the network on crops only: with our portable crop and decode around it, a whole call.
 				const p = s.sections?.portable;
-				if (key === 'tensorrt' && p) {
+				if (key === 'tensorrt' && p && !r.standalone) {
 					out.push({
 						key: 'tensorrt-full',
 						label: 'TensorRT + our crop and decode',
@@ -188,8 +194,8 @@
 								<span class="v">{ms(r.ms)}</span>
 							{:else if r.state === 'oom'}
 								<span class="tag">out of memory</span>
-							{:else if r.state === 'fails'}
-								<span class="tag">fails</span>
+							{:else if r.state === 'fails' || r.state === 'planned'}
+								<span class="tag">{r.state}</span>
 							{:else}
 								<span class="tag">not measured{r.see ? ' here' : ''}</span>
 								{#if r.see}
@@ -207,8 +213,8 @@
 						</td>
 						<td class="num">{#if r.state === 'ok'}{mib(r.alloc)}{#if r.reserved !== null && r.reserved !== undefined}<span class="sep"> / </span>{mib(r.reserved)}{/if}{#if r.memNote}<small
 									class="memnote"
-									title="The GPU memory the TensorRT engine took, measured from the driver outside PyTorch: measured differently from the PyTorch peaks of the other rows, so not comparable to them"
-									><span class="engine">{r.memNote}</span><span class="apart">not comparable</span></small
+								title={r.memNote === 'estimated' ? 'PyTorch peak plus GPU memory held by the engine' : 'GPU memory held by the engine, read from the driver'}
+								><span class="engine">{r.memNote}</span></small
 								>{/if}{:else}–{/if}</td>
 						<td class="num">{r.load !== undefined ? (r.kind === 'extra' ? `${r.load.toFixed(0)} (build)` : r.load.toFixed(1)) : '–'}</td>
 						<td class="num">{r.first !== undefined ? r.first.toFixed(2) : '–'}</td>
@@ -224,8 +230,8 @@
 		{#if current.original_network}“Network only” times the original’s network on the same crops, batched as one call; the
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}
 		{#if current.sections}The splits under Portable and Kernels come from a separate run that times each step on its own
-			(synchronised in between); the TensorRT engine covers the network only, so its full call is an estimate with
-			our crop and decode added.{/if} torch.compile and TensorRT: build time instead of load time. TensorRT memory (<small>engine, not comparable</small>) is the GPU memory the engine took, read from the driver because TensorRT allocates outside PyTorch, so it can't be compared with the PyTorch peaks of the other rows.
+			(synchronised in between).{/if} The Load column shows build time for torch.compile and TensorRT.
+		TensorRT peak memory estimates combine PyTorch peaks with engine allocations measured by the GPU driver.
 	</p>
 {/if}
 
@@ -344,10 +350,6 @@
 	}
 	.memnote .engine {
 		margin-left: 0.3rem;
-	}
-	.memnote .apart {
-		display: block;
-		line-height: 1.2;
 	}
 	.missing {
 		color: var(--muted);

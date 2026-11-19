@@ -259,7 +259,16 @@ export type Timing = Pick<Model, 'id' | 'doc' | 'commercial'> & {
 	accuracy_metric: string | null;
 };
 /** A time, or why it failed; `part` = the part of the call a TensorRT engine runs, if not all; `prep_s` = one-time cost. */
-export type Extra = { ms: number | null; fails: string | null; part: string | null; prep_s: number | null } | null;
+export type Extra = {
+	ms: number | null;
+	fails: string | null;
+	part: string | null;
+	prep_s: number | null;
+	input?: string;
+	planned?: boolean;
+	standalone?: boolean;
+	dtype?: string | null;
+} | null;
 
 const ms = (c: Cell | undefined) => (c && 'ms' in c ? c.ms : null);
 const mem = (c: Cell | undefined) =>

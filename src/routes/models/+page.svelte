@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import DeviceCompare from '#lib/components/DeviceCompare.svelte';
 	import ModelCompare from '#lib/components/ModelCompare.svelte';
-	import { UPCOMING } from '#lib/cards.ts';
+	import { dt, UPCOMING } from '#lib/cards.ts';
 	import EmptyRows from '#lib/components/EmptyRows.svelte';
 	import {
 		data,
@@ -407,9 +407,16 @@
 					</thead>
 					<tbody>
 						{#snippet ext(x: Extra, what: string)}
-							{#if !x}–{:else if x.ms === null}{#if x.fails?.startsWith('planned')}planned<span class="sub why">{x.fails.slice(8)}</span>{:else}fails<span class="sub why">{x.fails}</span>{/if}{:else}{fmtMs(
-									x.ms
-								)}<span class="sub">+ {prep(x.prep_s)} {what}</span>{#if x.part}<span class="sub">{x.part} only</span>{/if}{/if}
+							{#if !x}–
+							{:else if x.ms === null}
+								{x.planned ? 'planned' : 'fails'}<span class="sub why">{x.fails}</span>
+							{:else}
+								{fmtMs(x.ms)}
+								{#if x.input || x.dtype}<span class="sub">{[x.input, x.dtype ? dt(x.dtype) : ''].filter(Boolean).join(' · ')}</span>{/if}
+								{#if x.prep_s !== null}<span class="sub">+ {prep(x.prep_s)} {what}</span>{/if}
+								{#if x.part}<span class="sub">{x.part}</span>{/if}
+								{#if x.standalone && !x.part?.includes('standalone build')}<span class="sub">standalone build</span>{/if}
+							{/if}
 						{/snippet}
 						{#each rows as r (r.task + r.id)}
 							<tr class:upcoming={UPCOMING.has(r.id)}>
@@ -471,7 +478,7 @@
 			<p class="note">
 				Rows keep the reference GPU's kernels-time order on every device; click a header to sort by it. Times are
 				milliseconds per call; – means not timed or not available{more
-					? ". Original is the faster of the authors' code in fp32 and in its own half precision. Compile is portable with model.compile() and TensorRT the fp16 engine of portable, both run for one variant per family; under each time is its one-time cost (compile or engine build), and where it fails, why. Memory is the peak allocated by PyTorch"
+					? ". Original is the faster of the authors' FP32 and half-precision runs. Compile and TensorRT show a measured input, any recorded setup time, and the scope of the compiled graph or engine. Memory is the peak allocated by PyTorch"
 					: device.reference
 						? '. Memory is the peak allocated by PyTorch'
 						: `; the small text is the dtype; portable only = no kernels implemented for this model on this backend yet, failed = it raised, OOM = out of memory.${surveyOriginal ? " Original is the authors' own code run on this device; not run = not measured here yet; incompatible = it cannot run here (hover for why: CUDA-only extensions, compiled ops not built for macOS, MPS limits); speed-up vs original is fastforks' faster mode (kernels, else portable) against it, vs portable is that of kernels." : ''}${device.cpu ? ` CPU is portable in fp32 on the same chip's CPU (${device.cpu.details || device.cpu.name}); not run = not measured yet; speed-up vs CPU is fastforks' fastest GPU mode against it.` : ''} Memory is that of the fastest dtype's run, ${footprint ? 'the peak footprint of the whole process (Apple has no PyTorch allocator peak), so it includes PyTorch itself' : 'the peak allocated by PyTorch'}; compare it within a device, not across devices`}. Licence data comes from the model registry and is not legal advice.

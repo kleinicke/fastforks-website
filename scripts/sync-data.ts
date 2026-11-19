@@ -9,6 +9,8 @@ import { execFileSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { renderDocs, type ModeRow } from './docs.ts';
+import type { SpeedInput } from '../src/lib/cards.ts';
+import type { Extra } from '../src/lib/site.ts';
 
 const repo = resolve(process.env.FASTFORKS_REPO ?? '../fastforks');
 const out = resolve('src/lib/data/models.json');
@@ -131,12 +133,10 @@ type Row = {
 	peak_mib: number | null;
 	family: string;
 	mem: { original: Mem; portable: Mem; kernels: Mem };
-	/** portable + torch.compile and the fp16 TensorRT engine (reference GPU, one variant per family; else null). */
+	/** Portable + torch.compile and TensorRT measurements on the reference GPU. */
 	compile: Extra;
 	tensorrt: Extra;
 };
-/** A time, or why it failed; `part` = the part of the call the engine runs, if not all; `prep_s` = the one-time cost. */
-type Extra = { ms: number | null; fails: string | null; part: string | null; prep_s: number | null } | null;
 type Mem = { alloc: number; reserved: number | null } | null;
 
 const num = (s: string): number | null => {
@@ -241,34 +241,55 @@ for (const line of md) {
 	}
 }
 
-// torch.compile and TensorRT (docs/benchmarks.md, generated from docs/data/speed_compile.jsonl): one variant per
-// family at the task's standard size on the reference GPU. Its portable and kernels columns are the overview's.
+// Pick one result per backend from the same structured profiles used by the model pages.
 {
-	const bench = readFileSync(resolve(repo, 'docs/benchmarks.md'), 'utf8');
-	const block = bench.match(/<!-- compile:begin[^\n]*\n([\s\S]*?)<!-- compile:end -->/)?.[1];
-	if (!block) throw new Error('no compile block in docs/benchmarks.md');
-	const lines = block.split('\n').filter((l) => l.startsWith('|'));
-	const head = cells(lines[0]);
-	const at = (name: string) => {
-		const i = head.findIndex((h) => h.startsWith(name));
-		if (i < 0) throw new Error(`compile table has no "${name}" column`);
-		return i;
-	};
-	const [iC, iT, iCs, iTs] = [at('compile'), at('TensorRT'), at('preparation'), at('ONNX + engine')];
 	const byId = new Map(tasks.flatMap((t) => t.models.map((m) => [m.id, m] as const)));
-	const extra = (cell: string, prep: string): Extra => {
-		if (cell === '–') return null;
-		if (cell.startsWith('fails: ')) return { ms: null, fails: cell.slice(7), part: null, prep_s: null };
-		// "planned for 0.2.1": the mode is gated in this release, there is no time (the version number is not one).
-		if (cell.startsWith('planned')) return { ms: null, fails: cell, part: null, prep_s: null };
-		return { ms: num(cell), fails: null, part: cell.match(/\(([^)]+) only\)/)?.[1] ?? null, prep_s: num(prep) };
+	const profiles = new Map<string, SpeedInput[]>();
+	for (const file of readdirSync(cardsDir).filter((f) => f.endsWith('.json') && f !== 'index.json')) {
+		const card = JSON.parse(readFileSync(resolve(cardsDir, file), 'utf8')) as {
+			variants: { id: string; default_tag: boolean; speed: { inputs: SpeedInput[] } }[];
+		};
+		for (const variant of card.variants) {
+			if (byId.has(variant.id)) {
+				profiles.set(variant.id, variant.speed.inputs);
+			} else if (variant.default_tag) {
+				const architecture = variant.id.split('.')[0];
+				if (!profiles.has(architecture)) profiles.set(architecture, variant.speed.inputs);
+			}
+		}
+	}
+
+	const extra = (inputs: SpeedInput[], mode: 'compile' | 'tensorrt'): Extra => {
+		const measured = inputs.filter((input) => {
+			const row = input[mode];
+			return row && 'ms' in row;
+		});
+		const profile =
+			measured.find((input) => input.standard) ??
+			measured.find((input) => input.modes.portable || input.modes.kernels) ??
+			measured[0] ??
+			inputs.find((input) => input.standard && input[mode]) ??
+			inputs.find((input) => input[mode]);
+		const row = profile?.[mode];
+		if (!profile || !row) return null;
+		const base = { input: profile.input };
+		if ('fails' in row) {
+			return { ...base, ms: null, fails: row.fails, planned: row.planned, part: null, prep_s: null };
+		}
+		return {
+			...base,
+			ms: row.ms,
+			fails: null,
+			part: row.part,
+			prep_s: row.setup_s,
+			standalone: row.standalone,
+			dtype: row.engine_dtype
+		};
 	};
-	for (const line of lines.slice(2)) {
-		const c = cells(line);
-		const m = byId.get(c[0]) ?? byId.get(c[0].split('.')[0]);
-		if (!m) continue; // a variant the overview does not list
-		m.compile = extra(c[iC], c[iCs]);
-		m.tensorrt = extra(c[iT], c[iTs]);
+	for (const [id, model] of byId) {
+		const inputs = profiles.get(id) ?? [];
+		model.compile = extra(inputs, 'compile');
+		model.tensorrt = extra(inputs, 'tensorrt');
 	}
 }
 
