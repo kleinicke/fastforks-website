@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "e69dead63",
+		"commit": "b3c181c06",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -12696,8 +12696,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "51.58 / 54.34 / 47.89",
+					"accuracy_metric": "BSDS500 test (first 75 images), boundary ODS / OIS / AP %",
 					"original_ms": 29.6,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -12834,8 +12834,8 @@
 						"kernels": null
 					},
 					"commercial": "no",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "58.79 / 59.61 / 60.31",
+					"accuracy_metric": "BSDS500 test (first 75 images), boundary ODS / OIS / AP %",
 					"original_ms": 35.9,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -27218,8 +27218,8 @@
 							"reserved": 612
 						},
 						"portable": {
-							"alloc": 483,
-							"reserved": 532
+							"alloc": 439,
+							"reserved": 472
 						},
 						"kernels": {
 							"alloc": 376,
@@ -27232,7 +27232,7 @@
 					"original_ms": 63.7,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 61.1,
+					"portable_ms": 60.4,
 					"kernels_ms": 31.3,
 					"speedup": 2,
 					"speedup_vs": "original",
@@ -27561,12 +27561,12 @@
 							"reserved": 1418
 						},
 						"portable": {
-							"alloc": 850,
-							"reserved": 1000
+							"alloc": 724,
+							"reserved": 740
 						},
 						"kernels": {
-							"alloc": 892,
-							"reserved": 980
+							"alloc": 766,
+							"reserved": 800
 						}
 					},
 					"commercial": "yes",
@@ -27575,12 +27575,12 @@
 					"original_ms": 233.9,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 228.1,
+					"portable_ms": 182.7,
 					"kernels_ms": 132.7,
 					"speedup": 1.8,
 					"speedup_vs": "original",
 					"year": 2021,
-					"peak_mib": 892,
+					"peak_mib": 766,
 					"compile": {
 						"input": "512x512",
 						"ms": 143.056,
@@ -28051,12 +28051,12 @@
 							"reserved": 2746
 						},
 						"portable": {
-							"alloc": 1806,
-							"reserved": 2054
+							"alloc": 1600,
+							"reserved": 1794
 						},
 						"kernels": {
-							"alloc": 1633,
-							"reserved": 1934
+							"alloc": 1600,
+							"reserved": 1794
 						}
 					},
 					"commercial": "yes",
@@ -28065,12 +28065,12 @@
 					"original_ms": 3709.3,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 1247.7,
-					"kernels_ms": 921.3,
-					"speedup": 4,
+					"portable_ms": 1217.8,
+					"kernels_ms": 896.2,
+					"speedup": 4.1,
 					"speedup_vs": "original",
 					"year": 2021,
-					"peak_mib": 1633,
+					"peak_mib": 1600,
 					"compile": {
 						"input": "512x512",
 						"ms": 1426.428,
