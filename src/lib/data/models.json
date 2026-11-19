@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "9001797b5",
+		"commit": "99409b107",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -25782,13 +25782,13 @@
 					"label": "Fastest",
 					"id": "locotrack-b",
 					"doc": "/models/locotrack",
-					"note": "108.4 ms"
+					"note": "108.8 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
 					"id": "locotrack-b",
 					"doc": "/models/locotrack",
-					"note": "108.4 ms"
+					"note": "108.8 ms"
 				}
 			],
 			"models": [
@@ -25802,12 +25802,12 @@
 							"reserved": 784
 						},
 						"portable": {
-							"alloc": 544,
+							"alloc": 535,
 							"reserved": 596
 						},
 						"kernels": {
-							"alloc": 555,
-							"reserved": 620
+							"alloc": 507,
+							"reserved": 600
 						}
 					},
 					"commercial": "yes",
@@ -25816,12 +25816,12 @@
 					"original_ms": 203.3,
 					"original_size": "480x854",
 					"original_note": null,
-					"portable_ms": 187.9,
-					"kernels_ms": 108.4,
+					"portable_ms": 188.9,
+					"kernels_ms": 108.8,
 					"speedup": 1.9,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 555,
+					"peak_mib": 507,
 					"compile": {
 						"input": "480x854",
 						"ms": 82.643,
