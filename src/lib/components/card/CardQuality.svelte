@@ -3,31 +3,45 @@
 
 	let { card, variantId, datasets }: { card: Card; variantId: string; datasets: Dataset[] } = $props();
 
-	/** The shown modes: the five table columns, plus `.half()` of the original where it was run. */
+	/** The shown modes, including the authors' direct half-precision run where available. */
 	const SHOWN: { key: Mode | 'originalhalf'; label: string }[] = [
 		...MODES,
 		{ key: 'originalhalf', label: 'Original .half()' }
 	];
+	const ORIGINAL = ['original32', 'original16', 'originalhalf'] as const;
 
 	const label = (k: string) => METRIC_LABEL[k] ?? k;
+	const runLabel = (mode: (typeof SHOWN)[number], d: Dataset) =>
+		mode.key === 'original16' && d.modes.original16?.dtype
+			? `Original ${dt(d.modes.original16.dtype)}`
+			: mode.label;
 	const rowsOf = (d: Dataset) =>
-		SHOWN.filter((m) => d.modes[m.key] || m.key !== 'originalhalf').map((m) => ({ ...m, row: d.modes[m.key] }));
+		SHOWN.filter((m) => d.modes[m.key] || m.key !== 'originalhalf').map((m) => ({
+			key: m.key,
+			label: runLabel(m, d),
+			row: d.modes[m.key]
+		}));
 	const metricsOf = (d: Dataset) => d.metrics.filter((m) => !m.optional || Object.values(d.modes).some((r) => r && m.key in r.metrics));
 
-	/** Deviation of the main metric from the original fp32 run, in the metric's own units; positive = better. */
+	/** Difference from the best available original baseline, in the metric's own units. */
 	function deviation(d: Dataset) {
 		const main = d.metrics[0];
-		const ref = d.modes.original32?.metrics[main.key];
+		const key = ORIGINAL.find((k) => {
+			const row = d.modes[k];
+			return row && !row.error && row.metrics[main.key] !== undefined;
+		});
+		const baseline = SHOWN.find((m) => m.key === key);
+		if (!baseline) return null;
+		const ref = d.modes[baseline.key]?.metrics[main.key];
 		if (ref === undefined) return null;
-		const items = SHOWN.filter((m) => m.key !== 'original32')
+		const items = SHOWN.filter((m) => m.key !== baseline.key)
 			.map((m) => {
 				const r = d.modes[m.key];
 				const v = r?.metrics[main.key];
-				// A run with NaN / inf output keeps its scores but gets no Δ.
-				return v === undefined || r?.error ? null : { ...m, v, delta: main.lower ? ref - v : v - ref };
+				return v === undefined || r?.error ? null : { key: m.key, delta: main.lower ? ref - v : v - ref };
 			})
 			.filter((x) => x !== null);
-		return { main, ref, items };
+		return { main, key: baseline.key, label: runLabel(baseline, d).toLowerCase(), items };
 	}
 
 	const where = (r: EvalRow) => `${r.gpu}, torch ${r.torch}${r.commit ? `, fastforks ${r.commit}` : ''}, ${r.date}`;
@@ -37,7 +51,7 @@
 			const r = d.modes[m.key];
 			if (!r) continue;
 			const w = m.key.startsWith('original') ? `${r.gpu}, torch ${r.torch}, ${r.date}` : where(r);
-			by.set(w, [...(by.get(w) ?? []), m.label.toLowerCase()]);
+			by.set(w, [...(by.get(w) ?? []), runLabel(m, d).toLowerCase()]);
 		}
 		return [...by].map(([w, modes]) => (by.size > 1 ? `${modes.join(', ')}: ${w}` : w));
 	}
@@ -64,7 +78,7 @@
 						<th>Run</th>
 						<th>dtype</th>
 						{#each ms_ as m (m.key)}<th class="num">{label(m.key)} <small>{m.lower ? '↓' : '↑'}</small></th>{/each}
-						{#if dev}<th class="num">Δ {label(dev.main.key)} vs fp32 original</th>{/if}
+						{#if dev}<th class="num">Δ {label(dev.main.key)} vs {dev.label}</th>{/if}
 						<th class="num">{d.noun}</th>
 						<th class="num">ms / {d.noun.replace(/s$/, '')}</th>
 					</tr>
@@ -83,7 +97,7 @@
 								{#each ms_ as mt (mt.key)}<td class="num">{fmt(mt.format, r.metrics[mt.key])}</td>{/each}
 								{#if dev}
 									{@const it = dev.items.find((i) => i.key === m.key)}
-									<td class="num delta">{m.key === 'original32' ? 'reference' : it ? signed(it.delta, dev.main.format) : '–'}</td>
+									<td class="num delta">{m.key === dev.key ? 'reference' : it ? signed(it.delta, dev.main.format) : '–'}</td>
 								{/if}
 								<td class="num">{r.n ?? '–'}{#if r.error}<small class="note">NaN / inf output</small>{/if}</td>
 								<td class="num">{ms(r.ms_per_img)}</td>
@@ -94,13 +108,9 @@
 			</table>
 		</div>
 
-		{#if !d.modes.original32}
-			<p class="fine">The original code was not run on this dataset, so the table cannot show the distance to it.</p>
-		{/if}
-
 		<p class="fine">
 			{#if d.protocol}{d.protocol}{/if}
-			{#if d.modes.original32 || d.modes.original16}Original = <a href={card.upstream} rel="noopener">the authors’ code</a
+			{#if ORIGINAL.some((key) => d.modes[key])}Original = <a href={card.upstream} rel="noopener">the authors’ code</a
 				>{#if card.original_is}{' '}({card.original_is}){/if}, same checkpoint and protocol.{/if}
 			Measured on {wheres(d).join('; ')}.
 		</p>
