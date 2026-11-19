@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "b165bb57c",
+		"commit": "8375af275",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -10,7 +10,7 @@
 		"tasks": 20,
 		"commercial": 529,
 		"vs_original": {
-			"models": 478,
+			"models": 480,
 			"median": 3.2,
 			"max": 101.2
 		}
@@ -11733,12 +11733,12 @@
 							"reserved": 5906
 						},
 						"portable": {
-							"alloc": 3259,
-							"reserved": 3384
+							"alloc": 2894,
+							"reserved": 3024
 						},
 						"kernels": {
-							"alloc": 3259,
-							"reserved": 3382
+							"alloc": 2894,
+							"reserved": 3022
 						}
 					},
 					"commercial": "no",
@@ -11747,12 +11747,12 @@
 					"original_ms": 354.4,
 					"original_size": "1024x2048",
 					"original_note": null,
-					"portable_ms": 275.1,
-					"kernels_ms": 185.2,
-					"speedup": 1.9,
+					"portable_ms": 276.4,
+					"kernels_ms": 179.8,
+					"speedup": 2,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 3259,
+					"peak_mib": 2894,
 					"compile": {
 						"input": "1024x2048",
 						"ms": 262.7,
@@ -12499,10 +12499,13 @@
 							"reserved": 3208
 						},
 						"portable": {
-							"alloc": 2734,
-							"reserved": 3448
+							"alloc": 2273,
+							"reserved": 2728
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 2268,
+							"reserved": 2706
+						}
 					},
 					"commercial": "no",
 					"accuracy": "2.64 / 1.00 / 1.65",
@@ -12510,12 +12513,12 @@
 					"original_ms": 1219.9,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 1213.8,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
+					"portable_ms": 1202.5,
+					"kernels_ms": 910.7,
+					"speedup": 1.3,
+					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": null,
+					"peak_mib": 2268,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 634.985,
@@ -23843,6 +23846,55 @@
 					}
 				},
 				{
+					"id": "gmflow-scale1-things",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8360,
+							"reserved": 8468
+						},
+						"portable": {
+							"alloc": 1988,
+							"reserved": 2142
+						},
+						"kernels": {
+							"alloc": 1988,
+							"reserved": 2142
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "10.346",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 750.3,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 447.5,
+					"kernels_ms": 445.9,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 1988,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 382.224,
+						"fails": null,
+						"part": "",
+						"prep_s": 35.311,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1080x1920",
+						"ms": 186.704,
+						"fails": null,
+						"part": "",
+						"prep_s": 69.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "waft-a1-sintel",
 					"doc": "/models/waft",
 					"family": "waft",
@@ -23950,8 +24002,8 @@
 							"reserved": 5916
 						},
 						"portable": {
-							"alloc": 3553,
-							"reserved": 4076
+							"alloc": 1832,
+							"reserved": 2196
 						},
 						"kernels": {
 							"alloc": 1851,
@@ -23964,7 +24016,7 @@
 					"original_ms": 1533.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 790.8,
+					"portable_ms": 741,
 					"kernels_ms": 518.7,
 					"speedup": 3,
 					"speedup_vs": "original",
@@ -24031,52 +24083,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 67.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "gmflow-scale1-things",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8360,
-							"reserved": 8468
-						},
-						"portable": {
-							"alloc": 4496,
-							"reserved": 4642
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "10.346",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 750.3,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 556.1,
-					"kernels_ms": null,
-					"speedup": null,
-					"speedup_vs": null,
-					"year": 2021,
-					"peak_mib": null,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 382.224,
-						"fails": null,
-						"part": "",
-						"prep_s": 35.311,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1080x1920",
-						"ms": 186.704,
-						"fails": null,
-						"part": "",
-						"prep_s": 69.3,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -26498,8 +26504,8 @@
 							"reserved": 4290
 						},
 						"portable": {
-							"alloc": 2827,
-							"reserved": 3184
+							"alloc": 1672,
+							"reserved": 2242
 						},
 						"kernels": {
 							"alloc": 368,
@@ -26512,7 +26518,7 @@
 					"original_ms": 296.2,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 233.1,
+					"portable_ms": 233.4,
 					"kernels_ms": 206.7,
 					"speedup": 1.4,
 					"speedup_vs": "original",
@@ -26596,12 +26602,12 @@
 							"reserved": 3556
 						},
 						"portable": {
-							"alloc": 2856,
-							"reserved": 3080
+							"alloc": 2461,
+							"reserved": 3780
 						},
 						"kernels": {
-							"alloc": 2856,
-							"reserved": 3080
+							"alloc": 2461,
+							"reserved": 3780
 						}
 					},
 					"commercial": "yes",
@@ -26610,12 +26616,12 @@
 					"original_ms": 463.8,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 416.9,
-					"kernels_ms": 332.5,
+					"portable_ms": 417.1,
+					"kernels_ms": 332.4,
 					"speedup": 1.4,
 					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": 2856,
+					"peak_mib": 2461,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 332.246,
@@ -26642,8 +26648,8 @@
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 9899,
-							"reserved": 10400
+							"alloc": 5936,
+							"reserved": 6618
 						},
 						"kernels": {
 							"alloc": 4587,
@@ -26656,7 +26662,7 @@
 					"original_ms": null,
 					"original_size": "1080x1920",
 					"original_note": "OOM",
-					"portable_ms": 2621.8,
+					"portable_ms": 2638.7,
 					"kernels_ms": 1627.6,
 					"speedup": 1.6,
 					"speedup_vs": "portable",
@@ -28275,12 +28281,12 @@
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 6419,
-							"reserved": 8880
+							"alloc": 4495,
+							"reserved": 8260
 						},
 						"kernels": {
-							"alloc": 6402,
-							"reserved": 7034
+							"alloc": 4495,
+							"reserved": 8260
 						}
 					},
 					"commercial": "yes",
@@ -28289,12 +28295,12 @@
 					"original_ms": null,
 					"original_size": "512x512",
 					"original_note": "OOM",
-					"portable_ms": 2712.2,
-					"kernels_ms": 2713,
+					"portable_ms": 2747.7,
+					"kernels_ms": 2748.1,
 					"speedup": 1,
 					"speedup_vs": "portable",
 					"year": 2025,
-					"peak_mib": 6402,
+					"peak_mib": 4495,
 					"compile": {
 						"input": "512x512",
 						"ms": 2471.145,
