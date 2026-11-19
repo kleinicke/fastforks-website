@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "a4d9a81d6",
+		"commit": "9bca9cede",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -12880,7 +12880,7 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": "6.65 / 13.37 / 16.92",
+					"accuracy": "6.66 / 13.35 / 16.96",
 					"accuracy_metric": "YorkUrban test (102 images), line segment sAP@5 / @10 / @15 %",
 					"original_ms": 35.6,
 					"original_size": "1080x1920",
@@ -24208,6 +24208,55 @@
 					}
 				},
 				{
+					"id": "flowformer-small-chairs",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": {
+							"alloc": 2382,
+							"reserved": 2970
+						},
+						"portable": {
+							"alloc": 1297,
+							"reserved": 1438
+						},
+						"kernels": {
+							"alloc": 1293,
+							"reserved": 1438
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "10.952",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 334.6,
+					"kernels_ms": 319.9,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 1293,
+					"compile": {
+						"input": "375x1242",
+						"ms": 250.251,
+						"fails": null,
+						"part": "",
+						"prep_s": 98.71,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "375x1242",
+						"ms": 201.927,
+						"fails": null,
+						"part": "",
+						"prep_s": 117.7,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "flowformer-small-sintel",
 					"doc": "/models/flowformer",
 					"family": "flowformer",
@@ -24301,55 +24350,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 117.5,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "flowformer-small-chairs",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 2970
-						},
-						"portable": {
-							"alloc": 1404,
-							"reserved": 1698
-						},
-						"kernels": {
-							"alloc": 1401,
-							"reserved": 1698
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "10.952",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 336.7,
-					"kernels_ms": 322.3,
-					"speedup": 1,
-					"speedup_vs": "portable",
-					"year": 2022,
-					"peak_mib": 1401,
-					"compile": {
-						"input": "375x1242",
-						"ms": 250.251,
-						"fails": null,
-						"part": "",
-						"prep_s": 98.71,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "375x1242",
-						"ms": 201.927,
-						"fails": null,
-						"part": "",
-						"prep_s": 117.7,
 						"standalone": false,
 						"dtype": "float16"
 					}
