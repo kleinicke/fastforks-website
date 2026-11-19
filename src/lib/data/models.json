@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "35dffd804",
+		"commit": "0eeedb86e",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -24945,13 +24945,13 @@
 					"label": "Fastest",
 					"id": "xfeat",
 					"doc": "/models/xfeat",
-					"note": "15.1 ms"
+					"note": "15.2 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
 					"id": "xfeat",
 					"doc": "/models/xfeat",
-					"note": "15.1 ms"
+					"note": "15.2 ms"
 				}
 			],
 			"models": [
@@ -24969,8 +24969,8 @@
 							"reserved": 154
 						},
 						"kernels": {
-							"alloc": 290,
-							"reserved": 814
+							"alloc": 313,
+							"reserved": 352
 						}
 					},
 					"commercial": "yes",
@@ -24980,11 +24980,11 @@
 					"original_size": "768x1024",
 					"original_note": null,
 					"portable_ms": 7.2,
-					"kernels_ms": 15.1,
+					"kernels_ms": 15.2,
 					"speedup": 0.6,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 290,
+					"peak_mib": 313,
 					"compile": {
 						"input": "768x1024",
 						"ms": 5.653,
@@ -25018,8 +25018,8 @@
 							"reserved": 476
 						},
 						"kernels": {
-							"alloc": 460,
-							"reserved": 818
+							"alloc": 445,
+							"reserved": 478
 						}
 					},
 					"commercial": "yes",
@@ -25029,11 +25029,11 @@
 					"original_size": "768x1024",
 					"original_note": null,
 					"portable_ms": 21.3,
-					"kernels_ms": 29.1,
+					"kernels_ms": 29.2,
 					"speedup": 0.8,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 460,
+					"peak_mib": 445,
 					"compile": {
 						"input": "768x1024",
 						"ms": 16.228,
