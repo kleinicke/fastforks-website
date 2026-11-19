@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "5c588d34c",
+		"commit": "cf1a82055",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -24012,55 +24012,6 @@
 					}
 				},
 				{
-					"id": "flowseek-t",
-					"doc": "/models/flowseek",
-					"family": "flowseek",
-					"mem": {
-						"original": {
-							"alloc": 8693,
-							"reserved": 9880
-						},
-						"portable": {
-							"alloc": 6328,
-							"reserved": 6822
-						},
-						"kernels": {
-							"alloc": 1947,
-							"reserved": 2114
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "1.348 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 457,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 396.8,
-					"kernels_ms": 253.9,
-					"speedup": 1.8,
-					"speedup_vs": "original",
-					"year": 2025,
-					"peak_mib": 1947,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 258.413,
-						"fails": null,
-						"part": "",
-						"prep_s": 54.18,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1080x1920",
-						"ms": 167.912,
-						"fails": null,
-						"part": "",
-						"prep_s": 106.8,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "flowseek-t-things",
 					"doc": "/models/flowseek",
 					"family": "flowseek",
@@ -24154,6 +24105,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 97.5,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "flowseek-t",
+					"doc": "/models/flowseek",
+					"family": "flowseek",
+					"mem": {
+						"original": {
+							"alloc": 8693,
+							"reserved": 9880
+						},
+						"portable": {
+							"alloc": 6123,
+							"reserved": 6252
+						},
+						"kernels": {
+							"alloc": 1100,
+							"reserved": 1154
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.348 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 457,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 396.2,
+					"kernels_ms": 254.5,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"year": 2025,
+					"peak_mib": 1100,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 258.413,
+						"fails": null,
+						"part": "",
+						"prep_s": 54.18,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1080x1920",
+						"ms": 167.912,
+						"fails": null,
+						"part": "",
+						"prep_s": 106.8,
 						"standalone": false,
 						"dtype": "float16"
 					}
