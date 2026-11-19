@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "b9864e0c5",
+		"commit": "543dc79a1",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -16744,12 +16744,12 @@
 							"reserved": 2901
 						},
 						"portable": {
-							"alloc": 1357,
-							"reserved": 1452
+							"alloc": 615,
+							"reserved": 752
 						},
 						"kernels": {
-							"alloc": 1328,
-							"reserved": 2708
+							"alloc": 730,
+							"reserved": 1648
 						}
 					},
 					"commercial": "yes",
@@ -16758,12 +16758,12 @@
 					"original_ms": 762.4,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 276.5,
-					"kernels_ms": 235.2,
-					"speedup": 3.2,
+					"portable_ms": 279.1,
+					"kernels_ms": 228,
+					"speedup": 3.3,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 1328,
+					"peak_mib": 730,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 276.928,
@@ -22783,12 +22783,12 @@
 							"reserved": 12684
 						},
 						"portable": {
-							"alloc": 4364,
-							"reserved": 6884
+							"alloc": 4343,
+							"reserved": 5556
 						},
 						"kernels": {
-							"alloc": 4370,
-							"reserved": 6936
+							"alloc": 4348,
+							"reserved": 5546
 						}
 					},
 					"commercial": "no",
@@ -22797,12 +22797,12 @@
 					"original_ms": 2520.8,
 					"original_size": "480x640",
 					"original_note": null,
-					"portable_ms": 7228.5,
-					"kernels_ms": 1178.3,
-					"speedup": 2.1,
+					"portable_ms": 7122.3,
+					"kernels_ms": 1169.2,
+					"speedup": 2.2,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 4370,
+					"peak_mib": 4348,
 					"compile": {
 						"input": "480x640",
 						"ms": 7098.385,
@@ -24162,104 +24162,6 @@
 					}
 				},
 				{
-					"id": "flowformer-small-sintel",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 2990
-						},
-						"portable": {
-							"alloc": 1404,
-							"reserved": 1698
-						},
-						"kernels": {
-							"alloc": 1401,
-							"reserved": 1698
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "4.657 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 336.3,
-					"kernels_ms": 321.9,
-					"speedup": 1,
-					"speedup_vs": "portable",
-					"year": 2022,
-					"peak_mib": 1401,
-					"compile": {
-						"input": "375x1242",
-						"ms": 250.379,
-						"fails": null,
-						"part": "",
-						"prep_s": 98.934,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "375x1242",
-						"ms": 201.921,
-						"fails": null,
-						"part": "",
-						"prep_s": 117.1,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "flowformer-small-things",
-					"doc": "/models/flowformer",
-					"family": "flowformer",
-					"mem": {
-						"original": {
-							"alloc": 2382,
-							"reserved": 3010
-						},
-						"portable": {
-							"alloc": 1404,
-							"reserved": 1698
-						},
-						"kernels": {
-							"alloc": 1401,
-							"reserved": 1698
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "6.884",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 337.2,
-					"kernels_ms": 322.1,
-					"speedup": 1,
-					"speedup_vs": "portable",
-					"year": 2022,
-					"peak_mib": 1401,
-					"compile": {
-						"input": "375x1242",
-						"ms": 250.211,
-						"fails": null,
-						"part": "",
-						"prep_s": 99.257,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "375x1242",
-						"ms": 201.968,
-						"fails": null,
-						"part": "",
-						"prep_s": 117.5,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "memfof-spring",
 					"doc": "/models/memfof",
 					"family": "memfof",
@@ -24894,6 +24796,52 @@
 					}
 				},
 				{
+					"id": "flowformer-small-things",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 8780,
+							"reserved": 8960
+						},
+						"kernels": {
+							"alloc": 8696,
+							"reserved": 8822
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "6.884",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 4002.9,
+					"kernels_ms": 3950.3,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 8696,
+					"compile": {
+						"input": "375x1242",
+						"ms": 250.211,
+						"fails": null,
+						"part": "",
+						"prep_s": 99.257,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "375x1242",
+						"ms": 201.968,
+						"fails": null,
+						"part": "",
+						"prep_s": 117.5,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "flowformer-small-chairs",
 					"doc": "/models/flowformer",
 					"family": "flowformer",
@@ -24935,6 +24883,52 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 117.7,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "flowformer-small-sintel",
+					"doc": "/models/flowformer",
+					"family": "flowformer",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 8780,
+							"reserved": 8960
+						},
+						"kernels": {
+							"alloc": 8696,
+							"reserved": 8822
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "4.657 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 4003.3,
+					"kernels_ms": 3957.9,
+					"speedup": 1,
+					"speedup_vs": "portable",
+					"year": 2022,
+					"peak_mib": 8696,
+					"compile": {
+						"input": "375x1242",
+						"ms": 250.379,
+						"fails": null,
+						"part": "",
+						"prep_s": 98.934,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "375x1242",
+						"ms": 201.921,
+						"fails": null,
+						"part": "",
+						"prep_s": 117.1,
 						"standalone": false,
 						"dtype": "float16"
 					}
