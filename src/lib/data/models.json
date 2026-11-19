@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "1f5025ece",
+		"commit": "a36f0d750",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -12570,12 +12570,12 @@
 							"reserved": 5128
 						},
 						"portable": {
-							"alloc": 1210,
-							"reserved": 1492
+							"alloc": 891,
+							"reserved": 1036
 						},
 						"kernels": {
-							"alloc": 1050,
-							"reserved": 1330
+							"alloc": 747,
+							"reserved": 832
 						}
 					},
 					"commercial": "yes",
@@ -12584,12 +12584,12 @@
 					"original_ms": 257.3,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 181.3,
-					"kernels_ms": 147.5,
-					"speedup": 1.7,
+					"portable_ms": 180.5,
+					"kernels_ms": 145.5,
+					"speedup": 1.8,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 1050,
+					"peak_mib": 747,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 156.511,
@@ -25441,6 +25441,54 @@
 					}
 				},
 				{
+					"id": "romav1",
+					"doc": "/models/romav1",
+					"family": "romav1",
+					"mem": {
+						"original": {
+							"alloc": 3887,
+							"reserved": 4094
+						},
+						"portable": {
+							"alloc": 1597,
+							"reserved": 1738
+						},
+						"kernels": {
+							"alloc": 1597,
+							"reserved": 1738
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "62.4 / 76.4 / 86.2",
+					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
+					"original_ms": 385.8,
+					"original_size": "768x1024",
+					"original_note": null,
+					"portable_ms": 377.2,
+					"kernels_ms": 218.1,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 1597,
+					"compile": {
+						"input": "768x1024",
+						"ms": 246.965,
+						"fails": null,
+						"part": "",
+						"prep_s": 697.938,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "768x1024",
+						"ms": null,
+						"fails": "component trials with FP32 DINOv2 or fine VGG engines introduce pose failures or large pose errors on MegaDepth, including with TF32 disabled",
+						"planned": true,
+						"part": null,
+						"prep_s": null
+					}
+				},
+				{
 					"id": "loma-r",
 					"doc": "/models/loma",
 					"family": "loma",
@@ -25723,54 +25771,6 @@
 						"prep_s": 184.89999999999998,
 						"standalone": false,
 						"dtype": "float16"
-					}
-				},
-				{
-					"id": "romav1",
-					"doc": "/models/romav1",
-					"family": "romav1",
-					"mem": {
-						"original": {
-							"alloc": 3887,
-							"reserved": 4094
-						},
-						"portable": {
-							"alloc": 1720,
-							"reserved": 1840
-						},
-						"kernels": {
-							"alloc": 1720,
-							"reserved": 1860
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "62.4 / 76.4 / 86.2",
-					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
-					"original_ms": 385.8,
-					"original_size": "768x1024",
-					"original_note": null,
-					"portable_ms": 376.9,
-					"kernels_ms": 356.1,
-					"speedup": 1.1,
-					"speedup_vs": "original",
-					"year": 2023,
-					"peak_mib": 1720,
-					"compile": {
-						"input": "768x1024",
-						"ms": 246.965,
-						"fails": null,
-						"part": "",
-						"prep_s": 697.938,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "768x1024",
-						"ms": null,
-						"fails": "component trials with FP32 DINOv2 or fine VGG engines introduce pose failures or large pose errors on MegaDepth, including with TF32 disabled",
-						"planned": true,
-						"part": null,
-						"prep_s": null
 					}
 				}
 			]
