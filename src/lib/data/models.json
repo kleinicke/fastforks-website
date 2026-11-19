@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "86bf414c4",
+		"commit": "5154f7008",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -3436,8 +3436,8 @@
 							"reserved": 12870
 						},
 						"portable": {
-							"alloc": 4903,
-							"reserved": 7258
+							"alloc": 4357,
+							"reserved": 4950
 						},
 						"kernels": {
 							"alloc": 3058,
@@ -3450,7 +3450,7 @@
 					"original_ms": 3873.9,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 3643,
+					"portable_ms": 3630.8,
 					"kernels_ms": 1365.9,
 					"speedup": 2.8,
 					"speedup_vs": "original",
@@ -16347,9 +16347,9 @@
 					"original_ms": 198.9,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 40.9,
+					"portable_ms": 69,
 					"kernels_ms": 55.4,
-					"speedup": 0.7,
+					"speedup": 1.2,
 					"speedup_vs": "portable",
 					"year": 2023,
 					"peak_mib": 841,
@@ -16393,9 +16393,9 @@
 					"original_ms": 202,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 40.8,
+					"portable_ms": 69.2,
 					"kernels_ms": 55.5,
-					"speedup": 0.7,
+					"speedup": 1.2,
 					"speedup_vs": "portable",
 					"year": 2024,
 					"peak_mib": 842,
@@ -22587,12 +22587,12 @@
 							"reserved": 7654
 						},
 						"portable": {
-							"alloc": 3421,
-							"reserved": 3518
+							"alloc": 3269,
+							"reserved": 3352
 						},
 						"kernels": {
-							"alloc": 3404,
-							"reserved": 3494
+							"alloc": 3270,
+							"reserved": 3330
 						}
 					},
 					"commercial": "no",
@@ -22601,12 +22601,12 @@
 					"original_ms": 906.4,
 					"original_size": "336x518",
 					"original_note": null,
-					"portable_ms": 725.7,
-					"kernels_ms": 466.9,
+					"portable_ms": 727.2,
+					"kernels_ms": 469.2,
 					"speedup": 1.9,
 					"speedup_vs": "original",
 					"year": 2026,
-					"peak_mib": 3404,
+					"peak_mib": 3270,
 					"compile": {
 						"input": "336x518",
 						"ms": 588.622,
@@ -25031,7 +25031,7 @@
 					"original_ms": 23.6,
 					"original_size": "768x1024",
 					"original_note": null,
-					"portable_ms": 21.6,
+					"portable_ms": 21.3,
 					"kernels_ms": 29.1,
 					"speedup": 0.8,
 					"speedup_vs": "original",
@@ -25783,18 +25783,67 @@
 			"picks": [
 				{
 					"label": "Fastest",
-					"id": "tapir",
-					"doc": "/models/tapir",
-					"note": "140.8 ms"
+					"id": "locotrack-b",
+					"doc": "/models/locotrack",
+					"note": "108.4 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
-					"id": "tapir",
-					"doc": "/models/tapir",
-					"note": "140.8 ms"
+					"id": "locotrack-b",
+					"doc": "/models/locotrack",
+					"note": "108.4 ms"
 				}
 			],
 			"models": [
+				{
+					"id": "locotrack-b",
+					"doc": "/models/locotrack",
+					"family": "locotrack",
+					"mem": {
+						"original": {
+							"alloc": 719,
+							"reserved": 784
+						},
+						"portable": {
+							"alloc": 544,
+							"reserved": 596
+						},
+						"kernels": {
+							"alloc": 555,
+							"reserved": 620
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "67.29 / 78.10 / 89.83",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 203.3,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 187.9,
+					"kernels_ms": 108.4,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 555,
+					"compile": {
+						"input": "480x854",
+						"ms": 82.643,
+						"fails": null,
+						"part": "",
+						"prep_s": 146.344,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "480x854",
+						"ms": 6.115,
+						"fails": null,
+						"part": "8 frames with 16 queries only",
+						"prep_s": null,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
 				{
 					"id": "tapir",
 					"doc": "/models/tapir",
@@ -25938,55 +25987,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 157,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "locotrack-b",
-					"doc": "/models/locotrack",
-					"family": "locotrack",
-					"mem": {
-						"original": {
-							"alloc": 719,
-							"reserved": 784
-						},
-						"portable": {
-							"alloc": 603,
-							"reserved": 656
-						},
-						"kernels": {
-							"alloc": 614,
-							"reserved": 660
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "67.29 / 78.10 / 89.83",
-					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
-					"original_ms": 203.3,
-					"original_size": "480x854",
-					"original_note": null,
-					"portable_ms": 188,
-					"kernels_ms": 172.9,
-					"speedup": 1.2,
-					"speedup_vs": "original",
-					"year": 2024,
-					"peak_mib": 614,
-					"compile": {
-						"input": "480x854",
-						"ms": 82.643,
-						"fails": null,
-						"part": "",
-						"prep_s": 146.344,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "480x854",
-						"ms": 6.115,
-						"fails": null,
-						"part": "8 frames with 16 queries only",
-						"prep_s": null,
 						"standalone": false,
 						"dtype": "float16"
 					}
