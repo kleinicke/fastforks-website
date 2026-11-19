@@ -1,27 +1,42 @@
 <script lang="ts">
-	import { METRIC_LABEL, MODES, dt, fmt, ms, type Card, type Dataset, type EvalRow, type Mode } from '#lib/cards.ts';
+	import { METRIC_LABEL, MODES, dt, fmt, ms, type Card, type Dataset, type EvalMode, type EvalRow } from '#lib/cards.ts';
 
 	let { card, variantId, datasets }: { card: Card; variantId: string; datasets: Dataset[] } = $props();
 
-	/** The shown modes, including the authors' direct half-precision run where available. */
-	const SHOWN: { key: Mode | 'originalhalf'; label: string }[] = [
+	const OPTIONAL = [
+		{ key: 'originalhalf', label: 'Original .half()' },
+		{ key: 'originalcpu', label: 'Original CPU' },
+		{ key: 'compile', label: 'Portable + torch.compile' },
+		{ key: 'tensorrt', label: 'TensorRT' }
+	] as const;
+	const SHOWN: { key: EvalMode; label: string }[] = [
 		...MODES,
-		{ key: 'originalhalf', label: 'Original .half()' }
+		...OPTIONAL
 	];
-	const ORIGINAL = ['original32', 'original16', 'originalhalf'] as const;
+	const ORIGINAL = ['original32', 'original16', 'originalhalf', 'originalcpu'] as const;
 
 	const label = (k: string) => METRIC_LABEL[k] ?? k;
-	const runLabel = (mode: (typeof SHOWN)[number], d: Dataset) =>
-		mode.key === 'original16' && d.modes.original16?.dtype
-			? `Original ${dt(d.modes.original16.dtype)}`
-			: mode.label;
+	function runLabel(mode: (typeof SHOWN)[number], d: Dataset): string {
+		const dtype = d.modes[mode.key]?.dtype;
+		if (mode.key === 'original16' && dtype) return `Original ${dt(dtype)}`;
+		if (mode.key === 'originalhalf' && dtype === 'bfloat16') return `Original ${dt(dtype)}`;
+		return mode.label;
+	}
 	const rowsOf = (d: Dataset) =>
-		SHOWN.filter((m) => d.modes[m.key] || m.key !== 'originalhalf').map((m) => ({
+		SHOWN.filter((m) => d.modes[m.key] || MODES.some((common) => common.key === m.key)).map((m) => ({
 			key: m.key,
 			label: runLabel(m, d),
 			row: d.modes[m.key]
 		}));
 	const metricsOf = (d: Dataset) => d.metrics.filter((m) => !m.optional || Object.values(d.modes).some((r) => r && m.key in r.metrics));
+
+	function notesOf(d: Dataset) {
+		const byText = new Map<string, string[]>();
+		for (const { label, row } of rowsOf(d)) {
+			if (row?.note) byText.set(row.note, [...(byText.get(row.note) ?? []), label]);
+		}
+		return [...byText];
+	}
 
 	/** Difference from the best available original baseline, in the metric's own units. */
 	function deviation(d: Dataset) {
@@ -108,6 +123,9 @@
 			</table>
 		</div>
 
+		{#each notesOf(d) as [note, modes] (note)}
+			<p class="fine run-note"><strong>{modes.join(' and ')}</strong> {note}</p>
+		{/each}
 		<p class="fine">
 			{#if d.protocol}{d.protocol}{/if}
 			{#if ORIGINAL.some((key) => d.modes[key])}Original = <a href={card.upstream} rel="noopener">the authors’ code</a
@@ -138,6 +156,9 @@
 		border: 1px solid var(--line);
 		font-size: 0.75rem;
 		color: var(--ink);
+	}
+	.run-note {
+		margin-block: 0.35rem;
 	}
 	tr.dim th,
 	tr.dim td {

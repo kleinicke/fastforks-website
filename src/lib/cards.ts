@@ -4,6 +4,7 @@
 import cardIndex from './data/cards/index.json';
 
 export type Mode = 'original32' | 'original16' | 'portable32' | 'portable' | 'kernels';
+export type EvalMode = Mode | 'originalhalf' | 'originalcpu' | 'compile' | 'tensorrt';
 
 export type SpeedRow = {
 	ms: number;
@@ -103,7 +104,7 @@ export type Dataset = {
 	protocol: string;
 	overlap: 'train' | 'unknown' | null;
 	bad_thr: number | null;
-	modes: Partial<Record<Mode | 'originalhalf' | 'originalcpu', EvalRow>>;
+	modes: Partial<Record<EvalMode, EvalRow>>;
 };
 export type TrainingData = { id: string; name: string; licence?: string; commercial?: string; url?: string };
 export type Licence = {
