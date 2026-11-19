@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "54f816dbc",
+		"commit": "517f04698",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -5632,8 +5632,8 @@
 							"reserved": 4294
 						},
 						"portable": {
-							"alloc": 3297,
-							"reserved": 3478
+							"alloc": 3036,
+							"reserved": 3298
 						},
 						"kernels": {
 							"alloc": 3050,
@@ -5646,7 +5646,7 @@
 					"original_ms": 568.8,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 522.3,
+					"portable_ms": 520.7,
 					"kernels_ms": 276.6,
 					"speedup": 2.1,
 					"speedup_vs": "original",
@@ -16612,8 +16612,8 @@
 						"kernels": null
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "97.00 / 99.32",
+					"accuracy_metric": "IIIT5K test (300 crops), word accuracy / normalized edit similarity %",
 					"original_ms": null,
 					"original_size": null,
 					"original_note": null,
@@ -17195,10 +17195,10 @@
 					},
 					"tensorrt": {
 						"input": "1080x1920",
-						"ms": 1.002,
+						"ms": 1.036,
 						"fails": null,
 						"part": "network on person crops only",
-						"prep_s": 16.2,
+						"prep_s": null,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -25506,11 +25506,12 @@
 					},
 					"tensorrt": {
 						"input": "768x1024",
-						"ms": null,
-						"fails": "the fixed 768 x 1024 FP32 engine with TF32 disabled gains 1.41 pose AUC@5 points on 300 MegaDepth pairs, but pose estimation fails on a pair that portable solves at 12.88 degrees",
-						"planned": true,
-						"part": null,
-						"prep_s": null
+						"ms": 1196.795,
+						"fails": null,
+						"part": "FP32 descriptor and bilinear sampling with eager detector, keypoint order and matching",
+						"prep_s": 71.672,
+						"standalone": true,
+						"dtype": "float32"
 					}
 				},
 				{
@@ -25604,7 +25605,7 @@
 					"tensorrt": {
 						"input": "768x1024",
 						"ms": null,
-						"fails": "the staged DINOv2 engine fails pose estimation on a MegaDepth pair solved by portable, with or without TF32",
+						"fails": "the separate FP32 DINOv2 and fine VGG engines each introduce a pose failure on MegaDepth, including with TF32 disabled",
 						"planned": true,
 						"part": null,
 						"prep_s": null
