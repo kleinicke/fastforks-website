@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "a36f0d750",
+		"commit": "f3cc9b8c4",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -22764,11 +22764,11 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "8x512x640",
-						"ms": 734.983,
+						"input": "8x336x518",
+						"ms": 691.475,
 						"fails": null,
-						"part": "DINOv2 encoder with eager scene decoding, 8 views",
-						"prep_s": 53.831,
+						"part": "34 decoder blocks with eager encoder and output heads, 8 views",
+						"prep_s": 58.038,
 						"standalone": true,
 						"dtype": "float16"
 					}
@@ -25049,7 +25049,7 @@
 					"tensorrt": {
 						"input": "768x1024",
 						"ms": null,
-						"fails": "the staged CNN raises pose AUC@5 from 40.92 to 41.41 on 300 MegaDepth pairs. One pose error rises from 35.50 to the 90-degree failure value, including with TF32 disabled.",
+						"fails": "the staged CNN raises pose AUC@5 from 40.92 to 41.41 on 300 MegaDepth pairs. One pose error rises from 35.50 to the 90-degree failure value, including with TF32 disabled. Running only the first LighterGlue block in TensorRT causes the same failure with identical detected keypoints.",
 						"planned": true,
 						"part": null,
 						"prep_s": null
@@ -26050,12 +26050,12 @@
 							"reserved": 774
 						},
 						"portable": {
-							"alloc": 508,
-							"reserved": 628
+							"alloc": 499,
+							"reserved": 568
 						},
 						"kernels": {
-							"alloc": 508,
-							"reserved": 628
+							"alloc": 499,
+							"reserved": 568
 						}
 					},
 					"commercial": "yes",
@@ -26064,12 +26064,12 @@
 					"original_ms": 242.5,
 					"original_size": "480x854",
 					"original_note": null,
-					"portable_ms": 233.7,
-					"kernels_ms": 192.5,
+					"portable_ms": 232.9,
+					"kernels_ms": 190.7,
 					"speedup": 1.3,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 508,
+					"peak_mib": 499,
 					"compile": {
 						"input": "480x854",
 						"ms": 182.606,
@@ -26246,12 +26246,12 @@
 							"reserved": 1718
 						},
 						"portable": {
-							"alloc": 1220,
-							"reserved": 1294
+							"alloc": 1028,
+							"reserved": 1094
 						},
 						"kernels": {
-							"alloc": 1205,
-							"reserved": 1254
+							"alloc": 1013,
+							"reserved": 1074
 						}
 					},
 					"commercial": "yes",
@@ -26260,12 +26260,12 @@
 					"original_ms": 1492.8,
 					"original_size": "480x854",
 					"original_note": null,
-					"portable_ms": 528.7,
-					"kernels_ms": 380.8,
+					"portable_ms": 529.3,
+					"kernels_ms": 381.6,
 					"speedup": 3.9,
 					"speedup_vs": "original",
 					"year": 2026,
-					"peak_mib": 1205,
+					"peak_mib": 1013,
 					"compile": {
 						"input": "480x854",
 						"ms": 394.898,
