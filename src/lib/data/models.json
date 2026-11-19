@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "517f04698",
+		"commit": "b165bb57c",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -5436,8 +5436,8 @@
 							"reserved": 4374
 						},
 						"portable": {
-							"alloc": 3463,
-							"reserved": 3628
+							"alloc": 3316,
+							"reserved": 3626
 						},
 						"kernels": {
 							"alloc": 3037,
@@ -5450,7 +5450,7 @@
 					"original_ms": 299.2,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 289.3,
+					"portable_ms": 290.6,
 					"kernels_ms": 180.3,
 					"speedup": 1.7,
 					"speedup_vs": "original",
@@ -24890,7 +24890,7 @@
 					"tensorrt": {
 						"input": "768x1024",
 						"ms": null,
-						"fails": "the staged CNN raises pose AUC@5 from 40.92 to 41.41 on 300 MegaDepth pairs. One pose error rises from 35.50 to the 90-degree failure value.",
+						"fails": "the staged CNN raises pose AUC@5 from 40.92 to 41.41 on 300 MegaDepth pairs. One pose error rises from 35.50 to the 90-degree failure value, including with TF32 disabled.",
 						"planned": true,
 						"part": null,
 						"prep_s": null
