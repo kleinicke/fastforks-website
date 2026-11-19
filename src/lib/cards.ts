@@ -155,6 +155,7 @@ export type Example = {
 	input: { name: string; title: string; credit: string; licence: string; source: string };
 	inputs: string[];
 	top?: [string, number][];
+	texts?: string[];
 	classes?: [string, number, [number, number, number]][];
 	objects?: [string, number][];
 	/** Matching: share of the first view's pixels with certainty above 0.5. */

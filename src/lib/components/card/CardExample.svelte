@@ -43,10 +43,8 @@
 {#if !example}
 	<p class="none">No example rendered for this checkpoint yet.</p>
 {:else}
-	<p>
-		One fixed input through this checkpoint, the same for every model of the task{run ? ` (${run})` : ''}.
-		{#if example.prompt}Prompt: {example.prompt}.{/if}
-	</p>
+	{#if run}<p class="credit">{run}</p>{/if}
+	{#if example.prompt}<p><strong>Prompt</strong> {example.prompt}</p>{/if}
 	<div class="grid">
 		{#each shots as shot, i (shot.src)}
 			<figure class="box">
@@ -58,7 +56,7 @@
 		{/each}
 		{#if example.top}
 			<div class="box">
-				<p class="label">Top 5</p>
+				<p class="label">{example.top.length === 5 ? 'Top 5' : 'Predictions'}</p>
 				<ol class="bars">
 					{#each example.top as [name, p] (name)}
 						<li>
@@ -66,6 +64,16 @@
 							<span class="bar"><span style:width={pct(p)}></span></span>
 							<span class="num">{pct(p)}</span>
 						</li>
+					{/each}
+				</ol>
+			</div>
+		{/if}
+		{#if example.texts?.length}
+			<div class="box">
+				<p class="label">Recognized text</p>
+				<ol class="texts">
+					{#each example.texts as text, i (i)}
+						<li>{text}</li>
 					{/each}
 				</ol>
 			</div>
@@ -196,6 +204,11 @@
 	.label {
 		margin: 0.2rem 0 0.8rem;
 		font-weight: 650;
+	}
+	.texts {
+		margin: 0;
+		padding-left: 1.5rem;
+		overflow-wrap: anywhere;
 	}
 	.bars {
 		margin: 0;
