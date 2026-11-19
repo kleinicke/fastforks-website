@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "ef140b9bb",
+		"commit": "4a90ff1ba",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -842,12 +842,12 @@
 							"reserved": 3044
 						},
 						"portable": {
-							"alloc": 2581,
-							"reserved": 2618
+							"alloc": 1291,
+							"reserved": 1378
 						},
 						"kernels": {
-							"alloc": 2586,
-							"reserved": 2640
+							"alloc": 1277,
+							"reserved": 1420
 						}
 					},
 					"commercial": "no",
@@ -856,12 +856,12 @@
 					"original_ms": 251.4,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 113.4,
-					"kernels_ms": 89.5,
-					"speedup": 2.8,
+					"portable_ms": 108.6,
+					"kernels_ms": 93.8,
+					"speedup": 2.7,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 2586,
+					"peak_mib": 1277,
 					"compile": {
 						"input": "994x1482",
 						"ms": 76.998,
@@ -1127,55 +1127,6 @@
 					}
 				},
 				{
-					"id": "dlnr-middlebury",
-					"doc": "/models/dlnr",
-					"family": "dlnr",
-					"mem": {
-						"original": {
-							"alloc": 3004,
-							"reserved": 3552
-						},
-						"portable": {
-							"alloc": 2635,
-							"reserved": 3142
-						},
-						"kernels": {
-							"alloc": 1236,
-							"reserved": 1606
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "34.38",
-					"accuracy_metric": "ETH3D bad > 1 px (%)",
-					"original_ms": 597.7,
-					"original_size": "994x1482",
-					"original_note": null,
-					"portable_ms": 398.2,
-					"kernels_ms": 213.9,
-					"speedup": 2.8,
-					"speedup_vs": "original",
-					"year": 2023,
-					"peak_mib": 1236,
-					"compile": {
-						"input": "994x1482",
-						"ms": 302.705,
-						"fails": null,
-						"part": "",
-						"prep_s": 67.898,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "994x1482",
-						"ms": 240.592,
-						"fails": null,
-						"part": "",
-						"prep_s": 155.8,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "dlnr-sceneflow",
 					"doc": "/models/dlnr",
 					"family": "dlnr",
@@ -1220,6 +1171,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 161,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "dlnr-middlebury",
+					"doc": "/models/dlnr",
+					"family": "dlnr",
+					"mem": {
+						"original": {
+							"alloc": 3004,
+							"reserved": 3552
+						},
+						"portable": {
+							"alloc": 1502,
+							"reserved": 1976
+						},
+						"kernels": {
+							"alloc": 851,
+							"reserved": 982
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "34.38",
+					"accuracy_metric": "ETH3D bad > 1 px (%)",
+					"original_ms": 597.7,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 398.7,
+					"kernels_ms": 214.7,
+					"speedup": 2.8,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 851,
+					"compile": {
+						"input": "994x1482",
+						"ms": 302.705,
+						"fails": null,
+						"part": "",
+						"prep_s": 67.898,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "994x1482",
+						"ms": 240.592,
+						"fails": null,
+						"part": "",
+						"prep_s": 155.8,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -11844,12 +11844,12 @@
 							"reserved": 7792
 						},
 						"portable": {
-							"alloc": 2054,
-							"reserved": 2476
+							"alloc": 1833,
+							"reserved": 2074
 						},
 						"kernels": {
-							"alloc": 2054,
-							"reserved": 2476
+							"alloc": 1833,
+							"reserved": 1994
 						}
 					},
 					"commercial": "yes",
@@ -11858,12 +11858,12 @@
 					"original_ms": 205.1,
 					"original_size": "1024x2048",
 					"original_note": null,
-					"portable_ms": 139.1,
-					"kernels_ms": 100,
-					"speedup": 2.1,
+					"portable_ms": 145.8,
+					"kernels_ms": 106.7,
+					"speedup": 1.9,
 					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": 2054,
+					"peak_mib": 1833,
 					"compile": {
 						"input": "1024x2048",
 						"ms": 182.217,
@@ -11956,7 +11956,7 @@
 					"label": "Best trade-off",
 					"id": "ben2",
 					"doc": "/models/ben2",
-					"note": "103.8 ms, error 0.0403"
+					"note": "105.2 ms, error 0.0403"
 				},
 				{
 					"label": "Fastest commercially usable",
@@ -12374,12 +12374,12 @@
 							"reserved": 2772
 						},
 						"portable": {
-							"alloc": 1681,
-							"reserved": 1956
+							"alloc": 1296,
+							"reserved": 1376
 						},
 						"kernels": {
-							"alloc": 1430,
-							"reserved": 1698
+							"alloc": 1046,
+							"reserved": 1118
 						}
 					},
 					"commercial": "yes",
@@ -12388,12 +12388,12 @@
 					"original_ms": 200.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 110,
-					"kernels_ms": 103.8,
+					"portable_ms": 115,
+					"kernels_ms": 105.2,
 					"speedup": 1.9,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 1430,
+					"peak_mib": 1046,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 103.423,
