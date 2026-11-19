@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "571f69177",
+		"commit": "6dff28efe",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -24760,11 +24760,11 @@
 						},
 						"portable": {
 							"alloc": 3005,
-							"reserved": 3190
+							"reserved": 3192
 						},
 						"kernels": {
 							"alloc": 3005,
-							"reserved": 3210
+							"reserved": 3212
 						}
 					},
 					"commercial": "yes",
@@ -24773,8 +24773,8 @@
 					"original_ms": 2187.8,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 1404.9,
-					"kernels_ms": 1408.1,
+					"portable_ms": 1383.3,
+					"kernels_ms": 1388.5,
 					"speedup": 1.6,
 					"speedup_vs": "original",
 					"year": 2022,
@@ -24900,12 +24900,12 @@
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 8863,
-							"reserved": 9080
+							"alloc": 8780,
+							"reserved": 8960
 						},
 						"kernels": {
-							"alloc": 8779,
-							"reserved": 8982
+							"alloc": 8696,
+							"reserved": 8822
 						}
 					},
 					"commercial": "yes",
@@ -24914,12 +24914,12 @@
 					"original_ms": null,
 					"original_size": "1080x1920",
 					"original_note": "OOM",
-					"portable_ms": 4082.2,
-					"kernels_ms": 4031.1,
+					"portable_ms": 4006.5,
+					"kernels_ms": 3950.9,
 					"speedup": 1,
 					"speedup_vs": "portable",
 					"year": 2022,
-					"peak_mib": 8779,
+					"peak_mib": 8696,
 					"compile": {
 						"input": "375x1242",
 						"ms": 250.251,
@@ -26801,6 +26801,52 @@
 					}
 				},
 				{
+					"id": "gimm-vfi-r",
+					"doc": "/models/gimm_vfi",
+					"family": "gimm_vfi",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 5936,
+							"reserved": 6618
+						},
+						"kernels": {
+							"alloc": 4574,
+							"reserved": 5362
+						}
+					},
+					"commercial": "no",
+					"accuracy": "28.94 / 0.8543",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 2584.3,
+					"kernels_ms": 1576.3,
+					"speedup": 1.6,
+					"speedup_vs": "portable",
+					"year": 2024,
+					"peak_mib": 4574,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1498.488,
+						"fails": null,
+						"part": "",
+						"prep_s": 307.045,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "480x854",
+						"ms": 1209.872,
+						"fails": null,
+						"part": "RAFT feature encoder with eager context, flow update and synthesis",
+						"prep_s": 12.919,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "gimm-vfi-r-p",
 					"doc": "/models/gimm_vfi",
 					"family": "gimm_vfi",
@@ -26842,52 +26888,6 @@
 						"fails": null,
 						"part": "RAFT feature and context encoders with eager flow update and synthesis",
 						"prep_s": 16.904,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gimm-vfi-r",
-					"doc": "/models/gimm_vfi",
-					"family": "gimm_vfi",
-					"mem": {
-						"original": null,
-						"portable": {
-							"alloc": 7855,
-							"reserved": 9078
-						},
-						"kernels": {
-							"alloc": 4587,
-							"reserved": 5362
-						}
-					},
-					"commercial": "no",
-					"accuracy": "28.94 / 0.8543",
-					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 2634.9,
-					"kernels_ms": 1629.3,
-					"speedup": 1.6,
-					"speedup_vs": "portable",
-					"year": 2024,
-					"peak_mib": 4587,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1498.488,
-						"fails": null,
-						"part": "",
-						"prep_s": 307.045,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "480x854",
-						"ms": 1209.872,
-						"fails": null,
-						"part": "RAFT feature encoder with eager context, flow update and synthesis",
-						"prep_s": 12.919,
 						"standalone": true,
 						"dtype": "float32"
 					}
@@ -28238,6 +28238,55 @@
 					}
 				},
 				{
+					"id": "real-hat-gan-x4",
+					"doc": "/models/hat",
+					"family": "hat",
+					"mem": {
+						"original": {
+							"alloc": 5318,
+							"reserved": 6106
+						},
+						"portable": {
+							"alloc": 1789,
+							"reserved": 2050
+						},
+						"kernels": {
+							"alloc": 1789,
+							"reserved": 2130
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.13 / 0.7632",
+					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 3038.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1539.5,
+					"kernels_ms": 1345.6,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 1789,
+					"compile": {
+						"input": "512x512",
+						"ms": 1185.27,
+						"fails": null,
+						"part": "",
+						"prep_s": 54.343,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "256x256",
+						"ms": 217.36,
+						"fails": null,
+						"part": "",
+						"prep_s": 98.68799999999999,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "drct-l-x4",
 					"doc": "/models/drct",
 					"family": "drct",
@@ -28331,55 +28380,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 92.036,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "real-hat-gan-x4",
-					"doc": "/models/hat",
-					"family": "hat",
-					"mem": {
-						"original": {
-							"alloc": 5318,
-							"reserved": 6106
-						},
-						"portable": {
-							"alloc": 2426,
-							"reserved": 2610
-						},
-						"kernels": {
-							"alloc": 2298,
-							"reserved": 2470
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "27.13 / 0.7632",
-					"accuracy_metric": "DIV2K validation (every 4th: 25 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
-					"original_ms": 3038.1,
-					"original_size": "512x512",
-					"original_note": null,
-					"portable_ms": 1596.7,
-					"kernels_ms": 1426.9,
-					"speedup": 2.1,
-					"speedup_vs": "original",
-					"year": 2023,
-					"peak_mib": 2298,
-					"compile": {
-						"input": "512x512",
-						"ms": 1185.27,
-						"fails": null,
-						"part": "",
-						"prep_s": 54.343,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "256x256",
-						"ms": 217.36,
-						"fails": null,
-						"part": "",
-						"prep_s": 98.68799999999999,
 						"standalone": false,
 						"dtype": "float16"
 					}
