@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "c48c36c4a",
+		"commit": "ef140b9bb",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -16704,8 +16704,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "89.40 / 96.18",
+					"accuracy_metric": "IIIT5K test word crops, word accuracy / normalized edit similarity %",
 					"original_ms": 418.3,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -16753,8 +16753,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "94.80 / 98.27",
+					"accuracy_metric": "IIIT5K test word crops, word accuracy / normalized edit similarity %",
 					"original_ms": 762.4,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -24177,7 +24177,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "15.584 †",
+					"accuracy": "15.577 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": null,
 					"original_size": null,
@@ -24373,7 +24373,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "10.780 †",
+					"accuracy": "10.778 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 1034.8,
 					"original_size": "1080x1920",
@@ -24906,7 +24906,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "2.976 †",
+					"accuracy": "2.977 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": null,
 					"original_size": "1080x1920",
