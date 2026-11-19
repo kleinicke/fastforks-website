@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "e12e4eb7d",
+		"commit": "4b65105ca",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -2557,8 +2557,8 @@
 							"reserved": 5876
 						},
 						"portable": {
-							"alloc": 3727,
-							"reserved": 5814
+							"alloc": 2999,
+							"reserved": 3070
 						},
 						"kernels": {
 							"alloc": 1664,
@@ -2571,7 +2571,7 @@
 					"original_ms": 1139.5,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 1143.6,
+					"portable_ms": 1093.7,
 					"kernels_ms": 387.9,
 					"speedup": 2.9,
 					"speedup_vs": "original",
@@ -25767,7 +25767,7 @@
 					"tensorrt": {
 						"input": "768x1024",
 						"ms": null,
-						"fails": "the separate FP32 DINOv2 and fine VGG engines each introduce a pose failure on MegaDepth, including with TF32 disabled",
+						"fails": "component trials with FP32 DINOv2 or fine VGG engines introduce pose failures or large pose errors on MegaDepth, including with TF32 disabled",
 						"planned": true,
 						"part": null,
 						"prep_s": null
@@ -28039,6 +28039,55 @@
 					}
 				},
 				{
+					"id": "swinir-l-x4-real",
+					"doc": "/models/swinir",
+					"family": "swinir",
+					"mem": {
+						"original": {
+							"alloc": 2357,
+							"reserved": 2746
+						},
+						"portable": {
+							"alloc": 1806,
+							"reserved": 2054
+						},
+						"kernels": {
+							"alloc": 1633,
+							"reserved": 1934
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.05 / 0.7628",
+					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 3709.3,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 1247.7,
+					"kernels_ms": 921.3,
+					"speedup": 4,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 1633,
+					"compile": {
+						"input": "512x512",
+						"ms": 1426.428,
+						"fails": null,
+						"part": "",
+						"prep_s": 68.125,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "512x512",
+						"ms": 1117.749,
+						"fails": null,
+						"part": "",
+						"prep_s": 193.1,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "hat-s-x4",
 					"doc": "/models/hat",
 					"family": "hat",
@@ -28083,55 +28132,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 89.14500000000001,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "swinir-l-x4-real",
-					"doc": "/models/swinir",
-					"family": "swinir",
-					"mem": {
-						"original": {
-							"alloc": 2357,
-							"reserved": 2746
-						},
-						"portable": {
-							"alloc": 2425,
-							"reserved": 2672
-						},
-						"kernels": {
-							"alloc": 1806,
-							"reserved": 1934
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "27.05 / 0.7628",
-					"accuracy_metric": "DIV2K validation (every 2nd: 50 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
-					"original_ms": 3709.3,
-					"original_size": "512x512",
-					"original_note": null,
-					"portable_ms": 2098.7,
-					"kernels_ms": 1036.5,
-					"speedup": 3.6,
-					"speedup_vs": "original",
-					"year": 2021,
-					"peak_mib": 1806,
-					"compile": {
-						"input": "512x512",
-						"ms": 1426.428,
-						"fails": null,
-						"part": "",
-						"prep_s": 68.125,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "512x512",
-						"ms": 1117.749,
-						"fails": null,
-						"part": "",
-						"prep_s": 193.1,
 						"standalone": false,
 						"dtype": "float16"
 					}
