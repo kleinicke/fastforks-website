@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "878e54c63",
+		"commit": "cadc22477",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -5142,12 +5142,12 @@
 							"reserved": 3350
 						},
 						"portable": {
-							"alloc": 1443,
-							"reserved": 1576
+							"alloc": 1239,
+							"reserved": 1436
 						},
 						"kernels": {
-							"alloc": 1475,
-							"reserved": 1588
+							"alloc": 1464,
+							"reserved": 1568
 						}
 					},
 					"commercial": "yes",
@@ -5156,12 +5156,12 @@
 					"original_ms": 438.5,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 200.8,
-					"kernels_ms": 155.4,
-					"speedup": 2.8,
+					"portable_ms": 186.7,
+					"kernels_ms": 151.4,
+					"speedup": 2.9,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1475,
+					"peak_mib": 1464,
 					"compile": {
 						"input": "994x1482",
 						"ms": 148.517,
@@ -26090,6 +26090,55 @@
 					}
 				},
 				{
+					"id": "alltracker",
+					"doc": "/models/alltracker",
+					"family": "alltracker",
+					"mem": {
+						"original": {
+							"alloc": 2100,
+							"reserved": 2318
+						},
+						"portable": {
+							"alloc": 885,
+							"reserved": 998
+						},
+						"kernels": {
+							"alloc": 967,
+							"reserved": 1068
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "67.38 / 78.63 / 90.65",
+					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
+					"original_ms": 485.3,
+					"original_size": "480x854",
+					"original_note": null,
+					"portable_ms": 384.9,
+					"kernels_ms": 213.4,
+					"speedup": 2.3,
+					"speedup_vs": "original",
+					"year": 2025,
+					"peak_mib": 967,
+					"compile": {
+						"input": "480x854",
+						"ms": 283.934,
+						"fails": null,
+						"part": "",
+						"prep_s": 104.753,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "256x256",
+						"ms": 329.92,
+						"fails": null,
+						"part": "frame CNN with eager tracking",
+						"prep_s": 20.279175739968196,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "alltracker-tiny",
 					"doc": "/models/alltracker",
 					"family": "alltracker",
@@ -26134,55 +26183,6 @@
 						"fails": null,
 						"part": "frame CNN with eager tracking",
 						"prep_s": 19.292258583009243,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "alltracker",
-					"doc": "/models/alltracker",
-					"family": "alltracker",
-					"mem": {
-						"original": {
-							"alloc": 2100,
-							"reserved": 2318
-						},
-						"portable": {
-							"alloc": 993,
-							"reserved": 1238
-						},
-						"kernels": {
-							"alloc": 1076,
-							"reserved": 1288
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "67.38 / 78.63 / 90.65",
-					"accuracy_metric": "TAP-Vid DAVIS (query first), every 3rd video, AJ / delta_avg / OA %",
-					"original_ms": 485.3,
-					"original_size": "480x854",
-					"original_note": null,
-					"portable_ms": 390.8,
-					"kernels_ms": 221.1,
-					"speedup": 2.2,
-					"speedup_vs": "original",
-					"year": 2025,
-					"peak_mib": 1076,
-					"compile": {
-						"input": "480x854",
-						"ms": 283.934,
-						"fails": null,
-						"part": "",
-						"prep_s": 104.753,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "256x256",
-						"ms": 329.92,
-						"fails": null,
-						"part": "frame CNN with eager tracking",
-						"prep_s": 20.279175739968196,
 						"standalone": true,
 						"dtype": "float32"
 					}
