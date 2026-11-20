@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "21cbb9e83",
+		"commit": "657960c7f",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -24268,8 +24268,8 @@
 							"reserved": 15634
 						},
 						"portable": {
-							"alloc": 8265,
-							"reserved": 8382
+							"alloc": 5985,
+							"reserved": 6102
 						},
 						"kernels": {
 							"alloc": 968,
@@ -24282,7 +24282,7 @@
 					"original_ms": 3214.2,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 964.5,
+					"portable_ms": 963.8,
 					"kernels_ms": 864.5,
 					"speedup": 3.7,
 					"speedup_vs": "original",
@@ -24317,8 +24317,8 @@
 							"reserved": 15594
 						},
 						"portable": {
-							"alloc": 8265,
-							"reserved": 8382
+							"alloc": 5985,
+							"reserved": 6102
 						},
 						"kernels": {
 							"alloc": 968,
@@ -24331,7 +24331,7 @@
 					"original_ms": 3247.3,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 964.7,
+					"portable_ms": 963.7,
 					"kernels_ms": 864.6,
 					"speedup": 3.8,
 					"speedup_vs": "original",
@@ -26337,12 +26337,12 @@
 							"reserved": 1928
 						},
 						"portable": {
-							"alloc": 1097,
+							"alloc": 1030,
 							"reserved": 1190
 						},
 						"kernels": {
-							"alloc": 1042,
-							"reserved": 1158
+							"alloc": 975,
+							"reserved": 1156
 						}
 					},
 					"commercial": "yes",
@@ -26351,12 +26351,12 @@
 					"original_ms": 2021.8,
 					"original_size": "480x854",
 					"original_note": null,
-					"portable_ms": 1184.3,
-					"kernels_ms": 1098.6,
-					"speedup": 1.8,
+					"portable_ms": 1149.5,
+					"kernels_ms": 1064,
+					"speedup": 1.9,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 1042,
+					"peak_mib": 975,
 					"compile": {
 						"input": "480x854",
 						"ms": 1065.539,
@@ -26386,11 +26386,11 @@
 							"reserved": 1558
 						},
 						"portable": {
-							"alloc": 1097,
+							"alloc": 1030,
 							"reserved": 1190
 						},
 						"kernels": {
-							"alloc": 1042,
+							"alloc": 975,
 							"reserved": 1158
 						}
 					},
@@ -26400,12 +26400,12 @@
 					"original_ms": 1952.8,
 					"original_size": "480x854",
 					"original_note": null,
-					"portable_ms": 1189.5,
-					"kernels_ms": 1108,
+					"portable_ms": 1158.6,
+					"kernels_ms": 1073.5,
 					"speedup": 1.8,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 1042,
+					"peak_mib": 975,
 					"compile": {
 						"input": "480x854",
 						"ms": 1075.249,
