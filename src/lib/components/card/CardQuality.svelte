@@ -10,10 +10,12 @@
 		{ key: 'tensorrt', label: 'TensorRT' }
 	] as const;
 	const SHOWN: { key: EvalMode; label: string }[] = [
-		...MODES,
+		MODES[0],
+		{ key: 'original32strict', label: 'Original strict FP32' },
+		...MODES.slice(1),
 		...OPTIONAL
 	];
-	const ORIGINAL = ['original32', 'original16', 'originalhalf', 'originalcpu'] as const;
+	const ORIGINAL = ['original32', 'original32strict', 'original16', 'originalhalf', 'originalcpu'] as const;
 
 	const label = (k: string) => METRIC_LABEL[k] ?? k;
 	function runLabel(mode: (typeof SHOWN)[number], d: Dataset): string {

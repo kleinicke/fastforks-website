@@ -4,7 +4,7 @@
 import cardIndex from './data/cards/index.json';
 
 export type Mode = 'original32' | 'original16' | 'portable32' | 'portable' | 'kernels';
-export type EvalMode = Mode | 'originalhalf' | 'originalcpu' | 'compile' | 'tensorrt';
+export type EvalMode = Mode | 'original32strict' | 'originalhalf' | 'originalcpu' | 'compile' | 'tensorrt';
 
 export type SpeedRow = {
 	ms: number;
