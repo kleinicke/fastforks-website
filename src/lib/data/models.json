@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "89501664c",
+		"commit": "ffe48ed1c",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -11783,12 +11783,12 @@
 							"reserved": 2724
 						},
 						"portable": {
-							"alloc": 1643,
-							"reserved": 1762
+							"alloc": 1280,
+							"reserved": 1402
 						},
 						"kernels": {
-							"alloc": 1643,
-							"reserved": 1762
+							"alloc": 1280,
+							"reserved": 1402
 						}
 					},
 					"commercial": "no",
@@ -11798,11 +11798,11 @@
 					"original_size": "1024x2048",
 					"original_note": null,
 					"portable_ms": 131.9,
-					"kernels_ms": 92.6,
+					"kernels_ms": 90.5,
 					"speedup": 1.9,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1643,
+					"peak_mib": 1280,
 					"compile": {
 						"input": "1024x2048",
 						"ms": 118.383,
@@ -11881,11 +11881,11 @@
 							"reserved": 5906
 						},
 						"portable": {
-							"alloc": 2894,
+							"alloc": 2880,
 							"reserved": 3024
 						},
 						"kernels": {
-							"alloc": 2894,
+							"alloc": 2880,
 							"reserved": 3022
 						}
 					},
@@ -11895,12 +11895,12 @@
 					"original_ms": 354.4,
 					"original_size": "1024x2048",
 					"original_note": null,
-					"portable_ms": 276.4,
-					"kernels_ms": 179.8,
+					"portable_ms": 277.4,
+					"kernels_ms": 179.5,
 					"speedup": 2,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 2894,
+					"peak_mib": 2880,
 					"compile": {
 						"input": "1024x2048",
 						"ms": 262.7,
@@ -12637,7 +12637,7 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "288x512",
+						"input": "100x288x512",
 						"ms": 1475.85,
 						"fails": null,
 						"part": "frame and key encoder with eager video memory and alpha decoder, 100 frames",
@@ -25853,7 +25853,7 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "480x854",
+						"input": "8x480x854",
 						"ms": 6.115,
 						"fails": null,
 						"part": "8 frames with 16 queries only",
@@ -25951,7 +25951,7 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "480x854",
+						"input": "8x480x854",
 						"ms": 5.658,
 						"fails": null,
 						"part": "8 frames with 16 queries only",
@@ -26049,11 +26049,11 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "24x256x256",
-						"ms": 141.273,
+						"input": "8x256x256",
+						"ms": 50.258,
 						"fails": null,
-						"part": "fixed 24-frame clip with 16 queries",
-						"prep_s": null,
+						"part": "fixed eight-frame graph with 16 queries",
+						"prep_s": 117.3742736929562,
 						"standalone": true,
 						"dtype": "float32"
 					}
@@ -26147,10 +26147,10 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "256x256",
+						"input": "16x256x256",
 						"ms": 329.92,
 						"fails": null,
-						"part": "frame CNN with eager tracking",
+						"part": "frame CNN with eager tracking, 16 frames and 16 queries",
 						"prep_s": 20.279175739968196,
 						"standalone": true,
 						"dtype": "float32"
@@ -26196,10 +26196,10 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "256x256",
+						"input": "16x256x256",
 						"ms": 270.343,
 						"fails": null,
-						"part": "frame CNN with eager tracking",
+						"part": "frame CNN with eager tracking, 16 frames and 16 queries",
 						"prep_s": 19.292258583009243,
 						"standalone": true,
 						"dtype": "float32"
@@ -26343,10 +26343,10 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "256x256",
+						"input": "16x256x256",
 						"ms": 957.735,
 						"fails": null,
-						"part": "standalone eight-frame encoder, eager recurrent decoder",
+						"part": "eight-frame encoder chunks with eager recurrent decoder, 16-frame clip",
 						"prep_s": 42.131,
 						"standalone": true,
 						"dtype": "float32"
@@ -26392,10 +26392,10 @@
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "256x256",
+						"input": "16x256x256",
 						"ms": 960.832,
 						"fails": null,
-						"part": "standalone eight-frame encoder, eager recurrent decoder",
+						"part": "eight-frame encoder chunks with eager recurrent decoder, 16-frame clip",
 						"prep_s": 46.283,
 						"standalone": true,
 						"dtype": "float32"
