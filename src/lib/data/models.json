@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "0fba22666",
+		"commit": "374541c1b",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -3779,8 +3779,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "–",
-					"accuracy_metric": null,
+					"accuracy": "0.0038 / 1.0000",
+					"accuracy_metric": "NYUv2 test (every 4th: 164 images) with a 192x256 depth prompt, AbsRel / delta1 (metric)",
 					"original_ms": 47.5,
 					"original_size": "994x1482",
 					"original_note": null,
@@ -4021,8 +4021,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "–",
-					"accuracy_metric": null,
+					"accuracy": "0.0158 / 0.9943",
+					"accuracy_metric": "NYUv2 test (every 4th: 164 images) with a 192x256 depth prompt, AbsRel / delta1 (metric)",
 					"original_ms": null,
 					"original_size": null,
 					"original_note": null,
@@ -4609,8 +4609,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "–",
-					"accuracy_metric": null,
+					"accuracy": "0.0034 / 1.0000",
+					"accuracy_metric": "NYUv2 test (every 4th: 164 images) with a 192x256 depth prompt, AbsRel / delta1 (metric)",
 					"original_ms": 268.8,
 					"original_size": "994x1482",
 					"original_note": null,
@@ -5286,8 +5286,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "–",
-					"accuracy_metric": null,
+					"accuracy": "0.0084 / 0.9998",
+					"accuracy_metric": "NYUv2 test (every 4th: 164 images) with a 192x256 depth prompt, AbsRel / delta1 (metric)",
 					"original_ms": 297.2,
 					"original_size": "994x1482",
 					"original_note": null,
@@ -8242,7 +8242,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "68.21 / 56.87 / 41.33 / 95.08 / 95.38 / 57.67",
+					"accuracy": "69.03 / 57.35 / 41.33 / 96.72 / 96.88 / 57.94",
 					"accuracy_metric": "UnsafeBench test (Sexual), balanced accuracy / accuracy / recall / precision / F1 %",
 					"original_ms": 5.7,
 					"original_size": "224x224",
@@ -16357,7 +16357,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "51.14",
+					"accuracy": "51.04",
 					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
 					"original_ms": 198.9,
 					"original_size": "800x1344",
@@ -16406,7 +16406,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "54.92",
+					"accuracy": "54.99",
 					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
 					"original_ms": 202,
 					"original_size": "800x1344",
@@ -16455,7 +16455,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "55.72",
+					"accuracy": "57.12",
 					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
 					"original_ms": 229.8,
 					"original_size": "800x1344",
@@ -16504,7 +16504,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "56.94",
+					"accuracy": "56.89",
 					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
 					"original_ms": 232.5,
 					"original_size": "800x1344",
@@ -16673,8 +16673,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "98.37 / 99.62",
+					"accuracy_metric": "IIIT5K test word crops, word accuracy / normalized edit similarity %",
 					"original_ms": null,
 					"original_size": null,
 					"original_note": null,
@@ -16771,7 +16771,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "94.80 / 98.27",
+					"accuracy": "94.80 / 98.25",
 					"accuracy_metric": "IIIT5K test word crops, word accuracy / normalized edit similarity %",
 					"original_ms": 762.4,
 					"original_size": "1080x1920",
@@ -23726,7 +23726,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "4.143",
+					"accuracy": "4.141",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 457.7,
 					"original_size": "1080x1920",
@@ -23775,7 +23775,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "3.933",
+					"accuracy": "3.937",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 457.6,
 					"original_size": "1080x1920",
