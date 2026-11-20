@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "068eeaea4",
+		"commit": "837d06019",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -12227,12 +12227,12 @@
 							"reserved": 836
 						},
 						"portable": {
-							"alloc": 432,
-							"reserved": 488
+							"alloc": 363,
+							"reserved": 448
 						},
 						"kernels": {
-							"alloc": 432,
-							"reserved": 514
+							"alloc": 363,
+							"reserved": 454
 						}
 					},
 					"commercial": "yes",
@@ -12241,12 +12241,12 @@
 					"original_ms": 71.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 41.7,
-					"kernels_ms": 15.5,
-					"speedup": 4.6,
+					"portable_ms": 45.4,
+					"kernels_ms": 15.8,
+					"speedup": 4.5,
 					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": 432,
+					"peak_mib": 363,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 17.73,
@@ -12423,12 +12423,12 @@
 							"reserved": 3262
 						},
 						"portable": {
-							"alloc": 1649,
-							"reserved": 1848
+							"alloc": 1153,
+							"reserved": 1468
 						},
 						"kernels": {
-							"alloc": 1649,
-							"reserved": 1874
+							"alloc": 1153,
+							"reserved": 1494
 						}
 					},
 					"commercial": "yes",
@@ -12437,12 +12437,12 @@
 					"original_ms": 240.9,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 108.5,
-					"kernels_ms": 107.9,
-					"speedup": 2.2,
+					"portable_ms": 107.5,
+					"kernels_ms": 106.9,
+					"speedup": 2.3,
 					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": 1649,
+					"peak_mib": 1153,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 85.793,
