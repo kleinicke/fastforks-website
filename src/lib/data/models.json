@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "837d06019",
+		"commit": "12c3021a0",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -27649,12 +27649,12 @@
 							"reserved": 1656
 						},
 						"portable": {
-							"alloc": 1535,
-							"reserved": 1552
+							"alloc": 521,
+							"reserved": 532
 						},
 						"kernels": {
-							"alloc": 566,
-							"reserved": 592
+							"alloc": 521,
+							"reserved": 532
 						}
 					},
 					"commercial": "yes",
@@ -27663,12 +27663,12 @@
 					"original_ms": 2203.5,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 267.8,
-					"kernels_ms": 231.5,
-					"speedup": 9.5,
+					"portable_ms": 233.8,
+					"kernels_ms": 230.4,
+					"speedup": 9.6,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 566,
+					"peak_mib": 521,
 					"compile": {
 						"input": "512x512",
 						"ms": 158.127,
@@ -28188,11 +28188,11 @@
 							"reserved": 2518
 						},
 						"portable": {
-							"alloc": 2276,
-							"reserved": 2378
+							"alloc": 1420,
+							"reserved": 2220
 						},
 						"kernels": {
-							"alloc": 1534,
+							"alloc": 1399,
 							"reserved": 2220
 						}
 					},
@@ -28202,12 +28202,12 @@
 					"original_ms": 4880.3,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 1312.2,
-					"kernels_ms": 1037.4,
+					"portable_ms": 1156.2,
+					"kernels_ms": 1037.5,
 					"speedup": 4.7,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 1534,
+					"peak_mib": 1399,
 					"compile": {
 						"input": "512x512",
 						"ms": 963.784,
@@ -28237,11 +28237,11 @@
 							"reserved": 2528
 						},
 						"portable": {
-							"alloc": 1555,
+							"alloc": 1427,
 							"reserved": 2246
 						},
 						"kernels": {
-							"alloc": 1541,
+							"alloc": 1406,
 							"reserved": 2226
 						}
 					},
@@ -28251,12 +28251,12 @@
 					"original_ms": 9563.6,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 1385.7,
+					"portable_ms": 1386,
 					"kernels_ms": 1208.7,
 					"speedup": 7.9,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 1541,
+					"peak_mib": 1406,
 					"compile": {
 						"input": "512x512",
 						"ms": 1062.755,
