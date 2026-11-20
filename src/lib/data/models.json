@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "ced1bf72e",
+		"commit": "d2b5932f4",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -13619,12 +13619,12 @@
 							"reserved": 1802
 						},
 						"portable": {
-							"alloc": 378,
-							"reserved": 420
+							"alloc": 365,
+							"reserved": 400
 						},
 						"kernels": {
-							"alloc": 377,
-							"reserved": 420
+							"alloc": 365,
+							"reserved": 400
 						}
 					},
 					"commercial": "yes",
@@ -13633,12 +13633,12 @@
 					"original_ms": 98.2,
 					"original_size": "1024x1024",
 					"original_note": null,
-					"portable_ms": 48.3,
-					"kernels_ms": 37,
-					"speedup": 2.7,
+					"portable_ms": 46.6,
+					"kernels_ms": 35.5,
+					"speedup": 2.8,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 377,
+					"peak_mib": 365,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 40.922,
@@ -13766,11 +13766,11 @@
 							"reserved": 3464
 						},
 						"portable": {
-							"alloc": 833,
-							"reserved": 1262
+							"alloc": 821,
+							"reserved": 882
 						},
 						"kernels": {
-							"alloc": 831,
+							"alloc": 818,
 							"reserved": 862
 						}
 					},
@@ -13780,12 +13780,12 @@
 					"original_ms": 197.2,
 					"original_size": "1024x1024",
 					"original_note": null,
-					"portable_ms": 115.7,
-					"kernels_ms": 81.5,
-					"speedup": 2.4,
+					"portable_ms": 112.9,
+					"kernels_ms": 79,
+					"speedup": 2.5,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 831,
+					"peak_mib": 818,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 97.154,
@@ -13855,6 +13855,55 @@
 					}
 				},
 				{
+					"id": "sam-vit-h",
+					"doc": "/models/sam",
+					"family": "sam",
+					"mem": {
+						"original": {
+							"alloc": 5295,
+							"reserved": 5404
+						},
+						"portable": {
+							"alloc": 1472,
+							"reserved": 1504
+						},
+						"kernels": {
+							"alloc": 1467,
+							"reserved": 1484
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "57.99 / 53.12",
+					"accuracy_metric": "COCO val2017, every 10th image, point prompts, mIoU best of 3 / single mask %",
+					"original_ms": 306.5,
+					"original_size": "1024x1024",
+					"original_note": null,
+					"portable_ms": 211.1,
+					"kernels_ms": 140.1,
+					"speedup": 2.2,
+					"speedup_vs": "original",
+					"year": 2023,
+					"peak_mib": 1467,
+					"compile": {
+						"input": "1024x1024",
+						"ms": 187.891,
+						"fails": null,
+						"part": "",
+						"prep_s": 42.576,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1024x1024",
+						"ms": 124.43,
+						"fails": null,
+						"part": "image encoder only",
+						"prep_s": 69.7,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "sam-hq-vit-h",
 					"doc": "/models/sam_hq",
 					"family": "sam_hq",
@@ -13899,55 +13948,6 @@
 						"fails": null,
 						"part": "image encoder only",
 						"prep_s": 69.1,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "sam-vit-h",
-					"doc": "/models/sam",
-					"family": "sam",
-					"mem": {
-						"original": {
-							"alloc": 5295,
-							"reserved": 5404
-						},
-						"portable": {
-							"alloc": 1484,
-							"reserved": 2524
-						},
-						"kernels": {
-							"alloc": 1480,
-							"reserved": 1524
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "57.99 / 53.12",
-					"accuracy_metric": "COCO val2017, every 10th image, point prompts, mIoU best of 3 / single mask %",
-					"original_ms": 306.5,
-					"original_size": "1024x1024",
-					"original_note": null,
-					"portable_ms": 214.5,
-					"kernels_ms": 143.1,
-					"speedup": 2.1,
-					"speedup_vs": "original",
-					"year": 2023,
-					"peak_mib": 1480,
-					"compile": {
-						"input": "1024x1024",
-						"ms": 187.891,
-						"fails": null,
-						"part": "",
-						"prep_s": 42.576,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1024x1024",
-						"ms": 124.43,
-						"fails": null,
-						"part": "image encoder only",
-						"prep_s": 69.7,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -23975,12 +23975,12 @@
 							"reserved": 9820
 						},
 						"portable": {
-							"alloc": 8671,
-							"reserved": 8712
+							"alloc": 6123,
+							"reserved": 6312
 						},
 						"kernels": {
-							"alloc": 1947,
-							"reserved": 2114
+							"alloc": 1100,
+							"reserved": 1154
 						}
 					},
 					"commercial": "yes",
@@ -23989,12 +23989,12 @@
 					"original_ms": 457.7,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 395.3,
-					"kernels_ms": 253.9,
+					"portable_ms": 394.9,
+					"kernels_ms": 253.7,
 					"speedup": 1.8,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 1947,
+					"peak_mib": 1100,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 257.916,
@@ -24024,12 +24024,12 @@
 							"reserved": 9820
 						},
 						"portable": {
-							"alloc": 8671,
-							"reserved": 8712
+							"alloc": 6123,
+							"reserved": 6312
 						},
 						"kernels": {
-							"alloc": 1947,
-							"reserved": 2114
+							"alloc": 1100,
+							"reserved": 1154
 						}
 					},
 					"commercial": "yes",
@@ -24038,12 +24038,12 @@
 					"original_ms": 457.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 395.6,
-					"kernels_ms": 254.1,
+					"portable_ms": 394.8,
+					"kernels_ms": 253.7,
 					"speedup": 1.8,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 1947,
+					"peak_mib": 1100,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 258.123,
@@ -26795,6 +26795,52 @@
 					}
 				},
 				{
+					"id": "gimm-vfi-r-p",
+					"doc": "/models/gimm_vfi",
+					"family": "gimm_vfi",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 5872,
+							"reserved": 6518
+						},
+						"kernels": {
+							"alloc": 4511,
+							"reserved": 5282
+						}
+					},
+					"commercial": "no",
+					"accuracy": "28.81 / 0.8481",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 2527.1,
+					"kernels_ms": 1520,
+					"speedup": 1.7,
+					"speedup_vs": "portable",
+					"year": 2024,
+					"peak_mib": 4511,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1498.109,
+						"fails": null,
+						"part": "",
+						"prep_s": 306.535,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "480x854",
+						"ms": 1189.848,
+						"fails": null,
+						"part": "RAFT feature and context encoders with eager flow update and synthesis",
+						"prep_s": 16.904,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "gimm-vfi-r",
 					"doc": "/models/gimm_vfi",
 					"family": "gimm_vfi",
@@ -26836,52 +26882,6 @@
 						"fails": null,
 						"part": "RAFT feature encoder with eager context, flow update and synthesis",
 						"prep_s": 12.919,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gimm-vfi-r-p",
-					"doc": "/models/gimm_vfi",
-					"family": "gimm_vfi",
-					"mem": {
-						"original": null,
-						"portable": {
-							"alloc": 5936,
-							"reserved": 6618
-						},
-						"kernels": {
-							"alloc": 4587,
-							"reserved": 5282
-						}
-					},
-					"commercial": "no",
-					"accuracy": "28.81 / 0.8481",
-					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 2638.7,
-					"kernels_ms": 1627.6,
-					"speedup": 1.6,
-					"speedup_vs": "portable",
-					"year": 2024,
-					"peak_mib": 4587,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1498.109,
-						"fails": null,
-						"part": "",
-						"prep_s": 306.535,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "480x854",
-						"ms": 1189.848,
-						"fails": null,
-						"part": "RAFT feature and context encoders with eager flow update and synthesis",
-						"prep_s": 16.904,
 						"standalone": true,
 						"dtype": "float32"
 					}
