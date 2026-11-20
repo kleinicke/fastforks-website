@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "fb2e5c56d",
+		"commit": "00710af61",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -10,7 +10,7 @@
 		"tasks": 20,
 		"commercial": 529,
 		"vs_original": {
-			"models": 531,
+			"models": 541,
 			"median": 3.3,
 			"max": 101.2
 		}
@@ -3142,8 +3142,8 @@
 							"reserved": 8766
 						},
 						"portable": {
-							"alloc": 4362,
-							"reserved": 4838
+							"alloc": 4102,
+							"reserved": 4252
 						},
 						"kernels": {
 							"alloc": 2781,
@@ -3156,7 +3156,7 @@
 					"original_ms": 2815.8,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 1530.9,
+					"portable_ms": 1439,
 					"kernels_ms": 645.2,
 					"speedup": 4.4,
 					"speedup_vs": "original",
@@ -12670,13 +12670,13 @@
 					"label": "Fastest",
 					"id": "teed",
 					"doc": "/models/teed",
-					"note": "2.4 ms"
+					"note": "3.8 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
 					"id": "teed",
 					"doc": "/models/teed",
-					"note": "2.4 ms"
+					"note": "3.8 ms"
 				}
 			],
 			"models": [
@@ -12693,7 +12693,10 @@
 							"alloc": 122,
 							"reserved": 146
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 122,
+							"reserved": 146
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "51.58 / 54.34 / 47.89",
@@ -12701,12 +12704,12 @@
 					"original_ms": 29.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 2.5,
-					"kernels_ms": 2.4,
-					"speedup": 1,
-					"speedup_vs": "portable",
+					"portable_ms": 4.1,
+					"kernels_ms": 3.8,
+					"speedup": 7.7,
+					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 68,
+					"peak_mib": 122,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 1.1,
@@ -12739,7 +12742,10 @@
 							"alloc": 241,
 							"reserved": 284
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 217,
+							"reserved": 244
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "38.24 / 41.69 / 23.76",
@@ -12747,12 +12753,12 @@
 					"original_ms": 25.2,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 3.9,
-					"kernels_ms": 3.6,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
+					"portable_ms": 8.4,
+					"kernels_ms": 6.5,
+					"speedup": 3.9,
+					"speedup_vs": "original",
 					"year": 2016,
-					"peak_mib": 161,
+					"peak_mib": 217,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 2.798,
@@ -12773,6 +12779,55 @@
 					}
 				},
 				{
+					"id": "mlsd",
+					"doc": "/models/mlsd",
+					"family": "mlsd",
+					"mem": {
+						"original": {
+							"alloc": 185,
+							"reserved": 212
+						},
+						"portable": {
+							"alloc": 127,
+							"reserved": 170
+						},
+						"kernels": {
+							"alloc": 127,
+							"reserved": 148
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "6.66 / 13.35 / 16.96",
+					"accuracy_metric": "YorkUrban test (102 images), line segment sAP@5 / @10 / @15 %",
+					"original_ms": 35.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 9.3,
+					"kernels_ms": 7.7,
+					"speedup": 4.6,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 127,
+					"compile": {
+						"input": "1024x1024",
+						"ms": 4.612,
+						"fails": null,
+						"part": "",
+						"prep_s": 11.413,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1024x1024",
+						"ms": 5.75,
+						"fails": null,
+						"part": "standalone CNN with eager resize and line decoding",
+						"prep_s": null,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "hed",
 					"doc": "/models/hed",
 					"family": "hed",
@@ -12785,7 +12840,10 @@
 							"alloc": 187,
 							"reserved": 224
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 193,
+							"reserved": 264
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "61.64 / 62.61 / 61.38",
@@ -12793,12 +12851,12 @@
 					"original_ms": 38.5,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 6,
-					"kernels_ms": 4.4,
-					"speedup": 1.4,
-					"speedup_vs": "portable",
+					"portable_ms": 11.3,
+					"kernels_ms": 8.2,
+					"speedup": 4.7,
+					"speedup_vs": "original",
 					"year": 2015,
-					"peak_mib": 121,
+					"peak_mib": 193,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 4.81,
@@ -12831,7 +12889,10 @@
 							"alloc": 328,
 							"reserved": 372
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 328,
+							"reserved": 392
+						}
 					},
 					"commercial": "no",
 					"accuracy": "58.79 / 59.61 / 60.31",
@@ -12839,12 +12900,12 @@
 					"original_ms": 35.9,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 6.6,
-					"kernels_ms": 6.4,
-					"speedup": 1,
-					"speedup_vs": "portable",
+					"portable_ms": 13.1,
+					"kernels_ms": 12.3,
+					"speedup": 2.9,
+					"speedup_vs": "original",
 					"year": 2021,
-					"peak_mib": 186,
+					"peak_mib": 328,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 5.657,
@@ -12865,98 +12926,6 @@
 					}
 				},
 				{
-					"id": "mlsd",
-					"doc": "/models/mlsd",
-					"family": "mlsd",
-					"mem": {
-						"original": {
-							"alloc": 185,
-							"reserved": 212
-						},
-						"portable": {
-							"alloc": 127,
-							"reserved": 170
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "6.66 / 13.35 / 16.96",
-					"accuracy_metric": "YorkUrban test (102 images), line segment sAP@5 / @10 / @15 %",
-					"original_ms": 35.6,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 7.7,
-					"kernels_ms": 7,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
-					"year": 2021,
-					"peak_mib": 72,
-					"compile": {
-						"input": "1024x1024",
-						"ms": 4.612,
-						"fails": null,
-						"part": "",
-						"prep_s": 11.413,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1024x1024",
-						"ms": 5.75,
-						"fails": null,
-						"part": "standalone CNN with eager resize and line decoding",
-						"prep_s": null,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "lineart",
-					"doc": "/models/lineart",
-					"family": "lineart",
-					"mem": {
-						"original": {
-							"alloc": 221,
-							"reserved": 264
-						},
-						"portable": {
-							"alloc": 222,
-							"reserved": 284
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "49.18 / 52.24 / 36.92",
-					"accuracy_metric": "BSDS500 test (first 75 images), boundary ODS / OIS / AP %",
-					"original_ms": 29.8,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 9.9,
-					"kernels_ms": 8.5,
-					"speedup": 1.2,
-					"speedup_vs": "portable",
-					"year": 2022,
-					"peak_mib": 126,
-					"compile": {
-						"input": "1024x1024",
-						"ms": 6.492,
-						"fails": null,
-						"part": "",
-						"prep_s": 9.919,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1024x1024",
-						"ms": 4.805,
-						"fails": null,
-						"part": "",
-						"prep_s": 10.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "lineart-coarse",
 					"doc": "/models/lineart",
 					"family": "lineart",
@@ -12969,7 +12938,10 @@
 							"alloc": 222,
 							"reserved": 284
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 217,
+							"reserved": 284
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "42.89 / 46.48 / 36.60",
@@ -12977,12 +12949,12 @@
 					"original_ms": 30.4,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 9.9,
-					"kernels_ms": 8.5,
-					"speedup": 1.2,
-					"speedup_vs": "portable",
+					"portable_ms": 18.3,
+					"kernels_ms": 15.4,
+					"speedup": 2,
+					"speedup_vs": "original",
 					"year": 2022,
-					"peak_mib": 126,
+					"peak_mib": 217,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 6.488,
@@ -13003,6 +12975,55 @@
 					}
 				},
 				{
+					"id": "lineart",
+					"doc": "/models/lineart",
+					"family": "lineart",
+					"mem": {
+						"original": {
+							"alloc": 221,
+							"reserved": 264
+						},
+						"portable": {
+							"alloc": 222,
+							"reserved": 284
+						},
+						"kernels": {
+							"alloc": 217,
+							"reserved": 284
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "49.18 / 52.24 / 36.92",
+					"accuracy_metric": "BSDS500 test (first 75 images), boundary ODS / OIS / AP %",
+					"original_ms": 29.8,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 18.3,
+					"kernels_ms": 15.5,
+					"speedup": 1.9,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 217,
+					"compile": {
+						"input": "1024x1024",
+						"ms": 6.492,
+						"fails": null,
+						"part": "",
+						"prep_s": 9.919,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1024x1024",
+						"ms": 4.805,
+						"fails": null,
+						"part": "",
+						"prep_s": 10.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "anyline",
 					"doc": "/models/anyline",
 					"family": "anyline",
@@ -13015,7 +13036,10 @@
 							"alloc": 654,
 							"reserved": 722
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 654,
+							"reserved": 702
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "46.56 / 49.99 / 34.80",
@@ -13023,12 +13047,12 @@
 					"original_ms": 585.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 21,
-					"kernels_ms": 18.8,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
+					"portable_ms": 47.4,
+					"kernels_ms": 36.9,
+					"speedup": 15.9,
+					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 362,
+					"peak_mib": 654,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 11.626,
@@ -16339,7 +16363,10 @@
 							"alloc": 1404,
 							"reserved": 1468
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 1034,
+							"reserved": 1188
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "51.14",
@@ -16347,12 +16374,12 @@
 					"original_ms": 198.9,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 69,
-					"kernels_ms": 55.4,
-					"speedup": 1.2,
-					"speedup_vs": "portable",
+					"portable_ms": 137.8,
+					"kernels_ms": 86.9,
+					"speedup": 2.3,
+					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 841,
+					"peak_mib": 1034,
 					"compile": {
 						"input": "800x1344",
 						"ms": 110.941,
@@ -16385,7 +16412,10 @@
 							"alloc": 1405,
 							"reserved": 1470
 						},
-						"kernels": null
+						"kernels": {
+							"alloc": 1035,
+							"reserved": 1188
+						}
 					},
 					"commercial": "yes",
 					"accuracy": "54.92",
@@ -16393,12 +16423,12 @@
 					"original_ms": 202,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 69.2,
-					"kernels_ms": 55.5,
-					"speedup": 1.2,
-					"speedup_vs": "portable",
+					"portable_ms": 138.2,
+					"kernels_ms": 87.2,
+					"speedup": 2.3,
+					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 842,
+					"peak_mib": 1035,
 					"compile": {
 						"input": "800x1344",
 						"ms": 110.975,
