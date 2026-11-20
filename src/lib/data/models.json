@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "a74154de8",
+		"commit": "23072c1ae",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -16729,8 +16729,8 @@
 							"reserved": 448
 						},
 						"kernels": {
-							"alloc": 500,
-							"reserved": 1016
+							"alloc": 289,
+							"reserved": 448
 						}
 					},
 					"commercial": "yes",
@@ -16740,11 +16740,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 152.9,
-					"kernels_ms": 153.8,
+					"kernels_ms": 155.7,
 					"speedup": 2.7,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 500,
+					"peak_mib": 289,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 114.665,
@@ -16778,8 +16778,8 @@
 							"reserved": 752
 						},
 						"kernels": {
-							"alloc": 730,
-							"reserved": 1648
+							"alloc": 607,
+							"reserved": 654
 						}
 					},
 					"commercial": "yes",
@@ -16789,11 +16789,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 279.1,
-					"kernels_ms": 228,
+					"kernels_ms": 231.2,
 					"speedup": 3.3,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 730,
+					"peak_mib": 607,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 276.928,
@@ -28433,12 +28433,12 @@
 							"reserved": 15268
 						},
 						"portable": {
-							"alloc": 4233,
-							"reserved": 7262
+							"alloc": 3453,
+							"reserved": 3492
 						},
 						"kernels": {
-							"alloc": 3857,
-							"reserved": 7778
+							"alloc": 3453,
+							"reserved": 3492
 						}
 					},
 					"commercial": "yes",
@@ -28447,12 +28447,12 @@
 					"original_ms": 13150,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 2332.3,
-					"kernels_ms": 2355.8,
+					"portable_ms": 2365.3,
+					"kernels_ms": 2364.8,
 					"speedup": 5.6,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 3857,
+					"peak_mib": 3453,
 					"compile": {
 						"input": "512x512",
 						"ms": 1940.718,
@@ -28479,12 +28479,12 @@
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 4495,
-							"reserved": 8260
+							"alloc": 3715,
+							"reserved": 3814
 						},
 						"kernels": {
-							"alloc": 4495,
-							"reserved": 8260
+							"alloc": 3715,
+							"reserved": 3814
 						}
 					},
 					"commercial": "yes",
@@ -28493,12 +28493,12 @@
 					"original_ms": null,
 					"original_size": "512x512",
 					"original_note": "OOM",
-					"portable_ms": 2747.7,
-					"kernels_ms": 2748.1,
+					"portable_ms": 2787.4,
+					"kernels_ms": 2780.8,
 					"speedup": 1,
 					"speedup_vs": "portable",
 					"year": 2025,
-					"peak_mib": 4495,
+					"peak_mib": 3715,
 					"compile": {
 						"input": "512x512",
 						"ms": 2471.145,
