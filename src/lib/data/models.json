@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "106b54eee",
+		"commit": "9d423703a",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -12932,8 +12932,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "42.88 / 46.45 / 36.60",
+					"accuracy_metric": "BSDS500 test (first 75 images), boundary ODS / OIS / AP %",
 					"original_ms": 30.4,
 					"original_size": "1080x1920",
 					"original_note": null,
