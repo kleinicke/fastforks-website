@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "a91395598",
+		"commit": "0fba22666",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -6086,7 +6086,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "78.50 / 94.04",
+					"accuracy": "78.58 / 94.04",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 4.5,
 					"original_size": "224x224",
@@ -6184,7 +6184,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "80.12 / 94.38",
+					"accuracy": "80.14 / 94.40",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 4.6,
 					"original_size": "224x224",
@@ -6380,7 +6380,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "81.14 / 95.12",
+					"accuracy": "81.12 / 95.12",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 4.9,
 					"original_size": "224x224",
@@ -6576,7 +6576,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "82.50 / 95.92",
+					"accuracy": "82.48 / 95.92",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 6.2,
 					"original_size": "224x224",
@@ -7164,7 +7164,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "84.00 / 96.64",
+					"accuracy": "84.04 / 96.64",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 7.1,
 					"original_size": "224x224",
@@ -7213,7 +7213,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "83.66 / 96.02",
+					"accuracy": "83.62 / 96.06",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 7.2,
 					"original_size": "224x224",
@@ -7360,7 +7360,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "76.82 / 92.44",
+					"accuracy": "76.76 / 92.38",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.4,
 					"original_size": "224x224",
@@ -7409,7 +7409,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "77.96 / 93.50",
+					"accuracy": "77.98 / 93.48",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 9.4,
 					"original_size": "224x224",
@@ -7605,7 +7605,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "83.94 / 96.56",
+					"accuracy": "83.92 / 96.58",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 6.9,
 					"original_size": "224x224",
@@ -7801,7 +7801,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "77.34 / 92.82",
+					"accuracy": "77.32 / 92.82",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.2,
 					"original_size": "224x224",
@@ -7899,7 +7899,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "85.52 / 97.18",
+					"accuracy": "85.56 / 97.16",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 11.4,
 					"original_size": "224x224",
@@ -8046,7 +8046,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "80.88 / 95.00",
+					"accuracy": "80.78 / 94.98",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 10.1,
 					"original_size": "224x224",
@@ -8634,7 +8634,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "80.40 / 94.52",
+					"accuracy": "80.42 / 94.54",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": null,
 					"original_size": null,
@@ -8928,7 +8928,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "85.24 / 97.18",
+					"accuracy": "85.22 / 97.20",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 13,
 					"original_size": "224x224",
@@ -9173,7 +9173,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "84.38 / 96.68",
+					"accuracy": "84.40 / 96.68",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 12.3,
 					"original_size": "224x224",
@@ -9222,7 +9222,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "85.66 / 97.12",
+					"accuracy": "85.64 / 97.12",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 13.4,
 					"original_size": "224x224",
@@ -9271,7 +9271,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "86.74 / 98.00",
+					"accuracy": "86.72 / 98.00",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 16.5,
 					"original_size": "224x224",
@@ -9369,7 +9369,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "83.18 / 96.30",
+					"accuracy": "83.26 / 96.34",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 15.2,
 					"original_size": "224x224",
@@ -9418,7 +9418,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "82.90 / 96.28",
+					"accuracy": "82.84 / 96.26",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.4,
 					"original_size": "224x224",
@@ -9467,7 +9467,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "82.86 / 96.20",
+					"accuracy": "82.88 / 96.18",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 8.9,
 					"original_size": "224x224",
@@ -9810,7 +9810,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "84.02 / 96.50",
+					"accuracy": "84.06 / 96.48",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 19.9,
 					"original_size": "224x224",
@@ -10006,7 +10006,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "84.44 / 96.76",
+					"accuracy": "84.40 / 96.76",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 15.9,
 					"original_size": "224x224",
@@ -10153,7 +10153,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "84.32 / 96.80",
+					"accuracy": "84.34 / 96.80",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 16.8,
 					"original_size": "224x224",
@@ -10496,7 +10496,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "84.56 / 96.56",
+					"accuracy": "84.58 / 96.56",
 					"accuracy_metric": "ImageNet-1k val, 5000 random images, top-1 / top-5 %",
 					"original_ms": 18,
 					"original_size": "224x224",
@@ -12224,7 +12224,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "0.0420 / 0.8952",
+					"accuracy": "0.0420 / 0.8953",
 					"accuracy_metric": "DIS5K validation (DIS-VD), every 2nd image (235), MAE / max F-beta",
 					"original_ms": 71.1,
 					"original_size": "1080x1920",
@@ -14201,8 +14201,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "48.23",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
 					"original_ms": 10.5,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -14495,8 +14495,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "52.76",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
 					"original_ms": 19.9,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -14544,8 +14544,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "52.49",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
 					"original_ms": 11.2,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -14642,8 +14642,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "48.39 / 39.95",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP / mask mAP",
 					"original_ms": 13,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -14789,8 +14789,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "57.68",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
 					"original_ms": 23.3,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -15034,8 +15034,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "51.08 / 42.82",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP / mask mAP",
 					"original_ms": 13,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -15279,8 +15279,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "56.38",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP",
 					"original_ms": 11.8,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -15671,8 +15671,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "54.76 / 46.00",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP / mask mAP",
 					"original_ms": 15.3,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -15867,8 +15867,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "61.62",
+					"accuracy_metric": "COCO val2017, every 20th image, box mAP",
 					"original_ms": 25.5,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -16063,8 +16063,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "56.88 / 48.07",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP / mask mAP",
 					"original_ms": 18.7,
 					"original_size": "800x1344",
 					"original_note": null,
@@ -16161,8 +16161,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "57.55 / 49.35",
+					"accuracy_metric": "COCO val2017, every 10th image, box mAP / mask mAP",
 					"original_ms": 25.6,
 					"original_size": "800x1344",
 					"original_note": null,
