@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "ff3f23875",
+		"commit": "8dc9de0d4",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -4010,16 +4010,13 @@
 					"doc": "/models/prompt_depth_anything",
 					"family": "prompt_depth_anything",
 					"mem": {
-						"original": {
-							"alloc": 781,
-							"reserved": 1112
-						},
+						"original": null,
 						"portable": {
-							"alloc": 363,
-							"reserved": 442
+							"alloc": 341,
+							"reserved": 402
 						},
 						"kernels": {
-							"alloc": 297,
+							"alloc": 282,
 							"reserved": 384
 						}
 					},
@@ -4029,12 +4026,12 @@
 					"original_ms": null,
 					"original_size": null,
 					"original_note": null,
-					"portable_ms": 18.4,
-					"kernels_ms": 11.4,
-					"speedup": 1.6,
+					"portable_ms": 16.3,
+					"kernels_ms": 10.9,
+					"speedup": 1.5,
 					"speedup_vs": "portable",
 					"year": 2024,
-					"peak_mib": 297,
+					"peak_mib": 282,
 					"compile": {
 						"input": "756x1008",
 						"ms": 16.306,
@@ -4790,6 +4787,52 @@
 					}
 				},
 				{
+					"id": "prompt-depth-anything-l",
+					"doc": "/models/prompt_depth_anything",
+					"family": "prompt_depth_anything",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 1256,
+							"reserved": 1388
+						},
+						"kernels": {
+							"alloc": 1133,
+							"reserved": 1288
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0208 / 0.9883",
+					"accuracy_metric": "NYUv2 test (every 4th: 164 images) with a 192x256 depth prompt, AbsRel / delta1 (metric)",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 110.4,
+					"kernels_ms": 61.4,
+					"speedup": 1.8,
+					"speedup_vs": "portable",
+					"year": 2024,
+					"peak_mib": 1133,
+					"compile": {
+						"input": "756x1008",
+						"ms": 116.603,
+						"fails": null,
+						"part": "",
+						"prep_s": 21.16,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "756x1008",
+						"ms": 75.282,
+						"fails": null,
+						"part": "",
+						"prep_s": 52.5,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "unik3d-vitl",
 					"doc": "/models/unik3d",
 					"family": "unik3d",
@@ -4937,50 +4980,93 @@
 					}
 				},
 				{
-					"id": "prompt-depth-anything-l",
-					"doc": "/models/prompt_depth_anything",
-					"family": "prompt_depth_anything",
+					"id": "video-depth-anything-s",
+					"doc": "/models/video_depth_anything",
+					"family": "video_depth_anything",
 					"mem": {
-						"original": {
-							"alloc": 3446,
-							"reserved": 3810
-						},
+						"original": null,
 						"portable": {
-							"alloc": 1318,
-							"reserved": 1488
+							"alloc": 1207,
+							"reserved": 1386
 						},
 						"kernels": {
-							"alloc": 1179,
-							"reserved": 1348
+							"alloc": 1242,
+							"reserved": 1430
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "0.0208 / 0.9883",
-					"accuracy_metric": "NYUv2 test (every 4th: 164 images) with a 192x256 depth prompt, AbsRel / delta1 (metric)",
+					"accuracy": "0.0549 / 0.9802",
+					"accuracy_metric": "TUM RGB-D video (3 sequences, first 110 frames each), AbsRel / delta1",
 					"original_ms": null,
 					"original_size": null,
 					"original_note": null,
-					"portable_ms": 124.8,
-					"kernels_ms": 69.3,
-					"speedup": 1.8,
+					"portable_ms": 164.7,
+					"kernels_ms": 65.5,
+					"speedup": 2.5,
 					"speedup_vs": "portable",
-					"year": 2024,
-					"peak_mib": 1179,
+					"year": 2025,
+					"peak_mib": 1242,
 					"compile": {
-						"input": "756x1008",
-						"ms": 116.603,
+						"input": "480x640",
+						"ms": 100.477,
 						"fails": null,
 						"part": "",
-						"prep_s": 21.16,
+						"prep_s": 34.807,
 						"standalone": false,
 						"dtype": null
 					},
 					"tensorrt": {
-						"input": "756x1008",
-						"ms": 75.282,
+						"input": "480x640",
+						"ms": 60.308,
 						"fails": null,
 						"part": "",
-						"prep_s": 52.5,
+						"prep_s": 103.10000000000001,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "video-depth-anything-metric-s",
+					"doc": "/models/video_depth_anything",
+					"family": "video_depth_anything",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 1207,
+							"reserved": 1386
+						},
+						"kernels": {
+							"alloc": 1242,
+							"reserved": 1430
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0785 / 0.9769",
+					"accuracy_metric": "TUM RGB-D video (3 sequences, first 110 frames each), AbsRel / delta1",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 164.7,
+					"kernels_ms": 65.5,
+					"speedup": 2.5,
+					"speedup_vs": "portable",
+					"year": 2025,
+					"peak_mib": 1242,
+					"compile": {
+						"input": "480x640",
+						"ms": 100.683,
+						"fails": null,
+						"part": "",
+						"prep_s": 32.543,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "480x640",
+						"ms": 60.199,
+						"fails": null,
+						"part": "",
+						"prep_s": 82.1,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -5084,6 +5170,55 @@
 					}
 				},
 				{
+					"id": "metric3d-vit-large",
+					"doc": "/models/metric3d",
+					"family": "metric3d",
+					"mem": {
+						"original": {
+							"alloc": 3275,
+							"reserved": 3350
+						},
+						"portable": {
+							"alloc": 1218,
+							"reserved": 1294
+						},
+						"kernels": {
+							"alloc": 1453,
+							"reserved": 1526
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.0546",
+					"accuracy_metric": "NYUv2 AbsRel (scale+shift aligned)",
+					"original_ms": 438.5,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 183,
+					"kernels_ms": 148.2,
+					"speedup": 3,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 1453,
+					"compile": {
+						"input": "994x1482",
+						"ms": 148.517,
+						"fails": null,
+						"part": "",
+						"prep_s": 54.739,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "994x1482",
+						"ms": 91.417,
+						"fails": null,
+						"part": "",
+						"prep_s": 96.6,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "moge-3-vitl",
 					"doc": "/models/moge",
 					"family": "moge",
@@ -5130,55 +5265,6 @@
 						"prep_s": null,
 						"standalone": true,
 						"dtype": "float32"
-					}
-				},
-				{
-					"id": "metric3d-vit-large",
-					"doc": "/models/metric3d",
-					"family": "metric3d",
-					"mem": {
-						"original": {
-							"alloc": 3275,
-							"reserved": 3350
-						},
-						"portable": {
-							"alloc": 1239,
-							"reserved": 1436
-						},
-						"kernels": {
-							"alloc": 1464,
-							"reserved": 1568
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "0.0546",
-					"accuracy_metric": "NYUv2 AbsRel (scale+shift aligned)",
-					"original_ms": 438.5,
-					"original_size": "994x1482",
-					"original_note": null,
-					"portable_ms": 186.7,
-					"kernels_ms": 151.4,
-					"speedup": 2.9,
-					"speedup_vs": "original",
-					"year": 2024,
-					"peak_mib": 1464,
-					"compile": {
-						"input": "994x1482",
-						"ms": 148.517,
-						"fails": null,
-						"part": "",
-						"prep_s": 54.739,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "994x1482",
-						"ms": 91.417,
-						"fails": null,
-						"part": "",
-						"prep_s": 96.6,
-						"standalone": false,
-						"dtype": "float16"
 					}
 				},
 				{
@@ -5471,104 +5557,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 198.5,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "video-depth-anything-s",
-					"doc": "/models/video_depth_anything",
-					"family": "video_depth_anything",
-					"mem": {
-						"original": {
-							"alloc": 8263,
-							"reserved": 11890
-						},
-						"portable": {
-							"alloc": 1962,
-							"reserved": 2204
-						},
-						"kernels": {
-							"alloc": 1967,
-							"reserved": 2226
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "0.0549 / 0.9802",
-					"accuracy_metric": "TUM RGB-D video (3 sequences, first 110 frames each), AbsRel / delta1",
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": 201.8,
-					"kernels_ms": 199.7,
-					"speedup": 1,
-					"speedup_vs": "portable",
-					"year": 2025,
-					"peak_mib": 1967,
-					"compile": {
-						"input": "480x640",
-						"ms": 100.477,
-						"fails": null,
-						"part": "",
-						"prep_s": 34.807,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "480x640",
-						"ms": 60.308,
-						"fails": null,
-						"part": "",
-						"prep_s": 103.10000000000001,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "video-depth-anything-metric-s",
-					"doc": "/models/video_depth_anything",
-					"family": "video_depth_anything",
-					"mem": {
-						"original": {
-							"alloc": 8264,
-							"reserved": 11916
-						},
-						"portable": {
-							"alloc": 1962,
-							"reserved": 2224
-						},
-						"kernels": {
-							"alloc": 1967,
-							"reserved": 2226
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "0.0785 / 0.9769",
-					"accuracy_metric": "TUM RGB-D video (3 sequences, first 110 frames each), AbsRel / delta1",
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": 201.6,
-					"kernels_ms": 200,
-					"speedup": 1,
-					"speedup_vs": "portable",
-					"year": 2025,
-					"peak_mib": 1967,
-					"compile": {
-						"input": "480x640",
-						"ms": 100.683,
-						"fails": null,
-						"part": "",
-						"prep_s": 32.543,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "480x640",
-						"ms": 60.199,
-						"fails": null,
-						"part": "",
-						"prep_s": 82.1,
 						"standalone": false,
 						"dtype": "float16"
 					}
