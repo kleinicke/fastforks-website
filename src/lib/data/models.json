@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "0ee131346",
+		"commit": "36150eb7f",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -24749,6 +24749,52 @@
 					}
 				},
 				{
+					"id": "memfof-sintel",
+					"doc": "/models/memfof",
+					"family": "memfof",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 14156,
+							"reserved": 14418
+						},
+						"kernels": {
+							"alloc": 3805,
+							"reserved": 4018
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "2.977 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": "1080x1920",
+					"original_note": "OOM",
+					"portable_ms": 2176.7,
+					"kernels_ms": 1540.6,
+					"speedup": 1.4,
+					"speedup_vs": "portable",
+					"year": 2025,
+					"peak_mib": 3805,
+					"compile": {
+						"input": "375x1242",
+						"ms": 257.76,
+						"fails": null,
+						"part": "",
+						"prep_s": 45.004,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 1334.239,
+						"fails": null,
+						"part": "ResNet encoders with eager correlation, flow update and upsampling",
+						"prep_s": 31.606,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "memfof-kitti",
 					"doc": "/models/memfof",
 					"family": "memfof",
@@ -24790,52 +24836,6 @@
 						"fails": null,
 						"part": "ResNet encoders with eager correlation, flow update and upsampling",
 						"prep_s": 32.018,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "memfof-sintel",
-					"doc": "/models/memfof",
-					"family": "memfof",
-					"mem": {
-						"original": null,
-						"portable": {
-							"alloc": 14515,
-							"reserved": 14918
-						},
-						"kernels": {
-							"alloc": 3805,
-							"reserved": 4038
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "2.977 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": "1080x1920",
-					"original_note": "OOM",
-					"portable_ms": 2202.6,
-					"kernels_ms": 1565.4,
-					"speedup": 1.4,
-					"speedup_vs": "portable",
-					"year": 2025,
-					"peak_mib": 3805,
-					"compile": {
-						"input": "375x1242",
-						"ms": 257.76,
-						"fails": null,
-						"part": "",
-						"prep_s": 45.004,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 1334.239,
-						"fails": null,
-						"part": "ResNet encoders with eager correlation, flow update and upsampling",
-						"prep_s": 31.606,
 						"standalone": true,
 						"dtype": "float32"
 					}
