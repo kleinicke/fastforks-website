@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "51462de0c",
+		"commit": "ea5b51747",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -16348,12 +16348,12 @@
 							"reserved": 2716
 						},
 						"portable": {
-							"alloc": 1404,
-							"reserved": 1468
+							"alloc": 987,
+							"reserved": 1106
 						},
 						"kernels": {
-							"alloc": 1034,
-							"reserved": 1188
+							"alloc": 987,
+							"reserved": 1106
 						}
 					},
 					"commercial": "yes",
@@ -16362,12 +16362,12 @@
 					"original_ms": 198.9,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 137.8,
+					"portable_ms": 110.1,
 					"kernels_ms": 86.9,
 					"speedup": 2.3,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 1034,
+					"peak_mib": 987,
 					"compile": {
 						"input": "800x1344",
 						"ms": 110.941,
@@ -16397,12 +16397,12 @@
 							"reserved": 2716
 						},
 						"portable": {
-							"alloc": 1405,
-							"reserved": 1470
+							"alloc": 989,
+							"reserved": 1108
 						},
 						"kernels": {
-							"alloc": 1035,
-							"reserved": 1188
+							"alloc": 989,
+							"reserved": 1108
 						}
 					},
 					"commercial": "yes",
@@ -16411,12 +16411,12 @@
 					"original_ms": 202,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 138.2,
+					"portable_ms": 109.8,
 					"kernels_ms": 87.2,
 					"speedup": 2.3,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1035,
+					"peak_mib": 989,
 					"compile": {
 						"input": "800x1344",
 						"ms": 110.975,
@@ -16446,12 +16446,12 @@
 							"reserved": 3094
 						},
 						"portable": {
-							"alloc": 1525,
-							"reserved": 1624
+							"alloc": 1105,
+							"reserved": 1322
 						},
 						"kernels": {
-							"alloc": 1156,
-							"reserved": 1364
+							"alloc": 1105,
+							"reserved": 1322
 						}
 					},
 					"commercial": "yes",
@@ -16460,12 +16460,12 @@
 					"original_ms": 229.8,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 160.2,
-					"kernels_ms": 109.1,
+					"portable_ms": 132,
+					"kernels_ms": 109.2,
 					"speedup": 2.1,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 1156,
+					"peak_mib": 1105,
 					"compile": {
 						"input": "800x1344",
 						"ms": 131.028,
@@ -16495,12 +16495,12 @@
 							"reserved": 3094
 						},
 						"portable": {
-							"alloc": 1525,
-							"reserved": 1624
+							"alloc": 1107,
+							"reserved": 1324
 						},
 						"kernels": {
-							"alloc": 1157,
-							"reserved": 1366
+							"alloc": 1107,
+							"reserved": 1324
 						}
 					},
 					"commercial": "yes",
@@ -16509,12 +16509,12 @@
 					"original_ms": 232.5,
 					"original_size": "800x1344",
 					"original_note": null,
-					"portable_ms": 160.2,
-					"kernels_ms": 109.5,
+					"portable_ms": 132.1,
+					"kernels_ms": 109.6,
 					"speedup": 2.1,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1157,
+					"peak_mib": 1107,
 					"compile": {
 						"input": "800x1344",
 						"ms": 132.405,
