@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "374541c1b",
+		"commit": "78a59767f",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -19216,8 +19216,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "33.20",
+					"accuracy_metric": "ImageNet-1k val, kNN top-1 % (k = 20, 10000 labelled / 5000 test images)",
 					"original_ms": 6.7,
 					"original_size": "224x224",
 					"original_note": null,
@@ -23873,7 +23873,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "10.778 †",
+					"accuracy": "10.780 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 1034.8,
 					"original_size": "1080x1920",
@@ -24069,7 +24069,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "0.992 †",
+					"accuracy": "0.993 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 1532.7,
 					"original_size": "1080x1920",
@@ -24118,7 +24118,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "0.695 †",
+					"accuracy": "0.696 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 1533.3,
 					"original_size": "1080x1920",
@@ -24559,7 +24559,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "1.315 ?",
+					"accuracy": "1.314 ?",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 2187.5,
 					"original_size": "1080x1920",
@@ -24657,7 +24657,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "4.917",
+					"accuracy": "4.915",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": 2175.1,
 					"original_size": "1080x1920",
@@ -24752,7 +24752,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "2.977 †",
+					"accuracy": "2.978 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": null,
 					"original_size": "1080x1920",
@@ -24844,7 +24844,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "6.884",
+					"accuracy": "7.005",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": null,
 					"original_size": "1080x1920",
@@ -24890,7 +24890,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "10.952",
+					"accuracy": "11.031",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": null,
 					"original_size": "1080x1920",
@@ -24936,7 +24936,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "4.657 †",
+					"accuracy": "3.978 †",
 					"accuracy_metric": "KITTI 2015 train EPE (px)",
 					"original_ms": null,
 					"original_size": "1080x1920",
