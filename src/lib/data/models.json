@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "8d0616799",
+		"commit": "a74154de8",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -27355,12 +27355,12 @@
 							"reserved": 656
 						},
 						"portable": {
-							"alloc": 333,
-							"reserved": 394
+							"alloc": 200,
+							"reserved": 234
 						},
 						"kernels": {
-							"alloc": 333,
-							"reserved": 394
+							"alloc": 200,
+							"reserved": 234
 						}
 					},
 					"commercial": "yes",
@@ -27369,12 +27369,12 @@
 					"original_ms": 128.2,
 					"original_size": "512x512",
 					"original_note": null,
-					"portable_ms": 97,
-					"kernels_ms": 80.2,
+					"portable_ms": 97.2,
+					"kernels_ms": 81.4,
 					"speedup": 1.6,
 					"speedup_vs": "original",
 					"year": 2021,
-					"peak_mib": 333,
+					"peak_mib": 200,
 					"compile": {
 						"input": "512x512",
 						"ms": 85.206,
@@ -27390,6 +27390,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 40.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "realesrgan-x4plus-anime-6b",
+					"doc": "/models/realesrgan",
+					"family": "realesrgan",
+					"mem": {
+						"original": {
+							"alloc": 2243,
+							"reserved": 2472
+						},
+						"portable": {
+							"alloc": 269,
+							"reserved": 330
+						},
+						"kernels": {
+							"alloc": 301,
+							"reserved": 350
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "25.66 / 0.7356",
+					"accuracy_metric": "DIV2K validation (100 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
+					"original_ms": 205.1,
+					"original_size": "512x512",
+					"original_note": null,
+					"portable_ms": 156.3,
+					"kernels_ms": 129.4,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 301,
+					"compile": {
+						"input": "512x512",
+						"ms": 114.101,
+						"fails": null,
+						"part": "",
+						"prep_s": 10.025,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "512x512",
+						"ms": 83.062,
+						"fails": null,
+						"part": "",
+						"prep_s": 36.699999999999996,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -27439,55 +27488,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 26.2,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "realesrgan-x4plus-anime-6b",
-					"doc": "/models/realesrgan",
-					"family": "realesrgan",
-					"mem": {
-						"original": {
-							"alloc": 2243,
-							"reserved": 2472
-						},
-						"portable": {
-							"alloc": 1197,
-							"reserved": 1430
-						},
-						"kernels": {
-							"alloc": 1197,
-							"reserved": 1410
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "25.66 / 0.7356",
-					"accuracy_metric": "DIV2K validation (100 images), bicubic x4 LR -> HR, PSNR / SSIM (Y)",
-					"original_ms": 205.1,
-					"original_size": "512x512",
-					"original_note": null,
-					"portable_ms": 154.9,
-					"kernels_ms": 131.8,
-					"speedup": 1.6,
-					"speedup_vs": "original",
-					"year": 2021,
-					"peak_mib": 1197,
-					"compile": {
-						"input": "512x512",
-						"ms": 114.101,
-						"fails": null,
-						"part": "",
-						"prep_s": 10.025,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "512x512",
-						"ms": 83.062,
-						"fails": null,
-						"part": "",
-						"prep_s": 36.699999999999996,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -27702,8 +27702,8 @@
 							"reserved": 354
 						},
 						"kernels": {
-							"alloc": 1220,
-							"reserved": 1434
+							"alloc": 324,
+							"reserved": 374
 						}
 					},
 					"commercial": "yes",
@@ -27713,11 +27713,11 @@
 					"original_size": "512x512",
 					"original_note": null,
 					"portable_ms": 472.8,
-					"kernels_ms": 402.7,
+					"kernels_ms": 389.7,
 					"speedup": 1.6,
 					"speedup_vs": "original",
 					"year": 2021,
-					"peak_mib": 1220,
+					"peak_mib": 324,
 					"compile": {
 						"input": "512x512",
 						"ms": 354.201,
