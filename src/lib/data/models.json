@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "adfc5994a",
+		"commit": "3e0f1d870",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -2597,6 +2597,55 @@
 					}
 				},
 				{
+					"id": "igev-plusplus-eth3d",
+					"doc": "/models/igev_plusplus",
+					"family": "igev_plusplus",
+					"mem": {
+						"original": {
+							"alloc": 2891,
+							"reserved": 3108
+						},
+						"portable": {
+							"alloc": 1583,
+							"reserved": 1696
+						},
+						"kernels": {
+							"alloc": 970,
+							"reserved": 1154
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "0.50 †",
+					"accuracy_metric": "ETH3D bad > 1 px (%)",
+					"original_ms": 1277.9,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 1079.4,
+					"kernels_ms": 393.5,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 970,
+					"compile": {
+						"input": "994x1482",
+						"ms": 715.553,
+						"fails": null,
+						"part": "",
+						"prep_s": 159.011,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "994x1482",
+						"ms": 494.396,
+						"fails": null,
+						"part": "",
+						"prep_s": 425.29999999999995,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "igev-plusplus-middlebury",
 					"doc": "/models/igev_plusplus",
 					"family": "igev_plusplus",
@@ -2610,8 +2659,8 @@
 							"reserved": 1696
 						},
 						"kernels": {
-							"alloc": 1272,
-							"reserved": 1494
+							"alloc": 970,
+							"reserved": 1154
 						}
 					},
 					"commercial": "yes",
@@ -2621,11 +2670,11 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 1080,
-					"kernels_ms": 393.4,
+					"kernels_ms": 394.6,
 					"speedup": 3.2,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1272,
+					"peak_mib": 970,
 					"compile": {
 						"input": "994x1482",
 						"ms": 718.386,
@@ -2646,6 +2695,55 @@
 					}
 				},
 				{
+					"id": "igev-plusplus-sceneflow",
+					"doc": "/models/igev_plusplus",
+					"family": "igev_plusplus",
+					"mem": {
+						"original": {
+							"alloc": 2891,
+							"reserved": 3108
+						},
+						"portable": {
+							"alloc": 1583,
+							"reserved": 1696
+						},
+						"kernels": {
+							"alloc": 970,
+							"reserved": 1154
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "4.66",
+					"accuracy_metric": "ETH3D bad > 1 px (%)",
+					"original_ms": 1277.9,
+					"original_size": "994x1482",
+					"original_note": null,
+					"portable_ms": 1079.4,
+					"kernels_ms": 395.2,
+					"speedup": 3.2,
+					"speedup_vs": "original",
+					"year": 2024,
+					"peak_mib": 970,
+					"compile": {
+						"input": "994x1482",
+						"ms": 718.208,
+						"fails": null,
+						"part": "",
+						"prep_s": 157.846,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "994x1482",
+						"ms": 494.59,
+						"fails": null,
+						"part": "",
+						"prep_s": 425.5,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
 					"id": "igev-plusplus-kitti15",
 					"doc": "/models/igev_plusplus",
 					"family": "igev_plusplus",
@@ -2659,8 +2757,8 @@
 							"reserved": 1696
 						},
 						"kernels": {
-							"alloc": 1272,
-							"reserved": 1494
+							"alloc": 970,
+							"reserved": 1154
 						}
 					},
 					"commercial": "yes",
@@ -2670,11 +2768,11 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 1080.4,
-					"kernels_ms": 393.9,
+					"kernels_ms": 395.2,
 					"speedup": 3.2,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1272,
+					"peak_mib": 970,
 					"compile": {
 						"input": "994x1482",
 						"ms": 718.44,
@@ -2708,8 +2806,8 @@
 							"reserved": 1696
 						},
 						"kernels": {
-							"alloc": 1272,
-							"reserved": 1514
+							"alloc": 970,
+							"reserved": 1154
 						}
 					},
 					"commercial": "yes",
@@ -2719,11 +2817,11 @@
 					"original_size": "994x1482",
 					"original_note": null,
 					"portable_ms": 1080.1,
-					"kernels_ms": 394.3,
+					"kernels_ms": 395.3,
 					"speedup": 3.2,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 1272,
+					"peak_mib": 970,
 					"compile": {
 						"input": "994x1482",
 						"ms": 718.358,
@@ -2739,55 +2837,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 422.20000000000005,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "igev-plusplus-sceneflow",
-					"doc": "/models/igev_plusplus",
-					"family": "igev_plusplus",
-					"mem": {
-						"original": {
-							"alloc": 2891,
-							"reserved": 3108
-						},
-						"portable": {
-							"alloc": 1583,
-							"reserved": 1696
-						},
-						"kernels": {
-							"alloc": 1272,
-							"reserved": 1514
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "4.66",
-					"accuracy_metric": "ETH3D bad > 1 px (%)",
-					"original_ms": 1277.9,
-					"original_size": "994x1482",
-					"original_note": null,
-					"portable_ms": 1079.4,
-					"kernels_ms": 394.8,
-					"speedup": 3.2,
-					"speedup_vs": "original",
-					"year": 2024,
-					"peak_mib": 1272,
-					"compile": {
-						"input": "994x1482",
-						"ms": 718.208,
-						"fails": null,
-						"part": "",
-						"prep_s": 157.846,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "994x1482",
-						"ms": 494.59,
-						"fails": null,
-						"part": "",
-						"prep_s": 425.5,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -2935,55 +2984,6 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 684.9000000000001,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
-					"id": "igev-plusplus-eth3d",
-					"doc": "/models/igev_plusplus",
-					"family": "igev_plusplus",
-					"mem": {
-						"original": {
-							"alloc": 2891,
-							"reserved": 3108
-						},
-						"portable": {
-							"alloc": 1583,
-							"reserved": 1696
-						},
-						"kernels": {
-							"alloc": 1272,
-							"reserved": 1514
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "0.50 †",
-					"accuracy_metric": "ETH3D bad > 1 px (%)",
-					"original_ms": 1277.9,
-					"original_size": "994x1482",
-					"original_note": null,
-					"portable_ms": 1079.4,
-					"kernels_ms": 427,
-					"speedup": 3,
-					"speedup_vs": "original",
-					"year": 2024,
-					"peak_mib": 1272,
-					"compile": {
-						"input": "994x1482",
-						"ms": 715.553,
-						"fails": null,
-						"part": "",
-						"prep_s": 159.011,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "994x1482",
-						"ms": 494.396,
-						"fails": null,
-						"part": "",
-						"prep_s": 425.29999999999995,
 						"standalone": false,
 						"dtype": "float16"
 					}
