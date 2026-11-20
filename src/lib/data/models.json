@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "cb6c4aae6",
+		"commit": "4e52f99fe",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -12932,8 +12932,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "42.89 / 46.48 / 36.60",
-					"accuracy_metric": "BSDS500 test (first 75 images), boundary ODS / OIS / AP %",
+					"accuracy": null,
+					"accuracy_metric": null,
 					"original_ms": 30.4,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -24995,8 +24995,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "26.2 / 42.2 / 57.5",
-					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
+					"accuracy": "26.5 / 42.8 / 59.0",
+					"accuracy_metric": "MegaDepth-1500, every 5th pair, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 8.9,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -25044,8 +25044,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "39.7 / 57.5 / 72.8",
-					"accuracy_metric": "MegaDepth-1500, relative pose AUC@5 / @10 / @20 degrees",
+					"accuracy": "41.2 / 58.4 / 72.0",
+					"accuracy_metric": "MegaDepth-1500, every 5th pair, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 23.6,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -25238,8 +25238,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "23.1 / 41.6 / 58.0",
+					"accuracy_metric": "ScanNet-1500 indoor pairs at 480 x 640, relative pose AUC@5 / @10 / @20 degrees",
 					"original_ms": 241.6,
 					"original_size": "768x1024",
 					"original_note": null,
@@ -25284,7 +25284,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "54.8 / 71.4 / 83.2",
+					"accuracy": "56.0 / 71.6 / 83.2",
 					"accuracy_metric": "MegaDepth-1500, 300 pairs at 768 x 1024, pose AUC@5 / @10 / @20",
 					"original_ms": null,
 					"original_size": null,
@@ -25330,7 +25330,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "53.0 / 70.2 / 82.1",
+					"accuracy": "54.9 / 71.8 / 84.0",
 					"accuracy_metric": "MegaDepth-1500, 300 pairs at 768 x 1024, pose AUC@5 / @10 / @20",
 					"original_ms": null,
 					"original_size": null,
@@ -25522,7 +25522,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "55.7 / 72.5 / 84.4",
+					"accuracy": "54.5 / 70.4 / 83.1",
 					"accuracy_metric": "MegaDepth-1500, 300 pairs at 768 x 1024, pose AUC@5 / @10 / @20",
 					"original_ms": null,
 					"original_size": null,
@@ -25571,7 +25571,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "58.1 / 73.5 / 84.2",
+					"accuracy": "57.2 / 73.8 / 84.8",
 					"accuracy_metric": "MegaDepth-1500, 300 pairs at 768 x 1024, pose AUC@5 / @10 / @20",
 					"original_ms": 1036.3,
 					"original_size": "768x1024",
@@ -25617,7 +25617,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "57.1 / 72.9 / 83.8",
+					"accuracy": "59.9 / 76.0 / 86.2",
 					"accuracy_metric": "MegaDepth-1500, 300 pairs at 768 x 1024, pose AUC@5 / @10 / @20",
 					"original_ms": null,
 					"original_size": null,
@@ -25663,7 +25663,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "56.8 / 72.6 / 84.0",
+					"accuracy": "56.9 / 73.0 / 83.9",
 					"accuracy_metric": "MegaDepth-1500, 300 pairs at 768 x 1024, pose AUC@5 / @10 / @20",
 					"original_ms": null,
 					"original_size": null,
@@ -25712,8 +25712,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "58.8 / 73.7 / 84.3",
+					"accuracy_metric": "MegaDepth-1500, 300 pairs at 768 x 1024, pose AUC@5 / @10 / @20",
 					"original_ms": 665.5,
 					"original_size": "768x1024",
 					"original_note": null,
