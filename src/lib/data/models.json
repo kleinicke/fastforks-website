@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "d2b5932f4",
+		"commit": "d8ee88b63",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -24113,55 +24113,6 @@
 					}
 				},
 				{
-					"id": "memfof-kitti",
-					"doc": "/models/memfof",
-					"family": "memfof",
-					"mem": {
-						"original": {
-							"alloc": 1968,
-							"reserved": 2276
-						},
-						"portable": {
-							"alloc": 1619,
-							"reserved": 1856
-						},
-						"kernels": {
-							"alloc": 786,
-							"reserved": 916
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "15.577 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": null,
-					"original_size": null,
-					"original_note": null,
-					"portable_ms": 385.6,
-					"kernels_ms": 308.8,
-					"speedup": 1.2,
-					"speedup_vs": "portable",
-					"year": 2025,
-					"peak_mib": 786,
-					"compile": {
-						"input": "375x1242",
-						"ms": 258.449,
-						"fails": null,
-						"part": "",
-						"prep_s": 48.727,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 1334.984,
-						"fails": null,
-						"part": "ResNet encoders with eager correlation, flow update and upsampling",
-						"prep_s": 32.018,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
 					"id": "memfof-spring",
 					"doc": "/models/memfof",
 					"family": "memfof",
@@ -24750,18 +24701,64 @@
 					}
 				},
 				{
+					"id": "memfof-kitti",
+					"doc": "/models/memfof",
+					"family": "memfof",
+					"mem": {
+						"original": null,
+						"portable": {
+							"alloc": 14515,
+							"reserved": 14918
+						},
+						"kernels": {
+							"alloc": 3805,
+							"reserved": 4038
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "15.577 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": null,
+					"original_size": null,
+					"original_note": null,
+					"portable_ms": 2202.3,
+					"kernels_ms": 1565.1,
+					"speedup": 1.4,
+					"speedup_vs": "portable",
+					"year": 2025,
+					"peak_mib": 3805,
+					"compile": {
+						"input": "375x1242",
+						"ms": 258.449,
+						"fails": null,
+						"part": "",
+						"prep_s": 48.727,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 1334.984,
+						"fails": null,
+						"part": "ResNet encoders with eager correlation, flow update and upsampling",
+						"prep_s": 32.018,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "memfof-sintel",
 					"doc": "/models/memfof",
 					"family": "memfof",
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 14830,
-							"reserved": 15258
+							"alloc": 14515,
+							"reserved": 14918
 						},
 						"kernels": {
-							"alloc": 3982,
-							"reserved": 4258
+							"alloc": 3805,
+							"reserved": 4038
 						}
 					},
 					"commercial": "yes",
@@ -24770,12 +24767,12 @@
 					"original_ms": null,
 					"original_size": "1080x1920",
 					"original_note": "OOM",
-					"portable_ms": 2196.7,
-					"kernels_ms": 1554.9,
+					"portable_ms": 2202.6,
+					"kernels_ms": 1565.4,
 					"speedup": 1.4,
 					"speedup_vs": "portable",
 					"year": 2025,
-					"peak_mib": 3982,
+					"peak_mib": 3805,
 					"compile": {
 						"input": "375x1242",
 						"ms": 257.76,
