@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "23072c1ae",
+		"commit": "ff3f23875",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -26437,13 +26437,13 @@
 					"label": "Fastest",
 					"id": "rife-4.25-lite",
 					"doc": "/models/rife",
-					"note": "18.3 ms"
+					"note": "19.4 ms"
 				},
 				{
 					"label": "Fastest commercially usable",
 					"id": "rife-4.25-lite",
 					"doc": "/models/rife",
-					"note": "18.3 ms"
+					"note": "19.4 ms"
 				}
 			],
 			"models": [
@@ -26457,12 +26457,12 @@
 							"reserved": 1214
 						},
 						"portable": {
-							"alloc": 754,
-							"reserved": 854
+							"alloc": 551,
+							"reserved": 616
 						},
 						"kernels": {
-							"alloc": 834,
-							"reserved": 896
+							"alloc": 545,
+							"reserved": 596
 						}
 					},
 					"commercial": "yes",
@@ -26472,11 +26472,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 21.1,
-					"kernels_ms": 18.3,
-					"speedup": 1.2,
+					"kernels_ms": 19.4,
+					"speedup": 1.1,
 					"speedup_vs": "original",
 					"year": 2020,
-					"peak_mib": 834,
+					"peak_mib": 545,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 42.282,
@@ -26497,55 +26497,6 @@
 					}
 				},
 				{
-					"id": "rife-4.26",
-					"doc": "/models/rife",
-					"family": "rife",
-					"mem": {
-						"original": {
-							"alloc": 1004,
-							"reserved": 1154
-						},
-						"portable": {
-							"alloc": 570,
-							"reserved": 754
-						},
-						"kernels": {
-							"alloc": 663,
-							"reserved": 776
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "27.24 / 0.8131",
-					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
-					"original_ms": 24.2,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 25,
-					"kernels_ms": 21.4,
-					"speedup": 1.1,
-					"speedup_vs": "original",
-					"year": 2020,
-					"peak_mib": 663,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 44.506,
-						"fails": null,
-						"part": "",
-						"prep_s": 34.854,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1080x1920",
-						"ms": 17.605,
-						"fails": null,
-						"part": "",
-						"prep_s": 54.900000000000006,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "rife-4.25",
 					"doc": "/models/rife",
 					"family": "rife",
@@ -26555,12 +26506,12 @@
 							"reserved": 1154
 						},
 						"portable": {
-							"alloc": 755,
-							"reserved": 894
+							"alloc": 570,
+							"reserved": 616
 						},
 						"kernels": {
-							"alloc": 848,
-							"reserved": 916
+							"alloc": 561,
+							"reserved": 636
 						}
 					},
 					"commercial": "yes",
@@ -26570,11 +26521,11 @@
 					"original_size": "1080x1920",
 					"original_note": null,
 					"portable_ms": 25,
-					"kernels_ms": 21.4,
+					"kernels_ms": 21.9,
 					"speedup": 1.1,
 					"speedup_vs": "original",
 					"year": 2020,
-					"peak_mib": 848,
+					"peak_mib": 561,
 					"compile": {
 						"input": "1080x1920",
 						"ms": 44.864,
@@ -26590,6 +26541,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 56.3,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "rife-4.26",
+					"doc": "/models/rife",
+					"family": "rife",
+					"mem": {
+						"original": {
+							"alloc": 1004,
+							"reserved": 1154
+						},
+						"portable": {
+							"alloc": 570,
+							"reserved": 616
+						},
+						"kernels": {
+							"alloc": 561,
+							"reserved": 636
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "27.24 / 0.8131",
+					"accuracy_metric": "DAVIS 2017 480p, 2 frame triplets per video (180), PSNR / SSIM",
+					"original_ms": 24.2,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 25,
+					"kernels_ms": 22,
+					"speedup": 1.1,
+					"speedup_vs": "original",
+					"year": 2020,
+					"peak_mib": 561,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 44.506,
+						"fails": null,
+						"part": "",
+						"prep_s": 34.854,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1080x1920",
+						"ms": 17.605,
+						"fails": null,
+						"part": "",
+						"prep_s": 54.900000000000006,
 						"standalone": false,
 						"dtype": "float16"
 					}
