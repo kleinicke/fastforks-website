@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "f242648fa",
+		"commit": "cc611e90f",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -4502,8 +4502,8 @@
 							"reserved": 1268
 						},
 						"portable": {
-							"alloc": 1007,
-							"reserved": 1172
+							"alloc": 530,
+							"reserved": 612
 						},
 						"kernels": {
 							"alloc": 932,
@@ -4516,7 +4516,7 @@
 					"original_ms": 82.6,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 61.6,
+					"portable_ms": 58.1,
 					"kernels_ms": 33.3,
 					"speedup": 2.5,
 					"speedup_vs": "original",
@@ -4551,8 +4551,8 @@
 							"reserved": 1596
 						},
 						"portable": {
-							"alloc": 1163,
-							"reserved": 1312
+							"alloc": 681,
+							"reserved": 772
 						},
 						"kernels": {
 							"alloc": 1093,
@@ -4565,7 +4565,7 @@
 					"original_ms": 102.2,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 83.9,
+					"portable_ms": 79.1,
 					"kernels_ms": 40.7,
 					"speedup": 2.5,
 					"speedup_vs": "original",
@@ -5081,8 +5081,8 @@
 							"reserved": 2438
 						},
 						"portable": {
-							"alloc": 1661,
-							"reserved": 1836
+							"alloc": 1130,
+							"reserved": 1272
 						},
 						"kernels": {
 							"alloc": 1498,
@@ -5095,7 +5095,7 @@
 					"original_ms": 170.7,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 144.5,
+					"portable_ms": 140.2,
 					"kernels_ms": 73.4,
 					"speedup": 2.3,
 					"speedup_vs": "original",
@@ -5228,8 +5228,8 @@
 							"reserved": 2630
 						},
 						"portable": {
-							"alloc": 1622,
-							"reserved": 1706
+							"alloc": 1493,
+							"reserved": 1684
 						},
 						"kernels": {
 							"alloc": 1626,
@@ -5242,7 +5242,7 @@
 					"original_ms": 485.6,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 328,
+					"portable_ms": 328.5,
 					"kernels_ms": 149.1,
 					"speedup": 3.3,
 					"speedup_vs": "original",
