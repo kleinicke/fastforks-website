@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "78a59767f",
+		"commit": "a1d55d128",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -10910,8 +10910,8 @@
 						}
 					},
 					"commercial": "no",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "74.96 / 97.85",
+					"accuracy_metric": "ATR mirror test split (200 images), mIoU / aAcc %",
 					"original_ms": null,
 					"original_size": null,
 					"original_note": null,
@@ -11057,8 +11057,8 @@
 						}
 					},
 					"commercial": "no",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "72.55 / 94.08",
+					"accuracy_metric": "LaPa test (2,000 images), common face parts, mIoU / aAcc %",
 					"original_ms": null,
 					"original_size": null,
 					"original_note": null,
@@ -17038,8 +17038,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "0.905 / 0.883 / 0.741",
+					"accuracy_metric": "WIDER FACE val, every 4th image (807), face box AP easy / medium / hard",
 					"original_ms": 75.9,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -17332,8 +17332,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "1.7828",
+					"accuracy_metric": "LaPa test (2,000 images), annotated face boxes, normalized mean error (%)",
 					"original_ms": 187.9,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -17381,8 +17381,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "1.6940",
+					"accuracy_metric": "LaPa test (2,000 images), annotated face boxes, normalized mean error (%)",
 					"original_ms": 237.1,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -17626,8 +17626,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "83.833",
+					"accuracy_metric": "AP-10K validation split 1, annotated animal boxes, paired OKS (%)",
 					"original_ms": 186.3,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -17675,8 +17675,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "80.96 / 4.56",
+					"accuracy_metric": "COCO-WholeBody validation (1,568 images), hand PCK@0.2 % / EPE in px",
 					"original_ms": 192.1,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -17822,8 +17822,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "1.5303",
+					"accuracy_metric": "LaPa test (2,000 images), annotated face boxes, normalized mean error (%)",
 					"original_ms": 198.4,
 					"original_size": "1080x1920",
 					"original_note": null,
@@ -22467,7 +22467,7 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": "25.97 / 0.8687",
+					"accuracy": "26.10 / 0.8694",
 					"accuracy_metric": "RealEstate10K example scenes, 8 context views, RGB PSNR / SSIM",
 					"original_ms": 493.4,
 					"original_size": "480x640",
@@ -22810,7 +22810,7 @@
 						}
 					},
 					"commercial": "no",
-					"accuracy": "23.37 / 0.8645",
+					"accuracy": "23.41 / 0.8649",
 					"accuracy_metric": "RealEstate10K example scenes, 2 context views, RGB PSNR / SSIM",
 					"original_ms": 2520.8,
 					"original_size": "480x640",
@@ -27744,8 +27744,8 @@
 						}
 					},
 					"commercial": "yes",
-					"accuracy": null,
-					"accuracy_metric": null,
+					"accuracy": "36.61 / 0.9457",
+					"accuracy_metric": "DIV2K validation (every second image, 50 images), bicubic x2 LR -> HR, PSNR / SSIM (Y)",
 					"original_ms": 3252.1,
 					"original_size": "512x512",
 					"original_note": null,
