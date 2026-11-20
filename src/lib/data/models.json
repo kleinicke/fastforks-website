@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "1c0ce272c",
+		"commit": "fb2e5c56d",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -10,7 +10,7 @@
 		"tasks": 20,
 		"commercial": 529,
 		"vs_original": {
-			"models": 525,
+			"models": 531,
 			"median": 3.3,
 			"max": 101.2
 		}
@@ -23004,52 +23004,6 @@
 					}
 				},
 				{
-					"id": "gmflow-scale1-mixdata",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8360,
-							"reserved": 8448
-						},
-						"portable": {
-							"alloc": 4496,
-							"reserved": 4642
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "3.697 ?",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 750.1,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 44.5,
-					"kernels_ms": 40.3,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
-					"year": 2021,
-					"peak_mib": 275,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 382.182,
-						"fails": null,
-						"part": "",
-						"prep_s": 29.053,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "1080x1920",
-						"ms": 186.563,
-						"fails": null,
-						"part": "",
-						"prep_s": 67.3,
-						"standalone": false,
-						"dtype": "float16"
-					}
-				},
-				{
 					"id": "recover-mn",
 					"doc": "/models/recover",
 					"family": "recover",
@@ -23736,236 +23690,6 @@
 					}
 				},
 				{
-					"id": "gmflow-scale2-mixdata",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8425,
-							"reserved": 8572
-						},
-						"portable": {
-							"alloc": 6017,
-							"reserved": 6224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "2.389 ?",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 1607.7,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 124,
-					"kernels_ms": 116,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
-					"year": 2021,
-					"peak_mib": 663,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 765.027,
-						"fails": null,
-						"part": "",
-						"prep_s": 46.621,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 212.24,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.635,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-sintel",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8425,
-							"reserved": 8552
-						},
-						"portable": {
-							"alloc": 6017,
-							"reserved": 6224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "1.975 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 1606.7,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 124.2,
-					"kernels_ms": 116,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
-					"year": 2021,
-					"peak_mib": 663,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 764.918,
-						"fails": null,
-						"part": "",
-						"prep_s": 46.605,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 211.724,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 12.68,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-things",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8425,
-							"reserved": 8552
-						},
-						"portable": {
-							"alloc": 6017,
-							"reserved": 6224
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "6.747",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 1598.6,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 124.1,
-					"kernels_ms": 116.4,
-					"speedup": 1.1,
-					"speedup_vs": "portable",
-					"year": 2021,
-					"peak_mib": 663,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 764.88,
-						"fails": null,
-						"part": "",
-						"prep_s": 46.748,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 212.03,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.625,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-regrefine6-sintelft",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8537,
-							"reserved": 8822
-						},
-						"portable": {
-							"alloc": 6080,
-							"reserved": 6250
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "1.154 †",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 2184,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 224.3,
-					"kernels_ms": 214,
-					"speedup": 1,
-					"speedup_vs": "portable",
-					"year": 2022,
-					"peak_mib": 673,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1116.028,
-						"fails": null,
-						"part": "",
-						"prep_s": 58.479,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 350.081,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 14.51,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-regrefine6-mixdata",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8537,
-							"reserved": 8822
-						},
-						"portable": {
-							"alloc": 6080,
-							"reserved": 6250
-						},
-						"kernels": null
-					},
-					"commercial": "yes",
-					"accuracy": "1.315 ?",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 2187.5,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 224.1,
-					"kernels_ms": 214.3,
-					"speedup": 1,
-					"speedup_vs": "portable",
-					"year": 2022,
-					"peak_mib": 673,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1116.187,
-						"fails": null,
-						"part": "",
-						"prep_s": 58.871,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 349.235,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.636000000000001,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
 					"id": "flowseek-t-things",
 					"doc": "/models/flowseek",
 					"family": "flowseek",
@@ -24206,6 +23930,55 @@
 						"fails": null,
 						"part": "",
 						"prep_s": 110.2,
+						"standalone": false,
+						"dtype": "float16"
+					}
+				},
+				{
+					"id": "gmflow-scale1-mixdata",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8360,
+							"reserved": 8448
+						},
+						"portable": {
+							"alloc": 1988,
+							"reserved": 2142
+						},
+						"kernels": {
+							"alloc": 1988,
+							"reserved": 2142
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "3.697 ?",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 750.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 447.5,
+					"kernels_ms": 445.8,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 1988,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 382.182,
+						"fails": null,
+						"part": "",
+						"prep_s": 29.053,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "1080x1920",
+						"ms": 186.563,
+						"fails": null,
+						"part": "",
+						"prep_s": 67.3,
 						"standalone": false,
 						"dtype": "float16"
 					}
@@ -24598,6 +24371,251 @@
 						"fails": null,
 						"part": "full fixed-shape flow network, standalone trace export and build",
 						"prep_s": 99.298,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-mixdata",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8425,
+							"reserved": 8572
+						},
+						"portable": {
+							"alloc": 2995,
+							"reserved": 3184
+						},
+						"kernels": {
+							"alloc": 2995,
+							"reserved": 3204
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "2.389 ?",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1607.7,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 914.9,
+					"kernels_ms": 915.3,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 2995,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 765.027,
+						"fails": null,
+						"part": "",
+						"prep_s": 46.621,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 212.24,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.635,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-sintel",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8425,
+							"reserved": 8552
+						},
+						"portable": {
+							"alloc": 2995,
+							"reserved": 3184
+						},
+						"kernels": {
+							"alloc": 2995,
+							"reserved": 3204
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.975 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1606.7,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 915.1,
+					"kernels_ms": 915.7,
+					"speedup": 1.8,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 2995,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 764.918,
+						"fails": null,
+						"part": "",
+						"prep_s": 46.605,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 211.724,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 12.68,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-things",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8425,
+							"reserved": 8552
+						},
+						"portable": {
+							"alloc": 2995,
+							"reserved": 3184
+						},
+						"kernels": {
+							"alloc": 2995,
+							"reserved": 3204
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "6.747",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 1598.6,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 914.3,
+					"kernels_ms": 915.8,
+					"speedup": 1.7,
+					"speedup_vs": "original",
+					"year": 2021,
+					"peak_mib": 2995,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 764.88,
+						"fails": null,
+						"part": "",
+						"prep_s": 46.748,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 212.03,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.625,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-regrefine6-mixdata",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8537,
+							"reserved": 8822
+						},
+						"portable": {
+							"alloc": 3005,
+							"reserved": 3192
+						},
+						"kernels": {
+							"alloc": 3005,
+							"reserved": 3212
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.315 ?",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 2187.5,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 1382.4,
+					"kernels_ms": 1383.1,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 3005,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1116.187,
+						"fails": null,
+						"part": "",
+						"prep_s": 58.871,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 349.235,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.636000000000001,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
+					"id": "gmflow-scale2-regrefine6-sintelft",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8537,
+							"reserved": 8822
+						},
+						"portable": {
+							"alloc": 3005,
+							"reserved": 3192
+						},
+						"kernels": {
+							"alloc": 3005,
+							"reserved": 3212
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "1.154 †",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 2184,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 1381.4,
+					"kernels_ms": 1383.7,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 3005,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1116.028,
+						"fails": null,
+						"part": "",
+						"prep_s": 58.479,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 350.081,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 14.51,
 						"standalone": true,
 						"dtype": "float32"
 					}
