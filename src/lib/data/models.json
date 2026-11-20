@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "00710af61",
+		"commit": "f27cefa9d",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -22994,8 +22994,8 @@
 							"reserved": 10888
 						},
 						"portable": {
-							"alloc": 5669,
-							"reserved": 5706
+							"alloc": 5601,
+							"reserved": 5646
 						},
 						"kernels": {
 							"alloc": 196,
@@ -23008,7 +23008,7 @@
 					"original_ms": 196.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 144.2,
+					"portable_ms": 140.6,
 					"kernels_ms": 36.5,
 					"speedup": 5.4,
 					"speedup_vs": "original",
@@ -23533,8 +23533,8 @@
 							"reserved": 10928
 						},
 						"portable": {
-							"alloc": 5735,
-							"reserved": 6042
+							"alloc": 5721,
+							"reserved": 5758
 						},
 						"kernels": {
 							"alloc": 332,
@@ -23547,7 +23547,7 @@
 					"original_ms": 479.5,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 291.6,
+					"portable_ms": 283.3,
 					"kernels_ms": 83.4,
 					"speedup": 5.7,
 					"speedup_vs": "original",
@@ -23582,8 +23582,8 @@
 							"reserved": 10928
 						},
 						"portable": {
-							"alloc": 5930,
-							"reserved": 6058
+							"alloc": 5721,
+							"reserved": 5758
 						},
 						"kernels": {
 							"alloc": 332,
@@ -23596,7 +23596,7 @@
 					"original_ms": 480.5,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 291.5,
+					"portable_ms": 283.4,
 					"kernels_ms": 83.5,
 					"speedup": 5.8,
 					"speedup_vs": "original",
@@ -23631,8 +23631,8 @@
 							"reserved": 10928
 						},
 						"portable": {
-							"alloc": 5930,
-							"reserved": 6058
+							"alloc": 5721,
+							"reserved": 5758
 						},
 						"kernels": {
 							"alloc": 332,
@@ -23645,7 +23645,7 @@
 					"original_ms": 479.6,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 291,
+					"portable_ms": 283.9,
 					"kernels_ms": 84.2,
 					"speedup": 5.7,
 					"speedup_vs": "original",
