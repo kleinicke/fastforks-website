@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "d3d1d1108",
+		"commit": "8d0616799",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -1724,8 +1724,8 @@
 							"reserved": 3398
 						},
 						"portable": {
-							"alloc": 3293,
-							"reserved": 3456
+							"alloc": 1609,
+							"reserved": 1794
 						},
 						"kernels": {
 							"alloc": 954,
@@ -1738,7 +1738,7 @@
 					"original_ms": 689.3,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 689,
+					"portable_ms": 652.5,
 					"kernels_ms": 283.9,
 					"speedup": 2.4,
 					"speedup_vs": "original",
@@ -5681,12 +5681,12 @@
 							"reserved": 6732
 						},
 						"portable": {
-							"alloc": 4130,
-							"reserved": 6144
+							"alloc": 3849,
+							"reserved": 5044
 						},
 						"kernels": {
-							"alloc": 4154,
-							"reserved": 6528
+							"alloc": 3873,
+							"reserved": 4566
 						}
 					},
 					"commercial": "no",
@@ -5695,12 +5695,12 @@
 					"original_ms": 875.5,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 571.2,
-					"kernels_ms": 510,
+					"portable_ms": 558.4,
+					"kernels_ms": 512,
 					"speedup": 1.7,
 					"speedup_vs": "original",
 					"year": 2024,
-					"peak_mib": 4154,
+					"peak_mib": 3873,
 					"compile": {
 						"input": "994x1482",
 						"ms": 410.854,
@@ -24072,8 +24072,8 @@
 							"reserved": 5916
 						},
 						"portable": {
-							"alloc": 3553,
-							"reserved": 4076
+							"alloc": 1832,
+							"reserved": 2196
 						},
 						"kernels": {
 							"alloc": 1851,
@@ -24086,7 +24086,7 @@
 					"original_ms": 1532.7,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 790.5,
+					"portable_ms": 741.1,
 					"kernels_ms": 518.5,
 					"speedup": 3,
 					"speedup_vs": "original",
@@ -24121,8 +24121,8 @@
 							"reserved": 5936
 						},
 						"portable": {
-							"alloc": 3553,
-							"reserved": 4196
+							"alloc": 1832,
+							"reserved": 2196
 						},
 						"kernels": {
 							"alloc": 1851,
@@ -24135,7 +24135,7 @@
 					"original_ms": 1533.3,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 790.8,
+					"portable_ms": 741.1,
 					"kernels_ms": 518.6,
 					"speedup": 3,
 					"speedup_vs": "original",
@@ -24651,6 +24651,55 @@
 					}
 				},
 				{
+					"id": "gmflow-scale2-regrefine6-things",
+					"doc": "/models/gmflow",
+					"family": "gmflow",
+					"mem": {
+						"original": {
+							"alloc": 8537,
+							"reserved": 8822
+						},
+						"portable": {
+							"alloc": 3005,
+							"reserved": 3192
+						},
+						"kernels": {
+							"alloc": 3005,
+							"reserved": 3212
+						}
+					},
+					"commercial": "yes",
+					"accuracy": "4.917",
+					"accuracy_metric": "KITTI 2015 train EPE (px)",
+					"original_ms": 2175.1,
+					"original_size": "1080x1920",
+					"original_note": null,
+					"portable_ms": 1381.9,
+					"kernels_ms": 1384,
+					"speedup": 1.6,
+					"speedup_vs": "original",
+					"year": 2022,
+					"peak_mib": 3005,
+					"compile": {
+						"input": "1080x1920",
+						"ms": 1115.96,
+						"fails": null,
+						"part": "",
+						"prep_s": 58.152,
+						"standalone": false,
+						"dtype": null
+					},
+					"tensorrt": {
+						"input": "384x1248",
+						"ms": 350.16,
+						"fails": null,
+						"part": "standalone feature CNN, eager transformer and flow update",
+						"prep_s": 13.66,
+						"standalone": true,
+						"dtype": "float32"
+					}
+				},
+				{
 					"id": "gmflow-scale2-regrefine6-kitti",
 					"doc": "/models/gmflow",
 					"family": "gmflow",
@@ -24695,55 +24744,6 @@
 						"fails": null,
 						"part": "standalone feature CNN, eager transformer and flow update",
 						"prep_s": 13.053,
-						"standalone": true,
-						"dtype": "float32"
-					}
-				},
-				{
-					"id": "gmflow-scale2-regrefine6-things",
-					"doc": "/models/gmflow",
-					"family": "gmflow",
-					"mem": {
-						"original": {
-							"alloc": 8537,
-							"reserved": 8822
-						},
-						"portable": {
-							"alloc": 4036,
-							"reserved": 4696
-						},
-						"kernels": {
-							"alloc": 4036,
-							"reserved": 4696
-						}
-					},
-					"commercial": "yes",
-					"accuracy": "4.917",
-					"accuracy_metric": "KITTI 2015 train EPE (px)",
-					"original_ms": 2175.1,
-					"original_size": "1080x1920",
-					"original_note": null,
-					"portable_ms": 1477.8,
-					"kernels_ms": 1480.6,
-					"speedup": 1.5,
-					"speedup_vs": "original",
-					"year": 2022,
-					"peak_mib": 4036,
-					"compile": {
-						"input": "1080x1920",
-						"ms": 1115.96,
-						"fails": null,
-						"part": "",
-						"prep_s": 58.152,
-						"standalone": false,
-						"dtype": null
-					},
-					"tensorrt": {
-						"input": "384x1248",
-						"ms": 350.16,
-						"fails": null,
-						"part": "standalone feature CNN, eager transformer and flow update",
-						"prep_s": 13.66,
 						"standalone": true,
 						"dtype": "float32"
 					}
@@ -26846,7 +26846,7 @@
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 5872,
+							"alloc": 5394,
 							"reserved": 6518
 						},
 						"kernels": {
@@ -26860,7 +26860,7 @@
 					"original_ms": null,
 					"original_size": "1080x1920",
 					"original_note": "OOM",
-					"portable_ms": 2527.1,
+					"portable_ms": 2527.6,
 					"kernels_ms": 1520,
 					"speedup": 1.7,
 					"speedup_vs": "portable",
@@ -26892,7 +26892,7 @@
 					"mem": {
 						"original": null,
 						"portable": {
-							"alloc": 5872,
+							"alloc": 5394,
 							"reserved": 6518
 						},
 						"kernels": {
@@ -26906,7 +26906,7 @@
 					"original_ms": null,
 					"original_size": "1080x1920",
 					"original_note": "OOM",
-					"portable_ms": 2527.6,
+					"portable_ms": 2527.9,
 					"kernels_ms": 1520.8,
 					"speedup": 1.7,
 					"speedup_vs": "portable",
