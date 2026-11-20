@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "f2e11f09c",
+		"commit": "f242648fa",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -13021,11 +13021,11 @@
 							"reserved": 1002
 						},
 						"portable": {
-							"alloc": 654,
-							"reserved": 722
+							"alloc": 648,
+							"reserved": 702
 						},
 						"kernels": {
-							"alloc": 654,
+							"alloc": 648,
 							"reserved": 702
 						}
 					},
@@ -13035,12 +13035,12 @@
 					"original_ms": 585.1,
 					"original_size": "1080x1920",
 					"original_note": null,
-					"portable_ms": 47.4,
-					"kernels_ms": 36.9,
-					"speedup": 15.9,
+					"portable_ms": 45.2,
+					"kernels_ms": 35,
+					"speedup": 16.7,
 					"speedup_vs": "original",
 					"year": 2023,
-					"peak_mib": 654,
+					"peak_mib": 648,
 					"compile": {
 						"input": "1024x1024",
 						"ms": 11.626,
