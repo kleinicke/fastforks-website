@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "9befbe9ef",
+		"commit": "bd72cf286",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
@@ -3542,7 +3542,7 @@
 					"label": "Most accurate",
 					"id": "unik3d-vitl",
 					"doc": "/models/unik3d",
-					"note": "62.9 ms, error 0.0346"
+					"note": "62.8 ms, error 0.0346"
 				},
 				{
 					"label": "Best trade-off",
@@ -4842,12 +4842,12 @@
 							"reserved": 3570
 						},
 						"portable": {
-							"alloc": 1219,
-							"reserved": 1492
+							"alloc": 1063,
+							"reserved": 1152
 						},
 						"kernels": {
-							"alloc": 1166,
-							"reserved": 1266
+							"alloc": 985,
+							"reserved": 1066
 						}
 					},
 					"commercial": "no",
@@ -4856,12 +4856,12 @@
 					"original_ms": 133.7,
 					"original_size": "994x1482",
 					"original_note": null,
-					"portable_ms": 107.8,
-					"kernels_ms": 62.9,
+					"portable_ms": 106.7,
+					"kernels_ms": 62.8,
 					"speedup": 2.1,
 					"speedup_vs": "original",
 					"year": 2025,
-					"peak_mib": 1166,
+					"peak_mib": 985,
 					"compile": {
 						"input": "994x1482",
 						"ms": 94.404,
