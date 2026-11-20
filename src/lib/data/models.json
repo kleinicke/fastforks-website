@@ -1,7 +1,7 @@
 {
 	"source": {
 		"repo": "https://github.com/kleinicke/fastforks",
-		"commit": "ffe48ed1c",
+		"commit": "746fb4abe",
 		"reference_gpu": "RTX 5060 Ti 16 GB"
 	},
 	"totals": {
