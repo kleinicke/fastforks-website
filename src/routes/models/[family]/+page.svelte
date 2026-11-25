@@ -16,12 +16,15 @@
 	const card = $derived(data.card);
 	const meta = $derived(TASK_META[card.task]);
 
-	// The variant switch: `?variant=<id>`, read in the browser (prerendered pages have no query string at build time).
+	// Read the checkpoint query in the browser because these pages are prerendered.
 	let picked = $state<string | null>(null);
+	const requested = $derived(
+		card.variants.find((v) => v.id === picked || v.ref === picked) ?? card.variants.find((v) => v.name === picked)
+	);
+	const unavailable = $derived(picked?.includes('@') && !requested ? picked : null);
 	// Without a pick: the default checkpoint, but a released one first (upcoming ones are not in the package yet).
 	const variant = $derived(
-		card.variants.find((v) => v.id === picked) ??
-			card.variants.find((v) => v.name === picked) ??
+		requested ??
 			card.variants.find((v) => v.default_tag && v.released) ??
 			card.variants.find((v) => v.released) ??
 			card.variants.find((v) => v.default_tag) ??
@@ -122,10 +125,12 @@
 <DocPage doc={{ title: card.name, description: card.plain }}>
 	{#snippet side()}
 		<a class="back" href="/models?task={card.task}">← All models</a>
-		<p class="eyebrow">On this page</p>
-		<ul class="side-list">
-			{#each SECTIONS as [id, label] (id)}<li><a href="#{id}">{label}</a></li>{/each}
-		</ul>
+		{#if !unavailable}
+			<p class="eyebrow">On this page</p>
+			<ul class="side-list">
+				{#each SECTIONS as [id, label] (id)}<li><a href="#{id}">{label}</a></li>{/each}
+			</ul>
+		{/if}
 		<p class="eyebrow">{meta?.name}</p>
 		<ul class="side-list">
 			<li><a href="/tasks/{card.task}">Task overview</a></li>
@@ -134,6 +139,12 @@
 	{/snippet}
 	{#snippet eyebrow()}<a href="/models?task={card.task}">Models</a> · <a href="/tasks/{card.task}">{meta?.name}</a>{/snippet}
 	{#snippet intro()}
+		{#if unavailable}
+			<p class="banner">Checkpoint <code>{unavailable}</code> is unavailable on this page.</p>
+			<div class="variants">
+				<button type="button" onclick={() => pick(variant.id)}>View {variant.name}</button>
+			</div>
+		{:else}
 		{#if allUpcoming}
 			<p class="banner">
 				<b>Upcoming:</b> not in <code>pip install fastforks</code> yet{RELEASE ? ` (latest release ${RELEASE})` : ''}.
@@ -236,8 +247,10 @@
 		<nav class="toc" aria-label="Sections">
 			{#each SECTIONS as [id, label] (id)}<a href="#{id}">{label}</a>{/each}
 		</nav>
+		{/if}
 	{/snippet}
 
+	{#if !unavailable}
 	<h2 id="use">Use it</h2>
 	<CopyCommand command="pip install fastforks" />
 	{#if !variant.released}
@@ -409,6 +422,7 @@ pose.R, pose.t, pose.inliers  <span class="c"># rotation, unit translation, inli
 
 	<h2 id="example">Example output</h2>
 	<CardExample example={variant.example} task={card.task} />
+	{/if}
 </DocPage>
 
 <style>
