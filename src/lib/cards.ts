@@ -33,6 +33,7 @@ export type ExtraRow =
 			device_mb: number | null;
 			engine_dtype: string | null;
 			part: string;
+			engine_input?: string;
 			standalone?: boolean;
 			setup_s: number | null;
 			date: string | null;
@@ -41,6 +42,13 @@ export type SpeedInput = {
 	input: string;
 	scene: string;
 	standard: boolean;
+	native?: boolean;
+	workload?: {
+		volume_shape?: [number, number, number];
+		spacing_mm?: [number, number, number];
+		frames?: number;
+		queries?: number;
+	};
 	modes: Partial<Record<Mode, SpeedRow>>;
 	oom: Mode[];
 	compile?: ExtraRow;
@@ -144,12 +152,42 @@ export type Variant = {
 	weights: WeightFile[];
 	input_size: string;
 	tested_max: { size: string; alloc_mib: number; reserved_mib: number } | null;
-	speed: { standard: string; inputs: SpeedInput[] };
+	speed: { standard: string; preferred?: string | null; inputs: SpeedInput[] };
 	devices: DeviceRows[];
 	quality: Dataset[];
 	/** One rendered example output (tools/examples.py), or null when none is rendered yet. */
 	example: Example | null;
 };
+
+/** The preferred measured size on a model page, with a fallback for older card data. */
+export function preferredSpeedInput({ speed }: Variant): SpeedInput | undefined {
+	return (
+		speed.inputs.find((s) => s.input === speed.preferred) ?? speed.inputs.find((s) => s.standard) ?? speed.inputs.at(-1)
+	);
+}
+
+/** Describe the source input of a measurement without changing its lookup key. */
+export function speedInputLabel({ input, workload }: SpeedInput): string {
+	if (!workload) return input;
+	const { volume_shape, spacing_mm, frames, queries } = workload;
+	const shape = volume_shape
+		? `${volume_shape.join('×')} voxels`
+		: frames
+			? input.split('x').slice(-2).join('×')
+			: input;
+	const spacing = spacing_mm?.every((value) => value === spacing_mm[0])
+		? `${spacing_mm[0]} mm isotropic source spacing`
+		: spacing_mm && `${spacing_mm.join('×')} mm source spacing`;
+	return [
+		shape,
+		spacing,
+		frames && `${frames} ${frames === 1 ? 'frame' : 'frames'}`,
+		queries && `${queries} ${queries === 1 ? 'query' : 'queries'}`
+	]
+		.filter(Boolean)
+		.join(' · ');
+}
+
 export type Example = {
 	/** The rendered output, or null where the output is text (classification). */
 	image: string | null;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MODES, dt, fasterOriginal, mib, ms, type SpeedInput, type Variant } from '#lib/cards.ts';
+	import { MODES, dt, fasterOriginal, mib, ms, preferredSpeedInput, speedInputLabel, type SpeedInput, type Variant } from '#lib/cards.ts';
 
 	let {
 		variant,
@@ -9,9 +9,9 @@
 	}: { variant: Variant; variants: Variant[]; reference: string; onpick: (id: string) => void } = $props();
 
 	const inputs = $derived(variant.speed.inputs);
-	let picked = $state<string | null>(null);
+	let picked = $state<{ variantId: string; input: string } | null>(null);
 	const current = $derived(
-		inputs.find((s) => s.input === picked) ?? inputs.find((s) => s.standard) ?? inputs.at(-1) ?? null
+		inputs.find((s) => picked?.variantId === variant.id && picked.input === s.input) ?? preferredSpeedInput(variant)
 	);
 
 	type Line = {
@@ -28,7 +28,7 @@
 		/** A short qualifier after the memory value (TensorRT: what the number covers). */
 		memNote?: string;
 		kind: 'original' | 'ours' | 'extra' | 'network';
-		see?: { variant: Variant; input: string } | null;
+		see?: { variant: Variant; input: SpeedInput } | null;
 	};
 
 	/** Where torch.compile / TensorRT was run, when not for this variant and input: this variant first, its standard input first. */
@@ -39,22 +39,23 @@
 				const row = i[key];
 				return row && 'ms' in row && !(v === variant && i === s);
 			});
-			if (hit) return { variant: v, input: hit.input };
+			if (hit) return { variant: v, input: hit };
 		}
 		return null;
 	}
-	function go(to: { variant: Variant; input: string }) {
-		picked = to.input;
+	function go(to: { variant: Variant; input: SpeedInput }) {
+		picked = { variantId: to.variant.id, input: to.input.input };
 		if (to.variant !== variant) onpick(to.variant.id);
 	}
 
 	function lines(s: SpeedInput): Line[] {
 		const out: Line[] = MODES.map((m) => {
 			const r = s.modes[m.key];
+			const dtype = r ? dt(r.dtype) : m.key.endsWith('32') ? 'fp32' : m.key === 'original16' ? 'fp16' : '';
 			return {
 				key: m.key,
-				label: m.label,
-				dtype: r ? dt(r.dtype) : m.key.endsWith('32') ? 'fp32' : m.key === 'original16' ? 'fp16' : '',
+				label: r && m.group === 'original' ? (dtype ? `Original ${dtype}` : 'Original (own default)') : m.label,
+				dtype,
 				ms: r?.ms ?? null,
 				alloc: r?.peak_alloc_mb,
 				reserved: r?.peak_reserved_mb,
@@ -65,8 +66,6 @@
 				kind: m.group
 			};
 		});
-		// The two original rows: the label says fp32 / fp16; an original whose fp16 option is missing ran fp32.
-		for (const l of out) if (l.key === 'original16' && l.state === 'ok' && l.dtype !== 'fp16') l.label = 'Original (own default)';
 		// The original's network alone, right after the original rows: what the original costs without its crop / decode.
 		const net = (['original32', 'original16'] as const).flatMap((k) => {
 			const r = s.original_network?.[k];
@@ -109,7 +108,7 @@
 					load: r.setup_s ?? undefined,
 					first: undefined,
 					state: 'ok',
-					note: part,
+					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`].filter(Boolean).join(' · '),
 					memNote: key === 'tensorrt' ? (r.peak_alloc_mb === null ? (r.device_mb ? 'engine only' : undefined) : 'estimated') : undefined,
 					kind: 'extra'
 				});
@@ -142,9 +141,7 @@
 	const faster = $derived(current ? fasterOriginal(current) : null);
 	const base = $derived(faster?.row ?? null);
 	const baseKey = $derived(faster?.key ?? null);
-	const baseLabel = $derived(
-		baseKey === 'original16' ? 'original fp16' : baseKey === 'original32' && current?.modes.original16 ? 'original fp32' : 'original'
-	);
+	const baseLabel = $derived(`original ${dt(base?.dtype)}`.trimEnd());
 	const when = $derived.by(() => {
 		if (!current) return '';
 		const r = Object.values(current.modes);
@@ -161,13 +158,13 @@
 	{#if inputs.length > 1}
 		<div class="inputs" role="group" aria-label="Input size">
 			{#each inputs as s (s.input)}
-				<button type="button" aria-pressed={s === current} onclick={() => (picked = s.input)}>
-					{s.scene ? `${s.scene} · ` : ''}{s.input}{#if s.standard}<small>standard</small>{/if}
+				<button type="button" aria-pressed={s === current} onclick={() => (picked = { variantId: variant.id, input: s.input })}>
+					{s.scene ? `${s.scene} · ` : ''}{speedInputLabel(s)}{#if s.standard}<small>task standard</small>{:else if s.native}<small>model input</small>{/if}
 				</button>
 			{/each}
 		</div>
 	{:else}
-		<p class="input">Input: {current.scene ? `${current.scene}, ` : ''}{current.input}{current.standard ? ' (the task’s standard size)' : ''}</p>
+		<p class="input">Input: {current.scene ? `${current.scene}, ` : ''}{speedInputLabel(current)}{current.standard ? ' (the task’s standard size)' : current.native ? ' (model input size)' : ''}</p>
 	{/if}
 
 	<div class="table">
@@ -200,7 +197,7 @@
 								<span class="tag">not measured{r.see ? ' here' : ''}</span>
 								{#if r.see}
 									<button type="button" class="see" onclick={() => go(r.see!)}
-										>see {r.see.variant === variant ? '' : `${r.see.variant.name}, `}{r.see.input} →</button
+										>see {r.see.variant === variant ? '' : `${r.see.variant.name}, `}{speedInputLabel(r.see.input)} →</button
 									>
 								{/if}
 							{/if}
@@ -225,8 +222,8 @@
 	</div>
 	<p class="fine">
 		Measured on {when}. {protocol ? `${protocol[0].toUpperCase()}${protocol.slice(1)}.` : ''} Ratios divide two
-		times of this table (same GPU, same input). Original fp16 is the authors’ own precision option, else
-		<code>torch.autocast</code>.
+		times of this table (same GPU, same input). The original uses the authors’ reduced-precision option where available,
+		or <code>torch.autocast</code>.
 		{#if current.original_network}“Network only” times the original’s network on the same crops, batched as one call; the
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}
 		{#if current.sections}The splits under Portable and Kernels come from a separate run that times each step on its own

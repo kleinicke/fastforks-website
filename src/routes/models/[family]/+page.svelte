@@ -10,7 +10,7 @@
 	import CardExample from '#lib/components/card/CardExample.svelte';
 	import CardPose from '#lib/components/card/CardPose.svelte';
 	import { KERNEL_LIBS, REFERENCE, TASK_META } from '#lib/site.ts';
-	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms, newestVersion } from '#lib/cards.ts';
+	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms, newestVersion, preferredSpeedInput, speedInputLabel } from '#lib/cards.ts';
 
 	let { data } = $props();
 	const card = $derived(data.card);
@@ -21,6 +21,7 @@
 	// Without a pick: the default checkpoint, but a released one first (upcoming ones are not in the package yet).
 	const variant = $derived(
 		card.variants.find((v) => v.id === picked) ??
+			card.variants.find((v) => v.name === picked) ??
 			card.variants.find((v) => v.default_tag && v.released) ??
 			card.variants.find((v) => v.released) ??
 			card.variants.find((v) => v.default_tag) ??
@@ -49,14 +50,16 @@
 
 	const repoName = $derived(card.upstream.replace(/^https?:\/\/(www\.)?github\.com\//, '').replace(/\/$/, ''));
 
-	// Glance tiles: the standard input on the reference GPU, our faster backend vs the faster original run.
-	const std = $derived(variant.speed.inputs.find((s) => s.standard) ?? variant.speed.inputs.at(-1));
+	// Glance tiles use the same starting input as the speed table.
+	const speedInput = $derived(preferredSpeedInput(variant));
 	const ours = $derived.by(() => {
-		if (!std) return null;
-		const c = (['kernels', 'portable'] as const).map((key) => ({ key, row: std.modes[key] })).filter((x) => x.row);
+		if (!speedInput) return null;
+		const c = (['kernels', 'portable'] as const).map((key) => ({ key, row: speedInput.modes[key] })).filter((x) => x.row);
 		return c.sort((a, b) => a.row!.ms - b.row!.ms)[0] ?? null;
 	});
-	const orig = $derived(std ? fasterOriginal(std) : null);
+	const orig = $derived(speedInput ? fasterOriginal(speedInput) : null);
+	const benchSize = $derived(speedInput?.input.match(/^\d+x\d+$/)?.[0]);
+	const benchCommand = $derived(`fastforks bench ${variant.id}${benchSize ? ` --size ${benchSize}` : ''}`);
 	const validated = $derived(card.parity.validated[variant.id] ?? null);
 	// The release the shown accuracy results come from: the newest of the variant's rows.
 	const evalVersion = $derived(
@@ -197,7 +200,7 @@
 			<div class="tile">
 				<span class="k">{ours?.key === 'kernels' ? 'Kernels' : 'Portable'}, {REFERENCE.name}</span>
 				<span class="v">{ours ? `${ms(ours.row!.ms)} ms` : '–'}</span>
-				<span class="s">{ours && std ? `${std.input}, ${dt(ours.row!.dtype)}` : 'not measured'}</span>
+				<span class="s">{ours && speedInput ? `${speedInputLabel(speedInput)}, ${dt(ours.row!.dtype)}` : 'not measured'}</span>
 			</div>
 			<div class="tile">
 				<span class="k">vs the faster original</span>
@@ -258,7 +261,7 @@ pose.R, pose.t, pose.inliers  <span class="c"># rotation, unit translation, inli
 			The weights are non-commercial: fastforks downloads them only with <code>FASTFORKS_NONCOMMERCIAL=1</code> set.
 		</p>
 	{/if}
-	<CopyCommand command="fastforks bench {variant.id}" />
+	<CopyCommand command={benchCommand} />
 	<p class="after">
 		Times the model on this machine. <code>load(…, mode="portable")</code> or <code>mode="kernels"</code> picks a backend;
 		<a href="/usage">usage guide</a>.
