@@ -41,6 +41,7 @@ export type ExtraRow =
 			scene_key?: string;
 			standalone?: boolean;
 			setup_s: number | null;
+			engine_load_s?: number | null;
 			first_call_s?: number | null;
 			date: string | null;
 			torch?: string | null;

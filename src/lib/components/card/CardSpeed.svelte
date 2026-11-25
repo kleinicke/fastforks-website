@@ -23,6 +23,7 @@
 		reserved: number | null | undefined;
 		load: number | undefined;
 		first: number | undefined;
+		engineLoad?: number;
 		state: 'ok' | 'oom' | 'missing' | 'fails' | 'planned';
 		note: string;
 		scene?: string;
@@ -119,6 +120,7 @@
 					alloc: memory,
 					reserved: r.peak_reserved_mb,
 					load: r.setup_s ?? undefined,
+					engineLoad: r.engine_load_s ?? undefined,
 					compareToOriginal: r.compare_to_original,
 					scene: r.scene,
 					scene_key: r.scene_key,
@@ -238,7 +240,10 @@
 								title={memoryScope[r.memNote]}
 								><span class="engine">{r.memNote}</span></small
 								>{/if}{:else}–{/if}</td>
-						<td class="num">{r.load !== undefined ? (r.kind === 'extra' ? `${r.load.toFixed(0)} (build)` : r.load.toFixed(1)) : '–'}</td>
+						<td class="num">
+							{r.load !== undefined ? (r.kind === 'extra' ? `${r.load.toFixed(0)} (build)` : r.load.toFixed(1)) : '–'}
+							{#if r.engineLoad !== undefined}<small class="note">{r.engineLoad.toFixed(2)} (engine load)</small>{/if}
+						</td>
 						<td class="num">{r.first !== undefined ? r.first.toFixed(2) : '–'}</td>
 					</tr>
 				{/each}
@@ -252,7 +257,7 @@
 		{#if current.original_network}“Network only” times the original’s network on the same crops, batched as one call; the
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}
 		{#if current.sections}The splits under Portable and Kernels come from a separate run that times each step on its own
-			(synchronised in between).{/if} The Load column shows build time for torch.compile and TensorRT.
+			(synchronised in between).{/if} The Load column shows build time for torch.compile and TensorRT, plus engine load time where measured.
 		TensorRT peak memory estimates combine PyTorch peaks with engine allocations measured by the GPU driver.
 	</p>
 {/if}
