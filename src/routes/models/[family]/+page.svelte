@@ -58,8 +58,11 @@
 		return c.sort((a, b) => a.row!.ms - b.row!.ms)[0] ?? null;
 	});
 	const orig = $derived(speedInput ? fasterOriginal(speedInput) : null);
-	const benchSize = $derived(speedInput?.input.match(/^\d+x\d+$/)?.[0]);
-	const benchCommand = $derived(`fastforks bench ${variant.id}${benchSize ? ` --size ${benchSize}` : ''}`);
+	const benchViews = $derived(speedInput?.workload?.views);
+	const benchSize = $derived(benchViews ? speedInput?.input.split('x').slice(-2).join('x') : speedInput?.input.match(/^\d+x\d+$/)?.[0]);
+	const benchCommand = $derived(
+		`fastforks bench ${variant.id}${benchSize ? ` --size ${benchSize}` : ''}${benchViews ? ` --views ${benchViews}` : ''}`
+	);
 	const validated = $derived(card.parity.validated[variant.id] ?? null);
 	// The release the shown accuracy results come from: the newest of the variant's rows.
 	const evalVersion = $derived(

@@ -50,6 +50,7 @@ export type SpeedInput = {
 	workload?: {
 		volume_shape?: [number, number, number];
 		spacing_mm?: [number, number, number];
+		views?: number;
 		frames?: number;
 		queries?: number;
 	};
@@ -173,10 +174,10 @@ export function preferredSpeedInput({ speed }: Variant): SpeedInput | undefined 
 /** Describe the source input of a measurement without changing its lookup key. */
 export function speedInputLabel({ input, workload }: SpeedInput): string {
 	if (!workload) return input;
-	const { volume_shape, spacing_mm, frames, queries } = workload;
+	const { volume_shape, spacing_mm, views, frames, queries } = workload;
 	const shape = volume_shape
 		? `${volume_shape.join('×')} voxels`
-		: frames
+		: views || frames
 			? input.split('x').slice(-2).join('×')
 			: input;
 	const spacing = spacing_mm?.every((value) => value === spacing_mm[0])
@@ -185,6 +186,7 @@ export function speedInputLabel({ input, workload }: SpeedInput): string {
 	return [
 		shape,
 		spacing,
+		views && `${views} ${views === 1 ? 'view' : 'views'}`,
 		frames && `${frames} ${frames === 1 ? 'frame' : 'frames'}`,
 		queries && `${queries} ${queries === 1 ? 'query' : 'queries'}`
 	]
