@@ -27,6 +27,7 @@
 		note: string;
 		/** A short qualifier after the memory value (TensorRT: what the number covers). */
 		memNote?: string;
+		compareToOriginal?: boolean;
 		kind: 'original' | 'ours' | 'extra' | 'network';
 		see?: { variant: Variant; input: SpeedInput } | null;
 	};
@@ -106,6 +107,7 @@
 					alloc: key === 'tensorrt' ? (r.peak_alloc_mb ?? r.device_mb) : r.peak_alloc_mb,
 					reserved: r.peak_reserved_mb,
 					load: r.setup_s ?? undefined,
+					compareToOriginal: r.compare_to_original,
 					first: undefined,
 					state: 'ok',
 					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`].filter(Boolean).join(' · '),
@@ -203,7 +205,7 @@
 							{/if}
 						</td>
 						<td class="num">
-							{#if base && r.ms !== null && r.key !== baseKey}
+							{#if base && r.ms !== null && r.key !== baseKey && r.compareToOriginal !== false}
 								{@const x = base.ms / r.ms}
 								<span class:fast={x > 1.05} class:slow={x < 0.95}>{x >= 10 ? x.toFixed(0) : x.toFixed(x >= 1 ? 1 : 2)}×</span>
 							{:else}–{/if}
@@ -222,7 +224,7 @@
 	</div>
 	<p class="fine">
 		Measured on {when}. {protocol ? `${protocol[0].toUpperCase()}${protocol.slice(1)}.` : ''} Ratios divide two
-		times of this table (same GPU, same input). The original uses the authors’ reduced-precision option where available,
+		times from equivalent runs at the same input on this GPU. The original uses the authors’ reduced-precision option where available,
 		or <code>torch.autocast</code>.
 		{#if current.original_network}“Network only” times the original’s network on the same crops, batched as one call; the
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}

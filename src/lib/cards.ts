@@ -34,6 +34,7 @@ export type ExtraRow =
 			engine_dtype: string | null;
 			part: string;
 			engine_input?: string;
+			compare_to_original?: boolean;
 			standalone?: boolean;
 			setup_s: number | null;
 			date: string | null;
