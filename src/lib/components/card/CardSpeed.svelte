@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MODES, dt, fasterOriginal, mib, ms, preferredSpeedInput, speedInputLabel, type SpeedInput, type Variant } from '#lib/cards.ts';
+	import { MODES, dt, fasterOriginal, mib, ms, preferredSpeedInput, speedInputLabel, speedScenesConflict, type SpeedInput, type Variant } from '#lib/cards.ts';
 
 	let {
 		variant,
@@ -25,6 +25,8 @@
 		first: number | undefined;
 		state: 'ok' | 'oom' | 'missing' | 'fails' | 'planned';
 		note: string;
+		scene?: string;
+		scene_key?: string;
 		/** A short qualifier after the memory value (TensorRT: what the number covers). */
 		memNote?: 'estimated' | 'engine only' | 'process';
 		compareToOriginal?: boolean;
@@ -70,6 +72,8 @@
 				first: r?.first_call_s,
 				state: r ? 'ok' : s.oom.includes(m.key) ? 'oom' : 'missing',
 				note: r?.note ?? '',
+				scene: r?.scene,
+				scene_key: r?.scene_key,
 				kind: m.group
 			};
 		});
@@ -78,13 +82,13 @@
 			const r = s.original_network?.[k];
 			if (!r) return [];
 			const dtype = dt(r.dtype);
-			return [{ key: `${k}-net`, label: `Original ${dtype}, network only`, dtype, ms: r.ms, alloc: r.peak_alloc_mb, reserved: r.peak_reserved_mb, load: undefined, first: r.first_call_s, state: 'ok' as const, note: 'crop and decode not timed', kind: 'network' as const }];
+			return [{ key: `${k}-net`, label: `Original ${dtype}, network only`, dtype, ms: r.ms, alloc: r.peak_alloc_mb, reserved: r.peak_reserved_mb, load: undefined, first: r.first_call_s, state: 'ok' as const, note: 'crop and decode not timed', scene: r.scene, scene_key: r.scene_key, kind: 'network' as const }];
 		});
 		out.splice(2, 0, ...net);
 		// Pose: the original's CPU crop + decode (its call minus its network alone), and where our call spends its time.
 		for (const l of out) {
 			const n = l.key === 'original32' || l.key === 'original16' ? s.original_network?.[l.key] : undefined;
-			if (n && l.ms !== null && l.ms > n.ms) l.note = join(l.note, `≈ ${ms(l.ms - n.ms)} ms of it CPU crop + decode`);
+			if (n && l.ms !== null && l.ms > n.ms && !speedScenesConflict(n, l)) l.note = join(l.note, `≈ ${ms(l.ms - n.ms)} ms of it CPU crop + decode`);
 			const p = l.key === 'portable' || l.key === 'kernels' ? s.sections?.[l.key] : undefined;
 			if (p && l.state === 'ok') {
 				const net = p.network_has_decode ? 'network + decode' : 'network';
@@ -116,6 +120,8 @@
 					reserved: r.peak_reserved_mb,
 					load: r.setup_s ?? undefined,
 					compareToOriginal: r.compare_to_original,
+					scene: r.scene,
+					scene_key: r.scene_key,
 					first: r.first_call_s ?? undefined,
 					state: 'ok',
 					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`].filter(Boolean).join(' · '),
@@ -127,6 +133,9 @@
 				if (key === 'tensorrt' && p && !r.standalone) {
 					out.push({
 						key: 'tensorrt-full',
+						scene: r.scene,
+						scene_key: r.scene_key,
+						compareToOriginal: r.compare_to_original,
 						label: 'TensorRT + our crop and decode',
 						dtype: dt(r.engine_dtype) || 'fp16',
 						ms: r.ms + p.crop_ms + p.rest_ms,
@@ -195,7 +204,11 @@
 			<tbody>
 				{#each rows as r (r.key)}
 					<tr class={[r.kind, r.state !== 'ok' && 'dim']}>
-						<th scope="row">{r.label}{#if r.note}<small class="note">{r.note}</small>{/if}</th>
+						<th scope="row">
+							{r.label}
+							{#if r.note}<small class="note">{r.note}</small>{/if}
+							{#if current.mixed_scenes && r.scene}<small class="note">{r.scene}</small>{/if}
+						</th>
 						<td>{r.dtype}</td>
 						<td class="bar-col">
 							{#if r.state === 'ok' && r.ms !== null}
@@ -215,7 +228,7 @@
 							{/if}
 						</td>
 						<td class="num">
-							{#if base && r.ms !== null && r.key !== baseKey && r.compareToOriginal !== false}
+							{#if base && r.ms !== null && r.key !== baseKey && r.compareToOriginal !== false && !speedScenesConflict(base, r)}
 								{@const x = base.ms / r.ms}
 								<span class:fast={x > 1.05} class:slow={x < 0.95}>{x >= 10 ? x.toFixed(0) : x.toFixed(x >= 1 ? 1 : 2)}×</span>
 							{:else}–{/if}
@@ -234,7 +247,7 @@
 	</div>
 	<p class="fine">
 		Measured on {when}. {protocol ? `${protocol[0].toUpperCase()}${protocol.slice(1)}.` : ''} Ratios divide two
-		times from equivalent runs at the same input on this GPU. The original uses the authors’ reduced-precision option where available,
+		times from comparable runs at the same input size on this GPU. {#if current.mixed_scenes}Each row lists its scene where recorded.{/if} The original uses the authors’ reduced-precision option where available,
 		or <code>torch.autocast</code>.
 		{#if current.original_network}“Network only” times the original’s network on the same crops, batched as one call; the
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}

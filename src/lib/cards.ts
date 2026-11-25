@@ -17,6 +17,7 @@ export type SpeedRow = {
 	first_call_s?: number;
 	import_s?: number;
 	scene?: string;
+	scene_key?: string;
 	date?: string;
 	torch?: string;
 	protocol?: string;
@@ -36,6 +37,8 @@ export type ExtraRow =
 			part: string;
 			engine_input?: string;
 			compare_to_original?: boolean;
+			scene?: string;
+			scene_key?: string;
 			standalone?: boolean;
 			setup_s: number | null;
 			first_call_s?: number | null;
@@ -45,6 +48,7 @@ export type ExtraRow =
 export type SpeedInput = {
 	input: string;
 	scene: string;
+	mixed_scenes?: boolean;
 	standard: boolean;
 	native?: boolean;
 	workload?: {
@@ -356,6 +360,11 @@ export const METRIC_LABEL: Record<string, string> = {
 	auc10: 'AUC@10°',
 	auc20: 'AUC@20°'
 };
+
+/** Unknown scenes do not establish a mismatch. The exporter normalizes known aliases. */
+export function speedScenesConflict(a: { scene_key?: string }, b: { scene_key?: string }): boolean {
+	return Boolean(a.scene_key && b.scene_key && a.scene_key !== b.scene_key);
+}
 
 /** The faster original run (fp16 or fp32): what the docs' speed-ups use, a conservative headline. */
 export function fasterOriginal(s: SpeedInput): { key: Mode; row: SpeedRow } | null {
