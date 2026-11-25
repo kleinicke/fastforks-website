@@ -26,7 +26,7 @@ export type SpeedRow = {
 	commit?: string;
 };
 export type ExtraRow =
-	| { fails: string; planned?: boolean }
+	| { fails: string; planned?: boolean; oom?: boolean }
 	| {
 			ms: number;
 			peak_alloc_mb: number | null;

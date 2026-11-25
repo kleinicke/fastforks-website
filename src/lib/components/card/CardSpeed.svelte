@@ -105,7 +105,7 @@
 			if (!r) {
 				out.push({ key, label, dtype: '', ms: null, alloc: undefined, reserved: undefined, load: undefined, first: undefined, state: 'missing', note: '', kind: 'extra', see: measuredAt(key, s) });
 			} else if ('fails' in r) {
-				out.push({ key, label, dtype: '', ms: null, alloc: undefined, reserved: undefined, load: undefined, first: undefined, state: r.planned ? 'planned' : 'fails', note: r.fails, kind: 'extra' });
+				out.push({ key, label, dtype: '', ms: null, alloc: undefined, reserved: undefined, load: undefined, first: undefined, state: r.planned ? 'planned' : r.oom ? 'oom' : 'fails', note: r.fails, kind: 'extra' });
 			} else {
 				const part = r.standalone && !r.part.includes('standalone build')
 					? ['Standalone build', r.part].filter(Boolean).join(' · ')
