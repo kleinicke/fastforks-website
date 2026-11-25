@@ -37,7 +37,9 @@ export type ExtraRow =
 			compare_to_original?: boolean;
 			standalone?: boolean;
 			setup_s: number | null;
+			first_call_s?: number | null;
 			date: string | null;
+			torch?: string | null;
 	  };
 export type SpeedInput = {
 	input: string;

@@ -50,7 +50,8 @@
 	}
 
 	function lines(s: SpeedInput): Line[] {
-		const out: Line[] = MODES.map((m) => {
+		const modes = MODES.filter((m) => m.key !== 'portable32' || s.modes.portable32 || s.oom.includes('portable32'));
+		const out: Line[] = modes.map((m) => {
 			const r = s.modes[m.key];
 			const dtype = r ? dt(r.dtype) : m.key.endsWith('32') ? 'fp32' : m.key === 'original16' ? 'fp16' : '';
 			return {
@@ -108,7 +109,7 @@
 					reserved: r.peak_reserved_mb,
 					load: r.setup_s ?? undefined,
 					compareToOriginal: r.compare_to_original,
-					first: undefined,
+					first: r.first_call_s ?? undefined,
 					state: 'ok',
 					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`].filter(Boolean).join(' · '),
 					memNote: key === 'tensorrt' ? (r.peak_alloc_mb === null ? (r.device_mb ? 'engine only' : undefined) : 'estimated') : undefined,
@@ -146,10 +147,12 @@
 	const baseLabel = $derived(`original ${dt(base?.dtype)}`.trimEnd());
 	const when = $derived.by(() => {
 		if (!current) return '';
-		const r = Object.values(current.modes);
+		const compiled = [current.compile, current.tensorrt].flatMap((row) => row && 'ms' in row ? [row] : []);
+		const r = [...Object.values(current.modes), ...compiled];
 		const dates = r.map((x) => x?.date ?? '').filter(Boolean).sort();
 		const torch = [...new Set(r.map((x) => x?.torch).filter(Boolean))].join(', ');
-		return `${reference}, torch ${torch}, ${dates[0] === dates.at(-1) ? dates[0] : `${dates[0]} to ${dates.at(-1)}`}`;
+		const datesLabel = dates[0] === dates.at(-1) ? dates[0] : `${dates[0]} to ${dates.at(-1)}`;
+		return [reference, torch && `torch ${torch}`, datesLabel].filter(Boolean).join(', ');
 	});
 	const protocol = $derived(current?.modes.kernels?.protocol ?? current?.modes.portable?.protocol ?? '');
 </script>
