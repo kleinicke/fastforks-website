@@ -31,6 +31,7 @@ export type ExtraRow =
 			peak_alloc_mb: number | null;
 			peak_reserved_mb: number | null;
 			device_mb: number | null;
+			process_peak_mb?: number | null;
 			engine_dtype: string | null;
 			part: string;
 			engine_input?: string;

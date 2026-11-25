@@ -26,10 +26,15 @@
 		state: 'ok' | 'oom' | 'missing' | 'fails' | 'planned';
 		note: string;
 		/** A short qualifier after the memory value (TensorRT: what the number covers). */
-		memNote?: string;
+		memNote?: 'estimated' | 'engine only' | 'process';
 		compareToOriginal?: boolean;
 		kind: 'original' | 'ours' | 'extra' | 'network';
 		see?: { variant: Variant; input: SpeedInput } | null;
+	};
+	const memoryScope = {
+		estimated: 'PyTorch peak plus GPU memory held by the engine',
+		'engine only': 'GPU memory held by the engine, read from the driver',
+		process: 'Peak GPU memory of the full benchmark process, as measured by the driver'
 	};
 
 	/** Where torch.compile / TensorRT was run, when not for this variant and input: this variant first, its standard input first. */
@@ -100,19 +105,21 @@
 				const part = r.standalone && !r.part.includes('standalone build')
 					? ['Standalone build', r.part].filter(Boolean).join(' · ')
 					: r.part;
+				const memory = key === 'tensorrt' ? (r.peak_alloc_mb ?? r.process_peak_mb ?? r.device_mb) : r.peak_alloc_mb;
+				const trtMemoryScope = r.peak_alloc_mb !== null ? 'estimated' : r.process_peak_mb != null ? 'process' : r.device_mb ? 'engine only' : undefined;
 				out.push({
 					key,
 					label: key === 'tensorrt' ? `TensorRT ${dt(r.engine_dtype) || 'fp16'}` : label,
 					dtype: key === 'tensorrt' ? dt(r.engine_dtype) || 'fp16' : '',
 					ms: r.ms,
-					alloc: key === 'tensorrt' ? (r.peak_alloc_mb ?? r.device_mb) : r.peak_alloc_mb,
+					alloc: memory,
 					reserved: r.peak_reserved_mb,
 					load: r.setup_s ?? undefined,
 					compareToOriginal: r.compare_to_original,
 					first: r.first_call_s ?? undefined,
 					state: 'ok',
 					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`].filter(Boolean).join(' · '),
-					memNote: key === 'tensorrt' ? (r.peak_alloc_mb === null ? (r.device_mb ? 'engine only' : undefined) : 'estimated') : undefined,
+					memNote: key === 'tensorrt' ? trtMemoryScope : undefined,
 					kind: 'extra'
 				});
 				// The engine is the network on crops only: with our portable crop and decode around it, a whole call.
@@ -215,7 +222,7 @@
 						</td>
 						<td class="num">{#if r.state === 'ok'}{mib(r.alloc)}{#if r.reserved !== null && r.reserved !== undefined}<span class="sep"> / </span>{mib(r.reserved)}{/if}{#if r.memNote}<small
 									class="memnote"
-								title={r.memNote === 'estimated' ? 'PyTorch peak plus GPU memory held by the engine' : 'GPU memory held by the engine, read from the driver'}
+								title={memoryScope[r.memNote]}
 								><span class="engine">{r.memNote}</span></small
 								>{/if}{:else}–{/if}</td>
 						<td class="num">{r.load !== undefined ? (r.kind === 'extra' ? `${r.load.toFixed(0)} (build)` : r.load.toFixed(1)) : '–'}</td>
