@@ -18,6 +18,8 @@ export type SpeedRow = {
 	import_s?: number;
 	scene?: string;
 	scene_key?: string;
+	comparison_scope?: string;
+	scope_label?: string;
 	date?: string;
 	torch?: string;
 	protocol?: string;
@@ -39,6 +41,9 @@ export type ExtraRow =
 			compare_to_original?: boolean;
 			scene?: string;
 			scene_key?: string;
+			comparison_scope?: string;
+			scope_label?: string;
+			note?: string;
 			standalone?: boolean;
 			setup_s: number | null;
 			engine_load_s?: number | null;
@@ -50,6 +55,7 @@ export type SpeedInput = {
 	input: string;
 	scene: string;
 	mixed_scenes?: boolean;
+	mixed_scopes?: boolean;
 	standard: boolean;
 	native?: boolean;
 	workload?: {
@@ -365,6 +371,11 @@ export const METRIC_LABEL: Record<string, string> = {
 /** Unknown scenes do not establish a mismatch. The exporter normalizes known aliases. */
 export function speedScenesConflict(a: { scene_key?: string }, b: { scene_key?: string }): boolean {
 	return Boolean(a.scene_key && b.scene_key && a.scene_key !== b.scene_key);
+}
+
+/** Accepted legacy comparisons have no explicit conflicting timing boundary. */
+export function speedScopesConflict(a: { comparison_scope?: string }, b: { comparison_scope?: string }): boolean {
+	return Boolean(a.comparison_scope && b.comparison_scope && a.comparison_scope !== b.comparison_scope);
 }
 
 /** The faster original run (fp16 or fp32): what the docs' speed-ups use, a conservative headline. */

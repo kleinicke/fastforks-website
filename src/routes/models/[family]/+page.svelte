@@ -10,7 +10,7 @@
 	import CardExample from '#lib/components/card/CardExample.svelte';
 	import CardPose from '#lib/components/card/CardPose.svelte';
 	import { KERNEL_LIBS, REFERENCE, TASK_META } from '#lib/site.ts';
-	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms, newestVersion, preferredSpeedInput, speedInputLabel, speedScenesConflict } from '#lib/cards.ts';
+	import { METRIC_LABEL, RELEASE, dt, fasterOriginal, fmt, mib, ms, newestVersion, preferredSpeedInput, speedInputLabel, speedScenesConflict, speedScopesConflict } from '#lib/cards.ts';
 
 	let { data } = $props();
 	const card = $derived(data.card);
@@ -62,6 +62,7 @@
 	});
 	const orig = $derived(speedInput ? fasterOriginal(speedInput) : null);
 	const origSceneConflict = $derived(Boolean(ours?.row && orig && speedScenesConflict(ours.row, orig.row)));
+	const origScopeConflict = $derived(Boolean(ours?.row && orig && speedScopesConflict(ours.row, orig.row)));
 	const benchViews = $derived(speedInput?.workload?.views);
 	const benchSize = $derived(benchViews ? speedInput?.input.split('x').slice(-2).join('x') : speedInput?.input.match(/^\d+x\d+$/)?.[0]);
 	const benchCommand = $derived(
@@ -219,8 +220,8 @@
 			</div>
 			<div class="tile">
 				<span class="k">vs the faster original</span>
-				<span class="v">{ours && orig && !origSceneConflict ? `${(orig.row.ms / ours.row!.ms).toFixed(1)}×` : '–'}</span>
-				<span class="s">{origSceneConflict ? 'original timed on a different scene' : orig ? `original ${dt(orig.row.dtype)}: ${ms(orig.row.ms)} ms` : 'original not timed'}</span>
+				<span class="v">{ours && orig && !origSceneConflict && !origScopeConflict ? `${(orig.row.ms / ours.row!.ms).toFixed(1)}×` : '–'}</span>
+				<span class="s">{origSceneConflict ? 'original timed on a different scene' : origScopeConflict ? 'original timed with a different boundary' : orig ? `original ${dt(orig.row.dtype)}: ${ms(orig.row.ms)} ms` : 'original not timed'}</span>
 			</div>
 			<div class="tile">
 				<span class="k">Peak memory</span>

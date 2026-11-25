@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { MODES, dt, fasterOriginal, mib, ms, preferredSpeedInput, speedInputLabel, speedScenesConflict, type SpeedInput, type Variant } from '#lib/cards.ts';
+	import { MODES, dt, fasterOriginal, mib, ms, preferredSpeedInput, speedInputLabel, speedScenesConflict, speedScopesConflict, type SpeedInput, type Variant } from '#lib/cards.ts';
 
 	let {
 		variant,
@@ -28,6 +28,8 @@
 		note: string;
 		scene?: string;
 		scene_key?: string;
+		comparison_scope?: string;
+		scope_label?: string;
 		/** A short qualifier after the memory value (TensorRT: what the number covers). */
 		memNote?: 'estimated' | 'engine only' | 'process';
 		compareToOriginal?: boolean;
@@ -75,6 +77,8 @@
 				note: r?.note ?? '',
 				scene: r?.scene,
 				scene_key: r?.scene_key,
+				comparison_scope: r?.comparison_scope,
+				scope_label: r?.scope_label,
 				kind: m.group
 			};
 		});
@@ -89,7 +93,7 @@
 		// Pose: the original's CPU crop + decode (its call minus its network alone), and where our call spends its time.
 		for (const l of out) {
 			const n = l.key === 'original32' || l.key === 'original16' ? s.original_network?.[l.key] : undefined;
-			if (n && l.ms !== null && l.ms > n.ms && !speedScenesConflict(n, l)) l.note = join(l.note, `≈ ${ms(l.ms - n.ms)} ms of it CPU crop + decode`);
+			if (n && l.ms !== null && l.ms > n.ms && !speedScenesConflict(n, l) && !speedScopesConflict(n, l)) l.note = join(l.note, `≈ ${ms(l.ms - n.ms)} ms of it CPU crop + decode`);
 			const p = l.key === 'portable' || l.key === 'kernels' ? s.sections?.[l.key] : undefined;
 			if (p && l.state === 'ok') {
 				const net = p.network_has_decode ? 'network + decode' : 'network';
@@ -124,9 +128,11 @@
 					compareToOriginal: r.compare_to_original,
 					scene: r.scene,
 					scene_key: r.scene_key,
+					comparison_scope: r.comparison_scope,
+					scope_label: r.scope_label,
 					first: r.first_call_s ?? undefined,
 					state: 'ok',
-					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`].filter(Boolean).join(' · '),
+					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`, r.note].filter(Boolean).join(' · '),
 					memNote: key === 'tensorrt' ? trtMemoryScope : undefined,
 					kind: 'extra'
 				});
@@ -210,6 +216,7 @@
 							{r.label}
 							{#if r.note}<small class="note">{r.note}</small>{/if}
 							{#if current.mixed_scenes && r.scene}<small class="note">{r.scene}</small>{/if}
+							{#if current.mixed_scopes && r.scope_label}<small class="note">{r.scope_label}</small>{/if}
 						</th>
 						<td>{r.dtype}</td>
 						<td class="bar-col">
@@ -230,7 +237,7 @@
 							{/if}
 						</td>
 						<td class="num">
-							{#if base && r.ms !== null && r.key !== baseKey && r.compareToOriginal !== false && !speedScenesConflict(base, r)}
+							{#if base && r.ms !== null && r.key !== baseKey && r.compareToOriginal !== false && !speedScenesConflict(base, r) && !speedScopesConflict(base, r)}
 								{@const x = base.ms / r.ms}
 								<span class:fast={x > 1.05} class:slow={x < 0.95}>{x >= 10 ? x.toFixed(0) : x.toFixed(x >= 1 ? 1 : 2)}×</span>
 							{:else}–{/if}
@@ -252,7 +259,8 @@
 	</div>
 	<p class="fine">
 		Measured on {when}. {protocol ? `${protocol[0].toUpperCase()}${protocol.slice(1)}.` : ''} Ratios divide two
-		times from comparable runs at the same input size on this GPU. {#if current.mixed_scenes}Each row lists its scene where recorded.{/if} The original uses the authors’ reduced-precision option where available,
+		times from comparable runs at the same input size on this GPU. {#if current.mixed_scenes}Each row lists its scene where recorded.{/if}
+		{#if current.mixed_scopes}Rows with different timing boundaries show their times individually.{/if} The original uses the authors’ reduced-precision option where available,
 		or <code>torch.autocast</code>.
 		{#if current.original_network}“Network only” times the original’s network on the same crops, batched as one call; the
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}
