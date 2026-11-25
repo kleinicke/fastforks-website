@@ -23,6 +23,7 @@
 		reserved: number | null | undefined;
 		load: number | undefined;
 		first: number | undefined;
+		firstIncludesCompile?: boolean;
 		engineLoad?: number;
 		state: 'ok' | 'oom' | 'missing' | 'fails' | 'planned';
 		note: string;
@@ -116,14 +117,18 @@
 					: r.part;
 				const memory = key === 'tensorrt' ? (r.peak_alloc_mb ?? r.process_peak_mb ?? r.device_mb) : r.peak_alloc_mb;
 				const trtMemoryScope = r.peak_alloc_mb !== null ? 'estimated' : r.process_peak_mb != null ? 'process' : r.device_mb ? 'engine only' : undefined;
+				const firstIncludesCompile = key === 'compile' && r.setup_s != null && r.setup_s === r.first_call_s;
+				const compileSetup = key === 'compile' && r.setup_s != null && !firstIncludesCompile
+					? `Compile setup ${r.setup_s.toFixed(2)} s`
+					: '';
 				out.push({
 					key,
 					label: key === 'tensorrt' ? `TensorRT ${dt(r.engine_dtype) || 'fp16'}` : label,
-					dtype: key === 'tensorrt' ? dt(r.engine_dtype) || 'fp16' : '',
+					dtype: key === 'tensorrt' ? dt(r.engine_dtype) || 'fp16' : dt(r.dtype),
 					ms: r.ms,
 					alloc: memory,
 					reserved: r.peak_reserved_mb,
-					load: r.setup_s ?? undefined,
+					load: (key === 'tensorrt' ? r.setup_s : r.load_s) ?? undefined,
 					engineLoad: r.engine_load_s ?? undefined,
 					compareToOriginal: r.compare_to_original,
 					scene: r.scene,
@@ -131,8 +136,9 @@
 					comparison_scope: r.comparison_scope,
 					scope_label: r.scope_label,
 					first: r.first_call_s ?? undefined,
+					firstIncludesCompile,
 					state: 'ok',
-					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`, r.note].filter(Boolean).join(' · '),
+					note: [part, r.engine_input && `Engine input ${r.engine_input.replaceAll('x', '×')}`, compileSetup, r.note].filter(Boolean).join(' · '),
 					memNote: key === 'tensorrt' ? trtMemoryScope : undefined,
 					kind: 'extra'
 				});
@@ -205,8 +211,8 @@
 					<th class="bar-col">Time per call (ms)</th>
 					<th class="num">vs {baseLabel}</th>
 					<th class="num">Peak memory<br /><small>allocated / reserved</small></th>
-					<th class="num"><span class="hint" title="Seconds from the load call until the model is ready on the device: reading the weights, building the network and moving it to the GPU (importing PyTorch not included). For torch.compile and TensorRT it shows the one-time build instead: the compile, or the ONNX export plus engine build.">Load (s)</span></th>
-					<th class="num"><span class="hint" title="Seconds the very first call takes in a fresh process. It includes one-time work the warm calls skip, such as picking GPU kernels and allocating memory, so it is slower than the time per call.">First call (s)</span></th>
+					<th class="num"><span class="hint" title="Seconds to load the model onto the device, excluding PyTorch import. TensorRT also shows ONNX export and engine build where measured.">Load (s)</span></th>
+					<th class="num"><span class="hint" title="Seconds for the first inference call, including any compilation measured in that call.">First call (s)</span></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -225,8 +231,10 @@
 								<span class="v">{ms(r.ms)}</span>
 							{:else if r.state === 'oom'}
 								<span class="tag">out of memory</span>
-							{:else if r.state === 'fails' || r.state === 'planned'}
-								<span class="tag">{r.state}</span>
+							{:else if r.state === 'planned'}
+								<span class="tag">unavailable in public API</span>
+							{:else if r.state === 'fails'}
+								<span class="tag">failed</span>
 							{:else}
 								<span class="tag">not measured{r.see ? ' here' : ''}</span>
 								{#if r.see}
@@ -248,10 +256,13 @@
 								><span class="engine">{r.memNote}</span></small
 								>{/if}{:else}–{/if}</td>
 						<td class="num">
-							{r.load !== undefined ? (r.kind === 'extra' ? `${r.load.toFixed(0)} (build)` : r.load.toFixed(1)) : '–'}
+							{r.load !== undefined ? (r.key === 'tensorrt' ? `${r.load.toFixed(0)} (build)` : r.load.toFixed(1)) : '–'}
 							{#if r.engineLoad !== undefined}<small class="note">{r.engineLoad.toFixed(2)} (engine load)</small>{/if}
 						</td>
-						<td class="num">{r.first !== undefined ? r.first.toFixed(2) : '–'}</td>
+						<td class="num">
+							{r.first !== undefined ? r.first.toFixed(2) : '–'}
+							{#if r.firstIncludesCompile}<small class="note">includes compilation</small>{/if}
+						</td>
 					</tr>
 				{/each}
 			</tbody>
@@ -265,7 +276,7 @@
 		{#if current.original_network}“Network only” times the original’s network on the same crops, batched as one call; the
 			original rows above also include its own crop pipeline and decode, as ours do.{/if}
 		{#if current.sections}The splits under Portable and Kernels come from a separate run that times each step on its own
-			(synchronised in between).{/if} The Load column shows build time for torch.compile and TensorRT, plus engine load time where measured.
+			(synchronised in between).{/if} TensorRT shows build and engine load times where measured.
 		TensorRT peak memory estimates combine PyTorch peaks with engine allocations measured by the GPU driver.
 	</p>
 {/if}

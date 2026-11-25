@@ -36,6 +36,7 @@ export type ExtraRow =
 			device_mb: number | null;
 			process_peak_mb?: number | null;
 			engine_dtype: string | null;
+			dtype?: string;
 			part: string;
 			engine_input?: string;
 			compare_to_original?: boolean;
@@ -46,6 +47,7 @@ export type ExtraRow =
 			note?: string;
 			standalone?: boolean;
 			setup_s: number | null;
+			load_s?: number | null;
 			engine_load_s?: number | null;
 			first_call_s?: number | null;
 			date: string | null;
